@@ -489,7 +489,7 @@ ExpComputePartialHashForAddress(IN PVOID BaseAddress)
 #endif
 
 VOID
-MiDumpPoolConsumers(BOOLEAN CalledFromDbg, ULONG Tag, ULONG Mask, ULONG Flags)
+MiDumpPoolConsumers(BOOLEAN CalledFromDbg, ULONG Tag, ULONG Mask, ULONG_PTR Flags)
 {
     SIZE_T i;
     BOOLEAN Verbose;
