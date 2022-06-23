@@ -911,7 +911,7 @@ KdbpCmdDisassembleX(
         while (Count-- > 0)
         {
             if (!KdbSymPrintAddress((PVOID)Address, NULL))
-                KdbpPrint("<%08x>: ", Address);
+                KdbpPrint("<%p>: ", (PVOID)Address);
             else
                 KdbpPrint(": ");
 
@@ -1018,14 +1018,18 @@ KdbpCmdRegs(
     else /* dregs */
     {
         ASSERT(Argv[0][0] == 'd');
-        KdbpPrint("DR0  0x%08x\n"
-                  "DR1  0x%08x\n"
-                  "DR2  0x%08x\n"
-                  "DR3  0x%08x\n"
-                  "DR6  0x%08x\n"
-                  "DR7  0x%08x\n",
-                  Context->Dr0, Context->Dr1, Context->Dr2, Context->Dr3,
-                  Context->Dr6, Context->Dr7);
+        KdbpPrint("DR0  0x%p\n"
+                  "DR1  0x%p\n"
+                  "DR2  0x%p\n"
+                  "DR3  0x%p\n"
+                  "DR6  0x%p\n"
+                  "DR7  0x%p\n",
+                  (PVOID)Context->Dr0,
+                  (PVOID)Context->Dr1,
+                  (PVOID)Context->Dr2,
+                  (PVOID)Context->Dr3,
+                  (PVOID)Context->Dr6,
+                  (PVOID)Context->Dr7);
     }
 
     return TRUE;
@@ -1357,7 +1361,7 @@ KdbpCmdBackTrace(
 
         /* Print the location of the call instruction (assumed 5 bytes length) */
         if (!KdbSymPrintAddress((PVOID)(Address - 5), &Context))
-            KdbpPrint("<%08x>\n", Address);
+            KdbpPrint("<%p>\n", (PVOID)Address);
         else
             KdbpPrint("\n");
 
@@ -1398,7 +1402,7 @@ CheckForParentTSS:
         KdbpPrint("[Parent TSS 0x%04x @ 0x%p]\n", TssSelector, Tss);
 
         if (!KdbSymPrintAddress((PVOID)Address, &Context))
-            KdbpPrint("<%08x>\n", Address);
+            KdbpPrint("<%p>\n", (PVOID)Address);
         else
             KdbpPrint("\n");
 #endif
@@ -1511,8 +1515,10 @@ KdbpCmdBreakPointList(
 
         if (Type == KdbBreakPointSoftware || Type == KdbBreakPointTemporary)
         {
-            KdbpPrint(" %s%03d  BPX  0x%08x%s%s%s%s%s\n",
-                      str1, l, Address,
+            KdbpPrint(" %s%03d  BPX  0x%p%s%s%s%s%s\n",
+                      str1,
+                      l,
+                      (PVOID)Address,
                       Enabled ? "" : "  disabled",
                       GlobalOrLocal,
                       ConditionExpr ? "  IF " : "",
@@ -1523,7 +1529,10 @@ KdbpCmdBreakPointList(
         {
             if (!Enabled)
             {
-                KdbpPrint(" %s%03d  BPM  0x%08x  %-5s %-5s  disabled%s%s%s%s\n", str1, l, Address,
+                KdbpPrint(" %s%03d  BPM  0x%p  %-5s %-5s  disabled%s%s%s%s\n",
+                          str1,
+                          l,
+                          (PVOID)Address,
                           KDB_ACCESS_TYPE_TO_STRING(AccessType),
                           Size == 1 ? "byte" : (Size == 2 ? "word" : "dword"),
                           GlobalOrLocal,
@@ -1533,7 +1542,10 @@ KdbpCmdBreakPointList(
             }
             else
             {
-                KdbpPrint(" %s%03d  BPM  0x%08x  %-5s %-5s  DR%d%s%s%s%s\n", str1, l, Address,
+                KdbpPrint(" %s%03d  BPM  0x%p  %-5s %-5s  DR%d%s%s%s%s\n",
+                          str1,
+                          l,
+                          (PVOID)Address,
                           KDB_ACCESS_TYPE_TO_STRING(AccessType),
                           Size == 1 ? "byte" : (Size == 2 ? "word" : "dword"),
                           DebugReg,
@@ -1766,7 +1778,7 @@ KdbpCmdThread(
         if (Entry == &Process->ThreadListHead)
         {
             if (Argc >= 3)
-                KdbpPrint("No threads in process 0x%px!\n", (PVOID)ul);
+                KdbpPrint("No threads in process 0x%p!\n", (PVOID)ul);
             else
                 KdbpPrint("No threads in current process!\n");
 
@@ -1819,14 +1831,14 @@ KdbpCmdThread(
             else
                 State = "Unknown";
 
-            KdbpPrint(" %s0x%08x  %-11s  %3d     0x%08x  0x%08x  0x%08x%s\n",
+            KdbpPrint(" %s0x%p  %-11s  %3d     0x%p  0x%p  0x%p%s\n",
                       str1,
                       Thread->Cid.UniqueThread,
                       State,
                       Thread->Tcb.Priority,
-                      Thread->Tcb.Affinity,
+                      (PVOID)Thread->Tcb.Affinity,
                       Frame,
-                      Pc,
+                      (PVOID)Pc,
                       str2);
 
             Entry = Entry->Flink;
@@ -1857,7 +1869,7 @@ KdbpCmdThread(
             return TRUE;
         }
 
-        KdbpPrint("Attached to thread 0x%08x.\n", ul);
+        KdbpPrint("Attached to thread 0x%p.\n", (PVOID)ul);
     }
     else
     {
@@ -1888,15 +1900,15 @@ KdbpCmdThread(
             State = "Unknown";
 
         KdbpPrint("%s"
-                  "  TID:            0x%08x\n"
+                  "  TID:            0x%p\n"
                   "  State:          %s (0x%x)\n"
                   "  Priority:       %d\n"
-                  "  Affinity:       0x%08x\n"
-                  "  Initial Stack:  0x%08x\n"
-                  "  Stack Limit:    0x%08x\n"
-                  "  Stack Base:     0x%08x\n"
-                  "  Kernel Stack:   0x%08x\n"
-                  "  Trap Frame:     0x%08x\n"
+                  "  Affinity:       0x%p\n"
+                  "  Initial Stack:  0x%p\n"
+                  "  Stack Limit:    0x%p\n"
+                  "  Stack Base:     0x%p\n"
+                  "  Kernel Stack:   0x%p\n"
+                  "  Trap Frame:     0x%p\n"
 #ifndef _M_AMD64
                   "  NPX State:      %s (0x%x)\n"
 #endif
@@ -1904,9 +1916,9 @@ KdbpCmdThread(
                   , Thread->Cid.UniqueThread
                   , State, Thread->Tcb.State
                   , Thread->Tcb.Priority
-                  , Thread->Tcb.Affinity
+                  , (PVOID)Thread->Tcb.Affinity
                   , Thread->Tcb.InitialStack
-                  , Thread->Tcb.StackLimit
+                  , (PVOID)Thread->Tcb.StackLimit
                   , Thread->Tcb.StackBase
                   , Thread->Tcb.KernelStack
                   , Thread->Tcb.TrapFrame
@@ -2135,7 +2147,7 @@ KdbpCmdGdtLdtIdt(
             return TRUE;
         }
 
-        KdbpPrint("IDT Base: 0x%08x  Limit: 0x%04x\n", Reg.Base, Reg.Limit);
+        KdbpPrint("IDT Base: 0x%p  Limit: 0x%04x\n", Reg.Base, Reg.Limit);
         KdbpPrint("  Idx  Type        Seg. Sel.  Offset      DPL\n");
 
         for (i = 0; (i + sizeof(SegDesc) - 1) <= Reg.Limit; i += 8)
@@ -2208,7 +2220,7 @@ KdbpCmdGdtLdtIdt(
             return TRUE;
         }
 
-        KdbpPrint("%cDT Base: 0x%08x  Limit: 0x%04x\n",
+        KdbpPrint("%cDT Base: 0x%p  Limit: 0x%04x\n",
                   Argv[0][0] == 'g' ? 'G' : 'L', Reg.Base, Reg.Limit);
         KdbpPrint("  Idx  Sel.    Type         Base        Limit       DPL  Attribs\n");
 
@@ -2216,7 +2228,7 @@ KdbpCmdGdtLdtIdt(
         {
             if (!NT_SUCCESS(KdbpSafeReadMemory(SegDesc, (PVOID)((ULONG_PTR)Reg.Base + i), sizeof(SegDesc))))
             {
-                KdbpPrint("Couldn't access memory at 0x%p!\n", (ULONG_PTR)Reg.Base + i);
+                KdbpPrint("Couldn't access memory at 0x%p!\n", (PVOID)((ULONG_PTR)Reg.Base + i));
                 return TRUE;
             }
 
