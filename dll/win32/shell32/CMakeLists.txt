@@ -37,6 +37,7 @@ list(APPEND SOURCE
     CDropTargetHelper.cpp
     CEnumIDListBase.cpp
     CExtractIcon.cpp
+    CRecycleBinCleaner.cpp
     folders.cpp
     iconcache.cpp
     shell32.cpp

@@ -273,6 +273,11 @@
 #define IDS_OBJECTS                6466
 #define IDS_OBJECTS_SELECTED       6477
 
+/* Recycle Bin Cleaner */
+#define IDS_RECYCLE_CLEANER_DISPLAYNAME             10291
+#define IDS_RECYCLE_CLEANER_DESCRIPTION             10292
+#define IDS_RECYCLE_CLEANER_BUTTON_TEXT             10293
+
 /* Desktop icon titles */
 #define IDS_TITLE_MYCOMP                            30386
 #define IDS_TITLE_MYNET                             30387
@@ -887,3 +892,4 @@
 #define IDR_SENDTOMENU          158
 #define IDR_COPYTOMENU          159
 #define IDR_MOVETOMENU          160
+#define IDR_RECYCLEBINCLEANER   161
