@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for Windivs
+ * PROJECT:     PAINT for ReactOS
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Ukrainian resource file
  * TRANSLATORS: Copyright 2009 Artem Reznikov <temarez@yandex.ru>
@@ -228,7 +228,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Paint"
     IDS_WINDOWTITLE "%s - Paint"
-    IDS_INFOTITLE "Paint для Windivs"
+    IDS_INFOTITLE "Paint для ReactOS"
     IDS_INFOTEXT "Доступний згідно з GNU Lesser General Public License (LGPL, дивіться www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Зберегти зміни до %s?"
     IDS_DEFAULTFILENAME "Без_імені"
@@ -263,5 +263,5 @@ BEGIN
     IDS_VERTICAL "Vertical"
     IDS_PRINTRES "%d x %d pixel/cm"
     IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
-    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_SAVEERROR "Failed to save an image as the following file:\n\n%s"
 END
