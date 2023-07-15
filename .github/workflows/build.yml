@@ -67,7 +67,13 @@ jobs:
       run: echo 'cmake --build ${{github.workspace}}/build --target bootcd --target livecd' | ${{github.workspace}}/RosBE-CI/RosBE.sh . 0 ${{matrix.arch}}
     - name: Print ccache statistics
       run: ccache -s
-   
+    - name: Upload ISOs
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-${{matrix.compiler}}-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: |
+          build/bootcd.iso
+          build/livecd.iso
 
   build-msvc:
     strategy:
@@ -117,7 +123,19 @@ jobs:
       run: cmake --build build -- -k0
     - name: Generate ISOs
       run: cmake --build build --target bootcd --target livecd
-    
+    - name: Upload ISOs
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-msvc${{matrix.toolset}}-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: |
+          build/bootcd.iso
+          build/livecd.iso
+    - name: Upload debug symbols
+      if: ${{ matrix.config == 'Debug' }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-syms-msvc${{matrix.toolset}}-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: build/msvc_pdb
 
   build-msvc-arm:
     strategy:
@@ -167,7 +185,33 @@ jobs:
     - name: Build some applications (arm64)
       if: ${{ matrix.arch == 'arm64' }}
       run: cmake --build build --target calc magnify mstsc notepad osk regedit taskmgr winmine wordpad base/applications/screensavers/all -- -k0
-    
+    - name: Upload compiled binaries
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-msvc${{matrix.toolset}}-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: |
+          build/base
+          build/dll/cpl
+          build/modules/rosapps
+          !**/CMakeFiles
+          !**/cmake_install.cmake
+          !**/*.asm
+          !**/*.bin
+          !**/*.c
+          !**/*.def
+          !**/*.exp
+          !**/*.h
+          !**/*.lib
+          !**/*.mc
+          !**/*.obj
+          !**/*.rc
+          !**/*.tlb
+    - name: Upload debug symbols
+      if: ${{ matrix.config == 'Debug' }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-syms-msvc${{matrix.toolset}}-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: build/msvc_pdb
 
   build-clang-cl:
     strategy:
@@ -214,7 +258,19 @@ jobs:
       run: cmake --build build -- -k0
     - name: Generate ISOs
       run: cmake --build build --target bootcd --target livecd
-    
+    - name: Upload ISOs
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-clang-cl-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: |
+          build/bootcd.iso
+          build/livecd.iso
+    - name: Upload debug symbols
+      if: ${{ matrix.config == 'Debug' }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: reactos-syms-clang-cl-${{matrix.arch}}-${{matrix.config}}-${{github.sha}}
+        path: build/msvc_pdb
 
 # Disable MSBuild for the moment being until a proper fix is provided -- see CORE-18911
 #  build-msbuild-i386:
