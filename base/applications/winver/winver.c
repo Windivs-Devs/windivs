@@ -25,5 +25,5 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
     iccx.dwICC = ICC_STANDARD_CLASSES | ICC_WIN95_CLASSES;
     InitCommonControlsEx(&iccx);
 
-    return ShellAboutW(NULL, L"ReactOS", NULL, NULL);
+    return ShellAboutW(NULL, L"Windivs", NULL, NULL);
 }
