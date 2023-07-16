@@ -2,19 +2,19 @@
 
 INTRODUCTION
 =============
-This is ReactOS Calc, a scientific calculator for Win32 and Win64 systems.
+This is Windivs Calc, a scientific calculator for Win32 and Win64 systems.
 I decided to start this project because the winecalc wasn't very usable (it's just my personal opinion) and the calculator included into Win95 and Win98 has some big limitations, like the missing support for 64 bit integers.
-The user interface of ReactOS Calc is really similar to Microsoft calculator, so you should be able to use this replacement very quickly.
+The user interface of Windivs Calc is really similar to Microsoft calculator, so you should be able to use this replacement very quickly.
 
 COMPILATION
 ============
-You need MinGW for compiling ReactOS Calc.
+You need MinGW for compiling Windivs Calc.
 Just launch MAKEALL.BAT from the source directory.
 This will generate all executables for various configurations and platforms.
 
 COMPILING THE HELP FILE
 ========================
-ReactOS Calc uses HTMLHELP for opening the help file and generating the popups.
+Windivs Calc uses HTMLHELP for opening the help file and generating the popups.
 The Microsoft HTMLHELP Workshop is freely downloadable from Microsoft's site at:
 
 http://www.microsoft.com/downloads/details.aspx?familyid=00535334-c8a6-452f-9aa0-d597d16580cc&displaylang=en
@@ -23,9 +23,9 @@ INSTALLATION
 =============
 CALC.CHM must be copied under %systemroot%\Help directory.
 For Microsoft Windows's users, it can be \Windows\Help or \WinNT\Help.
-For ReactOS's users, it must be \ReactOS\Help (at the moment the Help directory doesn't exists, so it must be created manually).
+For Windivs users, it must be \Windivs\Help (at the moment the Help directory doesn't exists, so it must be created manually).
 
-NOTES TO REACTOS'S USERS
+NOTES TO Windivs USERS
 =========================
 At the time of the write of this text, the newest version of ReactOS is 0.3.4.
 While ReactOS Calc works fine with Microsoft's operating systems, there are some known issues with ReactOS:
