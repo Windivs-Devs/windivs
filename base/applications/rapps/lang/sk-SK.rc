@@ -186,12 +186,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Manažér aplikácií systému ReactOS"
+    IDS_APPTITLE "Manažér aplikácií systému Windivs"
     IDS_APP_AUTHORS "Copyright 2009 Dmitry Chapyshev"
     IDS_SEARCH_TEXT "Hľadať…"
     IDS_APPS_COUNT "Počet programov: %d; Selected: %d"
-    IDS_WELCOME_TITLE "Víta Vás Manažér aplikácií systému ReactOS!\n\n" // ReactOS Application Manager
-    IDS_WELCOME_TEXT "Vyberte si kategóriu na ľavej strane, potom vyberte aplikáciu, ktorú chcete nainštalovať alebo odinštalovať.\nWebstránka projektu ReactOS: "
+    IDS_WELCOME_TITLE "Víta Vás Manažér aplikácií systému Windivs!\n\n" // Windivs Application Manager
+    IDS_WELCOME_TEXT "Vyberte si kategóriu na ľavej strane, potom vyberte aplikáciu, ktorú chcete nainštalovať alebo odinštalovať.\nWebstránka projektu Windivs: "
     IDS_WELCOME_URL "https://reactos.org"
     IDS_INSTALLED "Nainštalované"
     IDS_AVAILABLEFORINST "Dostupné pre nainštalovanie"
