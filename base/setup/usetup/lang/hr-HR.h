@@ -8,7 +8,7 @@ static MUI_ENTRY hrHRSetupInitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY hrHRLanguagePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,21 +98,21 @@ static MUI_ENTRY hrHRWelcomePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Dobrodo\347li u ReactOS instalaciju",
+        "Dobrodo\347li u Windivs instalaciju",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Ovaj dio instalacije kopira ReactOS na va\347e",
+        "Ovaj dio instalacije kopira Windivs na va\347e",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,43 +126,43 @@ static MUI_ENTRY hrHRWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Pritisnite ENTER za instalaciju ili nadogradnju ReactOS-a.",
+        "\x07  Pritisnite ENTER za instalaciju ili nadogradnju Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-     // "\x07  Pritisnite R za popravak ReactOS instalacije koriste†i Recovery Console.",
-        "\x07  Pritisnite R za popravak ReactOS instalacije.",
+     // "\x07  Pritisnite R za popravak Windivs instalacije koristeï¿½i Recovery Console.",
+        "\x07  Pritisnite R za popravak Windivs instalacije.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Pritisnite L da vidite ReactOS licencni ugovor.",
+        "\x07  Pritisnite L da vidite Windivs licencni ugovor.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Pritisnite F3 da biste iza\347li bez instalacije ReactOS-a.",
+        "\x07  Pritisnite F3 da biste iza\347li bez instalacije Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Za vi\347e informacija o ReactOS-a, posjetite:",
+        "Za vi\347e informacija o Windivs-a, posjetite:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://reactos.org/",
+        "https://Windivs.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -186,21 +186,21 @@ static MUI_ENTRY hrHRIntroPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Status Verzije",
+        "Windivs Status Verzije",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS je u Alphi, \347to zna\237i da nije potpun svih funkcija",
+        "Windivs je u Alphi, \347to zna\237i da nije potpun svih funkcija",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -235,21 +235,21 @@ static MUI_ENTRY hrHRIntroPageEntries[] =
     {
         6,
         17,
-        "ra\237unalu da biste pokrenuli ReactOS na fizi\237kom ra\237unalu.",
+        "ra\237unalu da biste pokrenuli Windivs na fizi\237kom ra\237unalu.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         20,
-        "\x07  Pritisnite ENTER da biste nastavili ReactOS instalaciju.",
+        "\x07  Pritisnite ENTER da biste nastavili Windivs instalaciju.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         22,
-        "\x07  Pritisnite F3 da biste iza\347li bez instalacije ReactOS-a.",
+        "\x07  Pritisnite F3 da biste iza\347li bez instalacije Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -273,7 +273,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -287,7 +287,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS je pod licencom",
+        "Windivs je pod licencom",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -308,7 +308,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         8,
         11,
-        "Sav software je dio ReactOS sustava",
+        "Sav software je dio Windivs sustava",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -343,7 +343,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         8,
         17,
-        "ReactOS-a pokriva distribuciju samo tre\206im stranama.",
+        "Windivs-a pokriva distribuciju samo tre\206im stranama.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -357,7 +357,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public licence s ReactOS molimo posjetite",
+        "GNU General Public licence s Windivs molimo posjetite",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -416,7 +416,7 @@ static MUI_ENTRY hrHRDevicePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -523,14 +523,14 @@ static MUI_ENTRY hrHRRepairPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS instalacija je u ranoj fazi razvijanja. Jo\347 nema",
+        "Windivs instalacija je u ranoj fazi razvijanja. Jo\347 nema",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -596,21 +596,21 @@ static MUI_ENTRY hrHRUpgradePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS instalacija mo\247e a\247urirati jednu postoje\206u ReactOS instalaciju",
+        "Windivs instalacija mo\247e a\247urirati jednu postoje\206u Windivs instalaciju",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "napisanu ispod, ili, ako je ReactOS instalacija je o\347te\206ena,",
+        "napisanu ispod, ili, ako je Windivs instalacija je o\347te\206ena,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -652,7 +652,7 @@ static MUI_ENTRY hrHRUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Pritisnite F3 da biste iza\347li bez instalacije ReactOS-a.",
+        "\x07  Pritisnite F3 da biste iza\347li bez instalacije Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -676,7 +676,7 @@ static MUI_ENTRY hrHRComputerPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -735,7 +735,7 @@ static MUI_ENTRY hrHRFlushPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -780,14 +780,14 @@ static MUI_ENTRY hrHRQuitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS nije potpuno instaliran.",
+        "Windivs nije potpuno instaliran.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -832,7 +832,7 @@ static MUI_ENTRY hrHRDisplayPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -891,14 +891,14 @@ static MUI_ENTRY hrHRSuccessPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Osnovni dijelovi ReactOS-a su se uspje\347no instalirali.",
+        "Osnovni dijelovi Windivs-a su se uspje\347no instalirali.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -943,7 +943,7 @@ static MUI_ENTRY hrHRBootPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -996,7 +996,7 @@ static MUI_ENTRY hrHRSelectPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1024,7 +1024,7 @@ static MUI_ENTRY hrHRSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Pritisnite ENTER da biste instalirali ReactOS na odabranu particiju.",
+        "\x07  Pritisnite ENTER da biste instalirali Windivs na odabranu particiju.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1076,7 +1076,7 @@ static MUI_ENTRY hrHRChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1097,14 +1097,14 @@ static MUI_ENTRY hrHRChangeSystemPartition[] =
     {
         6,
         16,
-        "koristi format koji nije podr\247an od strane ReactOS-a.",
+        "koristi format koji nije podr\247an od strane Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Da bi se provela uspje\347na instalacija ReactOS-a, instalacijski program mora promijeniti",
+        "Da bi se provela uspje\347na instalacija Windivs-a, instalacijski program mora promijeniti",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1174,7 +1174,7 @@ static MUI_ENTRY hrHRChangeSystemPartition[] =
     {
         6,
         35,
-        "original nakon \347to se instalacija ReactOS-a zavr\347i.",
+        "original nakon \347to se instalacija Windivs-a zavr\347i.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1198,7 +1198,7 @@ static MUI_ENTRY hrHRConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1219,7 +1219,7 @@ static MUI_ENTRY hrHRConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programe, programi koji pokre\206u operativa sustav (npr. ReactOS) ili drugi",
+        "programe, programi koji pokre\206u operativa sustav (npr. Windivs) ili drugi",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1254,7 +1254,7 @@ static MUI_ENTRY hrHRConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        " s trvdog diska u ra\237unalu until dok ne zavr\347ite instalaciju ReactOS-a.",
+        " s trvdog diska u ra\237unalu until dok ne zavr\347ite instalaciju Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1306,7 +1306,7 @@ static MUI_ENTRY hrHRFormatPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1351,7 +1351,7 @@ static MUI_ENTRY hrHRCheckFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1382,21 +1382,21 @@ static MUI_ENTRY hrHRInstallDirectoryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalacijski program kopira datoteke ReactOS-a na odabranu particju.",
+        "Instalacijski program kopira datoteke Windivs-a na odabranu particju.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Odaberite direktorij gdje \247elite da se ReactOS instalira:",
+        "Odaberite direktorij gdje \247elite da se Windivs instalira:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1417,7 +1417,7 @@ static MUI_ENTRY hrHRInstallDirectoryEntries[] =
     {
         6,
         16,
-        "u kojem \247elite da se ReactOS instalira.",
+        "u kojem \247elite da se Windivs instalira.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1441,14 +1441,14 @@ static MUI_ENTRY hrHRFileCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Pri\237ekajte dok ReactOS instalacijski program kopira datoteke u Va\347 ReactOS",
+        "Pri\237ekajte dok Windivs instalacijski program kopira datoteke u Va\347 Windivs",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1486,7 +1486,7 @@ static MUI_ENTRY hrHRBootLoaderEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1552,7 +1552,7 @@ static MUI_ENTRY hrHRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1576,7 +1576,7 @@ static MUI_ENTRY hrHRKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1635,7 +1635,7 @@ static MUI_ENTRY hrHRLayoutSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1695,14 +1695,14 @@ static MUI_ENTRY hrHRPrepareCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalacijski sustav priprema ra\237unalo na kopiranje datoteke ReactOS-a.",
+        "Instalacijski sustav priprema ra\237unalo na kopiranje datoteke Windivs-a.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1727,7 +1727,7 @@ static MUI_ENTRY hrHRSelectFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1775,7 +1775,7 @@ static MUI_ENTRY hrHRDeletePartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1827,7 +1827,7 @@ static MUI_ENTRY hrHRRegistryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " instalacija ",
+        " Windivs " KERNEL_VERSION_STR " instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1862,9 +1862,9 @@ MUI_ERROR hrHRErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS nije u potpunosti instaliran na Va\347em\n"
+        "Windivs nije u potpunosti instaliran na Va\347em\n"
         "ra\237unalu. Ako sada iza\320ete iz Instalacijskog programa, trebati \206ete ponovno\n"
-        "pokrenuti Instalacijski program da biste instalirali ReactOS.\n"
+        "pokrenuti Instalacijski program da biste instalirali Windivs.\n"
         "\n"
         "  \x07  Pritisnite ENTER da nasatvite.\n"
         "  \x07  Pritisnite F3 da iza\320ete iz Instalacijskog programa.",
@@ -1872,7 +1872,7 @@ MUI_ERROR hrHRErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Neuspje\347nja gradnja instalacijskih putanja za ReactOS instalacijski direktorij!\n"
+        "Neuspje\347nja gradnja instalacijskih putanja za Windivs instalacijski direktorij!\n"
         "ENTER = Ponovno pokreni ra\237unalo"
     },
     {
@@ -1882,7 +1882,7 @@ MUI_ERROR hrHRErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs within the installation source directory!\n"
         "ENTER = Ponovno pokreni ra\237unalo"
     },
     {
@@ -2081,7 +2081,7 @@ MUI_ERROR hrHRErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Odabrana particija nije dovoljno velika za instalaciju ReactOS-a.\n"
+        "Odabrana particija nije dovoljno velika za instalaciju Windivs-a.\n"
         "Instalacijska partcija mora biti velika minimalno %lu MB.\n"
         "\n"
         "  * Pritisnite bilo koju tipku da biste nastavite.",
@@ -2264,13 +2264,13 @@ MUI_STRING hrHRStrings[] =
     {STRING_PARTFORMAT,
     "Ova \206e particija biti sljede\206a formatirana."},
     {STRING_NONFORMATTEDPART,
-    "Odabrali ste instalirati ReactOS na novu ili neformatiranu particiju."},
+    "Odabrali ste instalirati Windivs na novu ili neformatiranu particiju."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "Sistemska particija nije jo\347 formatirana."},
     {STRING_NONFORMATTEDOTHERPART,
     "Nova partcija nije jo\347 formatirana."},
     {STRING_INSTALLONPART,
-    "Instalacijski program instalirava ReactOS na particiju"},
+    "Instalacijski program instalirava Windivs na particiju"},
     {STRING_CONTINUE,
     "ENTER = Nastavi"},
     {STRING_QUITCONTINUE,

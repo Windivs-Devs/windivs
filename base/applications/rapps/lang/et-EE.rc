@@ -186,12 +186,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS'i Rakenduste Haldur"
+    IDS_APPTITLE "Windivs'i Rakenduste Haldur"
     IDS_APP_AUTHORS "Copyright 2009 Dmitry Chapyshev"
     IDS_SEARCH_TEXT "Otsi…"
     IDS_APPS_COUNT "Rakenduste arv: %d; Valitud: %d"
-    IDS_WELCOME_TITLE "Tere tulemast ReactOS'i Rakenduste Haldurisse!\n\n"
-    IDS_WELCOME_TEXT "Vali vasakult teema, siis vali paremalt rakendusi mida soovid installida või desinstallida.\nReactOS'i veebileht: "
+    IDS_WELCOME_TITLE "Tere tulemast Windivs'i Rakenduste Haldurisse!\n\n"
+    IDS_WELCOME_TEXT "Vali vasakult teema, siis vali paremalt rakendusi mida soovid installida või desinstallida.\nWindivs'i veebileht: "
     IDS_WELCOME_URL "https://reactos.org"
     IDS_INSTALLED "Installitud"
     IDS_AVAILABLEFORINST "Installimiseks saadaval"

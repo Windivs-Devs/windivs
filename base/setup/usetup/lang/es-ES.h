@@ -10,14 +10,14 @@ static MUI_ENTRY esESSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Por favor, espere a que la instalaci\242n de ReactOS se inicie",
+        "Por favor, espere a que la instalaci\242n de Windivs se inicie",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -48,7 +48,7 @@ static MUI_ENTRY esESLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -100,21 +100,21 @@ static MUI_ENTRY esESWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Bienvenido a la instalaci\242n de ReactOS",
+        "Bienvenido a la instalaci\242n de Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Este es el primer paso de instalaci\242n, que copiar\240 ReactOS en",
+        "Este es el primer paso de instalaci\242n, que copiar\240 Windivs en",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -128,15 +128,15 @@ static MUI_ENTRY esESWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Pulse INTRO para instalar o actualizar ReactOS.",
+        "\x07  Pulse INTRO para instalar o actualizar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-//      "\x07  Pulse R para reparar una instalación de ReactOS usando la Consola de Recuperación.",
-        "\x07  Pulse R para reparar ReactOS.",
+//      "\x07  Pulse R para reparar una instalación de Windivs usando la Consola de Recuperación.",
+        "\x07  Pulse R para reparar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -150,21 +150,21 @@ static MUI_ENTRY esESWelcomePageEntries[] =
     {
         8,
         21,
-        "\x07  Pulse F3 para salir sin instalar ReactOS.",
+        "\x07  Pulse F3 para salir sin instalar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Para m\240s informaci\242n sobre ReactOS, visite la Web:",
+        "Para m\240s informaci\242n sobre Windivs, visite la Web:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://reactos.org/",
+        "https://Windivs.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -188,21 +188,21 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Situaci\242n de la Versi\242n de ReactOS",
+        "Situaci\242n de la Versi\242n de Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS est\240 en fase Alpha, lo que significa que a\243n no est\240",
+        "Windivs est\240 en fase Alpha, lo que significa que a\243n no est\240",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -230,21 +230,21 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         6,
         16,
-        "en caso de que uses ReactOS en hardware real.",
+        "en caso de que uses Windivs en hardware real.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Pulse INTRO para continuar la instalaci\242n de ReactOS.",
+        "\x07  Pulse INTRO para continuar la instalaci\242n de Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Pulse F3 para salir sin instalar ReactOS.",
+        "\x07  Pulse F3 para salir sin instalar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -268,7 +268,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -282,7 +282,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS se distribuye bajo los T\202rminos y Condiciones de",
+        "Windivs se distribuye bajo los T\202rminos y Condiciones de",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -303,7 +303,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         8,
         11,
-        "Todo el software que forma parte del sistema ReactOS est\240,",
+        "Todo el software que forma parte del sistema Windivs est\240,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -338,7 +338,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         8,
         17,
-        "La licencia de ReactOS cubre solo la distribuci\242n a terceros.",
+        "La licencia de Windivs cubre solo la distribuci\242n a terceros.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -352,7 +352,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License con ReactOS visite:",
+        "GNU General Public License con Windivs visite:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -411,7 +411,7 @@ static MUI_ENTRY esESDevicePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -518,14 +518,14 @@ static MUI_ENTRY esESRepairPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "La instalaci\242n de ReactOS se encuentra en una fase preliminar.",
+        "La instalaci\242n de Windivs se encuentra en una fase preliminar.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -591,21 +591,21 @@ static MUI_ENTRY esESUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "El instalador puede actualizar una de las versiones de ReactOS",
+        "El instalador puede actualizar una de las versiones de Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listadas a continuaci\242n o, si la instalaci\242n de ReactOS est\240 da\244ada,",
+        "listadas a continuaci\242n o, si la instalaci\242n de Windivs est\240 da\244ada,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -647,7 +647,7 @@ static MUI_ENTRY esESUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Pulse F3 para salir sin instalar ReactOS.",
+        "\x07  Pulse F3 para salir sin instalar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -671,7 +671,7 @@ static MUI_ENTRY esESComputerPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -730,7 +730,7 @@ static MUI_ENTRY esESFlushPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -775,14 +775,14 @@ static MUI_ENTRY esESQuitPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS no ha sido instalado completamente.",
+        "Windivs no ha sido instalado completamente.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -827,7 +827,7 @@ static MUI_ENTRY esESDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -886,14 +886,14 @@ static MUI_ENTRY esESSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Los componentes b\240sicos de ReactOS han sido instalados correctamente.",
+        "Los componentes b\240sicos de Windivs han sido instalados correctamente.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -938,7 +938,7 @@ static MUI_ENTRY esESBootPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -991,7 +991,7 @@ static MUI_ENTRY esESSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1019,7 +1019,7 @@ static MUI_ENTRY esESSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Pulse INTRO para instalar ReactOS en la Partici\242n seleccionada.",
+        "\x07  Pulse INTRO para instalar Windivs en la Partici\242n seleccionada.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1072,7 +1072,7 @@ static MUI_ENTRY esESChangeSystemPartition[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1093,14 +1093,14 @@ static MUI_ENTRY esESChangeSystemPartition[] =
     {
         6,
         16,
-        "usa un formato que ReactOS no puede gestionar.",
+        "usa un formato que Windivs no puede gestionar.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Para poder instalar correctamente ReactOS, el instalador deber\240 cambiar",
+        "Para poder instalar correctamente Windivs, el instalador deber\240 cambiar",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1170,7 +1170,7 @@ static MUI_ENTRY esESChangeSystemPartition[] =
     {
         6,
         35,
-        "original una vez haya finalizado la instalaci\242n de ReactOS.",
+        "original una vez haya finalizado la instalaci\242n de Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1194,7 +1194,7 @@ static MUI_ENTRY esESConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1215,7 +1215,7 @@ static MUI_ENTRY esESConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "dispositivos, software, sistemas de arranque de SO (como ReactOS) o",
+        "dispositivos, software, sistemas de arranque de SO (como Windivs) o",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1250,7 +1250,7 @@ static MUI_ENTRY esESConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "equipo desde ese disco duro hasta que termine de instalar ReactOS.",
+        "equipo desde ese disco duro hasta que termine de instalar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1302,7 +1302,7 @@ static MUI_ENTRY esESFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1340,7 +1340,7 @@ static MUI_ENTRY esESCheckFSEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1371,7 +1371,7 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1385,7 +1385,7 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         6,
         9,
-        "Seleccione el directorio donde quiere instalar ReactOS:",
+        "Seleccione el directorio donde quiere instalar Windivs:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1406,7 +1406,7 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         6,
         16,
-        "ReactOS.",
+        "Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1430,21 +1430,21 @@ static MUI_ENTRY esESFileCopyEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Por favor, espere mientras el Instalador de ReactOS copia",
+        "Por favor, espere mientras el Instalador de Windivs copia",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
     {
         0,
         13,
-        "los archivos en el directorio de ReactOS.",
+        "los archivos en el directorio de Windivs.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1475,7 +1475,7 @@ static MUI_ENTRY esESBootLoaderEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1534,7 +1534,7 @@ static MUI_ENTRY etESBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1558,7 +1558,7 @@ static MUI_ENTRY esESKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1617,7 +1617,7 @@ static MUI_ENTRY esESLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1677,14 +1677,14 @@ static MUI_ENTRY esESPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "El instalador se prepara para copiar los archivos de ReactOS.",
+        "El instalador se prepara para copiar los archivos de Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1709,7 +1709,7 @@ static MUI_ENTRY esESSelectFSEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1757,7 +1757,7 @@ static MUI_ENTRY esESDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1809,7 +1809,7 @@ static MUI_ENTRY esESRegistryEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de ReactOS " KERNEL_VERSION_STR " ",
+        " Instalaci\242n de Windivs " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1844,9 +1844,9 @@ MUI_ERROR esESErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS no est\240 completamente instalado en su\n"
+        "Windivs no est\240 completamente instalado en su\n"
         "equipo. Si cierra ahora el Instalador, necesitar\240\n"
-        "ejecutarlo otra vez para instalar ReactOS.\n"
+        "ejecutarlo otra vez para instalar Windivs.\n"
         "\n"
         "  \x07  Pulse INTRO para continuar con el instalador.\n"
         "  \x07  Pulse F3 para abandonar el instalador.",
@@ -1854,7 +1854,7 @@ MUI_ERROR esESErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "\255Error creando las rutas de instalaci\242n para el directorio de ReactOS!\n"
+        "\255Error creando las rutas de instalaci\242n para el directorio de Windivs!\n"
         "INTRO = Reiniciar el equipo"
     },
     {
@@ -1864,7 +1864,7 @@ MUI_ERROR esESErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "\255No puede instalar ReactOS dentro del directorio fuente!\n"
+        "\255No puede instalar Windivs dentro del directorio fuente!\n"
         "INTRO = Reiniciar el equipo"
     },
     {
@@ -2064,7 +2064,7 @@ MUI_ERROR esESErrorEntries[] =
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
         "La partici\242n selecionada no es lo suficientemente grande como para.\n"
-        "instalar ReactOS. Se necesita una partici\242n de al menos %lu MB.\n"
+        "instalar Windivs. Se necesita una partici\242n de al menos %lu MB.\n"
         "\n"
         "  * Pulse una tecla para continuar.",
         NULL
@@ -2246,13 +2246,13 @@ MUI_STRING esESStrings[] =
     {STRING_PARTFORMAT,
     "A continuaci\242n se formatear\240 esta partici\242n."},
     {STRING_NONFORMATTEDPART,
-    "Ha elegido instalar ReactOS en una nueva Partici\242n o en una Partici\242n sin formato."},
+    "Ha elegido instalar Windivs en una nueva Partici\242n o en una Partici\242n sin formato."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "La Partici\242n del sistema todav\241a no ha sido formateada."},
     {STRING_NONFORMATTEDOTHERPART,
     "La Partici\242n nueva todav\241a no ha sido formateada."},
     {STRING_INSTALLONPART,
-    "El instalador est\240 instalando ReactOS en la Partici\242n"},
+    "El instalador est\240 instalando Windivs en la Partici\242n"},
     {STRING_CONTINUE,
     "INTRO = Continuar"},
     {STRING_QUITCONTINUE,
