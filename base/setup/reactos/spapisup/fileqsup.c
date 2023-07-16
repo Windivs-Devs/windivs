@@ -66,7 +66,7 @@ SpFileQueueCopy_NtToWin32(
                            SourcePath,
                            SourceFileName,
     // Undocumented on MSDN is the fact that this parameter is mandatory *IF* one wants to take the TagFile into account!
-                           L"ReactOS",
+                           L"Windivs",
     // SourceTagFile -- Special behaviour: use cabinet file present in ArchiveDir path! The API does not check for a ".cab" extension.
                            SourceCabinet,
                            Win32TargetDirectory,

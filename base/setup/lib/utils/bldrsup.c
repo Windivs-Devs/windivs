@@ -237,7 +237,7 @@ CreateCommonFreeLdrSections(
 
     /* TitleText */
     IniCacheInsertKey(IniSection, NULL, INSERT_LAST,
-                      L"TitleText", L"ReactOS Boot Manager");
+                      L"TitleText", L"Windivs Boot Manager");
 
     /* MinimalUI */
     IniCacheInsertKey(IniSection, NULL, INSERT_LAST,

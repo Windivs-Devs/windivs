@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Setup Library
+ * PROJECT:         Windivs Setup Library
  * FILE:            base/setup/lib/bootsup.c
  * PURPOSE:         Bootloader support functions
  * PROGRAMMERS:     ...
@@ -71,58 +71,58 @@ CreateFreeLoaderReactOSEntries(
     Options->OsLoadPath = ArcPath;
 
     /* ReactOS */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS");
-    BootEntry->FriendlyName = L"\"ReactOS\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs");
+    BootEntry->FriendlyName = L"\"Windivs\"";
     Options->OsLoadOptions  = NULL; // L"";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs"));
 
     /* ReactOS_Debug */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Debug");
-    BootEntry->FriendlyName = L"\"ReactOS (Debug)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Debug");
+    BootEntry->FriendlyName = L"\"Windivs (Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Debug"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Debug"));
 
 #ifdef _WINKD_
     /* ReactOS_VBoxDebug */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_VBoxDebug");
-    BootEntry->FriendlyName = L"\"ReactOS (VBox Debug)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_VBoxDebug");
+    BootEntry->FriendlyName = L"\"Windivs (VBox Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=VBOX /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_VBoxDebug"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_VBoxDebug"));
 #endif
 #if DBG
 #ifndef _WINKD_
     /* ReactOS_KdSerial */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_KdSerial");
-    BootEntry->FriendlyName = L"\"ReactOS (RosDbg)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_KdSerial");
+    BootEntry->FriendlyName = L"\"Windivs (RosDbg)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /KDSERIAL";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_KdSerial"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_KdSerial"));
 #endif
 
     /* ReactOS_Screen */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Screen");
-    BootEntry->FriendlyName = L"\"ReactOS (Screen)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Screen");
+    BootEntry->FriendlyName = L"\"Windivs (Screen)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=SCREEN /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Screen"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Screen"));
 
     /* ReactOS_LogFile */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_LogFile");
-    BootEntry->FriendlyName = L"\"ReactOS (Log file)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_LogFile");
+    BootEntry->FriendlyName = L"\"Windivs (Log file)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=FILE /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_LogFile"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_LogFile"));
 
     /* ReactOS_Ram */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Ram");
-    BootEntry->FriendlyName = L"\"ReactOS (RAM Disk)\"";
-    Options->OsLoadPath     = L"ramdisk(0)\\ReactOS";
-    Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /RDPATH=reactos.img /RDIMAGEOFFSET=32256";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Ram"));
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Ram");
+    BootEntry->FriendlyName = L"\"Windivs (RAM Disk)\"";
+    Options->OsLoadPath     = L"ramdisk(0)\\Windivs";
+    Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /RDPATH=windivs.img /RDIMAGEOFFSET=32256";
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Ram"));
 
     /* ReactOS_EMS */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_EMS");
-    BootEntry->FriendlyName = L"\"ReactOS (Emergency Management Services)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_EMS");
+    BootEntry->FriendlyName = L"\"Windivs (Emergency Management Services)\"";
     Options->OsLoadPath     = ArcPath;
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /redirect=com2 /redirectbaudrate=115200";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_EMS"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_EMS"));
 #endif
 
 
@@ -130,15 +130,15 @@ CreateFreeLoaderReactOSEntries(
 #if DBG && !defined(_WINKD_)
     if (IsUnattendedSetup)
     {
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS_KdSerial");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs_KdSerial");
     }
     else
 #endif
     {
 #if DBG
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS_Debug");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs_Debug");
 #else
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs");
 #endif
     }
 

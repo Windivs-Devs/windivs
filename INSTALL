@@ -69,11 +69,11 @@ to be copied to during installation.
 Set the ROS_INSTALL environment variable. If you are on Windows this could be
 done by:
 
-  set ROS_INSTALL=c:\reactos
+  set ROS_INSTALL=c:\windivs
 
 If you are on Linux this could be done by:
 
-  export ROS_INSTALL=/mnt/windows/reactos
+  export ROS_INSTALL=/mnt/windows/windivs
 
 Now run 'ninja install' to install the files to the new location.
 
