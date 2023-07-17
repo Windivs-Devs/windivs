@@ -747,12 +747,12 @@ OnActivate(PGUI_CONSOLE_DATA GuiData, WPARAM wParam)
     }
 
     /*
-     * Ignore the next mouse signal when we are going to be enabled again via
+     * Ignore the next mouse event when we are going to be enabled again via
      * the mouse, in order to prevent, e.g. when we are in Edit mode, erroneous
      * mouse actions from the user that could spoil text selection or copy/pastes.
      */
     if (ActivationState == WA_CLICKACTIVE)
-        GuiData->IgnoreNextMouseSignal = TRUE;
+        GuiData->IgnoreNextMouseEvent = TRUE;
 }
 
 static VOID
@@ -1621,7 +1621,7 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
     // and whether we are or not in edit mode, in order to know if we need
     // to deal with the mouse.
 
-    if (GuiData->IgnoreNextMouseSignal)
+    if (GuiData->IgnoreNextMouseEvent)
     {
         if (msg != WM_LBUTTONDOWN &&
             msg != WM_MBUTTONDOWN &&
@@ -1629,15 +1629,15 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
             msg != WM_XBUTTONDOWN)
         {
             /*
-             * If this mouse signal is not a button-down action
+             * If this mouse event is not a button-down action
              * then this is the last one being ignored.
              */
-            GuiData->IgnoreNextMouseSignal = FALSE;
+            GuiData->IgnoreNextMouseEvent = FALSE;
         }
         else
         {
             /*
-             * This mouse signal is a button-down action.
+             * This mouse event is a button-down action.
              * Ignore it and perform default action.
              */
             DoDefault = TRUE;
@@ -1739,8 +1739,8 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
                     GuiData->Selection.dwFlags |= CONSOLE_MOUSE_SELECTION | CONSOLE_MOUSE_DOWN;
                     UpdateSelection(GuiData, &cL, &cR);
 
-                    /* Ignore the next mouse move signal */
-                    GuiData->IgnoreNextMouseSignal = TRUE;
+                    /* Ignore the next mouse move event */
+                    GuiData->IgnoreNextMouseEvent = TRUE;
 #undef IS_WORD_SEP
                 }
 
@@ -1759,8 +1759,8 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
                     Copy(GuiData);
                 }
 
-                /* Ignore the next mouse move signal */
-                GuiData->IgnoreNextMouseSignal = TRUE;
+                /* Ignore the next mouse move event */
+                GuiData->IgnoreNextMouseEvent = TRUE;
                 break;
             }
 
@@ -1776,6 +1776,29 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
 
             default:
                 DoDefault = TRUE; // FALSE;
+                break;
+        }
+
+        /*
+         * HACK FOR CORE-8394 (Part 1):
+         *
+         * It appears that when running ReactOS on VBox with Mouse Integration
+         * enabled, the next mouse event coming after a button-down action is
+         * a mouse-move. However it is NOT always a rule, so that we cannot use
+         * the IgnoreNextMouseEvent flag to just "ignore" the next mouse event,
+         * thinking it would always be a mouse-move event.
+         *
+         * To work around this problem (that should really be fixed in Win32k),
+         * we use a second flag to ignore this possible next mouse move event.
+         */
+        switch (msg)
+        {
+            case WM_LBUTTONDOWN:
+            case WM_MBUTTONDOWN:
+            case WM_RBUTTONDOWN:
+            case WM_XBUTTONDOWN:
+                GuiData->HackCORE8394IgnoreNextMove = TRUE;
+            default:
                 break;
         }
     }
@@ -1920,15 +1943,14 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
         /*
          * HACK FOR CORE-8394 (Part 1):
          *
-         * It appears that depending on which VM ReactOS runs, the next mouse
-         * signal coming after a button-down action can be a mouse-move (e.g.
-         * on VBox, whereas on QEMU it is not the case). However it is NOT a
-         * rule, so that we cannot use the IgnoreNextMouseSignal flag to just
-         * "ignore" the next mouse event, thinking it would always be a mouse-
-         * move signal.
+         * It appears that when running ReactOS on VBox with Mouse Integration
+         * enabled, the next mouse event coming after a button-down action is
+         * a mouse-move. However it is NOT always a rule, so that we cannot use
+         * the IgnoreNextMouseEvent flag to just "ignore" the next mouse event,
+         * thinking it would always be a mouse-move event.
          *
          * To work around this problem (that should really be fixed in Win32k),
-         * we use a second flag to ignore this possible next mouse move signal.
+         * we use a second flag to ignore this possible next mouse move event.
          */
         switch (msg)
         {
