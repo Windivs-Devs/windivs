@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Console Configuration DLL
+ * PROJECT:     Windivs Console Configuration DLL
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/console/console.rc
  * PURPOSE:     main resource file
@@ -13,7 +13,7 @@
 #include "resource.h"
 
 #define REACTOS_VERSION_DLL
-#define REACTOS_STR_FILE_DESCRIPTION  "ReactOS Control Panel Console Applet"
+#define REACTOS_STR_FILE_DESCRIPTION  "Windivs Control Panel Console Applet"
 #define REACTOS_STR_INTERNAL_NAME     "console"
 #define REACTOS_STR_ORIGINAL_FILENAME "console.dll"
 #include <reactos/version.rc>

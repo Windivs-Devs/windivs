@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications Manager
+ * PROJECT:     Windivs Applications Manager
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Hungarian resource file
  * TRANSLATOR:  Copyright 2021 Tibor Lajos Füzi <tibor.fuzi@gmail.com>
@@ -186,12 +186,12 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS Alkalmazáskezelő"
+    IDS_APPTITLE "Windivs Alkalmazáskezelő"
     IDS_APP_AUTHORS "Copyright 2009 Dmitry Chapyshev"
     IDS_SEARCH_TEXT "Keresés…"
     IDS_APPS_COUNT "Alkalmazások száma: %d; Kijelölve: %d"
-    IDS_WELCOME_TITLE "Üdvözöljük a ReactOS Alkalmazáskezelőben!\n\n"
-    IDS_WELCOME_TEXT "Bal oldalon válasszon kategóriát, majd válasszon egy telepíteni vagy eltávolítani kívánt alkalmazást.\nReactOS weboldal: "
+    IDS_WELCOME_TITLE "Üdvözöljük a Windivs Alkalmazáskezelőben!\n\n"
+    IDS_WELCOME_TEXT "Bal oldalon válasszon kategóriát, majd válasszon egy telepíteni vagy eltávolítani kívánt alkalmazást.\nWindivs weboldal: "
     IDS_WELCOME_URL "https://reactos.org"
     IDS_INSTALLED "Telepített"
     IDS_AVAILABLEFORINST "Telepíthető alkalmazások"

@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/applications/osk/lang/tr-TR.rc
  * PURPOSE:         On screen keyboard (Turkish resources).
@@ -60,7 +60,7 @@ BEGIN
 END
 
 STRINGTABLE
-BEGIN 
+BEGIN
     IDS_OSK "Ekran Klavyesi"
     IDS_AUTHORS "Telif Hakkı: Denis Robert"
     IDS_NUMLOCK "Num"

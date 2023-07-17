@@ -1,11 +1,11 @@
 /*
- * PROJECT:     ReactOS Sound Volume Control
+ * PROJECT:     Windivs Sound Volume Control
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
  * PURPOSE:     Chinese (Hong Kong) resource file
  * TRANSLATORS: Copyright 2021 Chan Chilung <eason066@gmail.com>
  * REFERENCES:  Chinese (Traditional) resource file
  */
- 
+
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_HONGKONG
 
 IDM_MAINMENU MENU

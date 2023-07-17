@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications Manager
+ * PROJECT:     Windivs Applications Manager
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Hebrew resource file
  * TRANSLATORS: Copyright 2013-2019 Baruch Rutman <peterooch@gmail.com>
@@ -196,7 +196,7 @@ BEGIN
     IDS_SEARCH_TEXT "חיפוש…"
     IDS_APPS_COUNT "ספירת יישומים: %d; Selected: %d"
     IDS_WELCOME_TITLE "ברוכים הבאים למנהל היישומים של Windivs!\n\n"
-    IDS_WELCOME_TEXT "בחר קטגוריה בצד שמאל, לאחר מכן בחר יישום להתקנה או להסרה.\nהאתר של ReactOS: "
+    IDS_WELCOME_TEXT "בחר קטגוריה בצד שמאל, לאחר מכן בחר יישום להתקנה או להסרה.\nהאתר של Windivs: "
     IDS_WELCOME_URL "https://reactos.org"
     IDS_INSTALLED "מותקן"
     IDS_AVAILABLEFORINST "זמין להתקנה"

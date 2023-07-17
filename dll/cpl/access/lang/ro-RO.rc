@@ -53,7 +53,7 @@ CAPTION "Afișaj"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "ContrastSporit", -1, 6, 11, 234, 62
-    LTEXT "Utilizați această opțiune dacă întâmpinați dificultăți la utilizarea interfețelor cu fonturile și culorile implicite ale ReactOS.",
+    LTEXT "Utilizați această opțiune dacă întâmpinați dificultăți la utilizarea interfețelor cu fonturile și culorile implicite ale Windivs.",
           -1, 12, 20, 222, 29
     AUTOCHECKBOX "Doresc folosirea de &ContrastSporit", IDC_CONTRAST_BOX, 12, 49, 126, 14
     PUSHBUTTON "&Opțiuni…", IDC_CONTRAST_BUTTON, 144, 49, 90, 14

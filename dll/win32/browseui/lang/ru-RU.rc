@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Explorer
+ * PROJECT:     Windivs Explorer
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
  * PURPOSE:     Russian resource file
  * COPYRIGHT:   Copyright 2014-2015 Petr Akhlamov <petr-akhlamov@yandex.ru>
@@ -81,7 +81,7 @@ BEGIN
     END
     POPUP "&Справка", FCIDM_MENU_HELP
     BEGIN
-        MENUITEM "&О ReactOS", IDM_HELP_ABOUT
+        MENUITEM "&О Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -349,6 +349,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PARSE_ADDR_ERR_TITLE "Проводник ReactOS"
-    IDS_PARSE_ADDR_ERR_TEXT "Проводник ReactOS не может найти '%1'. Проверьте правильность написания и попробуйте снова."
+    IDS_PARSE_ADDR_ERR_TITLE "Проводник Windivs"
+    IDS_PARSE_ADDR_ERR_TEXT "Проводник Windivs не может найти '%1'. Проверьте правильность написания и попробуйте снова."
 END

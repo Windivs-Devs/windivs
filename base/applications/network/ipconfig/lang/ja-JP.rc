@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS ipconfig utility
+ * PROJECT:     Windivs ipconfig utility
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Japanese (Japan) resource file
  * TRANSLATOR:  Copyright 2023 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
@@ -9,7 +9,7 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 
 STRINGTABLE
 BEGIN
-    IDS_HEADER "\nReactOS IP 設定\n\n"
+    IDS_HEADER "\nWindivs IP 設定\n\n"
     IDS_HOSTNAME            "\tホスト名  . . . . . . . . . . . . : %hs\n"
     IDS_PRIMARYDNSSUFFIX    "\tプライマリ DNS サフィックス . . . : %hs\n"
     IDS_NODETYPEBCAST       "\tノードの種類  . . . . . . . . . . : ブロードキャスト\n"

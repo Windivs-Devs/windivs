@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Tasklist Command
+ * PROJECT:     Windivs Tasklist Command
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Ukrainian resource file
- * TRANSLATOR:  
+ * TRANSLATOR:
  */
 
 LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT

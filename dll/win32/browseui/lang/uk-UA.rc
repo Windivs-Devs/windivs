@@ -80,7 +80,7 @@ BEGIN
     END
     POPUP "&Допомога", FCIDM_MENU_HELP
     BEGIN
-        MENUITEM "&Про ReactOS", IDM_HELP_ABOUT
+        MENUITEM "&Про Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -348,6 +348,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PARSE_ADDR_ERR_TITLE "ReactOS Explorer"
-    IDS_PARSE_ADDR_ERR_TEXT "ReactOS Explorer cannot find '%1'. Check the spelling and try again."
+    IDS_PARSE_ADDR_ERR_TITLE "Windivs Explorer"
+    IDS_PARSE_ADDR_ERR_TEXT "Windivs Explorer cannot find '%1'. Check the spelling and try again."
 END

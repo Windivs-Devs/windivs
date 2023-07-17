@@ -91,7 +91,7 @@ BEGIN
     END
     POPUP "&Bantuan", FCIDM_MENU_HELP
     BEGIN
-        MENUITEM "&Tentang ReactOS", IDM_HELP_ABOUT
+        MENUITEM "&Tentang Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -359,6 +359,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PARSE_ADDR_ERR_TITLE "Penjelajah ReactOS"
-    IDS_PARSE_ADDR_ERR_TEXT "Penjelajah ReactOS tidak menemukan '%1'. Cek pengejaannya dan coba lagi."
+    IDS_PARSE_ADDR_ERR_TITLE "Penjelajah Windivs"
+    IDS_PARSE_ADDR_ERR_TEXT "Penjelajah Windivs tidak menemukan '%1'. Cek pengejaannya dan coba lagi."
 END

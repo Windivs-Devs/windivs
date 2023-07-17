@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Event Log Viewer
+ * PROJECT:     Windivs Event Log Viewer
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2009 Petru Dimitriu <petrimetri@gmail.com>
@@ -170,7 +170,7 @@ END
 STRINGTABLE
 BEGIN
 /* Please note that explicit TAB characters '\t' are used to fix the alignment of the message in the MessageBox */
-    IDS_USAGE "Inspector de Evenimente ReactOS\n\
+    IDS_USAGE "Inspector de Evenimente Windivs\n\
 \n\
 EventVwr [nume calculator] [/L:<fișier jurnal de evenimente>] [/?]\n\
 \n\

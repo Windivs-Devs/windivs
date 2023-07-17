@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications Manager
+ * PROJECT:     Windivs Applications Manager
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Swedish resource file
  * TRANSLATOR:  Copyright 2011 Jan Blomqvist Kinander (Jaix Bly) <jaixbly@spray.se>
@@ -191,7 +191,7 @@ BEGIN
     IDS_SEARCH_TEXT "Sök…"
     IDS_APPS_COUNT "Programantal: %d; Selected: %d"
     IDS_WELCOME_TITLE "Välkommen till Windivs programhanterare!\n\n"
-    IDS_WELCOME_TEXT "Välj en kategori till vänster, och sedan ett program för att installera eller avinstallera.\nReactOS Web sida: "
+    IDS_WELCOME_TEXT "Välj en kategori till vänster, och sedan ett program för att installera eller avinstallera.\nWindivs Web sida: "
     IDS_WELCOME_URL "https://reactos.org"
     IDS_INSTALLED "Installerat"
     IDS_AVAILABLEFORINST "Tillgängliga for installation"

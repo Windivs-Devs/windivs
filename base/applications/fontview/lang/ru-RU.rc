@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Font Viewer
+ * PROJECT:     Windivs Font Viewer
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Russian resource file
  * TRANSLATORS: Copyright 2007 Dmitry Chapyshev <dmitry@reactos.org>
@@ -18,7 +18,7 @@ BEGIN
     IDS_ERROR_NOMEM "Недостаточно памяти для выполнения операции."
     IDS_ERROR_NOFONT "%1 не является корректным файлом шрифта."
     IDS_ERROR_NOCLASS "Невозможно инициализировать класс окна."
-    IDS_ERROR_ISINSTALLED "Этот шрифт уже установлен!" 
+    IDS_ERROR_ISINSTALLED "Этот шрифт уже установлен!"
     IDS_ERROR_FONTCPY "Не удалось скопировать файл шрифта!"
     IDS_ERROR_OPENKEY "Не удалось открыть ключ реестра для шрифтов!"
     IDS_ERROR_REGISTER "Не удалось зарегистрировать новый шрифт!"

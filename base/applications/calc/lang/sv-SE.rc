@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS CALC
+ * PROJECT:     Windivs CALC
  * FILE:        base/applications/calc/lang/sv-SE.rc
  * PURPOSE:     Swedish resource file
  * Translation: Jaix Bly
@@ -11,7 +11,7 @@ LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
 
 IDD_DIALOG_SCIENTIFIC DIALOGEX 0, 0, 316, 163
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kalkylator"
+CAPTION "Windivs Kalkylator"
 MENU IDR_MENU_SCIENTIFIC_1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -159,7 +159,7 @@ END
 
 IDD_DIALOG_STANDARD DIALOGEX 0, 0, 169, 128
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kalkylator"
+CAPTION "Windivs Kalkylator"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -224,7 +224,7 @@ END
 
 IDD_DIALOG_CONVERSION DIALOGEX 0, 0, 320, 130
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kalkylator"
+CAPTION "Windivs Kalkylator"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -340,7 +340,7 @@ BEGIN
     BEGIN
         MENUITEM "Visa hjälp", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Om ReactOS Kalkylator", IDM_HELP_ABOUT
+        MENUITEM "Om Windivs Kalkylator", IDM_HELP_ABOUT
     END
 END
 
@@ -373,7 +373,7 @@ BEGIN
     BEGIN
         MENUITEM "Visa hjälp", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Om ReactOS Kalkylator", IDM_HELP_ABOUT
+        MENUITEM "Om Windivs Kalkylator", IDM_HELP_ABOUT
     END
 END
 
@@ -396,7 +396,7 @@ BEGIN
     BEGIN
         MENUITEM "Visa hjälp", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Om ReactOS Kalkylator", IDM_HELP_ABOUT
+        MENUITEM "Om Windivs Kalkylator", IDM_HELP_ABOUT
     END
 END
 
@@ -411,7 +411,7 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "ReactOS Kalkylator"
+    IDS_CALC_NAME "Windivs Kalkylator"
     IDS_AUTHOR "Skriven av Carlo Bramini"
 END
 

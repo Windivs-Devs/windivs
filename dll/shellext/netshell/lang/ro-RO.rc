@@ -83,20 +83,20 @@ END
 
 IDD_NETWORKSETTINGSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Asistent de instalare ReactOS"
+CAPTION "Asistent de instalare Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_NET_SETUP, IDC_STATIC, 21, 10, 20, 20
     LTEXT "Alegeți o configurație tipică sau una particularizată:", IDC_STATIC, 53, 7, 240, 20
     AUTORADIOBUTTON "Configurație tipică", IDC_NETWORK_TYPICAL, 53, 27, 253, 18, WS_TABSTOP | WS_GROUP
     AUTORADIOBUTTON "Configurație particularizată", IDC_NETWORK_CUSTOM, 53, 72, 253, 18, WS_TABSTOP
-    LTEXT "Crează conexiuni de rețea utilizând Clientela de rețele ReactOS, Partajarea de fișiere și imprimante pentru rețele ReactOS, și (protocolul) TCP/IP pentru adresare automată.", IDC_STATIC, 65, 45, 240, 30
+    LTEXT "Crează conexiuni de rețea utilizând Clientela de rețele Windivs, Partajarea de fișiere și imprimante pentru rețele Windivs, și (protocolul) TCP/IP pentru adresare automată.", IDC_STATIC, 65, 45, 240, 30
     LTEXT "Permite configurarea manuală a componentelor de rețea.", IDC_STATIC, 65, 90, 243, 20
 END
 
 IDD_NETWORKCOMPONENTPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Asistent de instalare ReactOS"
+CAPTION "Asistent de instalare Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Pentru dispozitiv:", IDC_STATIC, 33, 2, 160, 20
@@ -111,7 +111,7 @@ END
 
 IDD_NETWORKDOMAINPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Asistent de instalare ReactOS"
+CAPTION "Asistent de instalare Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Doriți ca acest calculator să fie membru al unui domeniu?\n\
@@ -176,6 +176,6 @@ BEGIN
     IDS_NETWORKCOMPONENTSUBTITLE "Determinare componente de rețea necesare calculatorului. Pentru adăugare de noi componente, apăsați „Instalare”."
     IDS_NETWORKDOMAINTITLE "Grup de lucru sau domeniu de calculator"
     IDS_NETWORKDOMAINSUBTITLE "Un domeniu sau un grup de calculatoare definit de administratorul de rețea. Un grup de lucru este un grup de calculatoare având același nume de grup."
-    IDS_REACTOS_SETUP "Asistent de instalare ReactOS"
+    IDS_REACTOS_SETUP "Asistent de instalare Windivs"
     IDS_WZD_DOMAIN_NAME "Asistentul nu poate continua până\nnu veți introduce un nume de domeniu\nsau grup de lucru."
 END

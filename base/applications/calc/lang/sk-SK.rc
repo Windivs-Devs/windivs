@@ -11,7 +11,7 @@ LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
 
 IDD_DIALOG_SCIENTIFIC DIALOGEX 0, 0, 316, 163
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Kalkulačka systému ReactOS"
+CAPTION "Kalkulačka systému Windivs"
 MENU IDR_MENU_SCIENTIFIC_1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -159,7 +159,7 @@ END
 
 IDD_DIALOG_STANDARD DIALOGEX 0, 0, 169, 128
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Kalkulačka systému ReactOS"
+CAPTION "Kalkulačka systému Windivs"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -224,7 +224,7 @@ END
 
 IDD_DIALOG_CONVERSION DIALOGEX 0, 0, 320, 130
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Kalkulačka systému ReactOS"
+CAPTION "Kalkulačka systému Windivs"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -340,7 +340,7 @@ BEGIN
     BEGIN
         MENUITEM "Témy pomocníka", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Čo je kalkulačka systému ReactOS", IDM_HELP_ABOUT
+        MENUITEM "Čo je kalkulačka systému Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -373,7 +373,7 @@ BEGIN
     BEGIN
         MENUITEM "Témy pomocníka", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Čo je kalkulačka systému ReactOS", IDM_HELP_ABOUT
+        MENUITEM "Čo je kalkulačka systému Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -396,7 +396,7 @@ BEGIN
     BEGIN
         MENUITEM "Témy pomocníka", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "Čo je kalkulačka systému ReactOS", IDM_HELP_ABOUT
+        MENUITEM "Čo je kalkulačka systému Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -411,7 +411,7 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "Kalkulačka systému ReactOS"
+    IDS_CALC_NAME "Kalkulačka systému Windivs"
     IDS_AUTHOR "Napísal Carlo Bramini"
 END
 

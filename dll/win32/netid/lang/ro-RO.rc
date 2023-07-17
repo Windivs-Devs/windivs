@@ -1,6 +1,6 @@
 /*
  * FILE:          dll/win32/netid/lang/ro-RO.rc
- *                ReactOS Project (https://reactos.org)
+ *                Windivs Project (https://reactos.org)
  * TRANSLATORS:   Copyright 2011-2018 Ștefan Fulea <stefan.fulea@mail.com>
  *                Copyright 2023 Andrei Miloiu <miloiuandrei@gmail.com>
  */
@@ -73,7 +73,7 @@ BEGIN
     4 "Schimbarea identității calculatorului"
     5 "Grup de lucru:"
     6 "Domeniu:"
-    7 "Numele de domeniu ""%1"" nu se conformează cu specificațiile Serviciului de nume de domenii de internet, cu toate că este un nume ReactOS legal. Trebuie să folosiți serverul DNS ReactOS pentru numele non-standard."
+    7 "Numele de domeniu ""%1"" nu se conformează cu specificațiile Serviciului de nume de domenii de internet, cu toate că este un nume Windivs legal. Trebuie să folosiți serverul DNS Windivs pentru numele non-standard."
     8 "Numele de domeniu ""%1"" nu este formatat corect. Punctele (.) sunt folosite la domeniile separate. Fiecare domeniu este limitat la 63 de caractere. De exemplu: domeniul-1.reactos.org."
     10 "Noul nume de calculator ""%1"" este prea lung. Numele nu poate fi mai lung de 63 de caractere."
     11 "Noul nume de calculator introdus nu e formatat corect. Numele standard pot conține litere (a-z, A-Z), numere (0-9), și cratime (-), dar nu spații sau puncte (.). Numele nu poate fi compus numai din cifre."

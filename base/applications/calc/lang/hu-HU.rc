@@ -1,8 +1,8 @@
 /*
- * PROJECT:    ReactOS Calculator
+ * PROJECT:    Windivs Calculator
  * LICENSE:    GPL - See COPYING in the top level directory
  * FILE:       base/applications/calc/lang/hu-HU.rc
- * PURPOSE:    Hungarian Language File for ReactOS Calc
+ * PURPOSE:    Hungarian Language File for Windivs Calc
  * TRANSLATOR: Nagy Tibor (xnagytibor at gmail dot com)
  */
 
@@ -12,7 +12,7 @@ LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
 
 IDD_DIALOG_SCIENTIFIC DIALOGEX 0, 0, 316, 163
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Számológép"
+CAPTION "Windivs Számológép"
 MENU IDR_MENU_SCIENTIFIC_1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -160,7 +160,7 @@ END
 
 IDD_DIALOG_STANDARD DIALOGEX 0, 0, 169, 128
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Számológép"
+CAPTION "Windivs Számológép"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -225,7 +225,7 @@ END
 
 IDD_DIALOG_CONVERSION DIALOGEX 0, 0, 320, 130
 STYLE DS_SHELLFONT | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Számológép"
+CAPTION "Windivs Számológép"
 MENU IDR_MENU_STANDARD
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -341,7 +341,7 @@ BEGIN
     BEGIN
         MENUITEM "&Témakörök", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "A ReactOS &Számológépről", IDM_HELP_ABOUT
+        MENUITEM "A Windivs &Számológépről", IDM_HELP_ABOUT
     END
 END
 
@@ -374,7 +374,7 @@ BEGIN
     BEGIN
         MENUITEM "&Témakörök", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "A ReactOS &Számológépről", IDM_HELP_ABOUT
+        MENUITEM "A Windivs &Számológépről", IDM_HELP_ABOUT
     END
 END
 
@@ -397,7 +397,7 @@ BEGIN
     BEGIN
         MENUITEM "&Témakörök", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "A ReactOS &Számológépről", IDM_HELP_ABOUT
+        MENUITEM "A Windivs &Számológépről", IDM_HELP_ABOUT
     END
 END
 
@@ -412,7 +412,7 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "ReactOS Számológép"
+    IDS_CALC_NAME "Windivs Számológép"
     IDS_AUTHOR "Írta Carlo Bramini"
 END
 

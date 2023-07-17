@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for ReactOS
+ * PROJECT:     PAINT for Windivs
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Italian resource file
  * TRANSLATORS: Copyright 2009 Gabriel Ilardi <gabrielilardi@hotmail.it>
@@ -227,7 +227,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Paint"
     IDS_WINDOWTITLE "%s - Paint"
-    IDS_INFOTITLE "Paint per ReactOS"
+    IDS_INFOTITLE "Paint per Windivs"
     IDS_INFOTEXT "Available under the GNU Lesser General Public License (LGPL, see www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Volete salvare le modifiche a %s?"
     IDS_DEFAULTFILENAME "SenzaNome"

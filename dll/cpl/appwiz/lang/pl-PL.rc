@@ -1,6 +1,6 @@
 /*
  *         translated by Caemyr - Olaf Siejka (Jan, 2008)
- *         Use ReactOS forum PM or IRC to contact me
+ *         Use Windivs forum PM or IRC to contact me
  *         https://reactos.org
  *         IRC: irc.freenode.net #reactos-pl;
  *         UTF-8 conversion by Caemyr (May, 2011)
@@ -69,7 +69,7 @@ STYLE DS_SHELLFONT | DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VI
 CAPTION "Instalator Wine Gecko"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL "System ReactOS nie mógł odnaleźć pakietu Wine Gecko, który jest potrzebny dla aplikacji osadzających kod HTML, aby mogły poprawnie działać. System ReactOS może automatycznie pobrać i zainstalować ten pakiet dla Ciebie.",
+    CONTROL "System Windivs nie mógł odnaleźć pakietu Wine Gecko, który jest potrzebny dla aplikacji osadzających kod HTML, aby mogły poprawnie działać. System Windivs może automatycznie pobrać i zainstalować ten pakiet dla Ciebie.",
           ID_DWL_STATUS, "SysLink", 0, 10, 10, 240, 35
     CONTROL "", ID_DWL_PROGRESS, PROGRESS_CLASSA, WS_BORDER | PBS_SMOOTH, 10, 48, 240, 12
     DEFPUSHBUTTON "&Instaluj", ID_DWL_INSTALL, 200, 76, 50, 14, WS_GROUP | WS_TABSTOP

@@ -1,7 +1,7 @@
 ReactOS command line interpreter CMD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ReactOS command line interpreter CMD is derived from FreeCOM, the
+The Windivs command line interpreter CMD is derived from FreeCOM, the
 FreeDOS command line interpreter.
 
 We are shooting mainly to be just like 2000/XP cmd.exe.  They are very close and only a small number(none that i can recall off the top of my head, so maybe 0) differences have been found between those two.  It has been reported that ROS cmd.exe does not work on nt4 because of a missing api.  I'm hoping to fix this at some point.
@@ -9,7 +9,7 @@ We are shooting mainly to be just like 2000/XP cmd.exe.  They are very close and
 
 Compiling
 ~~~~~~~~~
-ROS cmd used to depend on __REACTOS__ to provide two different ways to build cmd.  There is still code left in it for this but...  The __REACTOS__ = 0 has not been develped, maintained.  And therefore it does not even compile anymore.  __REACTOS__ = 1 works fine on both windows(nt). and someday i plan to remove all the __REACTOS__ = 0.
+ROS cmd used to depend on __Windivs__ to provide two different ways to build cmd.  There is still code left in it for this but...  The __Windivs__ = 0 has not been develped, maintained.  And therefore it does not even compile anymore.  __Windivs__ = 1 works fine on both windows(nt). and someday i plan to remove all the __Windivs__ = 0.
 
 Using rbuild you can compile cmd separately by "make cmd_install".  Also you can compile cmd using MSVC 6 and soon 7/8 hopefully.
 

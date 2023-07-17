@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Event Log Viewer
+ * PROJECT:     Windivs Event Log Viewer
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     French resource file
  * TRANSLATORS: Copyright 2007-2009 Pierre Schweitzer <pierre@reactos.org>
@@ -170,7 +170,7 @@ END
 STRINGTABLE
 BEGIN
 /* Please note that explicit TAB characters '\t' are used to fix the alignment of the message in the MessageBox */
-    IDS_USAGE "Visionneuse d'événements ReactOS\n\
+    IDS_USAGE "Visionneuse d'événements Windivs\n\
 \n\
 EventVwr [nom ordinateur] [/L:<fichier journal>] [/?]\n\
 \n\

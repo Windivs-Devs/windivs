@@ -90,7 +90,7 @@ BEGIN
     END
     POPUP "ヘルプ(&H)", FCIDM_MENU_HELP
     BEGIN
-        MENUITEM "ReactOSについて(&A)", IDM_HELP_ABOUT
+        MENUITEM "Windivsについて(&A)", IDM_HELP_ABOUT
     END
 END
 
@@ -358,6 +358,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PARSE_ADDR_ERR_TITLE "ReactOS エクスプローラ"
-    IDS_PARSE_ADDR_ERR_TEXT "ReactOS エクスプローラは '%1' を見つけられませんでした。スペルを確認してやり直して下さい。"
+    IDS_PARSE_ADDR_ERR_TITLE "Windivs エクスプローラ"
+    IDS_PARSE_ADDR_ERR_TEXT "Windivs エクスプローラは '%1' を見つけられませんでした。スペルを確認してやり直して下さい。"
 END

@@ -4,7 +4,7 @@
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2022 Andrei Miloiu <miloiuandrei@gmail.com>
  */
- 
+
 LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
 
 IDD_SAFE_REMOVE_HARDWARE_DIALOG DIALOGEX 0, 0, 278, 245
@@ -13,7 +13,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_HOTPLUG, IDC_SAFE_REMOVE_ICON, 7, 10, 20, 20
-    LTEXT "Selectați dispozitivul pe care vreți să îl deconectați sau să îl scoateți, apoi dați click pe Oprește. Când ReactOS vă anunță că e sigur să faceți acest lucru, deconectați dispozitivul de la calculator.", IDC_STATIC, 36, 10, 234, 24, WS_CHILD | WS_VISIBLE | WS_GROUP
+    LTEXT "Selectați dispozitivul pe care vreți să îl deconectați sau să îl scoateți, apoi dați click pe Oprește. Când Windivs vă anunță că e sigur să faceți acest lucru, deconectați dispozitivul de la calculator.", IDC_STATIC, 36, 10, 234, 24, WS_CHILD | WS_VISIBLE | WS_GROUP
     LTEXT "&Dispozitive fizice:", IDC_STATIC, 7, 42, 248, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
     CONTROL "", IDC_SAFE_REMOVE_DEVICE_TREE, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 7, 52, 264, 102
     LTEXT "", IDC_SAFE_REMOVE_TEXT, 7, 156, 264, 16, WS_CHILD | WS_VISIBLE | WS_GROUP

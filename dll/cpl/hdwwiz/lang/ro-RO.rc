@@ -1,5 +1,5 @@
 /*
- * PROJECT: ReactOS Add hardware control panel
+ * PROJECT: Windivs Add hardware control panel
  * FILE:    dll/cpl/hdwwiz/lang/ro-RO.rc
  * PURPOSE: Romanian Language File for add hardware control panel
  * TRANSLATORS:
@@ -138,7 +138,7 @@ BEGIN
     LTEXT "Adăugarea componentelor fizice nu poate continua", IDC_FINISHTITLE, 114, 8, 203, 28
     LTEXT "Pentru a continua, conectați dispozitivul la calculator.", -1, 114, 40, 193, 16
     AUTOCHECKBOX "În&chide calculatorul când apăs „Sfârșit” pentru a putea deschide calculatorul și conecta componenta fizică.", IDC_TURNOFFCHECKBOX, 114, 64, 203, 20, BS_TOP | BS_MULTILINE
-    LTEXT "De obicei ReactOS poate instala dispozitive în mod automat, imediat după conectarea lor. Dacă ReactOS nu va detecta în mod automat noul dispozitiv, redeschideți acest asistent de adăugare a componentelor fizice.", -1, 114, 98, 193, 32
+    LTEXT "De obicei Windivs poate instala dispozitive în mod automat, imediat după conectarea lor. Dacă Windivs nu va detecta în mod automat noul dispozitiv, redeschideți acest asistent de adăugare a componentelor fizice.", -1, 114, 98, 193, 32
     LTEXT "Pentru a închide acest asistent, apăsați „Sfârșit”.", IDC_STATUSTEXT, 114, 166, 193, 8
 END
 

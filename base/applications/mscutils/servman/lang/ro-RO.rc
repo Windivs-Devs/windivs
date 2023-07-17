@@ -273,10 +273,10 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PROGRESS_INFO_START "ReactOS încearcă pornirea serviciului"
-    IDS_PROGRESS_INFO_STOP "ReactOS încearcă oprirea serviciului"
-    IDS_PROGRESS_INFO_PAUSE "ReactOS încearcă întreruperea serviciului"
-    IDS_PROGRESS_INFO_RESUME "ReactOS încearcă reluarea serviciului"
+    IDS_PROGRESS_INFO_START "Windivs încearcă pornirea serviciului"
+    IDS_PROGRESS_INFO_STOP "Windivs încearcă oprirea serviciului"
+    IDS_PROGRESS_INFO_PAUSE "Windivs încearcă întreruperea serviciului"
+    IDS_PROGRESS_INFO_RESUME "Windivs încearcă reluarea serviciului"
     IDS_CREATE_SUCCESS "Serviciu creat cu succes"
     IDS_DELETE_SUCCESS "Serviciu eliminat cu succes"
     IDS_CREATE_REQ "Câmpurile cu\nasterisc sunt obligatorii"
@@ -311,7 +311,7 @@ BEGIN
     IDS_HINT_DETAILS " Afișează informații despre fiecare element într-o fereastră."
     IDS_HINT_CUST " Particularizează afișajul."
     IDS_HINT_HELP " Afișează fereastra de ajutor."
-    IDS_HINT_ABOUT " Despre Gestionar de servicii ReactOS."
+    IDS_HINT_ABOUT " Despre Gestionar de servicii Windivs."
     IDS_HINT_SYS_RESTORE " Restabilește fereastra la mărimea originală."
     IDS_HINT_SYS_MOVE " Mută fereastra."
     IDS_HINT_SYS_SIZE " Redimensionează fereastra."

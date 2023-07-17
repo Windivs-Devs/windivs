@@ -37,7 +37,7 @@ BEGIN
     STRING_CLIPFILE  "Element de Clipboard"
     STRING_DELETE_MSG "Elimină conținutul din Clipboard?"
     STRING_DELETE_TITLE "Curăță Clipboard"
-    STRING_FORMAT_NT "Fișiere clipboard pentru ReactOS (*.clp)"
+    STRING_FORMAT_NT "Fișiere clipboard pentru Windivs (*.clp)"
     STRING_FORMAT_GEN "Fișiere clipboard (*.clp)"
 END
 

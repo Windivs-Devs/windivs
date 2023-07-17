@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Multimedia Control Panel
+ * PROJECT:     Windivs Multimedia Control Panel
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2009 Petru Dimitriu <petrimetri@gmail.com>
@@ -36,7 +36,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Sunete"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "O colecție de sunete conținele semnalele sonore emise atunci când au loc evenimente în ReactOS și în programe. Puteți alege una dintre colecțiile prezente, sau a vă gestiona propriile colecții.", -1, 8, 7, 230, 40
+    LTEXT "O colecție de sunete conținele semnalele sonore emise atunci când au loc evenimente în Windivs și în programe. Puteți alege una dintre colecțiile prezente, sau a vă gestiona propriile colecții.", -1, 8, 7, 230, 40
     LTEXT "C&olecție de sunete:", -1, 8, 42, 150, 17
     COMBOBOX IDC_SOUND_SCHEME, 8, 53, 230, 46, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON "&Păstrare…", IDC_SAVEAS_BTN, 134, 70, 50, 15
@@ -132,7 +132,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Performanță"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Aceste opțiuni determină modul în care ReactOS produce sunetele, permițându-vă rezolvarea problemelor pe care le aveți cu sunetul.", 8492, 34, 7, 220, 23
+    LTEXT "Aceste opțiuni determină modul în care Windivs produce sunetele, permițându-vă rezolvarea problemelor pe care le aveți cu sunetul.", 8492, 34, 7, 220, 23
     GROUPBOX "Lectură sunet", 8494, 7, 32, 243, 152
     ICON 4379, 8512, 8, 8, 20, 20
     LTEXT "&Accelerație dispozitiv fizic:", 8495, 13, 56, 102, 14
@@ -153,7 +153,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Performanță"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Aceste opțiuni determină modul în care ReactOS înregistrează sunetele, permițându-vă rezolvarea problemelor pe care le aveți la înregistrarea sunetelor.", 8492, 34, 7, 217, 26
+    LTEXT "Aceste opțiuni determină modul în care Windivs înregistrează sunetele, permițându-vă rezolvarea problemelor pe care le aveți la înregistrarea sunetelor.", 8492, 34, 7, 217, 26
     GROUPBOX "Înregistrare sunet", 8494, 7, 34, 242, 122
     ICON 4380, 8512, 8, 7, 20, 20
     LTEXT "&Accelerație dispozitiv fizic:", 8495, 13, 51, 108, 17
@@ -174,10 +174,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Instalare"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "ReactOS Audio", 10243, 7, 5, 213, 192
+    GROUPBOX "Windivs Audio", 10243, 7, 5, 213, 192
     ICON 4393, 10241, 26, 26, 20, 20
-    LTEXT "Acest calculator nu poate emite sunete deoarece serviciul ReactOS Audio este inactiv.", 10245, 60, 25, 150, 40
-    AUTOCHECKBOX "&Activează ReactOS Audio", 10253, 60, 68, 150, 9
+    LTEXT "Acest calculator nu poate emite sunete deoarece serviciul Windivs Audio este inactiv.", 10245, 60, 25, 150, 40
+    AUTOCHECKBOX "&Activează Windivs Audio", 10253, 60, 68, 150, 9
     LTEXT "Note", 10246, 58, 87, 150, 11
     LTEXT "1. Trebuie să fiți administrator pentru a porni acest serviciu. Dacă nu sunteți, vă vor fi solicitate un nume și o parolă de administarator.", 10247, 60, 100, 150, 40
     LTEXT "2. După ce porniți serviciul, trebuie să reporniți calculatorul.", 10248, 60, 140, 150, 40
@@ -230,10 +230,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Instalare"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    GROUPBOX "Sunet ReactOS", 10259, 7, 5, 213, 192
+    GROUPBOX "Sunet Windivs", 10259, 7, 5, 213, 192
     ICON 4394, 10257, 25, 25, 20, 20
-    LTEXT "Serviciul audio ReactOS acum este activ. Totuși, ar putea să nu funcționeze corect până când nu reporniți sistemul. Dacă reporniți acum, păstrați-vă documentele în calculator și închideți toate programele curente.", 10261, 60, 25, 150, 50
-    LTEXT "Pentru a reporni ReactOS, apăsați „Confirmă”.", 10262, 60, 75, 150, 20
+    LTEXT "Serviciul audio Windivs acum este activ. Totuși, ar putea să nu funcționeze corect până când nu reporniți sistemul. Dacă reporniți acum, păstrați-vă documentele în calculator și închideți toate programele curente.", 10261, 60, 25, 150, 50
+    LTEXT "Pentru a reporni Windivs, apăsați „Confirmă”.", 10262, 60, 75, 150, 20
     LTEXT "Anularea operației de repornire presupune amânarea până la un moment oportun. Sistemul va trebui eventual repornit pentru ca sunetul să funcționeze corect.", 10263, 60, 100, 150, 40
 END
 
@@ -271,15 +271,15 @@ BEGIN
     5843 "Asterisc"
     5844 "Sunet implicit"
     5845 "Exclamație"
-    5846 "Închidere ReactOS"
+    5846 "Închidere Windivs"
     5847 "Oprire critică"
     5848 "Notificare de sistem"
     5849 "Întrebare"
-    5850 "Pornire ReactOS"
+    5850 "Pornire Windivs"
     5851 "Meniul Pornire"
-    IDS_REACTOS_LOGOFF "Ieșire din ReactOS"
-    IDS_REACTOS_LOGON "Intrare în ReactOS"
-    5854 "Explorator ReactOS"
+    IDS_REACTOS_LOGOFF "Ieșire din Windivs"
+    IDS_REACTOS_LOGON "Intrare în Windivs"
+    5854 "Explorator Windivs"
     IDS_BROWSE_FOR_SOUND "Specificați fișiere de sunet"
     IDS_WAVE_FILES_FILTER "Fișiere Wave (*.wav)|*.wav|"
 END

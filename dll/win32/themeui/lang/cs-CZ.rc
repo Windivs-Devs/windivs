@@ -16,8 +16,8 @@ BEGIN
     IDS_PUMPKIN "Dýně"
     IDS_RAIN "Deštivý den"
     IDS_RWB "Red, White, and Blue"
-    IDS_CLASSIC "ReactOS Classic"
-    IDS_STANDARD "ReactOS Standard"
+    IDS_CLASSIC "Windivs Classic"
+    IDS_STANDARD "Windivs Standard"
     IDS_ROSE "Růže"
     IDS_SAND "Písek" //Desert
     IDS_SLATE "Břidlice"
