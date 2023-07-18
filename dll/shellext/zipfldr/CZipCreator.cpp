@@ -290,7 +290,6 @@ unsigned CZipCreatorImpl::JustDoIt()
     int zip64 = 1; // always zip64
     zip_fileinfo zi;
 
-
     int err = 0;
     CStringW strTarget, strBaseName = DoGetBaseName(m_items[0]);
     BOOL bUtf8 = DoesCreateUtf8Zip();
