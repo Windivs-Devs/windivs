@@ -15,7 +15,7 @@
 BOOL IsUtf8ZipEnabled(VOID)
 {
     BOOL bUtf8 = TRUE;
-    DWORD dwValue = bUtf8, cbValue = sizeof(dwValue);
+    DWORD dwValue = !bUtf8, cbValue = sizeof(dwValue);
     if (SHGetValueW(HKEY_CURRENT_USER, L"Software\\ReactOS", L"NoUtf8Zip",
                     NULL, &dwValue, &cbValue) == ERROR_SUCCESS)
     {
