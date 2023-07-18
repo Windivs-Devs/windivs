@@ -12,7 +12,7 @@
 #include "minizip/iowin32.h"
 #include <process.h>
 
-static CStringW DoGetZipName(PCWSTR filename)
+static CStringW GetZipName(PCWSTR filename)
 {
     WCHAR szPath[MAX_PATH];
     StringCbCopyW(szPath, sizeof(szPath), filename);
@@ -41,7 +41,7 @@ static CStringA EncodeName(PCWSTR filename, UINT nCodePage)
     return buf;
 }
 
-static CStringW DoGetBaseName(PCWSTR filename)
+static CStringW GetBaseName(PCWSTR filename)
 {
     WCHAR szBaseName[MAX_PATH];
     StringCbCopyW(szBaseName, sizeof(szBaseName), filename);
@@ -51,7 +51,7 @@ static CStringW DoGetBaseName(PCWSTR filename)
 }
 
 static CStringA
-DoGetNameInZip(const CStringW& basename, const CStringW& filename, BOOL bUtf8)
+GetNameInZip(const CStringW& basename, const CStringW& filename, BOOL bUtf8)
 {
     CStringW basenameI = basename, filenameI = filename;
     basenameI.MakeUpper();
@@ -69,8 +69,7 @@ DoGetNameInZip(const CStringW& basename, const CStringW& filename, BOOL bUtf8)
 }
 
 static BOOL
-DoReadAllOfFile(PCWSTR filename, CSimpleArray<BYTE>& contents,
-                zip_fileinfo *pzi)
+ReadAllOfFile(PCWSTR filename, CSimpleArray<BYTE>& contents, zip_fileinfo *pzi)
 {
     contents.RemoveAll();
 
@@ -124,7 +123,7 @@ DoReadAllOfFile(PCWSTR filename, CSimpleArray<BYTE>& contents,
 }
 
 static void
-DoAddFilesFromItem(CSimpleArray<CStringW>& files, PCWSTR item)
+AddFilesFromItem(CSimpleArray<CStringW>& files, PCWSTR item)
 {
     if (!PathIsDirectoryW(item))
     {
@@ -153,7 +152,7 @@ DoAddFilesFromItem(CSimpleArray<CStringW>& files, PCWSTR item)
         PathAppendW(szPath, find.cFileName);
 
         if (find.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
-            DoAddFilesFromItem(files, szPath);
+            AddFilesFromItem(files, szPath);
         else
             files.Add(szPath);
     } while (FindNextFileW(hFind, &find));
@@ -208,7 +207,7 @@ BOOL CZipCreator::runThread(CZipCreator *pCreator)
     return FALSE;
 }
 
-void CZipCreator::DoAddItem(PCWSTR pszFile)
+void CZipCreator::AddItem(PCWSTR pszFile)
 {
     // canonicalize path
     WCHAR szPath[MAX_PATH];
@@ -238,7 +237,7 @@ unsigned CZipCreatorImpl::JustDoIt()
     CSimpleArray<CStringW> files;
     for (INT iItem = 0; iItem < m_items.GetSize(); ++iItem)
     {
-        DoAddFilesFromItem(files, m_items[iItem]);
+        AddFilesFromItem(files, m_items[iItem]);
     }
 
     if (files.GetSize() <= 0)
@@ -256,7 +255,7 @@ unsigned CZipCreatorImpl::JustDoIt()
     zlib_filefunc64_def ffunc;
     fill_win32_filefunc64W(&ffunc);
 
-    CStringW strZipName = DoGetZipName(m_items[0]);
+    CStringW strZipName = GetZipName(m_items[0]);
     zipFile zf = zipOpen2_64(strZipName, APPEND_STATUS_CREATE, NULL, &ffunc);
     if (zf == 0)
     {
@@ -278,16 +277,16 @@ unsigned CZipCreatorImpl::JustDoIt()
     zip_fileinfo zi;
 
     int err = 0;
-    CStringW strTarget, strBaseName = DoGetBaseName(m_items[0]);
+    CStringW strTarget, strBaseName = GetBaseName(m_items[0]);
     const BOOL bUtf8 = TRUE;
     for (INT iFile = 0; iFile < files.GetSize(); ++iFile)
     {
         const CStringW& strFile = files[iFile];
 
         CSimpleArray<BYTE> contents;
-        if (!DoReadAllOfFile(strFile, contents, &zi))
+        if (!ReadAllOfFile(strFile, contents, &zi))
         {
-            DPRINT1("DoReadAllOfFile failed\n");
+            DPRINT1("ReadAllOfFile failed\n");
             err = CZCERR_READ;
             strTarget = strFile;
             break;
@@ -299,7 +298,7 @@ unsigned CZipCreatorImpl::JustDoIt()
             // TODO: crc = ...;
         }
 
-        CStringA strNameInZip = DoGetNameInZip(strBaseName, strFile, bUtf8);
+        CStringA strNameInZip = GetNameInZip(strBaseName, strFile, bUtf8);
         err = zipOpenNewFileInZip4_64(zf,
                                       strNameInZip,
                                       &zi,
