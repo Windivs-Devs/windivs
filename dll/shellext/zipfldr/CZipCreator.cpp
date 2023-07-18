@@ -12,6 +12,19 @@
 #include "minizip/iowin32.h"
 #include <process.h>
 
+BOOL DoesCreateUtf8Zip(VOID)
+{
+    BOOL bUtf8 = TRUE;
+    DWORD dwValue = bUtf8, cbValue = sizeof(dwValue);
+    if (SHGetValueW(HKEY_CURRENT_USER, L"Software\\ReactOS", L"NoUtf8Zip",
+                    NULL, &dwValue, &cbValue) == ERROR_SUCCESS)
+    {
+        if (cbValue == sizeof(DWORD))
+            bUtf8 = !dwValue;
+    }
+    return bUtf8;
+}
+
 static CStringW DoGetZipName(PCWSTR filename)
 {
     WCHAR szPath[MAX_PATH];
@@ -51,7 +64,7 @@ static CStringW DoGetBaseName(PCWSTR filename)
 }
 
 static CStringA
-DoGetNameInZip(const CStringW& basename, const CStringW& filename)
+DoGetNameInZip(const CStringW& basename, const CStringW& filename, BOOL bUtf8)
 {
     CStringW basenameI = basename, filenameI = filename;
     basenameI.MakeUpper();
@@ -65,7 +78,7 @@ DoGetNameInZip(const CStringW& basename, const CStringW& filename)
 
     ret.Replace(L'\\', L'/');
 
-    return DoGetAnsiName(ret, CP_UTF8);
+    return DoGetAnsiName(ret, (bUtf8 ? CP_UTF8 : CP_ACP));
 }
 
 static BOOL
@@ -277,8 +290,10 @@ unsigned CZipCreatorImpl::JustDoIt()
     int zip64 = 1; // always zip64
     zip_fileinfo zi;
 
+
     int err = 0;
     CStringW strTarget, strBaseName = DoGetBaseName(m_items[0]);
+    BOOL bUtf8 = DoesCreateUtf8Zip();
     for (INT iFile = 0; iFile < files.GetSize(); ++iFile)
     {
         const CStringW& strFile = files[iFile];
@@ -298,7 +313,7 @@ unsigned CZipCreatorImpl::JustDoIt()
             // TODO: crc = ...;
         }
 
-        CStringA strNameInZip = DoGetNameInZip(strBaseName, strFile);
+        CStringA strNameInZip = DoGetNameInZip(strBaseName, strFile, bUtf8);
         err = zipOpenNewFileInZip4_64(zf,
                                       strNameInZip,
                                       &zi,
@@ -315,8 +330,8 @@ unsigned CZipCreatorImpl::JustDoIt()
                                       Z_DEFAULT_STRATEGY,
                                       password,
                                       crc,
-                                      36,
-                                      MINIZIP_UTF8_FLAG,
+                                      MINIZIP_COMPATIBLE_VERSION,
+                                      (bUtf8 ? MINIZIP_UTF8_FLAG : 0),
                                       zip64);
         if (err)
         {
