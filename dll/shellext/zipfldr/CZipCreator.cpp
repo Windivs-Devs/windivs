@@ -12,8 +12,6 @@
 #include "minizip/iowin32.h"
 #include <process.h>
 
-#define PACK_AS_UTF8_ZIP
-
 static CStringW DoGetZipName(PCWSTR filename)
 {
     WCHAR szPath[MAX_PATH];
@@ -67,11 +65,7 @@ DoGetNameInZip(const CStringW& basename, const CStringW& filename)
 
     ret.Replace(L'\\', L'/');
 
-#ifdef PACK_AS_UTF8_ZIP
     return DoGetAnsiName(ret, CP_UTF8);
-#else
-    return DoGetAnsiName(ret, CP_ACP);
-#endif
 }
 
 static BOOL
@@ -322,11 +316,7 @@ unsigned CZipCreatorImpl::JustDoIt()
                                       password,
                                       crc,
                                       36,
-#ifdef PACK_AS_UTF8_ZIP
                                       MINIZIP_UTF8_FLAG,
-#else
-                                      0,
-#endif
                                       zip64);
         if (err)
         {
