@@ -12,7 +12,7 @@
 #include "minizip/iowin32.h"
 #include <process.h>
 
-BOOL DoesCreateUtf8Zip(VOID)
+BOOL IsUtf8ZipEnabled(VOID)
 {
     BOOL bUtf8 = TRUE;
     DWORD dwValue = bUtf8, cbValue = sizeof(dwValue);
@@ -292,7 +292,7 @@ unsigned CZipCreatorImpl::JustDoIt()
 
     int err = 0;
     CStringW strTarget, strBaseName = DoGetBaseName(m_items[0]);
-    BOOL bUtf8 = DoesCreateUtf8Zip();
+    BOOL bUtf8 = IsUtf8ZipEnabled();
     for (INT iFile = 0; iFile < files.GetSize(); ++iFile)
     {
         const CStringW& strFile = files[iFile];
