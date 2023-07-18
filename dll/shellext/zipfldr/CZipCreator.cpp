@@ -12,19 +12,6 @@
 #include "minizip/iowin32.h"
 #include <process.h>
 
-BOOL IsUtf8ZipEnabled(VOID)
-{
-    BOOL bUtf8 = TRUE;
-    DWORD dwValue = !bUtf8, cbValue = sizeof(dwValue);
-    if (SHGetValueW(HKEY_CURRENT_USER, L"Software\\ReactOS", L"NoUtf8Zip",
-                    NULL, &dwValue, &cbValue) == ERROR_SUCCESS)
-    {
-        if (cbValue == sizeof(DWORD))
-            bUtf8 = !dwValue;
-    }
-    return bUtf8;
-}
-
 static CStringW DoGetZipName(PCWSTR filename)
 {
     WCHAR szPath[MAX_PATH];
@@ -292,7 +279,7 @@ unsigned CZipCreatorImpl::JustDoIt()
 
     int err = 0;
     CStringW strTarget, strBaseName = DoGetBaseName(m_items[0]);
-    BOOL bUtf8 = IsUtf8ZipEnabled();
+    const BOOL bUtf8 = TRUE;
     for (INT iFile = 0; iFile < files.GetSize(); ++iFile)
     {
         const CStringW& strFile = files[iFile];
