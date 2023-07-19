@@ -25,7 +25,7 @@ RTL_CRITICAL_SECTION ConsoleLock;
 BOOLEAN ConsoleInitialized = FALSE;
 extern HANDLE InputWaitHandle;
 
-static const PWSTR DefaultConsoleTitle = L"ReactOS Console";
+static const PWSTR DefaultConsoleTitle = L"Windivs Console";
 
 /* FUNCTIONS ******************************************************************/
 

@@ -64,7 +64,7 @@ FatalError(char *pszFmt,...)
     strcat(szBuffer, "\nRebooting now!");
     MessageBoxA(NULL,
                 szBuffer,
-                "ReactOS Setup",
+                "Windivs Setup",
                 MB_OK);
 }
 
@@ -1005,7 +1005,7 @@ error:
     MessageBoxW(
         NULL,
         L"Failed to load LiveCD! You can shutdown your computer, or press ENTER to reboot.",
-        L"ReactOS LiveCD",
+        L"Windivs LiveCD",
         MB_OK);
     return 0;
 }
@@ -1398,7 +1398,7 @@ InstallReactOS(VOID)
     BOOL ret;
 
     InitializeSetupActionLog(FALSE);
-    LogItem(NULL, L"Installing ReactOS");
+    LogItem(NULL, L"Installing Windivs");
 
     CreateTempDir(L"TEMP");
     CreateTempDir(L"TMP");
@@ -1525,7 +1525,7 @@ InstallReactOS(VOID)
         CloseHandle(hHotkeyThread);
     }
 
-    LogItem(NULL, L"Installing ReactOS done");
+    LogItem(NULL, L"Installing Windivs done");
     TerminateSetupActionLog();
 
     if (AdminInfo.Name != NULL)

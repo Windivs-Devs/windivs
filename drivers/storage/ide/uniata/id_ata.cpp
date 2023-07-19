@@ -35,7 +35,7 @@ Revision History:
          Chuck Park (ChuckP)
 
     Some parts of code were taken from FreeBSD 4.3-6.1 ATA driver by
-         Søren Schmidt, Copyright (c) 1998-2007
+         Sï¿½ren Schmidt, Copyright (c) 1998-2007
 
     All parts of code are significantly changed/updated by
          Alter, Copyright (c) 2002-2014:
@@ -10757,7 +10757,7 @@ DriverEntry(
     if(!SavedDriverObject) {
         SavedDriverObject = (PDRIVER_OBJECT)DriverObject;
 #ifdef USE_REACTOS_DDK
-        KdPrint(("UniATA Init: OS should be ReactOS\n"));
+        KdPrint(("UniATA Init: OS should be Windivs\n"));
         MajorVersion=0x04;
         MinorVersion=0x01;
         BuildNumber=1;

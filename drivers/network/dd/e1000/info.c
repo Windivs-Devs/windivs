@@ -158,7 +158,7 @@ MiniportQueryInformation(
 
     case OID_GEN_VENDOR_DESCRIPTION:
     {
-        static UCHAR vendorDesc[] = "ReactOS Team";
+        static UCHAR vendorDesc[] = "Windivs Developers";
         copySource = vendorDesc;
         copyLength = sizeof(vendorDesc);
         break;

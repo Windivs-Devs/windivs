@@ -41,7 +41,7 @@ PCSTR OptionsMenuList[] =
 
     NULL,
 
-    "Start ReactOS normally",
+    "Start Windivs normally",
 #ifdef HAS_OPTION_MENU_EDIT_CMDLINE
     "Edit Boot Command Line (F10)",
 #endif

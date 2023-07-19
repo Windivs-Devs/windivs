@@ -38,7 +38,7 @@ DriverEntry(IN PDRIVER_OBJECT DriverObject,
     USHORT i;
     PCONDRV_DRIVER DriverExtension = NULL;
 
-    DPRINT1("Loading ReactOS Console Driver v0.0.1...\n");
+    DPRINT1("Loading Windivs Console Driver v0.0.1...\n");
 
     DriverObject->DriverUnload = ConDrvUnload;
 
@@ -79,7 +79,7 @@ DriverEntry(IN PDRIVER_OBJECT DriverObject,
 VOID NTAPI
 ConDrvUnload(IN PDRIVER_OBJECT DriverObject)
 {
-    DPRINT1("Unloading ReactOS Console Driver v0.0.1...\n");
+    DPRINT1("Unloading Windivs Console Driver v0.0.1...\n");
 
     /*
      * Delete the Controller device. This has as effect
