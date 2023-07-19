@@ -10,7 +10,7 @@
 #include <list.h>
 
 // General constants
-#define APP_DESCRIPTION _T("ReactOS HTTP Daemon")
+#define APP_DESCRIPTION _T("Windivs HTTP Daemon")
 
 // Default configuration
 #define dcfgDescription     _T("Default configuration")

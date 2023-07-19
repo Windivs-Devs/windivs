@@ -377,7 +377,7 @@ int wmain(int argc, WCHAR *argv[])
         L"\n"
         L"Formatx v1.0 by Mark Russinovich\n"
         L"Systems Internals - http://www.sysinternals.com\n"
-        L"ReactOS adaptation 1999 by Emanuele Aliberti\n\n");
+        L"Windivs/ReactOS adaptation 1999 by Emanuele Aliberti\n\n");
 
 #ifndef FMIFS_IMPORT_DLL
     //

@@ -3592,7 +3592,7 @@ LRESULT CShellBrowser::OnDisconnectNetworkDrive(WORD wNotifyCode, WORD wID, HWND
 
 LRESULT CShellBrowser::OnAboutReactOS(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled)
 {
-    ShellAbout(m_hWnd, _T("ReactOS"), NULL, NULL);
+    ShellAbout(m_hWnd, _T("Windivs"), NULL, NULL);
     return 0;
 }
 
@@ -3664,13 +3664,13 @@ LRESULT CShellBrowser::OnOrganizeFavorites(WORD wNotifyCode, WORD wID, HWND hWnd
 LRESULT CShellBrowser::OnToggleStatusBarVisible(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled)
 {
     fStatusBarVisible = !fStatusBarVisible;
-    
+
     if (fStatusBarVisible)
         CreateStatusBar();
 
     ::ShowWindow(fStatusBar, fStatusBarVisible ? SW_SHOW : SW_HIDE);
     RepositionBars();
-    
+
     DWORD dwStatusBarVisible = fStatusBarVisible;
     SHRegSetUSValueW(L"Software\\Microsoft\\Internet Explorer\\Main",
                      L"StatusBarOther",
@@ -3678,7 +3678,7 @@ LRESULT CShellBrowser::OnToggleStatusBarVisible(WORD wNotifyCode, WORD wID, HWND
                      &dwStatusBarVisible,
                      sizeof(dwStatusBarVisible),
                      SHREGSET_FORCE_HKCU);
-    
+
     return 0;
 }
 

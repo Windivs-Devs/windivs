@@ -88,8 +88,8 @@ AddService = green, 0x00000002, green_Service_Inst
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
-ReactOSMfg = "(ReactOS Project)"
+ReactOS = "Windivs Developers"
+ReactOSMfg = "(Windivs Developers)"
 
 ; Localizable
 GREEN.DriverDesc = "VT100 server emulator"

@@ -61,7 +61,7 @@ LoadOrderGroup = System Bus Extender
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
+ReactOS = "Windivs Developers"
 
 ; Localizable
 GenericMfg = "(Generic system devices)"

@@ -131,7 +131,7 @@ BasepIsImageVersionOk(IN ULONG ImageMajorVersion,
         if (ImageMajorVersion > SharedUserData->NtMajorVersion ||
             (ImageMajorVersion == SharedUserData->NtMajorVersion && ImageMinorVersion > SharedUserData->NtMinorVersion))
         {
-            DPRINT1("Accepting image version %lu.%lu, although ReactOS is an NT %hu.%hu OS!\n",
+            DPRINT1("Accepting image version %lu.%lu, although Windivs is an NT %hu.%hu OS!\n",
                 ImageMajorVersion,
                 ImageMinorVersion,
                 SharedUserData->NtMajorVersion,
@@ -158,15 +158,15 @@ BasepCheckWebBladeHashes(IN HANDLE FileHandle)
     /* Depending on which suite this is, run a bsearch and block the appropriate ones */
     if (SharedUserData->SuiteMask & VER_SUITE_COMPUTE_SERVER)
     {
-        DPRINT1("Egad! This is a ReactOS Compute Server and we should prevent you from using certain APIs...but we won't.");
+        DPRINT1("Egad! This is a Windivs Compute Server and we should prevent you from using certain APIs...but we won't.");
     }
     else if (SharedUserData->SuiteMask & VER_SUITE_STORAGE_SERVER)
     {
-        DPRINT1("Gasp! This is a ReactOS Storage Server and we should prevent you from using certain APIs...but we won't.");
+        DPRINT1("Gasp! This is a Windivs Storage Server and we should prevent you from using certain APIs...but we won't.");
     }
     else if (SharedUserData->SuiteMask & VER_SUITE_BLADE)
     {
-        DPRINT1("Golly! This is a ReactOS Web Blade Server and we should prevent you from using certain APIs...but we won't.");
+        DPRINT1("Golly! This is a Windivs Web Blade Server and we should prevent you from using certain APIs...but we won't.");
     }
 
     /* Actually, fuck it, don't block anything, we're open source */

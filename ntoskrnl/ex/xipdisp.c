@@ -90,7 +90,7 @@ XIPInit(IN PLOADER_PARAMETER_BLOCK LoaderBlock)
     if (!((ULONG_PTR)XipRom ^ (ULONG_PTR)XipRam)) return;
 
     /* FIXME: TODO */
-    DPRINT1("ReactOS does not yet support eXecute In Place boot technology\n");
+    DPRINT1("Windivs does not yet support eXecute In Place boot technology\n");
     DPRINT("%s MB requested (XIP = %s)\n", XipMegs, XipBoot);
 }
 

@@ -153,7 +153,7 @@ PciIsDatacenter(VOID)
     else
     {
         /* This scenario shouldn't happen yet, since SetupDD isn't used */
-        UNIMPLEMENTED_FATAL("ReactOS doesn't use SetupDD for its installation program. Therefore this scenario must not happen!\n");
+        UNIMPLEMENTED_FATAL("Windivs doesn't use SetupDD for its installation program. Therefore this scenario must not happen!\n");
     }
 
     /* Return if this is Datacenter or not */

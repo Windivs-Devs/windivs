@@ -5,7 +5,7 @@
  * PURPOSE:         Concatenates STDIN or an arbitrary number of files to STDOUT
  * PROGRAMMERS:     David Welch
  *                  Semyon Novikov (tappak)
- *                  Hermès Bélusca - Maïto
+ *                  Hermï¿½s Bï¿½lusca - Maï¿½to
  */
 
 #include <stdio.h>
@@ -28,7 +28,7 @@ void help(void)
 {
     fprintf(stdout,
             "\n"
-            "ReactOS File Concatenation Tool\n"
+            "Windivs File Concatenation Tool\n"
             "\n"
             "Usage: cat [options] [file [...]]\n"
             "options - Currently ignored\n");

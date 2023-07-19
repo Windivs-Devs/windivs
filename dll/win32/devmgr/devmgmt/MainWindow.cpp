@@ -656,7 +656,7 @@ CDeviceManager::OnCommand(_In_ WPARAM wParam,
             HICON hIcon;
 
             if (!szAppName.LoadStringW(g_hThisInstance, IDS_APPNAME))
-                szAppName = L"ReactOS Device Manager";
+                szAppName = L"Windivs Device Manager";
             if (!szAppAuthors.LoadStringW(g_hThisInstance, IDS_APP_AUTHORS))
                 szAppAuthors = L"";
             hIcon = LoadIconW(g_hThisInstance, MAKEINTRESOURCEW(IDI_MAIN_ICON));

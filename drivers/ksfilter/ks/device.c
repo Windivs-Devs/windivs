@@ -588,7 +588,7 @@ IKsDevice_Create(
         ASSERT(IoStack->FileObject->FileName.Length == 0);
         Irp->IoStatus.Status = STATUS_SUCCESS;
         IoCompleteRequest(Irp, IO_NO_INCREMENT);
-        DPRINT1("ReactOS PnP hack\n");
+        DPRINT1("Windivs PnP hack\n");
         return STATUS_SUCCESS;
     }
 

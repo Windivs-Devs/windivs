@@ -80,7 +80,7 @@ LoadOrderGroup = NDIS
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
+ReactOS = "Windivs Developers"
 
 IntelMfg = "Intel"
 

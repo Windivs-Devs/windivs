@@ -57,7 +57,7 @@ VOID Run()
 /* Program entry point */
 int main(int argc, char* argv[])
 {
-    printf("ReactOS HTTP Daemon\n");
+    printf("Windivs HTTP Daemon\n");
     printf("Type Control-C to stop.\n");
 
     Run();

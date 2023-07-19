@@ -121,7 +121,7 @@ LoadOrderGroup = Extended Base
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
+ReactOS = "Windivs Developers"
 
 CyrixMfg = "Cyrix"
 IntelMfg = "Intel"
