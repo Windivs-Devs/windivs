@@ -335,7 +335,7 @@ AddService = ac97, 0x00000002, ac97_Service_Inst
 
 [Strings]
 ; Non-localizable
-ReactOS="ReactOS Project"
+ReactOS="Windivs Developers"
 MfgName="Intel"
 
 ; Localizable
@@ -488,7 +488,7 @@ ICHPin.LFE              ="Bass Lautsprecher"
 ICHPin.Front            ="Lautsprecher Vorne"
 
 [Strings.0419]
-ReactOS="Команда ReactOS"
+ReactOS="Команда Windivs"
 DiskDescription="Диск с драйвером AC'97 WDM"
 
 ac97_440MX.DeviceDesc="Intel 82440MX AC'97 аудиоконтроллер"
