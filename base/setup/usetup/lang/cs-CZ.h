@@ -205,7 +205,7 @@ static MUI_ENTRY csCZIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs is in Alpha stage, meaning it is not feature-complete",
+        "Windivs is in RC stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

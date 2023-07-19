@@ -199,7 +199,7 @@ static MUI_ENTRY frFRIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs est en version Alpha, ce qui signifie qu'il n'est pas complet",
+        "Windivs est en version RC, ce qui signifie qu'il n'est pas complet",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

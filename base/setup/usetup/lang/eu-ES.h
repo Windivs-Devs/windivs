@@ -198,7 +198,7 @@ static MUI_ENTRY euESIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs Alpha mailan dago, honek esan nahi du Windivs ez da",
+        "Windivs RC mailan dago, honek esan nahi du Windivs ez da",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

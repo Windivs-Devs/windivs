@@ -199,7 +199,7 @@ static MUI_ENTRY deDEIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs befindet sich noch im Alpha Stadium. Noch sind nicht alle",
+        "Windivs befindet sich noch im RC Stadium. Noch sind nicht alle",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

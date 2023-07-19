@@ -197,7 +197,7 @@ static MUI_ENTRY idIDIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs saat ini dalam tahap Alpha, artinya belum lengkap fitur dan",
+        "Windivs saat ini dalam tahap RC, artinya belum lengkap fitur dan",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

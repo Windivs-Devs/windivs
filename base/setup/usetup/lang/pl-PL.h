@@ -209,7 +209,7 @@ static MUI_ENTRY plPLIntroPageEntries[] =
     {
         6,
         11,
-        "System Windivs jest w fazie Alpha, co oznacza, \276e jest niekompletny",
+        "System Windivs jest w fazie RC, co oznacza, \276e jest niekompletny",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

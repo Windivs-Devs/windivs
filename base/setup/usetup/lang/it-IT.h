@@ -196,7 +196,7 @@ static MUI_ENTRY itITIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs \x8A nello stadio di sviluppo Alpha, significa che non tutte le",
+        "Windivs \x8A nello stadio di sviluppo RC, significa che non tutte le",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

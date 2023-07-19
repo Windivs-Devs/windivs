@@ -202,7 +202,7 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs est\240 en fase Alpha, lo que significa que a\243n no est\240",
+        "Windivs est\240 en fase RC, lo que significa que a\243n no est\240",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

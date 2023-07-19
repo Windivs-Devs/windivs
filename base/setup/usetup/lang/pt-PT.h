@@ -199,7 +199,7 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
     {
         6,
         11,
-        "O Windivs est\240 em est\240gio Alpha, o que significa que n\306o est\240 completo",
+        "O Windivs est\240 em est\240gio RC, o que significa que n\306o est\240 completo",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },

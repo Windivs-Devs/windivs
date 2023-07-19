@@ -205,14 +205,14 @@ static MUI_ENTRY skSKIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs is in Alpha stage, meaning it is not feature-complete",
+        "Windivs is in RC stage, meaning it is ",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         12,
-        "and is under heavy development. It is recommended to use it only for",
+        "under heavy development. It is recommended to use it only for",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
