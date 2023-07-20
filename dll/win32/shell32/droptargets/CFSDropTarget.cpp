@@ -100,7 +100,9 @@ HRESULT CFSDropTarget::_CopyItems(IShellFolder * pSFFrom, UINT cidl,
     op.pTo = wszTargetPath;
     op.hwnd = m_hwndSite;
     op.wFunc = bCopy ? FO_COPY : FO_MOVE;
-    op.fFlags = FOF_ALLOWUNDO | FOF_NOCONFIRMMKDIR | (bRenameOnCollision ? FOF_RENAMEONCOLLISION : 0);
+    op.fFlags = FOF_ALLOWUNDO | FOF_NOCONFIRMMKDIR;
+    if (bRenameOnCollision)
+        op.fFlags |= FOF_RENAMEONCOLLISION;
 
     int res = SHFileOperationW(&op);
 
