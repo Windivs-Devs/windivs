@@ -355,7 +355,7 @@ static DWORD shgfi_get_exe_type(LPCWSTR szFullPath)
             return 0;
         if (nt.OptionalHeader.Subsystem == IMAGE_SUBSYSTEM_WINDOWS_GUI)
         {
-             return IMAGE_NT_SIGNATURE | 
+             return IMAGE_NT_SIGNATURE |
                    (nt.OptionalHeader.MajorSubsystemVersion << 24) |
                    (nt.OptionalHeader.MinorSubsystemVersion << 16);
         }
@@ -569,7 +569,7 @@ DWORD_PTR WINAPI SHGetFileInfoW(LPCWSTR path,DWORD dwFileAttributes,
         {
             if (dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
                 strcatW (psfi->szTypeName, L"Folder");
-            else 
+            else
             {
                 WCHAR sTemp[64];
 
@@ -702,13 +702,13 @@ DWORD_PTR WINAPI SHGetFileInfoW(LPCWSTR path,DWORD dwFileAttributes,
                     if (!lstrcmpW(L"%1",sTemp))            /* icon is in the file */
                         strcpyW(sTemp, szFullPath);
 
-                    if (flags & SHGFI_SYSICONINDEX) 
+                    if (flags & SHGFI_SYSICONINDEX)
                     {
                         psfi->iIcon = SIC_GetIconIndex(sTemp,icon_idx,0);
                         if (psfi->iIcon == -1)
                             psfi->iIcon = 0;
                     }
-                    else 
+                    else
                     {
                         UINT ret;
                         if (flags & SHGFI_SMALLICON)
@@ -856,7 +856,7 @@ HICON WINAPI DuplicateIcon( HINSTANCE hInstance, HICON hIcon)
  * ExtractIconA                [SHELL32.@]
  */
 HICON WINAPI ExtractIconA(HINSTANCE hInstance, LPCSTR lpszFile, UINT nIconIndex)
-{   
+{
     HICON ret;
     INT len = MultiByteToWideChar(CP_ACP, 0, lpszFile, -1, NULL, 0);
     LPWSTR lpwstrFile = HeapAlloc(GetProcessHeap(), 0, len * sizeof(WCHAR));
@@ -933,7 +933,7 @@ VOID WINAPI Printer_LoadIconsW(LPCWSTR wsPrinterName, HICON * pLargeIcon, HICON 
 /*************************************************************************
  * Printers_RegisterWindowW        [SHELL32.213]
  * used by "printui.dll":
- * find the Window of the given Type for the specific Printer and 
+ * find the Window of the given Type for the specific Printer and
  * return the already existent hwnd or open a new window
  */
 BOOL WINAPI Printers_RegisterWindowW(LPCWSTR wsPrinter, DWORD dwType,
@@ -944,7 +944,7 @@ BOOL WINAPI Printers_RegisterWindowW(LPCWSTR wsPrinter, DWORD dwType,
                 phwnd, (phwnd != NULL) ? *(phwnd) : NULL);
 
     return FALSE;
-} 
+}
 
 /*************************************************************************
  * Printers_UnregisterWindow      [SHELL32.214]
@@ -1250,6 +1250,12 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
                 case IDCANCEL:
                     EndDialog(hWnd, TRUE);
                     return TRUE;
+
+                case IDC_ABOUT_CHANGELOG:
+                {
+                    WCHAR szAuthorsText[20];
+                    LoadStringW(shell32_hInstance, IDS_SHELL_ABOUT_CHANGELOG, szAuthorsText, ARRAY_SIZE(szAuthorsText));
+                }
 
                 case IDC_ABOUT_AUTHORS:
                 {
