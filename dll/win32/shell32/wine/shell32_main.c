@@ -1253,8 +1253,8 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 
                 case IDC_ABOUT_CHANGELOG:
                 {
-                    WCHAR szAuthorsText[20];
-                    LoadStringW(shell32_hInstance, IDS_SHELL_ABOUT_CHANGELOG, szAuthorsText, ARRAY_SIZE(szAuthorsText));
+                    WCHAR szChangelogText[20];
+                    SetDlgItemTextW(hWnd, IDC_ABOUT_CHANGELOG, szChangelogText);
                 }
 
                 case IDC_ABOUT_AUTHORS:
