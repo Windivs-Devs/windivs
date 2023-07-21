@@ -1086,6 +1086,7 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
                 WCHAR szAppTitle[512];
                 WCHAR szAppTitleTemplate[512];
                 WCHAR szAuthorsText[20];
+                WCHAR szChangelogText[20];
 
                 // Preload the ROS bitmap
                 if (IsWindowsServer())
@@ -1208,6 +1209,7 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
                 hWndAuthors = CreateDialogW(shell32_hInstance, MAKEINTRESOURCEW(IDD_ABOUT_AUTHORS), hWnd, AboutAuthorsDlgProc);
                 LoadStringW(shell32_hInstance, IDS_SHELL_ABOUT_AUTHORS, szAuthorsText, ARRAY_SIZE(szAuthorsText));
                 SetDlgItemTextW(hWnd, IDC_ABOUT_AUTHORS, szAuthorsText);
+                SetDlgItemTextW(hWnd, IDC_ABOUT_CHANGELOG, szChangelogText);
             }
 
             return TRUE;
@@ -1253,6 +1255,8 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 
                 case IDC_ABOUT_CHANGELOG:
                 {
+                    WCHAR szChangelogText[20];
+                    LoadStringW(shell32_hInstance, IDS_SHELL_ABOUT_CHANGELOG, szChangelogText, ARRAY_SIZE(szChangelogText));
                     return TRUE;
                 }
 
