@@ -136,6 +136,7 @@
 #define IDS_OPEN_WITH             142
 #define IDS_OPEN_WITH_CHOOSE      143
 #define IDS_SHELL_ABOUT_AUTHORS   144
+#define IDS_SHELL_ABOUT_CHANGELOG 199
 #define IDS_SHELL_ABOUT_BACK      145
 #define FCIDM_SHVIEW_NEW          146
 #define IDS_CONTROLPANEL          148
@@ -362,6 +363,9 @@
 #define IDD_ABOUT_AUTHORS         3
 #define IDC_ABOUT_AUTHORS         0x4101
 #define IDC_ABOUT_AUTHORS_LISTBOX 0x4102
+#define IDD_ABOUT_CHANGELOG         200
+#define IDC_ABOUT_CHANGELOG         0x4199
+#define IDC_ABOUT_CHANGELOG_LISTBOX 0x4198
 
 /* Pick icon dialog */
 #define IDD_PICK_ICON        4
