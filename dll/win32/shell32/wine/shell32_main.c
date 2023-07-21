@@ -1253,8 +1253,6 @@ static INT_PTR CALLBACK AboutDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 
                 case IDC_ABOUT_CHANGELOG:
                 {
-                    WCHAR szChangelogText[20];
-                    SetDlgItemTextW(hWnd, IDC_ABOUT_CHANGELOG, szChangelogText);
                     return TRUE;
                 }
 
