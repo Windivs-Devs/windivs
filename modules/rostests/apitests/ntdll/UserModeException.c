@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS API tests
+ * PROJECT:     Windivs API tests
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Tests for user mode exceptions
  * COPYRIGHT:   Copyright 2021 Timo Kreuzer <timo.kreuzer@reactos.org>
@@ -189,7 +189,7 @@ TEST_ENTRY TestEntries[] =
     { __LINE__, { 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0x26, 0xC3 }, 0, FL_INVALID }, // Too many prefixes
 #endif
     { __LINE__, { 0xF0, 0x90, 0xC3 }, 0, FL_INVLS }, // LOCK NOP
-    { __LINE__, { 0xF0, 0x83, 0x0C, 0x24, 0x00, 0xC3 }, 0, FL_ANY }, // LOCK OR DWORD PTR [ESP], 0x0 
+    { __LINE__, { 0xF0, 0x83, 0x0C, 0x24, 0x00, 0xC3 }, 0, FL_ANY }, // LOCK OR DWORD PTR [ESP], 0x0
     { __LINE__, { 0x3E, 0x66, 0x67, 0xF0, 0xF3, 0xF4, 0xC3 }, 0, FL_ANY | FL_INVLS | FL_PRIV }, // DS: DATA ADDR LOCK REPZ HLT
 #ifdef _M_AMD64
     /* Check non-canonical address access (causes a #GP) */

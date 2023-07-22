@@ -241,8 +241,8 @@ Return Value:
             Status = FsRtlCheckOplock( CdGetFcbOplock(Fcb),
                                        Irp,
                                        IrpContext,
-                                       (PVOID)CdOplockComplete,/* ReactOS Change: GCC "assignment from incompatible pointer type" */
-                                       (PVOID)CdPrePostIrp );/* ReactOS Change: GCC "assignment from incompatible pointer type" */
+                                       (PVOID)CdOplockComplete,/* Windivs Change: GCC "assignment from incompatible pointer type" */
+                                       (PVOID)CdPrePostIrp );/* Windivs Change: GCC "assignment from incompatible pointer type" */
 
             //
             //  If the result is not STATUS_SUCCESS then the Irp was completed

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * FILE:            dll/win32/secur32/lsalpc.c
  * PURPOSE:         LSA LPC port functions
  */

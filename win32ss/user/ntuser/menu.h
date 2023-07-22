@@ -36,7 +36,7 @@ typedef struct tagMENUSTATE
   ULONG       fSetCapture:1;
   ULONG       iAniDropDir:5;
   };
-  POINT       ptMouseLast; 
+  POINT       ptMouseLast;
   INT         mnFocus;
   INT         cmdLast;
   PTHREADINFO ptiMenuStateOwner;
@@ -68,7 +68,7 @@ typedef struct _SETMENUITEMRECT
 
 
 //
-// Legacy ReactOS Menu transfer structures.
+// Legacy Windivs Menu transfer structures.
 //
 typedef struct tagROSMENUINFO
 {

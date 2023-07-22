@@ -8,13 +8,13 @@ Signature  = "$Windows NT$"
 LayoutFile = layout.inf
 Class      = NetTrans
 ClassGUID  = {4D36E975-E325-11CE-BFC1-08002BE10318}
-Provider   = %ReactOS%
+Provider   = %Windivs%
 DriverVer  = 04/12/2006,1.00
 
 [Manufacturer]
-%ReactOS% = ReactOS
+%Windivs% = Windivs
 
-[ReactOS]
+[Windivs]
 %MS_TCPIP.DisplayName% = MS_TCPIP.PrimaryInstall, MS_TCPIP
 
 ;--------------------------- TCP/IPv4 DRIVER ----------------------------
@@ -293,7 +293,7 @@ HKR,"Parameters","ServiceDll",0x00020000,"%SystemRoot%\system32\dnsrslvr.dll"
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
+Windivs = "Windivs Project"
 
 ; Localizable
 MS_TCPIP.DisplayName = "Internet Protocol Version 4 (TCP/IPv4)"
@@ -353,8 +353,8 @@ TCPIP_DEF = "Transmission Control Protocol/Internet Protocol"
 
 [Strings.0C04]
 MS_TCPIP.DisplayName = "互聯網通訊協定第四版 (TCP/IPv4)"
-DNSCLIENT_NAME = "DNS 用户端" 
-DNSCLIENT_DESC = "快取本地 DNS 查詢的服務" 
-DHCPCLIENT_NAME = "DHCP 用户端" 
+DNSCLIENT_NAME = "DNS 用户端"
+DNSCLIENT_DESC = "快取本地 DNS 查詢的服務"
+DHCPCLIENT_NAME = "DHCP 用户端"
 DHCPCLIENT_DESC = "嘗試從可用的 DHCP 伺服器中自動取得網絡設定"
 TCPIP_DEF = "傳輸控制協議 / 互聯網協議"

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS api tests
+ * PROJECT:     Windivs api tests
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Test for Shell Hook
  * COPYRIGHT:   Copyright 2020-2021 Katayama Hirofumi MZ (katayama.hirofumi.mz@gmail.com)
@@ -376,7 +376,7 @@ static HWND s_hwndParent = NULL;
 static HWND s_hwndTarget = NULL;
 static UINT s_nWindowCreatedCount = 0;
 static UINT s_nRudeAppActivated = 0;
-static WCHAR s_szName[] = L"ReactOS ShellHook testcase";
+static WCHAR s_szName[] = L"Windivs ShellHook testcase";
 
 static HWND
 DoCreateWindow(HWND hwndParent, DWORD style, DWORD exstyle, BOOL bFullscreen = FALSE)

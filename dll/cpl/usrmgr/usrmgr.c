@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS User Manager Control Panel
+ * PROJECT:         Windivs User Manager Control Panel
  * FILE:            dll/cpl/usrmgr/usrmgr.c
  * PURPOSE:         Main functions
  *

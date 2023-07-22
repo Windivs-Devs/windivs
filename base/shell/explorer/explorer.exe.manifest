@@ -3,7 +3,7 @@
 <assemblyIdentity
     version="1.0.0.0"
     processorArchitecture="*"
-    name="ReactOS.Explorer"
+    name="Windivs.Explorer"
     type="win32"
 />
 <description>This is ReactOS Explorer</description>

@@ -1,5 +1,5 @@
 /*
- * ReactOS Explorer
+ * Windivs Explorer
  *
  * Copyright 2013 - Edijs Kolesnikovics
  *

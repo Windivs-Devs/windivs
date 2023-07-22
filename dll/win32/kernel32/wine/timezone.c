@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * FILE:            dll/win32/kernel32/wine/timezone.c
  * PURPOSE:         Time conversion functions
  * PROGRAMMER:      Ariadne
@@ -76,7 +76,7 @@ TIME_DayLightCompareDate(const SYSTEMTIME *date, const SYSTEMTIME *compareDate)
          * 5 means: the last week in the month */
         int weekofmonth = compareDate->wDay;
           /* calculate the day of the first DayOfWeek in the month */
-        First = ( 6 + compareDate->wDayOfWeek - date->wDayOfWeek + date->wDay 
+        First = ( 6 + compareDate->wDayOfWeek - date->wDayOfWeek + date->wDay
                ) % 7 + 1;
         limit_day = First + 7 * (weekofmonth - 1);
         /* check needed for the 5th weekday of the month */
@@ -158,7 +158,7 @@ TIME_CompTimeZoneID( const TIME_ZONE_INFORMATION *pTZinfo, FILETIME *lpFileTime,
             LL2FILETIME( llTime, &ftTemp)
             FileTimeToSystemTime(lpFileTime, &SysTime);
         }
-        
+
         /* check for daylight savings */
         if(year == SysTime.wYear) {
             ret = TIME_DayLightCompareDate( &SysTime, &pTZinfo->StandardDate);
@@ -193,10 +193,10 @@ TIME_CompTimeZoneID( const TIME_ZONE_INFORMATION *pTZinfo, FILETIME *lpFileTime,
         } else    /* Down south */
             if( beforeStandardDate || afterDaylightDate )
             retval = TIME_ZONE_ID_DAYLIGHT;
-    } else 
+    } else
         /* No transition date */
         retval = TIME_ZONE_ID_UNKNOWN;
-        
+
     return retval;
 }
 

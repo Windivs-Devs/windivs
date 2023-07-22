@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS BDA Proxy
+ * PROJECT:         Windivs BDA Proxy
  * FILE:            dll/directx/bdaplgin/devicecontrol.cpp
  * PURPOSE:         ClassFactory interface
  *

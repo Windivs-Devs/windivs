@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel Streaming
+ * PROJECT:         Windivs Kernel Streaming
  * FILE:            drivers/wdm/audio/sysaudio/main.c
  * PURPOSE:         System Audio graph builder
  * PROGRAMMER:      Andrew Greenwood

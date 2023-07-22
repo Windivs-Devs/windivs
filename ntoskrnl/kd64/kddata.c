@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/kd64/kddata.c
  * PURPOSE:         Contains all global variables and settings for KD64
@@ -248,7 +248,7 @@ ULONG Kd_MM_Mask;
 ULONG Kd_DFSC_Mask;
 ULONG Kd_WOW64_Mask;
 //
-// Components specified in Vista+, some of which we also use in ReactOS
+// Components specified in Vista+, some of which we also use in Windivs
 //
 ULONG Kd_ALPC_Mask;
 ULONG Kd_WDI_Mask;
@@ -420,7 +420,7 @@ PULONG KdComponentTable[MAX_KD_COMPONENT_TABLE_ENTRIES] =
     &Kd_DFSC_Mask,
     &Kd_WOW64_Mask,
 //
-// Components specified in Vista+, some of which we also use in ReactOS
+// Components specified in Vista+, some of which we also use in Windivs
 //
     &Kd_ALPC_Mask,
     &Kd_WDI_Mask,

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            include/reactos/rossym.h
  * PURPOSE:         Handling of rossym symbol info
  *

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Native DirectDraw implementation
  * FILE:             win32ss/reactx/ntddraw/mocomp.c
  * PROGRAMER:        Magnus Olsen (magnus@greatlord.com)
@@ -54,7 +54,7 @@ NtGdiDdCreateMoComp(HANDLE hDirectDraw, PDD_CREATEMOCOMPDATA puCreateMoCompData)
 /************************************************************************/
 /* NtGdiDdDestroyMoComp                                                 */
 /************************************************************************/
-DWORD 
+DWORD
 APIENTRY
 NtGdiDdDestroyMoComp(HANDLE hMoComp,
                      PDD_DESTROYMOCOMPDATA puBeginFrameData)

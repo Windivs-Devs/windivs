@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS runas utility
+ * PROJECT:     Windivs runas utility
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/applications/runas/runas.c
  * COPYRIGHT:   Copyright 2022 Eric Kohl <eric.kohl@reactos.org>

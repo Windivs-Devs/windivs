@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Services
+ * PROJECT:     Windivs Services
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/applications/mscutils/servman/create.c
  * PURPOSE:     Create a new service

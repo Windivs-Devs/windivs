@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Device Manager
+ * PROJECT:     Windivs Device Manager
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/win32/devmgr/devmgmt/MainWindow.cpp
  * PURPOSE:     Implements the main container window for the device view

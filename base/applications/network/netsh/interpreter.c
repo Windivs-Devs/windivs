@@ -1,5 +1,5 @@
 /*
- * PROJECT:    ReactOS NetSh
+ * PROJECT:    Windivs NetSh
  * LICENSE:    GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:    Network Shell command interpreter
  * COPYRIGHT:  Copyright 2023 Eric Kohl <eric.kohl@reactos.org>
@@ -49,7 +49,7 @@ InterpretCommand(
         pCommand = pContext->pCommandListHead;
         while (pCommand != NULL)
         {
-            if (wcsicmp(argv[0], pCommand->pwszCmdToken) == 0) 
+            if (wcsicmp(argv[0], pCommand->pwszCmdToken) == 0)
             {
                 if (dwHelpLevel == 1)
                 {
@@ -120,7 +120,7 @@ InterpretCommand(
             pSubContext = pContext->pSubContextHead;
             while (pSubContext != NULL)
             {
-                if (wcsicmp(argv[0], pSubContext->pszContextName) == 0) 
+                if (wcsicmp(argv[0], pSubContext->pszContextName) == 0)
                 {
                     pCurrentContext = pSubContext;
                     return TRUE;
