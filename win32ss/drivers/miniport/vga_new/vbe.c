@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS VGA Miniport Driver
+ * PROJECT:         Windivs VGA Miniport Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            win32ss/drivers/miniport/vga_new/vbe.c
  * PURPOSE:         Main VESA VBE 1.02+ SVGA Miniport Handling Code
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -152,10 +152,10 @@ VbeSetColorLookup(IN PHW_DEVICE_EXTENSION VgaExtension,
     PVIDEOMODE CurrentMode = VgaExtension->CurrentMode;
 
     Entries = ClutBuffer->NumEntries;
-    
+
     VideoDebugPrint((0, "Setting %lu entries.\n", Entries));
-    
-    /* 
+
+    /*
      * For Vga compatible modes, write them directly.
      * Otherwise, the LGPL VGABIOS (used in bochs) fails!
      * It is also said that this way is faster.

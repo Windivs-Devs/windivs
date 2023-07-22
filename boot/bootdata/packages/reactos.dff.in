@@ -1,7 +1,7 @@
 
-; Main ReactOS package
+; Main Windivs package
 
-.Set DiskLabelTemplate="ReactOS"                ; Label of disk
+.Set DiskLabelTemplate="Windivs"                ; Label of disk
 .Set CabinetNameTemplate="reactos.cab"          ; reactos.cab
 .Set InfFileName="reactos.inf"                  ; reactos.inf
 

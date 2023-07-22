@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 1998, 1999, 2000, 2001 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 1998, 1999, 2000, 2001 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  *
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/windows/hook.c
  * PURPOSE:         Hooks
  * PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -104,7 +104,7 @@ IntSetWindowsHook(
 }
 
 /*
-   Since ReactOS uses User32 as the main message source this was needed.
+   Since Windivs uses User32 as the main message source this was needed.
    Base on the funny rules from the wine tests it left it with this option.
    8^(
  */

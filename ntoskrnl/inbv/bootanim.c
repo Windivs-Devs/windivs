@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Kernel
+ * PROJECT:     Windivs Kernel
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Boot Theme & Animation
  * COPYRIGHT:   Copyright 2007 Alex Ionescu (alex.ionescu@reactos.org)
@@ -21,9 +21,9 @@
 /* GLOBALS *******************************************************************/
 
 /*
- * ReactOS uses the same boot screen for all the products.
+ * Windivs uses the same boot screen for all the products.
  *
- * Enable this define when ReactOS will have different SKUs
+ * Enable this define when Windivs will have different SKUs
  * (Workstation, Server, Storage Server, Cluster Server, etc...).
  */
 // #define REACTOS_SKUS
@@ -68,7 +68,7 @@ extern BOOLEAN ShowProgressBar;
 
 /*
  * Values for PltRotBarStatus:
- * - PltRotBarStatus == 1, do palette fading-in (done elsewhere in ReactOS);
+ * - PltRotBarStatus == 1, do palette fading-in (done elsewhere in Windivs);
  * - PltRotBarStatus == 2, do rotation bar animation;
  * - PltRotBarStatus == 3, stop the animation thread.
  * - Any other value is ignored and the animation thread continues to run.
@@ -685,7 +685,7 @@ DisplayBootBitmap(
 
         /*
          * Add a rotating bottom horizontal bar when using a progress bar,
-         * to show that ReactOS can be still alive when the bar does not
+         * to show that Windivs can be still alive when the bar does not
          * appear to progress.
          */
         if (TempRotBarSelection == RB_PROGRESS_BAR)

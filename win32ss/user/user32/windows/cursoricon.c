@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * COPYRIGHT:       GPL - See COPYING in the top level directory
  * FILE:            win32ss/user/user32/windows/cursoricon.c
  * PURPOSE:         cursor and icons implementation

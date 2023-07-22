@@ -1,5 +1,5 @@
 /*
-* PROJECT:     ReactOS Hardware Abstraction Layer
+* PROJECT:     Windivs Hardware Abstraction Layer
 * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
 * PURPOSE:     Defines HalpBuildType for either UP or SMP
 * COPYRIGHT:   Copyright 2021 Timo Kreuzer <timo.kreuzer@reactos.org>

@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2017 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2017 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * FILE:             sdk/lib/drivers/rdbsslib/rdbss.c
  * PURPOSE:          RDBSS library
  * PROGRAMMER:       Pierre Schweitzer (pierre@reactos.org)
@@ -3221,7 +3221,7 @@ RxCommonRead(
 
     Irp->IoStatus.Information = 0;
 
-    /* Should the read be loud - so far, it's just ignored on ReactOS:
+    /* Should the read be loud - so far, it's just ignored on Windivs:
      * s/DPRINT/DPRINT1/g will make it loud
      */
     LowIoContext = &RxContext->LowIoContext;

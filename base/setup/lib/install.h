@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Setup Library
+ * PROJECT:         Windivs Setup Library
  * FILE:            base/setup/lib/install.c
  * PURPOSE:         Installation functions
  * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.org)

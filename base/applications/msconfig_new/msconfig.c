@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications
+ * PROJECT:     Windivs Applications
  * LICENSE:     LGPL - See COPYING in the top level directory
  * FILE:        base/applications/msconfig_new/msconfig.c
  * PURPOSE:     MSConfig main dialog
@@ -27,12 +27,12 @@
     HWND hSingleWnd __attribute__((section ("MSConfigInstance"), shared)) = NULL;
 #endif
 
-/* Defaults for ReactOS */
+/* Defaults for Windivs */
 BOOL bIsWindows = FALSE;
 BOOL bIsPreVistaOSVersion = TRUE;
 
 /* Language-independent Vendor strings */
-const LPCWSTR IDS_REACTOS   = L"ReactOS";
+const LPCWSTR IDS_REACTOS   = L"Windivs";
 const LPCWSTR IDS_MICROSOFT = L"Microsoft";
 const LPCWSTR IDS_WINDOWS   = L"Windows";
 

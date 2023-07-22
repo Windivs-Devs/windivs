@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            include/reactos/drivers/ntddrdsk.h
  * PURPOSE:         Constants and types for accessing the RAM disk device
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 #ifndef _NTDDRDSK_H_
 #define _NTDDRDSK_H_

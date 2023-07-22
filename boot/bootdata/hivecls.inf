@@ -85,9 +85,9 @@ HKCR,"anifile","",0x00000000,"Animated Cursor"
 HKCR,"anifile","FriendlyTypeName",0x00020000,"@%SystemRoot%\system32\main.cpl,-1039"
 HKCR,"anifile\DefaultIcon","",0x00000000,"%1"
 
-; ReactOS Batch Files
+; Windivs Batch Files
 HKCR,".bat","",0x00000000,"batfile"
-HKCR,"batfile","",0x00000000,"ReactOS Batch File"
+HKCR,"batfile","",0x00000000,"Windivs Batch File"
 HKCR,"batfile","EditFlags",0x00010001,0x00000010
 HKCR,"batfile","FriendlyTypeName",0x00020000,"@%SystemRoot%\system32\shell32.dll,-201"
 HKCR,"batfile\DefaultIcon","",0x00020000,"%SystemRoot%\system32\shell32.dll,-153"
@@ -101,9 +101,9 @@ HKCR,"cerfile","FriendlyTypeName",0x00020000,"@%SystemRoot%\system32\cryptext.dl
 HKCR,"cerfile\DefaultIcon","",0x00020000,"%SystemRoot%\system32\cryptext.dll,-1"
 HKCR,"cerfile\shell\open\command","",0x00020000,"%SystemRoot%\system32\rundll32.exe cryptext.dll,CryptExtOpenCER %1"
 
-; ReactOS Command Script Files
+; Windivs Command Script Files
 HKCR,".cmd","",0x00000000,"cmdfile"
-HKCR,"cmdfile","",0x00000000,"ReactOS Command Script"
+HKCR,"cmdfile","",0x00000000,"Windivs Command Script"
 HKCR,"cmdfile","EditFlags",0x00010001,0x00000010
 HKCR,"cmdfile","FriendlyTypeName",0x00020000,"@%SystemRoot%\system32\shell32.dll,-202"
 HKCR,"cmdfile\DefaultIcon","",0x00020000,"%SystemRoot%\system32\shell32.dll,-153"
@@ -775,7 +775,7 @@ XMLFILE="XML Document"
 XSLFILE="XSL Stylesheet"
 
 ;; In msi.dll
-MSIPACK="ReactOS Installer Package"
+MSIPACK="Windivs Installer Package"
 
 ;; In themeui.dll
 MSSTYLESFILE="Visual Style File"
@@ -789,7 +789,7 @@ AVIFILE="Video Clip"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="Cascading Style Sheet"
-SCFFILE="ReactOS Explorer Command"
+SCFFILE="Windivs Explorer Command"
 WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu
@@ -815,7 +815,7 @@ CPLFILE_OPENWITH="Mit der Systemsteuerung öffnen"
 ;XSLFILE="XSL Stylesheet"
 
 ;; In msi.dll
-;MSIPACK="ReactOS Installer Package"
+;MSIPACK="Windivs Installer Package"
 
 ;; In themeui.dll
 ;MSSTYLESFILE="Visual Style File"
@@ -829,7 +829,7 @@ CPLFILE_OPENWITH="Mit der Systemsteuerung öffnen"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 ;CSSFILE="Cascading Style Sheet"
-;SCFFILE="ReactOS Explorer Command"
+;SCFFILE="Windivs Explorer Command"
 ;WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu
@@ -855,7 +855,7 @@ XMLFILE="Documento XML"
 XSLFILE="Hoja de estilos XSL"
 
 ;; In msi.dll
-MSIPACK="Paquete de instalación de ReactOS"
+MSIPACK="Paquete de instalación de Windivs"
 
 ;; In themeui.dll
 MSSTYLESFILE="Archivo de estilo visual"
@@ -869,7 +869,7 @@ AVIFILE="Secuencia de vídeo"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="Hoja de estilos en cascada"
-SCFFILE="Órden del explorador de ReactOS"
+SCFFILE="Órden del explorador de Windivs"
 WMZFILE="Metarchivo mejorado comprimido"
 
 ;; For .reg files, right-click menu
@@ -895,7 +895,7 @@ XMLFILE="Document XML"
 XSLFILE="Feuille de style XSL"
 
 ;; In msi.dll
-MSIPACK="Package ReactOS Installer"
+MSIPACK="Package Windivs Installer"
 
 ;; In themeui.dll
 MSSTYLESFILE="Fichier de styles visuels"
@@ -909,7 +909,7 @@ AVIFILE="Clip Vidéo"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="Fichier CSS"
-SCFFILE="Commande de l'explorateur ReactOS"
+SCFFILE="Commande de l'explorateur Windivs"
 ;WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu
@@ -935,7 +935,7 @@ XMLFILE="Documento XML"
 XSLFILE="Foglio di stile XSL"
 
 ;; In msi.dll
-MSIPACK="Pacchetto di installazione di ReactOS"
+MSIPACK="Pacchetto di installazione di Windivs"
 
 ;; In themeui.dll
 MSSTYLESFILE="File di stili visivi"
@@ -949,7 +949,7 @@ AVIFILE="Filmato video"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 ;CSSFILE="Cascading Style Sheet"
-;SCFFILE="ReactOS Explorer Command"
+;SCFFILE="Windivs Explorer Command"
 ;WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu
@@ -975,7 +975,7 @@ XMLFILE="Dokument XML"
 XSLFILE="Arkusz stylów XSL"
 
 ;; In msi.dll
-MSIPACK="Pakiet Instalatora ReactOS"
+MSIPACK="Pakiet Instalatora Windivs"
 
 ;; In themeui.dll
 MSSTYLESFILE="Plik stylu wizualnego"
@@ -989,7 +989,7 @@ AVIFILE="Arkusz stylu kaskadowego"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 ;CSSFILE="Cascading Style Sheet"
-SCFFILE="Polecenie Eksploratora ReactOS"
+SCFFILE="Polecenie Eksploratora Windivs"
 WMZFILE="Skompresowany metaplik"
 
 ;; For .reg files, right-click menu
@@ -1015,7 +1015,7 @@ XMLFILE="Document XML"
 XSLFILE="Foaie de stil XSL"
 
 ;; In msi.dll
-MSIPACK="Pachet de instalare ReactOS"
+MSIPACK="Pachet de instalare Windivs"
 
 ;; In themeui.dll
 MSSTYLESFILE="Fișier de stil vizual"
@@ -1029,7 +1029,7 @@ AVIFILE="Fișier video"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="Foaie de stiluri în cascadă"
-SCFFILE="Comandă de Explorator ReactOS"
+SCFFILE="Comandă de Explorator Windivs"
 WMZFILE="Metafișier îmbunătățit comprimat"
 
 ;; For .reg files, right-click menu
@@ -1055,7 +1055,7 @@ XMLFILE="Документ XML"
 XSLFILE="XSL таблица стилей"
 
 ;; In msi.dll
-MSIPACK="Пакет установщика ReactOS"
+MSIPACK="Пакет установщика Windivs"
 
 ;; In themeui.dll
 MSSTYLESFILE="Файл стиля оформления"
@@ -1069,7 +1069,7 @@ AVIFILE="Видеозапись"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="Каскадная таблица стилей"
-SCFFILE="Команда проводника ReactOS"
+SCFFILE="Команда проводника Windivs"
 WMZFILE="Сжатый расширенный метафайл"
 
 ;; For .reg files, right-click menu
@@ -1095,7 +1095,7 @@ XMLFILE="XML 文件"
 XSLFILE="XSL 樣式表"
 
 ;; In msi.dll
-MSIPACK="ReactOS 安裝套件"
+MSIPACK="Windivs 安裝套件"
 
 ;; In themeui.dll
 MSSTYLESFILE="視覺樣式檔案"
@@ -1109,7 +1109,7 @@ AVIFILE="視訊短片"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="階層式樣式表"
-SCFFILE="ReactOS Explorer 命令"
+SCFFILE="Windivs Explorer 命令"
 ;WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu
@@ -1135,7 +1135,7 @@ CPLFILE_OPENWITH="Denetim Masası'yla Aç"
 ;XSLFILE="XSL Stil Şablonu"
 
 ;; In msi.dll
-;MSIPACK="ReactOS Yükleyicisi Paketi"
+;MSIPACK="Windivs Yükleyicisi Paketi"
 
 ;; In themeui.dll
 ;MSSTYLESFILE="Görsel Stil Dosyası"
@@ -1149,7 +1149,7 @@ CPLFILE_OPENWITH="Denetim Masası'yla Aç"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 ;CSSFILE="Basamaklı Stil Şablonu"
-;SCFFILE="ReactOS Gezgini Komutu"
+;SCFFILE="Windivs Gezgini Komutu"
 ;WMZFILE="Sıkıştırılmış Geliştirilmiş Meta Dosyası"
 
 ;; For .reg files, right-click menu
@@ -1175,7 +1175,7 @@ XMLFILE="XML 文件"
 XSLFILE="XSL 樣式表"
 
 ;; In msi.dll
-MSIPACK="ReactOS 安裝套件"
+MSIPACK="Windivs 安裝套件"
 
 ;; In themeui.dll
 MSSTYLESFILE="視覺樣式檔案"
@@ -1189,7 +1189,7 @@ AVIFILE="視訊短片"
 
 ;; Misc file types without friendly (localized in .dll resources) name
 CSSFILE="階層式樣式表"
-SCFFILE="ReactOS Explorer 命令"
+SCFFILE="Windivs Explorer 命令"
 ;WMZFILE="Compressed Enhanced Metafile"
 
 ;; For .reg files, right-click menu

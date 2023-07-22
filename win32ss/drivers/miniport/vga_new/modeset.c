@@ -1,10 +1,10 @@
 /*
- * PROJECT:         ReactOS VGA Miniport Driver
+ * PROJECT:         Windivs VGA Miniport Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/miniport/vga_new/modeset.c
  * PURPOSE:         Handles switching to Standard VGA Modes for compatible cards
  * PROGRAMMERS:     Copyright (c) 1992  Microsoft Corporation
- *                  ReactOS Portable Systems Group
+ *                  Windivs Portable Systems Group
  */
 
 #include "vga.h"
@@ -449,7 +449,7 @@ Return Value:
     //
     // VESA BIOS mode switch
     //
-// eVb: 2.6 [VBE] - VBE Mode Switch Support 
+// eVb: 2.6 [VBE] - VBE Mode Switch Support
     status = VbeSetMode(HwDeviceExtension, pRequestedMode, PhysPtrChange);
     if (status == ERROR_INVALID_FUNCTION)
     {
@@ -467,7 +467,7 @@ Return Value:
     //
     // ModeX check
     //
-    
+
     if (pRequestedMode->hres == 320)
     {
         VideoDebugPrint((0, "ModeX not support!!!\n"));
@@ -477,7 +477,7 @@ Return Value:
     //
     // Text mode check
     //
-    
+
     if (!(pRequestedMode->fbType & VIDEO_MODE_GRAPHICS))
     {
 // eVb: 2.8 [TODO] - This code path is not implemented yet

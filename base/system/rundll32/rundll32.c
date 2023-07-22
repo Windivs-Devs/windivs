@@ -1,9 +1,9 @@
 /*
- * ReactOS rundll32
- * Copyright (C) 2003-2004 ReactOS Team
+ * Windivs rundll32
+ * Copyright (C) 2003-2004 Windivs Team
  *
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS rundll32.exe
+ * PROJECT:         Windivs rundll32.exe
  * FILE:            base/system/rundll32/rundll32.c
  * PURPOSE:         Run a DLL as a program
  * PROGRAMMER:      ShadowFlare (blakflare@hotmail.com)

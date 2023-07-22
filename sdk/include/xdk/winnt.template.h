@@ -3,9 +3,9 @@
  *
  * Windows NT native definitions for user mode
  *
- * This file is part of the ReactOS PSDK package.
+ * This file is part of the Windivs PSDK package.
  *
- * This file is auto-generated from ReactOS XDK.
+ * This file is auto-generated from Windivs XDK.
  *
  * THIS SOFTWARE IS NOT COPYRIGHTED
  *
