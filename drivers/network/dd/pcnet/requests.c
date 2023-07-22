@@ -1,5 +1,5 @@
 /*
- * ReactOS AMD PCNet Driver
+ * Windivs AMD PCNet Driver
  *
  * Copyright (C) 2000 Casper Hornstrup <chorns@users.sourceforge.net>
  * Copyright (C) 2003 Vizzini <vizzini@plasmic.com>
@@ -21,7 +21,7 @@
  *
  * PROGRAMMERS:
  *     Vizzini (vizzini@plasmic.com),
- *     borrowed very heavily from the ReactOS ne2000 driver by
+ *     borrowed very heavily from the Windivs ne2000 driver by
  *     Casper S. Hornstrup (chorns@users.sourceforge.net)
  * REVISIONS:
  *     14-Sep-2003 vizzini - Created

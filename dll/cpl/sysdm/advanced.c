@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS System Control Panel Applet
+ * PROJECT:     Windivs System Control Panel Applet
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/sysdm/advanced.c
  * PURPOSE:     Memory, start-up and profiles settings
@@ -11,7 +11,7 @@
 #include "precomp.h"
 
 static TCHAR BugLink[] = _T("http://jira.reactos.org/");
-static TCHAR ReportAsWorkstationKey[] = _T("SYSTEM\\CurrentControlSet\\Control\\ReactOS\\Settings\\Version");
+static TCHAR ReportAsWorkstationKey[] = _T("SYSTEM\\CurrentControlSet\\Control\\Windivs\\Settings\\Version");
 
 
 static VOID

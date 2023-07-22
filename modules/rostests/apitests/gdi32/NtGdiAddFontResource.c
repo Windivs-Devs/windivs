@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS API tests
+ * PROJECT:         Windivs API tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for NtGdiAddFontResourceW
  * PROGRAMMERS:     Víctor Martínez Calvo ( victor.martinez@reactos.org )

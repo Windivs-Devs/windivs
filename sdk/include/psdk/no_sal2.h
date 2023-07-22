@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS PSDK
+ * PROJECT:     Windivs PSDK
  * LICENSE:     MIT (https://spdx.org/licenses/MIT)
  * PURPOSE:     Renders the SAL annotations for documenting APIs harmless.
  * COPYRIGHT:   Microsoft Corporation.

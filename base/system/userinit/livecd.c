@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS Userinit Logon Application
+ * PROJECT:     Windivs Userinit Logon Application
  * FILE:        base/system/userinit/livecd.c
  * PROGRAMMERS: Eric Kohl
  */

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Drivers
+ * PROJECT:         Windivs Drivers
  * PURPOSE:         Kernel Security Support Provider Interface Driver
  *
  * PROGRAMMERS:     Timo Kreuzer (timo.kreuzer@reactos.org)

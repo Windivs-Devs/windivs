@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS DiskPart
+ * PROJECT:         Windivs DiskPart
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/system/diskpart/help.c
  * PURPOSE:         Manages all the partitions of the OS in an interactive way.
@@ -146,7 +146,7 @@ BOOL help_main(INT argc, LPWSTR *argv)
         {
             cmdptr2 = cmdptr;
         }
-        
+
         if ((cmdptr3 == NULL) &&
             (argc >= 4) &&
             (cmdptr->cmd1 != NULL && wcsicmp(argv[1], cmdptr->cmd1) == 0) &&

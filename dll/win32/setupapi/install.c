@@ -2,7 +2,7 @@
  * Setupapi install routines
  *
  * Copyright 2002 Alexandre Julliard for CodeWeavers
- *           2005-2006 Hervé Poussineau (hpoussin@reactos.org)
+ *           2005-2006 Hervï¿½ Poussineau (hpoussin@reactos.org)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -1745,7 +1745,7 @@ static VOID FixupServiceBinaryPath(
     ServiceLength = strlenW(*ServiceBinary);
 
     /* Check and fix two things:
-       1. Get rid of C:\ReactOS and use relative
+       1. Get rid of C:\Windivs and use relative
           path instead.
        2. Add %SystemRoot% for Win32 services */
 
@@ -1754,7 +1754,7 @@ static VOID FixupServiceBinaryPath(
 
     if (!wcsnicmp(*ServiceBinary, ReactOSDir, RosDirLength))
     {
-        /* Yes, the first part is the C:\ReactOS\, just skip it */
+        /* Yes, the first part is the C:\Windivs\, just skip it */
         MoveMemory(*ServiceBinary, *ServiceBinary + RosDirLength + 1,
             (ServiceLength - RosDirLength) * sizeof(WCHAR));
 

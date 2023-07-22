@@ -1,10 +1,10 @@
 /*
- * PROJECT:         ReactOS VGA Miniport Driver
+ * PROJECT:         Windivs VGA Miniport Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/miniport/vga_new/vga.h
  * PURPOSE:         Main Header File
  * PROGRAMMERS:     Copyright (c) 1992  Microsoft Corporation
- *                  ReactOS Portable Systems Group
+ *                  Windivs Portable Systems Group
  */
 
 #ifndef _VGA_NEW_PCH_

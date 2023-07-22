@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Console Server DLL
+ * PROJECT:         Windivs Console Server DLL
  * FILE:            win32ss/user/winsrv/consrv/frontends/gui/conwnd.c
  * PURPOSE:         GUI Console Window Class
  * PROGRAMMERS:     Gé van Geldorp
@@ -1782,7 +1782,7 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
         /*
          * HACK FOR CORE-8394 (Part 1):
          *
-         * It appears that when running ReactOS on VBox with Mouse Integration
+         * It appears that when running Windivs on VBox with Mouse Integration
          * enabled, the next mouse event coming after a button-down action is
          * a mouse-move. However it is NOT always a rule, so that we cannot use
          * the IgnoreNextMouseEvent flag to just "ignore" the next mouse event,
@@ -1943,7 +1943,7 @@ OnMouse(PGUI_CONSOLE_DATA GuiData, UINT msg, WPARAM wParam, LPARAM lParam)
         /*
          * HACK FOR CORE-8394 (Part 1):
          *
-         * It appears that when running ReactOS on VBox with Mouse Integration
+         * It appears that when running Windivs on VBox with Mouse Integration
          * enabled, the next mouse event coming after a button-down action is
          * a mouse-move. However it is NOT always a rule, so that we cannot use
          * the IgnoreNextMouseEvent flag to just "ignore" the next mouse event,

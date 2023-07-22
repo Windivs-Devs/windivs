@@ -79,7 +79,7 @@ WINE_DEFAULT_DEBUG_CHANNEL(button);
 #define BUTTON_UNKNOWN2        0x20
 #define BUTTON_UNKNOWN3        0x10
 #ifdef __REACTOS__
-#define BUTTON_BMCLICK         0x100 // ReactOS Need to up to wine!
+#define BUTTON_BMCLICK         0x100 // Windivs Need to up to wine!
 #endif
 
 #define BUTTON_NOTIFY_PARENT(hWnd, code) \
@@ -335,11 +335,11 @@ BOOL BUTTON_PaintWithTheme(HTHEME theme, const BUTTON_INFO *infoPtr, HDC hParamD
 
     if(dwStyle & WS_DISABLED)
         drawState = STATE_DISABLED;
-    else if(infoPtr->state & BST_PUSHED) 
+    else if(infoPtr->state & BST_PUSHED)
         drawState = STATE_PRESSED;
-    else if ((dwStyle & BS_PUSHLIKE) && (infoPtr->state & (BST_CHECKED|BST_INDETERMINATE))) 
+    else if ((dwStyle & BS_PUSHLIKE) && (infoPtr->state & (BST_CHECKED|BST_INDETERMINATE)))
         drawState = STATE_PRESSED;
-    else if(infoPtr->state & BST_HOT) 
+    else if(infoPtr->state & BST_HOT)
         drawState = STATE_HOT;
     else if((infoPtr->state & BST_FOCUS) || (dwStyle & BS_DEFPUSHBUTTON))
         drawState = STATE_DEFAULTED;
@@ -478,7 +478,7 @@ BOOL BUTTON_GetIdealSize(BUTTON_INFO *infoPtr, HTHEME theme, SIZE* psize)
 cleanup:
     if (hFont)
         DeleteObject(hFont);
-    if (text) 
+    if (text)
         HeapFree( GetProcessHeap(), 0, text );
     if (hdc)
         ReleaseDC(infoPtr->hwnd, hdc);
@@ -531,7 +531,7 @@ BOOL BUTTON_DrawIml(HDC hDC, const BUTTON_IMAGELIST *pimlData, RECT *prc, BOOL b
         return TRUE;
 
     count = ImageList_GetImageCount(pimlData->himl);
-    
+
     if (count == 1)
         index = 0;
     else if (index >= count)
@@ -953,7 +953,7 @@ static LRESULT CALLBACK BUTTON_WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, L
             return FALSE;
         }
 
-        if (btn_type == BS_PUSHBUTTON || 
+        if (btn_type == BS_PUSHBUTTON ||
             btn_type == BS_DEFPUSHBUTTON ||
             btn_type == BS_USERBUTTON)
         {
@@ -976,7 +976,7 @@ static LRESULT CALLBACK BUTTON_WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, L
         /* Clear an old text here as Windows does */
 #ifdef __REACTOS__
 //
-// ReactOS Note :
+// Windivs Note :
 // wine Bug: http://bugs.winehq.org/show_bug.cgi?id=25790
 // Patch: http://source.winehq.org/patches/data/70889
 // By: Alexander LAW, Replicate Windows behavior of WM_SETTEXT handler regarding WM_CTLCOLOR*

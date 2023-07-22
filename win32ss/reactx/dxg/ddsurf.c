@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Native driver for dxg implementation
  * FILE:             win32ss/reactx/dxg/ddsurf.c
  * PROGRAMER:        Sebastian Gasiorek (sebastian.gasiorek@reactos.org)
@@ -26,7 +26,7 @@
 * Reserved
 *
 * @return
-* Returns DDHAL_DRIVER_HANDLED or DDHAL_DRIVER_NOTHANDLED. 
+* Returns DDHAL_DRIVER_HANDLED or DDHAL_DRIVER_NOTHANDLED.
 *
 * @remarks.
 * Missing lock data and error handling.
@@ -86,7 +86,7 @@ DxDdLock(HANDLE hSurface,
 * Structure with lock details
 *
 * @return
-* Returns DDHAL_DRIVER_HANDLED or DDHAL_DRIVER_NOTHANDLED. 
+* Returns DDHAL_DRIVER_HANDLED or DDHAL_DRIVER_NOTHANDLED.
 *
 * @remarks.
 * Stub

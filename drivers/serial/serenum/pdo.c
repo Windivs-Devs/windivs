@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Serial enumerator driver
+ * PROJECT:         Windivs Serial enumerator driver
  * FILE:            drivers/bus/serenum/pdo.c
  * PURPOSE:         IRP_MJ_PNP operations for PDOs
  *
- * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.org)
+ * PROGRAMMERS:     Hervï¿½ Poussineau (hpoussin@reactos.org)
  */
 
 #include "serenum.h"

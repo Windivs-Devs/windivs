@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Character Map
+ * PROJECT:     Windivs Character Map
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/applications/charmap/settings.c
  * PURPOSE:     save/load settings

@@ -1,9 +1,9 @@
 --- C:/Users/CHRIST~1/AppData/Local/Temp/install.-rev47414.svn001.tmp.c	Sa Mai 29 16:46:40 2010
-+++ C:/Users/Christoph/Desktop/Projekte/ReactOS/dll/win32/mshtml/install.c	Sa Mai 29 16:43:49 2010
++++ C:/Users/Christoph/Desktop/Projekte/Windivs/dll/win32/mshtml/install.c	Sa Mai 29 16:43:49 2010
 @@ -60,6 +60,11 @@
       '\\','W','i','n','e',
       '\\','M','S','H','T','M','L',0};
- 
+
 +static const CHAR mshtml_keyA[] =
 +    {'S','o','f','t','w','a','r','e',
 +    '\\','W','i','n','e',
@@ -19,7 +19,7 @@
 -    HKEY hkey;
      DWORD res, type, size = MAX_PATH;
      BOOL ret;
- 
+
 +    file_name = heap_alloc(size+sizeof(GECKO_FILE_NAME));
      /* @@ Wine registry key: HKCU\Software\Wine\MSHTML */
 -    res = RegOpenKeyW(HKEY_CURRENT_USER, mshtml_keyW, &hkey);
@@ -36,7 +36,7 @@
      }
 -    RegCloseKey(hkey);
 -    if(res != ERROR_SUCCESS || type != REG_SZ) {
-+    
++
 +    if(res != ERROR_SUCCESS || (type != REG_SZ && type != REG_EXPAND_SZ)) {
          heap_free(file_name);
          return FALSE;

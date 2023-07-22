@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Native driver for dxg implementation
  * FILE:             win32ss/reactx/dxg/eng.c
  * PROGRAMER:        Magnus olsen (magnus@greatlord.com)
@@ -34,7 +34,7 @@
 * Desired structure size returned by driver
 *
 * @return
-* Returns true on successful execution, false when error. 
+* Returns true on successful execution, false when error.
 *
 * @remarks.
 * Only used internally in dxg.sys
@@ -62,7 +62,7 @@ BOOL intDdGetDriverInfo(PEDD_DIRECTDRAW_GLOBAL peDdGl, GUID guid, PVOID callback
     }
 
     /* cleanup on error */
-    memset(callbackStruct, 0, callbackSize); 
+    memset(callbackStruct, 0, callbackSize);
     if (returnSize)
         *returnSize = 0;
     return FALSE;
@@ -76,7 +76,7 @@ BOOL intDdGetDriverInfo(PEDD_DIRECTDRAW_GLOBAL peDdGl, GUID guid, PVOID callback
 * It retrieves all possible driver information structures
 *
 * @param PEDD_DIRECTDRAW_GLOBAL peDdGl
-* Pointer to destination DirectDrawGlobal structure 
+* Pointer to destination DirectDrawGlobal structure
 *
 * @remarks.
 * Only used internally in dxg.sys
@@ -123,7 +123,7 @@ VOID intDdGetAllDriverInfo(PEDD_DIRECTDRAW_GLOBAL peDdGl)
 * Fills in all EDD_DIRECTDRAW_GLOBAL structures and enables DirectDraw acceleration when possible
 *
 * @param PEDD_DIRECTDRAW_GLOBAL peDdGl
-* Pointer to destination DirectDrawGlobal structure 
+* Pointer to destination DirectDrawGlobal structure
 *
 * @remarks.
 * Only used internally in dxg.sys
@@ -216,7 +216,7 @@ intDdCreateDirectDrawLocal(HDEV hDev)
     peDdGl = (PEDD_DIRECTDRAW_GLOBAL)gpEngFuncs.DxEngGetHdevData(hDev, DxEGShDevData_eddg);
 
     AllocRet = DdHmgAlloc(sizeof(EDD_DIRECTDRAW_LOCAL), ObjType_DDLOCAL_TYPE, TRUE);
-    if (!AllocRet) 
+    if (!AllocRet)
         return NULL;
 
     peDdL = (PEDD_DIRECTDRAW_LOCAL)AllocRet->pobj;
@@ -245,10 +245,10 @@ intDdCreateDirectDrawLocal(HDEV hDev)
 * Function creates new DirectDraw object
 *
 * @param HDC hDC
-* Device context handle 
+* Device context handle
 *
 * @return
-* Newly created DirectDraw object handle. 
+* Newly created DirectDraw object handle.
 *
 * @remarks.
 * Missing all AGP stuff
@@ -299,10 +299,10 @@ DxDdCreateDirectDrawObject(
 * Function queries the driver for DirectDraw and Direct3D functionality
 *
 * @param HANDLE DdHandle
-* Handle to DirectDraw object 
+* Handle to DirectDraw object
 *
 * @param PDD_GETDRIVERINFODATA drvInfoData
-* Pointer to in/out driver info data structure 
+* Pointer to in/out driver info data structure
 *--*/
 DWORD
 NTAPI
@@ -318,7 +318,7 @@ DxDdGetDriverInfo(HANDLE DdHandle, PDD_GETDRIVERINFODATA drvInfoData)
     peDdL = (PEDD_DIRECTDRAW_LOCAL)DdHmgLock(DdHandle, ObjType_DDLOCAL_TYPE, FALSE);
     if (!peDdL)
         return RetVal;
-    
+
     peDdGl = peDdL->peDirectDrawGlobal2;
 
     // check VideoPort related callbacks
@@ -353,7 +353,7 @@ DxDdGetDriverInfo(HANDLE DdHandle, PDD_GETDRIVERINFODATA drvInfoData)
         {
             dwInfoSize = sizeof(DD_NTCALLBACKS);
             pInfo = (VOID*)&peDdGl->ddNtCallbacks;
-        }      
+        }
     }
 
     // check Miscellaneous callbacks
@@ -371,14 +371,14 @@ DxDdGetDriverInfo(HANDLE DdHandle, PDD_GETDRIVERINFODATA drvInfoData)
         }
     }
 
-    if (peDdGl->dwCallbackFlags & EDDDGBL_MISC2CALLBACKS && 
+    if (peDdGl->dwCallbackFlags & EDDDGBL_MISC2CALLBACKS &&
         InlineIsEqualGUID(&drvInfoData->guidInfo, &GUID_Miscellaneous2Callbacks))
     {
         dwInfoSize = sizeof(DD_MISCELLANEOUS2CALLBACKS);
         pInfo = (VOID*)&peDdGl->ddMiscellanous2Callbacks;
     }
 
-    if (peDdGl->dwCallbackFlags & EDDDGBL_MOTIONCOMPCALLBACKS && 
+    if (peDdGl->dwCallbackFlags & EDDDGBL_MOTIONCOMPCALLBACKS &&
         InlineIsEqualGUID(&drvInfoData->guidInfo, &GUID_MotionCompCallbacks))
     {
         dwInfoSize = sizeof(DD_MOTIONCOMPCALLBACKS);
@@ -415,9 +415,9 @@ DxDdGetDriverInfo(HANDLE DdHandle, PDD_GETDRIVERINFODATA drvInfoData)
 * @implemented
 *
 * Function queries the DirectDraw object for its functionality
-*  
+*
 * @return
-* TRUE on success. 
+* TRUE on success.
 *--*/
 BOOL
 NTAPI
@@ -483,7 +483,7 @@ DxDdQueryDirectDrawObject(
         RetVal = TRUE;
 
         gpEngFuncs.DxEngUnlockHdev(peDdGl->hDev);
-  
+
         InterlockedDecrement((VOID*)&peDdL->pobj.cExclusiveLock);
     }
 
@@ -497,7 +497,7 @@ DxDdQueryDirectDrawObject(
 * Function enables DirectDraw
 *
 * @param PEDD_DIRECTDRAW_GLOBAL peDdGl
-* Pointer to destination DirectDrawGlobal structure 
+* Pointer to destination DirectDrawGlobal structure
 *--*/
 BOOL
 NTAPI
@@ -523,15 +523,15 @@ DxDdEnableDirectDraw(HANDLE hDev, BOOL arg2/*What for?*/)
 * @implemented
 *
 * Function re-enables DirectDraw object after mode switch
-*  
+*
 * @param HANDLE DdHandle
-* DirectDraw object handle 
+* DirectDraw object handle
 *
 * @param PVOID p2
-* ??? 
+* ???
 *
 * @return
-* TRUE on success. 
+* TRUE on success.
 *
 * @remarks
 * Missing all AGP stuff and second parameter handling
@@ -544,7 +544,7 @@ DxDdReenableDirectDrawObject(
 {
     PEDD_DIRECTDRAW_LOCAL peDdL;
     PEDD_DIRECTDRAW_GLOBAL peDdGl;
-    HDC hDC;                     
+    HDC hDC;
     DWORD RetVal = FALSE;
 
     peDdL = (PEDD_DIRECTDRAW_LOCAL)DdHmgLock(DdHandle, ObjType_DDLOCAL_TYPE, FALSE);

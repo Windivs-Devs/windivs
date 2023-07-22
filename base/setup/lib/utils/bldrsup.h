@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Setup Library
+ * PROJECT:     Windivs Setup Library
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Boot Stores Management functionality, with support for
- *              NT 5.x family (MS Windows <= 2003, and ReactOS) bootloaders.
+ *              NT 5.x family (MS Windows <= 2003, and Windivs) bootloaders.
  * COPYRIGHT:   Copyright 2017-2018 Hermes Belusca-Maito
  */
 
@@ -12,7 +12,7 @@
 
 typedef enum _BOOT_STORE_TYPE
 {
-    FreeLdr,    // ReactOS' FreeLoader
+    FreeLdr,    // Windivs' FreeLoader
     NtLdr,      // Windows <= 2k3 NT "FlexBoot" OS Loader NTLDR
 //  BootMgr,    // Vista+ BCD-oriented BOOTMGR
     BldrTypeMax
@@ -78,7 +78,7 @@ typedef struct _BOOT_STORE_ENTRY
  */
 } BOOT_STORE_ENTRY, *PBOOT_STORE_ENTRY;
 
-/* "NTOS" (aka. ReactOS or MS Windows NT) <= 5.x options */
+/* "NTOS" (aka. Windivs or MS Windows NT) <= 5.x options */
 typedef struct _NTOS_OPTIONS
 {
     UCHAR Signature[8];     // "NTOS_5\0\0"

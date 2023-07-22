@@ -1,5 +1,5 @@
 /*
-* PROJECT:     ReactOS Character Map
+* PROJECT:     Windivs Character Map
 * LICENSE:     GPL - See COPYING in the top level directory
 * FILE:        base/applications/charmap/cell.cpp
 * PURPOSE:     Class for each individual cell

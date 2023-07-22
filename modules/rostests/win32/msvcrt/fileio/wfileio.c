@@ -1,5 +1,5 @@
 /*
- *  ReactOS test program -
+ *  Windivs test program -
  *
  *  wfileio.c
  *

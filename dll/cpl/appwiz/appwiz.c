@@ -1,7 +1,7 @@
 /*
- * PROJECT:                 ReactOS Software Control Panel
+ * PROJECT:                 Windivs Software Control Panel
  * FILE:                    dll/cpl/appwiz/appwiz.c
- * PURPOSE:                 ReactOS Software Control Panel
+ * PURPOSE:                 Windivs Software Control Panel
  * PROGRAMMERS:             Gero Kuehn (reactos.filter@gkware.com)
  *                          Dmitry Chapyshev (dmitry@reactos.org)
  */

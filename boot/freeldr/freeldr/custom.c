@@ -37,7 +37,7 @@ const CHAR BootPartitionPrompt[] = "Enter the boot partition.\n\nEnter 0 for the
 const CHAR ARCPathPrompt[] = "Enter the boot ARC path.\n\nExamples:\nmulti(0)disk(0)rdisk(0)partition(1)\nmulti(0)disk(0)fdisk(0)";
 const CHAR ReactOSSystemPathPrompt[] = "Enter the path to your Windivs system directory.\n\nExamples:\n\\Windivs\n\\Win";
 const CHAR ReactOSOptionsPrompt[] = "Enter the load options you want passed to the kernel.\n\nExamples:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200\n/FASTDETECT /SOS /NOGUIBOOT\n/BASEVIDEO /MAXMEM=64\n/KERNEL=NTKRNLMP.EXE /HAL=HALMPS.DLL";
-const CHAR ReactOSSetupOptionsPrompt[] = "Enter additional load options you want passed to the ReactOS Setup.\nThese options will supplement those obtained from the TXTSETUP.SIF\nfile, unless you also specify the /SIFOPTIONSOVERRIDE option switch.\n\nExample:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /NOGUIBOOT";
+const CHAR ReactOSSetupOptionsPrompt[] = "Enter additional load options you want passed to the Windivs Setup.\nThese options will supplement those obtained from the TXTSETUP.SIF\nfile, unless you also specify the /SIFOPTIONSOVERRIDE option switch.\n\nExample:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /NOGUIBOOT";
 const CHAR CustomBootPrompt[] = "Press ENTER to boot your custom boot setup.";
 
 /* FUNCTIONS ******************************************************************/
@@ -89,17 +89,17 @@ VOID OptionMenuCustomBoot(VOID)
         case 3: // Linux
             EditCustomBootLinux(&OperatingSystem);
             break;
-        case 4: // ReactOS
+        case 4: // Windivs
             EditCustomBootReactOS(&OperatingSystem, FALSE);
             break;
-        case 5: // ReactOS Setup
+        case 5: // Windivs Setup
             EditCustomBootReactOS(&OperatingSystem, TRUE);
             break;
 #else
-        case 0: // ReactOS
+        case 0: // Windivs
             EditCustomBootReactOS(&OperatingSystem, FALSE);
             break;
-        case 1: // ReactOS Setup
+        case 1: // Windivs Setup
             EditCustomBootReactOS(&OperatingSystem, TRUE);
             break;
 #endif /* _M_IX86 || _M_AMD64 */
@@ -686,7 +686,7 @@ EditCustomBootReactOS(
     if (!IniAddSettingValueToSection(SectionId, "BootType", IsSetup ? "ReactOSSetup" : "Windows2003"))
         return;
 
-    /* Construct the ReactOS ARC system path */
+    /* Construct the Windivs ARC system path */
     ConstructArcPath(ReactOSARCPath, ReactOSSystemPath,
                      DriveMapGetBiosDriveNumber(BootDriveString),
                      atoi(BootPartitionString));

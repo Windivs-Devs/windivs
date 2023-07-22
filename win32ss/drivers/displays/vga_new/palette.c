@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Framebuffer Display Driver
+ * PROJECT:         Windivs Framebuffer Display Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/displays/vga_new/palette.c
  * PURPOSE:         Palette Support
@@ -183,7 +183,7 @@ BOOL bInitDefaultPalette(PPDEV ppdev, DEVINFO *pDevInfo)
             RIP("DISP bInitDefaultPalette failed EngCreatePalette\n");
 // eVb: 4.5 [VGARISC Change] - VGA Palette is static, no need to free
             //EngFreeMem(ppdev->pPal);
-// eVb: 4.5 [END]        
+// eVb: 4.5 [END]
             return(FALSE);
         }
 
@@ -213,7 +213,7 @@ BOOL bInitDefaultPalette(PPDEV ppdev, DEVINFO *pDevInfo)
 
     return(TRUE);
 #endif
-// eVb: 4.6 [END]  
+// eVb: 4.6 [END]
 }
 
 /******************************Public*Routine******************************\

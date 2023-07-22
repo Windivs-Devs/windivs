@@ -1,5 +1,5 @@
 /*
- * PROJECT: ReactOS ACPI bus driver
+ * PROJECT: Windivs ACPI bus driver
  * FILE:    acpi/ospm/include/acpisys.h
  * PURPOSE: ACPI bus driver definitions
  */

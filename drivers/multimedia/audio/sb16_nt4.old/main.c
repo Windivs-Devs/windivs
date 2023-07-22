@@ -1,5 +1,5 @@
 /*
-    ReactOS
+    Windivs
     Sound Blaster driver
 
     Programmers:
