@@ -11,6 +11,7 @@
 #include <atlbase.h>
 #include <atlcom.h>
 #include <atlcoll.h>
+#include <atlconv.h>
 #include <atlstr.h>
 #include <ui/rosdlgs.h>
 #include <shlwapi.h>
@@ -20,8 +21,6 @@
 #define NTSTATUS LONG
 #include <reactos/debug.h>
 #include <shellutils.h>
-
-void Utf8ToWide(const CStringA& strUtf8, CStringW& strWide);
 
 #define EXTRACT_VERBA "extract"
 #define EXTRACT_VERBW L"extract"
@@ -36,7 +35,7 @@ EXTERN_C const GUID CLSID_ZipFolderExtractAllCommand;
 
 extern LONG g_ModuleRefCnt;
 
-
+UINT GetZipCodePage(BOOL bUnZip);
 WCHAR* guid2string(REFCLSID iid);
 
 #define MINIZIP_COMPATIBLE_VERSION 36
