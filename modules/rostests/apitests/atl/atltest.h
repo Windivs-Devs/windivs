@@ -107,7 +107,7 @@ char *wine_dbgstr_w(const wchar_t *wstr)
 
 #define ok_ptr(expression, result) \
     do { \
-        const void *_value = (expression); \
+        void *_value = (expression); \
         ok(_value == (result), "Wrong value for '%s', expected: " #result " (%p), got: %p\n", \
            #expression, (void*)(result), _value); \
     } while (0)
