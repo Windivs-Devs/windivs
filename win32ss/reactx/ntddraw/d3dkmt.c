@@ -1,12 +1,13 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Native DirectDraw implementation
  * FILE:             win32ss/reactx/ntddraw/d3dkmt.c
  * PROGRAMER:        Sebastian Gasiorek (sebastian.gasiorek@reactos.com)
  */
 
 #include <win32k.h>
+#include <debug.h>
 
 DWORD
 APIENTRY
@@ -111,7 +112,7 @@ NtGdiDdDDIDestroyDCFromMemory(const D3DKMT_DESTROYDCFROMMEMORY *desc)
     if (!desc)
         return STATUS_INVALID_PARAMETER;
 
-    if (GDI_HANDLE_GET_TYPE(desc->hDc) != GDI_OBJECT_TYPE_DC ||
+    if (GDI_HANDLE_GET_TYPE(desc->hDc)  != GDI_OBJECT_TYPE_DC ||
         GDI_HANDLE_GET_TYPE(desc->hBitmap) != GDI_OBJECT_TYPE_BITMAP)
         return STATUS_INVALID_PARAMETER;
 
