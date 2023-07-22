@@ -1,11 +1,7 @@
 *.opendb
 *.db
-*.user
-*.filters
 x64/
 .vs/
-ipch/
-atlconv/
 CAtlArray/
 CAtlFileMapping/
 CAtlList/
