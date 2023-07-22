@@ -83,12 +83,26 @@ HRESULT CFSDropTarget::_CopyItems(IShellFolder * pSFFrom, UINT cidl,
     if (!pszSrcList)
         return E_OUTOFMEMORY;
 
+    BOOL bRenameOnCollision = FALSE;
+    if (bCopy)
+    {
+        WCHAR szPath1[MAX_PATH], szPath2[MAX_PATH];
+        lstrcpynW(szPath1, pszSrcList, _countof(szPath1));
+        PathRemoveFileSpecW(szPath1);
+        lstrcpynW(szPath2, m_sPathTarget, _countof(szPath2));
+        PathRemoveFileSpecW(szPath2);
+        if (lstrcmpiW(szPath1, szPath2) == 0)
+            bRenameOnCollision = TRUE;
+    }
+
     SHFILEOPSTRUCTW op = {0};
     op.pFrom = pszSrcList;
     op.pTo = wszTargetPath;
     op.hwnd = m_hwndSite;
     op.wFunc = bCopy ? FO_COPY : FO_MOVE;
     op.fFlags = FOF_ALLOWUNDO | FOF_NOCONFIRMMKDIR;
+    if (bRenameOnCollision)
+        op.fFlags |= FOF_RENAMEONCOLLISION;
 
     int res = SHFileOperationW(&op);
 
