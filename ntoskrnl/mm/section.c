@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 1998-2005 ReactOS Team (and the authors from the programmers section)
+ * Copyright (C) 1998-2005 Windivs Team (and the authors from the programmers section)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -16,7 +16,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  *
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
+ * FILE:            ntoskrnl/mm/section.c
  * PURPOSE:         Implements section objects
  *
  * PROGRAMMERS:     Rex Jolliff
@@ -561,7 +562,7 @@ l_ReadHeaderFromFile:
              * magic to any binary.
              *
              * This will break applications that depend on SxS when running with real Windows Kernel32/SxS/etc
-             * but honestly that's not tested. It will also break them when running no ReactOS once we implement
+             * but honestly that's not tested. It will also break them when running no Windivs once we implement
              * the SxS support -- at which point, duh, this should be removed.
              *
              * But right now, any app depending on SxS is already broken anyway, so this flag only helps.
@@ -2139,7 +2140,7 @@ MmpDeleteSection(PVOID ObjectBody)
 {
     PSECTION Section = ObjectBody;
 
-    /* Check if it's an ARM3, or ReactOS section */
+    /* Check if it's an ARM3, or Windivs section */
     if (!MiIsRosSectionObject(Section))
     {
         MiDeleteARM3Section(ObjectBody);
@@ -3873,7 +3874,7 @@ NtQuerySection(
             }
             else
             {
-                DPRINT1("Unimplemented code path\n");
+                DPRINT1("Unimplemented code path!");
             }
 
             _SEH2_TRY
@@ -4008,8 +4009,6 @@ MmMapViewOfSection(IN PVOID SectionObject,
     PMMSUPPORT AddressSpace;
     NTSTATUS Status = STATUS_SUCCESS;
     BOOLEAN NotAtBase = FALSE;
-    BOOLEAN IsAttached = FALSE;
-    KAPC_STATE ApcState;
 
     if (MiIsRosSectionObject(SectionObject) == FALSE)
     {
@@ -4031,12 +4030,6 @@ MmMapViewOfSection(IN PVOID SectionObject,
     if (!Protect || Protect & ~PAGE_FLAGS_VALID_FOR_SECTION)
     {
         return STATUS_INVALID_PAGE_PROTECTION;
-    }
-
-    if (PsGetCurrentProcess() != Process)
-    {
-        KeStackAttachProcess(&Process->Pcb, &ApcState);
-        IsAttached = TRUE;
     }
 
     /* FIXME: We should keep this, but it would break code checking equality */
@@ -4105,15 +4098,15 @@ MmMapViewOfSection(IN PVOID SectionObject,
             /* Fail if the user requested a fixed base address. */
             if ((*BaseAddress) != NULL)
             {
-                Status = STATUS_CONFLICTING_ADDRESSES;
-                goto Exit;
+                MmUnlockAddressSpace(AddressSpace);
+                return STATUS_CONFLICTING_ADDRESSES;
             }
             /* Otherwise find a gap to map the image. */
             ImageBase = (ULONG_PTR)MmFindGap(AddressSpace, PAGE_ROUND_UP(ImageSize), MM_VIRTMEM_GRANULARITY, FALSE);
             if (ImageBase == 0)
             {
-                Status = STATUS_CONFLICTING_ADDRESSES;
-                goto Exit;
+                MmUnlockAddressSpace(AddressSpace);
+                return STATUS_CONFLICTING_ADDRESSES;
             }
             /* Remember that we loaded image at a different base address */
             NotAtBase = TRUE;
@@ -4144,7 +4137,8 @@ MmMapViewOfSection(IN PVOID SectionObject,
                     MmUnlockSectionSegment(&SectionSegments[i]);
                 }
 
-                goto Exit;
+                MmUnlockAddressSpace(AddressSpace);
+                return Status;
             }
         }
 
@@ -4167,22 +4161,22 @@ MmMapViewOfSection(IN PVOID SectionObject,
         if ((Protect & (PAGE_READWRITE|PAGE_EXECUTE_READWRITE)) &&
                 !(Section->InitialPageProtection & (PAGE_READWRITE|PAGE_EXECUTE_READWRITE)))
         {
-            Status = STATUS_SECTION_PROTECTION;
-            goto Exit;
+            MmUnlockAddressSpace(AddressSpace);
+            return STATUS_SECTION_PROTECTION;
         }
         /* check for read access */
         if ((Protect & (PAGE_READONLY|PAGE_WRITECOPY|PAGE_EXECUTE_READ|PAGE_EXECUTE_WRITECOPY)) &&
                 !(Section->InitialPageProtection & (PAGE_READONLY|PAGE_READWRITE|PAGE_WRITECOPY|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)))
         {
-            Status = STATUS_SECTION_PROTECTION;
-            goto Exit;
+            MmUnlockAddressSpace(AddressSpace);
+            return STATUS_SECTION_PROTECTION;
         }
         /* check for execute access */
         if ((Protect & (PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)) &&
                 !(Section->InitialPageProtection & (PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)))
         {
-            Status = STATUS_SECTION_PROTECTION;
-            goto Exit;
+            MmUnlockAddressSpace(AddressSpace);
+            return STATUS_SECTION_PROTECTION;
         }
 
         if (SectionOffset == NULL)
@@ -4196,8 +4190,8 @@ MmMapViewOfSection(IN PVOID SectionObject,
 
         if ((ViewOffset % PAGE_SIZE) != 0)
         {
-            Status = STATUS_MAPPED_ALIGNMENT;
-            goto Exit;
+            MmUnlockAddressSpace(AddressSpace);
+            return STATUS_MAPPED_ALIGNMENT;
         }
 
         if ((*ViewSize) == 0)
@@ -4226,23 +4220,17 @@ MmMapViewOfSection(IN PVOID SectionObject,
         MmUnlockSectionSegment(Segment);
         if (!NT_SUCCESS(Status))
         {
-            goto Exit;
+            MmUnlockAddressSpace(AddressSpace);
+            return Status;
         }
     }
+
+    MmUnlockAddressSpace(AddressSpace);
 
     if (NotAtBase)
         Status = STATUS_IMAGE_NOT_AT_BASE;
     else
         Status = STATUS_SUCCESS;
-
-Exit:
-
-    MmUnlockAddressSpace(AddressSpace);
-
-    if (IsAttached)
-    {
-        KeUnstackDetachProcess(&ApcState);
-    }
 
     return Status;
 }
