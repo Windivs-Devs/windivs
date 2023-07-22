@@ -1,18 +1,18 @@
 [Unattend]
-Signature = "$Windivs$"
+Signature = "$ReactOS$"
 
 ; Set UnattendSetupEnabled to yes in order to get unattended setup working
 ; yes - unattend setup enabled
 ; no - unattend setup disabled
 UnattendSetupEnabled = yes
 
-; Install to \Device\Harddisk0\Partition1\Windivs
+; Install to \Device\Harddisk0\Partition1\ReactOS
 DestinationDiskNumber = 0
 DestinationPartitionNumber = 1
-InstallationDirectory=Windivs
+InstallationDirectory=ReactOS
 
 ; MBRInstallType=0  skips MBR installation
-; MBRInstallType=1  install MBR on floppy
+; MBRInstallType=1  install MBR on floppy 
 ; MBRInstallType=2  install MBR on hdd
 MBRInstallType=2
 

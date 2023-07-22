@@ -1,7 +1,7 @@
 /*
- * PROJECT:     Windivs API Test GUI
+ * PROJECT:     ReactOS API Test GUI
  * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:
+ * FILE:        
  * PURPOSE:     browse dialog implementation
  * COPYRIGHT:   Copyright 2008 Ged Murphy <gedmurphy@reactos.org>
  *

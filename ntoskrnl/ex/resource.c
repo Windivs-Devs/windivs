@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/ex/resource.c
  * PURPOSE:         Executive Resource Implementation
@@ -1440,7 +1440,7 @@ ExConvertExclusiveToSharedLite(IN PERESOURCE Resource)
  * @implemented NT4
  *
  *     The ExConvertExclusiveToSharedLite routine deletes a given resource
- *     from the systemï¿½s resource list.
+ *     from the system’s resource list.
  *
  * @param Resource
  *        Pointer to the resource to delete.

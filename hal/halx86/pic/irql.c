@@ -1,8 +1,8 @@
 /*
- * PROJECT:         Windivs Hardware Abstraction Layer
+ * PROJECT:         ReactOS Hardware Abstraction Layer
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * PURPOSE:         IRQL mapping
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

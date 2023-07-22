@@ -1,5 +1,5 @@
 /*
-* Windivs Explorer
+* ReactOS Explorer
 *
 * Copyright 2014 - David Quintana
 *

@@ -1,5 +1,5 @@
 /*
-    Windivs Sound System
+    ReactOS Sound System
     MIDI constants
 
     Author:

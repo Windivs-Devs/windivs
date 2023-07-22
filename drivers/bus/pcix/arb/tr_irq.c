@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs PCI Bus Driver
+ * PROJECT:         ReactOS PCI Bus Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            drivers/bus/pci/intrface/tr_irq.c
  * PURPOSE:         IRQ Translator Interface
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

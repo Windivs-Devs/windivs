@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs PCI Bus Driver
+ * PROJECT:         ReactOS PCI Bus Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            drivers/bus/pci/pci/config.c
  * PURPOSE:         PCI Configuration Space Routines
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

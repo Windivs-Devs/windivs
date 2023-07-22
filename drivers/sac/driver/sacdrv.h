@@ -1,9 +1,9 @@
 /*
- * PROJECT:     Windivs Drivers
+ * PROJECT:     ReactOS Drivers
  * LICENSE:     BSD - See COPYING.ARM in the top level directory
  * FILE:        drivers/sac/driver/sacdrv.h
  * PURPOSE:     Driver for the Server Administration Console (SAC) for EMS
- * PROGRAMMERS: Windivs Portable Systems Group
+ * PROGRAMMERS: ReactOS Portable Systems Group
  */
 
 #ifndef _SACDRV_H_

@@ -193,7 +193,7 @@ Return Value:
             break;
 #endif
 
-        /* Windivs Change: GCC "enumeration value not handled in switch" */
+        /* ReactOS Change: GCC "enumeration value not handled in switch" */
         default: break;
         }
 

@@ -693,13 +693,13 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_REM_NOT_LIST
 Language=English
-Windivs cannot find the network path. Verify that the network path is correct and the destination computer is not busy or turned off. If Windivs still cannot find the network path, contact your network administrator.
+ReactOS cannot find the network path. Verify that the network path is correct and the destination computer is not busy or turned off. If ReactOS still cannot find the network path, contact your network administrator.
 .
 Language=Russian
 Невозможно найти сетевой путь. Убедитесь, что сетевой путь указан верно, а конечный компьютер включен и не занят. Если система вновь не сможет найти путь, обратитесь к сетевому администратору.
 .
 Language=Polish
-System Windivs nie może odnaleźć ścieżki sieciowej. Sprawdź, czy ścieżka sieciowa jest poprawna i czy komputer docelowy nie jest zajęty lub wyłączony. Jeśli system Windivs nadal nie będzie mógł odnaleźć ścieżki sieciowej, skontaktuj się z administratorem sieci.
+System ReactOS nie może odnaleźć ścieżki sieciowej. Sprawdź, czy ścieżka sieciowa jest poprawna i czy komputer docelowy nie jest zajęty lub wyłączony. Jeśli system ReactOS nadal nie będzie mógł odnaleźć ścieżki sieciowej, skontaktuj się z administratorem sieci.
 .
 Language=Romanian
 Calea în rețea nu a fost găsită. Asigurați-vă că este corectă și că destinația în rețea este disponibilă fizic. Dacă veți întâmpina această problemă în continuare, contactați administratorul de rețea.
@@ -4382,16 +4382,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_LOST_WRITEBEHIND_DATA
 Language=English
-Windivs was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
+ReactOS was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
 .
 Language=Russian
-Windivs was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
+ReactOS was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
 .
 Language=Polish
-System Windivs nie mógł zapisać wszystkich danych dla pliku %hs. Dane zostały utracone. Powodem tego błędu mogła być awaria sprzętu komputerowego lub połączenia sieciowego. Spróbuj zapisać ten plik w innym miejscu.
+System ReactOS nie mógł zapisać wszystkich danych dla pliku %hs. Dane zostały utracone. Powodem tego błędu mogła być awaria sprzętu komputerowego lub połączenia sieciowego. Spróbuj zapisać ten plik w innym miejscu.
 .
 Language=Romanian
-Windivs was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
+ReactOS was unable to save all the data for the file %hs. The data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.
 .
 
 MessageId=597
@@ -4841,16 +4841,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_ILLEGAL_DLL_RELOCATION
 Language=English
-The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for Windivs system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
+The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for ReactOS system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
 .
 Language=Russian
-The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for Windivs system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
+The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for ReactOS system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
 .
 Language=Polish
-Biblioteka systemowa DLL %hs została zrelokowana w pamięci. Aplikacja nie będzie działać prawidłowo. Powodem relokacji było to, że biblioteka DLL %hs zajmowała zakres adresów zarezerwowany dla Windivs systemowej biblioteki DLL. Należy skontaktować się z dostawcą w sprawie nowej biblioteki DLL.
+Biblioteka systemowa DLL %hs została zrelokowana w pamięci. Aplikacja nie będzie działać prawidłowo. Powodem relokacji było to, że biblioteka DLL %hs zajmowała zakres adresów zarezerwowany dla ReactOS systemowej biblioteki DLL. Należy skontaktować się z dostawcą w sprawie nowej biblioteki DLL.
 .
 Language=Romanian
-The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for Windivs system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
+The system DLL %hs was relocated in memory. The application will not run properly. The relocation occurred because the DLL %hs occupied an address range reserved for ReactOS system DLLs. The vendor supplying the DLL should be contacted for a new DLL.
 .
 
 MessageId=624
@@ -5045,16 +5045,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_COMMITMENT_MINIMUM
 Language=English
-Your system is low on virtual memory. Windivs is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
+Your system is low on virtual memory. ReactOS is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
 .
 Language=Russian
-Your system is low on virtual memory. Windivs is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
+Your system is low on virtual memory. ReactOS is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
 .
 Language=Polish
-System ma za mało pamięci wirtualnej. System Windivs zwiększa rozmiar pliku stronicowania pamięci wirtualnej. W czasie trwania tego procesu, może wystąpić odmowa na żądania pamięci niektórych aplikacji. Więcej informacji możesz znaleźć w Pomocy.
+System ma za mało pamięci wirtualnej. System ReactOS zwiększa rozmiar pliku stronicowania pamięci wirtualnej. W czasie trwania tego procesu, może wystąpić odmowa na żądania pamięci niektórych aplikacji. Więcej informacji możesz znaleźć w Pomocy.
 .
 Language=Romanian
-Your system is low on virtual memory. Windivs is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
+Your system is low on virtual memory. ReactOS is increasing the size of your virtual memory paging file. During this process, memory requests for some applications may be denied. For more information, see Help.
 .
 
 MessageId=636
@@ -5164,16 +5164,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_DS_VERSION_CHECK_FAILURE
 Language=English
-This version of Windivs is not compatible with the behavior version of directory forest, domain or domain controller.
+This version of ReactOS is not compatible with the behavior version of directory forest, domain or domain controller.
 .
 Language=Russian
-This version of Windivs is not compatible with the behavior version of directory forest, domain or domain controller.
+This version of ReactOS is not compatible with the behavior version of directory forest, domain or domain controller.
 .
 Language=Polish
-Ta wersja systemu Windivs jest niezgodna z wersją zachowania lasu katalogów, domeny lub kontrolera domeny.
+Ta wersja systemu ReactOS jest niezgodna z wersją zachowania lasu katalogów, domeny lub kontrolera domeny.
 .
 Language=Romanian
-This version of Windivs is not compatible with the behavior version of directory forest, domain or domain controller.
+This version of ReactOS is not compatible with the behavior version of directory forest, domain or domain controller.
 .
 
 MessageId=644
@@ -6371,16 +6371,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_FIRMWARE_UPDATED
 Language=English
-Windivs has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
+ReactOS has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
 .
 Language=Russian
-Windivs has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
+ReactOS has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
 .
 Language=Polish
-System Windivs wykrył, że oprogramowanie układowe systemu (BIOS) zostało zaktualizowane [poprzednia data oprogramowania układowego = %2, bieżąca data oprogramowania układowego %3].
+System ReactOS wykrył, że oprogramowanie układowe systemu (BIOS) zostało zaktualizowane [poprzednia data oprogramowania układowego = %2, bieżąca data oprogramowania układowego %3].
 .
 Language=Romanian
-Windivs has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
+ReactOS has detected that the system firmware (BIOS) was updated [previous firmware date = %2, current firmware date %3].
 .
 
 MessageId=729
@@ -8734,16 +8734,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_OLD_WIN_VERSION
 Language=English
-The specified program requires a newer version of Windivs.
+The specified program requires a newer version of ReactOS.
 .
 Language=Russian
-The specified program requires a newer version of Windivs.
+The specified program requires a newer version of ReactOS.
 .
 Language=Polish
-Określony program wymaga nowszej wersji systemu Windivs.
+Określony program wymaga nowszej wersji systemu ReactOS.
 .
 Language=Romanian
-The specified program requires a newer version of Windivs.
+The specified program requires a newer version of ReactOS.
 .
 
 MessageId=1151
@@ -8785,16 +8785,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_RMODE_APP
 Language=English
-The specified program was written for an earlier version of Windivs.
+The specified program was written for an earlier version of ReactOS.
 .
 Language=Russian
-The specified program was written for an earlier version of Windivs.
+The specified program was written for an earlier version of ReactOS.
 .
 Language=Polish
-Określony program został napisany dla starszej wersji systemu Windivs.
+Określony program został napisany dla starszej wersji systemu ReactOS.
 .
 Language=Romanian
-The specified program was written for an earlier version of Windivs.
+The specified program was written for an earlier version of ReactOS.
 .
 
 MessageId=1154
@@ -9788,16 +9788,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_NETWORK_UNREACHABLE
 Language=English
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 Language=Russian
-Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windivs.
+Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе ReactOS.
 .
 Language=Polish
-Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu Windivs.
+Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu ReactOS.
 .
 Language=Romanian
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 
 MessageId=1232
@@ -9805,16 +9805,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_HOST_UNREACHABLE
 Language=English
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 Language=Russian
-Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windivs.
+Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе ReactOS.
 .
 Language=Polish
-Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu Windivs.
+Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu ReactOS.
 .
 Language=Romanian
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 
 MessageId=1233
@@ -9822,16 +9822,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_PROTOCOL_UNREACHABLE
 Language=English
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 Language=Russian
-Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windivs.
+Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе ReactOS.
 .
 Language=Polish
-Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu Windivs.
+Lokalizacja sieciowa jest nieosiągalna. Informacje na temat rozwiązywania problemów z siecią można znaleźć w Pomocy systemu ReactOS.
 .
 Language=Romanian
-The network location cannot be reached. For information about network troubleshooting, see Windivs Help.
+The network location cannot be reached. For information about network troubleshooting, see ReactOS Help.
 .
 
 MessageId=1234
@@ -10213,16 +10213,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_HOST_DOWN
 Language=English
-The remote system is not available. For information about network troubleshooting, see Windivs Help.
+The remote system is not available. For information about network troubleshooting, see ReactOS Help.
 .
 Language=Russian
-Удаленная система недоступна. За информацией о разрешении проблем в сети, обратитесь к справочной системе Windivs.
+Удаленная система недоступна. За информацией о разрешении проблем в сети, обратитесь к справочной системе ReactOS.
 .
 Language=Polish
-System zdalny jest niedostępny. Aby uzyskać informacje dotyczące rozwiązywania problemów z siecią, zobacz Pomoc systemu Windivs.
+System zdalny jest niedostępny. Aby uzyskać informacje dotyczące rozwiązywania problemów z siecią, zobacz Pomoc systemu ReactOS.
 .
 Language=Romanian
-The remote system is not available. For information about network troubleshooting, see Windivs Help.
+The remote system is not available. For information about network troubleshooting, see ReactOS Help.
 .
 
 MessageId=1257
@@ -10281,7 +10281,7 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_ACCESS_DISABLED_BY_POLICY
 Language=English
-Windivs cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system administrator.
+ReactOS cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system administrator.
 .
 Language=Russian
 Эта программа заблокирована групповой политикой. За дополнительными сведениями обращайтесь к системному администратору.
@@ -10290,7 +10290,7 @@ Language=Polish
 Ten program jest blokowany przez zasady grupy. Aby uzyskać więcej informacji, otwórz Podgląd zdarzeń lub skontaktuj się z administratorem systemu.
 .
 Language=Romanian
-Windivs cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system administrator.
+ReactOS cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system administrator.
 .
 
 MessageId=1261
@@ -10553,16 +10553,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_ACCESS_DISABLED_WEBBLADE
 Language=English
-Windivs cannot open this program since it has been disabled.
+ReactOS cannot open this program since it has been disabled.
 .
 Language=Russian
-Windivs не удается запустить эту программу, так как она отключена.
+ReactOS не удается запустить эту программу, так как она отключена.
 .
 Language=Polish
-System Windivs nie może otworzyć tego programu, ponieważ został on wyłączony.
+System ReactOS nie może otworzyć tego programu, ponieważ został on wyłączony.
 .
 Language=Romanian
-Windivs cannot open this program since it has been disabled.
+ReactOS cannot open this program since it has been disabled.
 .
 
 MessageId=1278
@@ -10570,16 +10570,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_ACCESS_DISABLED_WEBBLADE_TAMPER
 Language=English
-Windivs cannot open this program because the license enforcement system has been tampered with or become corrupted.
+ReactOS cannot open this program because the license enforcement system has been tampered with or become corrupted.
 .
 Language=Russian
-Windivs не удается открыть эту программу, так как система учета лицензий изменена или повреждена.
+ReactOS не удается открыть эту программу, так как система учета лицензий изменена или повреждена.
 .
 Language=Polish
-System Windivs nie może otworzyć tego programu, ponieważ system wymuszania licencji został zmieniony lub uszkodzony.
+System ReactOS nie może otworzyć tego programu, ponieważ system wymuszania licencji został zmieniony lub uszkodzony.
 .
 Language=Romanian
-Windivs cannot open this program because the license enforcement system has been tampered with or become corrupted.
+ReactOS cannot open this program because the license enforcement system has been tampered with or become corrupted.
 .
 
 MessageId=1279
@@ -13732,16 +13732,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_INSTALL_SERVICE_FAILURE
 Language=English
-The Windivs Installer service could not be accessed. This can occur if you are running Windivs in safe mode, or if the Windivs Installer is not correctly installed. Contact your support personnel for assistance.
+The ReactOS Installer service could not be accessed. This can occur if you are running ReactOS in safe mode, or if the ReactOS Installer is not correctly installed. Contact your support personnel for assistance.
 .
 Language=Russian
-The Windivs Installer service could not be accessed. This can occur if you are running Windivs in safe mode, or if the Windivs Installer is not correctly installed. Contact your support personnel for assistance.
+The ReactOS Installer service could not be accessed. This can occur if you are running ReactOS in safe mode, or if the ReactOS Installer is not correctly installed. Contact your support personnel for assistance.
 .
 Language=Polish
-Nie można uzyskać dostępu do usługi Instalator Windivs. Może mieć to miejsce, jeśli system Windivs jest uruchomiony w trybie awaryjnym lub Instalator Windivs jest niepoprawnie zainstalowany. Skontaktuj się z pomocą techniczną, aby uzyskać pomoc.
+Nie można uzyskać dostępu do usługi Instalator ReactOS. Może mieć to miejsce, jeśli system ReactOS jest uruchomiony w trybie awaryjnym lub Instalator ReactOS jest niepoprawnie zainstalowany. Skontaktuj się z pomocą techniczną, aby uzyskać pomoc.
 .
 Language=Romanian
-The Windivs Installer service could not be accessed. This can occur if you are running Windivs in safe mode, or if the Windivs Installer is not correctly installed. Contact your support personnel for assistance.
+The ReactOS Installer service could not be accessed. This can occur if you are running ReactOS in safe mode, or if the ReactOS Installer is not correctly installed. Contact your support personnel for assistance.
 .
 
 MessageId=1602
@@ -13936,16 +13936,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_INSTALL_PACKAGE_VERSION
 Language=English
-This installation package cannot be installed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This installation package cannot be installed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 Language=Russian
-This installation package cannot be installed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This installation package cannot be installed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 Language=Polish
-Usługa Instalator Windivs nie może zainstalować tego pakietu instalacyjnego. Musisz zainstalować dodatek Windivs Service Pack, zawierający nowszą wersję usługi Instalator Windivs.
+Usługa Instalator ReactOS nie może zainstalować tego pakietu instalacyjnego. Musisz zainstalować dodatek ReactOS Service Pack, zawierający nowszą wersję usługi Instalator ReactOS.
 .
 Language=Romanian
-This installation package cannot be installed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This installation package cannot be installed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 
 MessageId=1614
@@ -14072,16 +14072,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_INSTALL_UI_FAILURE
 Language=English
-There was an error starting the Windivs Installer service user interface. Contact your support personnel.
+There was an error starting the ReactOS Installer service user interface. Contact your support personnel.
 .
 Language=Russian
-There was an error starting the Windivs Installer service user interface. Contact your support personnel.
+There was an error starting the ReactOS Installer service user interface. Contact your support personnel.
 .
 Language=Polish
-Podczas uruchamiania interfejsu użytkownika usługi Instalator Windivs wystąpił błąd. Skontaktuj się z personelem technicznym.
+Podczas uruchamiania interfejsu użytkownika usługi Instalator ReactOS wystąpił błąd. Skontaktuj się z personelem technicznym.
 .
 Language=Romanian
-There was an error starting the Windivs Installer service user interface. Contact your support personnel.
+There was an error starting the ReactOS Installer service user interface. Contact your support personnel.
 .
 
 MessageId=1622
@@ -14242,16 +14242,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_CREATE_FAILED
 Language=English
-The Windivs Installer service failed to start. Contact your support personnel.
+The ReactOS Installer service failed to start. Contact your support personnel.
 .
 Language=Russian
-The Windivs Installer service failed to start. Contact your support personnel.
+The ReactOS Installer service failed to start. Contact your support personnel.
 .
 Language=Polish
-Nie można uruchomić usługi Instalator Windivs. Skontaktuj się z działem Pomocy technicznej.
+Nie można uruchomić usługi Instalator ReactOS. Skontaktuj się z działem Pomocy technicznej.
 .
 Language=Romanian
-The Windivs Installer service failed to start. Contact your support personnel.
+The ReactOS Installer service failed to start. Contact your support personnel.
 .
 
 MessageId=1632
@@ -14344,16 +14344,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_PATCH_PACKAGE_UNSUPPORTED
 Language=English
-This patch package cannot be processed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This patch package cannot be processed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 Language=Russian
-This patch package cannot be processed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This patch package cannot be processed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 Language=Polish
-Usługa Instalator Windivs nie może przetworzyć tego pakietu aktualizacji. Musisz zainstalować dodatek Windivs Service Pack, zawierający nowszą wersję usługi Instalator Windivs.
+Usługa Instalator ReactOS nie może przetworzyć tego pakietu aktualizacji. Musisz zainstalować dodatek ReactOS Service Pack, zawierający nowszą wersję usługi Instalator ReactOS.
 .
 Language=Romanian
-This patch package cannot be processed by the Windivs Installer service. You must install a Windivs service pack that contains a newer version of the Windivs Installer service.
+This patch package cannot be processed by the ReactOS Installer service. You must install a ReactOS service pack that contains a newer version of the ReactOS Installer service.
 .
 
 MessageId=1638
@@ -14429,16 +14429,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_PATCH_TARGET_NOT_FOUND
 Language=English
-The upgrade patch cannot be installed by the Windivs Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
+The upgrade patch cannot be installed by the ReactOS Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 .
 Language=Russian
-The upgrade patch cannot be installed by the Windivs Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
+The upgrade patch cannot be installed by the ReactOS Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 .
 Language=Polish
-Uaktualnienia nie można zainstalować przez usługę Instalator Windivs, ponieważ nie ma programu do uaktualnienia albo uaktualnienie jest przeznaczone do innej wersji tego programu. Sprawdź, czy program, który ma być uaktualniony, znajduje się na dysku i czy masz prawidłowe uaktualnienie.
+Uaktualnienia nie można zainstalować przez usługę Instalator ReactOS, ponieważ nie ma programu do uaktualnienia albo uaktualnienie jest przeznaczone do innej wersji tego programu. Sprawdź, czy program, który ma być uaktualniony, znajduje się na dysku i czy masz prawidłowe uaktualnienie.
 .
 Language=Romanian
-The upgrade patch cannot be installed by the Windivs Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
+The upgrade patch cannot be installed by the ReactOS Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 .
 
 MessageId=1643
@@ -14480,16 +14480,16 @@ Severity=Success
 Facility=System
 SymbolicName=ERROR_INSTALL_REMOTE_PROHIBITED
 Language=English
-The Windivs Installer does not permit installation from a Remote Desktop Connection.
+The ReactOS Installer does not permit installation from a Remote Desktop Connection.
 .
 Language=Russian
-The Windivs Installer does not permit installation from a Remote Desktop Connection.
+The ReactOS Installer does not permit installation from a Remote Desktop Connection.
 .
 Language=Polish
-Instalator Windivs nie zezwala na instalację przy użyciu podłączania pulpitu zdalnego.
+Instalator ReactOS nie zezwala na instalację przy użyciu podłączania pulpitu zdalnego.
 .
 Language=Romanian
-The Windivs Installer does not permit installation from a Remote Desktop Connection.
+The ReactOS Installer does not permit installation from a Remote Desktop Connection.
 .
 
 MessageId=1700

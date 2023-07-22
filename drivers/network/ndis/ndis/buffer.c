@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs NDIS library
+ * PROJECT:     ReactOS NDIS library
  * FILE:        ndis/buffer.c
  * PURPOSE:     Buffer management routines
  * PROGRAMMERS: Casper S. Hornstrup (chorns@users.sourceforge.net)

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Native DirectDraw implementation
  * FILE:             win32ss/reactx/ntddraw/ddraw.c
  * PROGRAMER:        Magnus olsen (magnus@greatlord.com)
@@ -49,7 +49,7 @@ DxDdStartupDxGraphics(  ULONG ulc1,
      */
 
 
-    /* FIXME: Windivs does not loading the dxapi.sys or import functions from it yet */
+    /* FIXME: ReactOS does not loading the dxapi.sys or import functions from it yet */
     // DxApiGetVersion()
 
     /* Loading the kernel interface of DirectX for win32k */

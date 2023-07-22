@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs system libraries
+ * PROJECT:         ReactOS system libraries
  * FILE:            lib/rtl/mem.c
  * PURPOSE:         Memory functions
  * PROGRAMMER:      David Welch (welch@mcmail.com)

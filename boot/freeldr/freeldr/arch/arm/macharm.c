@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Boot Loader
+ * PROJECT:         ReactOS Boot Loader
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/freeldr/freeldr/arch/arm/macharm.c
  * PURPOSE:         Provides abstraction between the ARM Boot Loader and FreeLDR
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -88,7 +88,7 @@ ArmInit(IN PARM_BOARD_CONFIGURATION_BLOCK BootContext)
 }
 
 VOID
-ArmPrepareForWindivs(VOID)
+ArmPrepareForReactOS(VOID)
 {
     return;
 }
@@ -126,7 +126,7 @@ ArmHwDetect(VOID)
     RamDiskInitialize(TRUE, NULL, NULL);
 
     /* Fill out the ARC disk block */
-    AddWindivsArcDiskInfo("ramdisk(0)", 0xBADAB00F, 0xDEADBABE, TRUE);
+    AddReactOSArcDiskInfo("ramdisk(0)", 0xBADAB00F, 0xDEADBABE, TRUE);
     ASSERT(reactos_disk_count == 1);
 
     /* Return the root node */
@@ -226,7 +226,7 @@ MachInit(IN PCCH CommandLine)
     }
 
     /* Setup generic ARM routines for all boards */
-    MachVtbl.PrepareForWindivs = ArmPrepareForWindivs;
+    MachVtbl.PrepareForReactOS = ArmPrepareForReactOS;
     MachVtbl.GetMemoryMap = ArmMemGetMemoryMap;
     MachVtbl.InitializeBootDevices = ArmInitializeBootDevices;
     MachVtbl.HwDetect = ArmHwDetect;

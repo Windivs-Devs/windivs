@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs File System Recognizer
+ * PROJECT:          ReactOS File System Recognizer
  * FILE:             drivers/filesystems/fs_rec/btrfs.h
  * PURPOSE:          BTRFS Header File
  * PROGRAMMER:       Peter Hater

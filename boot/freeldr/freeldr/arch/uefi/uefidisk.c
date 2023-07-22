@@ -338,7 +338,7 @@ GetHarddiskInformation(UCHAR DriveNumber)
 
     /* Fill out the ARC disk block */
     sprintf(ArcName, "multi(0)disk(0)rdisk(%u)", DriveNumber - FIRST_BIOS_DISK);
-    AddWindivsArcDiskInfo(ArcName, Signature, Checksum, ValidPartitionTable);
+    AddReactOSArcDiskInfo(ArcName, Signature, Checksum, ValidPartitionTable);
 
     sprintf(ArcName, "multi(0)disk(0)rdisk(%u)partition(0)", DriveNumber - FIRST_BIOS_DISK);
     FsRegisterDevice(ArcName, &UefiDiskVtbl);
@@ -412,7 +412,7 @@ UefiSetupBlockDevices(VOID)
             OffsetToBoot = i; /* Drive offset in the handles list */
         }
 
-        if (EFI_ERROR(Status) ||
+        if (EFI_ERROR(Status) || 
             bio == NULL ||
             bio->Media->BlockSize == 0 ||
             bio->Media->BlockSize > 2048)
@@ -536,7 +536,7 @@ UefiInitializeBootDevices(VOID)
         TRACE("Checksum: %x\n", Checksum);
 
         /* Fill out the ARC disk block */
-        AddWindivsArcDiskInfo(FrLdrBootPath, Signature, Checksum, TRUE);
+        AddReactOSArcDiskInfo(FrLdrBootPath, Signature, Checksum, TRUE);
 
         FsRegisterDevice(FrLdrBootPath, &UefiDiskVtbl);
         PcBiosDiskCount++; // This is not accounted for in the number of pre-enumerated BIOS drives!

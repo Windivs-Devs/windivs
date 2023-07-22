@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Kernel Streaming
+ * PROJECT:         ReactOS Kernel Streaming
  * FILE:            drivers/ksfilter/ks/filterfactory.c
  * PURPOSE:         KS IKsFilterFactory interface functions
  * PROGRAMMER:      Johannes Anderwald

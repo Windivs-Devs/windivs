@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Win32k subsystem
+ * PROJECT:          ReactOS Win32k subsystem
  * PURPOSE:          Layered window support
  * FILE:             win32ss/user/ntuser/layered.c
  * PROGRAMER:
@@ -11,7 +11,7 @@ DBG_DEFAULT_CHANNEL(UserMisc);
 
 
 typedef struct _LRD_PROP
-{
+{ 
    COLORREF Key;
    BYTE     Alpha;
    BYTE     is_Layered;
@@ -89,7 +89,7 @@ IntSetLayeredWindowAttributes(PWND pWnd,
       pLrdProp->Flags = dwFlags;
 
       pLrdProp->is_Layered = 1;
-
+  
       if (!was_Layered)
          co_UserRedrawWindow(pWnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE | RDW_FRAME );
    }
@@ -351,7 +351,7 @@ NtUserUpdateLayeredWindow(
    RECT *prcDirty)
 {
    UPDATELAYEREDWINDOWINFO info;
-   POINT Dst, Src;
+   POINT Dst, Src; 
    SIZE Size;
    RECT Dirty;
    BLENDFUNCTION blend = { AC_SRC_OVER, 0, 255, 0 };

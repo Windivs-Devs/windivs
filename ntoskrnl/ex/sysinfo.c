@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            ntoskrnl/ex/sysinfo.c
  * PURPOSE:         System information functions
  *
@@ -868,7 +868,7 @@ QSI_DEF(SystemPathInformation)
      */
 #if DBG
     DPRINT1("EX: SystemPathInformation now available via SharedUserData\n");
-    // DbgBreakPoint(); // Not needed in Windivs.
+    // DbgBreakPoint(); // Not needed in ReactOS.
 #endif
     return STATUS_NOT_IMPLEMENTED;
 }

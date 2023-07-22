@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 1998-2005 Windivs Team (and the authors from the programmers section)
+ * Copyright (C) 1998-2005 ReactOS Team (and the authors from the programmers section)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  *
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            ntoskrnl/mm/section.c
  * PURPOSE:         Implements section objects
  *
@@ -562,7 +562,7 @@ l_ReadHeaderFromFile:
              * magic to any binary.
              *
              * This will break applications that depend on SxS when running with real Windows Kernel32/SxS/etc
-             * but honestly that's not tested. It will also break them when running no Windivs once we implement
+             * but honestly that's not tested. It will also break them when running no ReactOS once we implement
              * the SxS support -- at which point, duh, this should be removed.
              *
              * But right now, any app depending on SxS is already broken anyway, so this flag only helps.
@@ -2117,7 +2117,7 @@ MmpDeleteSection(PVOID ObjectBody)
 {
     PSECTION Section = ObjectBody;
 
-    /* Check if it's an ARM3, or Windivs section */
+    /* Check if it's an ARM3, or ReactOS section */
     if (!MiIsRosSectionObject(Section))
     {
         MiDeleteARM3Section(ObjectBody);
@@ -3651,7 +3651,7 @@ MiRosUnmapViewOfSection(IN PEPROCESS Process,
         SIZE_T ViewSize;
         LARGE_INTEGER ViewOffset;
         ViewOffset.QuadPart = MemoryArea->SectionData.ViewOffset;
-
+        
         InterlockedIncrement64(Segment->ReferenceCount);
 
         Status = MmUnmapViewOfSegment(AddressSpace, BaseAddress);

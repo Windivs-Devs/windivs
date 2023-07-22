@@ -1,7 +1,7 @@
 /*
- * PROJECT:         Windivs Multimedia Control Panel
+ * PROJECT:         ReactOS Multimedia Control Panel
  * FILE:            dll/cpl/mmsys/sounds.c
- * PURPOSE:         Windivs Multimedia Control Panel
+ * PURPOSE:         ReactOS Multimedia Control Panel
  * PROGRAMMER:      Thomas Weidenmueller <w3seek@reactos.com>
  *                  Johannes Anderwald <janderwald@reactos.com>
  *                  Dmitry Chapyshev <dmitry@reactos.org>

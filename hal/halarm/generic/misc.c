@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Hardware Abstraction Layer (HAL)
+ * PROJECT:         ReactOS Hardware Abstraction Layer (HAL)
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            hal/halarm/generic/misc.c
  * PURPOSE:         Misc functions to move
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

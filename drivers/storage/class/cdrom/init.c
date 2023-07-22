@@ -218,7 +218,7 @@ Return Value:
 
 
 NTSTATUS
-NTAPI /* Windivs Change: GCC Does not support STDCALL by default */
+NTAPI /* ReactOS Change: GCC Does not support STDCALL by default */
 DeviceEvtSelfManagedIoInit(
     _In_ WDFDEVICE      Device
     )

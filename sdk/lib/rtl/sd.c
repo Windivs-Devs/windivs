@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs system libraries
+ * PROJECT:           ReactOS system libraries
  * PURPOSE:           Security descriptor functions
  * FILE:              lib/rtl/sd.c
  * PROGRAMER:         David Welch <welch@cwcom.net>

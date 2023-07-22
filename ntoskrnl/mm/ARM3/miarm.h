@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/miarm.h
  * PURPOSE:         ARM Memory Manager Header
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 #pragma once
@@ -1694,7 +1694,7 @@ MiReferenceProbedPageAndBumpLockCount(IN PMMPFN Pfn1)
     /* Does ARM3 own the page? */
     if (MI_IS_ROS_PFN(Pfn1))
     {
-        /* Windivs Mm doesn't track share count */
+        /* ReactOS Mm doesn't track share count */
         ASSERT(Pfn1->u3.e1.PageLocation == ActiveAndValid);
     }
     else

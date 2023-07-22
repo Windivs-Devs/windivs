@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/ke/procobj.c
  * PURPOSE:         Kernel Process Management and System Call Tables
@@ -105,7 +105,7 @@ KiAttachProcess(IN PKTHREAD Thread,
     }
     else
     {
-        DPRINT1("Errr. Windivs doesn't support paging out processes yet...\n");
+        DPRINT1("Errr. ReactOS doesn't support paging out processes yet...\n");
         ASSERT(FALSE);
     }
 }

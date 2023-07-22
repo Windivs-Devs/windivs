@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs BDA Proxy
+ * PROJECT:         ReactOS BDA Proxy
  * FILE:            dll/directx/bdaplgin/bdaplgin.cpp
  * PURPOSE:         ClassFactory interface
  *

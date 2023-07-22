@@ -35,9 +35,9 @@ const CHAR LinuxCommandLinePrompt[] = "Enter the Linux kernel command line.\n\nE
 const CHAR BootDrivePrompt[] = "Enter the boot drive.\n\nExamples:\nfd0 - first floppy drive\nhd0 - first hard drive\nhd1 - second hard drive\ncd0 - first CD-ROM drive.\n\nBIOS drive numbers may also be used:\n0 - first floppy drive\n0x80 - first hard drive\n0x81 - second hard drive";
 const CHAR BootPartitionPrompt[] = "Enter the boot partition.\n\nEnter 0 for the active (bootable) partition.";
 const CHAR ARCPathPrompt[] = "Enter the boot ARC path.\n\nExamples:\nmulti(0)disk(0)rdisk(0)partition(1)\nmulti(0)disk(0)fdisk(0)";
-const CHAR WindivsSystemPathPrompt[] = "Enter the path to your Windivs system directory.\n\nExamples:\n\\Windivs\n\\Win";
-const CHAR WindivsOptionsPrompt[] = "Enter the load options you want passed to the kernel.\n\nExamples:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200\n/FASTDETECT /SOS /NOGUIBOOT\n/BASEVIDEO /MAXMEM=64\n/KERNEL=NTKRNLMP.EXE /HAL=HALMPS.DLL";
-const CHAR WindivsSetupOptionsPrompt[] = "Enter additional load options you want passed to the Windivs Setup.\nThese options will supplement those obtained from the TXTSETUP.SIF\nfile, unless you also specify the /SIFOPTIONSOVERRIDE option switch.\n\nExample:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /NOGUIBOOT";
+const CHAR ReactOSSystemPathPrompt[] = "Enter the path to your Windivs system directory.\n\nExamples:\n\\Windivs\n\\Win";
+const CHAR ReactOSOptionsPrompt[] = "Enter the load options you want passed to the kernel.\n\nExamples:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200\n/FASTDETECT /SOS /NOGUIBOOT\n/BASEVIDEO /MAXMEM=64\n/KERNEL=NTKRNLMP.EXE /HAL=HALMPS.DLL";
+const CHAR ReactOSSetupOptionsPrompt[] = "Enter additional load options you want passed to the ReactOS Setup.\nThese options will supplement those obtained from the TXTSETUP.SIF\nfile, unless you also specify the /SIFOPTIONSOVERRIDE option switch.\n\nExample:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /NOGUIBOOT";
 const CHAR CustomBootPrompt[] = "Press ENTER to boot your custom boot setup.";
 
 /* FUNCTIONS ******************************************************************/
@@ -89,18 +89,18 @@ VOID OptionMenuCustomBoot(VOID)
         case 3: // Linux
             EditCustomBootLinux(&OperatingSystem);
             break;
-        case 4: // Windivs
-            EditCustomBootWindivs(&OperatingSystem, FALSE);
+        case 4: // ReactOS
+            EditCustomBootReactOS(&OperatingSystem, FALSE);
             break;
-        case 5: // Windivs Setup
-            EditCustomBootWindivs(&OperatingSystem, TRUE);
+        case 5: // ReactOS Setup
+            EditCustomBootReactOS(&OperatingSystem, TRUE);
             break;
 #else
-        case 0: // Windivs
-            EditCustomBootWindivs(&OperatingSystem, FALSE);
+        case 0: // ReactOS
+            EditCustomBootReactOS(&OperatingSystem, FALSE);
             break;
-        case 1: // Windivs Setup
-            EditCustomBootWindivs(&OperatingSystem, TRUE);
+        case 1: // ReactOS Setup
+            EditCustomBootReactOS(&OperatingSystem, TRUE);
             break;
 #endif /* _M_IX86 || _M_AMD64 */
     }
@@ -616,7 +616,7 @@ EditCustomBootLinux(
 #endif /* _M_IX86 || _M_AMD64 */
 
 VOID
-EditCustomBootWindivs(
+EditCustomBootReactOS(
     IN OUT OperatingSystemItem* OperatingSystem,
     IN BOOLEAN IsSetup)
 {
@@ -625,22 +625,22 @@ EditCustomBootWindivs(
     CHAR SectionName[100];
     CHAR BootDriveString[20];
     CHAR BootPartitionString[20];
-    CHAR WindivsSystemPath[200];
-    CHAR WindivsARCPath[200];
-    CHAR WindivsOptions[200];
+    CHAR ReactOSSystemPath[200];
+    CHAR ReactOSARCPath[200];
+    CHAR ReactOSOptions[200];
 
     RtlZeroMemory(SectionName, sizeof(SectionName));
     RtlZeroMemory(BootDriveString, sizeof(BootDriveString));
     RtlZeroMemory(BootPartitionString, sizeof(BootPartitionString));
-    RtlZeroMemory(WindivsSystemPath, sizeof(WindivsSystemPath));
-    RtlZeroMemory(WindivsARCPath, sizeof(WindivsARCPath));
-    RtlZeroMemory(WindivsOptions, sizeof(WindivsOptions));
+    RtlZeroMemory(ReactOSSystemPath, sizeof(ReactOSSystemPath));
+    RtlZeroMemory(ReactOSARCPath, sizeof(ReactOSARCPath));
+    RtlZeroMemory(ReactOSOptions, sizeof(ReactOSOptions));
 
     if (SectionId != 0)
     {
         /* Load the settings */
-        IniReadSettingByName(SectionId, "SystemPath", WindivsARCPath, sizeof(WindivsARCPath));
-        IniReadSettingByName(SectionId, "Options", WindivsOptions, sizeof(WindivsOptions));
+        IniReadSettingByName(SectionId, "SystemPath", ReactOSARCPath, sizeof(ReactOSARCPath));
+        IniReadSettingByName(SectionId, "Options", ReactOSOptions, sizeof(ReactOSOptions));
     }
 
     if (SectionId == 0)
@@ -651,30 +651,30 @@ EditCustomBootWindivs(
         if (!UiEditBox(BootPartitionPrompt, BootPartitionString, sizeof(BootPartitionString)))
             return;
 
-        if (!UiEditBox(WindivsSystemPathPrompt, WindivsSystemPath, sizeof(WindivsSystemPath)))
+        if (!UiEditBox(ReactOSSystemPathPrompt, ReactOSSystemPath, sizeof(ReactOSSystemPath)))
             return;
     }
     else
     {
-        if (!UiEditBox(WindivsSystemPathPrompt, WindivsARCPath, sizeof(WindivsARCPath)))
+        if (!UiEditBox(ReactOSSystemPathPrompt, ReactOSARCPath, sizeof(ReactOSARCPath)))
             return;
     }
 
-    if (!UiEditBox(IsSetup ? WindivsSetupOptionsPrompt : WindivsOptionsPrompt, WindivsOptions, sizeof(WindivsOptions)))
+    if (!UiEditBox(IsSetup ? ReactOSSetupOptionsPrompt : ReactOSOptionsPrompt, ReactOSOptions, sizeof(ReactOSOptions)))
         return;
 
     /* Modify the settings values and return if we were in edit mode */
     if (SectionId != 0)
     {
-        IniModifySettingValue(SectionId, "SystemPath", WindivsARCPath);
-        IniModifySettingValue(SectionId, "Options", WindivsOptions);
+        IniModifySettingValue(SectionId, "SystemPath", ReactOSARCPath);
+        IniModifySettingValue(SectionId, "Options", ReactOSOptions);
         return;
     }
 
     /* Generate a unique section name */
     TimeInfo = ArcGetTime();
     RtlStringCbPrintfA(SectionName, sizeof(SectionName),
-                       "CustomWindivs%u%u%u%u%u%u",
+                       "CustomReactOS%u%u%u%u%u%u",
                        TimeInfo->Year, TimeInfo->Day, TimeInfo->Month,
                        TimeInfo->Hour, TimeInfo->Minute, TimeInfo->Second);
 
@@ -683,20 +683,20 @@ EditCustomBootWindivs(
         return;
 
     /* Add the BootType */
-    if (!IniAddSettingValueToSection(SectionId, "BootType", IsSetup ? "WindivsSetup" : "Windows2003"))
+    if (!IniAddSettingValueToSection(SectionId, "BootType", IsSetup ? "ReactOSSetup" : "Windows2003"))
         return;
 
-    /* Construct the Windivs ARC system path */
-    ConstructArcPath(WindivsARCPath, WindivsSystemPath,
+    /* Construct the ReactOS ARC system path */
+    ConstructArcPath(ReactOSARCPath, ReactOSSystemPath,
                      DriveMapGetBiosDriveNumber(BootDriveString),
                      atoi(BootPartitionString));
 
     /* Add the system path */
-    if (!IniAddSettingValueToSection(SectionId, "SystemPath", WindivsARCPath))
+    if (!IniAddSettingValueToSection(SectionId, "SystemPath", ReactOSARCPath))
         return;
 
     /* Add the CommandLine */
-    if (!IniAddSettingValueToSection(SectionId, "Options", WindivsOptions))
+    if (!IniAddSettingValueToSection(SectionId, "Options", ReactOSOptions))
         return;
 
     OperatingSystem->SectionId = SectionId;

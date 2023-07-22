@@ -1,10 +1,10 @@
 /*
- * PROJECT:     Windivs Secondary Logon Service
+ * PROJECT:     ReactOS Secondary Logon Service
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Secondary Logon service RPC server
  * COPYRIGHT:   Eric Kohl 2022 <eric.kohl@reactos.org>
  */
-
+ 
 /* INCLUDES *****************************************************************/
 
 #include "precomp.h"

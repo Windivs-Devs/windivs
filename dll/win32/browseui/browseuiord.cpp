@@ -1,5 +1,5 @@
 /*
- * Windivs browseui
+ * ReactOS browseui
  *
  * Copyright 2009 Andrew Hill <ash77 at domain reactos.org>
  *

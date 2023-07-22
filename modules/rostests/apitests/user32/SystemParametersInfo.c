@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs API tests
+ * PROJECT:         ReactOS API tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for SystemParametersInfo function family
  * PROGRAMMERS:     Giannis Adamopoulos

@@ -1,6 +1,6 @@
 /*******************************************************************************
 *                                                                              *
-* ACPI Component Architecture Operating System Layer (OSL) for Windivs         *
+* ACPI Component Architecture Operating System Layer (OSL) for ReactOS         *
 *                                                                              *
 *******************************************************************************/
 

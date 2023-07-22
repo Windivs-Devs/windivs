@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            ntoskrnl/rtl/libsupp.c
  * PURPOSE:         RTL Support Routines
  * PROGRAMMERS:     Alex Ionescu (alex@relsoft.net)

@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Win32k subsystem
+ * PROJECT:          ReactOS Win32k subsystem
  * PURPOSE:          Win32ss internal drawing support.
  * FILE:             win32ss/user/ntuser/draw.c
- * PROGRAMER:
+ * PROGRAMER:        
  */
 
 //
@@ -1065,7 +1065,7 @@ FillRect(HDC hDC, CONST RECT *lprc, HBRUSH hbr)
         /* Handle system colors */
         if (hbr <= (HBRUSH)(COLOR_MENUBAR + 1))
             hbr = IntGetSysColorBrush(PtrToUlong(hbr) - 1);
-
+        
         prevhbr = NtGdiSelectBrush(hDC, hbr);
         if (prevhbr == NULL)
             return (INT)FALSE;

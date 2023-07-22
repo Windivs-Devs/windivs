@@ -1,5 +1,5 @@
 /*
- * Windivs Explorer
+ * ReactOS Explorer
  *
  * Copyright 2006 - 2007 Thomas Weidenmueller <w3seek@reactos.org>
  * Copyright 2018-2022 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
@@ -661,7 +661,7 @@ public:
 
     LRESULT DoExitWindows()
     {
-        /* Display the Windivs Shutdown Dialog */
+        /* Display the ReactOS Shutdown Dialog */
         ExitWindowsDialog(m_hWnd);
 
         /*

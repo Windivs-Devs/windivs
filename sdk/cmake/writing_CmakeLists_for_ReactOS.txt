@@ -1,6 +1,6 @@
-CMake is used to build Windivs.
+CMake is used to build ReactOS.
 
-Here you will find what you'll need to write nice CMakeLists.txt files for Windivs.
+Here you will find what you'll need to write nice CMakeLists.txt files for ReactOS.
 CMake standard functions are available too. See http://www.cmake.org/, or type cmake --help-html in your shell to get the full documentation.
 
 Optional arguments are marked with [brackets], input is marked with <comparison signs>.

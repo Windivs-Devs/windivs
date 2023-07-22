@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            ntoskrnl/mm/balance.c
  * PURPOSE:         kernel memory management functions
  *

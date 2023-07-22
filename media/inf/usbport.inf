@@ -4,11 +4,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = USB
 ClassGUID  = {36FC9E60-C465-11CF-8056-444553540000}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 10/19/1999,5.00.2157.1
 
 [DestinationDirs]
@@ -117,7 +117,7 @@ LoadOrderGroup = Base
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Project"
+ReactOS = "ReactOS Project"
 
 IntelMfg = "Intel"
 

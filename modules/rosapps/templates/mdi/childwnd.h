@@ -1,5 +1,5 @@
 /*
- *  Windivs Application MDI Child Window
+ *  ReactOS Application MDI Child Window
  *
  *  childwnd.h
  *

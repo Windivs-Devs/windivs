@@ -1,8 +1,8 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Display Control Panel
+ * PROJECT:         ReactOS Display Control Panel
  * FILE:            dll/cpl/desk/desk.c
- * PURPOSE:         Windivs Display Control Panel
+ * PURPOSE:         ReactOS Display Control Panel
  *
  * PROGRAMMERS:     Trevor McCort (lycan359@gmail.com)
  */

@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:         GNU GPL - See COPYING in the top level directory
- * PROJECT:           Windivs Run-Time Library
- * PURPOSE:
+ * PROJECT:           ReactOS Run-Time Library
+ * PURPOSE:           
  * FILE:              lib/rtl/i386/res_asm.s
- * PROGRAMER:
+ * PROGRAMER:         
  */
 
 #include <asm.inc>

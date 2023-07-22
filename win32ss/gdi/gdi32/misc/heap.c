@@ -16,7 +16,7 @@
  */
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs GDI32
+ * PROJECT:          ReactOS GDI32
  * PURPOSE:
  * FILE:             win32ss/gdi/gdi32/misc/heap.c
  * PROGRAMER:

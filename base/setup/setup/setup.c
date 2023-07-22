@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs GUI/console setup
+ * PROJECT:         ReactOS GUI/console setup
  * FILE:            base/setup/setup/setup.c
  * PURPOSE:         Second stage setup
  * PROGRAMMER:      Eric Kohl
@@ -19,11 +19,11 @@ typedef INT (WINAPI *PINSTALL_REACTOS)(INT argc, WCHAR** argv);
 
 static
 INT
-RunInstallWindivs(INT argc, WCHAR* argv[])
+RunInstallReactOS(INT argc, WCHAR* argv[])
 {
     INT RetVal;
     HMODULE hDll;
-    PINSTALL_REACTOS InstallWindivs;
+    PINSTALL_REACTOS InstallReactOS;
 
     hDll = LoadLibraryW(L"syssetup.dll");
     if (hDll == NULL)
@@ -34,15 +34,15 @@ RunInstallWindivs(INT argc, WCHAR* argv[])
     DPRINT("Loaded 'syssetup.dll'!\n");
 
     /* Call the standard Windows-compatible export */
-    InstallWindivs = (PINSTALL_REACTOS)GetProcAddress(hDll, "InstallWindowsNt");
-    if (InstallWindivs == NULL)
+    InstallReactOS = (PINSTALL_REACTOS)GetProcAddress(hDll, "InstallWindowsNt");
+    if (InstallReactOS == NULL)
     {
         RetVal = GetLastError();
         DPRINT("Failed to get address for 'InstallWindowsNt()'!\n");
     }
     else
     {
-        RetVal = InstallWindivs(argc, argv);
+        RetVal = InstallReactOS(argc, argv);
     }
 
     return RetVal;
@@ -67,7 +67,7 @@ INT wmain(INT argc, WCHAR* argv[])
     // in addition to "newsetup"; these options are not exclusive.
     if (_wcsicmp(p, L"newsetup") == 0 || _wcsicmp(p, L"mini") == 0)
     {
-        RunInstallWindivs(argc, argv);
+        RunInstallReactOS(argc, argv);
     }
 
 #if 0

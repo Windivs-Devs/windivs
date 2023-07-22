@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs services
+ * PROJECT:     ReactOS services
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:
  * PURPOSE:     skeleton service

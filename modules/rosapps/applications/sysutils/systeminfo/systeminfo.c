@@ -471,7 +471,7 @@ AllSysInfo(VOID)
     // clean SMBIOS data
     FreeSMBiosData(SMBiosBuf);
 
-    //getting Windivs Directory
+    //getting ReactOS Directory
     if (!GetWindowsDirectoryW(Buf, BUFFER_SIZE))
         wprintf(L"Error! GetWindowsDirectory failed.");
     else

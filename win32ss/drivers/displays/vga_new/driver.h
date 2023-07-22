@@ -1,12 +1,12 @@
 /*
- * PROJECT:         Windivs Framebuffer Display Driver
+ * PROJECT:         ReactOS Framebuffer Display Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/displays/vga_new/driver.h
  * PURPOSE:         Main Driver Header File
  * PROGRAMMERS:     Copyright (c) 1992-1995 Microsoft Corporation
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
-
+ 
 //#define DBG 1
 #include "stddef.h"
 #include <stdarg.h>

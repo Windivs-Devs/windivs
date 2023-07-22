@@ -1,5 +1,5 @@
 /*
- * PROJECT:          Windivs Win32 Subsystem
+ * PROJECT:          ReactOS Win32 Subsystem
  * LICENSE:          GPL - See COPYING in the top level directory
  * FILE:             win32ss/reactx/ntddraw/dxeng.c
  * PURPOSE:          Implementation of DxEng functions
@@ -172,7 +172,7 @@ DxEngUnlockDC(PDC pDC)
 *
 * @remarks.
 * It is being used in various ntuser* functions and ntgdi*
-* Windivs specific: It is not in use yet?
+* ReactOS specific: It is not in use yet?
 *SystemResourcesList
 *--*/
 BOOLEAN
@@ -195,7 +195,7 @@ DxEngLockShareSem(VOID)
 * This function returns TRUE no matter what.
 *
 * @remarks.
-* Windivs specific: It is not in use yet?
+* ReactOS specific: It is not in use yet?
 *
 *--*/
 BOOLEAN
@@ -273,7 +273,7 @@ DxEngSetDeviceGammaRamp(HDEV hPDev, PGAMMARAMP Ramp, BOOL Test)
 * Returns the data we requested
 *
 * @remarks.
-* Windivs specific: Implementation is incomplete, I do not save the value into the hdev yet.
+* ReactOS specific: Implementation is incomplete, I do not save the value into the hdev yet.
 *
 *--*/
 DWORD_PTR
@@ -602,7 +602,7 @@ BOOLEAN
 APIENTRY
 DxEngNUIsTermSrv(VOID)
 {
-    /* FIXME: Windivs does not suport terminal server yet, we can not check if we got connections or not */
+    /* FIXME: ReactOS does not suport terminal server yet, we can not check if we got connections or not */
     UNIMPLEMENTED;
     return FALSE;
 }

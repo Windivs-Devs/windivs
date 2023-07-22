@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * FILE:             base/services/shsvcs/thmsvc.c
  * PURPOSE:          Themes service
  * PROGRAMMER:       Giannis Adamopoulos

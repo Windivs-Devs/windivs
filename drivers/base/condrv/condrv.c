@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Console Driver
+ * PROJECT:         ReactOS Console Driver
  * FILE:            drivers/base/condrv/condrv.c
  * PURPOSE:         Console Driver Management Functions
  * PROGRAMMERS:     Hermes Belusca-Maito (hermes.belusca@sfr.fr)

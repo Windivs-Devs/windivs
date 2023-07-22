@@ -1,4 +1,4 @@
-// PROJECT:        Windivs ATL CImage
+// PROJECT:        ReactOS ATL CImage
 // LICENSE:        Public Domain
 // PURPOSE:        Provides compatibility to Microsoft ATL
 // PROGRAMMERS:    Katayama Hirofumi MZ (katayama.hirofumi.mz@gmail.com)

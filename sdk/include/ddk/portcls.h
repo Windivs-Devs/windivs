@@ -1,5 +1,5 @@
 /*
-    Windivs Kernel Streaming
+    ReactOS Kernel Streaming
     Port Class
 
     This file is in the public domain.
@@ -2293,7 +2293,7 @@ DECLARE_INTERFACE_(IPreFetchOffset, IUnknown)
 
 #define IMP_IPreFetchOffset \
     STDMETHODIMP_(DWORD) SetPreFetchOffset(IN ULONG PreFetchOffset);
-
+    
 typedef IPreFetchOffset *PPREFETCHOFFSET;
 
 /* ===============================================================

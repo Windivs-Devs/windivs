@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       GNU GPL, see COPYING in the top level directory
- * PROJECT:         Windivs crt library
+ * PROJECT:         ReactOS crt library
  * FILE:            lib/sdk/crt/printf/vsprintf.c
  * PURPOSE:         Implementation of vsprintf
  * PROGRAMMER:      Timo Kreuzer

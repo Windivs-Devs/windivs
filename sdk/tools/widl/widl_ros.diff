@@ -4,12 +4,12 @@ diff -pudN e:\wine-patched\tools\widl/hash.c e:\reactos-sync-clean\tools\widl/ha
 @@ -21,9 +21,7 @@
  #include <stdio.h>
  #include <stdarg.h>
-
+ 
 -#include "windef.h"
 -#include "winbase.h"
 -#include "winnls.h"
 +#include <nls.h>
-
+ 
  #include "widltypes.h"
  #include "hash.h"
 @@ -539,10 +537,10 @@ unsigned int lhash_val_of_name_sys( sysk
@@ -18,7 +18,7 @@ diff -pudN e:\wine-patched\tools\widl/hash.c e:\reactos-sync-clean\tools\widl/ha
    case LANG_XHOSA:      case LANG_ZULU:       case LANG_WELSH:
 -  case LANG_BRETON:     case LANG_SCOTTISH_GAELIC: case LANG_NEUTRAL:
 +  case LANG_BRETON:     case LANG_NEUTRAL:
- /* some languages not in all windows versions or Windivs */
+ /* some languages not in all windows versions or ReactOS */
 -#ifdef LANG_MANX_GAELIC
 -  case LANG_MANX_GAELIC:
 +#ifdef LANG_GAELIC
@@ -32,14 +32,14 @@ diff -pudN e:\wine-patched\tools\widl/header.c e:\reactos-sync-clean\tools\widl/
 @@ -1068,7 +1068,7 @@ static void write_inline_wrappers(FILE *
      if (!is_callas(func->attrs)) {
        const var_t *arg;
-
+ 
 -      fprintf(header, "static FORCEINLINE ");
 +      fprintf(header, "FORCEINLINE ");
        write_type_decl_left(header, type_function_get_rettype(func->type));
        fprintf(header, " %s_%s(", name, get_name(func));
        write_args(header, type_get_function_args(func->type), name, 1, FALSE);
 @@ -1103,6 +1103,15 @@ static void do_write_c_method_def(FILE *
-
+ 
    if (type_iface_get_inherit(iface))
      do_write_c_method_def(header, type_iface_get_inherit(iface), name);
 +  else if (type_iface_get_stmts(iface) == NULL)
@@ -51,27 +51,27 @@ diff -pudN e:\wine-patched\tools\widl/header.c e:\reactos-sync-clean\tools\widl/
 +    fprintf(header, "\n");
 +    return;
 +  }
-
+ 
    STATEMENTS_FOR_EACH_FUNC(stmt, type_iface_get_stmts(iface))
    {
 @@ -1640,6 +1649,10 @@ void write_header(const statement_list_t
    fprintf(header, "#define __REQUIRED_RPCNDR_H_VERSION__ 475\n");
    fprintf(header, "#endif\n\n");
-
+ 
 +  fprintf(header, "#ifdef __REACTOS__\n");
 +  fprintf(header, "#define WIN32_LEAN_AND_MEAN\n");
 +  fprintf(header, "#endif\n\n");
 +
    fprintf(header, "#include <rpc.h>\n" );
    fprintf(header, "#include <rpcndr.h>\n\n" );
-
+ 
 diff -pudN e:\wine-patched\tools\widl/parser.y e:\reactos-sync-clean\tools\widl/parser.y
 --- e:\wine-patched\tools\widl/parser.y	2015-11-15 19:23:32 +0100
 +++ e:\reactos-sync-clean\tools\widl/parser.y	2015-11-16 20:04:15 +0100
-@@ -1899,6 +1899,14 @@ static type_t *reg_typedefs(decl_spec_t
+@@ -1899,6 +1899,14 @@ static type_t *reg_typedefs(decl_spec_t 
          type->attrs = attrs;
    }
-
+ 
 +#ifdef __REACTOS__
 +  /* Append the SWITCHTYPE attribute to a non-encapsulated union if it does not already have it.  */
 +  if (type_get_type_detect_alias(type) == TYPE_UNION &&
@@ -82,7 +82,7 @@ diff -pudN e:\wine-patched\tools\widl/parser.y e:\reactos-sync-clean\tools\widl/
 +
    LIST_FOR_EACH_ENTRY( decl, decls, const declarator_t, entry )
    {
-
+ 
 diff -pudN e:\wine-patched\tools\widl/proxy.c e:\reactos-sync-clean\tools\widl/proxy.c
 --- e:\wine-patched\tools\widl/proxy.c	2015-02-22 13:23:48 +0100
 +++ e:\reactos-sync-clean\tools\widl/proxy.c	2015-11-16 20:04:15 +0100
@@ -104,20 +104,20 @@ diff -pudN e:\wine-patched\tools\widl/proxy.c e:\reactos-sync-clean\tools\widl/p
 @@ -476,14 +482,15 @@ static const statement_t * get_callas_so
    return NULL;
  }
-
+ 
 -static void write_proxy_procformatstring_offsets( const type_t *iface, int skip )
 +static int write_proxy_procformatstring_offsets( const type_t *iface, int skip )
  {
      const statement_t *stmt;
 +    int i = 0;
-
+ 
      if (type_iface_get_inherit(iface))
 -        write_proxy_procformatstring_offsets( type_iface_get_inherit(iface), need_delegation(iface));
 +        i = write_proxy_procformatstring_offsets( type_iface_get_inherit(iface), need_delegation(iface));
      else
 -        return;
 +        return 0;
-
+ 
      STATEMENTS_FOR_EACH_FUNC( stmt, type_iface_get_stmts(iface) )
      {
 @@ -503,7 +510,9 @@ static void write_proxy_procformatstring
@@ -128,7 +128,7 @@ diff -pudN e:\wine-patched\tools\widl/proxy.c e:\reactos-sync-clean\tools\widl/p
      }
 +    return i;
  }
-
+ 
  static int write_proxy_methods(type_t *iface, int skip)
 @@ -636,7 +645,10 @@ static void write_proxy(type_t *iface, u
    print_proxy( "static const unsigned short %s_FormatStringOffsetTable[] =\n", iface->name );
@@ -141,7 +141,7 @@ diff -pudN e:\wine-patched\tools\widl/proxy.c e:\reactos-sync-clean\tools\widl/p
 +  }
    indent--;
    print_proxy( "};\n\n" );
-
+ 
 @@ -710,7 +722,10 @@ static void write_proxy(type_t *iface, u
        print_proxy( "static const PRPC_STUB_FUNCTION %s_table[] =\n", iface->name);
        print_proxy( "{\n");
@@ -172,7 +172,7 @@ diff -pudN e:\wine-patched\tools\widl/typelib.c e:\reactos-sync-clean\tools\widl
 @@ -32,9 +32,7 @@
  #include <string.h>
  #include <ctype.h>
-
+ 
 -#include "windef.h"
 -#include "winbase.h"
 -
@@ -197,7 +197,7 @@ diff -pudN e:\wine-patched\tools\widl/widl.c e:\reactos-sync-clean\tools\widl/wi
    fprintf(dlldata, "#include <rpcproxy.h>\n\n");
    start_cplusplus_guard(dlldata);
 @@ -504,6 +510,12 @@ void write_id_data(const statement_list_
-
+ 
    fprintf(idfile, "/*** Autogenerated by WIDL %s ", PACKAGE_VERSION);
    fprintf(idfile, "from %s - Do not edit ***/\n\n", input_idl_name);
 +
@@ -208,14 +208,14 @@ diff -pudN e:\wine-patched\tools\widl/widl.c e:\reactos-sync-clean\tools\widl/wi
 +
    fprintf(idfile, "#include <rpc.h>\n");
    fprintf(idfile, "#include <rpcndr.h>\n\n");
-
+ 
 diff -pudN e:\wine-patched\tools\widl/widltypes.h e:\reactos-sync-clean\tools\widl/widltypes.h
 --- e:\wine-patched\tools\widl/widltypes.h	2015-10-30 18:41:54 +0100
 +++ e:\reactos-sync-clean\tools\widl/widltypes.h	2015-11-16 20:04:16 +0100
 @@ -21,6 +21,15 @@
  #ifndef __WIDL_WIDLTYPES_H
  #define __WIDL_WIDLTYPES_H
-
+ 
 +#define S_OK           0
 +#define S_FALSE        1
 +#define E_OUTOFMEMORY  ((HRESULT)0x8007000EL)
@@ -232,15 +232,15 @@ diff -pudN e:\wine-patched\tools\widl/write_msft.c e:\reactos-sync-clean\tools\w
 --- e:\wine-patched\tools\widl/write_msft.c	2015-11-15 19:23:32 +0100
 +++ e:\reactos-sync-clean\tools\widl/write_msft.c	2015-11-16 20:04:16 +0100
 @@ -39,10 +39,8 @@
-
+ 
  #define NONAMELESSUNION
-
+ 
 -#include "winerror.h"
 -#include "windef.h"
 -#include "winbase.h"
 -#include "winnls.h"
 +#include <typedefs.h>
 +#include <nls.h>
-
+ 
  #include "widl.h"
  #include "typelib.h"

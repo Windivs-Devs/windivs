@@ -1,10 +1,10 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/sysldr.c
  * PURPOSE:         Contains the Kernel Loader (SYSLDR) for loading PE files.
  * PROGRAMMERS:     Alex Ionescu (alex.ionescu@reactos.org)
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -2581,7 +2581,7 @@ MiSetPagingOfDriver(IN PMMPTE PointerPte,
             Pfn1 = MiGetPfnEntry(PageFrameIndex);
             ASSERT(Pfn1->u2.ShareCount == 1);
 
-            /* No working sets in Windivs yet */
+            /* No working sets in ReactOS yet */
             PageCount++;
         }
 

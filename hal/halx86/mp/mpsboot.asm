@@ -1,6 +1,6 @@
 ;
 ; COPYRIGHT:       See COPYING in the top level directory
-; PROJECT:         Windivs kernel
+; PROJECT:         ReactOS kernel
 ; FILE:            hal/halx86/mp/mpsboot.c
 ; PURPOSE:         Bootstrap code for application processors
 ; PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -46,19 +46,19 @@ _APstart:
 
   mov   eax, 3000h + APgdt - _APstart
 	lgdt  [eax]
-
+	
   mov	eax, [2004h]	  ; Set the page directory
-  mov   cr3, eax
-
+  mov   cr3, eax  
+  
   mov	eax, [200ch]
   cmp	eax,0
   je	NoPae
-
+  
   mov	eax,cr4
   or	eax,X86_CR4_PAE
   mov	cr4,eax
-
-NoPae:
+  
+NoPae:  
 
   mov   eax, cr0
   or    eax, 80010001h    ; Turn on protected mode, paging and write protection

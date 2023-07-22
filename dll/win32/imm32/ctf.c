@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs IMM32
+ * PROJECT:     ReactOS IMM32
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
  * PURPOSE:     Implementing the IMM32 Cicero-aware Text Framework (CTF)
  * COPYRIGHT:   Copyright 2022 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>

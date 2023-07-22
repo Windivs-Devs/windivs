@@ -1519,7 +1519,7 @@ MachInit(const char *CmdLine)
     MachVtbl.VideoGetPaletteColor = PcVideoGetPaletteColor;
     MachVtbl.VideoSync = PcVideoSync;
     MachVtbl.Beep = PcBeep;
-    MachVtbl.PrepareForWindivs = PcPrepareForWindivs;
+    MachVtbl.PrepareForReactOS = PcPrepareForReactOS;
     MachVtbl.GetMemoryMap = PcMemGetMemoryMap;
     MachVtbl.GetExtendedBIOSData = PcGetExtendedBIOSData;
     MachVtbl.GetFloppyCount = PcGetFloppyCount;
@@ -1535,10 +1535,10 @@ MachInit(const char *CmdLine)
 }
 
 VOID
-PcPrepareForWindivs(VOID)
+PcPrepareForReactOS(VOID)
 {
     /* On PC, prepare video and turn off the floppy motor */
-    PcVideoPrepareForWindivs();
+    PcVideoPrepareForReactOS();
     DiskStopFloppyMotor();
 }
 #endif

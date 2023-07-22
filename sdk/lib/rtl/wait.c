@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs system libraries
+ * PROJECT:           ReactOS system libraries
  * PURPOSE:           Rtl user wait functions
  * FILE:              lib/rtl/wait.c
  * PROGRAMERS:

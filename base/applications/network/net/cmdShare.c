@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs net command
+ * PROJECT:         ReactOS net command
  * FILE:            base/applications/network/net/cmdShare.c
  * PROGRAMMERS:     Eric Kohl <eric.kohl@reactos.org>
  */

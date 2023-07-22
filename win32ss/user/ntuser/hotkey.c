@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Win32k subsystem
+ * PROJECT:          ReactOS Win32k subsystem
  * PURPOSE:          HotKey support
  * FILE:             win32ss/user/ntuser/hotkey.c
  * PROGRAMER:        Eric Kohl
@@ -250,7 +250,7 @@ co_UserProcessHotKeys(WORD wVk, BOOL bIsDown)
                return FALSE;
             }
         }
-
+        
         if (pHotKey->id == IDHK_SNAP_LEFT ||
             pHotKey->id == IDHK_SNAP_RIGHT ||
             pHotKey->id == IDHK_SNAP_UP ||

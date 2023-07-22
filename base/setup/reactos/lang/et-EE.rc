@@ -2,32 +2,32 @@ LANGUAGE LANG_ESTONIAN, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Tere tulemast Windivs'i paigaldamus viisardisse", IDC_STARTTITLE, 115, 8, 195, 24
-    LTEXT "Selle CD pealt ei saa praegu veel Windivs'i paigaldada! Windivs'i paigaldamiseks on tarvis arvuti taaskäivitada selle CD-ga.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Tere tulemast ReactOS'i paigaldamus viisardisse", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "Selle CD pealt ei saa praegu veel ReactOS'i paigaldada! ReactOS'i paigaldamiseks on tarvis arvuti taaskäivitada selle CD-ga.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Vajuta lõpeta, et installeerimine lõpetada.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTORADIOBUTTON "Installeeri Windivs", IDC_INSTALL, 7, 7, 277, 10
-    LTEXT "Paigalda uus koopia Windivs'ist. See valik ei jäta alles teie faile, suvandeid ja programme. Võite teha muudatusi kettastele ja partitsioonidele.", IDC_INSTALLTEXT, 18, 18, 269, 25
-    AUTORADIOBUTTON "Paranda või uuenda installeeritud Windivs'i", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "Uuenda või paranda oma Windivs'i installatsiooni. See valik säilitab teie failid, suvandid ja programmid. See valik on saadaval juhul kui Windivs on juba paigaldatud siin arvutis.", IDC_UPDATETEXT, 18, 61, 269, 30
+    AUTORADIOBUTTON "Installeeri ReactOS", IDC_INSTALL, 7, 7, 277, 10
+    LTEXT "Paigalda uus koopia ReactOS'ist. See valik ei jäta alles teie faile, suvandeid ja programme. Võite teha muudatusi kettastele ja partitsioonidele.", IDC_INSTALLTEXT, 18, 18, 269, 25
+    AUTORADIOBUTTON "Paranda või uuenda installeeritud ReactOS'i", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "Uuenda või paranda oma ReactOS'i installatsiooni. See valik säilitab teie failid, suvandid ja programmid. See valik on saadaval juhul kui ReactOS on juba paigaldatud siin arvutis.", IDC_UPDATETEXT, 18, 61, 269, 30
     LTEXT "Vajuta Järgmine, et seadmeid paigaldada.", IDC_STATIC, 7, 128, 297, 8
 END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs Setup"
+CAPTION "ReactOS Setup"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT       "The Windivs Setup can upgrade one of the available Windivs installations listed below, or, if a Windivs installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "&Do not upgrade", IDC_SKIPUPGRADE, 230, 128, 80, 14
     LTEXT       "Click Next to upgrade the selected OS installation, or on 'Do not upgrade' to continue a new installation without upgrading.", IDC_STATIC, 7, 124, 222, 16
@@ -35,7 +35,7 @@ END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Arvuti:", IDC_STATIC, 20, 15, 80, 10
@@ -49,7 +49,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -93,7 +93,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Installation type:", IDC_STATIC, 18, 5, 74, 11
@@ -112,14 +112,14 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Destination directory:", IDC_STATIC, 18, 89, 74, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nWindivs is alpha-quality software and may break on my computer or corrupt my data.",
+    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nReactOS is alpha-quality software and may break on my computer or corrupt my data.",
         IDC_CONFIRM_INSTALL, 7, 104, 303, 18, BS_MULTILINE
     LTEXT "Please confirm that all the installation settings are correct,\nthen click on Install to start the installation process.", IDC_STATIC, 7, 124, 303, 18
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigaldamine"
+CAPTION "ReactOS'i paigaldamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Install failid...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -129,11 +129,11 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs'i paigalduse lõpetamine"
+CAPTION "ReactOS'i paigalduse lõpetamine"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Reactos'i paigaldusviisardi lõpetamine", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Windivs'i paigaldamise esimene järk on edukalt lõpetatud.", IDC_STATIC, 20, 50, 277, 10
+    LTEXT "ReactOS'i paigaldamise esimene järk on edukalt lõpetatud.", IDC_STATIC, 20, 50, 277, 10
     LTEXT "Vajuta Lõpeta, et arvuti taaskäivitada.", IDC_STATIC, 20, 80, 277, 10
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
     LTEXT "Võta CD välja ja vajuta Lõpeta, et arvuti taaskäivitada.", IDC_STATIC, 10, 180, 297, 20
@@ -141,7 +141,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TYPETITLE "Tere tulemast Windivs'i paigaldama"
+    IDS_TYPETITLE "Tere tulemast ReactOS'i paigaldama"
     IDS_TYPESUBTITLE "Vali paigalduse tüüp."
     IDS_DEVICETITLE "Põhiliste seadmete paigaldamine"
     IDS_DEVICESUBTITLE "Ekraani ja klaviatuuri seadistamine."
@@ -153,10 +153,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "Paigaldamise esimene järk on lõpetatud, teise järgu alustamiseks taaskäivita arvuti"
     IDS_SUMMARYTITLE "Paigaldamise kokkuvõte"
     IDS_SUMMARYSUBTITLE "Seadete kontrollimine enne paigaldamise alustamist"
-    IDS_ABORTSETUP "Windivs ei ole veel lõplikult paigaldatud. Kas soovite tõesti lahkuda?"
+    IDS_ABORTSETUP "ReactOS ei ole veel lõplikult paigaldatud. Kas soovite tõesti lahkuda?"
     IDS_ABORTSETUP2 "Katkestada paigaldamine?"
     IDS_NO_TXTSETUP_SIF "Ei leitud faili 'txtsetup.sif'.\nPaigaldust ei saa lõpuni viia."
-    IDS_CAPTION "Windivs'i paigaldamine"
+    IDS_CAPTION "ReactOS'i paigaldamine"
 END
 
 STRINGTABLE

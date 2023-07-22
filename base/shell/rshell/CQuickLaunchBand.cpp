@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs shell extensions
+ * PROJECT:     ReactOS shell extensions
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/shellext/qcklnch/CQuickLaunchBand.cpp
  * PURPOSE:     Quick Launch Toolbar (Taskbar Shell Extension)

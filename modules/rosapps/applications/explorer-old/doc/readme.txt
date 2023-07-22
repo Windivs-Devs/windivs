@@ -1,5 +1,5 @@
 
-For information on how to compile and install the Windivs Explorer please look at the FAQ web page:
+For information on how to compile and install the ReactOS Explorer please look at the FAQ web page:
 
 http://www.sky.franken.de/explorer/
 
@@ -14,7 +14,7 @@ used as a desktop.
 It's pretty straightforward. It creates a window the size of the screen,
 displays some text in the corner, and then disables ALT+F4.
 
-Ideally, this would be incorporated into some other part of Windivs, where
+Ideally, this would be incorporated into some other part of ReactOS, where
 it could be closed in a controlled manner (ie, when the user wishes to exit
 the GUI.)
 
@@ -36,10 +36,10 @@ Explorer Bar Example
 --------------------
 
 I have merged in Alexander Ciobanu's Explorer bar code as a example starting
-for the start menu. Its very simple at this point and just loads a window with
-buttons.
+for the start menu. Its very simple at this point and just loads a window with 
+buttons. 
 
 The loading of this module was based on a patch by Martin Fuchs.
 
-Steven Edwards
+Steven Edwards 
 Steven_Ed4153@yahoo.com

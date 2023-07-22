@@ -2,32 +2,32 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Вас приветствует программа установки Windivs", IDC_STARTTITLE, 115, 8, 195, 24
-    LTEXT "Установку Windivs можно производить только загрузившись с этого диска! После перезапуска компьютера выберите загрузку с CD и начните установку Windivs.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Вас приветствует программа установки ReactOS", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "Установку ReactOS можно производить только загрузившись с этого диска! После перезапуска компьютера выберите загрузку с CD и начните установку ReactOS.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Нажмите кнопку ""Завершить"" для выхода.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTORADIOBUTTON "Установка Windivs", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
-    LTEXT "Установить новую копию системы Windivs. Эта опция НЕ сохраняет файлы, настройки и программы. Вы можете изменять диски и разделы.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
-    AUTORADIOBUTTON "Восстановить или изменить установленный ранее Windivs", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "Обновить или восстановить установленную копию системы Windivs. Эта опция СОХРАНЯЕТ файлы, настройки и программы. Доступно только при наличии уже установленной на компьютере системы Windivs.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
+    AUTORADIOBUTTON "Установка ReactOS", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
+    LTEXT "Установить новую копию системы ReactOS. Эта опция НЕ сохраняет файлы, настройки и программы. Вы можете изменять диски и разделы.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
+    AUTORADIOBUTTON "Восстановить или изменить установленный ранее ReactOS", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "Обновить или восстановить установленную копию системы ReactOS. Эта опция СОХРАНЯЕТ файлы, настройки и программы. Доступно только при наличии уже установленной на компьютере системы ReactOS.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
     LTEXT "Для установки устройств нажмите ""Далее"".", IDC_STATIC, 7, 128, 297, 8
 END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs Setup"
+CAPTION "ReactOS Setup"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT       "The Windivs Setup can upgrade one of the available Windivs installations listed below, or, if a Windivs installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "&Do not upgrade", IDC_SKIPUPGRADE, 230, 128, 80, 14
     LTEXT       "Click Next to upgrade the selected OS installation, or on 'Do not upgrade' to continue a new installation without upgrading.", IDC_STATIC, 7, 124, 222, 16
@@ -35,7 +35,7 @@ END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Компьютер:", IDC_STATIC, 20, 15, 80, 10
@@ -49,7 +49,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -93,7 +93,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Installation type:", IDC_STATIC, 18, 5, 74, 11
@@ -112,14 +112,14 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Destination directory:", IDC_STATIC, 18, 89, 74, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nWindivs is alpha-quality software and may break on my computer or corrupt my data.",
+    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nReactOS is alpha-quality software and may break on my computer or corrupt my data.",
         IDC_CONFIRM_INSTALL, 7, 104, 303, 18, BS_MULTILINE
     LTEXT "Please confirm that all the installation settings are correct,\nthen click on Install to start the installation process.", IDC_STATIC, 7, 124, 303, 18
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Копирование файлов...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -129,11 +129,11 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Установка Windivs"
+CAPTION "Установка ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Completing the Windivs Setup Wizard", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Первый этап установки Windivs закончен.", IDC_STATIC, 115, 50, 182, 10
+    LTEXT "Completing the ReactOS Setup Wizard", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "Первый этап установки ReactOS закончен.", IDC_STATIC, 115, 50, 182, 10
     LTEXT "После нажатия клавиши ""Завершить"" ваш компьютер будет перезагружен.", IDC_STATIC, 115, 80, 182, 20
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 120, 182, 8
     LTEXT "Вы можете извлечь установочный диск. Для перезагрузки компьютера нажмите клавишу ""Завершить"".", IDC_STATIC, 115, 166, 182, 25
@@ -141,7 +141,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TYPETITLE "Вас приветствует программа установки Windivs"
+    IDS_TYPETITLE "Вас приветствует программа установки ReactOS"
     IDS_TYPESUBTITLE "Выберите тип установки."
     IDS_DEVICETITLE "Установка базовых устройств"
     IDS_DEVICESUBTITLE "Настройка параметров экрана и клавиатуры."
@@ -153,10 +153,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "Первый этап закончен, для продолжения требуется перезагрузка"
     IDS_SUMMARYTITLE "Сводка"
     IDS_SUMMARYSUBTITLE "Проверьте список параметров перед началом установки"
-    IDS_ABORTSETUP "Windivs установлен на компьютер не полностью. Если вы закроете программу установки сейчас, в дальнейшем вам придется повторить установку Windivs. Вы уверены, что необходимо прервать установку?"
+    IDS_ABORTSETUP "ReactOS установлен на компьютер не полностью. Если вы закроете программу установки сейчас, в дальнейшем вам придется повторить установку ReactOS. Вы уверены, что необходимо прервать установку?"
     IDS_ABORTSETUP2 "Прервать установку?"
     IDS_NO_TXTSETUP_SIF "Не удалось найти файл 'txtsetup.sif'.\nПродолжение установки невозможно."
-    IDS_CAPTION "Установка Windivs"
+    IDS_CAPTION "Установка ReactOS"
 END
 
 STRINGTABLE

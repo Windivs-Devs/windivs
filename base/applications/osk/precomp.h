@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs On-Screen Keyboard
+ * PROJECT:         ReactOS On-Screen Keyboard
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Pre-compiled header
  * COPYRIGHT:       Denis ROBERT
@@ -41,7 +41,7 @@ typedef struct _KEYBOARD_STRUCT
     SIZE Size;
     POINT LedTextStart;
     SIZE LedTextSize;
-    INT LedTextOffset;
+    INT LedTextOffset; 
     POINT LedStart;
     SIZE LedSize;
     INT LedGap;

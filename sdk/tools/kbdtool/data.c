@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Build Tools [Keyboard Layout Compiler]
+ * PROJECT:         ReactOS Build Tools [Keyboard Layout Compiler]
  * LICENSE:         BSD - See COPYING.BSD in the top level directory
  * FILE:            tools/kbdtool/data.c
  * PURPOSE:         Internal Keyboard (Scancode/Virtual Key) Tables
- * PROGRAMMERS:     Windivs Foundation
+ * PROGRAMMERS:     ReactOS Foundation
  */
 
 /* INCLUDES *******************************************************************/

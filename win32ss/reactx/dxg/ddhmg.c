@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Native driver for dxg implementation
  * FILE:             win32ss/reactx/dxg/ddhmg.c
  * PROGRAMER:        Magnus olsen (magnus@greatlord.com)
@@ -279,9 +279,9 @@ DdGetFreeHandle(UCHAR objType)
        pEntry = (PDD_ENTRY)((PBYTE)gpentDdHmgr + (sizeof(DD_ENTRY) * index));
 
        // put next free index to our global variable
-       ghFreeDdHmgr = pEntry->NextFree;
+       ghFreeDdHmgr = pEntry->NextFree;             
 
-       // build handle
+       // build handle 
        pEntry->FullUnique = objType | 8;
        retVal = (pEntry->FullUnique << 21) | index;
        return (HANDLE)retVal;
@@ -305,7 +305,7 @@ DdGetFreeHandle(UCHAR objType)
 
     pEntry = (PDD_ENTRY)((PBYTE)gpentDdHmgr + (sizeof(DD_ENTRY) * gcMaxDdHmgr));
 
-    // build handle
+    // build handle 
     pEntry->FullUnique = objType | 8;
     retVal = (pEntry->FullUnique << 21) | gcMaxDdHmgr;
     gcMaxDdHmgr = gcMaxDdHmgr + 1;
@@ -370,7 +370,7 @@ DdHmgAlloc(ULONG objSize, CHAR objType, BOOLEAN objLock)
             pEntry->pobj->Tid = KeGetCurrentThread();
         }
         pEntry->pobj->hHmgr = DdHandle;
-
+        
         EngReleaseSemaphore(ghsemHmgr);
 
         /* Return handle if object not locked */

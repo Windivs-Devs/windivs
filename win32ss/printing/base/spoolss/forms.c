@@ -1,8 +1,8 @@
 /*
- * PROJECT:     Windivs Spooler Router
+ * PROJECT:     ReactOS Spooler Router
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Functions for managing print Forms
- * COPYRIGHT:   Copyright 2020 Windivs
+ * COPYRIGHT:   Copyright 2020 ReactOS
  */
 
 #include "precomp.h"

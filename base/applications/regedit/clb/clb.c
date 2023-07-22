@@ -1,5 +1,5 @@
 /*
- * Windivs Column List Box
+ * ReactOS Column List Box
  * Copyright (C) 2005 Thomas Weidenmueller
  *
  * This library is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 /*
- * PROJECT:         Windivs Column List Box
+ * PROJECT:         ReactOS Column List Box
  * FILE:            base/applications/regedit/clb/clb.c
  * PURPOSE:         Column List Box
  * PROGRAMMER:      Thomas Weidenmueller <w3seek@reactos.com>

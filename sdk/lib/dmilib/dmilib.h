@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs DMI/SMBIOS Library
+ * PROJECT:     ReactOS DMI/SMBIOS Library
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dmilib.h
  * PURPOSE:     SMBIOS table parsing functions

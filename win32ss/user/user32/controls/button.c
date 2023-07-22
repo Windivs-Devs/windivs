@@ -22,11 +22,11 @@
  *
  * This code was audited for completeness against the documented features
  * of Comctl32.dll version 6.0 on Oct. 3, 2004, by Dimitrie O. Paun.
- *
+ * 
  * Unless otherwise noted, we believe this code to be complete, as per
  * the specification mentioned above.
  * If you discover missing features, or bugs, please note them below.
- *
+ * 
  * TODO
  *  Styles
  *  - BS_NOTIFY: is it complete?
@@ -42,7 +42,7 @@
  *  - BCM_GETTEXTMARGIN
  *  - BCM_SETIMAGELIST
  *  - BCM_SETTEXTMARGIN
- *
+ *  
  *  Notifications
  *  - BCN_HOTITEMCHANGE
  *  - BN_DISABLE
@@ -80,7 +80,7 @@ WINE_DEFAULT_DEBUG_CHANNEL(button);
 #define BUTTON_UNKNOWN2        0x20
 #define BUTTON_UNKNOWN3        0x10
 #ifdef __REACTOS__
-#define BUTTON_BMCLICK         0x100 // Windivs Need to up to wine!
+#define BUTTON_BMCLICK         0x100 // ReactOS Need to up to wine!
 #endif
 
 #define BUTTON_NOTIFY_PARENT(hWnd, code) \
@@ -391,7 +391,7 @@ LRESULT WINAPI ButtonWndProc_common(HWND hWnd, UINT uMsg,
     case WM_LBUTTONUP:
 #ifdef __REACTOS__
     {
-        BOOL TellParent = FALSE; //// Windivs see note below.
+        BOOL TellParent = FALSE; //// ReactOS see note below.
 #endif
         state = get_button_state( hWnd );
         if (!(state & BUTTON_BTNPRESSED)) break;
@@ -463,7 +463,7 @@ LRESULT WINAPI ButtonWndProc_common(HWND hWnd, UINT uMsg,
     {
         /* Clear an old text here as Windows does */
 //
-// Windivs Note :
+// ReactOS Note :
 // wine Bug: http://bugs.winehq.org/show_bug.cgi?id=25790
 // Patch: http://source.winehq.org/patches/data/70889
 // By: Alexander LAW, Replicate Windows behavior of WM_SETTEXT handler regarding WM_CTLCOLOR*
@@ -1100,7 +1100,7 @@ static void CB_Paint( HWND hwnd, HDC hDC, UINT action )
     /* Draw label */
     client = rtext;
     dtFlags = BUTTON_CalcLabelRect(hwnd, hDC, &rtext);
-
+    
     /* Only adjust rbox when rtext is valid */
     if (dtFlags != (UINT)-1L)
     {
@@ -1125,11 +1125,11 @@ static void CB_Paint( HWND hwnd, HDC hDC, UINT action )
 
 	/* rbox must have the correct height */
 	delta = rbox.bottom - rbox.top - checkBoxHeight;
-
+	
 	if (style & BS_TOP) {
 	    if (delta > 0) {
 		rbox.bottom = rbox.top + checkBoxHeight;
-	    } else {
+	    } else { 
 		rbox.top -= -delta/2 + 1;
 		rbox.bottom = rbox.top + checkBoxHeight;
 	    }

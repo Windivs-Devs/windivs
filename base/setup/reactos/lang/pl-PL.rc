@@ -13,40 +13,40 @@ LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Witamy w Kreatorze instalacji systemu Windivs", IDC_STARTTITLE, 115, 8, 195, 24
-    LTEXT "Obecnie nie można zainstalować systemu Windivs bezpośrednio! Uruchom ponownie komputer z tej płyty, aby zainstalować system Windivs.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Witamy w Kreatorze instalacji systemu ReactOS", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "Obecnie nie można zainstalować systemu ReactOS bezpośrednio! Uruchom ponownie komputer z tej płyty, aby zainstalować system ReactOS.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Kliknij przycisk Anuluj, aby zakończyć pracę instalatora.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTORADIOBUTTON "Zainstaluj system Windivs", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
-    LTEXT "Zainstaluj nową kopię systemu Windivs. Ta opcja nie zachowa plików, ustawień i programów. Możesz dokonać zmian w dyskach i partycjach.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
-    AUTORADIOBUTTON "Napraw lub uaktualnij istniejącą instalację systemu Windivs", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "Napraw istniejącą instalację lub wykonaj uaktualnienie do nowszej wersji systemu Windivs. Ta opcja zachowa pliki, ustawienia i programy. Jest dostępna, jeżeli system Windivs znajduje się już na tym komputerze.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
+    AUTORADIOBUTTON "Zainstaluj system ReactOS", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
+    LTEXT "Zainstaluj nową kopię systemu ReactOS. Ta opcja nie zachowa plików, ustawień i programów. Możesz dokonać zmian w dyskach i partycjach.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
+    AUTORADIOBUTTON "Napraw lub uaktualnij istniejącą instalację systemu ReactOS", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "Napraw istniejącą instalację lub wykonaj uaktualnienie do nowszej wersji systemu ReactOS. Ta opcja zachowa pliki, ustawienia i programy. Jest dostępna, jeżeli system ReactOS znajduje się już na tym komputerze.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
     LTEXT "Kliknij Dalej, aby zmienić ustawienia sprzętu.", IDC_STATIC, 7, 128, 297, 8
 END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT       "Instalator może uaktualnić jedną z poniższych instalacji systemu Windivs. Jeśl instalacja systemu Windivs jest uszkodzona, instalator może podjąć próbę jej naprawy.", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "Instalator może uaktualnić jedną z poniższych instalacji systemu ReactOS. Jeśl instalacja systemu ReactOS jest uszkodzona, instalator może podjąć próbę jej naprawy.", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "&Nowa instalacja", IDC_SKIPUPGRADE, 230, 128, 80, 14
-    LTEXT       "Kliknij Dalej, aby uaktualnić wybraną instalację systemu, lub na 'Nowa instalacja' aby wykonać nową instalację systemu Windivs.", IDC_STATIC, 7, 124, 216, 16
+    LTEXT       "Kliknij Dalej, aby uaktualnić wybraną instalację systemu, lub na 'Nowa instalacja' aby wykonać nową instalację systemu ReactOS.", IDC_STATIC, 7, 124, 216, 16
 END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Komputer:", IDC_STATIC, 20, 15, 80, 10
@@ -60,7 +60,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -104,7 +104,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Typ instalacji:", IDC_STATIC, 18, 5, 74, 11
@@ -123,14 +123,14 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Katalog docelowy:", IDC_STATIC, 18, 89, 74, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "Potwierdzam, że wszystkie ustawienia instalacji są poprawne. Przyjmuję równierz, że system Windivs to oprogramowanie w fazie RC i może w każdej chwili przestać działać lub nieodwracalnie uszkodzić moje dane na dysku.",
+    AUTOCHECKBOX "Potwierdzam, że wszystkie ustawienia instalacji są poprawne. Przyjmuję równierz, że system ReactOS to oprogramowanie w fazie RC i może w każdej chwili przestać działać lub nieodwracalnie uszkodzić moje dane na dysku.",
         IDC_CONFIRM_INSTALL, 7, 100, 303, 24, BS_MULTILINE
     LTEXT "Potwierdź, że wszystkie ustawienia instalacji są poprawne, a następnie kliknij na Instaluj, aby rozpocząć proces instalacji.", IDC_STATIC, 7, 127, 303, 18
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Instalacja plików...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -140,11 +140,11 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Instalator systemu Windivs"
+CAPTION "Instalator systemu ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Kończenie pracy Kreatora instalacji systemu Windivs", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Pierwszy etap instalacji Windivs został pomyślnie zakończony.", IDC_STATIC, 20, 50, 277, 10
+    LTEXT "Kończenie pracy Kreatora instalacji systemu ReactOS", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "Pierwszy etap instalacji ReactOS został pomyślnie zakończony.", IDC_STATIC, 20, 50, 277, 10
     LTEXT "Po kliknięciu na przycisk Zakończ, komputer zostanie uruchomiony ponownie.", IDC_STATIC, 20, 80, 277, 10
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
     LTEXT "Jeśli w napędzie jest płyta CD, wyjmij ją. Następnie Kliknij Zakończ, aby ponownie uruchomić komputer.", IDC_STATIC, 10, 175, 297, 20
@@ -152,7 +152,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TYPETITLE "Witamy w Kreatorze instalacji systemu Windivs"
+    IDS_TYPETITLE "Witamy w Kreatorze instalacji systemu ReactOS"
     IDS_TYPESUBTITLE "Wybierz typ instalacji."
     IDS_DEVICETITLE "Ustawienia podstawowych urządzeń"
     IDS_DEVICESUBTITLE "Zmień ustawienia monitora i klawiatury."
@@ -164,10 +164,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "Pierwszy etap instalacji został zakończony, uruchom ponownie komputer, aby przejść do drugiego etapu"
     IDS_SUMMARYTITLE "Podsumowanie instalacji"
     IDS_SUMMARYSUBTITLE "Sprawdź ustawienia instalacji przed dokonaniem zmian na dysku"
-    IDS_ABORTSETUP "Instalacja systemu Windivs nie została ukończona na tym komputerze. Jeśli teraz zakończysz instalację, wymagane będzie ponowne uruchomienie instalatora, aby zainstalować system Windivs. Czy na pewno chcesz teraz zakończyć?"
+    IDS_ABORTSETUP "Instalacja systemu ReactOS nie została ukończona na tym komputerze. Jeśli teraz zakończysz instalację, wymagane będzie ponowne uruchomienie instalatora, aby zainstalować system ReactOS. Czy na pewno chcesz teraz zakończyć?"
     IDS_ABORTSETUP2 "Czy na pewno chcesz przerwać instalację?"
     IDS_NO_TXTSETUP_SIF "Nie można znaleźć pliku 'txtsetup.sif'.\nInstalator nie może kontynuować."
-    IDS_CAPTION "Instalator systemu Windivs"
+    IDS_CAPTION "Instalator systemu ReactOS"
 END
 
 STRINGTABLE

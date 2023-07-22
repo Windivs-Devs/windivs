@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Windows
  * FILE:             win32ss/user/ntuser/winpos.c
  * PROGRAMER:        Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -264,7 +264,7 @@ SelectWindowRgn(PWND Window, HRGN hRgnClip)
         /* Delete no longer needed region handle */
         IntGdiSetRegionOwner(Window->hrgnClip, GDI_OBJ_HMGR_POWNED);
         GreDeleteObject(Window->hrgnClip);
-        Window->hrgnClip = NULL;
+        Window->hrgnClip = NULL;       
     }
 
     if (hRgnClip > HRGN_WINDOW)
@@ -460,7 +460,7 @@ done:
 
    if (gpqForeground && (!gpqForeground->spwndActive || Wnd == gpqForeground->spwndActive))
    {
-      /* Windivs can pass WndTo = NULL to co_IntSetForegroundWindow and returns FALSE. */
+      /* ReactOS can pass WndTo = NULL to co_IntSetForegroundWindow and returns FALSE. */
       //ERR("WinPosActivateOtherWindow Set FG 0x%p hWnd %p\n",WndTo, WndTo ? WndTo->head.h : 0);
       if (co_IntSetForegroundWindow(WndTo))
       {
@@ -789,7 +789,7 @@ WinPosFindIconPos(PWND Window, POINT *Pos)
    if (UserIsDesktopWindow(pwndParent))
    {
       ERR("FIXME: Parent is Desktop, Min off screen!\n");
-      /* FIXME: Windivs doesn't support iconic minimize to desktop */
+      /* FIXME: ReactOS doesn't support iconic minimize to desktop */
       Pos->x = Pos->y = -32000;
       Window->InternalPos.flags |= WPF_MININIT;
       Window->InternalPos.IconPos.x = Pos->x;
@@ -910,7 +910,7 @@ UserGetWindowBorders(DWORD Style, DWORD ExStyle, SIZE *Size, BOOL WithClient)
 
 //
 // Fix CORE-5177
-// See winetests:user32:win.c:wine_AdjustWindowRectEx,
+// See winetests:user32:win.c:wine_AdjustWindowRectEx, 
 // Simplified version.
 //
 DWORD IntGetWindowBorders(DWORD Style, DWORD ExStyle)
@@ -1345,7 +1345,7 @@ co_WinPosDoWinPosChanging(PWND Window,
  *
  * FIXME: hide/show owned popups when owner visibility changes.
  *
- * Windivs: See bug CORE-6129 and CORE-6554.
+ * ReactOS: See bug CORE-6129 and CORE-6554.
  *
  */
  ////
@@ -2195,7 +2195,7 @@ co_WinPosSetWindowPos(
                         /*
                          * Check if we have these specific windows style bits set/reset.
                          * FIXME: There may be other combinations of styles that need this handling as well.
-                         * This fixes the Windivs Calculator buttons disappearing in CORE-16827.
+                         * This fixes the ReactOS Calculator buttons disappearing in CORE-16827.
                          */
                         if ((Window->style & WS_CLIPSIBLINGS) && !(Window->style & (WS_POPUP | WS_CLIPCHILDREN | WS_SIZEBOX)))
                         {
@@ -2275,7 +2275,7 @@ co_WinPosSetWindowPos(
 
    if ( !PosChanged &&
          (WinPos.flags & SWP_FRAMECHANGED) &&
-        !(WinPos.flags & SWP_DEFERERASE) &&    // Prevent sending WM_SYNCPAINT message.
+        !(WinPos.flags & SWP_DEFERERASE) &&    // Prevent sending WM_SYNCPAINT message. 
          VisAfter )
    {
        PWND Parent = Window->spwndParent;

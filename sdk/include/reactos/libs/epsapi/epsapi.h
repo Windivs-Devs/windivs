@@ -3,7 +3,7 @@
  *
  * Process Status Helper API, native interface
  *
- * This file is part of the Windivs Operating System.
+ * This file is part of the ReactOS Operating System.
  *
  * Contributors:
  *  Created by KJK::Hyperion <noog@libero.it>

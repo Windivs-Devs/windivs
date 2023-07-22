@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs kernel
+ * PROJECT:           ReactOS kernel
  * PURPOSE:
  * FILE:              win32ss/gdi/eng/debug.c
  * PROGRAMER:         Jason Filby

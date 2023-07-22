@@ -1,8 +1,8 @@
 /*
- * PROJECT:         Windivs api tests
+ * PROJECT:         ReactOS api tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for Rectangle
- * PROGRAMMERS:     Jï¿½rï¿½me Gardou
+ * PROGRAMMERS:     Jérôme Gardou
  */
 
 #include "precomp.h"

@@ -1,8 +1,8 @@
 /*
- * PROJECT:         Windivs Hardware Abstraction Layer
+ * PROJECT:         ReactOS Hardware Abstraction Layer
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * PURPOSE:         NMI handling
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

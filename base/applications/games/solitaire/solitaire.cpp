@@ -60,7 +60,7 @@ VOID LoadSettings(VOID)
     HKEY hKey;
 
     if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                       _T("Software\\Windivs\\Solitaire"),
+                       _T("Software\\ReactOS\\Solitaire"),
                        0,
                        NULL,
                        REG_OPTION_NON_VOLATILE,
@@ -97,7 +97,7 @@ VOID SaveSettings(VOID)
     HKEY hKey;
 
     if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                       _T("Software\\Windivs\\Solitaire"),
+                       _T("Software\\ReactOS\\Solitaire"),
                        0,
                        NULL,
                        REG_OPTION_NON_VOLATILE,

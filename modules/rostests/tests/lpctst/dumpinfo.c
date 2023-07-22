@@ -1,7 +1,7 @@
 /*
  * reactos/apps/lpc/dumpinfo.c
  *
- * Windivs Operating System
+ * ReactOS Operating System
  *
  * Dump a kernel object's attributes by its handle.
  *

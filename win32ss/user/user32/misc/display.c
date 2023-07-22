@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs user32.dll
+ * PROJECT:         ReactOS user32.dll
  * FILE:            win32ss/user/user32/misc/display.c
  * PURPOSE:         DDE
  * PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -162,9 +162,9 @@ EnumDisplayMonitors(
         if (!lpfnEnum(hMonitor, hMonitorDC, pMonitorRect, dwData))
             goto cleanup; /* return FALSE */
     }
-
+    
     ret = TRUE;
-
+    
 cleanup:
     if(hMonitorList)
         HeapFree(hHeap, 0, hMonitorList);

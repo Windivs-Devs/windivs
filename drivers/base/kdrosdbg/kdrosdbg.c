@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            drivers/base/kdcom/kdbg.c
  * PURPOSE:         Serial i/o functions for the kernel debugger.
  * PROGRAMMER:      Alex Ionescu
- *                  Hervï¿½ Poussineau
+ *                  Hervé Poussineau
  */
 
 /* INCLUDES *****************************************************************/

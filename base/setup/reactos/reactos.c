@@ -1,6 +1,6 @@
 /*
- *  Windivs applications
- *  Copyright (C) 2004-2008 Windivs Team
+ *  ReactOS applications
+ *  Copyright (C) 2004-2008 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs GUI first stage setup application
+ * PROJECT:     ReactOS GUI first stage setup application
  * FILE:        base/setup/reactos/reactos.c
  * PROGRAMMERS: Matthias Kupfer
  *              Dmitry Chapyshev (dmitry@reactos.org)
@@ -214,7 +214,7 @@ TypeDlgProc(
 
                 case PSN_QUERYINITIALFOCUS:
                 {
-                    /* Focus on "Install Windivs" */
+                    /* Focus on "Install ReactOS" */
                     SetWindowLongPtr(hwndDlg, DWLP_MSGRESULT, (LONG_PTR)GetDlgItem(hwndDlg, IDC_INSTALL));
                     return TRUE;
                 }
@@ -871,7 +871,7 @@ SummaryDlgProc(
                     else
                     {
                         StringCchCopyW(CurrentItemText, ARRAYSIZE(CurrentItemText),
-                                       L"New Windivs installation");
+                                       L"New ReactOS installation");
                     }
                     SetDlgItemTextW(hwndDlg, IDC_INSTALLTYPE, CurrentItemText);
 

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs API tests
+ * PROJECT:     ReactOS API tests
  * LICENSE:     MIT (https://spdx.org/licenses/MIT)
  * PURPOSE:     Tests for floor / floorf
  * COPYRIGHT:   Copyright 2021 Timo Kreuzer <timo.kreuzer@reactos.org>

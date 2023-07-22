@@ -4,11 +4,11 @@
 ;
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = SCSIAdapter
 ClassGUID  = {4D36E97B-E325-11CE-BFC1-08002BE10318}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 11/02/2007,1.1
 
 [ClassInstall32.NT]
@@ -71,7 +71,7 @@ LoadOrderGroup = SCSI Miniport
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Project"
+ReactOS = "ReactOS Project"
 
 ; Localizable
 SCSIClassName = "SCSI and RAID Controllers"

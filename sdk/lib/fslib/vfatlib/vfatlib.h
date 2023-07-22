@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs VFAT filesystem library
+ * PROJECT:     ReactOS VFAT filesystem library
  * FILE:        vfatlib.h
  */
 

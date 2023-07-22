@@ -1,10 +1,10 @@
 /*
- * PROJECT:         Windivs VGA Miniport Driver
+ * PROJECT:         ReactOS VGA Miniport Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/miniport/vga_new/vgadata.c
  * PURPOSE:         Handles switching to VGA Modes and holds VGA Built-in Modes
  * PROGRAMMERS:     Copyright (c) 1992  Microsoft Corporation
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
 
 #include "vga.h"
@@ -83,7 +83,7 @@ USHORT VGA_640x480[] = {
     OW,                             // text/graphics bit
     GRAPH_ADDRESS_PORT,
     0x506,
-
+    
     OW,                             // end sync reset
     SEQ_ADDRESS_PORT,
     IND_SYNC_RESET,
@@ -94,7 +94,7 @@ USHORT VGA_640x480[] = {
 
     OW,                             // unprotect crtc 0-7
     CRTC_ADDRESS_PORT_COLOR,
-    0x511,
+    0x511,                        
 
     METAOUT+INDXOUT,                // program crtc registers
     CRTC_ADDRESS_PORT_COLOR,
@@ -125,7 +125,7 @@ USHORT VGA_640x480[] = {
 
     IB,                             // prepare atc for writing
     INPUT_STATUS_1_COLOR,
-
+    
     OB,                             // turn video on.
     ATT_ADDRESS_PORT,
     VIDEO_ENABLE,
@@ -152,7 +152,7 @@ USHORT VGA_TEXT_0[] = {
     OW,                             // text/graphics bit
     GRAPH_ADDRESS_PORT,
     0x0e06,
-
+    
     OW,                             // end sync reset
     SEQ_ADDRESS_PORT,
     IND_SYNC_RESET,
@@ -163,7 +163,7 @@ USHORT VGA_TEXT_0[] = {
 
     OW,                             // unprotect crtc 0-7
     CRTC_ADDRESS_PORT_COLOR,
-    0xE11,
+    0xE11,                        
 
     METAOUT+INDXOUT,                // program crtc registers
     CRTC_ADDRESS_PORT_COLOR,
@@ -194,7 +194,7 @@ USHORT VGA_TEXT_0[] = {
 
     IB,                             // prepare atc for writing
     INPUT_STATUS_1_COLOR,
-
+    
     OB,                             // turn video on.
     ATT_ADDRESS_PORT,
     VIDEO_ENABLE,
@@ -221,7 +221,7 @@ USHORT VGA_TEXT_1[] = {
     OW,                             // text/graphics bit
     GRAPH_ADDRESS_PORT,
     0x0e06,
-
+    
     OW,                             // end sync reset
     SEQ_ADDRESS_PORT,
     IND_SYNC_RESET,
@@ -232,7 +232,7 @@ USHORT VGA_TEXT_1[] = {
 
     OW,                             // unprotect crtc 0-7
     CRTC_ADDRESS_PORT_COLOR,
-    0x511,
+    0x511,                        
 
     METAOUT+INDXOUT,                // program crtc registers
     CRTC_ADDRESS_PORT_COLOR,
@@ -263,14 +263,14 @@ USHORT VGA_TEXT_1[] = {
 
     IB,                             // prepare atc for writing
     INPUT_STATUS_1_COLOR,
-
+    
     OB,                             // turn video on.
     ATT_ADDRESS_PORT,
     VIDEO_ENABLE,
 
     EOD
 };
-// eVb: 4.2 [END]
+// eVb: 4.2 [END]  
 //
 // Video mode table - contains information and commands for initializing each
 // mode. These entries must correspond with those in VIDEO_MODE_VGA. The first
@@ -299,14 +299,14 @@ VIDEOMODE ModesVGA[] =
         FALSE,
         0
     },
-
+    
     //
     // Color text mode 3, 640x350, 8x14 char cell (EGA).
     //
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR,
         4, 1,
-        80, 25,
+        80, 25, 
         640, 350,
         1,
         160, 0x10000,
@@ -319,7 +319,7 @@ VIDEOMODE ModesVGA[] =
         FALSE,
         0
     },
-
+    
     //
     //
     // Standard VGA Color graphics mode 0x12, 640x480 16 colors.
@@ -327,7 +327,7 @@ VIDEOMODE ModesVGA[] =
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR | VIDEO_MODE_GRAPHICS,
         4, 1,
-        80, 30,
+        80, 30, 
         640, 480,
         1,
         80, 0x10000,
@@ -344,7 +344,7 @@ VIDEOMODE ModesVGA[] =
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR | VIDEO_MODE_GRAPHICS,
         8, 1,
-        0, 0,
+        0, 0, 
         320, 200,
         70,
         80, 0x10000,
@@ -357,11 +357,11 @@ VIDEOMODE ModesVGA[] =
         FALSE,
         0
     },
-
+    
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR | VIDEO_MODE_GRAPHICS,
         8, 1,
-        0, 0,
+        0, 0, 
         320, 240,
         60,
         80, 0x10000,
@@ -374,11 +374,11 @@ VIDEOMODE ModesVGA[] =
         FALSE,
         0
     },
-
+    
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR | VIDEO_MODE_GRAPHICS,
         8, 1,
-        0, 0,
+        0, 0, 
         320, 400,
         70,
         80, 0x10000,
@@ -395,7 +395,7 @@ VIDEOMODE ModesVGA[] =
     {
         VIDEO_MODE_BANKED | VIDEO_MODE_COLOR | VIDEO_MODE_GRAPHICS,
         8, 1,
-        0, 0,
+        0, 0, 
         320, 480,
         60,
         80, 0x10000,
@@ -408,7 +408,7 @@ VIDEOMODE ModesVGA[] =
         FALSE,
         0
     },
-
+    
     //
     // 800x600 16 colors.
     //

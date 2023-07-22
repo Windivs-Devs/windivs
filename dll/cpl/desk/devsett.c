@@ -1,8 +1,8 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Display Control Panel
+ * PROJECT:         ReactOS Display Control Panel
  * FILE:            dll/cpl/desk/devsett.c
- * PURPOSE:         Windivs Display Control Panel Shell Extension Support
+ * PURPOSE:         ReactOS Display Control Panel Shell Extension Support
  */
 
 #include "desk.h"

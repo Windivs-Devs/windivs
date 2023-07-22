@@ -1,5 +1,5 @@
 ﻿/*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/mm/mminit.c
  * PURPOSE:         Memory Manager Initialization
@@ -85,7 +85,7 @@ MiInitSystemMemoryAreas(VOID)
     // Protect the PFN database
     MiCreateArm3StaticMemoryArea(MmPfnDatabase, (MxPfnAllocation << PAGE_SHIFT), FALSE);
 
-    // Windivs requires a memory area to keep the initial NP area off-bounds
+    // ReactOS requires a memory area to keep the initial NP area off-bounds
     MiCreateArm3StaticMemoryArea(MmNonPagedPoolStart, MmSizeOfNonPagedPoolInBytes, FALSE);
 
     // System PTE space

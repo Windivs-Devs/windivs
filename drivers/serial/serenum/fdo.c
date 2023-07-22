@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Serial enumerator driver
+ * PROJECT:         ReactOS Serial enumerator driver
  * FILE:            drivers/bus/serenum/fdo.c
  * PURPOSE:         IRP_MJ_PNP operations for FDOs
  *
- * PROGRAMMERS:     Hervï¿½ Poussineau (hpoussin@reactos.org)
+ * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.org)
  */
 
 #include "serenum.h"
@@ -193,7 +193,7 @@ SerenumFdoPnp(
 					Status = SerenumFdoStartDevice(DeviceObject, Irp);
 				}
 			}
-
+				
 			break;
 		}
 		case IRP_MN_QUERY_DEVICE_RELATIONS: /* 0x7 */

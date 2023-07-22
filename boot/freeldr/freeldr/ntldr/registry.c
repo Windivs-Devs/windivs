@@ -462,7 +462,7 @@ RegQueryValue(
 /*
  * NOTE: This function is currently unused in FreeLdr; however it is kept here
  * as an implementation reference of RegEnumValue using CMLIB that may be used
- * elsewhere in Windivs.
+ * elsewhere in ReactOS.
  */
 #if 0
 LONG

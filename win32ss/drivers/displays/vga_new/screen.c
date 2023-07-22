@@ -1,10 +1,10 @@
 /*
- * PROJECT:         Windivs Framebuffer Display Driver
+ * PROJECT:         ReactOS Framebuffer Display Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/displays/vga_new/screen.c
  * PURPOSE:         Surface, Screen and PDEV support/initialization
  * PROGRAMMERS:     Copyright (c) 1992-1995 Microsoft Corporation
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
 #include "driver.h"
 
@@ -104,7 +104,7 @@ GDIINFO gaulCap = {
 // eVb: 2.4 [VGARISC DDK CHANGE] - Use 1 bit alignment, not 8
      1,                      // ulBltAlignment (preferred window alignment
 // eVb: 2.4 [END]
-                             //   for fast-text routines)
+                             //   for fast-text routines)                            
      0,                                         // ulPanningHorzRes
      0,                                         // ulPanningVertRes
 };
@@ -172,7 +172,7 @@ BOOL bInitSURF(PPDEV ppdev, BOOL bFirst)
     VIDEO_MEMORY videoMemory;
     VIDEO_MEMORY_INFORMATION videoMemoryInformation;
 // eVb: 2.1 [DDK Change] - Support new VGA Miniport behavior w.r.t updated framebuffer remapping
-    ULONG RemappingNeeded = 0;
+    ULONG RemappingNeeded = 0;  
 // eVb: 2.1 [END]
     //
     // Set the current mode into the hardware.

@@ -1,6 +1,6 @@
 /*
- *  Windivs kernel
- *  Copyright (C) 1998, 1999, 2000, 2001 Windivs Team
+ *  ReactOS kernel
+ *  Copyright (C) 1998, 1999, 2000, 2001 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 /*
- * PROJECT:         Windivs user32.dll
+ * PROJECT:         ReactOS user32.dll
  * FILE:            win32ss/user/user32/windows/font.c
  * PURPOSE:         Draw Text
  * PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -251,7 +251,7 @@ GetTabbedTextExtentW(
  * the allowance in DrawTextExA.
  */
 #define MAX_BUFFER 1024
-/*
+/* 
  * @implemented
  *
  * Synced with Wine Staging 1.7.37
@@ -386,24 +386,24 @@ INT WINAPI DrawTextA( HDC hdc, LPCSTR str, INT count, LPRECT rect, UINT flags )
 
 /***************************************************************************
  *       UserLpkPSMTextOut
- *
+ * 
  * Stripped down version of DrawText, can only draw single line text and
  * Prefix underscore (only on the last found amperstand)
  * only flags to be found to be of use in testing:
- *
+ * 
  * DT_NOPREFIX   - Draw the string as is it without any changes
  * DT_HIDEPREFIX - Draw the string without underscore
  * DT_PREFIXONLY - Draw only the underscore
- *
+ * 
  * without any of these flags the behavior is the string being drawn without the amperstands and
  * with the underscore.
- *
+ * 
  * lpk has an equivalent function - LpkPSMTextOut
  * Notes by testing:
  * This function in windows doesn't check if lpString is NULL, which results a crash,
  * returns seemingly random values without any logic, and ignores the DT_NOPREFIX value.
  * All of these issues don't exist in the LPK version.
- *
+ * 
  * Note: lpString does not need to be null terminated
  */
 #define PREFIX 38
@@ -451,7 +451,7 @@ INT WINAPI UserLpkPSMTextOut(HDC hdc, int x, int y, LPCWSTR lpString, int cStrin
         }
     }
 
-    display_str[j] = L'\0';
+    display_str[j] = L'\0';   
     len = wcslen(display_str);
 
     if (!(dwFlags & DT_PREFIXONLY))
@@ -459,7 +459,7 @@ INT WINAPI UserLpkPSMTextOut(HDC hdc, int x, int y, LPCWSTR lpString, int cStrin
 
     if (!(dwFlags & DT_HIDEPREFIX))
     {
-
+        
         for (i = 0; i < cString - 1; i++)
         {
             if (lpString[i] == PREFIX && lpString[i + 1] != PREFIX)
@@ -474,7 +474,7 @@ INT WINAPI UserLpkPSMTextOut(HDC hdc, int x, int y, LPCWSTR lpString, int cStrin
         }
 
         GetTextMetricsW(hdc, &tm);
-
+        
         if (prefix_offset != -1)
         {
             GetTextExtentPointW(hdc, display_str, prefix_offset, &size);

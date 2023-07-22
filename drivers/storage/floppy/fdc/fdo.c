@@ -1,5 +1,5 @@
 /*
- * PROJECT:        Windivs Floppy Disk Controller Driver
+ * PROJECT:        ReactOS Floppy Disk Controller Driver
  * LICENSE:        GNU GPLv2 only as published by the Free Software Foundation
  * FILE:           drivers/storage/fdc/fdc/fdo.c
  * PURPOSE:        Functional Device Object routines
@@ -459,7 +459,7 @@ FdcFdoPnp(
     {
         case IRP_MN_START_DEVICE:
             DPRINT("  IRP_MN_START_DEVICE received\n");
-
+            
             /* Call lower driver */
             Status = STATUS_UNSUCCESSFUL;
             FdoExtension = DeviceObject->DeviceExtension;

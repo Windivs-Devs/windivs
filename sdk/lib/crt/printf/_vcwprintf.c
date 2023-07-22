@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:       GNU GPL, see COPYING in the top level directory
- * PROJECT:         Windivs crt library
+ * PROJECT:         ReactOS crt library
  * FILE:            lib/sdk/crt/printf/_vcwprintf.c
  * PURPOSE:         Implementation of _vcwprintf
- * PROGRAMMER:      Samuel Serapiï¿½n
+ * PROGRAMMER:      Samuel Serapión
  */
 
 #include <stdio.h>

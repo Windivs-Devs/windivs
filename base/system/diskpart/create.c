@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs DiskPart
+ * PROJECT:         ReactOS DiskPart
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/system/diskpart/create.c
  * PURPOSE:         Manages all the partitions of the OS in an interactive way.
@@ -268,7 +268,7 @@ CreateLogicalPartition(
             else
             {
                 ConResPuts(StdErr, IDS_ERROR_INVALID_ARGS);
-                return TRUE;
+                return TRUE; 
             }
         }
         else if (HasPrefix(argv[i], L"align=", &pszSuffix))
@@ -468,7 +468,7 @@ CreatePrimaryPartition(
             else
             {
                 ConResPuts(StdErr, IDS_ERROR_INVALID_ARGS);
-                return TRUE;
+                return TRUE; 
             }
         }
         else if (HasPrefix(argv[i], L"align=", &pszSuffix))

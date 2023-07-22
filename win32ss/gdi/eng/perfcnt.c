@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs kernel
+ * PROJECT:           ReactOS kernel
  * PURPOSE:           GDI Driver Performance Counter Functions
  * FILE:              win32ss/gdi/eng/perfcnt.c
  * PROGRAMER:         Ge van Geldorp

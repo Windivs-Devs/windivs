@@ -1,4 +1,4 @@
-/* Windivs-Specific lwIP binding header - by Cameron Gutman */
+/* ReactOS-Specific lwIP binding header - by Cameron Gutman */
 
 #include <wdm.h>
 

@@ -1,7 +1,7 @@
 /*
- * PROJECT:     Windivs API Test GUI
+ * PROJECT:     ReactOS API Test GUI
  * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:
+ * FILE:        
  * PURPOSE:     main dialog implementation
  * COPYRIGHT:   Copyright 2008 Ged Murphy <gedmurphy@reactos.org>
  *
@@ -386,7 +386,7 @@ wWinMain(HINSTANCE hInst,
 
     UNREFERENCED_PARAMETER(hPrev);
     UNREFERENCED_PARAMETER(Cmd);
-    UNREFERENCED_PARAMETER(iCmd);
+    UNREFERENCED_PARAMETER(iCmd); 
 
     hInstance = hInst;
 

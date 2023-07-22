@@ -1,5 +1,5 @@
 [Unattend]
-Signature = "$Windivs$"
+Signature = "$ReactOS$"
 
 ; Set UnattendSetupEnabled to yes in order to boot the livecd immediately to desktop
 ; yes - unattend setup enabled

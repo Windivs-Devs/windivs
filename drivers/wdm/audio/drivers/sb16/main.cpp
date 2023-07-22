@@ -1,5 +1,5 @@
 /*
-    Windivs Operating System
+    ReactOS Operating System
     Sound Blaster KS Driver
 
     AUTHORS:

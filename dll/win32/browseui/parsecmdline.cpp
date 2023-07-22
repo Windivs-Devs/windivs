@@ -1,5 +1,5 @@
 /*
-* Windivs browseui
+* ReactOS browseui
 *
 * Copyright 2014 David Quintana <gigaherz@gmail.com>
 *

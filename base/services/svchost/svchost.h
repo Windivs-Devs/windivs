@@ -1,9 +1,9 @@
 /*
- * PROJECT:     Windivs Service Host
+ * PROJECT:     ReactOS Service Host
  * LICENSE:     BSD - See COPYING.ARM in the top level directory
  * FILE:        base/services/svchost/svchost.h
  * PURPOSE:     Precompiled Header for Service Host
- * PROGRAMMERS: Windivs Portable Systems Group
+ * PROGRAMMERS: ReactOS Portable Systems Group
  */
 
 #ifndef _SVCHOST_PCH_

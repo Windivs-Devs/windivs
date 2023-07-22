@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Support for physical devices
  * FILE:             win32ss/gdi/eng/pdevobj.c
  * PROGRAMERS:       Timo Kreuzer (timo.kreuzer@reactos.org)

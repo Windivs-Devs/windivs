@@ -1,14 +1,14 @@
 /*
- * PROJECT:         Windivs CRT library
+ * PROJECT:         ReactOS CRT library
  * LICENSE:         LGPL - See COPYING in the top level directory
  * FILE:            lib/sdk/crt/stdio/file.c
  * PURPOSE:         File CRT functions
  * PROGRAMMERS:     Wine team
- *                  Ported to Windivs by Aleksey Bragin (aleksey@reactos.org)
+ *                  Ported to ReactOS by Aleksey Bragin (aleksey@reactos.org)
  */
 
 /*********************************************
- * This file contains Windivs changes!!
+ * This file contains ReactOS changes!!
  * Don't blindly sync it with Wine code!
  *
  * If you break Unicode output on the console again, please update this counter:
@@ -1194,7 +1194,7 @@ void CDECL _lock_file(FILE *file)
 {
     if(file>=_iob && file<_iob+_IOB_ENTRIES)
         _lock(_STREAM_LOCKS+(file-_iob));
-    /* Windivs: string streams dont need to be locked */
+    /* ReactOS: string streams dont need to be locked */
     else if(!(file->_flag & _IOSTRG))
         EnterCriticalSection(&((file_crit*)file)->crit);
 }
@@ -1206,7 +1206,7 @@ void CDECL _unlock_file(FILE *file)
 {
     if(file>=_iob && file<_iob+_IOB_ENTRIES)
         _unlock(_STREAM_LOCKS+(file-_iob));
-    /* Windivs: string streams dont need to be locked */
+    /* ReactOS: string streams dont need to be locked */
     else if(!(file->_flag & _IOSTRG))
         LeaveCriticalSection(&((file_crit*)file)->crit);
 
@@ -3137,7 +3137,7 @@ size_t CDECL fwrite(const void *ptr, size_t size, size_t nmemb, FILE* file)
 
 /*********************************************************************
  *		fputwc (MSVCRT.@)
- * FORKED for Windivs, don't sync with Wine!
+ * FORKED for ReactOS, don't sync with Wine!
  * References:
  *   - http://jira.reactos.org/browse/CORE-6495
  *   - http://bugs.winehq.org/show_bug.cgi?id=8598

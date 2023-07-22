@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Kernel
+ * PROJECT:     ReactOS Kernel
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     PnP manager device manipulation functions
  * COPYRIGHT:   Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -759,7 +759,7 @@ PiCallDriverAddDevice(
         driverEntry = CONTAINING_RECORD(listEntry, ADD_DEV_DRIVERS_LIST, ListEntry);
         PDRIVER_OBJECT driverObject = driverEntry->DriverObject;
 
-        // FIXME: Windivs is not quite ready for this assert
+        // FIXME: ReactOS is not quite ready for this assert
         // (legacy drivers should not have AddDevice routine)
         // ASSERT(!(DriverObject->Flags & DRVO_LEGACY_DRIVER));
 
@@ -778,7 +778,7 @@ PiCallDriverAddDevice(
         else
         {
             // HACK: the driver doesn't have a AddDevice routine. We shouldn't be here,
-            // but Windivs' PnP stack is not that correct yet
+            // but ReactOS' PnP stack is not that correct yet
             DeviceNode->Flags |= DNF_LEGACY_DRIVER;
             Status = STATUS_UNSUCCESSFUL;
         }
@@ -1508,7 +1508,7 @@ done:
  * Sends IRP_MN_QUERY_PNP_DEVICE_STATE request and sets device node's flags
  * according to the result.
  * Tree reenumeration should be started upon a successful return of the function.
- *
+ * 
  * @todo       Do not return STATUS_SUCCESS if nothing is changed.
  */
 static
@@ -1538,7 +1538,7 @@ PiUpdateDeviceState(
     if (PnPFlags & PNP_DEVICE_REMOVED || PnPFlags & PNP_DEVICE_DISABLED)
     {
         PiSetDevNodeProblem(DeviceNode,
-                            PnPFlags & PNP_DEVICE_DISABLED
+                            PnPFlags & PNP_DEVICE_DISABLED 
                             ? CM_PROB_HARDWARE_DISABLED
                             : CM_PROB_DEVICE_NOT_THERE);
 
@@ -2413,7 +2413,7 @@ PiDevNodeStateMachine(
                         PiIrpQueryStopDevice(currentNode);
                         PiSetDevNodeState(currentNode, DeviceNodeQueryStopped);
                     }
-
+                    
                     doProcessAgain = TRUE;
                 }
                 break;
@@ -2613,7 +2613,7 @@ PipDeviceActionWorker(
                     }
                 }
                 // TODO: Windows may return STATUS_DELETE_PENDING here
-                status = STATUS_SUCCESS;
+                status = STATUS_SUCCESS;                
                 break;
 
             default:

@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Win32 Base API
+ * PROJECT:         ReactOS Win32 Base API
  * LICENSE:         See COPYING in the top level directory
  * FILE:            dll/win32/kernel32/client/sysinfo.c
  * PURPOSE:         System Information Functions

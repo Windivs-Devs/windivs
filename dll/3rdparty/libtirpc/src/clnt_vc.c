@@ -46,7 +46,7 @@
  */
 
 /* NFSv4.1 client for Windows
- * Copyright ï¿½ 2012 The Regents of the University of Michigan
+ * Copyright © 2012 The Regents of the University of Michigan
  *
  * Olga Kornievskaia <aglo@umich.edu>
  * Casey Bodley <cbodley@umich.edu>
@@ -197,7 +197,7 @@ static const char __no_mem_str[] = "out of memory";
 /* callback thread */
 #define CALLBACK_TIMEOUT 5000
 #define	RQCRED_SIZE	400	/* this size is excessive */
-static unsigned int WINAPI clnt_cb_thread(void *args)
+static unsigned int WINAPI clnt_cb_thread(void *args) 
 {
     int status = NO_ERROR;
     CLIENT *cl = (CLIENT *)args;
@@ -205,7 +205,7 @@ static unsigned int WINAPI clnt_cb_thread(void *args)
 	XDR *xdrs = &(ct->ct_xdrs);
     long saved_timeout_sec = ct->ct_wait.tv_sec;
     long saved_timeout_usec = ct->ct_wait.tv_usec;
-    struct rpc_msg reply_msg;
+    struct rpc_msg reply_msg;    
     char cred_area[2 * MAX_AUTH_BYTES + RQCRED_SIZE];
 
     fprintf(stderr/*stdout*/, "%04x: Creating callback thread\n", GetCurrentThreadId());
@@ -213,12 +213,12 @@ static unsigned int WINAPI clnt_cb_thread(void *args)
         cb_req header;
         void *res = NULL;
         mutex_lock(&clnt_fd_lock);
-	    while (vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] ||
+	    while (vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] || 
                 !ct->use_stored_reply_msg ||
                 (ct->use_stored_reply_msg && ct->reply_msg.rm_direction != CALL)) {
             if (cl->shutdown)
                 break;
-		    if (!cond_wait_timed(&vc_cv[WINSOCK_HANDLE_HASH(ct->ct_fd)], &clnt_fd_lock,
+		    if (!cond_wait_timed(&vc_cv[WINSOCK_HANDLE_HASH(ct->ct_fd)], &clnt_fd_lock, 
                 CALLBACK_TIMEOUT))
                 if (!vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)])
                     break;
@@ -261,11 +261,11 @@ process_rpc_call:
         ct->reply_msg.rm_call.cb_cred.oa_base = cred_area;
         ct->reply_msg.rm_call.cb_verf.oa_base = &(cred_area[MAX_AUTH_BYTES]);
         if (!xdr_getcallbody(xdrs, &ct->reply_msg)) {
-            fprintf(stderr, "%04x: xdr_getcallbody failed\n", GetCurrentThreadId());
+            fprintf(stderr, "%04x: xdr_getcallbody failed\n", GetCurrentThreadId());            
             goto skip_process;
-        } else
-            fprintf(stdout, "%04x: callbody: rpcvers %d cb_prog %d cb_vers %d cb_proc %d\n",
-                GetCurrentThreadId(),
+        } else 
+            fprintf(stdout, "%04x: callbody: rpcvers %d cb_prog %d cb_vers %d cb_proc %d\n", 
+                GetCurrentThreadId(), 
                 ct->reply_msg.rm_call.cb_rpcvers, ct->reply_msg.rm_call.cb_prog,
                 ct->reply_msg.rm_call.cb_vers, ct->reply_msg.rm_call.cb_proc);
         header.rq_prog = ct->reply_msg.rm_call.cb_prog;
@@ -276,11 +276,11 @@ process_rpc_call:
         if (status) {
             fprintf(stderr, "%04x: callback function failed with %d\n", status);
         }
-
+        
         xdrs->x_op = XDR_ENCODE;
         __xdrrec_setblock(xdrs);
         reply_msg.rm_xid = ct->reply_msg.rm_xid;
-        fprintf(stdout, "%04x: cb: replying to xid %d\n", GetCurrentThreadId(),
+        fprintf(stdout, "%04x: cb: replying to xid %d\n", GetCurrentThreadId(), 
             ct->reply_msg.rm_xid);
         ct->reply_msg.rm_xid = 0;
         reply_msg.rm_direction = REPLY;
@@ -486,7 +486,7 @@ clnt_vc_create(fd, raddr, prog, vers, sendsz, recvsz, cb_xdr, cb_fn, cb_args)
             fprintf(stderr, "_beginthreadex failed %d\n", GetLastError());
             goto err;
         } else
-            fprintf(stdout, "%04x: started the callback thread %04x\n",
+            fprintf(stdout, "%04x: started the callback thread %04x\n", 
                 GetCurrentThreadId(), cl->cb_thread);
     } else
         cl->cb_thread = INVALID_HANDLE_VALUE;
@@ -589,8 +589,8 @@ call_again:
 #ifdef NO_CB_4_KRB5P
         if (cl->cb_thread != INVALID_HANDLE_VALUE) {
             mutex_lock(&clnt_fd_lock);
-	        while ((vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] &&
-                    vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] != GetCurrentThreadId()) ||
+	        while ((vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] && 
+                    vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] != GetCurrentThreadId()) || 
                     (ct->reply_msg.rm_xid && ct->reply_msg.rm_xid != x_id))
 		        cond_wait(&vc_cv[WINSOCK_HANDLE_HASH(ct->ct_fd)], &clnt_fd_lock);
 	        vc_fd_locks[WINSOCK_HANDLE_HASH(ct->ct_fd)] = GetCurrentThreadId();
@@ -611,7 +611,7 @@ call_again:
                         goto out;
                     }
 #ifdef NO_CB_4_KRB5P
-                    if (cl->cb_thread != INVALID_HANDLE_VALUE)
+                    if (cl->cb_thread != INVALID_HANDLE_VALUE)  
 #endif
 			            release_fd_lock(ct->ct_fd, mask);
                     SwitchToThread();
@@ -622,14 +622,14 @@ call_again:
             if (!xdr_getxiddir(xdrs, &ct->reply_msg)) {
 			    if (ct->ct_error.re_status == RPC_SUCCESS) {
 #ifdef NO_CB_4_KRB5P
-                    if (cl->cb_thread != INVALID_HANDLE_VALUE)
+                    if (cl->cb_thread != INVALID_HANDLE_VALUE)  
 #endif
                         release_fd_lock(ct->ct_fd, mask);
                     SwitchToThread();
                     continue;
                 }
                 goto out;
-            }
+            } 
 
             if (ct->reply_msg.rm_direction != REPLY) {
                 if (cl->cb_thread == INVALID_HANDLE_VALUE) {
@@ -657,7 +657,7 @@ call_again:
             }
             ct->use_stored_reply_msg = TRUE;
 #ifdef NO_CB_4_KRB5P
-            if (cl->cb_thread != INVALID_HANDLE_VALUE)
+            if (cl->cb_thread != INVALID_HANDLE_VALUE)  
 #endif
                 release_fd_lock(ct->ct_fd, mask);
             SwitchToThread();
@@ -921,7 +921,7 @@ clnt_vc_destroy(cl)
 
     if (cl->cb_thread != INVALID_HANDLE_VALUE) {
         int status;
-        fprintf(stdout, "%04x: sending shutdown to callback thread %04x\n",
+        fprintf(stdout, "%04x: sending shutdown to callback thread %04x\n", 
             GetCurrentThreadId(), cl->cb_thread);
         cl->shutdown = 1;
         mutex_unlock(&clnt_fd_lock);
@@ -977,7 +977,7 @@ read_vc(ctp, buf, len)
 #ifndef __REACTOS__
 		switch (poll(&fd, 1, milliseconds)) {
 #else
-		/* Windivs: use select instead of poll */
+		/* ReactOS: use select instead of poll */
 		fd_set infd;
 		struct timeval timeout;
 

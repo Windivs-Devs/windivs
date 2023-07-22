@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs System Control Panel Applet
+ * PROJECT:     ReactOS System Control Panel Applet
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/sysdm/general.c
  * PURPOSE:     General System Information
@@ -644,14 +644,14 @@ static VOID GetSystemUptime(HWND hwndDlg)
     {
         cMilliseconds = GetTickCountQPC();
     }
-
+    
     cSeconds = cMilliseconds / 1000;
     StringCchPrintfW(szBuf, _countof(szBuf), szUptimeFormat,
                      cSeconds / (60*60*24),     // Days
                      (cSeconds / (60*60)) % 24, // Hours
                      (cSeconds / 60) % 60,      // Minutes
                      cSeconds % 60);            // Seconds
-
+                     
     SetWindowTextW(hUptimeLabel, szBuf);
 
     /* Set update timer (reset timeout if the timer exists) */

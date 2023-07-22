@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            ntoskrnl/mm/freelist.c
  * PURPOSE:         Handle the list of free physical pages
  *
@@ -443,13 +443,13 @@ MmSetRmapListHeadPage(PFN_NUMBER Pfn, PMM_RMAP_ENTRY ListHead)
     }
     else
     {
-        /* Windivs semantics dictate the page is STILL active right now */
+        /* ReactOS semantics dictate the page is STILL active right now */
         ASSERT(MiIsPfnInUse(Pfn1) == TRUE);
 
         /* In this case, the RMAP is actually being removed, so clear field */
         Pfn1->RmapListHead = NULL;
 
-        /* Windivs semantics will now release the page, which will make it free and enter a colored list */
+        /* ReactOS semantics will now release the page, which will make it free and enter a colored list */
     }
 }
 
@@ -631,10 +631,10 @@ MmAllocPage(ULONG Type)
     Pfn1->u3.e2.ReferenceCount = 1;
     Pfn1->u3.e1.PageLocation = ActiveAndValid;
 
-    /* This marks the PFN as a Windivs PFN */
+    /* This marks the PFN as a ReactOS PFN */
     Pfn1->u4.AweAllocation = TRUE;
 
-    /* Allocate the extra Windivs Data and zero it out */
+    /* Allocate the extra ReactOS Data and zero it out */
     Pfn1->u1.SwapEntry = 0;
     Pfn1->RmapListHead = NULL;
 

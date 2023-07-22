@@ -1,5 +1,5 @@
 /*
-    Windivs Operating System
+    ReactOS Operating System
     MPU401 Example KS Driver
 
     AUTHORS:

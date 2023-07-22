@@ -1,5 +1,5 @@
 '''
-PROJECT:     Windivs apisets generator
+PROJECT:     ReactOS apisets generator
 LICENSE:     MIT (https://spdx.org/licenses/MIT)
 PURPOSE:     Create apiset forwarders based on Wine apisets
 COPYRIGHT:   Copyright 2017,2018 Mark Jansen (mark.jansen@reactos.org)
@@ -434,12 +434,12 @@ def run(wineroot):
         total = tuple(map(sum, zip(apiset.parse(), total)))
     print 'found', total[0], '/', total[1], 'forwarders'
 
-    print 'Reading Windivs modules'
+    print 'Reading ReactOS modules'
     for fullpath, dllname in generate_specnames(os.path.dirname(SCRIPT_DIR)):
         spec = SpecFile(fullpath, dllname)
         ros_modules.append(spec)
 
-    print 'Parsing Windivs modules'
+    print 'Parsing ReactOS modules'
     for module in ros_modules:
         module.parse()
         assert module.name not in module_lookup, module.name

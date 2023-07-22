@@ -1,7 +1,7 @@
 /*
- * PROJECT:         Windivs Network Control Panel
+ * PROJECT:         ReactOS Network Control Panel
  * FILE:            dll/cpl/ncpa/ncpa.c
- * PURPOSE:         Windivs Network Control Panel
+ * PURPOSE:         ReactOS Network Control Panel
  * PROGRAMMER:      Gero Kuehn (reactos.filter@gkware.com)
  * UPDATE HISTORY:
  *      07-18-2004  Created

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Win32k subsystem
+ * PROJECT:          ReactOS Win32k subsystem
  * PURPOSE:          Windows
  * FILE:             win32ss/user/ntuser/window.c
  * PROGRAMERS:       Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -3433,7 +3433,7 @@ CLEANUP:
 }
 
 ////
-//// Windivs work around! Keep it the sames as in Combo.c and Controls.h
+//// ReactOS work around! Keep it the sames as in Combo.c and Controls.h
 ////
 /* combo state struct */
 typedef struct
@@ -3546,7 +3546,7 @@ CLEANUP:
 }
 
 ////
-//// Windivs work around! Keep it the sames as in Listbox.c
+//// ReactOS work around! Keep it the sames as in Listbox.c
 ////
 /* Listbox structure */
 typedef struct
@@ -4503,7 +4503,7 @@ NtUserDefSetText(HWND hWnd, PLARGE_STRING WindowText)
       return FALSE;
    }
 
-   // Windivs uses Unicode and not mixed. Up/Down converting will take time.
+   // ReactOS uses Unicode and not mixed. Up/Down converting will take time.
    // Brought to you by: The Wine Project! Dysfunctional Thought Processes!
    // Now we know what the bAnsi is for.
    RtlInitUnicodeString(&UnicodeString, NULL);

@@ -1,10 +1,10 @@
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = Processor
 ClassGUID  = {50127DC3-0F36-415e-A6CC-4CB3BE910B65}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 09/27/2007,1.00
 
 [ControlFlags]
@@ -121,7 +121,7 @@ LoadOrderGroup = Extended Base
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Developers"
+ReactOS = "Windivs Developers"
 
 CyrixMfg = "Cyrix"
 IntelMfg = "Intel"

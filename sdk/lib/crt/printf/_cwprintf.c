@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:       GNU GPL, see COPYING in the top level directory
- * PROJECT:         Windivs crt library
+ * PROJECT:         ReactOS crt library
  * FILE:            lib/sdk/crt/printf/_cwprintf.c
  * PURPOSE:         Implementation of _cwprintf
- * PROGRAMMER:      Samuel Serapiï¿½n
+ * PROGRAMMER:      Samuel Serapión
  */
 
 #include <conio.h>

@@ -1,5 +1,5 @@
 /*
- *  Windivs to Win32 entry points for testing
+ *  ReactOS to Win32 entry points for testing
  *
  *  ros2win.c
  *

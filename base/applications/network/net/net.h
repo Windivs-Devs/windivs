@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs net command
+ * PROJECT:         ReactOS net command
  * PROGRAMMERS:     Magnus Olsen (greatlord@reactos.org)
  */
 

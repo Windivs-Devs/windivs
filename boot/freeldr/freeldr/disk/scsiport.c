@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Boot Loader (FreeLDR)
+ * PROJECT:         ReactOS Boot Loader (FreeLDR)
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            boot/freeldr/freeldr/disk/scsiport.c
  * PURPOSE:         Interface for SCSI Emulation
- * PROGRAMMERS:     Hervï¿½ Poussineau  <hpoussin@reactos.org>
+ * PROGRAMMERS:     Hervé Poussineau  <hpoussin@reactos.org>
  */
 
 /* INCLUDES *******************************************************************/

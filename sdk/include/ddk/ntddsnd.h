@@ -1,5 +1,5 @@
 /*
-    Windivs Sound System
+    ReactOS Sound System
     NT4 Multimedia Audio Support (ntddsnd.h)
 
     This file is in the public domain.

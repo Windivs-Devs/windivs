@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   LGPL, See LGPL.txt in the top level directory
- * PROJECT:     Windivs CRT library
+ * PROJECT:     ReactOS CRT library
  * FILE:        lib/sdk/crt/time/difftime32.c
  * PURPOSE:     Implementation of _difftime32
  * PROGRAMERS:  Timo Kreuzer

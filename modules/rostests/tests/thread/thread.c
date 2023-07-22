@@ -23,7 +23,7 @@ DWORD WINAPI thread_main1(LPVOID param)
 void showHelp(void)
 {
 
-printf("\nWindivs threads test program (built on %s).\n\n", __DATE__);
+printf("\nReactOS threads test program (built on %s).\n\n", __DATE__);
 printf("syntax:\tthread.exe <seed>\n");
 printf("\twhere <seed> is an integer number\n");
 printf("\texample: thread.exe 100\n");

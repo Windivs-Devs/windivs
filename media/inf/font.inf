@@ -1,6 +1,6 @@
 [Version]
 Signature = $Windows NT$
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 ClassGUID = {00000000-0000-0000-0000-000000000000}
 LayoutFile = layout.inf
 DriverVer = 05/29/2008,0.1

@@ -26,7 +26,7 @@
 
 static WCHAR s_szFindWhat[256];
 static const WCHAR s_szFindFlags[] = L"FindFlags";
-static const WCHAR s_szFindFlagsR[] = L"FindFlagsWindivs";
+static const WCHAR s_szFindFlagsR[] = L"FindFlagsReactOS";
 static HWND s_hwndAbortDialog;
 static BOOL s_bAbort;
 
@@ -561,7 +561,7 @@ static DWORD GetFindFlags(void)
                 dwFlags = (dwFlags & ~0x0000FFFF) | ((dwValue & 0x0000FFFF) << 0);
         }
 
-        /* Retrieve Windivs Regedit specific flags from registry key */
+        /* Retrieve ReactOS Regedit specific flags from registry key */
         cbData = sizeof(dwValue);
         if (RegQueryValueExW(hKey, s_szFindFlagsR, NULL, &dwType, (LPBYTE) &dwValue, &cbData) == ERROR_SUCCESS)
         {

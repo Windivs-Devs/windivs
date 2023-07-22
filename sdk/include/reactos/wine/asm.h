@@ -55,7 +55,7 @@
 # define __ASM_FUNC_TYPE(name) ".type " name ",@function"
 #endif
 
-/* Windivs */
+/* ReactOS */
 #if defined(_MSC_VER)
 # define __ASM_DEFINE_FUNC(name,code)
 #elif defined(__GNUC__)

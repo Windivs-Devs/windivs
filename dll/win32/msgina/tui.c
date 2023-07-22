@@ -1,8 +1,8 @@
 /*
- * PROJECT:         Windivs msgina.dll
+ * PROJECT:         ReactOS msgina.dll
  * FILE:            dll/win32/msgina/tui.c
- * PURPOSE:         Windivs Logon GINA DLL
- * PROGRAMMER:      Hervï¿½ Poussineau (hpoussin@reactos.org)
+ * PURPOSE:         ReactOS Logon GINA DLL
+ * PROGRAMMER:      Hervé Poussineau (hpoussin@reactos.org)
  */
 
 #include "msgina.h"

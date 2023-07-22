@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs system libraries
+ * PROJECT:     ReactOS system libraries
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll\win32\batt\batt.c
  * PURPOSE:     Battery Class installers
@@ -45,7 +45,7 @@ InstallCompositeBattery(
         DPRINT1("SetupDiCreateDeviceInfoList() failed (Error %lu)\n", GetLastError());
         return GetLastError();
     }
-
+ 
     NewDeviceInfoData = HeapAlloc(GetProcessHeap(),
                                   HEAP_ZERO_MEMORY,
                                   sizeof(SP_DEVINFO_DATA));

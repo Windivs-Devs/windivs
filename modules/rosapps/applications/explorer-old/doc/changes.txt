@@ -2,14 +2,14 @@ You will find only major changes in this file.
 Small bug fixes and developments steps are not listet here.
 If you search for more information, look into the Subversion repository.
 
-14.10.2002	m. fuchs	Korrektur der Anpassungen durch ï¿½bernahme in wine: Anzeige der Verzeichnisnamen in Tree Pane
-			m. fuchs	Wieder-Anpassung an natives ï¿½bersetzen unter WIN32 mit VC++
+14.10.2002	m. fuchs	Korrektur der Anpassungen durch Übernahme in wine: Anzeige der Verzeichnisnamen in Tree Pane
+			m. fuchs	Wieder-Anpassung an natives Übersetzen unter WIN32 mit VC++
 
 15.10.2002	m. fuchs	Entfernung der Warnungsmeldung durch SetWindowText(0, ...)
 			m. fuchs	korrekte Anzeige der Header Control-Texte (nicht Unicode -> dlls/comctl32/header.c)
 
-15.10.2002	m. fuchs	sofortige Anzeige der Dateiliste beim Starten und ï¿½ffnen neuer Fenster
-15.10.2002	m. fuchs	Programmaufruf ï¿½ber Doppelklick in der Dateiliste
+15.10.2002	m. fuchs	sofortige Anzeige der Dateiliste beim Starten und Öffnen neuer Fenster
+15.10.2002	m. fuchs	Programmaufruf über Doppelklick in der Dateiliste
 
 07.06.2003	m. fuchs	integration with ROS desktop window
 21.07.2003	m. fuchs	extension of winefile for shell namespace
@@ -48,7 +48,7 @@ If you search for more information, look into the Subversion repository.
 19.10.2003	m. fuchs	implemented floating start menus
 29.11.2003	m. fuchs	implemented GDB stub for remote debugging
 06.12.2003	m. fuchs	basic support to display NTFS streams in winefile windows
-20.12.2003	m. fuchs	context menu implementation for desktop window
+20.12.2003	m. fuchs	context menu implementation for desktop window 
 01.01.2004	m. fuchs	integrated icons of Everaldo (http://www.everaldo.com) into the start menu.
 02.01.2004	m. fuchs	reimplemented start menu as light weight version
 03.01.2004	m. fuchs	lazy icon extraction for start menu
@@ -99,13 +99,13 @@ If you search for more information, look into the Subversion repository.
 09.01.2005	frik85	update for german resource scripts
 10.01.2005	m. fuchs	new _NO_ALPHABLEND compiler switch
 21.01.2005	tamlin	Fix crashing browsing NT object namespace with non-zero-terminated UNICODE_STRING.
-27.01.2005	m. fuchs	fixes for command line handling
+27.01.2005	m. fuchs	fixes for command line handling 
 06.02.2005	m. fuchs	support for owner drawn context menus at various places
 08.02.2005	gvg	Prefer SEE_MASK_IDLIST, since that one is actually implemented in shell32
 20.02.2005	m. fuchs	updates for Expat and XMLStorage files
 21.02.2005	m. fuchs	move public expat headers into common include folder
-27.02.2005	frik85	Add support for explorer to load the desk.cpl when right clicking on background.
-04.03.2005	fireball	New StartMenu and Windivs icons by Mindflyer
+27.02.2005	frik85	Add support for explorer to load the desk.cpl when right clicking on background. 
+04.03.2005	fireball	New StartMenu and ReactOS icons by Mindflyer
 05.03.2005	m. fuchs	case insensitive startmenu merging
 			m. fuchs	update ROS icon in about dialog and start menu side bar
 14.03.2005	gvg	tinus: Use RegisterShellHookWindow()
@@ -144,7 +144,7 @@ If you search for more information, look into the Subversion repository.
 19.09.2005	navaraf	Fix the taskbar button resizing to account for button spacing.
 21.09.2005	m. fuchs	XMLStorage update, Bugfix for UTF-8 strings
 			m. fuchs	use size_t for buffer/string lengths instead of int, define COUNTOF if not defined already
-25.09.2005	navaraf	Patricio Martï¿½nez Ros: Update spanish translation
+25.09.2005	navaraf	Patricio Martínez Ros: Update spanish translation
 25.09.2005	m. fuchs	new tool bar icons for the drive bar
 			m. fuchs	refactor all IUnknown implementations using IComSrvBase
 30.09.2005	m. fuchs	Fix of Bugzilla Bug 676: dynamic explorer start menu sidebar size

@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Build Tools [Keyboard Layout Compiler]
+ * PROJECT:         ReactOS Build Tools [Keyboard Layout Compiler]
  * LICENSE:         BSD - See COPYING.BSD in the top level directory
  * FILE:            tools/kbdtool/main.c
  * PURPOSE:         Main Logic Loop
- * PROGRAMMERS:     Windivs Foundation
+ * PROGRAMMERS:     ReactOS Foundation
  */
 
 /* INCLUDES *******************************************************************/

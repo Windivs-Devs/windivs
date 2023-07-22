@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs PCI Bus driver
+ * PROJECT:         ReactOS PCI Bus driver
  * FILE:            pci.c
  * PURPOSE:         Driver entry
  * PROGRAMMERS:     Casper S. Hornstrup (chorns@users.sourceforge.net)

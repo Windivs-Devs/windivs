@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs ACPI-Compliant Control Method Battery
+ * PROJECT:         ReactOS ACPI-Compliant Control Method Battery
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/drivers/bus/acpi/cmbatt/cmbatt.c
  * PURPOSE:         Main Initialization Code and IRP Handling
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

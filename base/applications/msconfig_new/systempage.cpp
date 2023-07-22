@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Applications
+ * PROJECT:     ReactOS Applications
  * LICENSE:     LGPL - See COPYING in the top level directory
  * FILE:        base/applications/msconfig_new/systempage.c
  * PURPOSE:     System page message handler
@@ -237,7 +237,7 @@ TreeView_SetBOOLCheck(HWND hTree, HTREEITEM htiItem, BOOL bState, BOOL bPropagat
 static void
 LoadIniFile(HWND hTree, LPCWSTR lpszIniFile)
 {
-    // Ouverture en lecture (sans crï¿½ation de fichier si celui-ci n'esistait pas dï¿½jï¿½)
+    // Ouverture en lecture (sans création de fichier si celui-ci n'esistait pas déjà)
     // d'un flux en mode texte, avec permission de lecture seule.
     DWORD dwNumOfChars = ExpandEnvironmentStringsW(lpszIniFile, NULL, 0);
     LPWSTR lpszFileName = (LPWSTR)MemAlloc(0, dwNumOfChars * sizeof(WCHAR));
@@ -342,7 +342,7 @@ LoadIniFile(HWND hTree, LPCWSTR lpszIniFile)
 static void
 WriteIniFile(HWND hTree, LPCWSTR lpszIniFile)
 {
-    // Ouverture en ï¿½criture (avec crï¿½ation de fichier si celui-ci n'esistait pas dï¿½jï¿½)
+    // Ouverture en écriture (avec création de fichier si celui-ci n'esistait pas déjà)
     // d'un flux en mode texte, avec permission de lecture seule.
 #if 0
     DWORD dwNumOfChars = ExpandEnvironmentStringsW(lpszIniFile, NULL, 0);

@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Client/Server Runtime SubSystem
+ * PROJECT:         ReactOS Client/Server Runtime SubSystem
  * FILE:            subsystems/win32/csrsrv/init.c
  * PURPOSE:         CSR Server DLL Initialization
  * PROGRAMMERS:     Alex Ionescu (alex@relsoft.net)
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

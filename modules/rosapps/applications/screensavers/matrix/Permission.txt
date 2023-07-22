@@ -1,4 +1,4 @@
-Matrrix2 screensaver for Windivs
+Matrrix2 screensaver for ReactOS
 
 /*****************************************
 

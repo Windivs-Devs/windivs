@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Console Configuration DLL
+ * PROJECT:         ReactOS Console Configuration DLL
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            dll/cpl/console/utils.c
  * PURPOSE:         Utility functions

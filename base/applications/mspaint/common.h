@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for Windivs
+ * PROJECT:    PAINT for ReactOS
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Commonly used functions and definitions
  * COPYRIGHT:  Copyright 2015 Benedikt Freisen <b.freisen@gmx.net>

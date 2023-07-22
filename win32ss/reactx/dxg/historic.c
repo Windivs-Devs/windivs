@@ -1,7 +1,7 @@
 
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Native driver for dxg implementation
  * FILE:             win32ss/reactx/dxg/historic.c
  * PROGRAMER:        Magnus olsen (magnus@greatlord.com)
@@ -35,7 +35,7 @@
 * @param PVOID pvPtr2
 * Unknown
 *
-* @return
+* @return 
 * Always returns DDHAL_DRIVER_NOTHANDLED
 *
 * @remarks.
@@ -59,7 +59,7 @@ DxDxgGenericThunk(ULONG_PTR ulIndex,
 * @name DxDdIoctl
 * @implemented
 *
-* The function DxDdIoctl is the ioctl call to different DirectX functions
+* The function DxDdIoctl is the ioctl call to different DirectX functions 
 *
 * @param ULONG ulIoctl
 * The ioctl code that we want call to
@@ -70,7 +70,7 @@ DxDxgGenericThunk(ULONG_PTR ulIndex,
 * @param ULONG ulBufferSize
 * The buffer size in bytes
 *
-* @return
+* @return 
 * Always returns DDERR_UNSUPPORTED
 *
 * @remarks.

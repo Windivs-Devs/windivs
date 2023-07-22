@@ -191,7 +191,7 @@ std::wstring Settings_GetOutputPath(void)
     BOOL UseDefaultPath = TRUE;
 
     CRegKey key;
-    if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\Windivs\\Crash Reporter", KEY_READ) == ERROR_SUCCESS &&
+    if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\ReactOS\\Crash Reporter", KEY_READ) == ERROR_SUCCESS &&
         key.QueryStringValue(L"Dump Directory", Buffer, &BufferSize) == ERROR_SUCCESS)
     {
         UseDefaultPath = FALSE;
@@ -211,7 +211,7 @@ std::wstring Settings_GetOutputPath(void)
 BOOL Settings_GetShouldWriteDump(void)
 {
     CRegKey key;
-    if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\Windivs\\Crash Reporter", KEY_READ) != ERROR_SUCCESS)
+    if (key.Open(HKEY_CURRENT_USER, L"SOFTWARE\\ReactOS\\Crash Reporter", KEY_READ) != ERROR_SUCCESS)
     {
         return FALSE;
     }

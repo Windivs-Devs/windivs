@@ -1,9 +1,9 @@
 /*
- * PROJECT:     Windivs Service Host
+ * PROJECT:     ReactOS Service Host
  * LICENSE:     BSD - See COPYING.ARM in the top level directory
  * FILE:        base/services/svchost/netbios.c
  * PURPOSE:     NetBIOS Service Support
- * PROGRAMMERS: Windivs Portable Systems Group
+ * PROGRAMMERS: ReactOS Portable Systems Group
  */
 
 /* INCLUDES ******************************************************************/

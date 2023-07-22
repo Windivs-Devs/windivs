@@ -1345,7 +1345,7 @@ static BOOL IsFriendlyUIActive(VOID)
     if (lRet != ERROR_SUCCESS)
         return FALSE;
 
-    /* First check an optional Windivs specific override, that Windows does not check.
+    /* First check an optional ReactOS specific override, that Windows does not check.
        We use this to allow users pairing 'Server'-configuration with FriendlyLogoff.
        Otherwise users would have to change CSDVersion or LogonType (side-effects AppCompat) */
     dwValue = 0;

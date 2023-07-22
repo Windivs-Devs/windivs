@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Native driver for dxg implementation
  * FILE:             win32ss/reactx/dxg/d3d.c
  * PROGRAMER:        Sebastian Gasiorek (sebastian.gasiorek@reactos.org)
@@ -40,12 +40,12 @@ DxDdCanCreateD3DBuffer(
 
 DWORD
 FASTCALL
-intDdCreateSurfaceOrBuffer(HANDLE hDirectDrawLocal,
-                           PEDD_SURFACE pDdSurfList, DDSURFACEDESC2 *a3,
-                           DD_SURFACE_GLOBAL *pDdSurfGlob,
-                           DD_SURFACE_LOCAL *pDdSurfLoc,
-                           DD_SURFACE_MORE *pDdSurfMore,
-                           DD_CREATESURFACEDATA *pDdCreateSurfaceData,
+intDdCreateSurfaceOrBuffer(HANDLE hDirectDrawLocal, 
+                           PEDD_SURFACE pDdSurfList, DDSURFACEDESC2 *a3, 
+                           DD_SURFACE_GLOBAL *pDdSurfGlob, 
+                           DD_SURFACE_LOCAL *pDdSurfLoc, 
+                           DD_SURFACE_MORE *pDdSurfMore, 
+                           DD_CREATESURFACEDATA *pDdCreateSurfaceData, 
                            PVOID Address)
 {
   PEDD_DIRECTDRAW_LOCAL peDdL = NULL;

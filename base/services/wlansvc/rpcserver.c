@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs WLAN Service
+ * PROJECT:     ReactOS WLAN Service
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/services/wlansvc/rpcserver.c
  * PURPOSE:     RPC server interface

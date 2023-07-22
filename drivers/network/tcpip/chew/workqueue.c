@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            lib/drivers/chew/workqueue.c
  * PURPOSE:         Common Highlevel Executive Worker
  *

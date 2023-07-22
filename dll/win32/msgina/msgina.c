@@ -1,6 +1,6 @@
 /*
- *  Windivs GINA
- *  Copyright (C) 2003-2004, 2006 Windivs Team
+ *  ReactOS GINA
+ *  Copyright (C) 2003-2004, 2006 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,11 +17,11 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 /*
- * PROJECT:         Windivs msgina.dll
+ * PROJECT:         ReactOS msgina.dll
  * FILE:            dll/win32/msgina/msgina.c
- * PURPOSE:         Windivs Logon GINA DLL
+ * PURPOSE:         ReactOS Logon GINA DLL
  * PROGRAMMER:      Thomas Weidenmueller (w3seek@users.sourceforge.net)
- *                  Hervï¿½ Poussineau (hpoussin@reactos.org)
+ *                  Hervé Poussineau (hpoussin@reactos.org)
  */
 
 #include "msgina.h"

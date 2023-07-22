@@ -1,10 +1,10 @@
 /*
- * PROJECT:     Windivs ATL
+ * PROJECT:     ReactOS ATL
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Providing ATLTRACE macro
  * COPYRIGHT:   Copyright 2022 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
  */
-
+ 
 #pragma once
 
 #include "atldef.h"

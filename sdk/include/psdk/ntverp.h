@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs
+ * PROJECT:         ReactOS
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            include/psdk/ntverp.h
  * PURPOSE:         Master Version File.
@@ -144,8 +144,8 @@
 // Company and Trademarks
 //
 #define VER_COMPANYNAME_STR                 \
-    "Windivs Project"
+    "ReactOS Project"
 #define VER_PRODUCTNAME_STR                 \
-    "Windivs Operating System"
+    "ReactOS Operating System"
 #define VER_LEGALTRADEMARKS_STR             \
-    "Windivs is a registered trademark of Windivs Deutschland e.V."
+    "ReactOS is a registered trademark of ReactOS Deutschland e.V."

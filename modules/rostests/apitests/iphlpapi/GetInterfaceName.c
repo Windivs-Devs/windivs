@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs API Tests
+ * PROJECT:     ReactOS API Tests
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Tests for network interface name resolving functions
  * COPYRIGHT:   Copyright 2017 Stanislav Motylkov
@@ -318,7 +318,7 @@ test_GetInterfaceName(VOID)
         }
         else
         {
-            // workaround for Windivs
+            // workaround for ReactOS
             trace("pInfo->Adapter[0].Name = \"%ls\" is incorrect.\n", Name);
             RtlInitUnicodeString(&GuidString, &Name[0]);
         }

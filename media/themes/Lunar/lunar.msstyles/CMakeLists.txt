@@ -1,8 +1,8 @@
 
 list(APPEND TEXTFILES
-    textfiles/ExtraLargeWindivs.INI
-    textfiles/LargeFontsWindivs.INI
-    textfiles/NormalWindivs.INI)
+    textfiles/ExtraLargeReactOS.INI
+    textfiles/LargeFontsReactOS.INI
+    textfiles/NormalReactOS.INI)
 
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/textfiles)
 foreach(_file ${TEXTFILES})

@@ -346,7 +346,7 @@ MachInit(const char *CmdLine)
     MachVtbl.VideoGetPaletteColor = XboxVideoGetPaletteColor;
     MachVtbl.VideoSync = XboxVideoSync;
     MachVtbl.Beep = PcBeep;
-    MachVtbl.PrepareForWindivs = XboxPrepareForWindivs;
+    MachVtbl.PrepareForReactOS = XboxPrepareForReactOS;
     MachVtbl.GetMemoryMap = XboxMemGetMemoryMap;
     MachVtbl.GetExtendedBIOSData = XboxGetExtendedBIOSData;
     MachVtbl.GetFloppyCount = XboxGetFloppyCount;
@@ -369,10 +369,10 @@ MachInit(const char *CmdLine)
 }
 
 VOID
-XboxPrepareForWindivs(VOID)
+XboxPrepareForReactOS(VOID)
 {
     /* On Xbox, prepare video and disk support */
-    XboxVideoPrepareForWindivs();
+    XboxVideoPrepareForReactOS();
     XboxDiskInit(FALSE);
     DiskStopFloppyMotor();
 

@@ -38,7 +38,7 @@ WINE_DEFAULT_DEBUG_CHANNEL(combo);
 #define CB_HASSTRINGS( lphc ) ((lphc)->dwStyle & CBS_HASSTRINGS)
 #define CB_HWND( lphc )       ((lphc)->self)
 #ifndef __REACTOS__
-/* Windivs already define in include/controls.h We have it here as a sync note. */
+/* ReactOS already define in include/controls.h We have it here as a sync note. */
 #define CB_GETTYPE( lphc )    ((lphc)->dwStyle & (CBS_DROPDOWNLIST))
 #endif
 
@@ -2267,7 +2267,7 @@ LRESULT WINAPI ComboWndProc_common( HWND hwnd, UINT message, WPARAM wParam, LPAR
             SendMessage(lphc->hWndEdit, EM_SETSEL, 0, 0);
             lphc->wState &= ~(CBF_FOCUSED | CBF_BEENFOCUSED);
             CB_NOTIFY(lphc, CBN_KILLFOCUS);
-        }
+        } 
         return TRUE;
 
 #endif

@@ -32,17 +32,17 @@ VOID
     IN OUT OperatingSystemItem* OperatingSystem);
 
 static VOID
-EditCustomBootWindivsSetup(
+EditCustomBootReactOSSetup(
     IN OUT OperatingSystemItem* OperatingSystem)
 {
-    EditCustomBootWindivs(OperatingSystem, TRUE);
+    EditCustomBootReactOS(OperatingSystem, TRUE);
 }
 
 static VOID
 EditCustomBootNTOS(
     IN OUT OperatingSystemItem* OperatingSystem)
 {
-    EditCustomBootWindivs(OperatingSystem, FALSE);
+    EditCustomBootReactOS(OperatingSystem, FALSE);
 }
 
 static const struct
@@ -52,7 +52,7 @@ static const struct
     ARC_ENTRY_POINT OsLoader;
 } OSLoadingMethods[] =
 {
-    {"WindivsSetup", EditCustomBootWindivsSetup, LoadWindivsSetup},
+    {"ReactOSSetup", EditCustomBootReactOSSetup, LoadReactOSSetup},
 
 #if defined(_M_IX86) || defined(_M_AMD64)
 #ifndef UEFIBOOT
@@ -388,7 +388,7 @@ VOID RunLoader(VOID)
         /* Show the operating system list menu */
         if (!UiDisplayMenu("Please select the operating system to start:",
                            "For troubleshooting and advanced startup options for "
-                               "Windivs, press F8.",
+                               "ReactOS, press F8.",
                            TRUE,
                            OperatingSystemDisplayNames,
                            OperatingSystemCount,

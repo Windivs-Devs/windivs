@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs API tests
+ * PROJECT:         ReactOS API tests
  * LICENSE:         GPLv2+ - See COPYING in the top level directory
  * PURPOSE:         Test for the RegEnumKey API
  * PROGRAMMER:      Thomas Faber & Doug Lyons
@@ -16,7 +16,7 @@ START_TEST(RegEnumKey)
     DWORD nameLen;
 
     /* Base key for our test */
-    ErrorCode = RegCreateKeyExW(HKEY_CURRENT_USER, L"Software\\Windivs_apitest", 0, NULL, 0, KEY_CREATE_SUB_KEY | KEY_ENUMERATE_SUB_KEYS, NULL, &hKey, NULL);
+    ErrorCode = RegCreateKeyExW(HKEY_CURRENT_USER, L"Software\\ReactOS_apitest", 0, NULL, 0, KEY_CREATE_SUB_KEY | KEY_ENUMERATE_SUB_KEYS, NULL, &hKey, NULL);
     ok_dec(ErrorCode, ERROR_SUCCESS);
 
     /* Create 1 char subkey */

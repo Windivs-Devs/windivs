@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs BDA Proxy
+ * PROJECT:         ReactOS BDA Proxy
  * FILE:            dll/directx/bdaplgin/lnbinfo.cpp
  * PURPOSE:         IBDA_LNBInfo interface
  *

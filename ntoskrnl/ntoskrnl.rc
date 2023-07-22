@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs
+ * PROJECT:     ReactOS
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        ntoskrnl/ntoskrnl.rc
  * PURPOSE:     Kernel Resource File
@@ -39,7 +39,7 @@ IDB_SERVER_LOGO     BITMAP "inbv/resources/logo.bmp"
 IDB_SERVER_HEADER   BITMAP "inbv/resources/hserver.bmp"
 IDB_SERVER_FOOTER   BITMAP "inbv/resources/fserver.bmp"
 
-/* Windivs additions */
+/* ReactOS additions */
 IDB_ROTATING_LINE   BITMAP "inbv/resources/line.bmp"
 IDB_PROGRESS_BAR    BITMAP "inbv/resources/progress.bmp"
 IDB_COPYRIGHT       BITMAP "inbv/resources/copyright.bmp"

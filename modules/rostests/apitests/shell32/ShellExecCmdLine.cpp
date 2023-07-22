@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs API tests
+ * PROJECT:         ReactOS API tests
  * LICENSE:         LGPLv2.1+ - See COPYING.LIB in the top level directory
  * PURPOSE:         Test for ShellExecCmdLine
  * PROGRAMMERS:     Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
@@ -628,7 +628,7 @@ static void DoEntry(const TEST_ENTRY *pEntry)
 
     _SEH2_TRY
     {
-        if (IsWindivs())
+        if (IsReactOS())
         {
             hr = proxy_ShellExecCmdLine(NULL, pEntry->pwszCommand, pEntry->pwszStartDir,
                                         SW_SHOWNORMAL, NULL, dwSeclFlags);
@@ -660,7 +660,7 @@ START_TEST(ShellExecCmdLine)
 {
     using namespace std;
 
-    if (!IsWindivs())
+    if (!IsReactOS())
     {
         if (!IsWindowsVistaOrGreater())
         {

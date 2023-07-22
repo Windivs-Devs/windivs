@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs kernel
+ * PROJECT:         ReactOS kernel
  * FILE:            lib/rossym/getraw.c
  * PURPOSE:         Convert rossym info to raw external format
  *

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs system libraries
+ * PROJECT:           ReactOS system libraries
  * PURPOSE:           Security manager
  * FILE:              lib/rtl/sid.c
  * PROGRAMER:         David Welch <welch@cwcom.net>

@@ -2,32 +2,32 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
-    LTEXT "Windivs セットアップウィザードへようこそ", IDC_STARTTITLE, 115, 8, 195, 24
-    LTEXT "このCDからまだ直接Windivsをインストールできません。Windivsをインストールするために、このCDからコンピュータを再起動して下さい。", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "ReactOS セットアップウィザードへようこそ", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "このCDからまだ直接ReactOSをインストールできません。ReactOSをインストールするために、このCDからコンピュータを再起動して下さい。", IDC_STATIC, 115, 40, 195, 100
     LTEXT "完了をクリックしてセットアップを終了して下さい。", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
-    AUTORADIOBUTTON "Windivsをインストールする", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
-    LTEXT "Windivsを新しくインストールします。このオプションは、あなたのファイル、設定、プログラムを維持しません。あなたはディスクとパーティションに変更を加えることができます。", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
-    AUTORADIOBUTTON "Windivsを更新または修正する", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "インストールされたWindivsを更新または修正します。このオプションはあなたのファイル、設定、プログラムを保持します。このオプションは、このコンピュータですでにWindivsがインストール済みのときのみ利用できます。", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
+    AUTORADIOBUTTON "ReactOSをインストールする", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
+    LTEXT "ReactOSを新しくインストールします。このオプションは、あなたのファイル、設定、プログラムを維持しません。あなたはディスクとパーティションに変更を加えることができます。", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
+    AUTORADIOBUTTON "ReactOSを更新または修正する", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "インストールされたReactOSを更新または修正します。このオプションはあなたのファイル、設定、プログラムを保持します。このオプションは、このコンピュータですでにReactOSがインストール済みのときのみ利用できます。", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
     LTEXT "次へをクリックすると続行します。", IDC_STATIC, 7, 128, 297, 8
 END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
-    LTEXT       "Windivs セットアップは、以下のリストのうち、一つをアップグレードできます。また、Windivsインストールが壊れていれば、セットアップは修正を試すことができます。", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "ReactOS セットアップは、以下のリストのうち、一つをアップグレードできます。また、ReactOSインストールが壊れていれば、セットアップは修正を試すことができます。", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "アップグレードしない(&D)", IDC_SKIPUPGRADE, 218, 127, 92, 14
     LTEXT       "次へをクリックしてOSのインストールをアップグレードするか、「アップグレードしない」をクリックして下さい。", IDC_STATIC, 7, 124, 207, 16
@@ -35,7 +35,7 @@ END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
     LTEXT "コンピュータ:", IDC_STATIC, 20, 15, 80, 10
@@ -49,7 +49,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -93,7 +93,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
     LTEXT "インストールの種類:", IDC_STATIC, 6, 5, 88, 11
@@ -112,14 +112,14 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "インストール先フォルダ:", IDC_STATIC, 6, 89, 88, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "すべてのインストール設定が正しいことを確認しました。また、Windivsがまだアルファ版であり、あなたのコンピュータやデータを壊す恐れがあることを理解しています。",
+    AUTOCHECKBOX "すべてのインストール設定が正しいことを確認しました。また、ReactOSがまだアルファ版であり、あなたのコンピュータやデータを壊す恐れがあることを理解しています。",
         IDC_CONFIRM_INSTALL, 7, 104, 303, 18, BS_MULTILINE
     LTEXT "すべてのインストール設定が正しいことを確認し、インストール プロセスを開始するために、インストールをクリックして下さい。", IDC_STATIC, 7, 124, 303, 18
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
     LTEXT "ファイルをインストール中...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -129,11 +129,11 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs セットアップ"
+CAPTION "ReactOS セットアップ"
 FONT 9, "MS UI Gothic"
 BEGIN
-    LTEXT "Windivs セットアップ ウィザードの完了", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Windivs セットアップの最初の段階が正しく完了しました。", IDC_STATIC, 115, 50, 195, 10
+    LTEXT "ReactOS セットアップ ウィザードの完了", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "ReactOS セットアップの最初の段階が正しく完了しました。", IDC_STATIC, 115, 50, 195, 10
     LTEXT "完了をクリックすると、あなたのコンピュータは再起動されます。", IDC_STATIC, 115, 80, 195, 20
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 110, 195, 8
     LTEXT "もしCDがドライブにあれば、取り除いて下さい。その後、あなたのコンピュータを再起動するには、完了をクリックして下さい。", IDC_STATIC, 115, 163, 195, 26
@@ -141,7 +141,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TYPETITLE "Windivs セットアップにようこそ"
+    IDS_TYPETITLE "ReactOS セットアップにようこそ"
     IDS_TYPESUBTITLE "セットアップの種類を選んで下さい"
     IDS_DEVICETITLE "基本デバイスをセットアップします"
     IDS_DEVICESUBTITLE "ディスプレイとキーボードの設定をします"
@@ -153,10 +153,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "セットアップの最初の段階が完了しました。第二の段階に進むために再起動します"
     IDS_SUMMARYTITLE "インストールの要約"
     IDS_SUMMARYSUBTITLE "インストールするデバイスを適用する前にチェックするインストール プロパティをリストアップします"
-    IDS_ABORTSETUP "Windivsはあなたのコンピュータへのインストールが完了していません。もしセットアップをここで中断すれば、Windivsをインストールするために、セットアップを再起動する必要があります。本当に中断しますか?"
+    IDS_ABORTSETUP "ReactOSはあなたのコンピュータへのインストールが完了していません。もしセットアップをここで中断すれば、ReactOSをインストールするために、セットアップを再起動する必要があります。本当に中断しますか?"
     IDS_ABORTSETUP2 "インストールを中断しますか?"
     IDS_NO_TXTSETUP_SIF "'txtsetup.sif'が見つかりません。\nセットアップは続行できません。"
-    IDS_CAPTION "Windivs セットアップ"
+    IDS_CAPTION "ReactOS セットアップ"
 END
 
 STRINGTABLE

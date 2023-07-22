@@ -109,7 +109,7 @@ PCONFIGURATION_COMPONENT_DATA
 UefiHwDetect(VOID);
 
 VOID
-UefiPrepareForWindivs(VOID);
+UefiPrepareForReactOS(VOID);
 
 VOID
 UefiHwIdle(VOID);

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Configuration of network devices
+ * PROJECT:         ReactOS Configuration of network devices
  * FILE:            dll/win32/netcfgx/installer.c
  * PURPOSE:         Network devices installer
  *

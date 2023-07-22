@@ -44,9 +44,9 @@ BOOLEAN XboxVideoIsPaletteFixed(VOID);
 VOID XboxVideoSetPaletteColor(UCHAR Color, UCHAR Red, UCHAR Green, UCHAR Blue);
 VOID XboxVideoGetPaletteColor(UCHAR Color, UCHAR* Red, UCHAR* Green, UCHAR* Blue);
 VOID XboxVideoSync(VOID);
-VOID XboxVideoPrepareForWindivs(VOID);
+VOID XboxVideoPrepareForReactOS(VOID);
 VOID XboxVideoScrollUp(VOID);
-VOID XboxPrepareForWindivs(VOID);
+VOID XboxPrepareForReactOS(VOID);
 
 VOID XboxMemInit(VOID);
 PFREELDR_MEMORY_DESCRIPTOR XboxMemGetMemoryMap(ULONG *MemoryMapSize);

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs NDIS library
+ * PROJECT:     ReactOS NDIS library
  * FILE:        ndis/30stubs.c
  * PURPOSE:     NDIS 3.0 Stubs
  * PROGRAMMERS: Casper S. Hornstrup (chorns@users.sourceforge.net)

@@ -1,7 +1,7 @@
 /*
  * reactos/subsys/system/lsass/lsass.c
  *
- * Windivs Operating System
+ * ReactOS Operating System
  *
  * --------------------------------------------------------------------
  *

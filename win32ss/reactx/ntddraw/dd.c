@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * PURPOSE:          Native DirectDraw implementation
  * FILE:             win32ss/reactx/ntddraw/dd.c
  * PROGRAMER:        Magnus Olsen (greatlord@reactos.org)
@@ -26,7 +26,7 @@ NtGdiDdCreateSurface(HANDLE hDirectDrawLocal,
                      HANDLE *puhSurface)
 {
     PGD_DDCREATESURFACE pfnDdCreateSurface = (PGD_DDCREATESURFACE)gpDxFuncs[DXG_INDEX_DxDdCreateSurface].pfn;
-
+   
     if (pfnDdCreateSurface == NULL)
     {
         DPRINT1("Warning: no pfnDdCreateSurface\n");
@@ -47,7 +47,7 @@ NtGdiDdWaitForVerticalBlank(HANDLE hDirectDraw,
                             PDD_WAITFORVERTICALBLANKDATA puWaitForVerticalBlankData)
 {
     PGD_DXDDWAITFORVERTICALBLANK pfnDdWaitForVerticalBlank = (PGD_DXDDWAITFORVERTICALBLANK)gpDxFuncs[DXG_INDEX_DxDdWaitForVerticalBlank].pfn;
-
+   
     if (pfnDdWaitForVerticalBlank == NULL)
     {
         DPRINT1("Warning: no pfnDdWaitForVerticalBlank\n");
@@ -67,7 +67,7 @@ NtGdiDdCanCreateSurface(HANDLE hDirectDrawLocal,
                         PDD_CANCREATESURFACEDATA puCanCreateSurfaceData)
 {
     PGD_DDCANCREATESURFACE pfnDdCanCreateSurface = (PGD_DDCANCREATESURFACE)gpDxFuncs[DXG_INDEX_DxDdCanCreateSurface].pfn;
-
+    
     if (pfnDdCanCreateSurface == NULL)
     {
         DPRINT1("Warning: no pfnDdCanCreateSurface\n");
@@ -83,12 +83,12 @@ NtGdiDdCanCreateSurface(HANDLE hDirectDrawLocal,
 /* NtGdiDdGetScanLine                                                   */
 /************************************************************************/
 DWORD
-APIENTRY
+APIENTRY 
 NtGdiDdGetScanLine(HANDLE hDirectDrawLocal,
                    PDD_GETSCANLINEDATA puGetScanLineData)
 {
     PGD_DXDDGETSCANLINE  pfnDdGetScanLine = (PGD_DXDDGETSCANLINE)gpDxFuncs[DXG_INDEX_DxDdGetScanLine].pfn;
-
+   
     if (pfnDdGetScanLine == NULL)
     {
         DPRINT1("Warning: no pfnDdGetScanLine\n");
@@ -116,7 +116,7 @@ NtGdiDdCreateSurfaceEx(HANDLE hDirectDraw,
                        DWORD dwSurfaceHandle)
 {
     PGD_DXDDCREATESURFACEEX pfnDdCreateSurfaceEx  = (PGD_DXDDCREATESURFACEEX)gpDxFuncs[DXG_INDEX_DxDdCreateSurfaceEx].pfn;
-
+   
     if (pfnDdCreateSurfaceEx == NULL)
     {
         DPRINT1("Warning: no pfnDdCreateSurfaceEx\n");

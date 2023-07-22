@@ -4,11 +4,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = MEDIA
 ClassGUID  = {4d36e96c-e325-11ce-bfc1-08002be10318}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 10/19/1999,5.00.2157.1
 
 [DestinationDirs]
@@ -67,7 +67,7 @@ ServiceBinary = %12%\sysaudio.sys
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Developers"
+ReactOS = "Windivs Developers"
 
 ; Localizable
 AUDIOClassName = "Audio & Videocontroller"

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs cabinet manager
+ * PROJECT:     ReactOS cabinet manager
  * FILE:        tools/cabman/cabman.h
  * PURPOSE:     Cabinet manager header
  */

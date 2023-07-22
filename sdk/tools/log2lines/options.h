@@ -1,5 +1,5 @@
 /*
- * Windivs log2lines
+ * ReactOS log2lines
  * Written by Jan Roeloffzen
  *
  * - Option parsing

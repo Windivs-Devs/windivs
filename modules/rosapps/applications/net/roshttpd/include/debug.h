@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs HTTP Daemon
+ * PROJECT:     ReactOS HTTP Daemon
  * FILE:        include/debug.h
  */
 #ifndef __DEBUG_H

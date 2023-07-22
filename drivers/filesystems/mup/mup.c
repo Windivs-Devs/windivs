@@ -1,6 +1,6 @@
 /*
- *  Windivs kernel
- *  Copyright (C) 2002 Windivs Team
+ *  ReactOS kernel
+ *  Copyright (C) 2002 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * FILE:             drivers/filesystems/mup/mup.c
  * PURPOSE:          Multi UNC Provider
  * PROGRAMMER:       Eric Kohl

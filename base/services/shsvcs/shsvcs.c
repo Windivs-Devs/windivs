@@ -1,8 +1,8 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Shell
+ * PROJECT:          ReactOS Shell
  * FILE:             base/services/shsvcs/shsvcs.c
- * PURPOSE:          Windivs Shell Services
+ * PURPOSE:          ReactOS Shell Services
  * PROGRAMMER:       Giannis Adamopoulos
  */
 

@@ -1,5 +1,5 @@
 /*
- *  Windivs Application
+ *  ReactOS Application
  *
  *  panelwnd.c
  *

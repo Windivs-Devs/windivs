@@ -1,4 +1,4 @@
-/* Windivs PSDK/DDK
+/* ReactOS PSDK/DDK
 
 This file is in the public domain.
 

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:  See COPYING in the top level directory
- * PROJECT:    Windivs kernel
+ * PROJECT:    ReactOS kernel
  * FILE:       drivers/filesystems/msfs/finfo.c
  * PURPOSE:    Mailslot filesystem
  * PROGRAMMER: Eric Kohl

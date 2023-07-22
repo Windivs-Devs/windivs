@@ -38,7 +38,7 @@
 #define IDB_CLUSTER_SERVER  17  // Compute Cluster Edition
 #define IDB_STORAGE_SERVER2 18
 
-/* Windivs additions */
+/* ReactOS additions */
 #define IDB_ROTATING_LINE   19
 #define IDB_PROGRESS_BAR    20
 #define IDB_COPYRIGHT       21

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Timedate Control Panel
+ * PROJECT:     ReactOS Timedate Control Panel
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/timedate/dateandtime.c
  * PURPOSE:     Date & Time property page

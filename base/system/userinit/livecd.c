@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs Userinit Logon Application
+ * PROJECT:     ReactOS Userinit Logon Application
  * FILE:        base/system/userinit/livecd.c
  * PROGRAMMERS: Eric Kohl
  */
@@ -852,7 +852,7 @@ VOID ParseUnattend(LPCWSTR UnattendInf, LIVECD_UNATTEND* pUnattend)
         return;
     }
 
-    if (_wcsicmp(Buffer, L"$Windivs$") && _wcsicmp(Buffer, L"$Windows NT$"))
+    if (_wcsicmp(Buffer, L"$ReactOS$") && _wcsicmp(Buffer, L"$Windows NT$"))
     {
         TRACE("Unknown signature: %S\n", Buffer);
         return;

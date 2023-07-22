@@ -1,7 +1,7 @@
 /*
  *
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs user32.dll
+ * PROJECT:         ReactOS user32.dll
  * FILE:            win32ss/user/user32/windows/defwnd.c
  * PURPOSE:         Window management
  * PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -262,15 +262,15 @@ UserPaintCaption(PWND pwnd, INT Flags)
   {
      if (pwnd->state & WNDS_HASCAPTION && NtUserQueryWindow(UserHMGetHandle(pwnd), QUERY_WINDOW_FOREGROUND))
         Flags |= DC_ACTIVE;
-    /*
+    /* 
      * When themes are not enabled we can go on and paint the non client area.
      * However if we do that with themes enabled we will draw a classic frame.
      * This is solved by sending a themes specific message to notify the themes
-     * engine that the caption needs to be redrawn
+     * engine that the caption needs to be redrawn 
      */
     if(gpsi->dwSRVIFlags & SRVINFO_APIHOOK)
     {
-        /*
+        /* 
          * This will cause uxtheme to either paint the themed caption or call
          * RealUserDrawCaption in order to draw the classic caption when themes
          * are disabled but the themes service is enabled

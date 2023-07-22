@@ -1,5 +1,5 @@
 /*
- *  Windivs Application Main Window
+ *  ReactOS Application Main Window
  *
  *  framewnd.h
  *

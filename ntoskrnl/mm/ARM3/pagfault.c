@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/pagfault.c
  * PURPOSE:         ARM Memory Manager Page Fault Handling
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -264,13 +264,13 @@ MiCheckVirtualAddress(IN PVOID VirtualAddress,
             return NULL;
         }
 
-        /* Windivs does not handle physical memory VADs yet */
+        /* ReactOS does not handle physical memory VADs yet */
         ASSERT(Vad->u.VadFlags.VadType != VadDevicePhysicalMemory);
 
         /* Check if it's a section, or just an allocation */
         if (Vad->u.VadFlags.PrivateMemory)
         {
-            /* Windivs does not handle AWE VADs yet */
+            /* ReactOS does not handle AWE VADs yet */
             ASSERT(Vad->u.VadFlags.VadType != VadAwe);
 
             /* This must be a TEB/PEB VAD */
@@ -290,7 +290,7 @@ MiCheckVirtualAddress(IN PVOID VirtualAddress,
         }
         else
         {
-            /* Windivs does not supoprt these VADs yet */
+            /* ReactOS does not supoprt these VADs yet */
             ASSERT(Vad->u.VadFlags.VadType != VadImageMap);
             ASSERT(Vad->u2.VadFlags2.ExtendableFile == 0);
 
@@ -324,7 +324,7 @@ MiCheckVirtualAddress(IN PVOID VirtualAddress,
     }
     else if (MI_IS_SESSION_ADDRESS(VirtualAddress))
     {
-        /* Windivs does not have an image list yet, so bail out to failure case */
+        /* ReactOS does not have an image list yet, so bail out to failure case */
         ASSERT(IsListEmpty(&MmSessionSpace->ImageList));
     }
 
@@ -825,7 +825,7 @@ MiCompleteProtoPteFault(IN BOOLEAN StoreInstruction,
         /* Then the page should be marked dirty */
         DirtyPage = TRUE;
 
-        /* Windivs check */
+        /* ReactOS check */
         ASSERT(Pfn1->OriginalPte.u.Soft.Prototype != 0);
     }
 
@@ -1030,7 +1030,7 @@ MiResolveTransitionFault(IN BOOLEAN StoreInstruction,
     ASSERT(MmAvailablePages > 0);
     ASSERT(Pfn1->u4.InPageError == 0);
 
-    /* Windivs checks for this */
+    /* ReactOS checks for this */
     ASSERT(MmAvailablePages > 32);
 
     /* Was this a transition page in the valid list, or free/zero list? */
@@ -1300,7 +1300,7 @@ MiResolveProtoPteFault(IN BOOLEAN StoreInstruction,
         else
             MiGetPfnEntry(PointerProtoPte->u.Hard.PageFrameNumber)->CallSite = _ReturnAddress();
 #endif
-
+                                      
         ASSERT(NT_SUCCESS(Status));
     }
 
@@ -1403,7 +1403,7 @@ MiDispatchFault(IN ULONG FaultCode,
                 (Vad->u.VadFlags.VadType != VadImageMap) &&
                 !(Vad->u2.VadFlags2.ExtendableFile))
             {
-                /* One day, Windivs will cluster faults */
+                /* One day, ReactOS will cluster faults */
                 ASSERT(Address <= MM_HIGHEST_USER_ADDRESS);
                 DPRINT("Should cluster fault, but won't\n");
             }
@@ -1441,7 +1441,7 @@ MiDispatchFault(IN ULONG FaultCode,
                     Pfn1 = MI_PFN_ELEMENT(PageFrameIndex);
                     ASSERT(Pfn1->u3.e1.PageLocation != ActiveAndValid);
 
-                    /* Should not yet happen in Windivs */
+                    /* Should not yet happen in ReactOS */
                     ASSERT(Pfn1->u3.e1.ReadInProgress == 0);
                     ASSERT(Pfn1->u4.InPageError == 0);
 
@@ -1749,7 +1749,7 @@ MmArmAccessFault(IN ULONG FaultCode,
             return STATUS_IN_PAGE_ERROR | 0x10000000;
         }
 
-        /* Not yet implemented in Windivs */
+        /* Not yet implemented in ReactOS */
         ASSERT(MI_IS_PAGE_LARGE(PointerPde) == FALSE);
         ASSERT((!MI_IS_NOT_PRESENT_FAULT(FaultCode) && MI_IS_PAGE_COPY_ON_WRITE(PointerPte)) == FALSE);
 
@@ -2226,7 +2226,7 @@ UserFault:
     }
     else
     {
-        /* Not yet implemented in Windivs */
+        /* Not yet implemented in ReactOS */
         ASSERT(MI_IS_PAGE_LARGE(PointerPde) == FALSE);
     }
 

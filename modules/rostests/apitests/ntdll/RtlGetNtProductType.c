@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs API tests
+ * PROJECT:         ReactOS API tests
  * LICENSE:         GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:         Tests for the RtlGetNtProductType API
  * COPYRIGHT:       Copyright 2020 George Bișoc <george.bisoc@reactos.org>
@@ -104,7 +104,7 @@ ChangeNtProductType(DWORD NtProductType)
         ok(FALSE, "RegOpenKeyExW failed with 0x%lx\n", Result);
         return FALSE;
     }
-
+ 
     dwSize = ((DWORD)wcslen(ProductTypeString) + 1) * sizeof(WCHAR);
     Result = RegSetValueExW(Key,
                             L"ProductType",

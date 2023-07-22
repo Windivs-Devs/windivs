@@ -1,5 +1,5 @@
 /*
- *  Windivs test program -
+ *  ReactOS test program -
  *
  *  main.h
  *

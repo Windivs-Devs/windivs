@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs system libraries
+ * PROJECT:         ReactOS system libraries
  * FILE:            lib/rtl/message.c
  * PURPOSE:         Message table functions
  * PROGRAMMERS:     Eric Kohl

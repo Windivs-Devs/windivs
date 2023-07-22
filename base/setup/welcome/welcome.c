@@ -1,6 +1,6 @@
 /*
- *  Windivs applications
- *  Copyright (C) 2001, 2002, 2003 Windivs Team
+ *  ReactOS applications
+ *  Copyright (C) 2001, 2002, 2003 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs "Welcome"/AutoRun application
+ * PROJECT:     ReactOS "Welcome"/AutoRun application
  * FILE:        base/setup/welcome/welcome.c
  * PROGRAMMERS: Eric Kohl
  *              Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -211,7 +211,7 @@ VOID TranslateEscapes(IN OUT LPTSTR lpString)
 }
 
 /*
- * Expands the path for the Windivs Installer "reactos.exe".
+ * Expands the path for the ReactOS Installer "reactos.exe".
  * See also base/system/userinit/userinit.c!StartInstaller()
  */
 BOOL
@@ -308,7 +308,7 @@ ExpandInstallerPath(
 
     /*
      * We failed. Try to find the installer from either the current
-     * Windivs installation directory, or from our current directory.
+     * ReactOS installation directory, or from our current directory.
      */
     *lpInstallerPath = 0;
     if (GetWindowsDirectory(lpInstallerPath, PathSize - cchInstallerNameLen - 1))
@@ -394,7 +394,7 @@ AddNewTopicEx(
     {
         pTopic->bIsCommand = TRUE;
 
-        /* Check for special applications: Windivs Installer */
+        /* Check for special applications: ReactOS Installer */
         if (_tcsicmp(szCommand, TEXT("reactos.exe")) == 0)
         {
             ExpandInstallerPath(szCommand, pTopic->szCommand, ARRAYSIZE(pTopic->szCommand));
@@ -424,7 +424,7 @@ AddNewTopicEx(
         }
         else
         {
-            /* Check for special applications: Windivs Shell */
+            /* Check for special applications: ReactOS Shell */
             if (/* pTopic->szCommand && */ *pTopic->szCommand &&
                 _tcsicmp(pTopic->szCommand, TEXT("explorer.exe")) == 0)
             {

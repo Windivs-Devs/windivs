@@ -2,11 +2,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = USB
 ClassGUID  = {36FC9E60-C465-11CF-8056-444553540000}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 10/02/2005,1.00.0.0
 
 [DestinationDirs]
@@ -59,7 +59,7 @@ LoadOrderGroup = Base
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Project"
+ReactOS = "ReactOS Project"
 
 ; Localizable
 GenericMfg = "(Generic USB Hubs)"

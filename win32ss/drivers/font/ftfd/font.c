@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs win32 subsystem
+ * PROJECT:         ReactOS win32 subsystem
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         GDI font driver for bitmap fonts
  * PROGRAMMER:      Timo Kreuzer (timo.kreuzer@reactos.org)
@@ -93,7 +93,7 @@ FtfdLoadFontFile(
     pfile->iFile = *piFile;
     pfile->pvView = pvView;
     pfile->cjView = cjView;
-
+        
     for (i = 0; i < pfile->cNumFaces; i++)
     {
         pfile->aftface[i] = ftface;

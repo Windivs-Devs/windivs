@@ -19,7 +19,7 @@
  */
 
 /*
- * PROJECT:         Windivs Program Manager
+ * PROJECT:         ReactOS Program Manager
  * COPYRIGHT:       GPL - See COPYING in the top level directory
  * FILE:            base/shell/progman/program.c
  * PURPOSE:         Program items helper functions

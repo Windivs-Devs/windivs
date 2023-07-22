@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs NDIS library
+ * PROJECT:     ReactOS NDIS library
  * FILE:        ndissys.h
  * PURPOSE:     NDIS library definitions
  * NOTES:       Spin lock acquire order:

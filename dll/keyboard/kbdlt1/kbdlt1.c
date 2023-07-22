@@ -1,7 +1,7 @@
 /*
- * Windivs Lithuanian Keyboard layout
- * Copyright (C) 2007 Windivs
- * Author: Vytis Girdï¿½ijauskas, "CMan", cman@cman.us
+ * ReactOS Lithuanian Keyboard layout
+ * Copyright (C) 2007 ReactOS
+ * Author: Vytis Girdþijauskas, "CMan", cman@cman.us
  * License: LGPL, see: LGPL.txt
  *
  * http://www.microsoft.com/globaldev/tools/msklc.mspx
@@ -341,10 +341,10 @@ ROSDATA VSC_LPWSTR extended_key_names[] = {
   { 0x51, L"Page Down" },
   { 0x52, L"Insert" },
   { 0x53, L"Delete" },
-  { 0x54, L"<Windivs>" },
+  { 0x54, L"<ReactOS>" },
   { 0x55, L"Help" },
-  { 0x56, L"Left Windivs" },
-  { 0x5b, L"Right Windivs" },
+  { 0x56, L"Left ReactOS" },
+  { 0x5b, L"Right ReactOS" },
   { 0, NULL },
 };
 

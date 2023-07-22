@@ -1,7 +1,7 @@
 ;
-; Windivs Operating System
+; ReactOS Operating System
 ;
-; This file contains all win32k native api functions from Windivs
+; This file contains all win32k native api functions from ReactOS
 ; Unsupported functions are commented out
 ;
 

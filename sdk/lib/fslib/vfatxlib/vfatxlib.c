@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs VFATx filesystem library
+ * PROJECT:     ReactOS VFATx filesystem library
  * FILE:        vfatxlib.c
  * PURPOSE:     Main API
  * PROGRAMMERS:

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs File System Recognizer
+ * PROJECT:          ReactOS File System Recognizer
  * FILE:             drivers/filesystems/fs_rec/ffs.h
  * PURPOSE:          FFS Header File
  * PROGRAMMER:       Peter Hater

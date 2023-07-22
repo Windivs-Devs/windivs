@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Keyboard class driver
+ * PROJECT:         ReactOS Keyboard class driver
  * FILE:            drivers/kbdclass/kbdclass.c
  * PURPOSE:         Keyboard class driver
  *
@@ -177,7 +177,7 @@ ClassDeviceControl(
 				{
 					Status = STATUS_UNSUCCESSFUL;
 				}
-
+				
 				Entry = Entry->Flink;
 			}
 			break;

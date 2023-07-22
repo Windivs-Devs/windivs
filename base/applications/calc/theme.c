@@ -1,5 +1,5 @@
 /*
- * Windivs Calc (Theming support)
+ * ReactOS Calc (Theming support)
  *
  * Copyright 2007-2017, Carlo Bramini
  *

@@ -1,6 +1,6 @@
 # How To Contribute
 
-There are several ways to contribute to the development of Windivs. The most often encountered problem is not knowing where to begin or what to do. If you are able to program or understand the technical information that is pertinent to this project, helping the development can be easy.
+There are several ways to contribute to the development of ReactOS. The most often encountered problem is not knowing where to begin or what to do. If you are able to program or understand the technical information that is pertinent to this project, helping the development can be easy.
 
 - [What To Do?](#what-to-do)
 - [How To Contribute?](#how-to-contribute)
@@ -9,35 +9,35 @@ There are several ways to contribute to the development of Windivs. The most oft
 **Legal notice:** If you have seen Microsoft Windows source code, your contribution won't be accepted because of potential copyright violation. Before contributing, you must affirm that the following is true:
 >I hereby swear that I have not used nor seen the source code to any version of the Windows operating system
 >nor any Microsoft product that may be related to the proposed project that is under a license incompatible
->with contribution to Windivs, including but not limited to the leaked Windows 2000 source code and the Windows Research Kernel.
+>with contribution to ReactOS, including but not limited to the leaked Windows 2000 source code and the Windows Research Kernel.
 
 ## What To Do?
 
 ### Fix bugs
 
-You can try to fix a few bugs that are already listed in [JIRA]. Squashing bugs is not a simple task. It requires a lot more skill than simply searching for them, and can be time consuming; however, by doing that you greatly help Windivs become a stable system.
+You can try to fix a few bugs that are already listed in [JIRA]. Squashing bugs is not a simple task. It requires a lot more skill than simply searching for them, and can be time consuming; however, by doing that you greatly help ReactOS become a stable system.
 
 _NOTE: patches related to 3rd party code such as Wine or BtrFS should be sent to upstream of the said projects. See [3rd Party Files.txt], [README.WINE] and [README.FSD] in [media/doc](media/doc) for details._
 
 ### Fix tests
 
-Tests are used to check the functionality and correctness of APIs on Windivs compared to Windows implementations. There are some unit tests that you could help Windivs pass, which can be found [in the Web Test Manager][testman] and some that are broken or yet to be written.
+Tests are used to check the functionality and correctness of APIs on ReactOS compared to Windows implementations. There are some unit tests that you could help ReactOS pass, which can be found [in the Web Test Manager][testman] and some that are broken or yet to be written.
 
 ### Fix Coverity scans
 
-[Coverity] is enhanced static analysis that uncovers leaks, buffer overflows, security issues and other. We do such scans on Windivs codebase pretty often. You can [request][request-coverity] to see Coverity 'defects' and help to fix them.
+[Coverity] is enhanced static analysis that uncovers leaks, buffer overflows, security issues and other. We do such scans on ReactOS codebase pretty often. You can [request][request-coverity] to see Coverity 'defects' and help to fix them.
 
-### Test Windivs
+### Test ReactOS
 
-By localizing bugs, developers can identify what causes the bug and which part it affects. There are a variety of methods to [debug] Windivs while testing it. After identifying a bug, check if it is already known about by searching on JIRA and adding any additional information to the report. If you think that it is an unidentified bug, consider [filing a bug report].
+By localizing bugs, developers can identify what causes the bug and which part it affects. There are a variety of methods to [debug] ReactOS while testing it. After identifying a bug, check if it is already known about by searching on JIRA and adding any additional information to the report. If you think that it is an unidentified bug, consider [filing a bug report].
 
 ### Implement new things
 
-Considering Windivs is alpha quality software, there is a lot of [missing functionality] that Windows operating systems have. Before starting a project to implement something, find out whether another person is working on the same thing. If you find that someone is already working on it, ask if any assistance is needed for what specifically is being worked on or a related project. More often than not, someone will start to implement something and move onto something else before it's complete. Make sure you stay committed to what you are going to implement, and do not be afraid to ask for assistance if you need help with something.
+Considering ReactOS is alpha quality software, there is a lot of [missing functionality] that Windows operating systems have. Before starting a project to implement something, find out whether another person is working on the same thing. If you find that someone is already working on it, ask if any assistance is needed for what specifically is being worked on or a related project. More often than not, someone will start to implement something and move onto something else before it's complete. Make sure you stay committed to what you are going to implement, and do not be afraid to ask for assistance if you need help with something.
 
 ### Write documentation
 
-There are some important points if you would like to help document Windivs:
+There are some important points if you would like to help document ReactOS:
 
 1. Make sure the documentation does not exist yet (if it does, help improve it).
 2. Respect [clean room reverse engineering] practices.
@@ -71,7 +71,7 @@ Our commit style is defined in a __[commit template]__. Use it as a reference or
 - *Respect our __[Coding Style]__ and __[Programming Guidelines]__.*
 - *Do not be afraid to ask questions.* Ask our developers on JIRA or [IRC] channel.
 
-To amend your commit with your name and e-mail (in any case you've forgot to set your name/e-mail) please take a look at this [guide](https://reactos.org/wiki/Windivs_Git_For_Dummies#Amending_your_commit_with_name.2FE-mail). To set your name/e-mail globally for future commits that you push, [read this](https://reactos.org/wiki/Windivs_Git_For_Dummies#Assign_commits_with_your_name_.26_E-mail_automatically).
+To amend your commit with your name and e-mail (in any case you've forgot to set your name/e-mail) please take a look at this [guide](https://reactos.org/wiki/ReactOS_Git_For_Dummies#Amending_your_commit_with_name.2FE-mail). To set your name/e-mail globally for future commits that you push, [read this](https://reactos.org/wiki/ReactOS_Git_For_Dummies#Assign_commits_with_your_name_.26_E-mail_automatically).
 
 ## Where To Start?
 
@@ -91,11 +91,11 @@ Finding a good project to start with can be a challenge, because when starting o
   [humans are terrible at tracking large amount of information]: https://www.eurekalert.org/pub_releases/2005-03/aps-hmc030805.php
   [Pull requests]:                                               https://help.github.com/articles/about-pull-requests/
   [tips for reviewing patches]:                                  https://www.drupal.org/patch/review
-  [missing functionality]:                                       https://reactos.org/wiki/Missing_Windivs_Functionality
+  [missing functionality]:                                       https://reactos.org/wiki/Missing_ReactOS_Functionality
   [patch]:                                                       https://git-scm.com/docs/git-format-patch
   [Submitting Patches]:                                          https://reactos.org/wiki/Submitting_Patches
   [Coding Style]:                                                https://reactos.org/wiki/Coding_Style
-  [IRC]:                                                         https://reactos.org/wiki/Connect_to_the_Windivs_IRC_Channels
+  [IRC]:                                                         https://reactos.org/wiki/Connect_to_the_ReactOS_IRC_Channels
   [Programming Guidelines]:                                      https://reactos.org/wiki/Programming_Guidelines
   [3rd Party Files.txt]:                                         /media/doc/3rd_Party_Files.txt
   [README.WINE]:                                                 /media/doc/README.WINE

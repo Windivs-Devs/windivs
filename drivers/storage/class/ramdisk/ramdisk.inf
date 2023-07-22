@@ -7,7 +7,7 @@ Signature  = "$Windows NT$"
 LayoutFile = layout.inf
 Class      = Ramdisk
 ClassGUID  = {9D6D66A6-0B0C-4563-9077-A0E9A7955AE4}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 06/29/2008,1.00
 
 [DestinationDirs]
@@ -21,7 +21,7 @@ HKR, , ,               0, %RamdiskClassName%
 HKR, , Icon,           0, "-5"
 
 [Manufacturer]
-%Windivs% = RamdiskDevice
+%ReactOS% = RamdiskDevice
 
 [RamdiskDevice]
 %RamdiskBus.Desc% = RamdiskBus_Inst, Ramdisk, DetectedInternal\Ramdisk, Detected\Ramdisk
@@ -56,7 +56,7 @@ AddService = , 2
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Developers"
+ReactOS = "Windivs Developers"
 
 ; Localizable
 RamdiskClassName = "Ramdisk"

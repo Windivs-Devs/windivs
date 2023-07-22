@@ -19,7 +19,7 @@
  */
 
 /*
- * PROJECT:         Windivs Program Manager
+ * PROJECT:         ReactOS Program Manager
  * COPYRIGHT:       GPL - See COPYING in the top level directory
  * FILE:            base/shell/progman/group.c
  * PURPOSE:         Program group files helper functions

@@ -1,5 +1,5 @@
 /*
- * Windivs Calc (Unit conversion engine)
+ * ReactOS Calc (Unit conversion engine)
  *
  * Copyright 2007-2017, Carlo Bramini
  *

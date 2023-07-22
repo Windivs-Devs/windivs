@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Display Control Panel
+ * PROJECT:         ReactOS Display Control Panel
  * FILE:            dll/cpl/desk/screensaver.c
  * PURPOSE:         Screen saver property page
  *
@@ -565,12 +565,12 @@ AddScreenSavers(HWND hwndDlg, PDATA pData)
         SearchScreenSavers(hwndScreenSavers, szLocalPath, pData);
     }
 
-    // Add all the screensavers in the C:\Windivs\System32 directory.
+    // Add all the screensavers in the C:\ReactOS\System32 directory.
     GetSystemDirectory(szSearchPath, MAX_PATH);
     if (lpBackSlash != NULL && _tcsicmp(szSearchPath, szLocalPath) != 0)
         SearchScreenSavers(hwndScreenSavers, szSearchPath, pData);
 
-    // Add all the screensavers in the C:\Windivs directory.
+    // Add all the screensavers in the C:\ReactOS directory.
     GetWindowsDirectory(szSearchPath, MAX_PATH);
     if (lpBackSlash != NULL && _tcsicmp(szSearchPath, szLocalPath) != 0)
         SearchScreenSavers(hwndScreenSavers, szSearchPath, pData);

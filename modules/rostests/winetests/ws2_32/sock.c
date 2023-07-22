@@ -40,7 +40,7 @@
 #include <stdio.h>
 #include "wine/test.h"
 
-// Windivs: Wine has this in mstcpip.h, but it doesn't belong there
+// ReactOS: Wine has this in mstcpip.h, but it doesn't belong there
 #define WSA_CMSG_ALIGN(len)     (((len) + sizeof(SIZE_T) - 1) & ~(sizeof(SIZE_T) - 1))
 
 #define MAX_CLIENTS 4      /* Max number of clients */
@@ -773,7 +773,7 @@ static VOID WINAPI select_server ( server_params *par )
 
         n_set = 0;
 
-        wsa_ok ( ( n_ready = select ( 0, &fds_recv, &fds_send, NULL, &timeout ) ), SOCKET_ERROR !=,
+        wsa_ok ( ( n_ready = select ( 0, &fds_recv, &fds_send, NULL, &timeout ) ), SOCKET_ERROR !=, 
             "select_server (%x): select() failed: %d\n" );
 
         /* check for incoming requests */
@@ -845,7 +845,7 @@ static VOID WINAPI select_server ( server_params *par )
         ok ( ( n_set == n_ready ), "select_server (%x): select() returns wrong number of ready sockets\n", id );
 
         /* check if all clients are done */
-        if ( ( fds_opensend.fd_count == 0 )
+        if ( ( fds_opensend.fd_count == 0 ) 
             && ( fds_openrecv.fd_count == 1 ) /* initial socket that accepts clients */
             && ( n_connections  == min ( gen->n_clients, MAX_CLIENTS ) ) ) {
             break;
@@ -1123,7 +1123,7 @@ static void WINAPI event_client ( client_params *par )
             err = wsa_events.iErrorCode[ FD_READ_BIT ];
             ok ( err == 0, "event_client (%x): FD_READ error code: %d\n", id, err );
             if ( err != 0 ) break;
-
+            
             /* First read must succeed */
             n = recv ( mem->s, recv_p, min ( recv_last - recv_p, par->buflen ), 0 );
             wsa_ok ( n, 0 <=, "event_client (%x): recv error: %d\n" );
@@ -1140,9 +1140,9 @@ static void WINAPI event_client ( client_params *par )
                 n = recv ( mem->s, recv_p, min ( recv_last - recv_p, par->buflen ), 0 );
                 if ( n < 0 && ( err = WSAGetLastError()) != WSAEWOULDBLOCK )
                     ok ( 0, "event_client (%x): read error: %d\n", id, err );
-
+                
             }
-        }
+        }   
         if ( wsa_events.lNetworkEvents & FD_CLOSE )
         {
             trace ( "event_client (%x): close event\n", id );
@@ -1397,14 +1397,14 @@ static void do_test( test_setup *test )
 /* optname = SO_LINGER */
 static const LINGER linger_testvals[] = {
     {0,0},
-    {0,73},
+    {0,73}, 
     {1,0},
     {5,189}
 };
 
 /* optname = SO_RCVTIMEO, SOSNDTIMEO */
 #define SOCKTIMEOUT1 63000 /* 63 seconds. Do not test fractional part because of a
-                        bug in the linux kernel (fixed in 2.6.8) */
+                        bug in the linux kernel (fixed in 2.6.8) */ 
 #define SOCKTIMEOUT2 997000 /* 997 seconds */
 
 static void test_set_getsockopt(void)
@@ -1439,9 +1439,9 @@ static void test_set_getsockopt(void)
     /* SO_RCVTIMEO */
     timeout = SOCKTIMEOUT1;
     size = sizeof(timeout);
-    err = setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, size);
+    err = setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, size); 
     if( !err)
-        err = getsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, &size);
+        err = getsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, &size); 
     ok( !err, "get/setsockopt(SO_RCVTIMEO) failed error: %d\n", WSAGetLastError());
     ok( timeout == SOCKTIMEOUT1, "getsockopt(SO_RCVTIMEO) returned wrong value %d\n", timeout);
 
@@ -1456,9 +1456,9 @@ static void test_set_getsockopt(void)
     /* SO_SNDTIMEO */
     timeout = SOCKTIMEOUT2; /* 997 seconds. See remark above */
     size = sizeof(timeout);
-    err = setsockopt(s, SOL_SOCKET, SO_SNDTIMEO, (char *) &timeout, size);
+    err = setsockopt(s, SOL_SOCKET, SO_SNDTIMEO, (char *) &timeout, size); 
     if( !err)
-        err = getsockopt(s, SOL_SOCKET, SO_SNDTIMEO, (char *) &timeout, &size);
+        err = getsockopt(s, SOL_SOCKET, SO_SNDTIMEO, (char *) &timeout, &size); 
     ok( !err, "get/setsockopt(SO_SNDTIMEO) failed error: %d\n", WSAGetLastError());
     ok( timeout == SOCKTIMEOUT2, "getsockopt(SO_SNDTIMEO) returned wrong value %d\n", timeout);
 
@@ -1486,14 +1486,14 @@ static void test_set_getsockopt(void)
     for( i = 0; i < sizeof(linger_testvals)/sizeof(LINGER);i++) {
         size =  sizeof(lingval);
         lingval = linger_testvals[i];
-        err = setsockopt(s, SOL_SOCKET, SO_LINGER, (char *) &lingval, size);
+        err = setsockopt(s, SOL_SOCKET, SO_LINGER, (char *) &lingval, size); 
         if( !err)
-            err = getsockopt(s, SOL_SOCKET, SO_LINGER, (char *) &lingval, &size);
+            err = getsockopt(s, SOL_SOCKET, SO_LINGER, (char *) &lingval, &size); 
         ok( !err, "get/setsockopt(SO_LINGER) failed error: %d\n", WSAGetLastError());
         ok( !lingval.l_onoff == !linger_testvals[i].l_onoff &&
                 (lingval.l_linger == linger_testvals[i].l_linger ||
                  (!lingval.l_linger && !linger_testvals[i].l_onoff))
-                , "getsockopt(SO_LINGER #%d) returned wrong value %d,%d not %d,%d\n", i,
+                , "getsockopt(SO_LINGER #%d) returned wrong value %d,%d not %d,%d\n", i, 
                  lingval.l_onoff, lingval.l_linger,
                  linger_testvals[i].l_onoff, linger_testvals[i].l_linger);
     }
@@ -3063,7 +3063,7 @@ static void test_WSAAddressToStringA(void)
 
     ret = WSAAddressToStringA( (SOCKADDR*)&sockaddr, sizeof(sockaddr), NULL, address, &len );
     GLE = WSAGetLastError();
-    ok( (ret == SOCKET_ERROR && GLE == WSAEFAULT) || (ret == 0),
+    ok( (ret == SOCKET_ERROR && GLE == WSAEFAULT) || (ret == 0), 
         "WSAAddressToStringA() failed unexpectedly: WSAGetLastError()=%d, ret=%d\n",
         GLE, ret );
 
@@ -3226,7 +3226,7 @@ static void test_WSAAddressToStringW(void)
 
     ret = WSAAddressToStringW( (SOCKADDR*)&sockaddr, sizeof(sockaddr), NULL, address, &len );
     GLE = WSAGetLastError();
-    ok( (ret == SOCKET_ERROR && GLE == WSAEFAULT) || (ret == 0),
+    ok( (ret == SOCKET_ERROR && GLE == WSAEFAULT) || (ret == 0), 
         "WSAAddressToStringW() failed unexpectedly: WSAGetLastError()=%d, ret=%d\n",
         GLE, ret );
 
@@ -3404,7 +3404,7 @@ static void test_WSAStringToAddressA(void)
 
     ret = WSAStringToAddressA( address3, AF_INET, NULL, (SOCKADDR*)&sockaddr, &len );
     GLE = WSAGetLastError();
-    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff) ||
+    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff) || 
         (ret == SOCKET_ERROR && (GLE == ERROR_INVALID_PARAMETER || GLE == WSAEINVAL)),
         "WSAStringToAddressA() failed unexpectedly: %d\n", GLE );
 
@@ -3422,7 +3422,7 @@ static void test_WSAStringToAddressA(void)
 
     ret = WSAStringToAddressA( address5, AF_INET, NULL, (SOCKADDR*)&sockaddr, &len );
     GLE = WSAGetLastError();
-    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff && sockaddr.sin_port == 0xffff) ||
+    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff && sockaddr.sin_port == 0xffff) || 
         (ret == SOCKET_ERROR && (GLE == ERROR_INVALID_PARAMETER || GLE == WSAEINVAL)),
         "WSAStringToAddressA() failed unexpectedly: %d\n", GLE );
 
@@ -3531,7 +3531,7 @@ static void test_WSAStringToAddressW(void)
 
     ret = WSAStringToAddressW( address3, AF_INET, NULL, (SOCKADDR*)&sockaddr, &len );
     GLE = WSAGetLastError();
-    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff) ||
+    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff) || 
         (ret == SOCKET_ERROR && (GLE == ERROR_INVALID_PARAMETER || GLE == WSAEINVAL)),
         "WSAStringToAddressW() failed unexpectedly: %d\n", GLE );
 
@@ -3548,7 +3548,7 @@ static void test_WSAStringToAddressW(void)
     sockaddr.sin_addr.s_addr = 0;
 
     ret = WSAStringToAddressW( address5, AF_INET, NULL, (SOCKADDR*)&sockaddr, &len );
-    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff && sockaddr.sin_port == 0xffff) ||
+    ok( (ret == 0 && sockaddr.sin_addr.s_addr == 0xffffffff && sockaddr.sin_port == 0xffff) || 
         (ret == SOCKET_ERROR && (GLE == ERROR_INVALID_PARAMETER || GLE == WSAEINVAL)),
         "WSAStringToAddressW() failed unexpectedly: %d\n", GLE );
 
@@ -3818,7 +3818,7 @@ static void test_select(void)
     ok(!FD_ISSET(fdWrite, &writefds), "FD should not be set\n");
     ok(!FD_ISSET(fdRead, &exceptfds), "FD should not be set\n");
     ok(!FD_ISSET(fdWrite, &exceptfds), "FD should not be set\n");
-
+ 
     FD_ZERO_ALL();
     FD_SET_ALL(fdRead);
     FD_SET_ALL(fdWrite);
@@ -4497,8 +4497,8 @@ static void test_extendedSocketOptions(void)
     SetLastError(0xdeadbeef);
     optlen = sizeof(LINGER);
     ret = getsockopt(sock, SOL_SOCKET, SO_LINGER, (char *)&linger_val, &optlen);
-    ok( (ret == SOCKET_ERROR) && (WSAGetLastError() == WSAENOPROTOOPT),
-        "getsockopt should fail for UDP sockets setting last error to WSAENOPROTOOPT, got %d with %d\n",
+    ok( (ret == SOCKET_ERROR) && (WSAGetLastError() == WSAENOPROTOOPT), 
+        "getsockopt should fail for UDP sockets setting last error to WSAENOPROTOOPT, got %d with %d\n", 
         ret, WSAGetLastError());
     closesocket(sock);
 

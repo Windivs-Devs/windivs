@@ -442,7 +442,7 @@ Pc98VideoSync(VOID)
 }
 
 VOID
-Pc98VideoPrepareForWindivs(VOID)
+Pc98VideoPrepareForReactOS(VOID)
 {
     REGS Regs;
 

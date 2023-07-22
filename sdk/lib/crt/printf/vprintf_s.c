@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:       GNU GPL, see COPYING in the top level directory
- * PROJECT:         Windivs crt library
+ * PROJECT:         ReactOS crt library
  * FILE:            lib/sdk/crt/printf/vprintf_s.c
  * PURPOSE:         Implementation of vprintf
- * PROGRAMMER:      Samuel Serapiï¿½n
+ * PROGRAMMER:      Samuel Serapión
  */
 
 #define MINGW_HAS_SECURE_API 1

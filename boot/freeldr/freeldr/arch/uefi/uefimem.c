@@ -304,7 +304,7 @@ UefiExitBootServices(VOID)
 }
 
 VOID
-UefiPrepareForWindivs(VOID)
+UefiPrepareForReactOS(VOID)
 {
     UefiExitBootServices();
     ExitStack = MmAllocateMemoryWithType(EXIT_STACK_SIZE, LoaderOsloaderStack);

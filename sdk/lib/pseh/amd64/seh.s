@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs CRT
+ * PROJECT:         ReactOS CRT
  * FILE:            lib/pseh/amd64/seh.S
  * PURPOSE:         SEH Support for the CRT
  * PROGRAMMERS:

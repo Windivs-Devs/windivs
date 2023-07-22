@@ -502,8 +502,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -525,8 +525,8 @@ Syntax:  CLEAN [ALL]
     Sektoren überschrieben. Auf GUID-Partitionstabellen-Datenträgern
     (GPT) werden die GPT-Partitionierungsinformationen (einschließlich
     Schutz-MBR) überschrieben. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Beispiel:
@@ -546,8 +546,8 @@ Składnia:  CLEAN [ALL]
     informacje o partycjonowaniu MBR i ukrytych sektorach. Na dyskach
     z tablicą partycji GUID (GPT) są zastępowane informacje
     o partycjonowaniu GPT, łącznie z ochronnym rekordem MBR. Jeśli parametr
-    ALL nie zostanie użyty, 1 MB na początku i na końcu dysku jest zerowany.
-    Powoduje to wymazanie formatowania poprzednio stosowanego na dysku.
+    ALL nie zostanie użyty, 1 MB na początku i na końcu dysku jest zerowany. 
+    Powoduje to wymazanie formatowania poprzednio stosowanego na dysku. 
     Stanem dysku po jego czyszczeniu jest stan 'NIEZAINICJOWANY'.
 
 Przykład:
@@ -567,8 +567,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -588,8 +588,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -609,8 +609,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -630,8 +630,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -651,8 +651,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -672,8 +672,8 @@ Syntax:  CLEAN [ALL]
     and hidden sector information are overwritten. On GUID partition table
     (GPT) disks, the GPT partitioning information, including the Protective
     MBR, is overwritten. If the ALL parameter is not used, the first 1MB
-    and the last 1MB of the disk are zeroed. This erases any disk formatting
-    that had been previously applied to the disk. The disk's state after
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
     cleaning the disk is 'UNINITIALIZED'.
 
 Example:
@@ -2630,7 +2630,7 @@ Language=Taiwanese
 
                 您可以使用這個參數指定任何磁碟分割類型位元組或 GUID。
                 DiskPart 不會檢查磁碟分割類型的有效性，但會確保
-                磁碟分割類型是否為以十六進位格式或 GUID 表示的位元組。
+                磁碟分割類型是否為以十六進位格式或 GUID 表示的位元組。 
 
                 注意:
 
@@ -3120,7 +3120,7 @@ Example:
     DETAIL DISK
 .
 Language=Taiwanese
-    顯示在該磁碟上已選擇之磁碟的內容及列出磁碟區。
+    顯示在該磁碟上已選擇之磁碟的內容及列出磁碟區。 
 
 語法:  DETAIL DISK
 
@@ -3236,7 +3236,7 @@ Example:
     DETAIL PARTITION
 .
 Language=Taiwanese
-    顯示已選擇之磁碟分割的內容。
+    顯示已選擇之磁碟分割的內容。 
 
 語法:  DETAIL PARTITION
 
@@ -3710,7 +3710,7 @@ SymbolicName=MSG_COMMAND_FORMAT
 Severity=Informational
 Facility=System
 Language=English
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -3775,7 +3775,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=German
-    Formatiert das angegebene Volume für die Verwendung mit Windivs.
+    Formatiert das angegebene Volume für die Verwendung mit ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -3849,7 +3849,7 @@ Beispiele:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Polish
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -3914,7 +3914,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Portugese
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -3979,7 +3979,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Romanian
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4044,7 +4044,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Russian
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4109,7 +4109,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Albanian
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4174,7 +4174,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Turkish
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4239,7 +4239,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Chinese
-    Formats the specified volume for use with Windivs.
+    Formats the specified volume for use with ReactOS.
 
 Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4304,7 +4304,7 @@ Examples:
     FORMAT RECOMMENDED OVERRIDE
 .
 Language=Taiwanese
-    格式化指定的磁碟區以供 Windivs 使用。
+    格式化指定的磁碟區以供 ReactOS 使用。
 
 語法:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
                 [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT]
@@ -4612,7 +4612,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4637,7 +4637,7 @@ Syntax:  INACTIVE
         Möglicherweise kann der Computer nicht gestartet werden, wenn es
         keine aktive Partition gibt. Markieren Sie eine System- oder
         Startpartition nur dann als inaktiv, wenn Sie ein erfahrener
-        Benutzer und mit der Windivs-Speicherverwaltung umfassend vertraut
+        Benutzer und mit der ReactOS-Speicherverwaltung umfassend vertraut
         sind.
 
 Beispiel:
@@ -4685,7 +4685,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4708,7 +4708,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4731,7 +4731,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4754,7 +4754,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4777,7 +4777,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4800,7 +4800,7 @@ Syntax:  INACTIVE
 
         Your computer might not start without an active partition. Do not mark
         a system or boot partition as inactive unless you are an experienced
-        user with a thorough understanding of Windivs storage management.
+        user with a thorough understanding of ReactOS storage management.
 
 Example:
 
@@ -4821,7 +4821,7 @@ Language=Taiwanese
     注意:
 
         如果沒有使用中的磁碟分割，您的電腦將無法啟動。
-        除非您是非常熟悉 Windivs 存放管理的進階使用者，
+        除非您是非常熟悉 ReactOS 存放管理的進階使用者，
         否則請勿將系統或開機磁碟分割標示為非使用中。
 
 範例:
@@ -6881,7 +6881,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7147,7 +7147,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7229,7 +7229,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7311,7 +7311,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7393,7 +7393,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7475,7 +7475,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a
@@ -7557,7 +7557,7 @@ Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
                 For master boot record (MBR) disks, you can specify a partition
                 type byte, in hexadecimal form, for the partition. Any
                 partition type byte can be specified with this parameter except
-                for type 0x42 (LDM partition). Note that the leading '0x' is
+                for type 0x42 (LDM partition). Note that the leading '0x' is 
                 omitted when specifying the hexadecimal partition type.
 
                 For GUID partition table (GPT) disks you can specify a

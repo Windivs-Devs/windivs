@@ -1,8 +1,8 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs text-mode setup
+ * PROJECT:         ReactOS text-mode setup
  * PURPOSE:         Device installation
- * PROGRAMMER:      Hervï¿½ Poussineau (hpoussin@reactos.org)
+ * PROGRAMMER:      Hervé Poussineau (hpoussin@reactos.org)
  *                  Hermes Belusca-Maito
  */
 

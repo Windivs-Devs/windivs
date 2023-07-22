@@ -24,7 +24,7 @@ int CreateSocket(SOCKET* psck)
     return 1;
 }
 
-int ConnectToWindivsWebsite(SOCKET sck)
+int ConnectToReactOSWebsite(SOCKET sck)
 {
     int iResult;
     struct hostent* host;

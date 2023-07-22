@@ -23,7 +23,7 @@
 /* PROTOTYPES ***************************************************************/
 
 VOID
-AddWindivsArcDiskInfo(
+AddReactOSArcDiskInfo(
     IN PSTR ArcName,
     IN ULONG Signature,
     IN ULONG Checksum,

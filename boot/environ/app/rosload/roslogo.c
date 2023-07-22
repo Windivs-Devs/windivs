@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING.ARM in the top level directory
- * PROJECT:         Windivs UEFI OS Loader
+ * PROJECT:         ReactOS UEFI OS Loader
  * FILE:            boot/environ/app/rosload/roslogo.c
  * PURPOSE:         OS Loader Logo Drawing
  * PROGRAMMER:      Alex Ionescu (alex.ionescu@reactos.org)
@@ -9774,7 +9774,7 @@ OslDrawLogo (
     EFI_GRAPHICS_OUTPUT_PROTOCOL* GraphicsOutput;
     EFI_STATUS EfiStatus;
 
-    /* Convert Windivs Logo */
+    /* Convert ReactOS Logo */
     ConvertBmpToGopBlt(g_Logo,
                        sizeof(g_Logo),
                        (PVOID*)&GopBlt,
@@ -9818,7 +9818,7 @@ OslDrawLogo (
     BlpArchSwitchContext(BlProtectedMode);
 
     /* Display text below the logo */
-    EfiPrintf(L"\n\n\n\n\nWindivs UEFI OS Loader Initializing... %lx\r\n",
+    EfiPrintf(L"\n\n\n\n\nReactOS UEFI OS Loader Initializing... %lx\r\n",
               EfiStatus);
     EfiStall(1000000);
 

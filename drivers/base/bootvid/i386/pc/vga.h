@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs VGA Miniport Driver
+ * PROJECT:         ReactOS VGA Miniport Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * PURPOSE:         Definitions for VGA
  * PROGRAMMERS:     Copyright (c) 1992  Microsoft Corporation
- *                  Windivs Portable Systems Group
+ *                  ReactOS Portable Systems Group
  */
 
 #ifndef _BOOTVID_VGA_H_

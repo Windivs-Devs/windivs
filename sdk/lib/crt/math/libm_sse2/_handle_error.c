@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs CRT library
+ * PROJECT:     ReactOS CRT library
  * LICENSE:     MIT (https://spdx.org/licenses/MIT)
  * PURPOSE:     Implementation of _handle_error / _handle_errorf for libm
  * COPYRIGHT:   Copyright 2022 Timo Kreuzer <timo.kreuzer@reactos.org>
@@ -17,7 +17,7 @@ _invoke_matherr(
     double retval);
 
 /*!
- * @brief Handles an error condition.
+ * @brief Handles an error condition. 
  * @param fname - The name of the function that caused the error.
  * @param opcode - Opcode of the function that cause the error (see OP_* consants in fpieee.h).
  * @param value - The value to be returned, encoded as uint64_t.

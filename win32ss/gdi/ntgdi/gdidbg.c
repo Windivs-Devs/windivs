@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs win32 kernel mode subsystem
+ * PROJECT:         ReactOS win32 kernel mode subsystem
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            win32ss/gdi/ntgdi/gdidbg.c
  * PURPOSE:         Special debugging functions for GDI
@@ -583,7 +583,7 @@ QueryEnvironmentVariable(PUNICODE_STRING Name,
    PPEB Peb;
    PWSTR Environment;
 
-   /* Ugly HACK for Windivs system threads */
+   /* Ugly HACK for ReactOS system threads */
    if(!NtCurrentTeb())
    {
        return(STATUS_VARIABLE_NOT_FOUND);

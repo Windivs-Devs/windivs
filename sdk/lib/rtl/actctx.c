@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Runtime Library
+ * PROJECT:         ReactOS Runtime Library
  * PURPOSE:         Activation Context Support
  * FILE:            lib/rtl/actctx.c
  * PROGRAMERS:
@@ -5090,7 +5090,7 @@ void actctx_init(PVOID* pOldShimData)
         process_actctx = check_actctx(handle);
     }
 
-    /* Windivs specific:
+    /* ReactOS specific:
        Now that we have found the process_actctx we can initialize the process compat subsystem */
     LdrpInitializeProcessCompat(process_actctx, pOldShimData);
 

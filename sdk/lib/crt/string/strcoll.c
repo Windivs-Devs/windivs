@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs system libraries
+ * PROJECT:     ReactOS system libraries
  * FILE:        lib/sdk/crt/string/strcoll.c
  * PURPOSE:     Unknown
  * PROGRAMER:   Unknown

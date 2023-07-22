@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs host tools
+ * PROJECT:     ReactOS host tools
  * LICENSE:     MIT (https://spdx.org/licenses/MIT)
  * PURPOSE:     Tokenizer class implementation
  * COPYRIGHT:   Copyright 2021 Timo Kreuzer <timo.kreuzer@reactos.org>
@@ -190,7 +190,7 @@ public:
         {
             throw "Failed to match at current position!\n";
         }
-
+        
         // We have a match, check which one it is
         for (size_t i = 1; i < matches.size(); i++)
         {

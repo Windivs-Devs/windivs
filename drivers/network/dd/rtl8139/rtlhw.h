@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs RTL8139 Driver
+ * PROJECT:     ReactOS RTL8139 Driver
  * FILE:        rtlhw.h
  * PURPOSE:     8139 NIC definitions
  */

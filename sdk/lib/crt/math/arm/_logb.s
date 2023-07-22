@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         BSD - See COPYING.ARM in the top level directory
- * PROJECT:           Windivs CRT library
+ * PROJECT:           ReactOS CRT library
  * PURPOSE:           Implementation of _logb
  * PROGRAMMER:        Timo Kreuzer (timo.kreuzer@reactos.org)
  */

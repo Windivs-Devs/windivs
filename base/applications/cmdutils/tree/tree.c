@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs
+ * PROJECT:     ReactOS
  * LICENSE:     GNU GPLv2 only as published by the Free Software Foundation
  * PURPOSE:     Implements tree.com command similar to Windows
  * PROGRAMMERS: Asif Bahrainwala (asif_bahrainwala@hotmail.com)

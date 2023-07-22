@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs kernel
+ * PROJECT:           ReactOS kernel
  * PURPOSE:           GDI Driver Device Functions
  * FILE:              win32ss/gdi/eng/device.c
  * PROGRAMER:         Jason Filby

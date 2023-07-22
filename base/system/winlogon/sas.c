@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Winlogon
+ * PROJECT:         ReactOS Winlogon
  * FILE:            base/system/winlogon/sas.c
  * PURPOSE:         Secure Attention Sequence
  * PROGRAMMERS:     Thomas Weidenmueller (w3seek@users.sourceforge.net)
@@ -42,7 +42,7 @@ typedef struct tagLOGOFF_SHUTDOWN_DATA
     PWLSESSION Session;
 } LOGOFF_SHUTDOWN_DATA, *PLOGOFF_SHUTDOWN_DATA;
 
-static BOOL ExitWindivsInProgress = FALSE;
+static BOOL ExitReactOSInProgress = FALSE;
 
 LUID LuidNone = {0, 0};
 
@@ -606,9 +606,9 @@ LogoffShutdownThread(
     uFlags = EWX_CALLER_WINLOGON | (LSData->Flags & 0x0F);
 
     TRACE("In LogoffShutdownThread with uFlags == 0x%x; exit_in_progress == %s\n",
-        uFlags, ExitWindivsInProgress ? "true" : "false");
+        uFlags, ExitReactOSInProgress ? "true" : "false");
 
-    ExitWindivsInProgress = TRUE;
+    ExitReactOSInProgress = TRUE;
 
     /* Close processes of the interactive user */
     if (!ExitWindowsEx(uFlags, 0))
@@ -962,7 +962,7 @@ HandleShutdown(
     LSData->Session = Session;
 
     // FIXME: We may need to specify this flag to really force application kill
-    // (we are shutting down Windivs, not just logging off so no hangs, etc...
+    // (we are shutting down ReactOS, not just logging off so no hangs, etc...
     // should be allowed).
     // LSData->Flags |= EWX_FORCE;
 
@@ -1076,7 +1076,7 @@ DoGenericAction(
             if (WLX_SHUTTINGDOWN(wlxAction))
             {
                 // FIXME: WlxShutdown should be done from inside HandleShutdown,
-                // after having displayed "Windivs is shutting down" message.
+                // after having displayed "ReactOS is shutting down" message.
                 Session->Gina.Functions.WlxShutdown(Session->Gina.Context, wlxAction);
                 if (!NT_SUCCESS(HandleShutdown(Session, wlxAction)))
                 {
@@ -1417,7 +1417,7 @@ SASWindowProc(
                     }
 
                     TRACE("In LN_LOGOFF, exit_in_progress == %s\n",
-                        ExitWindivsInProgress ? "true" : "false");
+                        ExitReactOSInProgress ? "true" : "false");
 
                     /*
                      * In case a parallel shutdown request is done (while we are
@@ -1430,8 +1430,8 @@ SASWindowProc(
 // etc... and as a result you just get explorer opening "My Documents". And
 // if you try now a shut down, it won't work because winlogon thinks it is
 // still in the middle of a shutdown.
-// Maybe we also need to reset ExitWindivsInProgress somewhere else??
-                    if (ExitWindivsInProgress && (lParam & EWX_CALLER_WINLOGON) == 0)
+// Maybe we also need to reset ExitReactOSInProgress somewhere else??
+                    if (ExitReactOSInProgress && (lParam & EWX_CALLER_WINLOGON) == 0)
                     {
                         break;
                     }
@@ -1443,9 +1443,9 @@ SASWindowProc(
                 case LN_LOGOFF_CANCELED:
                 {
                     ERR("Logoff canceled!!, before: exit_in_progress == %s, after will be false\n",
-                        ExitWindivsInProgress ? "true" : "false");
+                        ExitReactOSInProgress ? "true" : "false");
 
-                    ExitWindivsInProgress = FALSE;
+                    ExitReactOSInProgress = FALSE;
                     return 1;
                 }
                 default:

@@ -55,7 +55,7 @@ ERRORLEVEL, seçimlerdeki temel kullanıcı basışlarının denkleştirmesi iç
     STRING_CMD_HELP5 "  [Bash dosya adı tamamlamaları]"
     STRING_CMD_HELP6 "  [dizin yığını]"
     STRING_CMD_HELP7 "  [yönlendirmeler ve boru hatları]"
-    STRING_CMD_HELP8 "Yeni bir Windivs komut istemi penceresi başlatır.\n\n\
+    STRING_CMD_HELP8 "Yeni bir ReactOS komut istemi penceresi başlatır.\n\n\
 CMD [/[C|K] komut][/P][/Q][/T:bf]\n\n\
   /C komut    Verilen 'komut'u çalıştırır ve bitirir.\n\
   /K komut    Verilen 'komut'u çalıştırır ve kalır.\n\
@@ -435,7 +435,7 @@ bir sürüm altında olmak kaydı ile, lisansın size sağladığı koşullar al
     STRING_VERSION_HELP5 "\nHata raporlarını <jira.reactos.org> e-posta adresine bildirin.\n\
 Güncellemeleri takip etmek için: https://reactos.org"
     STRING_VERSION_HELP6 "\nFreeDOS sürümü şu kişi tarafından yazılmıştır:\n"
-    STRING_VERSION_HELP7 "\nWindivs sürümü şu kişi tarafından yazılmıştır:\n"
+    STRING_VERSION_HELP7 "\nReactOS sürümü şu kişi tarafından yazılmıştır:\n"
     STRING_VOL_HELP1 " %c sürücüsündeki birim %s'dir\n"
     STRING_VOL_HELP2 " %c sürücüsündeki birim etiketlenemedi.\n"
     STRING_VOL_HELP3 " Birimin seri numarası: %04X-%04X\n"
@@ -519,9 +519,9 @@ başlık        pencere için yeni başlık\n"
     STRING_REPLACE_ERROR5 "Erişim reddedildi - %s\n"
     STRING_REPLACE_ERROR6 "Hiçbir dosya bulunamadı - %s\n"
     STRING_REPLACE_ERROR7 "Genişletilmiş Hata 32\n"
-    STRING_CMD_INFOLINE "  Windivs Komut Satırı                                 Yardım için, HELP yazın"
-    STRING_REACTOS_VERSION "Windivs [Sürüm %s %s]\n"
-    STRING_CMD_SHELLINFO "\nWindivs Komut Satırı Yorumlayıcısı\nSürüm %s %s"
+    STRING_CMD_INFOLINE "  ReactOS Komut Satırı                                 Yardım için, HELP yazın"
+    STRING_REACTOS_VERSION "ReactOS [Sürüm %s %s]\n"
+    STRING_CMD_SHELLINFO "\nReactOS Komut Satırı Yorumlayıcısı\nSürüm %s %s"
     STRING_VERSION_RUNNING_ON "Üzerinde Çalışıyor: "
     STRING_VERSION_RUNVER "%s [Sürüm %d.%d.%d] %s"
     STRING_COPY_FILE "        %d adet dosya(lar) kopyalandı\n"

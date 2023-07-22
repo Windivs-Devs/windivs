@@ -1,8 +1,8 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs DVB
+ * PROJECT:         ReactOS DVB
  * FILE:            dll/directx/msvidctl/msvidctl.cpp
- * PURPOSE:         Windivs DVB Initialization
+ * PURPOSE:         ReactOS DVB Initialization
  *
  * PROGRAMMERS:     Johannes Anderwald (johannes.anderwald@reactos.org)
  */

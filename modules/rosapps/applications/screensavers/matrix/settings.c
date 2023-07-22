@@ -92,7 +92,7 @@ void LoadSettings()
 	else
 	{
 		/* built-in coded message for first run */
-		lstrcpyn(g_szMessages[0], _T("Windivs"), MAXMSG_LENGTH);
+		lstrcpyn(g_szMessages[0], _T("ReactOS"), MAXMSG_LENGTH);
 		++g_nNumMessages;
 	}
 

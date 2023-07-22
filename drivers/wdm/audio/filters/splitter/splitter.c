@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Kernel Streaming
+ * PROJECT:         ReactOS Kernel Streaming
  * FILE:            drivers/wdm/audio/filters/splitter/splitter.c
  * PURPOSE:         Splitter entry point
  * PROGRAMMER:      Johannes Anderwald

@@ -6,7 +6,7 @@
  * Copyright 2006 Robert Reif
  * Copyright 2006 Hervé Poussineau
  *
- * PROJECT:         Windivs system libraries
+ * PROJECT:         ReactOS system libraries
  * FILE:            dll/win32/advapi32/wine/security.c
  */
 
@@ -1700,15 +1700,15 @@ AccessCheck(IN PSECURITY_DESCRIPTOR pSecurityDescriptor,
  * @unimplemented
  */
 BOOL WINAPI AccessCheckByType(
-    PSECURITY_DESCRIPTOR pSecurityDescriptor,
+    PSECURITY_DESCRIPTOR pSecurityDescriptor, 
     PSID PrincipalSelfSid,
-    HANDLE ClientToken,
-    DWORD DesiredAccess,
+    HANDLE ClientToken, 
+    DWORD DesiredAccess, 
     POBJECT_TYPE_LIST ObjectTypeList,
     DWORD ObjectTypeListLength,
     PGENERIC_MAPPING GenericMapping,
     PPRIVILEGE_SET PrivilegeSet,
-    LPDWORD PrivilegeSetLength,
+    LPDWORD PrivilegeSetLength, 
     LPDWORD GrantedAccess,
     LPBOOL AccessStatus)
 {
@@ -2199,32 +2199,32 @@ BuildTrusteeWithNameW(PTRUSTEE_W pTrustee,
     pTrustee->ptstrName = name;
 }
 
-/******************************************************************************
- * GetTrusteeFormA [ADVAPI32.@]
- */
-TRUSTEE_FORM WINAPI GetTrusteeFormA(PTRUSTEEA pTrustee)
-{
-    TRACE("(%p)\n", pTrustee);
-
-    if (!pTrustee)
-        return TRUSTEE_BAD_FORM;
-
-    return pTrustee->TrusteeForm;
-}
-
-/******************************************************************************
- * GetTrusteeFormW [ADVAPI32.@]
- */
-TRUSTEE_FORM WINAPI GetTrusteeFormW(PTRUSTEEW pTrustee)
-{
-    TRACE("(%p)\n", pTrustee);
-
-    if (!pTrustee)
-        return TRUSTEE_BAD_FORM;
-
-    return pTrustee->TrusteeForm;
-}
-
+/****************************************************************************** 
+ * GetTrusteeFormA [ADVAPI32.@] 
+ */ 
+TRUSTEE_FORM WINAPI GetTrusteeFormA(PTRUSTEEA pTrustee) 
+{  
+    TRACE("(%p)\n", pTrustee); 
+  
+    if (!pTrustee) 
+        return TRUSTEE_BAD_FORM; 
+  
+    return pTrustee->TrusteeForm; 
+}  
+  
+/****************************************************************************** 
+ * GetTrusteeFormW [ADVAPI32.@] 
+ */ 
+TRUSTEE_FORM WINAPI GetTrusteeFormW(PTRUSTEEW pTrustee) 
+{  
+    TRACE("(%p)\n", pTrustee); 
+  
+    if (!pTrustee) 
+        return TRUSTEE_BAD_FORM; 
+  
+    return pTrustee->TrusteeForm; 
+}  
+  
 /******************************************************************************
  * GetTrusteeNameA [ADVAPI32.@]
  */
@@ -2555,10 +2555,10 @@ static DWORD ParseAceStringRights(LPCWSTR* StringAcl)
 
 /******************************************************************************
  * ParseStringAclToAcl
- *
- * dacl_flags(string_ace1)(string_ace2)... (string_acen)
+ * 
+ * dacl_flags(string_ace1)(string_ace2)... (string_acen) 
  */
-static BOOL ParseStringAclToAcl(LPCWSTR StringAcl, LPDWORD lpdwFlags,
+static BOOL ParseStringAclToAcl(LPCWSTR StringAcl, LPDWORD lpdwFlags, 
     PACL pAcl, LPDWORD cBytes)
 {
     DWORD val;
@@ -3348,7 +3348,7 @@ BOOL WINAPI ConvertStringSidToSidW(LPCWSTR StringSid, PSID* Sid)
 
         bret = ParseStringSidToSid(StringSid, pSid, &cBytes);
         if (!bret)
-            LocalFree(*Sid);
+            LocalFree(*Sid); 
     }
     return bret;
 }

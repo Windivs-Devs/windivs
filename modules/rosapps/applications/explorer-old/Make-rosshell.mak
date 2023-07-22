@@ -1,5 +1,5 @@
 #
-#  Windivs shell
+#  ReactOS shell
 #
 #  Makefile
 #

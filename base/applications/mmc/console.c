@@ -1,5 +1,5 @@
 /*
- * Windivs Management Console
+ * ReactOS Management Console
  * Copyright (C) 2006 - 2007 Thomas Weidenmueller
  *
  * This library is free software; you can redistribute it and/or
@@ -140,7 +140,7 @@ FrameOnCreate(HWND hwnd,
     {
         /* FIXME */
         Info->AppAuthorMode = TRUE;
-//        Info->lpConsoleTitle = TEXT("Windivs Management Console");
+//        Info->lpConsoleTitle = TEXT("ReactOS Management Console");
     }
     else
     {

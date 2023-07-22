@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs kernel-mode tests
+ * PROJECT:         ReactOS kernel-mode tests
  * LICENSE:         LGPLv2.1+ - See COPYING.LIB in the top level directory
  * PURPOSE:         Test driver for reparse point operations
  * PROGRAMMER:      Pierre Schweitzer <pierre@reactos.org>
@@ -142,7 +142,7 @@ TestIrpHandler(
         else
         {
             Fcb = ExAllocatePoolZero(NonPagedPool, sizeof(*Fcb), 'FwrI');
-
+            
             if (!Fcb)
             {
                 Status = STATUS_INSUFFICIENT_RESOURCES;

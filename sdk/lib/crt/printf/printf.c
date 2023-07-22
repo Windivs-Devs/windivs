@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       GNU GPL, see COPYING in the top level directory
- * PROJECT:         Windivs crt library
+ * PROJECT:         ReactOS crt library
  * FILE:            lib/sdk/crt/printf/printf.c
  * PURPOSE:         Implementation of printf
  * PROGRAMMER:      Timo Kreuzer
- *                  Samuel Serapiï¿½n
+ *                  Samuel Serapión
  */
 
 #include <stdio.h>

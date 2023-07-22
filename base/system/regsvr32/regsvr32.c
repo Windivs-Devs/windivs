@@ -1,9 +1,9 @@
 /*
- * Windivs regsvr32
- * Copyright (C) 2004-2006 Windivs Team
+ * ReactOS regsvr32
+ * Copyright (C) 2004-2006 ReactOS Team
  *
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs regsvr32.exe
+ * PROJECT:         ReactOS regsvr32.exe
  * FILE:            base/system/regsvr32/regsvr32.c
  * PURPOSE:         Register a COM component in the registry
  * PROGRAMMER:      ShadowFlare (blakflare@hotmail.com)

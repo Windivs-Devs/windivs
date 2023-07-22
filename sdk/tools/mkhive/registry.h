@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs hive maker
+ * PROJECT:         ReactOS hive maker
  * FILE:            tools/mkhive/registry.h
  * PURPOSE:         Registry code
  */

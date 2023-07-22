@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Win32k subsystem
+ * PROJECT:          ReactOS Win32k subsystem
  * PURPOSE:          Messages
  * FILE:             win32ss/user/ntuser/message.c
  * PROGRAMER:        Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -612,7 +612,7 @@ IntMsgCreateStructW(
     WindowName = (PLARGE_STRING)   Cs->lpszName;
     ClassName  = (PUNICODE_STRING) Cs->lpszClass;
 
-    // Based on the assumption this is from "unicode source" user32, Windivs, answer is yes.
+    // Based on the assumption this is from "unicode source" user32, ReactOS, answer is yes.
     if (!IS_ATOM(ClassName->Buffer))
     {
         if (ClassName->Length)

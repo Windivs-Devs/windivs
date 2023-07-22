@@ -1,8 +1,8 @@
 /*
- * PROJECT:         Windivs api tests
+ * PROJECT:         ReactOS api tests
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * PURPOSE:         Tests extensions exposed by the software implementation
- * PROGRAMMERS:     Jï¿½rï¿½me Gardou
+ * PROGRAMMERS:     Jérôme Gardou
  */
 
 #include <windows.h>

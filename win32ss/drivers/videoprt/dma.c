@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Videoport
+ * PROJECT:         ReactOS Videoport
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            win32ss/drivers/videoprt/dma.c
  * PURPOSE:         Videoport Direct Memory Access Support

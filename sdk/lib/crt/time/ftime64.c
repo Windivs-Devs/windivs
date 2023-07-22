@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   LGPL, See LGPL.txt in the top level directory
- * PROJECT:     Windivs CRT library
+ * PROJECT:     ReactOS CRT library
  * FILE:        lib/sdk/crt/time/ftime64.c
  * PURPOSE:     Implementation of _ftime64
  * PROGRAMERS:  Timo Kreuzer

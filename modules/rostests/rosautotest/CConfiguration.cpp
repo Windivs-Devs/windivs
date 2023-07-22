@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Automatic Testing Utility
+ * PROJECT:     ReactOS Automatic Testing Utility
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Class for managing all the configuration parameters
  * COPYRIGHT:   Copyright 2009-2011 Colin Finck (colin@reactos.org)
@@ -27,11 +27,11 @@ CConfiguration::CConfiguration()
     WCHAR WindowsDirectory[MAX_PATH];
     WCHAR Interactive[32];
 
-    /* Check if we are running under Windivs from the SystemRoot directory */
+    /* Check if we are running under ReactOS from the SystemRoot directory */
     if(!GetWindowsDirectoryW(WindowsDirectory, MAX_PATH))
         FATAL("GetWindowsDirectoryW failed\n");
 
-    m_IsWindivs = !_wcsnicmp(&WindowsDirectory[3], L"reactos", 7);
+    m_IsReactOS = !_wcsnicmp(&WindowsDirectory[3], L"reactos", 7);
 
     if(GetEnvironmentVariableW(L"WINETEST_INTERACTIVE", Interactive, _countof(Interactive)))
         m_IsInteractive = _wtoi(Interactive);
@@ -153,7 +153,7 @@ CConfiguration::GetSystemInformation()
 
     ss << "&platform=";
 
-    if(m_IsWindivs)
+    if(m_IsReactOS)
     {
         ss << "reactos";
     }

@@ -407,7 +407,7 @@ AckPageDlgProc(HWND hwndDlg,
 }
 
 static const WCHAR s_szProductOptions[] = L"SYSTEM\\CurrentControlSet\\Control\\ProductOptions";
-static const WCHAR s_szRosVersion[] = L"SYSTEM\\CurrentControlSet\\Control\\Windivs\\Settings\\Version";
+static const WCHAR s_szRosVersion[] = L"SYSTEM\\CurrentControlSet\\Control\\ReactOS\\Settings\\Version";
 static const WCHAR s_szControlWindows[] = L"SYSTEM\\CurrentControlSet\\Control\\Windows";
 static const WCHAR s_szWinlogon[] = L"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon";
 static const WCHAR s_szDefaultSoundEvents[] = L"AppEvents\\Schemes\\Apps\\.Default";
@@ -430,38 +430,38 @@ static const PRODUCT_OPTION_DATA s_ProductOptionData[] =
 
 static const WCHAR* s_DefaultSoundEvents[][2] =
 {
-    { L".Default", L"%SystemRoot%\\Media\\Windivs_Default.wav" },
+    { L".Default", L"%SystemRoot%\\Media\\ReactOS_Default.wav" },
     { L"AppGPFault", L"" },
     { L"Close", L"" },
-    { L"CriticalBatteryAlarm", L"%SystemRoot%\\Media\\Windivs_Battery_Critical.wav" },
-    { L"DeviceConnect",  L"%SystemRoot%\\Media\\Windivs_Hardware_Insert.wav" },
-    { L"DeviceDisconnect", L"%SystemRoot%\\Media\\Windivs_Hardware_Remove.wav" },
-    { L"DeviceFail", L"%SystemRoot%\\Media\\Windivs_Hardware_Fail.wav" },
-    { L"LowBatteryAlarm", L"%SystemRoot%\\Media\\Windivs_Battery_Low.wav" },
-    { L"MailBeep", L"%SystemRoot%\\Media\\Windivs_Notify.wav" },
-    { L"Maximize", L"%SystemRoot%\\Media\\Windivs_Restore.wav" },
-    { L"MenuCommand", L"%SystemRoot%\\Media\\Windivs_Menu_Command.wav" },
+    { L"CriticalBatteryAlarm", L"%SystemRoot%\\Media\\ReactOS_Battery_Critical.wav" },
+    { L"DeviceConnect",  L"%SystemRoot%\\Media\\ReactOS_Hardware_Insert.wav" },
+    { L"DeviceDisconnect", L"%SystemRoot%\\Media\\ReactOS_Hardware_Remove.wav" },
+    { L"DeviceFail", L"%SystemRoot%\\Media\\ReactOS_Hardware_Fail.wav" },
+    { L"LowBatteryAlarm", L"%SystemRoot%\\Media\\ReactOS_Battery_Low.wav" },
+    { L"MailBeep", L"%SystemRoot%\\Media\\ReactOS_Notify.wav" },
+    { L"Maximize", L"%SystemRoot%\\Media\\ReactOS_Restore.wav" },
+    { L"MenuCommand", L"%SystemRoot%\\Media\\ReactOS_Menu_Command.wav" },
     { L"MenuPopup", L"" },
-    { L"Minimize", L"%SystemRoot%\\Media\\Windivs_Minimize.wav" },
+    { L"Minimize", L"%SystemRoot%\\Media\\ReactOS_Minimize.wav" },
     { L"Open", L"" },
-    { L"PrintComplete", L"%SystemRoot%\\Media\\Windivs_Print_Complete.wav" },
+    { L"PrintComplete", L"%SystemRoot%\\Media\\ReactOS_Print_Complete.wav" },
     { L"RestoreDown", L"" },
     { L"RestoreUp", L"" },
-    { L"SystemAsterisk", L"%SystemRoot%\\Media\\Windivs_Ding.wav" },
-    { L"SystemExclamation", L"%SystemRoot%\\Media\\Windivs_Exclamation.wav" },
-    { L"SystemExit", L"%SystemRoot%\\Media\\Windivs_Shutdown.wav" },
-    { L"SystemHand", L"%SystemRoot%\\Media\\Windivs_Critical_Stop.wav" },
-    { L"SystemNotification", L"%SystemRoot%\\Media\\Windivs_Balloon.wav" },
-    { L"SystemQuestion", L"%SystemRoot%\\Media\\Windivs_Ding.wav" },
-    { L"SystemStart", L"%SystemRoot%\\Media\\Windivs_Startup.wav" },
-    { L"WindowsLogoff", L"%SystemRoot%\\Media\\Windivs_LogOff.wav" }
+    { L"SystemAsterisk", L"%SystemRoot%\\Media\\ReactOS_Ding.wav" },
+    { L"SystemExclamation", L"%SystemRoot%\\Media\\ReactOS_Exclamation.wav" },
+    { L"SystemExit", L"%SystemRoot%\\Media\\ReactOS_Shutdown.wav" },
+    { L"SystemHand", L"%SystemRoot%\\Media\\ReactOS_Critical_Stop.wav" },
+    { L"SystemNotification", L"%SystemRoot%\\Media\\ReactOS_Balloon.wav" },
+    { L"SystemQuestion", L"%SystemRoot%\\Media\\ReactOS_Ding.wav" },
+    { L"SystemStart", L"%SystemRoot%\\Media\\ReactOS_Startup.wav" },
+    { L"WindowsLogoff", L"%SystemRoot%\\Media\\ReactOS_LogOff.wav" }
 /* Logon sound is already set by default for both Server and Workstation */
 };
 
 static const WCHAR* s_ExplorerSoundEvents[][2] =
 {
-    { L"EmptyRecycleBin", L"%SystemRoot%\\Media\\Windivs_Recycle.wav" },
-    { L"Navigating", L"%SystemRoot%\\Media\\Windivs_Start.wav" }
+    { L"EmptyRecycleBin", L"%SystemRoot%\\Media\\ReactOS_Recycle.wav" },
+    { L"Navigating", L"%SystemRoot%\\Media\\ReactOS_Start.wav" }
 };
 
 static BOOL
@@ -587,7 +587,7 @@ DoWriteProductOption(PRODUCT_OPTION nOption)
 
     RegCloseKey(hKey);
 
-    /* open Windivs version key */
+    /* open ReactOS version key */
     error = RegOpenKeyExW(HKEY_LOCAL_MACHINE, s_szRosVersion, 0, KEY_WRITE, &hKey);
     if (error)
     {
@@ -2546,7 +2546,7 @@ FinishDlgProc(HWND hwndDlg,
 
 
 /*
- * GetInstallSourceWin32 retrieves the path to the Windivs installation medium
+ * GetInstallSourceWin32 retrieves the path to the ReactOS installation medium
  * in Win32 format, for later use by syssetup and storage in the registry.
  */
 static BOOL

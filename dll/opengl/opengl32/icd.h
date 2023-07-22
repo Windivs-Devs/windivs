@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:            See COPYING in the top level directory
- * PROJECT:              Windivs kernel
+ * PROJECT:              ReactOS kernel
  * FILE:                 lib/opengl32/icd.h
  * PURPOSE:              OpenGL32 lib, ICD specific definitions
  */

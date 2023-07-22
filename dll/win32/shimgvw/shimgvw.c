@@ -1,5 +1,5 @@
 /*
- * PROJECT:         Windivs Picture and Fax Viewer
+ * PROJECT:         ReactOS Picture and Fax Viewer
  * FILE:            dll/win32/shimgvw/shimgvw.c
  * PURPOSE:         shimgvw.dll
  * PROGRAMMERS:     Dmitry Chapyshev (dmitry@reactos.org)
@@ -526,7 +526,7 @@ pLoadImageFromNode(SHIMGVW_FILENODE *node, HWND hwnd)
     LoadStringW(hInstance, IDS_APPTITLE, szResStr, _countof(szResStr));
 
     pchFileTitle = PathFindFileNameW(node->FileName);
-    if (pchFileTitle && *pchFileTitle)
+    if (pchFileTitle && *pchFileTitle) 
     {
         StringCbPrintfW(szTitleBuf, sizeof(szTitleBuf),
                         L"%ls%ls%ls", szResStr, L" - ", pchFileTitle);
@@ -824,7 +824,7 @@ ImageView_LoadSettings(VOID)
     DWORD dwSize;
     LONG nError;
 
-    nError = RegOpenKeyExW(HKEY_CURRENT_USER, L"Software\\Windivs\\shimgvw", 0, KEY_READ, &hKey);
+    nError = RegOpenKeyExW(HKEY_CURRENT_USER, L"Software\\ReactOS\\shimgvw", 0, KEY_READ, &hKey);
     if (nError)
         return FALSE;
 
@@ -851,7 +851,7 @@ ImageView_SaveSettings(HWND hwnd)
     shiSettings.Bottom = wp.rcNormalPosition.bottom;
     shiSettings.Maximized = (IsZoomed(hwnd) || (wp.flags & WPF_RESTORETOMAXIMIZED));
 
-    if (RegCreateKeyEx(HKEY_CURRENT_USER, _T("Software\\Windivs\\shimgvw"), 0, NULL,
+    if (RegCreateKeyEx(HKEY_CURRENT_USER, _T("Software\\ReactOS\\shimgvw"), 0, NULL,
         REG_OPTION_NON_VOLATILE, KEY_WRITE, NULL, &hKey, NULL) == ERROR_SUCCESS)
     {
         RegSetValueEx(hKey, _T("Settings"), 0, REG_BINARY, (LPBYTE)&shiSettings, sizeof(SHIMGVW_SETTINGS));

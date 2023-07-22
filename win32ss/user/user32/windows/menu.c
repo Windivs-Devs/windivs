@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs user32.dll
+ * PROJECT:         ReactOS user32.dll
  * FILE:            win32ss/user/user32/windows/menu.c
  * PURPOSE:         Menus
  *
@@ -79,7 +79,7 @@ const struct builtin_class_descr POPUPMENU_builtin_class =
  */
 FORCEINLINE PMENU MENU_GetMenu(HMENU hMenu)
 {
-    return ValidateHandleNoErr(hMenu, TYPE_MENU);
+    return ValidateHandleNoErr(hMenu, TYPE_MENU); 
 }
 
 /***********************************************************************
@@ -281,7 +281,7 @@ static BOOL GetMenuItemInfo_common ( HMENU hmenu,
     }
     else
     {
-        /* hSubMenu is always cleared
+        /* hSubMenu is always cleared 
          * (not on Win9x/ME ) */
         lpmii->hSubMenu = 0;
     }
@@ -381,7 +381,7 @@ LRESULT WINAPI PopupMenuWndProcA(HWND Wnd, UINT Message, WPARAM wParam, LPARAM l
   if (pWnd && !pWnd->fnid && Message != WM_NCCREATE)
   {
      return DefWindowProcA(Wnd, Message, wParam, lParam);
-  }
+  }    
   TRACE("YES! hwnd=%x msg=0x%04x wp=0x%04lx lp=0x%08lx\n", Wnd, Message, wParam, lParam);
 
   switch(Message)
@@ -398,7 +398,7 @@ LRESULT WINAPI PopupMenuWndProcA(HWND Wnd, UINT Message, WPARAM wParam, LPARAM l
     case MM_SETMENUHANDLE:
     case MM_GETMENUHANDLE:
     case MN_SETHMENU:
-    case MN_GETHMENU:
+    case MN_GETHMENU: 
       return PopupMenuWndProcW(Wnd, Message, wParam, lParam);
 
     default:
@@ -728,7 +728,7 @@ AppendMenuW(HMENU hMenu,
   UNICODE_STRING MenuText;
   BOOL res;
 
-  RtlInitUnicodeString(&MenuText, 0);
+  RtlInitUnicodeString(&MenuText, 0);    
 
   MENU_mnu2mnuii( uFlags, uIDNewItem, lpNewItem, &mii, TRUE);
 
@@ -1064,7 +1064,7 @@ GetMenuState(
      else return (pSubMenu->cItems << 8) | ((pItem->fState|pItem->fType|Type) & 0xff);
   }
   else
-     return (pItem->fType | pItem->fState | Type);
+     return (pItem->fType | pItem->fState | Type);  
 }
 
 /*
@@ -1275,7 +1275,7 @@ InsertMenuItemW(
 
   TRACE("hmenu %p, item %04x, by pos %d, info %p\n", hMenu, uItem, fByPosition, lpmii);
 
-  RtlInitUnicodeString(&MenuText, 0);
+  RtlInitUnicodeString(&MenuText, 0);    
 
   if (!MENU_NormalizeMenuItemInfoStruct( (const MENUITEMINFOW *)lpmii, &mii )) return FALSE;
 
@@ -1308,7 +1308,7 @@ InsertMenuW(
   UNICODE_STRING MenuText;
   BOOL res;
 
-  RtlInitUnicodeString(&MenuText, 0);
+  RtlInitUnicodeString(&MenuText, 0);    
 
   MENU_mnu2mnuii( uFlags, uIDNewItem, lpNewItem, &mii, TRUE);
 
@@ -1471,7 +1471,7 @@ ModifyMenuW(
   UNICODE_STRING MenuText;
   BOOL res;
 
-  RtlInitUnicodeString(&MenuText, 0);
+  RtlInitUnicodeString(&MenuText, 0);    
 
   MENU_mnu2mnuii( uFlags, uIDNewItem, lpNewItem, &mii, TRUE);
 

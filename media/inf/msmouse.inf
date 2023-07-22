@@ -4,11 +4,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = Mouse
 ClassGUID  = {4D36E96F-E325-11CE-BFC1-08002BE10318}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 06/04/2007,1.03
 
 [DestinationDirs]
@@ -161,7 +161,7 @@ LoadOrderGroup = Pointer Port
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Project"
+ReactOS = "ReactOS Project"
 
 IbmMfg = "IBM"
 LogMfg = "Logitech"

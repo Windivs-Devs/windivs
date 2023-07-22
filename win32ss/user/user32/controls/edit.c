@@ -24,7 +24,7 @@
  *
  * This code was audited for completeness against the documented features
  * of Comctl32.dll version 6.0 on Oct. 8, 2004, by Dimitrie O. Paun.
- *
+ * 
  * Unless otherwise noted, we believe this code to be complete, as per
  * the specification mentioned above.
  * If you discover missing features, or bugs, please note them below.
@@ -252,7 +252,7 @@ static HBRUSH EDIT_NotifyCtlColor(EDITSTATE *es, HDC hdc)
 
 	/* why do we notify to es->hwndParent, and we send this one to GetParent()? */
 #ifdef __REACTOS__
-        /* Windivs r54259 */
+        /* ReactOS r54259 */
         hbrush = GetControlBrush(es->hwndSelf, hdc, msg);
 #else
         hbrush = (HBRUSH)SendMessageW(GetParent(es->hwndSelf), msg, (WPARAM)hdc, (LPARAM)es->hwndSelf);
@@ -364,7 +364,7 @@ static INT EDIT_CallWordBreakProc(EDITSTATE *es, INT start, INT index, INT count
 		countA = WideCharToMultiByte(CP_ACP, 0, es->text + start, count, NULL, 0, NULL, NULL);
 		textA = HeapAlloc(GetProcessHeap(), 0, countA);
 #ifdef __REACTOS__
-		/* Windivs r33503 */
+		/* ReactOS r33503 */
 		if (textA == NULL) return 0;
 #endif
 		WideCharToMultiByte(CP_ACP, 0, es->text + start, count, textA, countA, NULL, NULL);
@@ -429,7 +429,7 @@ static SCRIPT_STRING_ANALYSIS EDIT_UpdateUniscribeData_linedef(EDITSTATE *es, HD
 
 		hr = ScriptStringAnalyse(udc, &es->text[index], line_def->net_length,
 #ifdef __REACTOS__
-                                         /* Windivs r57679 */
+                                         /* ReactOS r57679 */
                                          (3*line_def->net_length/2+16), -1,
 #else
                                          (1.5*line_def->net_length+16), -1,
@@ -470,14 +470,14 @@ static SCRIPT_STRING_ANALYSIS EDIT_UpdateUniscribeData(EDITSTATE *es, HDC dc, IN
 
 			if (es->style & ES_PASSWORD)
 #ifdef __REACTOS__
-				/* Windivs r57677 */
+				/* ReactOS r57677 */
 				ScriptStringAnalyse(udc, &es->password_char, length, (3*length/2+16), -1, SSA_LINK|SSA_FALLBACK|SSA_GLYPHS|SSA_PASSWORD, -1, NULL, NULL, NULL, NULL, NULL, &es->ssa);
 #else
 				ScriptStringAnalyse(udc, &es->password_char, length, (1.5*length+16), -1, SSA_LINK|SSA_FALLBACK|SSA_GLYPHS|SSA_PASSWORD, -1, NULL, NULL, NULL, NULL, NULL, &es->ssa);
 #endif
 			else
 #ifdef __REACTOS__
-				/* Windivs r57677 */
+				/* ReactOS r57677 */
 				ScriptStringAnalyse(udc, es->text, length, (3*length/2+16), -1, SSA_LINK|SSA_FALLBACK|SSA_GLYPHS, -1, NULL, NULL, NULL, NULL, NULL, &es->ssa);
 #else
 				ScriptStringAnalyse(udc, es->text, length, (1.5*length+16), -1, SSA_LINK|SSA_FALLBACK|SSA_GLYPHS, -1, NULL, NULL, NULL, NULL, NULL, &es->ssa);
@@ -580,7 +580,7 @@ static void EDIT_BuildLineDefs_ML(EDITSTATE *es, INT istart, INT iend, INT delta
 				   insert it into the link list */
 				LINEDEF *new_line = HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, sizeof(LINEDEF));
 #ifdef __REACTOS__
-				/* Windivs r33509 */
+				/* ReactOS r33509 */
 				if (new_line == NULL)
 					break;
 #endif
@@ -1307,7 +1307,7 @@ static void EDIT_LockBuffer(EDITSTATE *es)
 
 #ifdef __REACTOS__
 /* FIXME: What is this ? */
-	    CHAR *textA = NULL; // Windivs Hacked! r45670
+	    CHAR *textA = NULL; // ReactOS Hacked! r45670
 	    //UINT countA = 0;
 
 	    if(es->hloc32W)
@@ -1324,7 +1324,7 @@ static void EDIT_LockBuffer(EDITSTATE *es)
 		return;
 	    }
 
-	    if (textA) //// Windivs
+	    if (textA) //// ReactOS
 	    {
 #else
 	    if(!es->hloc32W) return;
@@ -2446,7 +2446,7 @@ static void EDIT_AdjustFormatRect(EDITSTATE *es)
 
 	if ((es->style & ES_MULTILINE) && !(es->style & ES_AUTOHSCROLL))
 		EDIT_BuildLineDefs_ML(es, 0, get_text_length(es), 0, NULL);
-
+	
 	EDIT_SetCaretPos(es, es->selection_end, es->flags & EF_AFTER_WRAP);
 }
 
@@ -2464,13 +2464,13 @@ static void EDIT_SetRectNP(EDITSTATE *es, const RECT *rc)
 	LONG_PTR ExStyle;
 	INT bw, bh;
 	ExStyle = GetWindowLongPtrW(es->hwndSelf, GWL_EXSTYLE);
-
+	
 	CopyRect(&es->format_rect, rc);
-
+	
 	if (ExStyle & WS_EX_CLIENTEDGE) {
 		es->format_rect.left++;
 		es->format_rect.right--;
-
+		
 		if (es->format_rect.bottom - es->format_rect.top
 		    >= es->line_height + 2)
 		{
@@ -2490,7 +2490,7 @@ static void EDIT_SetRectNP(EDITSTATE *es, const RECT *rc)
 		    es->format_rect.bottom -= bh;
 		}
 	}
-
+	
 	es->format_rect.left += es->left_margin;
 	es->format_rect.right -= es->right_margin;
 	EDIT_AdjustFormatRect(es);
@@ -2530,11 +2530,11 @@ static LRESULT EDIT_EM_CharFromPos(EDITSTATE *es, INT x, INT y)
  *	EM_FMTLINES
  *
  * Enable or disable soft breaks.
- *
+ * 
  * This means: insert or remove the soft linebreak character (\r\r\n).
  * Take care to check if the text still fits the buffer after insertion.
  * If not, notify with EN_ERRSPACE.
- *
+ * 
  */
 static BOOL EDIT_EM_FmtLines(EDITSTATE *es, BOOL add_eol)
 {
@@ -2757,7 +2757,7 @@ static void EDIT_EM_ReplaceSel(EDITSTATE *es, BOOL can_undo, LPCWSTR lpsz_replac
 				for (i = 0 , p = es->text ; i < e - s ; i++)
 					p[i + s] = buf[i];
                         text_buffer_changed(es);
-			EDIT_BuildLineDefs_ML(es, s, e,
+			EDIT_BuildLineDefs_ML(es, s, e, 
 				abs(es->selection_end - es->selection_start) - strl, hrgn);
 			strl = 0;
 			e = s;
@@ -2782,7 +2782,7 @@ static void EDIT_EM_ReplaceSel(EDITSTATE *es, BOOL can_undo, LPCWSTR lpsz_replac
 			if (!notify_parent(es, EN_MAXTEXT)) return;
 		}
 	}
-
+	
 	if (e != s) {
 		if (can_undo) {
 			utl = strlenW(es->undo_text);
@@ -2833,7 +2833,7 @@ static void EDIT_EM_ReplaceSel(EDITSTATE *es, BOOL can_undo, LPCWSTR lpsz_replac
 	}
 
 	HeapFree(GetProcessHeap(), 0, buf);
-
+ 
 	s += strl;
 
 	/* If text has been deleted and we're right or center aligned then scroll rightward */
@@ -3048,12 +3048,12 @@ static void EDIT_EM_SetMargins(EDITSTATE *es, INT action,
 			es->right_margin = default_right_margin;
 		es->format_rect.right -= es->right_margin;
 	}
-
+	
 	if (action & (EC_LEFTMARGIN | EC_RIGHTMARGIN)) {
 		EDIT_AdjustFormatRect(es);
 		if (repaint) EDIT_UpdateText(es, NULL, TRUE);
 	}
-
+	
 	TRACE("left=%d, right=%d\n", es->left_margin, es->right_margin);
 }
 
@@ -3103,7 +3103,7 @@ static BOOL EDIT_EM_SetTabStops(EDITSTATE *es, INT count, const INT *tabs)
 	else {
 		es->tabs = HeapAlloc(GetProcessHeap(), 0, count * sizeof(INT));
 #ifdef __REACTOS__
-        /* Windivs r33503 */
+        /* ReactOS r33503 */
         if (es->tabs == NULL)
         {
             es->tabs_count = 0;
@@ -3155,8 +3155,8 @@ static BOOL EDIT_EM_Undo(EDITSTATE *es)
 
 	utext = HeapAlloc(GetProcessHeap(), 0, (ulength + 1) * sizeof(WCHAR));
 #ifdef __REACTOS__
-	/* Windivs r33503 */
-	if (utext == NULL)
+	/* ReactOS r33503 */
+	if (utext == NULL) 
 		return FALSE;
 #endif
 
@@ -3350,7 +3350,7 @@ static LRESULT EDIT_WM_Char(EDITSTATE *es, WCHAR c)
 		/*If Edit control style is ES_NUMBER allow users to key in only numeric values*/
 		if( (es->style & ES_NUMBER) && !( c >= '0' && c <= '9') )
 			break;
-
+			
 		if (!(es->style & ES_READONLY) && (c >= ' ') && (c != 127)) {
 			WCHAR str[2];
  			str[0] = c;
@@ -3440,7 +3440,7 @@ static void EDIT_WM_ContextMenu(EDITSTATE *es, INT x, INT y)
             RECT rc;
             /* Windows places the menu at the edit's center in this case */
 #ifdef __REACTOS__
-            /* Windivs r55202 */
+            /* ReactOS r55202 */
             GetClientRect(es->hwndSelf, &rc);
             MapWindowPoints(es->hwndSelf, 0, (POINT *)&rc, 2);
 #else
@@ -3673,7 +3673,7 @@ static LRESULT EDIT_WM_KeyDown(EDITSTATE *es, INT key)
                 SendMessageW(es->hwndParent, WM_NEXTDLGCTL, shift, 0);
             break;
 #ifdef __REACTOS__
-        /* Windivs CORE-1419 */
+        /* ReactOS CORE-1419 */
         case VK_BACK:
             if (control)
             {
@@ -3877,7 +3877,7 @@ static void EDIT_WM_Paint(EDITSTATE *es, HDC hdc)
 
 	/* paint the border and the background */
 	IntersectClipRect(dc, rcClient.left, rcClient.top, rcClient.right, rcClient.bottom);
-
+	
 	if(es->style & WS_BORDER) {
 		bw = GetSystemMetrics(SM_CXBORDER);
 		bh = GetSystemMetrics(SM_CYBORDER);
@@ -3886,7 +3886,7 @@ static void EDIT_WM_Paint(EDITSTATE *es, HDC hdc)
 			if(es->style & WS_HSCROLL) rc.bottom+=bh;
 			if(es->style & WS_VSCROLL) rc.right+=bw;
 		}
-
+		
 		/* Draw the frame. Same code as in nonclient.c */
 		old_brush = SelectObject(dc, GetSysColorBrush(COLOR_WINDOWFRAME));
 		PatBlt(dc, rc.left, rc.top, rc.right - rc.left, bh, PATCOPY);
@@ -3894,12 +3894,12 @@ static void EDIT_WM_Paint(EDITSTATE *es, HDC hdc)
 		PatBlt(dc, rc.left, rc.bottom - 1, rc.right - rc.left, -bw, PATCOPY);
 		PatBlt(dc, rc.right - 1, rc.top, -bw, rc.bottom - rc.top, PATCOPY);
 		SelectObject(dc, old_brush);
-
+		
 		/* Keep the border clean */
 		IntersectClipRect(dc, rc.left+bw, rc.top+bh,
 		    max(rc.right-bw, rc.left+bw), max(rc.bottom-bh, rc.top+bh));
 	}
-
+	
 	GetClipBox(dc, &rc);
 	FillRect(dc, &rc, brush);
 
@@ -3999,7 +3999,7 @@ static void EDIT_WM_SetFont(EDITSTATE *es, HFONT font, BOOL redraw)
 	if (font)
 		SelectObject(dc, old_font);
 	ReleaseDC(es->hwndSelf, dc);
-
+	
 	/* Reset the format rect and the margins */
 	GetClientRect(es->hwndSelf, &clientRect);
 	EDIT_SetRectNP(es, &clientRect);
@@ -4070,14 +4070,14 @@ static void EDIT_WM_SetText(EDITSTATE *es, LPCWSTR text, BOOL unicode)
 	    "selection.\n");
 
     EDIT_EM_SetSel(es, 0, (UINT)-1, FALSE);
-    if (text)
+    if (text) 
     {
 	TRACE("%s\n", debugstr_w(text));
 	EDIT_EM_ReplaceSel(es, FALSE, text, FALSE, FALSE);
 	if(!unicode)
 	    HeapFree(GetProcessHeap(), 0, textW);
-    }
-    else
+    } 
+    else 
     {
 	TRACE("<NULL>\n");
 	EDIT_EM_ReplaceSel(es, FALSE, empty_stringW, FALSE, FALSE);
@@ -4096,7 +4096,7 @@ static void EDIT_WM_SetText(EDITSTATE *es, LPCWSTR text, BOOL unicode)
         if (!notify_parent(es, EN_CHANGE)) return;
     }
     EDIT_EM_ScrollCaret(es);
-    EDIT_UpdateScrollInfo(es);
+    EDIT_UpdateScrollInfo(es);    
     EDIT_InvalidateUniscribeData(es);
 }
 
@@ -4476,7 +4476,7 @@ static LRESULT EDIT_EM_GetThumb(EDITSTATE *es)
 
 
 /********************************************************************
- *
+ * 
  * The Following code is to handle inline editing from IMEs
  */
 
@@ -4507,7 +4507,7 @@ static void EDIT_GetCompositionStr(HIMC hIMC, LPARAM CompFlag, EDITSTATE *es)
 
     if (CompFlag & GCS_COMPATTR)
     {
-        /*
+        /* 
          * We do not use the attributes yet. it would tell us what characters
          * are in transition and which are converted or decided upon
          */
@@ -4522,7 +4522,7 @@ static void EDIT_GetCompositionStr(HIMC hIMC, LPARAM CompFlag, EDITSTATE *es)
                 HeapFree(GetProcessHeap(),0,lpCompStr);
                 return;
             }
-            ImmGetCompositionStringW(hIMC,GCS_COMPATTR, lpCompStrAttr,
+            ImmGetCompositionStringW(hIMC,GCS_COMPATTR, lpCompStrAttr, 
                     dwBufLenAttr);
             lpCompStrAttr[dwBufLenAttr] = 0;
         }
@@ -4532,7 +4532,7 @@ static void EDIT_GetCompositionStr(HIMC hIMC, LPARAM CompFlag, EDITSTATE *es)
     /* check for change in composition start */
     if (es->selection_end < es->composition_start)
         es->composition_start = es->selection_end;
-
+    
     /* replace existing selection string */
     es->selection_start = es->composition_start;
 
@@ -4847,7 +4847,7 @@ LRESULT WINAPI EditWndProc_common( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 	EDITSTATE *es = (EDITSTATE *)GetWindowLongPtrW( hwnd, 0 );
 	LRESULT result = 0;
 #ifdef __REACTOS__
-    /* Windivs r50219 */
+    /* ReactOS r50219 */
     PWND pWnd;
 
     pWnd = ValidateHwnd(hwnd);
@@ -5468,7 +5468,7 @@ LRESULT WINAPI EditWndProc_common( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 	}
 
 #ifdef __REACTOS__
-        /* Windivs: check GetWindowLong in case es has been destroyed during processing */
+        /* ReactOS: check GetWindowLong in case es has been destroyed during processing */
         if (IsWindow(hwnd) && es && msg != EM_GETHANDLE && GetWindowLongPtrW(hwnd, 0))
 #else
         if (IsWindow(hwnd) && es && msg != EM_GETHANDLE)

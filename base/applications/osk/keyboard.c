@@ -1,14 +1,14 @@
 /*
- * PROJECT:         Windivs On-Screen Keyboard
+ * PROJECT:         ReactOS On-Screen Keyboard
  * LICENSE:         GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:         Keyboard layout data.
  * COPYRIGHT:       Baruch Rutman (peterooch at gmail dot com)
- *
+ * 
  * This is partialy based on the original en-US dialog templates.
  */
 #include "precomp.h"
 
-KEY EnhancedKeyboardKeys[] =
+KEY EnhancedKeyboardKeys[] = 
 {
     {L"Esc", SCAN_CODE_110, 4, 4, 28, 28, 0, FALSE},
     {L"F1", SCAN_CODE_112, 68, 4, 28, 28, 0, FALSE},
@@ -116,7 +116,7 @@ KEY EnhancedKeyboardKeys[] =
     {L"ent", SCAN_CODE_108, 708, 126, 28, 58, 0, FALSE},
 };
 
-KEY StandardKeyboardKeys[] =
+KEY StandardKeyboardKeys[] = 
 {
     {L"Esc", SCAN_CODE_110, 4, 4, 28, 28, 0, FALSE},
     {L"F1", SCAN_CODE_112, 68, 4, 28, 28, 0, FALSE},
@@ -224,8 +224,8 @@ KEY StandardKeyboardKeys[] =
     {L"ent", SCAN_CODE_108, 678, 126, 28, 58, 0, FALSE},
 };
 
-KEYBOARD_STRUCT EnhancedKeyboard =
-{
+KEYBOARD_STRUCT EnhancedKeyboard = 
+{ 
     EnhancedKeyboardKeys,
     _countof(EnhancedKeyboardKeys),
     { 746, 193 },
@@ -237,8 +237,8 @@ KEYBOARD_STRUCT EnhancedKeyboard =
     40
 };
 
-KEYBOARD_STRUCT StandardKeyboard =
-{
+KEYBOARD_STRUCT StandardKeyboard = 
+{ 
     StandardKeyboardKeys,
     _countof(StandardKeyboardKeys),
     { 586, 193 },

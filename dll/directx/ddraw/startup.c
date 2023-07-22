@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:            See COPYING in the top level directory
- * PROJECT:              Windivs kernel
+ * PROJECT:              ReactOS kernel
  * FILE:                 dll/directx/ddraw/startup.c
  * PURPOSE:              DirectDraw Library
  * PROGRAMMER:           Magnus Olsen (greatlrd)

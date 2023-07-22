@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     Windivs system libraries
+ * PROJECT:     ReactOS system libraries
  * FILE:        lib/sdk/crt/float/chgsign.c
  * PURPOSE:     Unknown
  * PROGRAMER:   Unknown

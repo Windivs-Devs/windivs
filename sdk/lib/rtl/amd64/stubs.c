@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           Windivs Run-Time Library
+ * PROJECT:           ReactOS Run-Time Library
  * PURPOSE:           AMD64 stubs
  * FILE:              lib/rtl/amd64/stubs.c
  * PROGRAMMERS:        Stefan Ginsberg (stefan.ginsberg@reactos.org)

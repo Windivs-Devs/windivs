@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * FILE:             drivers/dd/sound/dsp.c
  * PURPOSE:          Digital Signal Processing ?
  * PROGRAMMER:       Snatched from ?

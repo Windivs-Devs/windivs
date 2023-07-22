@@ -1,5 +1,5 @@
 /*
-    Windivs Sound System
+    ReactOS Sound System
     Sound Blaster DSP support
     Speaker commands
 

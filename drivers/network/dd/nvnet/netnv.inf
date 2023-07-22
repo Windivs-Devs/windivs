@@ -4,11 +4,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$Windivs$"
+;Signature  = "$ReactOS$"
 LayoutFile = layout.inf
 Class      = Net
 ClassGUID  = {4D36E972-E325-11CE-BFC1-08002BE10318}
-Provider   = %Windivs%
+Provider   = %ReactOS%
 DriverVer  = 08/01/2021,1.00
 
 [DestinationDirs]
@@ -238,7 +238,7 @@ HKR, , TypesSupported,   0x00010001, 7
 
 [Strings]
 ; Non-localizable
-Windivs = "Windivs Developers"
+ReactOS = "Windivs Developers"
 
 nVidiaMfg = "nVidia"
 

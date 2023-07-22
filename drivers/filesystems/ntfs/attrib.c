@@ -1,6 +1,6 @@
 /*
- *  Windivs kernel
- *  Copyright (C) 2002,2003 Windivs Team
+ *  ReactOS kernel
+ *  Copyright (C) 2002,2003 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  *
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
+ * PROJECT:          ReactOS kernel
  * FILE:             drivers/filesystem/ntfs/attrib.c
  * PURPOSE:          NTFS filesystem driver
  * PROGRAMMERS:      Eric Kohl

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Automatic Testing Utility
+ * PROJECT:     ReactOS Automatic Testing Utility
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Class for managing all the configuration parameters
  * COPYRIGHT:   Copyright 2009 Colin Finck (colin@reactos.org)
@@ -10,7 +10,7 @@ class CConfiguration
 private:
     bool m_CrashRecovery;
     bool m_IsInteractive;
-    bool m_IsWindivs;
+    bool m_IsReactOS;
     bool m_PrintToConsole;
     unsigned long m_RepeatCount;
     bool m_Shutdown;
@@ -34,7 +34,7 @@ public:
     bool DoShutdown() const { return m_Shutdown; }
     bool DoSubmit() const { return m_Submit; }
     bool IsInteractive() const { return m_IsInteractive; }
-    bool IsWindivs() const { return m_IsWindivs; }
+    bool IsReactOS() const { return m_IsReactOS; }
     unsigned long GetRepeatCount() const { return m_RepeatCount; }
     bool ListModulesOnly() const { return m_ListModules; }
     const string& GetComment() const { return m_Comment; }

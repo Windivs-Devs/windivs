@@ -2,7 +2,7 @@
 #define __W32K_H
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs Win32k subsystem
+ * PROJECT:         ReactOS Win32k subsystem
  * FILE:            win32ss/pch.h
  * PURPOSE:         Main Win32K Header
  * PROGRAMMER:      Alex Ionescu (alex@relsoft.net)

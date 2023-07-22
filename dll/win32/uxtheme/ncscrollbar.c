@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs uxtheme.dll
+ * PROJECT:         ReactOS uxtheme.dll
  * FILE:            dll/win32/uxtheme/ncscrollbar.c
  * PURPOSE:         uxtheme scrollbar support
  * PROGRAMMER:      Giannis Adamopoulos
@@ -8,7 +8,7 @@
  *                  Copyright 1993 Martin Ayotte
  *                  Copyright 1994, 1996 Alexandre Julliard
  */
-
+ 
 #include "uxthemep.h"
 
 #include <assert.h>
@@ -88,37 +88,37 @@ static enum SCROLL_HITTEST SCROLL_HitTest( HWND hwnd, SCROLLBARINFO* psbi, BOOL 
                                            POINT pt, BOOL bDragging )
 {
     if ( (bDragging && !SCROLL_PtInRectEx( &psbi->rcScrollBar, pt, vertical )) ||
-	     (!PtInRect( &psbi->rcScrollBar, pt )) )
+	     (!PtInRect( &psbi->rcScrollBar, pt )) ) 
     {
          return SCROLL_NOWHERE;
     }
 
     if (vertical)
     {
-        if (pt.y < psbi->rcScrollBar.top + psbi->dxyLineButton)
+        if (pt.y < psbi->rcScrollBar.top + psbi->dxyLineButton) 
             return SCROLL_TOP_ARROW;
-        if (pt.y >= psbi->rcScrollBar.bottom - psbi->dxyLineButton)
+        if (pt.y >= psbi->rcScrollBar.bottom - psbi->dxyLineButton) 
             return SCROLL_BOTTOM_ARROW;
-        if (!psbi->xyThumbTop)
+        if (!psbi->xyThumbTop) 
             return SCROLL_TOP_RECT;
         pt.y -= psbi->rcScrollBar.top;
-        if (pt.y < psbi->xyThumbTop)
+        if (pt.y < psbi->xyThumbTop) 
             return SCROLL_TOP_RECT;
-        if (pt.y >= psbi->xyThumbBottom)
+        if (pt.y >= psbi->xyThumbBottom) 
             return SCROLL_BOTTOM_RECT;
     }
     else  /* horizontal */
     {
         if (pt.x < psbi->rcScrollBar.left + psbi->dxyLineButton)
             return SCROLL_TOP_ARROW;
-        if (pt.x >= psbi->rcScrollBar.right - psbi->dxyLineButton)
+        if (pt.x >= psbi->rcScrollBar.right - psbi->dxyLineButton) 
             return SCROLL_BOTTOM_ARROW;
-        if (!psbi->xyThumbTop)
+        if (!psbi->xyThumbTop) 
             return SCROLL_TOP_RECT;
         pt.x -= psbi->rcScrollBar.left;
-        if (pt.x < psbi->xyThumbTop)
+        if (pt.x < psbi->xyThumbTop) 
             return SCROLL_TOP_RECT;
-        if (pt.x >= psbi->xyThumbBottom)
+        if (pt.x >= psbi->xyThumbBottom) 
             return SCROLL_BOTTOM_RECT;
     }
     return SCROLL_THUMB;
@@ -144,7 +144,7 @@ static void SCROLL_ThemeDrawPart(PDRAW_CONTEXT pcontext, int iPartId,int iStateI
  *
  * Draw the scroll bar arrows.
  */
-static void SCROLL_DrawArrows( PDRAW_CONTEXT pcontext, SCROLLBARINFO* psbi,
+static void SCROLL_DrawArrows( PDRAW_CONTEXT pcontext, SCROLLBARINFO* psbi, 
                                BOOL vertical, int htDown, int htHot )
 {
     RECT r;
@@ -161,9 +161,9 @@ static void SCROLL_DrawArrows( PDRAW_CONTEXT pcontext, SCROLLBARINFO* psbi,
         r.right = r.left + psbi->dxyLineButton;
         iStateId = ABS_LEFTNORMAL;
     }
-
+    
     SCROLL_ThemeDrawPart(pcontext, SBP_ARROWBTN, iStateId, psbi, SCROLL_TOP_ARROW, htDown, htHot, &r);
-
+    
     r = psbi->rcScrollBar;
     if( vertical )
     {
@@ -215,10 +215,10 @@ static void SCROLL_DrawInterior( PDRAW_CONTEXT pcontext, SCROLLBARINFO* psbi,
         return;
     }
 
-    /* Some themes have different bitmaps for the upper and lower tracks
+    /* Some themes have different bitmaps for the upper and lower tracks  
        It seems that windows use the bitmap for the lower track in the upper track */
     if (vertical)
-    {
+    { 
         rcPart = r;
         rcPart.bottom = thumbPos;
         SCROLL_ThemeDrawPart(pcontext, SBP_LOWERTRACKVERT, BUTTON_NORMAL, psbi, SCROLL_TOP_RECT, htDown, htHot, &rcPart);
@@ -226,11 +226,11 @@ static void SCROLL_DrawInterior( PDRAW_CONTEXT pcontext, SCROLLBARINFO* psbi,
 
         rcPart = r;
         rcPart.top += psbi->xyThumbBottom - psbi->xyThumbTop;
-        SCROLL_ThemeDrawPart(pcontext, SBP_UPPERTRACKVERT, BUTTON_NORMAL, psbi, SCROLL_BOTTOM_RECT, htDown, htHot, &rcPart);
+        SCROLL_ThemeDrawPart(pcontext, SBP_UPPERTRACKVERT, BUTTON_NORMAL, psbi, SCROLL_BOTTOM_RECT, htDown, htHot, &rcPart); 
         r.bottom = rcPart.top;
 
-        SCROLL_ThemeDrawPart(pcontext, SBP_THUMBBTNVERT, BUTTON_NORMAL, psbi, SCROLL_THUMB, htDown, htHot, &r);
-        SCROLL_ThemeDrawPart(pcontext, SBP_GRIPPERVERT, BUTTON_NORMAL, psbi, SCROLL_THUMB, htDown, htHot, &r);
+        SCROLL_ThemeDrawPart(pcontext, SBP_THUMBBTNVERT, BUTTON_NORMAL, psbi, SCROLL_THUMB, htDown, htHot, &r); 
+        SCROLL_ThemeDrawPart(pcontext, SBP_GRIPPERVERT, BUTTON_NORMAL, psbi, SCROLL_THUMB, htDown, htHot, &r); 
     }
     else  /* horizontal */
     {
@@ -266,13 +266,13 @@ static void SCROLL_DrawMovingThumb(PWND_DATA pwndData, PDRAW_CONTEXT pcontext, S
   else if( pos > max_size )
     pos = max_size;
 
-  SCROLL_DrawInterior(pcontext, psbi, pos, vertical, SCROLL_THUMB, 0);
+  SCROLL_DrawInterior(pcontext, psbi, pos, vertical, SCROLL_THUMB, 0);  
 
   pwndData->SCROLL_MovingThumb = !pwndData->SCROLL_MovingThumb;
 }
 
 
-void
+void 
 ThemeDrawScrollBar(PDRAW_CONTEXT pcontext, INT nBar, POINT* pt)
 {
     SCROLLINFO si;
@@ -297,7 +297,7 @@ ThemeDrawScrollBar(PDRAW_CONTEXT pcontext, INT nBar, POINT* pt)
     GetScrollInfo(pcontext->hWnd, nBar, &si);
     GetScrollBarInfo(pcontext->hWnd, SCROLL_getObjectId(nBar), &sbi);
     vertical = SCROLL_IsVertical(pcontext->hWnd, nBar);
-    if(sbi.rgstate[SCROLL_TOP_ARROW] & STATE_SYSTEM_UNAVAILABLE  &&
+    if(sbi.rgstate[SCROLL_TOP_ARROW] & STATE_SYSTEM_UNAVAILABLE  && 
        sbi.rgstate[SCROLL_BOTTOM_ARROW] & STATE_SYSTEM_UNAVAILABLE  )
     {
         sbi.xyThumbTop = 0;
@@ -380,7 +380,7 @@ static UINT SCROLL_GetThumbVal( SCROLLINFO *psi, RECT *rect,
     return psi->nMin + MulDiv(pos, range, pixels);
 }
 
-static void
+static void 
 SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POINT pt)
 {
       /* Previous mouse position for timer events */
@@ -405,7 +405,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
     GetScrollInfo(hwnd, nBar, &si);
     GetScrollBarInfo(hwnd, SCROLL_getObjectId(nBar), &sbi);
     vertical = SCROLL_IsVertical(hwnd, nBar);
-    if(sbi.rgstate[SCROLL_TOP_ARROW] & STATE_SYSTEM_UNAVAILABLE  &&
+    if(sbi.rgstate[SCROLL_TOP_ARROW] & STATE_SYSTEM_UNAVAILABLE  && 
        sbi.rgstate[SCROLL_BOTTOM_ARROW] & STATE_SYSTEM_UNAVAILABLE  )
     {
         return;
@@ -413,7 +413,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
 
     if ((pwndData->SCROLL_trackHitTest == SCROLL_NOWHERE) && (msg != WM_LBUTTONDOWN))
 		  return;
-
+    
     ThemeInitDrawContext(&context, hwnd, 0);
 
     /* The scrollbar rect is in screen coordinates */
@@ -444,7 +444,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
           hittest = SCROLL_NOWHERE;
           ReleaseCapture();
           /* if scrollbar has focus, show back caret */
-          if (hwnd==GetFocus())
+          if (hwnd==GetFocus()) 
               ShowCaret(hwnd);
           break;
 
@@ -507,7 +507,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
             pwndData->SCROLL_TrackingWin = hwnd;
             pwndData->SCROLL_TrackingBar = nBar;
             pwndData->SCROLL_TrackingPos = trackThumbPos + lastMousePos - lastClickPos;
-            pwndData->SCROLL_TrackingVal = SCROLL_GetThumbVal( &si, &sbi.rcScrollBar,
+            pwndData->SCROLL_TrackingVal = SCROLL_GetThumbVal( &si, &sbi.rcScrollBar, 
                                                      vertical, pwndData->SCROLL_TrackingPos );
 	        if (!pwndData->SCROLL_MovingThumb)
 		        SCROLL_DrawMovingThumb(pwndData, &context, &sbi, vertical);
@@ -523,7 +523,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
         {
             INT pos;
 
-            if (!SCROLL_PtInRectEx( &sbi.rcScrollBar, pt, vertical ))
+            if (!SCROLL_PtInRectEx( &sbi.rcScrollBar, pt, vertical )) 
                 pos = lastClickPos;
             else
             {
@@ -623,7 +623,7 @@ SCROLL_HandleScrollEvent(PWND_DATA pwndData, HWND hwnd, INT nBar, UINT msg, POIN
     ThemeCleanupDrawContext(&context);
 }
 
-static void
+static void 
 SCROLL_TrackScrollBar( HWND hwnd, INT scrollbar, POINT pt )
 {
     MSG msg;
@@ -665,7 +665,7 @@ SCROLL_TrackScrollBar( HWND hwnd, INT scrollbar, POINT pt )
 void NC_TrackScrollBar( HWND hwnd, WPARAM wParam, POINT pt )
 {
     INT scrollbar;
-
+    
     if ((wParam & 0xfff0) == SC_HSCROLL)
     {
         if ((wParam & 0x0f) != HTHSCROLL) return;

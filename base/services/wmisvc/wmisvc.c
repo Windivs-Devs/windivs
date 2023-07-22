@@ -1,6 +1,6 @@
 /*
- *  Windivs Services
- *  Copyright (C) 2015 Windivs Team
+ *  ReactOS Services
+ *  Copyright (C) 2015 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs Services
+ * PROJECT:          ReactOS Services
  * FILE:             base/services/wmisvc/wmisvc.c
  * PURPOSE:          WMI service
  * PROGRAMMER:       Pierre Schweitzer
