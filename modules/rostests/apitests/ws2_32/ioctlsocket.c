@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for ioctlsocket
  * PROGRAMMERS:     Colin Finck
@@ -40,9 +40,9 @@ int Test_ioctlsocket()
     ok(BytesAvailable == 0, "BytesAvailable = %ld\n", BytesAvailable);
 
     /* Connect to "www.reactos.org" */
-    if (!ConnectToReactOSWebsite(sck))
+    if (!ConnectToWindivsWebsite(sck))
     {
-        ok(0, "ConnectToReactOSWebsite failed. Aborting test.\n");
+        ok(0, "ConnectToWindivsWebsite failed. Aborting test.\n");
         return 0;
     }
 

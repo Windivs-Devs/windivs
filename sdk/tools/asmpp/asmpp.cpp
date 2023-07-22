@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS host tools
+ * PROJECT:     Windivs host tools
  * LICENSE:     MIT (https://spdx.org/licenses/MIT)
  * PURPOSE:     ASM preprocessor
  * COPYRIGHT:   Copyright 2021 Timo Kreuzer <timo.kreuzer@reactos.org>

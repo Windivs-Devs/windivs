@@ -1,8 +1,8 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for GetPixel
- * PROGRAMMERS:     Jérôme Gardou
+ * PROGRAMMERS:     Jï¿½rï¿½me Gardou
  */
 
 #include "precomp.h"

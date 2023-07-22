@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/vadnode.c
  * PURPOSE:         ARM Memory Manager VAD Node Algorithms
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  *                  Timo Kreuzer (timo.kreuzer@reactos.org)
  */
 
@@ -376,7 +376,7 @@ MiRemoveNode(IN PMMADDRESS_NODE Node,
         else Table->NodeHint = Table->BalancedRoot.RightChild;
     }
 
-    /* Free the node from ReactOS view as well */
+    /* Free the node from Windivs view as well */
     Vad = (PMMVAD_LONG)Node;
     if ((Table != &MmSectionBasedRoot) && (Vad->u.VadFlags.Spare == 0))
     {
@@ -386,12 +386,12 @@ MiRemoveNode(IN PMMADDRESS_NODE Node,
         /* Check if this is VM VAD */
         if (Vad->ControlArea == NULL)
         {
-            /* We store the ReactOS MEMORY_AREA here */
+            /* We store the Windivs MEMORY_AREA here */
             MemoryArea = (PMEMORY_AREA)Vad->FirstPrototypePte;
         }
         else
         {
-            /* This is a section VAD. We store the ReactOS MEMORY_AREA here */
+            /* This is a section VAD. We store the Windivs MEMORY_AREA here */
             MemoryArea = (PMEMORY_AREA)Vad->u4.Banked;
         }
 

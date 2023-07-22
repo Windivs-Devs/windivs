@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            lib/rossym/initkm.c
  * PURPOSE:         Initialize library for use in kernel mode
  *

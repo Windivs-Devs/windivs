@@ -132,7 +132,7 @@ BOOLEAN DiskResetController(IN PPC98_DISK_DRIVE DiskDrive)
     return INT386_SUCCESS(Regs);
 }
 
-VOID Pc98DiskPrepareForReactOS(VOID)
+VOID Pc98DiskPrepareForWindivs(VOID)
 {
     AtaFree();
 }

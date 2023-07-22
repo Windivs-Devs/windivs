@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel Streaming
+ * PROJECT:         Windivs Kernel Streaming
  * FILE:            drivers/wdm/audio/backpln/portcls/registry.cpp
  * PURPOSE:         Registry access object
  * PROGRAMMER:      Johannes Anderwald

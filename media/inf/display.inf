@@ -4,11 +4,11 @@
 ;
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$ReactOS$"
+;Signature  = "$Windivs$"
 LayoutFile = layout.inf
 Class      = Display
 ClassGUID  = {4D36E968-E325-11CE-BFC1-08002BE10318}
-Provider   = %ReactOS%
+Provider   = %Windivs%
 DriverVer  = 08/25/2007,1.10
 
 [DestinationDirs]
@@ -59,7 +59,7 @@ LoadOrderGroup = Video Save
 
 [Strings]
 ; Non-localizable
-ReactOS = "ReactOS Project"
+Windivs = "Windivs Project"
 
 ; Localizable
 DisplayClassName = "Display Adapters"

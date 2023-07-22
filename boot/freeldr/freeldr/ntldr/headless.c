@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Boot Loader
+ * PROJECT:         Windivs Boot Loader
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/freeldr/freeldr/windows/headless.c
  * PURPOSE:         Provides support for Windows Emergency Management Services
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

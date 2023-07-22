@@ -312,7 +312,7 @@ XboxVideoSync(VOID)
 }
 
 VOID
-XboxVideoPrepareForReactOS(VOID)
+XboxVideoPrepareForWindivs(VOID)
 {
     XboxVideoClearScreenColor(MAKE_COLOR(0, 0, 0), TRUE);
     XboxVideoHideShowTextCursor(FALSE);

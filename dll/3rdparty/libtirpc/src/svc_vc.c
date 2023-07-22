@@ -30,7 +30,7 @@
 //#include <sys/cdefs.h>
 
 /*
- * svc_vc.c, Server side for Connection Oriented based RPC. 
+ * svc_vc.c, Server side for Connection Oriented based RPC.
  *
  * Actually implements two flavors of transporter -
  * a tcp rendezvouser (a listner and connection establisher)
@@ -258,7 +258,7 @@ makefd_xprt(fd, sendsize, recvsize)
 	struct cf_conn *cd;
 	const char *netid;
 	struct __rpc_sockinfo si;
- 
+
 	assert(fd != SOCKET_ERROR);
 
         if (fd >= FD_SETSIZE) {
@@ -398,7 +398,7 @@ svc_vc_destroy(xprt)
 	SVCXPRT *xprt;
 {
 	assert(xprt != NULL);
-	
+
 	xprt_unregister(xprt);
 	__svc_vc_dodestroy(xprt);
 }
@@ -519,7 +519,7 @@ read_vc(xprtp, buf, len)
 		pollfd.revents = 0;
 		switch (poll(&pollfd, 1, milliseconds)) {
 #else
-		/* ReactOS: use select instead of poll */
+		/* Windivs: use select instead of poll */
 		fd_set infd;
 		struct timeval timeout;
 
@@ -594,7 +594,7 @@ write_vc(xprtp, buf, len)
 
 	if (cd->nonblock)
 		gettimeofday(&tv0, NULL);
-	
+
 	for (cnt = len; cnt > 0; cnt -= i, buf += i) {
 #ifdef _WIN32
 		i = send(xprt->xp_fd, buf, (size_t)cnt, 0);
@@ -799,16 +799,16 @@ __rpc_get_local_uid(SVCXPRT *transp, uid_t *uid) {
 }
 
 #ifdef _WIN32
-void timersub( const struct timeval *tvp, const struct timeval *uvp, struct timeval *vvp ) 
-{ 
-    vvp->tv_sec = tvp->tv_sec - uvp->tv_sec; 
-    vvp->tv_usec = tvp->tv_usec - uvp->tv_usec; 
-    if( vvp->tv_usec < 0 ) 
-    { 
-       --vvp->tv_sec; 
-       vvp->tv_usec += 1000000; 
-    } 
-} 
+void timersub( const struct timeval *tvp, const struct timeval *uvp, struct timeval *vvp )
+{
+    vvp->tv_sec = tvp->tv_sec - uvp->tv_sec;
+    vvp->tv_usec = tvp->tv_usec - uvp->tv_usec;
+    if( vvp->tv_usec < 0 )
+    {
+       --vvp->tv_sec;
+       vvp->tv_usec += 1000000;
+    }
+}
 #endif
 
 /*

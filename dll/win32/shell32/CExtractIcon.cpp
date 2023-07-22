@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Registry namespace extension
+ * PROJECT:         Windivs Registry namespace extension
  * FILE:            dll/win32/shell32/extracticon.c
  * PURPOSE:         Icon extraction
  *
- * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.org)
+ * PROGRAMMERS:     Hervï¿½ Poussineau (hpoussin@reactos.org)
  */
 
 #include "precomp.h"

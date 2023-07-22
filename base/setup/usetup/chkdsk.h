@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2006 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2006 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,10 +18,10 @@
  */
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS text-mode setup
+ * PROJECT:         Windivs text-mode setup
  * FILE:            base/setup/usetup/chkdsk.h
  * PURPOSE:         Filesystem chkdsk support functions
- * PROGRAMMER:      Hervé Poussineau (hpoussin@reactos.org)
+ * PROGRAMMER:      Hervï¿½ Poussineau (hpoussin@reactos.org)
  */
 
 #pragma once

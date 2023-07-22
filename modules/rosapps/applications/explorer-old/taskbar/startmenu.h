@@ -26,7 +26,7 @@
  //
 
 
-#define	CLASSNAME_STARTMENU		TEXT("ReactOSStartmenuClass")
+#define	CLASSNAME_STARTMENU		TEXT("WindivsStartmenuClass")
 #define	TITLE_STARTMENU			TEXT("Start Menu")
 
 
@@ -385,7 +385,7 @@ protected:
 	virtual void ProcessKey(int vk);
 
 	void	Paint(PaintCanvas& canvas);
-	
+
 
 	void	ReadLogoSize();
 	UINT	GetLogoResId();

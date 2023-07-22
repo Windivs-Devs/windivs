@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/inbv/inbvport.c
  * PURPOSE:         Serial Port Boot Driver for Headless Terminal Support
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES ******************************************************************/

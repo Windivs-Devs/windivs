@@ -1227,7 +1227,7 @@ LoadAndBootWindowsCommon(
     LoaderBlockVA = PaToVa(LoaderBlock);
 
     /* "Stop all motors", change videomode */
-    MachPrepareForReactOS();
+    MachPrepareForWindivs();
 
     /* Debugging... */
     //DumpMemoryAllocMap();

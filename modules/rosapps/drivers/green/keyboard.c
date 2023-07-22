@@ -1,9 +1,9 @@
 /*
- * PROJECT:     ReactOS VT100 emulator
+ * PROJECT:     Windivs VT100 emulator
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        drivers/dd/green/keyboard.c
  * PURPOSE:     Keyboard part of green management
- * PROGRAMMERS: Copyright 2005-2006 Hervé Poussineau (hpoussin@reactos.org)
+ * PROGRAMMERS: Copyright 2005-2006 Hervï¿½ Poussineau (hpoussin@reactos.org)
  */
 
 #include "green.h"

@@ -1,9 +1,9 @@
 /*
- * ReactOS Win32 Applications
- * Copyright (C) 2005 ReactOS Team
+ * Windivs Win32 Applications
+ * Copyright (C) 2005 Windivs Team
  *
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS arp utility
+ * PROJECT:     Windivs arp utility
  * FILE:        apps/utils/gettype/gettype.c
  * PURPOSE:
  * PROGRAMMERS: Brandon Turner (turnerb7@msu.edu)

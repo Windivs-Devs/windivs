@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            include/reactos/chew/chew.h
  * PURPOSE:         Common Highlevel Executive Worker
  *

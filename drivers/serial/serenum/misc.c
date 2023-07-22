@@ -1,10 +1,10 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Serial enumerator driver
+ * PROJECT:         Windivs Serial enumerator driver
  * FILE:            drivers/dd/serenum/misc.c
  * PURPOSE:         Miscellaneous operations
  *
- * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.com)
+ * PROGRAMMERS:     Hervï¿½ Poussineau (hpoussin@reactos.com)
  */
 
 #include "serenum.h"

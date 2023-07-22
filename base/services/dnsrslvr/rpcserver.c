@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS DNS Resolver
+ * PROJECT:     Windivs DNS Resolver
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/services/dnsrslvr/rpcserver.c
  * PURPOSE:     RPC server interface

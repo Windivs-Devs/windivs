@@ -1,5 +1,5 @@
 /*
-* PROJECT:         ReactOS api tests
+* PROJECT:         Windivs api tests
 * LICENSE:         GPL - See COPYING in the top level directory
 * PURPOSE:         Test for GetGlyphIndices
 * PROGRAMMERS:     Ged Murphy
@@ -54,7 +54,7 @@ static BOOL ExtractTTFFile(LPCWSTR FontName, LPWSTR TempFile)
 
 static BOOL InstallTempFont(LPWSTR TempFile)
 {
-    if (ExtractTTFFile(L"ReactOSTestTahoma.ttf", TempFile))
+    if (ExtractTTFFile(L"WindivsTestTahoma.ttf", TempFile))
     {
         if (AddFontResourceExW(TempFile, FR_PRIVATE, 0) > 0)
         {
@@ -103,7 +103,7 @@ START_TEST(GetGlyphIndices)
     ok(hdc != 0, "CreateCompatibleDC failed, skipping tests.\n");
     if (!hdc) return;
 
-    hFont = IntCreateFont(L"ReactOSTestTahoma");
+    hFont = IntCreateFont(L"WindivsTestTahoma");
     ok(hFont != NULL, "Failed to open the test font");
     SelectObject(hdc, hFont);
 

@@ -1,12 +1,12 @@
 /*
  *
  * COPYRIGHT:            See COPYING in the top level directory
- * PROJECT:              ReactOS Multimedia
+ * PROJECT:              Windivs Multimedia
  * FILE:                 lib/mmdrv/midi.c
  * PURPOSE:              Multimedia User Mode Driver
  * PROGRAMMER:           Andrew Greenwood
  * UPDATE HISTORY:
- *                       Jan 30, 2004: Imported into ReactOS tree
+ *                       Jan 30, 2004: Imported into Windivs tree
  */
 
 #include "mmdrv.h"

@@ -1,6 +1,6 @@
 /*
- *  ReactOS
- *  Copyright (C) 2004 ReactOS Team
+ *  Windivs
+ *  Copyright (C) 2004 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,9 +18,9 @@
  */
 /*
  *
- * PROJECT:         ReactOS Software Control Panel
+ * PROJECT:         Windivs Software Control Panel
  * FILE:            dll/cpl/joy/joy.c
- * PURPOSE:         ReactOS Software Control Panel
+ * PURPOSE:         Windivs Software Control Panel
  * PROGRAMMER:      Dmitry Chapyshev (lentind@yandex.ru)
  * UPDATE HISTORY:
  *    10-18-2007  Created

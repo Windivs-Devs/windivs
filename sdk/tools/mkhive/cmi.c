@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2006 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2006 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,11 +18,11 @@
  */
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS hive maker
+ * PROJECT:         Windivs hive maker
  * FILE:            tools/mkhive/cmi.c
  * PURPOSE:         Registry file manipulation routines
- * PROGRAMMERS:     Hervé Poussineau
- *                  Hermès Bélusca-Maïto
+ * PROGRAMMERS:     Hervï¿½ Poussineau
+ *                  Hermï¿½s Bï¿½lusca-Maï¿½to
  */
 
 /* INCLUDES *****************************************************************/

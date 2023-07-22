@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPLv2+ - See COPYING in the top level directory
  * PURPOSE:         Test for MultiByteToWideChar
  * PROGRAMMERS:     Mike "tamlin" Nordell
@@ -307,7 +307,7 @@ START_TEST(MultiByteToWideChar)
     OsVersion = (vi.dwMajorVersion << 8) | vi.dwMinorVersion;
 
     /* NOTE: We use Win10's MultiByteToWideChar behaviour due to security reason. */
-    if (IsReactOS())
+    if (IsWindivs())
         OsVersion = 0xa00;
 
     for (i = 0; i < _countof(Entries); ++i)

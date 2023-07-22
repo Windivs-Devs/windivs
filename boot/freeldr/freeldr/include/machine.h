@@ -56,7 +56,7 @@ typedef struct tagMACHVTBL
     VOID (*VideoGetPaletteColor)(UCHAR Color, UCHAR* Red, UCHAR* Green, UCHAR* Blue);
     VOID (*VideoSync)(VOID);
     VOID (*Beep)(VOID);
-    VOID (*PrepareForReactOS)(VOID);
+    VOID (*PrepareForWindivs)(VOID);
 
     // NOTE: Not in the machine.c ...
     FREELDR_MEMORY_DESCRIPTOR* (*GetMemoryDescriptor)(FREELDR_MEMORY_DESCRIPTOR* Current);
@@ -117,8 +117,8 @@ VOID MachInit(const char *CmdLine);
     MachVtbl.VideoSync()
 #define MachBeep()  \
     MachVtbl.Beep()
-#define MachPrepareForReactOS() \
-    MachVtbl.PrepareForReactOS()
+#define MachPrepareForWindivs() \
+    MachVtbl.PrepareForWindivs()
 #define MachGetExtendedBIOSData(ExtendedBIOSDataArea, ExtendedBIOSDataSize) \
     MachVtbl.GetExtendedBIOSData((ExtendedBIOSDataArea), (ExtendedBIOSDataSize))
 #define MachGetFloppyCount() \

@@ -1,6 +1,6 @@
 /**
  * Test case for PostThreadMessage
- * (C) 2003 ReactOS
+ * (C) 2003 Windivs
  * License: LGPL
  * See: LGPL.txt in top directory.
  * Author: arty

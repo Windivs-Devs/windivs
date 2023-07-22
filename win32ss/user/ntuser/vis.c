@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Visibility computations
  * FILE:             win32ss/user/ntuser/vis.c
  * PROGRAMMER:       Ge van Geldorp (ge@gse.nl)

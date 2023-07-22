@@ -1,4 +1,4 @@
-ReactOS command line interpreter CMD
+Windivs command line interpreter CMD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Windivs command line interpreter CMD is derived from FreeCOM, the
@@ -40,7 +40,7 @@ FreeDOS developers:
    John P. Price <linux-guru@gcfl.net>
    Hans B Pufal <hansp@digiweb.com>
 
-ReactOS developers:
+Windivs developers:
    Eric Kohl
    Emanuele Aliberti <ea@iol.it>
    Paolo Pantaleo <paolopan@freemail.it>
@@ -50,4 +50,4 @@ ReactOS developers:
 Bugs
 ~~~~
 There are still many bugs ;)
-Please report bugs to ReactOS team <ros-dev@reactos.org> or to JIRA at www.reactos.org
+Please report bugs to Windivs team <ros-dev@reactos.org> or to JIRA at www.reactos.org

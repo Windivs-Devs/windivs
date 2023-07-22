@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Timedate Control Panel
+ * PROJECT:     Windivs Timedate Control Panel
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/timedate/timedate.c
- * PURPOSE:     ReactOS Timedate Control Panel
+ * PURPOSE:     Windivs Timedate Control Panel
  * COPYRIGHT:   Copyright 2004-2005 Eric Kohl
  *              Copyright 2006 Ged Murphy <gedmurphy@gmail.com>
  *

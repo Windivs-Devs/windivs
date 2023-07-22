@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 1998, 1999, 2000, 2001, 2002 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 1998, 1999, 2000, 2001, 2002 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,8 +16,8 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
-/* 
- * PROJECT:         ReactOS user32.dll
+/*
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/misc/winhelp.c
  * PURPOSE:         WinHelp
  * PROGRAMMER:      Robert Dickenson(robd@reactos.org)

@@ -1,7 +1,7 @@
 /*
  * Maritsa - Bulgarian keyboard layout
- * Марица - Българска клавиатурна подредба по БДС 5237-78 за РеактОС
- * Copyright (C) 2007 ReactOS
+ * пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ 5237-78 пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ * Copyright (C) 2007 Windivs
  * License: LGPL, see: LGPL.txt
  *
  * Thanks to: http://www.barcodeman.com/altek/mule/scandoc.php
@@ -31,7 +31,7 @@
 #define KMEXT     KBDEXT|KBDMULTIVK    /* Multi + ext */
 
 ROSDATA USHORT scancode_to_vk[] = {
-  /* Numbers Row Цифров ред*/
+  /* Numbers Row пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ*/
   /* - 00 - */
   /* 1 ...         2 ...         3 ...         4 ... */
   VK_EMPTY,     VK_ESCAPE,    '1',          '2',
@@ -39,20 +39,20 @@ ROSDATA USHORT scancode_to_vk[] = {
   '7',          '8',          '9',          '0',
   VK_OEM_MINUS, VK_OEM_PLUS,  VK_BACK,
   /* - 0f - */
-  /* First Letters Row Първи буквен ред*/
+  /* First Letters Row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ*/
   VK_TAB,       'Q',          'W',          'E',
   'R',          'T',          'Y',          'U',
   'I',          'O',          'P',
   VK_OEM_4,     VK_OEM_6,     VK_RETURN,
   /* - 1d - */
-  /* Second Letters Row Втори буквен ред*/
+  /* Second Letters Row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ*/
   VK_LCONTROL,
   'A',          'S',          'D',          'F',
   'G',          'H',          'J',          'K',
   'L',          VK_OEM_1,     VK_OEM_7,     VK_OEM_3,
   VK_LSHIFT,    VK_OEM_5,
   /* - 2c - */
-  /* Third letters row Трети буквен ред*/
+  /* Third letters row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ*/
   'Z',          'X',          'C',          'V',
   'B',          'N',          'M',          VK_OEM_COMMA,
   VK_OEM_PERIOD,VK_OEM_2,     VK_RSHIFT | KBDEXT,
@@ -69,7 +69,7 @@ ROSDATA USHORT scancode_to_vk[] = {
   VK_NUMLOCK | KMEXT,
   VK_SCROLL | KBDMULTIVK,
   /* - 47 - */
-  /* Number-Pad Цифрова подложка */
+  /* Number-Pad пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
   VK_HOME | KNUMS,      VK_UP | KNUMS,         VK_PRIOR | KNUMS, VK_SUBTRACT,
   VK_LEFT | KNUMS,      VK_CLEAR | KNUMS,      VK_RIGHT | KNUMS, VK_ADD,
   VK_END | KNUMS,       VK_DOWN | KNUMS,       VK_NEXT | KNUMS,
@@ -162,8 +162,8 @@ ROSDATA MODIFIERS modifier_bits = {
   { 0, 1, 2, 3 }
 };
 
-/* Цифров ред */
-/* VK_OEM_3 = чЧ */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ */
+/* VK_OEM_3 = пїЅпїЅ */
 
 ROSDATA VK_TO_WCHARS2 key_to_chars_2mod[] = {
   {VK_OEM_3,     CAPLOK, {0x60, 0x7e} }, /* `~ */
@@ -176,11 +176,11 @@ ROSDATA VK_TO_WCHARS2 key_to_chars_2mod[] = {
   { '7',         0, {'7', ':'} },
   { '8',         0, {'8', '/'} },
   { '9',         0, {'9', '_'} },
-  { '0',         0, {'0', 0x2116} }, /* № */
-/* За следващото копче търси (-|) търси VK_OEM_MINUS */
+  { '0',         0, {'0', 0x2116} }, /* пїЅ */
+/* пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (-|) пїЅпїЅпїЅпїЅпїЅ VK_OEM_MINUS */
   { VK_OEM_PLUS, 0, {'=', '+'} },
 
-  /* First letter row Първи ред букви ,ыуУеЕиИшШщЩкКсСдДзЗцЦ;§ недовършен*/
+  /* First letter row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ,пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ;пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
   { 'Q',         0,   {0x2c, 0x44b} },
   { 'W',         CAPLOK,   {0x443, 0x423} },
   { 'E',         CAPLOK,   {0x435, 0x415} },
@@ -194,7 +194,7 @@ ROSDATA VK_TO_WCHARS2 key_to_chars_2mod[] = {
   { VK_OEM_4,    CAPLOK,   {0x446, 0x426} },
   { VK_OEM_6,    CAPLOK,   {0x3b, 0xa7} },
 
-  /* Second letter row Втори ред букви ьЬяЯаАоОжЖгГтТнНвВмМчЧ */
+  /* Second letter row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
   { 'A',         CAPLOK,   {0x44c, 0x42c} },
   { 'S',         CAPLOK,   {0x44f, 0x42f} },
   { 'D',         CAPLOK,   {0x430, 0x410} },
@@ -207,7 +207,7 @@ ROSDATA VK_TO_WCHARS2 key_to_chars_2mod[] = {
   { VK_OEM_1,    0, {0x43c, 0x41c} },
   { VK_OEM_7,    0, {0x447, 0x427} },
 
-  /* Third letter row Трети ред букви  юЮйЙъЪэЭфФхХпПрРлЛ */
+  /* Third letter row пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
   { 'Z',         CAPLOK,   {0x44e, 0x42e} },
   { 'X',         CAPLOK,   {0x439, 0x419} },
   { 'C',         CAPLOK,   {0x44a, 0x42a} },
@@ -235,9 +235,9 @@ ROSDATA VK_TO_WCHARS2 key_to_chars_2mod[] = {
 ROSDATA VK_TO_WCHARS3 key_to_chars_3mod[] = {
   /* Normal, Shifted, Ctrl */
   /* Legacy (telnet-style) ascii escapes */
-/* { VK_OEM_5, 0, {0x5c, 0x2f, 0x1c} }, Старата стойност, надявам се тук да е бБ */
+/* { VK_OEM_5, 0, {0x5c, 0x2f, 0x1c} }, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅ */
   { VK_OEM_5, CAPLOK, {0x431, 0x411} },
-  { VK_OEM_102, 0, {0x5c, 0x2f, 0x1c} }, /* Тук освен да е допълнителното копче до лявата смяна */
+  { VK_OEM_102, 0, {0x5c, 0x2f, 0x1c} }, /* пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
   { VK_BACK, 0, {0x8, 0x8, 0x7f} },
   { VK_ESCAPE, 0, {0x1b, 0x1b, 0x1b} },
   { VK_RETURN, 0, {'\r', '\r', '\n'} },
@@ -354,10 +354,10 @@ ROSDATA VSC_LPWSTR extended_key_names[] = {
   { 0x51, L"Page Down" },
   { 0x52, L"Insert" },
   { 0x53, L"Delete" },
-  { 0x54, L"<ReactOS>" },
+  { 0x54, L"<Windivs>" },
   { 0x56, L"Help" },
-  { 0x5b, L"Left <ReactOS>" },
-  { 0x5c, L"Right <ReactOS>" },
+  { 0x5b, L"Left <Windivs>" },
+  { 0x5c, L"Right <Windivs>" },
   { 0x5d, L"Application" },
   { 0, NULL }
 };

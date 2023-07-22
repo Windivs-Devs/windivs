@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            ntoskrnl/mm/rmap.c
  * PURPOSE:         Kernel memory management functions
  *

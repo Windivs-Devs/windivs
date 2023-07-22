@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Networking
+ * PROJECT:     Windivs Networking
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/win32/iphlpapi/iphlpapi_reactos.c
- * PURPOSE:     DHCP helper functions for ReactOS
+ * PURPOSE:     DHCP helper functions for Windivs
  * PROGRAMMERS: Pierre Schweitzer <pierre@reactos.org>
  */
 

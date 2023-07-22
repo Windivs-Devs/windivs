@@ -3,7 +3,7 @@
  *
  * System setup API, native interface
  *
- * This file is part of the ReactOS Operating System.
+ * This file is part of the Windivs Operating System.
  *
  * Contributors:
  *  Created by Eric Kohl

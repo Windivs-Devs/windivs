@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            hal/halx86/legacy/bus/sysbus.c
  * PURPOSE:

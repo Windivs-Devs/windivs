@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for ReactOS
+ * PROJECT:    PAINT for Windivs
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Window procedures of the dialog windows plus launching functions
  * COPYRIGHT:  Copyright 2015 Benedikt Freisen <b.freisen@gmx.net>
@@ -360,7 +360,7 @@ void CFontsDialog::InitToolbar()
     SendMessage(hwndToolbar, TB_BUTTONSTRUCTSIZE, sizeof(TBBUTTON), 0);
     SendMessage(hwndToolbar, TB_SETBITMAPSIZE, 0, MAKELPARAM(16, 16));
     SendMessage(hwndToolbar, TB_SETBUTTONWIDTH, 0, MAKELPARAM(20, 20));
-    
+
     TBADDBITMAP AddBitmap;
     AddBitmap.hInst = g_hinstExe;
     AddBitmap.nID = IDB_FONTSTOOLBAR;

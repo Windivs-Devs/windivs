@@ -1,5 +1,5 @@
 /*
-    ReactOS Sound System
+    Windivs Sound System
     Legacy support
     Hardware interaction helper
 

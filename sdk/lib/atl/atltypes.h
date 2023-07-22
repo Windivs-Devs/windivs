@@ -1,5 +1,5 @@
 /*
- * ReactOS ATL
+ * Windivs ATL
  *
  * Copyright 2016 Mark Jansen
  *

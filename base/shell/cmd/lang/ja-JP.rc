@@ -50,7 +50,7 @@ CHOICE  [/C[:]選択肢][/N][/S][/T[:]c,nn][文字列]\n\n\
     STRING_CMD_HELP5 "  [Bash ファイル名補完]"
     STRING_CMD_HELP6 "  [ディレクトリ スタック]"
     STRING_CMD_HELP7 "  [リダイレクトとパイプ]"
-    STRING_CMD_HELP8 "ReactOS コマンド ライン インタープリタの新しいインスタンスを開始します。\n\n\
+    STRING_CMD_HELP8 "Windivs コマンド ライン インタープリタの新しいインスタンスを開始します。\n\n\
 CMD [/[C|K] コマンド][/P][/Q][/T:bf]\n\n\
   /C コマンド  指定されたコマンドを実行した後、終了します。\n\
   /K コマンド  指定されたコマンドを実行しますが、終了しません。\n\
@@ -449,7 +449,7 @@ VER [/C][/R][/W]\n\n\
     STRING_VERSION_HELP5 "\nバグ報告は <ros-dev@reactos.org> へ送ってください。\n\
 最新のバージョンは次のページから入手できます: https://reactos.org"
     STRING_VERSION_HELP6 "\nFreeDOS version written by:\n"
-    STRING_VERSION_HELP7 "\nReactOS version written by:\n"
+    STRING_VERSION_HELP7 "\nWindivs version written by:\n"
     STRING_VOL_HELP1 " ドライブ %c: のボリューム ラベルは %s です。\n"
     STRING_VOL_HELP2 " ドライブ %c: にはボリューム ラベルがありません。\n"
     STRING_VOL_HELP3 " ボリューム シリアル番号は %04X-%04X です。\n"
@@ -533,9 +533,9 @@ RESTORE       ウィンドウを元のサイズに戻します。\n\
     STRING_REPLACE_ERROR5 "Access denied - %s\n"
     STRING_REPLACE_ERROR6 "No files found - %s\n"
     STRING_REPLACE_ERROR7 "Extended Error 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Command Prompt                                      Type HELP = Help  "
-    STRING_REACTOS_VERSION "ReactOS [Version %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Command Line Interpreter\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Windivs Command Prompt                                      Type HELP = Help  "
+    STRING_REACTOS_VERSION "Windivs [Version %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Command Line Interpreter\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Running on: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d 個のファイルがコピーされました\n"

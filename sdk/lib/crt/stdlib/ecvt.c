@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS CRT
+ * PROJECT:         Windivs CRT
  * LICENSE:         See COPYING in the top level directory
  * PURPOSE:         CRT's ecvt
  * FILE:            lib/sdk/crt/stdlib/ecvt.c

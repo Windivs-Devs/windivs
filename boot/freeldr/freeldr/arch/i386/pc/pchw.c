@@ -2,7 +2,7 @@
  *  FreeLoader
  *
  *  Copyright (C) 2003, 2004  Eric Kohl
- *  Copyright (C) 2009  Hervé Poussineau
+ *  Copyright (C) 2009  Hervï¿½ Poussineau
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -451,7 +451,7 @@ FrLdrCheckCpuCompatibility(VOID)
         FrLdrBugCheckWithMessage(MISSING_HARDWARE_REQUIREMENTS,
                                  __FILE__,
                                  __LINE__,
-                                 "ReactOS requires the CPUID instruction to return "
+                                 "Windivs requires the CPUID instruction to return "
                                  "more than one supported ID.\n\n");
     }
 
@@ -472,7 +472,7 @@ FrLdrCheckCpuCompatibility(VOID)
                                      __FILE__,
                                      __LINE__,
                                      "Processor is too old (family %u < 5)\n"
-                                     "ReactOS requires a Pentium-level processor or newer.",
+                                     "Windivs requires a Pentium-level processor or newer.",
                                      ProcessorFamily);
         }
     }

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Native DirectDraw implementation
  * FILE:             win32ss/reactx/ntddraw/dvp.c
  * PROGRAMER:        Magnus olsen (magnus@greatlord.com)
@@ -21,7 +21,7 @@ NtGdiDvpCanCreateVideoPort(HANDLE hDirectDraw,
                            PDD_CANCREATEVPORTDATA puCanCreateVPortData)
 {
     PGD_DVPCANCREATEVIDEOPORT pfnDvpCanCreateVideoPort = (PGD_DVPCANCREATEVIDEOPORT)gpDxFuncs[DXG_INDEX_DxDvpCanCreateVideoPort].pfn;
-    
+
     if (pfnDvpCanCreateVideoPort == NULL)
     {
 		DPRINT1("Warning: no pfnDvpCanCreateVideoPort");
@@ -41,7 +41,7 @@ NtGdiDvpColorControl(HANDLE hVideoPort,
                      PDD_VPORTCOLORDATA puVPortColorData)
 {
     PGD_DVPCOLORCONTROL pfnDvpColorControl = (PGD_DVPCOLORCONTROL)gpDxFuncs[DXG_INDEX_DxDvpColorControl].pfn;
-    
+
     if (pfnDvpColorControl == NULL)
     {
 		DPRINT1("Warning: no pfnDvpColorControl");
@@ -61,7 +61,7 @@ NtGdiDvpCreateVideoPort(HANDLE hDirectDraw,
                         PDD_CREATEVPORTDATA puCreateVPortData)
 {
     PGD_DVPCREATEVIDEOPORT pfnDvpCreateVideoPort = (PGD_DVPCREATEVIDEOPORT)gpDxFuncs[DXG_INDEX_DxDvpCreateVideoPort].pfn;
-    
+
     if (pfnDvpCreateVideoPort == NULL)
     {
 		DPRINT1("Warning: no pfnDvpCreateVideoPort");
@@ -81,7 +81,7 @@ NtGdiDvpDestroyVideoPort(HANDLE hVideoPort,
                          PDD_DESTROYVPORTDATA puDestroyVPortData)
 {
     PGD_DVPDESTROYVIDEOPORT pfnDvpDestroyVideoPort  = (PGD_DVPDESTROYVIDEOPORT)gpDxFuncs[DXG_INDEX_DxDvpDestroyVideoPort].pfn;
-    
+
     if (pfnDvpDestroyVideoPort == NULL)
     {
 		DPRINT1("Warning: no pfnDvpDestroyVideoPort");
@@ -217,7 +217,7 @@ NtGdiDvpGetVideoPortOutputFormats(HANDLE hVideoPort,
 
     DPRINT1("Calling dxg.sys pfnDvpGetVideoPortOutputFormats");
     return pfnDvpGetVideoPortOutputFormats(hVideoPort, puGetVPortOutputFormatData);
- 
+
 }
 
 

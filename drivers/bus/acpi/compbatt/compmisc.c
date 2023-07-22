@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Composite Battery Driver
+ * PROJECT:         Windivs Composite Battery Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/drivers/bus/acpi/compbatt/compmisc.c
  * PURPOSE:         Miscellaneous Support Routines
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS API tests
+ * PROJECT:     Windivs API tests
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Tests for Char* functions
  * COPYRIGHT:   Copyright 2022 Stanislav Motylkov <x86corez@gmail.com>
@@ -41,13 +41,13 @@ typedef struct
 
 TESTS_CHARPREV TestCharPrev[] =
 {
-    {testLen, L"C:\\ReactOS", NULL, 0, 9, 9, TRUE, FALSE},
+    {testLen, L"C:\\Windivs", NULL, 0, 9, 9, TRUE, FALSE},
     {testOffs, L"abcdefghijk", NULL, 11, 10, 10, TRUE, FALSE},
     {testOffs, L"test a´^~¯", NULL, 10, 9, 9, TRUE, FALSE},
     {testOffs, L"test å", NULL, 6, 5, 5, TRUE, FALSE},
-    {testBoth, L"C:\\ReactOS", L"", 0, -1, 0, FALSE, FALSE},
-    {testBoth, L"C:\\ReactOS\\", L"C:\\ReactOS", 0, -1, 0, FALSE, FALSE},
-    {testBoth, L"C:\\ReactOS\\", L"ReactOS", 0, -1, 0, FALSE, FALSE},
+    {testBoth, L"C:\\Windivs", L"", 0, -1, 0, FALSE, FALSE},
+    {testBoth, L"C:\\Windivs\\", L"C:\\Windivs", 0, -1, 0, FALSE, FALSE},
+    {testBoth, L"C:\\Windivs\\", L"Windivs", 0, -1, 0, FALSE, FALSE},
 };
 
 TESTS_CHARPREV TestCharPrev_XP[] =
@@ -71,8 +71,8 @@ TESTS_CHARPREV TestCharPrev_Vista[] =
 };
 
 /* Static tests */
-static const WCHAR wszReactOS[] = L"C:\\ReactOS";
-static const CHAR szReactOS[] = "C:\\ReactOS";
+static const WCHAR wszWindivs[] = L"C:\\Windivs";
+static const CHAR szWindivs[] = "C:\\Windivs";
 static const WCHAR wszSpecial[] = L"test\0\0\0\0\0\0aa\t\t\t\r\n\r\n";
 static const CHAR szSpecial[] = "test\0\0\0\0\0\0aa\t\t\t\r\n\r\n";
 static const WCHAR wszMagic1[] = L"test a\x030a";
@@ -95,27 +95,27 @@ typedef struct
 
 ST_TESTS_CHARPREV TestStaticCharPrev[] =
 {
-    {wszReactOS, wszReactOS, wszReactOS,
-      szReactOS,  szReactOS,  szReactOS},
-    {wszReactOS, wszReactOS + 1, wszReactOS,
-      szReactOS,  szReactOS + 1,  szReactOS},
-    {wszReactOS, wszReactOS + 2, wszReactOS + 1,
-      szReactOS,  szReactOS + 2,  szReactOS + 1},
-    {wszReactOS, wszReactOS + 3, wszReactOS + 2,
-      szReactOS,  szReactOS + 3,  szReactOS + 2},
-    {wszReactOS, wszReactOS + 10, wszReactOS + 9,
-      szReactOS,  szReactOS + 10,  szReactOS + 9},
+    {wszWindivs, wszWindivs, wszWindivs,
+      szWindivs,  szWindivs,  szWindivs},
+    {wszWindivs, wszWindivs + 1, wszWindivs,
+      szWindivs,  szWindivs + 1,  szWindivs},
+    {wszWindivs, wszWindivs + 2, wszWindivs + 1,
+      szWindivs,  szWindivs + 2,  szWindivs + 1},
+    {wszWindivs, wszWindivs + 3, wszWindivs + 2,
+      szWindivs,  szWindivs + 3,  szWindivs + 2},
+    {wszWindivs, wszWindivs + 10, wszWindivs + 9,
+      szWindivs,  szWindivs + 10,  szWindivs + 9},
 
-    {wszReactOS + 2, wszReactOS, wszReactOS,
-      szReactOS + 2,  szReactOS,  szReactOS},
-    {wszReactOS + 2, wszReactOS + 1, wszReactOS + 1,
-      szReactOS + 2,  szReactOS + 1,  szReactOS + 1},
-    {wszReactOS + 2, wszReactOS + 2, wszReactOS + 2,
-      szReactOS + 2,  szReactOS + 2,  szReactOS + 2},
-    {wszReactOS + 2, wszReactOS + 3, wszReactOS + 2,
-      szReactOS + 2,  szReactOS + 3,  szReactOS + 2},
-    {wszReactOS + 2, wszReactOS + 4, wszReactOS + 3,
-      szReactOS + 2,  szReactOS + 4,  szReactOS + 3},
+    {wszWindivs + 2, wszWindivs, wszWindivs,
+      szWindivs + 2,  szWindivs,  szWindivs},
+    {wszWindivs + 2, wszWindivs + 1, wszWindivs + 1,
+      szWindivs + 2,  szWindivs + 1,  szWindivs + 1},
+    {wszWindivs + 2, wszWindivs + 2, wszWindivs + 2,
+      szWindivs + 2,  szWindivs + 2,  szWindivs + 2},
+    {wszWindivs + 2, wszWindivs + 3, wszWindivs + 2,
+      szWindivs + 2,  szWindivs + 3,  szWindivs + 2},
+    {wszWindivs + 2, wszWindivs + 4, wszWindivs + 3,
+      szWindivs + 2,  szWindivs + 4,  szWindivs + 3},
 
     /* Test null-terminators */
     {wszSpecial, wszSpecial + 8, wszSpecial + 7,
@@ -199,16 +199,16 @@ typedef struct
 
 ST_TESTS_CHARNEXT TestStaticCharNext[] =
 {
-    {wszReactOS, wszReactOS + 1,
-      szReactOS,  szReactOS + 1},
-    {wszReactOS + 1, wszReactOS + 2,
-      szReactOS + 1,  szReactOS + 2},
-    {wszReactOS + 2, wszReactOS + 3,
-      szReactOS + 2,  szReactOS + 3},
-    {wszReactOS + 9, wszReactOS + 10,
-      szReactOS + 9,  szReactOS + 10},
-    {wszReactOS + 10, wszReactOS + 10,
-      szReactOS + 10,  szReactOS + 10},
+    {wszWindivs, wszWindivs + 1,
+      szWindivs,  szWindivs + 1},
+    {wszWindivs + 1, wszWindivs + 2,
+      szWindivs + 1,  szWindivs + 2},
+    {wszWindivs + 2, wszWindivs + 3,
+      szWindivs + 2,  szWindivs + 3},
+    {wszWindivs + 9, wszWindivs + 10,
+      szWindivs + 9,  szWindivs + 10},
+    {wszWindivs + 10, wszWindivs + 10,
+      szWindivs + 10,  szWindivs + 10},
 
     /* Test null-terminators */
     {wszSpecial + 3, wszSpecial + 4,
@@ -301,14 +301,14 @@ typedef struct
 
 EX_TESTS_CHARPREV TestExceptionCharPrev[] =
 {
-    {wszReactOS, NULL, NULL,
-      szReactOS, NULL, NULL, NULL,
+    {wszWindivs, NULL, NULL,
+      szWindivs, NULL, NULL, NULL,
      STATUS_SUCCESS},
     {NULL, NULL, NULL,
      NULL, NULL, NULL, NULL,
      STATUS_SUCCESS},
-    {NULL, wszReactOS, wszReactOS - 1,
-     NULL,  szReactOS,  szReactOS - 1, szReactOS - 1,
+    {NULL, wszWindivs, wszWindivs - 1,
+     NULL,  szWindivs,  szWindivs - 1, szWindivs - 1,
      STATUS_SUCCESS},
 
     {INVALID_PTR, NULL, NULL,
@@ -321,14 +321,14 @@ EX_TESTS_CHARPREV TestExceptionCharPrev[] =
      NULL, INVALID_PTR, INVALID_PTR_OFF(-1) /* NULL on Win7 with updates */, NULL,
      STATUS_ACCESS_VIOLATION},
 
-    {wszReactOS, INVALID_PTR, NULL,
-      szReactOS, INVALID_PTR, INVALID_PTR_OFF(-1) /* NULL on Win7 with updates */, NULL,
+    {wszWindivs, INVALID_PTR, NULL,
+      szWindivs, INVALID_PTR, INVALID_PTR_OFF(-1) /* NULL on Win7 with updates */, NULL,
      STATUS_ACCESS_VIOLATION},
     {INVALID_PTR, INVALID_PTR, INVALID_PTR,
      INVALID_PTR, INVALID_PTR, INVALID_PTR, INVALID_PTR,
      STATUS_SUCCESS},
-    {INVALID_PTR, wszReactOS, wszReactOS,
-     INVALID_PTR,  szReactOS,  szReactOS, szReactOS,
+    {INVALID_PTR, wszWindivs, wszWindivs,
+     INVALID_PTR,  szWindivs,  szWindivs, szWindivs,
      STATUS_SUCCESS},
 
     {INVALID_PTR_OFF(-2), INVALID_PTR, NULL,
@@ -356,8 +356,8 @@ typedef struct
 
 EX_TESTS_CHARNEXT TestExceptionCharNext[] =
 {
-    {wszReactOS, wszReactOS + 1,
-      szReactOS,  szReactOS + 1,
+    {wszWindivs, wszWindivs + 1,
+      szWindivs,  szWindivs + 1,
      STATUS_SUCCESS},
     {NULL, NULL,
      NULL, NULL,
@@ -657,14 +657,14 @@ static void testCharPrev(void)
     }
 
     /* Perform exception tests (check corner cases) */
-    if (INVALID_PTR < (PVOID)wszReactOS)
+    if (INVALID_PTR < (PVOID)wszWindivs)
     {
-        ok(FALSE, "testCharPrev: unexpected INVALID PTR < wszReactOS\n");
+        ok(FALSE, "testCharPrev: unexpected INVALID PTR < wszWindivs\n");
         return;
     }
-    if (INVALID_PTR < (PVOID)szReactOS)
+    if (INVALID_PTR < (PVOID)szWindivs)
     {
-        ok(FALSE, "testCharPrev: unexpected INVALID PTR < szReactOS\n");
+        ok(FALSE, "testCharPrev: unexpected INVALID PTR < szWindivs\n");
         return;
     }
 
@@ -749,14 +749,14 @@ static void testCharNext(void)
     }
 
     /* Perform exception tests (check corner cases) */
-    if (INVALID_PTR < (PVOID)wszReactOS)
+    if (INVALID_PTR < (PVOID)wszWindivs)
     {
-        ok(FALSE, "testCharNext: unexpected INVALID PTR < wszReactOS\n");
+        ok(FALSE, "testCharNext: unexpected INVALID PTR < wszWindivs\n");
         return;
     }
-    if (INVALID_PTR < (PVOID)szReactOS)
+    if (INVALID_PTR < (PVOID)szWindivs)
     {
-        ok(FALSE, "testCharNext: unexpected INVALID PTR < szReactOS\n");
+        ok(FALSE, "testCharNext: unexpected INVALID PTR < szWindivs\n");
         return;
     }
 

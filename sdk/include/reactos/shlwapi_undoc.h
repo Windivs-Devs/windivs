@@ -1,5 +1,5 @@
 /*
- * ReactOS shlwapi
+ * Windivs shlwapi
  *
  * Copyright 2009 Andrew Hill <ash77 at domain reactos.org>
  *

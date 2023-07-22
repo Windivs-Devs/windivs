@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS User32
+ * PROJECT:          Windivs User32
  * PURPOSE:          Built-in control registration
  * FILE:             win32ss/user/user32/controls/regcontrol.c
  * PROGRAMER:        Ge van Geldorp (ge@gse.nl)
@@ -207,6 +207,6 @@ BOOL WINAPI RegisterClientPFN(VOID)
                                             &pfnClientW,
                                             &pfnClientWorker,
                                             User32Instance);
-  
+
   return NT_SUCCESS(Status) ? TRUE : FALSE;
 }

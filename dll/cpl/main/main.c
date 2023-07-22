@@ -1,6 +1,6 @@
 /*
- *  ReactOS
- *  Copyright (C) 2004 ReactOS Team
+ *  Windivs
+ *  Copyright (C) 2004 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,9 +17,9 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 /*
- * PROJECT:         ReactOS Sample Control Panel
+ * PROJECT:         Windivs Sample Control Panel
  * FILE:            dll/cpl/main/main.c
- * PURPOSE:         ReactOS Main Control Panel
+ * PURPOSE:         Windivs Main Control Panel
  * PROGRAMMER:      Eric Kohl
  * UPDATE HISTORY:
  *      05-01-2004  Created

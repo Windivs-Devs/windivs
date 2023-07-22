@@ -1,5 +1,5 @@
 ;
-; ReactOS Operating System
+; Windivs Operating System
 ;
 ; This file contains all win32k native api functions from win vista
 ;

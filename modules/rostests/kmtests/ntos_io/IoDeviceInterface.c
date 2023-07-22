@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS kernel-mode tests
+ * PROJECT:         Windivs kernel-mode tests
  * LICENSE:         LGPLv2+ - See COPYING.LIB in the top level directory
  * PURPOSE:         Kernel-Mode Test Suite Device Interface functions test
  * PROGRAMMER:      Filip Navara <xnavara@volny.cz>
@@ -22,7 +22,7 @@ NTSTATUS
    OUT PWSTR *SymbolicLinkList);
 
 NTSTATUS NTAPI
-ReactOS_IoGetDeviceInterfaces(
+Windivs_IoGetDeviceInterfaces(
    IN CONST GUID *InterfaceClassGuid,
    IN PDEVICE_OBJECT PhysicalDeviceObject OPTIONAL,
    IN ULONG Flags,

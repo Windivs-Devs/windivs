@@ -59,7 +59,7 @@
 extern "C" {
 #endif
 
-/* This define are obsolete in ms ddk, but are use internal in Windows NT4/2000/XP/2003/ReactOS */
+/* This define are obsolete in ms ddk, but are use internal in Windows NT4/2000/XP/2003/Windivs */
 #define DDCAPS_STEREOVIEW                      0x00040000
 
 

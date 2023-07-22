@@ -1,5 +1,5 @@
 /*
-* PROJECT:         ReactOS Kernel
+* PROJECT:         Windivs Kernel
 * LICENSE:         GPL - See COPYING in the top level directory
 * FILE:            ntoskrnl/include/internal/po.h
 * PURPOSE:         Internal header for the Power Manager

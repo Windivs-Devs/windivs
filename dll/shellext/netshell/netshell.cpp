@@ -1,7 +1,7 @@
 /*
- * PROJECT:     ReactOS Shell
+ * PROJECT:     Windivs Shell
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
- * PURPOSE:     ReactOS Networking Configuration
+ * PURPOSE:     Windivs Networking Configuration
  * COPYRIGHT:   Copyright 2008 Johannes Anderwald (johannes.anderwald@reactos.org)
  */
 

@@ -21,13 +21,13 @@
  *
  * This code was audited for completeness against the documented features
  * of Comctl32.dll version 6.0 on Oct. 9, 2004, by Dimitrie O. Paun.
- * 
+ *
  * Unless otherwise noted, we believe this code to be complete, as per
  * the specification mentioned above.
  * If you discover missing features, or bugs, please note them below.
  *
  * TODO:
- *    - LBS_NODATA        ReactOS
+ *    - LBS_NODATA        Windivs
  */
 
 #include <user32.h>
@@ -518,7 +518,7 @@ static INT LISTBOX_GetItemFromPoint( const LB_DESCR *descr, INT x, INT y )
  *
  * Paint an item.
  */
-static void LISTBOX_PaintItem( LB_DESCR *descr, HDC hdc, const RECT *rect, 
+static void LISTBOX_PaintItem( LB_DESCR *descr, HDC hdc, const RECT *rect,
 			       INT index, UINT action, BOOL ignoreFocus )
 {
     LB_ITEMDATA *item = NULL;
@@ -1076,7 +1076,7 @@ static LRESULT LISTBOX_Paint( LB_DESCR *descr, HDC hdc )
         /* keep the focus rect, to paint the focus item after */
         if (i == descr->focus_item)
             focusRect = rect;
-    
+
         LISTBOX_PaintItem( descr, hdc, &rect, i, ODA_DRAWENTIRE, TRUE );
         rect.top = rect.bottom;
 
@@ -2494,7 +2494,7 @@ static LRESULT LISTBOX_HandleChar( LB_DESCR *descr, WCHAR charW )
     return 0;
 }
 
-/* ReactOS Retrieve the UI state for the control */
+/* Windivs Retrieve the UI state for the control */
 static BOOL LISTBOX_update_uistate(LB_DESCR *descr)
 {
     LONG prev_flags;
@@ -2553,7 +2553,7 @@ static BOOL LISTBOX_Create( HWND hwnd, LPHEADCOMBO lphc )
 
     SetWindowLongPtrW( descr->self, 0, (LONG_PTR)descr );
 
-    LISTBOX_update_uistate(descr); // ReactOS
+    LISTBOX_update_uistate(descr); // Windivs
 
 /*    if (wnd->dwExStyle & WS_EX_NOPARENTNOTIFY) descr->style &= ~LBS_NOTIFY;
  */
@@ -2561,7 +2561,7 @@ static BOOL LISTBOX_Create( HWND hwnd, LPHEADCOMBO lphc )
     if (descr->style & LBS_MULTICOLUMN) descr->style &= ~LBS_OWNERDRAWVARIABLE;
     if (descr->style & LBS_OWNERDRAWVARIABLE) descr->style |= LBS_NOINTEGRALHEIGHT;
 
-    //// ReactOS
+    //// Windivs
     /* A no-data list box must also have the LBS_OWNERDRAWFIXED style, but must
        not have the LBS_SORT or LBS_HASSTRINGS style. */
     if ( descr->style & LBS_NODATA &&
@@ -2635,8 +2635,8 @@ LRESULT WINAPI ListBoxWndProc_common( HWND hwnd, UINT msg,
              return 0;
           }
        }
-    }    
-#endif    
+    }
+#endif
 
     if (!descr)
     {
@@ -3148,7 +3148,7 @@ LRESULT WINAPI ListBoxWndProc_common( HWND hwnd, UINT msg,
             LISTBOX_HandleMouseMove( descr, mousePos.x, mousePos.y);
 
             descr->captured = captured;
-        } 
+        }
         else if (GetCapture() == descr->self)
         {
             LISTBOX_HandleMouseMove( descr, (INT16)LOWORD(lParam),
@@ -3246,7 +3246,7 @@ LRESULT WINAPI ListBoxWndProc_common( HWND hwnd, UINT msg,
     case WM_NCACTIVATE:
         if (lphc) return 0;
 	break;
-// ReactOS
+// Windivs
     case WM_UPDATEUISTATE:
         if (unicode)
             DefWindowProcW(descr->self, msg, wParam, lParam);

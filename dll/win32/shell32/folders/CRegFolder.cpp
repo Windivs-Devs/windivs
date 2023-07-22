@@ -1,5 +1,5 @@
 /*
- * ReactOS Shell
+ * Windivs Shell
  *
  * Copyright 2016 Giannis Adamopoulos
  *

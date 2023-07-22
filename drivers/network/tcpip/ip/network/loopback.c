@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS TCP/IP protocol driver
+ * PROJECT:     Windivs TCP/IP protocol driver
  * FILE:        datalink/loopback.c
  * PURPOSE:     Loopback adapter
  * PROGRAMMERS: Casper S. Hornstrup (chorns@users.sourceforge.net)

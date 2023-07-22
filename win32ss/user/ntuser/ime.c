@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS Win32k subsystem
+ * PROJECT:          Windivs Win32k subsystem
  * PURPOSE:          Input Method Editor and Input Method Manager support
  * FILE:             win32ss/user/ntuser/ime.c
  * PROGRAMERS:       Casper S. Hornstrup (chorns@users.sourceforge.net)

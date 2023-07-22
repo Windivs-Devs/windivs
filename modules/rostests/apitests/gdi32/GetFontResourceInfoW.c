@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for GetFontResourceInfoW
  * PROGRAMMERS:     Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>

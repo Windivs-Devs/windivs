@@ -43,8 +43,8 @@ BOOLEAN PcVideoIsPaletteFixed(VOID);
 VOID PcVideoSetPaletteColor(UCHAR Color, UCHAR Red, UCHAR Green, UCHAR Blue);
 VOID PcVideoGetPaletteColor(UCHAR Color, UCHAR* Red, UCHAR* Green, UCHAR* Blue);
 VOID PcVideoSync(VOID);
-VOID PcVideoPrepareForReactOS(VOID);
-VOID PcPrepareForReactOS(VOID);
+VOID PcVideoPrepareForWindivs(VOID);
+VOID PcPrepareForWindivs(VOID);
 
 PFREELDR_MEMORY_DESCRIPTOR PcMemGetMemoryMap(ULONG *MemoryMapSize);
 BOOLEAN PcFindPciBios(PPCI_REGISTRY_INFO BusData);

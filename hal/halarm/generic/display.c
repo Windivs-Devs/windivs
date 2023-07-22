@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            hal/halarm/generic/display.c
  * PURPOSE:         Screen Display Routines, now useless since NT 5.1+
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 #include <hal.h>

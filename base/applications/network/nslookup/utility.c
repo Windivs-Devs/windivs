@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS nslookup utility
+ * PROJECT:     Windivs nslookup utility
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/applications/network/nslookup/utility.c
  * PURPOSE:     Support functions for nslookup.c

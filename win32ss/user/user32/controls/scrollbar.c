@@ -1,5 +1,5 @@
 /*
- * ReactOS User32 Library
+ * Windivs User32 Library
  * - ScrollBar control
  *
  * Copyright 2001 Casper S. Hornstrup
@@ -616,7 +616,7 @@ IntScrollGetThumbVal(HWND Wnd, INT SBType, PSCROLLBARINFO ScrollBarInfo,
                           - ScrollBarInfo->rcScrollBar.left;
 
   pWnd = ValidateHwnd( Wnd );
-  if (!pWnd) return FALSE; 
+  if (!pWnd) return FALSE;
 
   pSBData = IntGetSBData(pWnd, SBType);
 
@@ -783,7 +783,7 @@ IntScrollHandleScrollEvent(HWND Wnd, INT SBType, UINT Msg, POINT Pt)
   }
   if ((ScrollTrackHitTest == SCROLL_NOWHERE) && (Msg != WM_LBUTTONDOWN))
   {
-     //// ReactOS : Justin Case something goes wrong.
+     //// Windivs : Justin Case something goes wrong.
      if (Wnd == GetCapture())
      {
         ReleaseCapture();
@@ -1232,7 +1232,7 @@ ScrollBarWndProc_common(WNDPROC DefWindowProc, HWND Wnd, UINT Msg, WPARAM wParam
            ERR("Wrong Extra bytes for Scrollbar!\n");
            return 0;
         }
-     
+
         if (Msg != WM_CREATE)
         {
            return DefWindowProc(Wnd, Msg, wParam, lParam);
@@ -1247,8 +1247,8 @@ ScrollBarWndProc_common(WNDPROC DefWindowProc, HWND Wnd, UINT Msg, WPARAM wParam
            return 0;
         }
      }
-  }    
-#endif    
+  }
+#endif
 
   if (! IsWindow(Wnd))
     {
@@ -1393,7 +1393,7 @@ ScrollBarWndProc_common(WNDPROC DefWindowProc, HWND Wnd, UINT Msg, WPARAM wParam
         *(LPINT)lParam = pSBWnd->SBCalc.posMax;
         // This message does not return a value.
         return 0;
- 
+
       case SBM_ENABLE_ARROWS:
         return EnableScrollBar( Wnd, SB_CTL, wParam );
 
@@ -1630,7 +1630,7 @@ DECLSPEC_HOTPATCH
 GetScrollRange(HWND Wnd, int Bar, LPINT MinPos, LPINT MaxPos)
 {
   PWND pwnd;
-  PSBDATA pSBData;  
+  PSBDATA pSBData;
 
   TRACE("Wnd=%x Bar=%d Min=%p Max=%p\n", Wnd, Bar, MinPos, MaxPos);
 

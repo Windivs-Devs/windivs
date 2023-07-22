@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS System Control Panel Applet
+ * PROJECT:     Windivs System Control Panel Applet
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/sysdm/sysdm.c
  * PURPOSE:     dll entry file

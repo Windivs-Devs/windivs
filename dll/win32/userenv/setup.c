@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * FILE:            dll/win32/userenv/setup.c
  * PURPOSE:         Profile setup functions
  * PROGRAMMERS:     Eric Kohl

@@ -1,6 +1,6 @@
 /*
- *  ReactOS Win32 Applications
- *  Copyright (C) 2005 ReactOS Team
+ *  Windivs Win32 Applications
+ *  Copyright (C) 2005 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS arp utility
+ * PROJECT:     Windivs arp utility
  * FILE:        base/applications/network/arp/arp.c
  * PURPOSE:     view and manipulate the ARP cache
  * PROGRAMMERS: Ged Murphy (gedmurphy@gmail.com)

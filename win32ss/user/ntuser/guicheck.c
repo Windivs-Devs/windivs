@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          GUI state check
  * FILE:             win32ss/user/ntuser/guicheck.c
  * PROGRAMER:        Casper S. Hornstrup (chorns@users.sourceforge.net)

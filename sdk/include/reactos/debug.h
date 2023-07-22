@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            include/reactos/debug.h
  * PURPOSE:         Useful debugging macros
  * PROGRAMMERS:     David Welch (welch@mcmail.com)

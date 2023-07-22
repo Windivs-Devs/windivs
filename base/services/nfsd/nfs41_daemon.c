@@ -1,5 +1,5 @@
 /* NFSv4.1 client for Windows
- * Copyright © 2012 The Regents of the University of Michigan
+ * Copyright ï¿½ 2012 The Regents of the University of Michigan
  *
  * Olga Kornievskaia <aglo@umich.edu>
  * Casey Bodley <cbodley@umich.edu>
@@ -42,7 +42,7 @@
 DWORD NFS41D_VERSION = 0;
 
 #ifndef __REACTOS__
-static const char FILE_NETCONFIG[] = "C:\\ReactOS\\System32\\drivers\\etc\\netconfig";
+static const char FILE_NETCONFIG[] = "C:\\Windivs\\System32\\drivers\\etc\\netconfig";
 #endif
 
 /* Globals */
@@ -81,14 +81,14 @@ out:
     return status;
 }
 
-static unsigned int WINAPI thread_main(void *args) 
+static unsigned int WINAPI thread_main(void *args)
 {
     nfs41_idmapper *idmapper = (nfs41_idmapper*)args;
     DWORD status = 0;
     HANDLE pipe;
-    // buffer used to process upcall, assumed to be fixed size. 
+    // buffer used to process upcall, assumed to be fixed size.
     // if we ever need to handle non-cached IO, need to make it dynamic
-    unsigned char outbuf[UPCALL_BUF_SIZE], inbuf[UPCALL_BUF_SIZE]; 
+    unsigned char outbuf[UPCALL_BUF_SIZE], inbuf[UPCALL_BUF_SIZE];
     DWORD inbuf_len = UPCALL_BUF_SIZE, outbuf_len;
     nfs41_upcall upcall;
 
@@ -140,7 +140,7 @@ write_downcall:
         status = DeviceIoControl(pipe, IOCTL_NFS41_WRITE,
             inbuf, inbuf_len, NULL, 0, (LPDWORD)&outbuf_len, NULL);
         if (!status) {
-            eprintf("IOCTL_NFS41_WRITE failed with %d xid=%lld opcode=%s\n", 
+            eprintf("IOCTL_NFS41_WRITE failed with %d xid=%lld opcode=%s\n",
                 GetLastError(), upcall.xid, opcode2string(upcall.opcode));
             upcall_cancel(&upcall);
         }
@@ -183,7 +183,7 @@ static bool_t check_for_files()
 
     fd = fopen(config_path, "r");
 #else
-     
+
     fd = fopen(FILE_NETCONFIG, "r");
 #endif
     if (fd == NULL) {
@@ -224,7 +224,7 @@ static bool_t parse_cmdlineargs(int argc, TCHAR *argv[], nfsd_args *out)
                     fprintf(stderr, "Missing debug level value\n");
                     PrintUsage();
                     return FALSE;
-                } 
+                }
                 out->debug_level = _ttoi(argv[i]);
             }
             else if (_tcscmp(argv[i], TEXT("--noldap")) == 0) { /* no LDAP */
@@ -239,7 +239,7 @@ static bool_t parse_cmdlineargs(int argc, TCHAR *argv[], nfsd_args *out)
                 }
                 default_uid = _ttoi(argv[i]);
                 if (!default_uid) {
-                    fprintf(stderr, "Invalid (or missing) anonymous uid value of %d\n", 
+                    fprintf(stderr, "Invalid (or missing) anonymous uid value of %d\n",
                         default_uid);
                     return FALSE;
                 }
@@ -257,7 +257,7 @@ static bool_t parse_cmdlineargs(int argc, TCHAR *argv[], nfsd_args *out)
                 fprintf(stderr, "Unrecognized option '%s', disregarding.\n", argv[i]);
         }
     }
-    fprintf(stdout, "parse_cmdlineargs: debug_level %d ldap is %d\n", 
+    fprintf(stdout, "parse_cmdlineargs: debug_level %d ldap is %d\n",
         out->debug_level, out->ldap_enable);
     return TRUE;
 }
@@ -275,10 +275,10 @@ static void print_getaddrinfo(struct addrinfo *ptr)
             inet_ntoa(((struct sockaddr_in *)ptr->ai_addr)->sin_addr));
         break;
     case AF_INET6:
-        if (WSAAddressToString((LPSOCKADDR)ptr->ai_addr, (DWORD)ptr->ai_addrlen, 
+        if (WSAAddressToString((LPSOCKADDR)ptr->ai_addr, (DWORD)ptr->ai_addrlen,
                 NULL, ipstringbuffer, &ipbufferlength))
             dprintf(1, "WSAAddressToString failed with %u\n", WSAGetLastError());
-        else    
+        else
             dprintf(1, "Family: AF_INET6 IPv6 address %s\n", ipstringbuffer);
         break;
     case AF_NETBIOS: dprintf(1, "AF_NETBIOS (NetBIOS)\n"); break;
@@ -322,7 +322,7 @@ static int getdomainname()
             status = WSAGetLastError();
             eprintf("getdomainname: getaddrinfo failed with %d\n", status);
             goto out_free;
-        } 
+        }
 
         for (ptr=result; ptr != NULL; ptr=ptr->ai_next) {
             print_getaddrinfo(ptr);
@@ -331,7 +331,7 @@ static int getdomainname()
             case AF_INET6:
             case AF_INET:
                 status = getnameinfo((struct sockaddr *)ptr->ai_addr,
-                            (socklen_t)ptr->ai_addrlen, hostname, NI_MAXHOST, 
+                            (socklen_t)ptr->ai_addrlen, hostname, NI_MAXHOST,
                             servInfo, NI_MAXSERV, NI_NAMEREQD);
                 if (status)
                     dprintf(1, "getnameinfo failed %d\n", WSAGetLastError());
@@ -346,7 +346,7 @@ static int getdomainname()
                         break;
                     flag = TRUE;
                     memcpy(localdomain_name, &hostname[i+1], len-i);
-                    dprintf(1, "getdomainname: domainname %s %d\n", 
+                    dprintf(1, "getdomainname: domainname %s %d\n",
                             localdomain_name, strlen(localdomain_name));
                     goto out_loop;
                 }
@@ -365,7 +365,7 @@ out_loop:
         freeaddrinfo(result);
     } else {
         dprintf(1, "domain name is %s\n", net_info->DomainName);
-        memcpy(localdomain_name, net_info->DomainName, 
+        memcpy(localdomain_name, net_info->DomainName,
                 strlen(net_info->DomainName));
         localdomain_name[strlen(net_info->DomainName)] = '\0';
     }
@@ -391,7 +391,7 @@ VOID ServiceStart(DWORD argc, LPTSTR *argv)
 
     if (!check_for_files())
         exit(0);
-    if (!parse_cmdlineargs(argc, argv, &cmd_args)) 
+    if (!parse_cmdlineargs(argc, argv, &cmd_args))
         exit(0);
     set_debug_level(cmd_args.debug_level);
     open_log_files();
@@ -481,7 +481,7 @@ VOID ServiceStart(DWORD argc, LPTSTR *argv)
     status = DeviceIoControl(pipe, IOCTL_NFS41_START,
         &NFS41D_VERSION, sizeof(DWORD), NULL, 0, (LPDWORD)&len, NULL);
     if (!status) {
-        eprintf("IOCTL_NFS41_START failed with %d\n", 
+        eprintf("IOCTL_NFS41_START failed with %d\n",
                 GetLastError());
         goto out_pipe;
     }
@@ -493,7 +493,7 @@ VOID ServiceStart(DWORD argc, LPTSTR *argv)
 #endif
 
     for (i = 0; i < MAX_NUM_THREADS; i++) {
-        tids[i].handle = (HANDLE)_beginthreadex(NULL, 0, thread_main, 
+        tids[i].handle = (HANDLE)_beginthreadex(NULL, 0, thread_main,
                 idmapper, 0, &tids[i].tid);
         if (tids[i].handle == INVALID_HANDLE_VALUE) {
             status = GetLastError();

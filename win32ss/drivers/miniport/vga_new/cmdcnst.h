@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS VGA Miniport Driver
+ * PROJECT:         Windivs VGA Miniport Driver
  * LICENSE:         Microsoft NT4 DDK Sample Code License
  * FILE:            win32ss/drivers/miniport/vga_new/cmdcnst.h
  * PURPOSE:         Command Code Definitions for VGA Command Streams
@@ -7,7 +7,7 @@
  */
 
 #pragma once
- 
+
 //--------------------------------------------------------------------------
 //   Definition of the set/clear mode command language.
 //
@@ -26,7 +26,7 @@
 //        xxxx
 //        ||||
 //        |||+-------- unused
-//        ||+--------- 0/1 single/multiple values to output (in's are always 
+//        ||+--------- 0/1 single/multiple values to output (in's are always
 //        |+---------- 0/1 8/16 bit operation                  single)
 //        +----------- 0/1 out/in instruction
 //
@@ -89,5 +89,5 @@
 #define IBM     (INOUT+IO+MULTI)        // input multiple bytes
 #define IW      (INOUT+IO+BW)           // input word
 #define IWM     (INOUT+IO+BW+MULTI)     // input multiple words
- 
+
 /* EOF */

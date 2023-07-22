@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       GPL - See COPYING in the top level directory
- * PROJECT:         ReactOS Virtual DOS Machine
+ * PROJECT:         Windivs Virtual DOS Machine
  * FILE:            subsystems/mvdm/ntvdm/ntvdm.c
  * PURPOSE:         Virtual DOS Machine
  * PROGRAMMERS:     Aleksandar Andrejevic <theflash AT sdf DOT lonestar DOT org>
@@ -486,7 +486,7 @@ wmain(INT argc, WCHAR *argv[])
 
     if (argc < 2)
     {
-        wprintf(L"\nReactOS Virtual DOS Machine\n\n"
+        wprintf(L"\nWindivs Virtual DOS Machine\n\n"
                 L"Usage: NTVDM <executable> [<parameters>]\n");
         return 0;
     }

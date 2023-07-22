@@ -1,8 +1,8 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * PURPOSE:         HAL Legacy Support Code
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/

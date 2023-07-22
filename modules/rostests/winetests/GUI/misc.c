@@ -1,7 +1,7 @@
 /*
- * PROJECT:     ReactOS API Test GUI
+ * PROJECT:     Windivs API Test GUI
  * LICENSE:     GPL - See COPYING in the top level directory
- * FILE:        
+ * FILE:
  * PURPOSE:     miscallanous functions
  * COPYRIGHT:   Copyright 2005 Thomas Weidenmueller <w3seek@reactos.org>
  *              Copyright 2006 - 2008 Ged Murphy <gedmurphy@gmail.com>

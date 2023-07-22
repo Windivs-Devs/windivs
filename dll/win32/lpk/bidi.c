@@ -4,7 +4,7 @@
  * Copyright 2003 Shachar Shemesh
  * Copyright 2007 Maarten Lankhorst
  * Copyright 2010 CodeWeavers, Aric Stewart
- * 
+ *
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -41,7 +41,7 @@
  * associated with the Data File(s) or Software that the data or software
  * has been modified.
  */
- 
+
 #include "ros_lpk.h"
 
 WINE_DEFAULT_DEBUG_CHANNEL(bidi);
@@ -440,7 +440,7 @@ BOOL BIDI_Reorder(
     if (lpGlyphs)
     {
 #ifdef __REACTOS__
-        /* ReactOS r57677 and r57679 */
+        /* Windivs r57677 and r57679 */
         cMaxGlyphs = 3 * uCount / 2 + 16;
 #else
         cMaxGlyphs = 1.5 * uCount + 16;

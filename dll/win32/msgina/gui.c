@@ -1,7 +1,7 @@
 /*
- * PROJECT:         ReactOS msgina.dll
+ * PROJECT:         Windivs msgina.dll
  * FILE:            dll/win32/msgina/gui.c
- * PURPOSE:         ReactOS Logon GINA DLL
+ * PURPOSE:         Windivs Logon GINA DLL
  * PROGRAMMERS:     Hervé Poussineau (hpoussin@reactos.org)
  *                  Katayama Hirofumi MZ (katayama.hirofumi.mz@gmail.com)
  */

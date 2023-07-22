@@ -2,14 +2,14 @@
 #define COMPAT_UNDOC_H
 
 
-typedef struct _ReactOS_ShimData
+typedef struct _Windivs_ShimData
 {
     DWORD dwReserved1[130];
     DWORD dwSize;
     DWORD dwMagic;
     DWORD dwReserved2[242];
     DWORD dwRosProcessCompatVersion;
-} ReactOS_ShimData;
+} Windivs_ShimData;
 
 
 #define REACTOS_SHIMDATA_MAGIC  0xAC0DEDAB
@@ -24,9 +24,9 @@ DWORD RosGetProcessCompatVersion(VOID)
     static DWORD g_CompatVersion = REACTOS_COMPATVERSION_UNINITIALIZED;
     if (g_CompatVersion == REACTOS_COMPATVERSION_UNINITIALIZED)
     {
-        ReactOS_ShimData* pShimData = (ReactOS_ShimData*)NtCurrentPeb()->pShimData;
+        Windivs_ShimData* pShimData = (Windivs_ShimData*)NtCurrentPeb()->pShimData;
         if (pShimData && pShimData->dwMagic == REACTOS_SHIMDATA_MAGIC &&
-            pShimData->dwSize == sizeof(ReactOS_ShimData))
+            pShimData->dwSize == sizeof(Windivs_ShimData))
         {
             g_CompatVersion = pShimData->dwRosProcessCompatVersion;
         }

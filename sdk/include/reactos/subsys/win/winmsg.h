@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS User API Server DLL
+ * PROJECT:         Windivs User API Server DLL
  * FILE:            include/reactos/subsys/win/winmsg.h
  * PURPOSE:         Public definitions for communication
  *                  between User-Mode API Clients and Servers
@@ -105,7 +105,7 @@ typedef struct _USER_API_MESSAGE
     ULONG Reserved;
     union
     {
-        USER_EXIT_REACTOS ExitReactOSRequest;
+        USER_EXIT_REACTOS ExitWindivsRequest;
         USER_END_TASK EndTaskRequest;
         USER_LOGON LogonRequest;
         USER_GET_THREAD_CONSOLE_DESKTOP GetThreadConsoleDesktopRequest;

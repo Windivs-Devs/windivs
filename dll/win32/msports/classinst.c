@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS system libraries
+ * PROJECT:     Windivs system libraries
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dlls\win32\msports\classinst.c
  * PURPOSE:     Ports class installer

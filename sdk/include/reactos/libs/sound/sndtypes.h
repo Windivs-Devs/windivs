@@ -1,5 +1,5 @@
 /*
-    ReactOS Sound System
+    Windivs Sound System
     Device type IDs and macros
 
     Author:

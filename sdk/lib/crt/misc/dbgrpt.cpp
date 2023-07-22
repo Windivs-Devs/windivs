@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS CRT library
+ * PROJECT:     Windivs CRT library
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Debug CRT reporting functions
  * COPYRIGHT:   Copyright 2020 Mark Jansen (mark.jansen@reactos.org)
@@ -179,7 +179,7 @@ static int _CrtDbgReportWindow(int reportType, const char_t *filename, int linen
         return IsDebuggerPresent() ? IDRETRY : IDABORT;
 
     // TODO: If we are not interacive, add MB_SERVICE_NOTIFICATION
-    return messageBox(NULL, szCompleteMessage, L"ReactOS C++ Runtime Library",
+    return messageBox(NULL, szCompleteMessage, L"Windivs C++ Runtime Library",
                       MB_ABORTRETRYIGNORE | MB_ICONHAND | MB_SETFOREGROUND | MB_TASKMODAL);
 }
 

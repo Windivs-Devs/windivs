@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            ntoskrnl/cc/mdl.c
  * PURPOSE:         Implements MDL Cache Manager Functions
  *

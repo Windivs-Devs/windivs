@@ -1,22 +1,22 @@
-ReactOS Wallpapers suggestion:
+Windivs Wallpapers suggestion:
 
 
 
-ReactOS Wallpapers for Version 0.3:
+Windivs Wallpapers for Version 0.3:
 
-* ReactOS Wallpaper (original with new text; GNU GPL)
+* Windivs Wallpaper (original with new text; GNU GPL)
   http://reactosde.re.funpic.de/mediadetail.php?sec=Graphic%20arts&cat=wallp&mdnr=92
 
-* ReactOS Computer Wallpaper #1 (GNU GPL)
+* Windivs Computer Wallpaper #1 (GNU GPL)
   http://reactosde.re.funpic.de/mediadetail.php?sec=Graphic%20arts&cat=wallp&mdnr=98
 
 * hill and water (BSD-license)
   http://reactosde.re.funpic.de/mediadetail.php?sec=Graphic%20arts&cat=wallp&mdnr=88
 
-* ReactOS wallpaper - 3d with holes (GNU LGPL)
+* Windivs wallpaper - 3d with holes (GNU LGPL)
   http://reactosde.re.funpic.de/mediadetail.php?sec=Graphic%20arts&cat=wallp&mdnr=65
 
-* ReactOS Wallpapers (Earth)
+* Windivs Wallpapers (Earth)
   http://reactosde.re.funpic.de/mediadetail.php?sec=Graphic%20arts&cat=wallp&mdnr=36
 
 * Ros Nature (Flowers + Logo)
@@ -57,7 +57,7 @@ Some useful links:
 * KDE-LOOK.ORG
   http://www.kde-look.org/
 
-* Frik85's ReactOS Fanpage
+* Frik85's Windivs Fanpage
   http://frik85.reactos.at
   (-> http://reactosde.re.funpic.de/mediagroup.php?sec=Graphic%20arts)
 

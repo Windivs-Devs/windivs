@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS On-Screen Keyboard
+ * PROJECT:         Windivs On-Screen Keyboard
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         On-screen keyboard.
  * COPYRIGHT:       Denis ROBERT
@@ -240,7 +240,7 @@ LRESULT OSK_SetKeys(int reason)
         }
         /* Fallthrough */
         case SETKEYS_INIT:
-        {             
+        {
             if (Globals.bIsEnhancedKeyboard)
             {
                 Globals.Keyboard = &EnhancedKeyboard;
@@ -273,7 +273,7 @@ LRESULT OSK_SetKeys(int reason)
                 {
                     szKey = Keys[i].name;
                 }
-                
+
                 Globals.hKeys[i] = CreateWindowW(WC_BUTTONW,
                                                  szKey,
                                                  WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON | Keys[i].flags,
@@ -299,7 +299,7 @@ LRESULT OSK_SetKeys(int reason)
                          Globals.Keyboard->Size.cx,
                          Globals.Keyboard->Size.cy + yPad,
                          SWP_NOMOVE);
-            
+
             /* Create LEDs */
             LedPos  = Globals.Keyboard->LedStart;
             LedSize = Globals.Keyboard->LedSize;
@@ -307,7 +307,7 @@ LRESULT OSK_SetKeys(int reason)
             CreateWindowW(WC_STATICW, L"", WS_VISIBLE | WS_CHILD | SS_CENTER | SS_NOTIFY,
                 LedPos.x, LedPos.y, LedSize.cx, LedSize.cy, Globals.hMainWnd,
                 (HMENU)IDC_LED_NUM, Globals.hInstance, NULL);
-            
+
             LedPos.x += Globals.Keyboard->LedGap;
 
             CreateWindowW(WC_STATICW, L"", WS_VISIBLE | WS_CHILD | SS_CENTER | SS_NOTIFY,
@@ -774,12 +774,12 @@ LRESULT OSK_Paint(HWND hwnd)
     DrawTextW(hdc, szTemp, -1, &rcText, DT_NOCLIP);
 
     OffsetRect(&rcText, Globals.Keyboard->LedTextOffset, 0);
-    
+
     LoadStringW(Globals.hInstance, IDS_CAPSLOCK, szTemp, _countof(szTemp));
     DrawTextW(hdc, szTemp, -1, &rcText, DT_NOCLIP);
 
     OffsetRect(&rcText, Globals.Keyboard->LedTextOffset, 0);
- 
+
     LoadStringW(Globals.hInstance, IDS_SCROLLLOCK, szTemp, _countof(szTemp));
     DrawTextW(hdc, szTemp, -1, &rcText, DT_NOCLIP);
 
@@ -1049,7 +1049,7 @@ int WINAPI wWinMain(HINSTANCE hInstance,
 
     ShowWindow(hwnd, SW_SHOW);
     UpdateWindow(hwnd);
-    
+
     while (GetMessageW(&msg, NULL, 0, 0))
     {
         TranslateMessage(&msg);

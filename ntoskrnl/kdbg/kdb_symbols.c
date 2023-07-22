@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            ntoskrnl/kdbg/kdb_symbols.c
  * PURPOSE:         Getting symbol information...
  *

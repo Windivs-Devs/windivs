@@ -1,5 +1,5 @@
 /*
- *  ReactOS Application
+ *  Windivs Application
  *
  *  framewnd.c
  *

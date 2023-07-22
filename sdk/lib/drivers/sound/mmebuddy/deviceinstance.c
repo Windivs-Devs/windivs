@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Sound System "MME Buddy" Library
+ * PROJECT:     Windivs Sound System "MME Buddy" Library
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        lib/drivers/sound/mmebuddy/deviceinstance.c
  *

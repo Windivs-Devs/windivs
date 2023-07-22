@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS system libraries
+ * PROJECT:           Windivs system libraries
  * PURPOSE:           System setup
  * FILE:              dll/win32/syssetup/install.c
  * PROGRAMER:         Eric Kohl
@@ -1387,7 +1387,7 @@ SaveDefaultUserHive(VOID)
 
 static
 DWORD
-InstallReactOS(VOID)
+InstallWindivs(VOID)
 {
     WCHAR szBuffer[MAX_PATH];
     HANDLE token;
@@ -1570,7 +1570,7 @@ InstallReactOS(VOID)
 
 /*
  * Standard Windows-compatible export, which dispatches
- * to either 'InstallReactOS' or 'InstallLiveCD'.
+ * to either 'InstallWindivs' or 'InstallLiveCD'.
  */
 INT
 WINAPI
@@ -1589,7 +1589,7 @@ InstallWindowsNt(INT argc, WCHAR** argv)
             // NOTE: On Windows, "mini" means "minimal UI", and can be used
             // in addition to "newsetup"; these options are not exclusive.
             if (_wcsicmp(p, L"newsetup") == 0)
-                return (INT)InstallReactOS();
+                return (INT)InstallWindivs();
             else if (_wcsicmp(p, L"mini") == 0)
                 return (INT)InstallLiveCD();
 

@@ -2,7 +2,7 @@
  *  FreeLoader
  *
  *  Copyright (C) 2003, 2004  Eric Kohl
- *  Copyright (C) 2009  Hervé Poussineau
+ *  Copyright (C) 2009  Hervï¿½ Poussineau
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -295,7 +295,7 @@ GetHarddiskInformation(UCHAR DriveNumber)
 
     /* Fill out the ARC disk block */
     sprintf(ArcName, "multi(0)disk(0)rdisk(%u)", DriveNumber - 0x80);
-    AddReactOSArcDiskInfo(ArcName, Signature, Checksum, ValidPartitionTable);
+    AddWindivsArcDiskInfo(ArcName, Signature, Checksum, ValidPartitionTable);
 
     sprintf(ArcName, "multi(0)disk(0)rdisk(%u)partition(0)", DriveNumber - 0x80);
     FsRegisterDevice(ArcName, &DiskVtbl);
@@ -511,7 +511,7 @@ PcInitializeBootDevices(VOID)
         TRACE("Checksum: %x\n", Checksum);
 
         /* Fill out the ARC disk block */
-        AddReactOSArcDiskInfo(FrLdrBootPath, Signature, Checksum, TRUE);
+        AddWindivsArcDiskInfo(FrLdrBootPath, Signature, Checksum, TRUE);
 
         FsRegisterDevice(FrLdrBootPath, &DiskVtbl);
         DiskCount++; // This is not accounted for in the number of pre-enumerated BIOS drives!

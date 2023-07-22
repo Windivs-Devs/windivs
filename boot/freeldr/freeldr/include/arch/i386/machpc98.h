@@ -75,9 +75,9 @@ BOOLEAN Pc98VideoIsPaletteFixed(VOID);
 VOID Pc98VideoSetPaletteColor(UCHAR Color, UCHAR Red, UCHAR Green, UCHAR Blue);
 VOID Pc98VideoGetPaletteColor(UCHAR Color, UCHAR* Red, UCHAR* Green, UCHAR* Blue);
 VOID Pc98VideoSync(VOID);
-VOID Pc98VideoPrepareForReactOS(VOID);
+VOID Pc98VideoPrepareForWindivs(VOID);
 
-VOID Pc98PrepareForReactOS(VOID);
+VOID Pc98PrepareForWindivs(VOID);
 TIMEINFO* Pc98GetTime(VOID);
 BOOLEAN Pc98InitializeBootDevices(VOID);
 PCONFIGURATION_COMPONENT_DATA Pc98HwDetect(VOID);
@@ -147,7 +147,7 @@ UCHAR Pc98GetFloppyCount(VOID);
 PPC98_DISK_DRIVE Pc98DiskDriveNumberToDrive(IN UCHAR DriveNumber);
 
 ULONG Pc98GetBootSectorLoadAddress(IN UCHAR DriveNumber);
-VOID Pc98DiskPrepareForReactOS(VOID);
+VOID Pc98DiskPrepareForWindivs(VOID);
 
 /* hwdisk.c */
 BOOLEAN PcInitializeBootDevices(VOID);

@@ -1,5 +1,5 @@
 /*
-    ReactOS Sound System
+    Windivs Sound System
     Timing helper
 
     Author:

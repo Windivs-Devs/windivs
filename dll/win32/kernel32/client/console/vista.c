@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * PURPOSE:         Vista functions
  * PROGRAMMERS:     Thomas Weidenmueller (w3seek@reactos.com)
  *                  Hermes Belusca-Maito (hermes.belusca@sfr.fr)

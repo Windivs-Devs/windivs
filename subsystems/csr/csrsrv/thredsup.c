@@ -1,9 +1,9 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Client/Server Runtime SubSystem
+ * PROJECT:         Windivs Client/Server Runtime SubSystem
  * FILE:            subsystems/win32/csrsrv/thredsup.c
  * PURPOSE:         CSR Server DLL Thread Management
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  *                  Alex Ionescu (alex@relsoft.net)
  */
 

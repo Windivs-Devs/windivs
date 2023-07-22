@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Setup Library
+ * PROJECT:     Windivs Setup Library
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Boot Stores Management functionality, with support for
- *              NT 5.x family (MS Windows <= 2003, and ReactOS) bootloaders.
+ *              NT 5.x family (MS Windows <= 2003, and Windivs) bootloaders.
  * COPYRIGHT:   Copyright 2017-2018 Hermes Belusca-Maito
  */
 
@@ -1251,12 +1251,12 @@ FreeLdrEnumerateBootEntries(
         Status = IniCacheGetKey(OsIniSection, L"BootType", &KeyData);
         if (!NT_SUCCESS(Status) || (KeyData == NULL))
         {
-            /* Certainly not a ReactOS installation */
+            /* Certainly not a Windivs installation */
             DPRINT1("No BootType value present!\n");
             goto DoEnum;
         }
 
-        // TODO: What to do with "Windows" ; "WindowsNT40" ; "ReactOSSetup" ?
+        // TODO: What to do with "Windows" ; "WindowsNT40" ; "WindivsSetup" ?
         if ((_wcsicmp(KeyData, L"Windows2003")     == 0) ||
             (_wcsicmp(KeyData, L"\"Windows2003\"") == 0))
         {

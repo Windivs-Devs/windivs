@@ -51,7 +51,7 @@ TrimTrailingPathSeparators_UStr(
 
 
 static VOID
-CreateFreeLoaderReactOSEntries(
+CreateFreeLoaderWindivsEntries(
     IN PVOID BootStoreHandle,
     IN PCWSTR ArcPath)
 {
@@ -70,20 +70,20 @@ CreateFreeLoaderReactOSEntries(
 
     Options->OsLoadPath = ArcPath;
 
-    /* ReactOS */
+    /* Windivs */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs");
     BootEntry->FriendlyName = L"\"Windivs\"";
     Options->OsLoadOptions  = NULL; // L"";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs"));
 
-    /* ReactOS_Debug */
+    /* Windivs_Debug */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Debug");
     BootEntry->FriendlyName = L"\"Windivs (Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Debug"));
 
 #ifdef _WINKD_
-    /* ReactOS_VBoxDebug */
+    /* Windivs_VBoxDebug */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_VBoxDebug");
     BootEntry->FriendlyName = L"\"Windivs (VBox Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=VBOX /SOS";
@@ -91,33 +91,33 @@ CreateFreeLoaderReactOSEntries(
 #endif
 #if DBG
 #ifndef _WINKD_
-    /* ReactOS_KdSerial */
+    /* Windivs_KdSerial */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_KdSerial");
     BootEntry->FriendlyName = L"\"Windivs (RosDbg)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /KDSERIAL";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_KdSerial"));
 #endif
 
-    /* ReactOS_Screen */
+    /* Windivs_Screen */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Screen");
     BootEntry->FriendlyName = L"\"Windivs (Screen)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=SCREEN /SOS";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Screen"));
 
-    /* ReactOS_LogFile */
+    /* Windivs_LogFile */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_LogFile");
     BootEntry->FriendlyName = L"\"Windivs (Log file)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=FILE /SOS";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_LogFile"));
 
-    /* ReactOS_Ram */
+    /* Windivs_Ram */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Ram");
     BootEntry->FriendlyName = L"\"Windivs (RAM Disk)\"";
     Options->OsLoadPath     = L"ramdisk(0)\\Windivs";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /RDPATH=windivs.img /RDIMAGEOFFSET=32256";
     AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Ram"));
 
-    /* ReactOS_EMS */
+    /* Windivs_EMS */
     // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_EMS");
     BootEntry->FriendlyName = L"\"Windivs (Emergency Management Services)\"";
     Options->OsLoadPath     = ArcPath;
@@ -126,7 +126,7 @@ CreateFreeLoaderReactOSEntries(
 #endif
 
 
-    /* DefaultOS=ReactOS */
+    /* DefaultOS=Windivs */
 #if DBG && !defined(_WINKD_)
     if (IsUnattendedSetup)
     {
@@ -162,7 +162,7 @@ CreateFreeLoaderReactOSEntries(
 }
 
 static NTSTATUS
-CreateFreeLoaderIniForReactOS(
+CreateFreeLoaderIniForWindivs(
     IN PCWSTR IniPath,
     IN PCWSTR ArcPath)
 {
@@ -174,8 +174,8 @@ CreateFreeLoaderIniForReactOS(
     if (!NT_SUCCESS(Status))
         return Status;
 
-    /* Add the ReactOS entries */
-    CreateFreeLoaderReactOSEntries(BootStoreHandle, ArcPath);
+    /* Add the Windivs entries */
+    CreateFreeLoaderWindivsEntries(BootStoreHandle, ArcPath);
 
     /* Close the INI file */
     CloseBootStore(BootStoreHandle);
@@ -183,7 +183,7 @@ CreateFreeLoaderIniForReactOS(
 }
 
 static NTSTATUS
-CreateFreeLoaderIniForReactOSAndBootSector(
+CreateFreeLoaderIniForWindivsAndBootSector(
     IN PCWSTR IniPath,
     IN PCWSTR ArcPath,
     IN PCWSTR Section,
@@ -203,8 +203,8 @@ CreateFreeLoaderIniForReactOSAndBootSector(
     if (!NT_SUCCESS(Status))
         return Status;
 
-    /* Add the ReactOS entries */
-    CreateFreeLoaderReactOSEntries(BootStoreHandle, ArcPath);
+    /* Add the Windivs entries */
+    CreateFreeLoaderWindivsEntries(BootStoreHandle, ArcPath);
 
     BootEntry->Version = FreeLdr;
     BootEntry->BootFilePath = NULL;
@@ -229,7 +229,7 @@ CreateFreeLoaderIniForReactOSAndBootSector(
 
 //
 // I think this function can be generalizable as:
-// "find the corresponding 'ReactOS' boot entry in this loader config file
+// "find the corresponding 'Windivs' boot entry in this loader config file
 // (here abstraction comes there), and if none, add a new one".
 //
 
@@ -245,7 +245,7 @@ typedef struct _ENUM_REACTOS_ENTRIES_DATA
 // PENUM_BOOT_ENTRIES_ROUTINE
 static NTSTATUS
 NTAPI
-EnumerateReactOSEntries(
+EnumerateWindivsEntries(
     IN BOOT_STORE_TYPE Type,
     IN PBOOT_STORE_ENTRY BootEntry,
     IN PVOID Parameter OPTIONAL)
@@ -264,7 +264,7 @@ EnumerateReactOSEntries(
                          RTL_FIELD_SIZE(NTOS_OPTIONS, Signature)) !=
                          RTL_FIELD_SIZE(NTOS_OPTIONS, Signature))
     {
-        /* This is not a ReactOS entry */
+        /* This is not a Windivs entry */
         // DPRINT("    An installation '%S' of unsupported type '%S'\n",
                // BootEntry->FriendlyName, BootEntry->Version ? BootEntry->Version : L"n/a");
         DPRINT("    An installation '%S' of unsupported type %lu\n",
@@ -276,7 +276,7 @@ EnumerateReactOSEntries(
     /* BootType is Windows2003, now check OsLoadPath */
     if (!Options->OsLoadPath || !*Options->OsLoadPath)
     {
-        /* Certainly not a ReactOS installation */
+        /* Certainly not a Windivs installation */
         DPRINT1("    A Win2k3 install '%S' without an ARC path?!\n", BootEntry->FriendlyName);
         /* Continue the enumeration */
         goto SkipThisEntry;
@@ -289,7 +289,7 @@ EnumerateReactOSEntries(
         if (!NT_SUCCESS(Status) || _wcsicmp(Options->OsLoadPath, SystemPath) != 0)
         {
             /*
-             * This entry is a ReactOS entry, but the SystemRoot
+             * This entry is a Windivs entry, but the SystemRoot
              * does not match the one we are looking for.
              */
             /* Continue the enumeration */
@@ -302,7 +302,7 @@ EnumerateReactOSEntries(
     // DPRINT("    Found a Win2k3 install '%S' with ARC path '%S'\n",
            // BootEntry->FriendlyName, Options->OsLoadPath);
 
-    DPRINT("EnumerateReactOSEntries: OsLoadPath: '%S'\n", Options->OsLoadPath);
+    DPRINT("EnumerateWindivsEntries: OsLoadPath: '%S'\n", Options->OsLoadPath);
 
     Data->UseExistingEntry = TRUE;
     RtlStringCchCopyW(Data->OsName, ARRAYSIZE(Data->OsName), BootEntry->FriendlyName);
@@ -315,9 +315,9 @@ SkipThisEntry:
     if (Type == FreeLdr && wcscmp(Data->SectionName, (PWSTR)BootEntry->BootEntryKey)== 0)
     {
         RtlStringCchPrintfW(Data->SectionName, ARRAYSIZE(Data->SectionName),
-                            L"ReactOS_%lu", Data->i);
+                            L"Windivs_%lu", Data->i);
         RtlStringCchPrintfW(Data->OsName, ARRAYSIZE(Data->OsName),
-                            L"\"ReactOS %lu\"", Data->i);
+                            L"\"Windivs %lu\"", Data->i);
         Data->i++;
     }
     return STATUS_SUCCESS;
@@ -345,20 +345,20 @@ UpdateFreeLoaderIni(
     Data.UseExistingEntry = TRUE;
     Data.i = 1;
     Data.ArcPath = ArcPath;
-    RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS");
-    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS\"");
+    RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs");
+    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs\"");
 
     //
     // FIXME: We temporarily use EnumerateBootStoreEntries, until
     // both QueryBootStoreEntry and ModifyBootStoreEntry get implemented.
     //
-    Status = EnumerateBootStoreEntries(BootStoreHandle, EnumerateReactOSEntries, &Data);
+    Status = EnumerateBootStoreEntries(BootStoreHandle, EnumerateWindivsEntries, &Data);
 
-    /* Create a new "ReactOS" entry if there is none already existing that suits us */
+    /* Create a new "Windivs" entry if there is none already existing that suits us */
     if (!Data.UseExistingEntry)
     {
-        // RtlStringCchPrintfW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS_%lu", Data.i);
-        // RtlStringCchPrintfW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS %lu\"", Data.i);
+        // RtlStringCchPrintfW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs_%lu", Data.i);
+        // RtlStringCchPrintfW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs %lu\"", Data.i);
 
         BootEntry->Version = FreeLdr;
         BootEntry->BootFilePath = NULL;
@@ -406,14 +406,14 @@ UpdateBootIni(
     Data.UseExistingEntry = TRUE;
     // Data.i = 1;
     Data.ArcPath = EntryName;
-    // RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS");
-    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS\"");
+    // RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs");
+    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs\"");
 
     //
     // FIXME: We temporarily use EnumerateBootStoreEntries, until
     // both QueryBootStoreEntry and ModifyBootStoreEntry get implemented.
     //
-    Status = EnumerateBootStoreEntries(BootStoreHandle, EnumerateReactOSEntries, &Data);
+    Status = EnumerateBootStoreEntries(BootStoreHandle, EnumerateWindivsEntries, &Data);
 
     /* If either the key was not found, or contains something else, add a new one */
     if (!Data.UseExistingEntry /* ||
@@ -868,10 +868,10 @@ InstallFatBootcodeToPartition(
         {
             /* Create new 'freeldr.ini' */
             DPRINT1("Create new 'freeldr.ini'\n");
-            Status = CreateFreeLoaderIniForReactOS(SystemRootPath->Buffer, DestinationArcPath->Buffer);
+            Status = CreateFreeLoaderIniForWindivs(SystemRootPath->Buffer, DestinationArcPath->Buffer);
             if (!NT_SUCCESS(Status))
             {
-                DPRINT1("CreateFreeLoaderIniForReactOS() failed (Status %lx)\n", Status);
+                DPRINT1("CreateFreeLoaderIniForWindivs() failed (Status %lx)\n", Status);
                 return Status;
             }
 
@@ -916,7 +916,7 @@ InstallFatBootcodeToPartition(
         DPRINT1("Update 'boot.ini'\n");
         Status = UpdateBootIni(SystemRootPath->Buffer,
                                L"C:\\bootsect.ros",
-                               L"\"ReactOS\"");
+                               L"\"Windivs\"");
         if (!NT_SUCCESS(Status))
         {
             DPRINT1("UpdateBootIni() failed (Status %lx)\n", Status);
@@ -1059,13 +1059,13 @@ InstallFatBootcodeToPartition(
 
             if (IsThereAValidBootSector(SystemRootPath->Buffer))
             {
-                Status = CreateFreeLoaderIniForReactOSAndBootSector(
+                Status = CreateFreeLoaderIniForWindivsAndBootSector(
                              SystemRootPath->Buffer, DestinationArcPath->Buffer,
                              Section, Description,
                              BootDrive, BootPartition, BootSector);
                 if (!NT_SUCCESS(Status))
                 {
-                    DPRINT1("CreateFreeLoaderIniForReactOSAndBootSector() failed (Status %lx)\n", Status);
+                    DPRINT1("CreateFreeLoaderIniForWindivsAndBootSector() failed (Status %lx)\n", Status);
                     return Status;
                 }
 
@@ -1082,10 +1082,10 @@ InstallFatBootcodeToPartition(
             }
             else
             {
-                Status = CreateFreeLoaderIniForReactOS(SystemRootPath->Buffer, DestinationArcPath->Buffer);
+                Status = CreateFreeLoaderIniForWindivs(SystemRootPath->Buffer, DestinationArcPath->Buffer);
                 if (!NT_SUCCESS(Status))
                 {
-                    DPRINT1("CreateFreeLoaderIniForReactOS() failed (Status %lx)\n", Status);
+                    DPRINT1("CreateFreeLoaderIniForWindivs() failed (Status %lx)\n", Status);
                     return Status;
                 }
             }
@@ -1180,13 +1180,13 @@ InstallBtrfsBootcodeToPartition(
         {
             PCWSTR BootSector = L"BOOTSECT.OLD";
 
-            Status = CreateFreeLoaderIniForReactOSAndBootSector(
+            Status = CreateFreeLoaderIniForWindivsAndBootSector(
                          SystemRootPath->Buffer, DestinationArcPath->Buffer,
                          L"Linux", L"\"Linux\"",
                          L"hd0", L"1", BootSector);
             if (!NT_SUCCESS(Status))
             {
-                DPRINT1("CreateFreeLoaderIniForReactOSAndBootSector() failed (Status %lx)\n", Status);
+                DPRINT1("CreateFreeLoaderIniForWindivsAndBootSector() failed (Status %lx)\n", Status);
                 return Status;
             }
 
@@ -1203,10 +1203,10 @@ InstallBtrfsBootcodeToPartition(
         }
         else
         {
-            Status = CreateFreeLoaderIniForReactOS(SystemRootPath->Buffer, DestinationArcPath->Buffer);
+            Status = CreateFreeLoaderIniForWindivs(SystemRootPath->Buffer, DestinationArcPath->Buffer);
             if (!NT_SUCCESS(Status))
             {
-                DPRINT1("CreateFreeLoaderIniForReactOS() failed (Status %lx)\n", Status);
+                DPRINT1("CreateFreeLoaderIniForWindivs() failed (Status %lx)\n", Status);
                 return Status;
             }
         }
@@ -1281,13 +1281,13 @@ InstallNtfsBootcodeToPartition(
     {
         PCWSTR BootSector = L"BOOTSECT.OLD";
 
-        Status = CreateFreeLoaderIniForReactOSAndBootSector(
+        Status = CreateFreeLoaderIniForWindivsAndBootSector(
                      SystemRootPath->Buffer, DestinationArcPath->Buffer,
                      L"Linux", L"\"Linux\"",
                      L"hd0", L"1", BootSector);
         if (!NT_SUCCESS(Status))
         {
-            DPRINT1("CreateFreeLoaderIniForReactOSAndBootSector() failed (Status %lx)\n", Status);
+            DPRINT1("CreateFreeLoaderIniForWindivsAndBootSector() failed (Status %lx)\n", Status);
             return Status;
         }
 
@@ -1304,10 +1304,10 @@ InstallNtfsBootcodeToPartition(
     }
     else
     {
-        Status = CreateFreeLoaderIniForReactOS(SystemRootPath->Buffer, DestinationArcPath->Buffer);
+        Status = CreateFreeLoaderIniForWindivs(SystemRootPath->Buffer, DestinationArcPath->Buffer);
         if (!NT_SUCCESS(Status))
         {
-            DPRINT1("CreateFreeLoaderIniForReactOS() failed (Status %lx)\n", Status);
+            DPRINT1("CreateFreeLoaderIniForWindivs() failed (Status %lx)\n", Status);
             return Status;
         }
     }
@@ -1422,10 +1422,10 @@ InstallFatBootcodeToFloppy(
 
     /* Create new 'freeldr.ini' */
     DPRINT("Create new 'freeldr.ini'\n");
-    Status = CreateFreeLoaderIniForReactOS(FloppyDevice, DestinationArcPath->Buffer);
+    Status = CreateFreeLoaderIniForWindivs(FloppyDevice, DestinationArcPath->Buffer);
     if (!NT_SUCCESS(Status))
     {
-        DPRINT1("CreateFreeLoaderIniForReactOS() failed (Status %lx)\n", Status);
+        DPRINT1("CreateFreeLoaderIniForWindivs() failed (Status %lx)\n", Status);
         return Status;
     }
 

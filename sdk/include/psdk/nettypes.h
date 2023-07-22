@@ -1,7 +1,7 @@
 /*
  * nettypes.h
  *
- * This file is part of the ReactOS PSDK package.
+ * This file is part of the Windivs PSDK package.
  *
  * Contributors:
  *   Created by Magnus Olsen.

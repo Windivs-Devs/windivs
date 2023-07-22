@@ -4,7 +4,7 @@
 
 [Version]
 Signature = "$Windows NT$"
-;Signature = "$ReactOS$"
+;Signature = "$Windivs$"
 ClassGUID={00000000-0000-0000-0000-000000000000}
 
 ; These .INFs install the device classes

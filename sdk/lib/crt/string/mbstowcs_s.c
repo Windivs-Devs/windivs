@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS CRT
+ * PROJECT:           Windivs CRT
  * PURPOSE:           Implementation of mbstowcs_s
  * FILE:              lib/sdk/crt/string/mbstowcs_s.c
  * PROGRAMMER:        Timo Kreuzer

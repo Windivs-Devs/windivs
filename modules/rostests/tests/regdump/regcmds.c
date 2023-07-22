@@ -1,5 +1,5 @@
 /*
- *  ReactOS regedit
+ *  Windivs regedit
  *
  *  regcmds.c
  *

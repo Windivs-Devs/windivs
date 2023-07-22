@@ -1,6 +1,6 @@
 /*
- *  ReactOS Win32 Applications
- *  Copyright (C) 2007 ReactOS Team
+ *  Windivs Win32 Applications
+ *  Copyright (C) 2007 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by

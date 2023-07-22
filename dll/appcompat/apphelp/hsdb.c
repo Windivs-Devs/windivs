@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Application compatibility module
+ * PROJECT:     Windivs Application compatibility module
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Shim matching / data (un)packing
  * COPYRIGHT:   Copyright 2011 André Hentschel
@@ -25,16 +25,16 @@ typedef struct _ShimData
     DWORD dwMagic;
     SDBQUERYRESULT Query;
     WCHAR szLayer[MAX_LAYER_LENGTH];
-    DWORD dwRosProcessCompatVersion;  // ReactOS specific
+    DWORD dwRosProcessCompatVersion;  // Windivs specific
 } ShimData;
 
 #define SHIMDATA_MAGIC  0xAC0DEDAB
 #define REACTOS_COMPATVERSION_IGNOREMANIFEST 0xffffffff
 
 C_ASSERT(SHIMDATA_MAGIC == REACTOS_SHIMDATA_MAGIC);
-C_ASSERT(sizeof(ShimData) == sizeof(ReactOS_ShimData));
-C_ASSERT(offsetof(ShimData, dwMagic) == offsetof(ReactOS_ShimData, dwMagic));
-C_ASSERT(offsetof(ShimData, dwRosProcessCompatVersion) == offsetof(ReactOS_ShimData, dwRosProcessCompatVersion));
+C_ASSERT(sizeof(ShimData) == sizeof(Windivs_ShimData));
+C_ASSERT(offsetof(ShimData, dwMagic) == offsetof(Windivs_ShimData, dwMagic));
+C_ASSERT(offsetof(ShimData, dwRosProcessCompatVersion) == offsetof(Windivs_ShimData, dwRosProcessCompatVersion));
 
 
 static BOOL WINAPI SdbpFileExists(LPCWSTR path)

@@ -1,6 +1,6 @@
 /*
- *  ReactOS applications
- *  Copyright (C) 2004-2008 ReactOS Team
+ *  Windivs applications
+ *  Copyright (C) 2004-2008 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS GUI first stage setup application
+ * PROJECT:     Windivs GUI first stage setup application
  * FILE:        base/setup/reactos/drivepage.c
  * PROGRAMMERS: Matthias Kupfer
  *              Dmitry Chapyshev (dmitry@reactos.org)

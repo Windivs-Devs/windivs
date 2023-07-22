@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * PURPOSE:         Security manager
  * FILE:            lib/rtl/acl.c
  * PROGRAMER:       David Welch <welch@cwcom.net>
@@ -931,12 +931,12 @@ RtlValidAcl(IN PACL Acl)
             }
             else if (Ace->AceType == ACCESS_ALLOWED_COMPOUND_ACE_TYPE)
             {
-                DPRINT1("Unsupported ACE in ReactOS, assuming valid\n");
+                DPRINT1("Unsupported ACE in Windivs, assuming valid\n");
             }
             else if ((Ace->AceType >= ACCESS_MIN_MS_OBJECT_ACE_TYPE) &&
                      (Ace->AceType <= ACCESS_MAX_MS_OBJECT_ACE_TYPE))
             {
-                DPRINT1("Unsupported ACE in ReactOS, assuming valid\n");
+                DPRINT1("Unsupported ACE in Windivs, assuming valid\n");
             }
             else
             {

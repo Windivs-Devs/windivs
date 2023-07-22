@@ -1,5 +1,5 @@
 /*
- * ReactOS Calc (Utility functions for GMP/MPFR engine)
+ * Windivs Calc (Utility functions for GMP/MPFR engine)
  *
  * Copyright 2007-2017, Carlo Bramini
  *

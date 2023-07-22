@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            hal/halx86/generic/drive.c
  * PURPOSE:         I/O HAL Routines for Disk Access

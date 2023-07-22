@@ -1,7 +1,7 @@
 /*
  * Unit test suite for StringTable functions
  *
- * Copyright 2005 Steven Edwards for ReactOS
+ * Copyright 2005 Steven Edwards for Windivs
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -17,7 +17,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
-/* 
+/*
  * TODO:
  * Add test for StringTableStringFromIdEx
  */
@@ -87,16 +87,16 @@ static void test_StringTableAddString(void)
     ok(hstring!=-1,"Failed to add string to String Table\n");
 
     retval=pStringTableAddString(table,String,0);
-    ok(retval!=-1,"Failed to add String to String Table\n");    
-    ok(hstring==retval,"string handle %x != String handle %x in String Table\n", hstring, retval);        
-    
+    ok(retval!=-1,"Failed to add String to String Table\n");
+    ok(hstring==retval,"string handle %x != String handle %x in String Table\n", hstring, retval);
+
     hfoo=pStringTableAddString(table,foo,0);
-    ok(hfoo!=-1,"Failed to add foo to String Table\n");        
-    ok(hfoo!=hstring,"foo and string share the same ID %x in String Table\n", hfoo);            
-    
-    /* case sensitive */    
+    ok(hfoo!=-1,"Failed to add foo to String Table\n");
+    ok(hfoo!=hstring,"foo and string share the same ID %x in String Table\n", hfoo);
+
+    /* case sensitive */
     hString=pStringTableAddString(table,String,ST_CASE_SENSITIVE_COMPARE);
-    ok(hstring!=hString,"String handle and string share same ID %x in Table\n", hstring);        
+    ok(hstring!=hString,"String handle and string share same ID %x in Table\n", hstring);
 
     pStringTableDestroy(table);
 }
@@ -166,7 +166,7 @@ static void test_StringTableDuplicate(void)
 }
 
 static void test_StringTableLookUpString(void)
-{   
+{
     DWORD retval, retval2, hstring, hString, hfoo;
     HSTRING_TABLE table, table2;
 
@@ -190,29 +190,29 @@ static void test_StringTableLookUpString(void)
     ok(retval!=-1,"Failed find string in String Table 1\n");
     ok(retval==hstring,
         "Lookup for string (%x) does not match previous handle (%x) in String Table 1\n",
-        retval, hstring);    
+        retval, hstring);
 
     retval=pStringTableLookUpString(table2,string,0);
     ok(retval!=-1,"Failed find string in String Table 2\n");
-    
+
     retval=pStringTableLookUpString(table,String,0);
     ok(retval!=-1,"Failed find String in String Table 1\n");
 
     retval=pStringTableLookUpString(table2,String,0);
-    ok(retval!=-1,"Failed find String in String Table 2\n");    
-    
+    ok(retval!=-1,"Failed find String in String Table 2\n");
+
     retval=pStringTableLookUpString(table,foo,0);
-    ok(retval!=-1,"Failed find foo in String Table 1\n");    
+    ok(retval!=-1,"Failed find foo in String Table 1\n");
     ok(retval==hfoo,
         "Lookup for foo (%x) does not match previous handle (%x) in String Table 1\n",
-        retval, hfoo);        
-    
+        retval, hfoo);
+
     retval=pStringTableLookUpString(table2,foo,0);
-    ok(retval!=-1,"Failed find foo in String Table 2\n");    
-    
+    ok(retval!=-1,"Failed find foo in String Table 2\n");
+
     /* case sensitive */
     retval=pStringTableLookUpString(table,string,ST_CASE_SENSITIVE_COMPARE);
-    retval2=pStringTableLookUpString(table,String,ST_CASE_SENSITIVE_COMPARE);    
+    retval2=pStringTableLookUpString(table,String,ST_CASE_SENSITIVE_COMPARE);
     ok(retval!=retval2,"Lookup of string equals String in Table 1\n");
     ok(retval==hString,
         "Lookup for String (%x) does not match previous handle (%x) in String Table 1\n",

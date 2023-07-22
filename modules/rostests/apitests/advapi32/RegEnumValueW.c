@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPLv2+ - See COPYING in the top level directory
  * PURPOSE:         Test for the RegGetvalueW API
  * PROGRAMMER:      Jérôme Gardou <jerome.gardou@reactos.org>
@@ -17,7 +17,7 @@ START_TEST(RegEnumValueW)
     WCHAR NameBuffer[7];
 
     /* Create our Test Key */
-    ErrorCode = RegCreateKeyW( HKEY_CURRENT_USER, L"Software\\ReactOS_apitest", &TestKey );
+    ErrorCode = RegCreateKeyW( HKEY_CURRENT_USER, L"Software\\Windivs_apitest", &TestKey );
     ok_dec(ErrorCode, ERROR_SUCCESS);
 
     /* All NULL is invalid */

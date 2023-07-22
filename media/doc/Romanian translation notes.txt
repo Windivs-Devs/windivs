@@ -4,7 +4,7 @@ The following material is addressed (in Romanian) to Romanian translators.
 
 * Notă introductivă
 
-Resursele în română din ReactOS au suferit în timp o serie de modificări - de la „plombarea” (inițial rudimentară) cu resurse românești a primelor aplicații care au apărut între resursele (deja traduse) moștenite din Wine până la sistematizarea și consecventizarea traducerilor acestor resurse în întreg volumul de surse al sistemului de operare. Prezenta notă explicitează normele adoptate pentru această sistematizare/consecventizare.
+Resursele în română din Windivs au suferit în timp o serie de modificări - de la „plombarea” (inițial rudimentară) cu resurse românești a primelor aplicații care au apărut între resursele (deja traduse) moștenite din Wine până la sistematizarea și consecventizarea traducerilor acestor resurse în întreg volumul de surse al sistemului de operare. Prezenta notă explicitează normele adoptate pentru această sistematizare/consecventizare.
 
 * Convenții adoptate
 
@@ -30,7 +30,7 @@ La acestea se adaugă și câteva norme (deduse) din „greșeli frecvente” ra
 
 * Particularizări locale
 
-În resursele românești din ReactOS există și o serie de particularizări care fie nu se regăsesc în alte traduceri fie din cauza diferențelor de natură ale proiectelor, fie e vorba de termeni încă disputați sau neadoptați în localizările altor proiecte din diverse motive. Multe dintre acestea au fost menționate/discutate în grupul „Diacritice” [4]. Câteva dintre cele mai relevante:
+În resursele românești din Windivs există și o serie de particularizări care fie nu se regăsesc în alte traduceri fie din cauza diferențelor de natură ale proiectelor, fie e vorba de termeni încă disputați sau neadoptați în localizările altor proiecte din diverse motive. Multe dintre acestea au fost menționate/discutate în grupul „Diacritice” [4]. Câteva dintre cele mai relevante:
  15. În glosar sunt preferate:
   - „logică computațională” vs. „software”
   - „configurare”/„particularizare” vs. „Setare”

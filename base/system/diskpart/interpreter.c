@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS DiskPart
+ * PROJECT:         Windivs DiskPart
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/system/diskpart/interpreter.c
  * PURPOSE:         Reads the user input and then invokes the selected

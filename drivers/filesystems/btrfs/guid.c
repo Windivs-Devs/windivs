@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         BtrFS FSD for ReactOS
+ * PROJECT:         BtrFS FSD for Windivs
  * FILE:            drivers/filesystems/btrfs/guid.c
  * PURPOSE:         GUID glue
  * PROGRAMMERS:     Pierre Schweitzer <pierre@reactos.org>

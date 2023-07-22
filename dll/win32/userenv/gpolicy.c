@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2006 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2006 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * FILE:            dll/win32/userenv/gpolicy.c
  * PURPOSE:         Group policy functions
  * PROGRAMMER:      Thomas Weidenmueller <w3seek@reactos.com>

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS HAL
+ * PROJECT:     Windivs HAL
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * FILE:        hal/halx86/apic/apicsmp.c
  * PURPOSE:     SMP specific APIC code
@@ -36,7 +36,7 @@
             local APIC(s) specified in Destination field. Vector specifies
             the startup address.
         APIC_MT_ExtInt - Delivers an external interrupt to the target local
-            APIC specified in Destination field. 
+            APIC specified in Destination field.
 
     \param TriggerMode - The trigger mode of the interrupt. Can be:
         APIC_TGM_Edge - The interrupt is edge triggered.

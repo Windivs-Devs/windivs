@@ -1,5 +1,5 @@
 /*
-    ReactOS Kernel Streaming
+    Windivs Kernel Streaming
     Digital Rights Management
 
     Please see COPYING in the top-level directory for license information.

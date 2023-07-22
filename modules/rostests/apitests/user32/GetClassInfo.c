@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS api tests
+ * PROJECT:     Windivs api tests
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Tests for GetClassInfo
  * COPYRIGHT:   Copyright 2023 Timo Kreuzer <timo.kreuzer@reactos.org>
@@ -49,7 +49,7 @@ VOID Test_Dialog(VOID)
 
     result = GetClassInfoExW(GetModuleHandle(NULL), (LPCWSTR)(ULONG_PTR)WC_DIALOG, &wcex);
     ok_int(result, (ULONG_PTR)WC_DIALOG);
-    
+
     ok_hex(wcex.cbSize, 0xabababab);
     ok_hex(wcex.style, 0x808);
     ok(wcex.lpfnWndProc != NULL, "lpfnWndProc shound't be NULL\n");

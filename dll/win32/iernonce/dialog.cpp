@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS system libraries
+ * PROJECT:     Windivs system libraries
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Classes for displaying progress dialog.
  * COPYRIGHT:   Copyright 2021 He Yang <1160386205@qq.com>
@@ -141,7 +141,7 @@ ProgressDlg::ProcessWindowMessage(
             }
             CloseHandle(hThread);
 
-            lResult = TRUE; // set keyboard focus to the dialog box control. 
+            lResult = TRUE; // set keyboard focus to the dialog box control.
             break;
         }
 

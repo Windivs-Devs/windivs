@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Setup Library
+ * PROJECT:         Windivs Setup Library
  * FILE:            base/setup/lib/setuplib.c
  * PURPOSE:         Setup Library - Main initialization helpers
  * PROGRAMMERS:     Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -73,9 +73,9 @@ CheckUnattendedSetup(
     }
 
     /* Check 'Signature' string */
-    if (_wcsicmp(Value, L"$ReactOS$") != 0)
+    if (_wcsicmp(Value, L"$Windivs$") != 0)
     {
-        DPRINT("Signature not $ReactOS$\n");
+        DPRINT("Signature not $Windivs$\n");
         INF_FreeData(Value);
         goto Quit;
     }
@@ -544,7 +544,7 @@ LoadSetupInf(
         return ERROR_CORRUPT_TXTSETUPSIF;
 
     /* Check 'Signature' string */
-    if (_wcsicmp(Value, L"$ReactOS$") != 0 &&
+    if (_wcsicmp(Value, L"$Windivs$") != 0 &&
         _wcsicmp(Value, L"$Windows NT$") != 0)
     {
         INF_FreeData(Value);
@@ -984,7 +984,7 @@ DoUpdate:
 
         Success = SpInfFindFirstLine(pSetupData->SetupInf, L"HiveInfs.Fresh", NULL, &InfContext);       // Windows-compatible
         if (!Success)
-            Success = SpInfFindFirstLine(pSetupData->SetupInf, L"HiveInfs.Install", NULL, &InfContext); // ReactOS-specific
+            Success = SpInfFindFirstLine(pSetupData->SetupInf, L"HiveInfs.Install", NULL, &InfContext); // Windivs-specific
 
         if (!Success)
         {

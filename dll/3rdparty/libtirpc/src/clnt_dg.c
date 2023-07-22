@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 /*
- * Copyright (c) 1986-1991 by Sun Microsystems Inc. 
+ * Copyright (c) 1986-1991 by Sun Microsystems Inc.
  */
 
 /*
@@ -293,7 +293,7 @@ clnt_dg_create(fd, svcaddr, program, version, sendsz, recvsz)
 	cl->cl_auth = authnone_create();
 	cl->cl_tp = NULL;
 	cl->cl_netid = NULL;
-	
+
 	return (cl);
 err1:
 	//warnx(mem_err_clnt_dg);
@@ -447,7 +447,7 @@ get_reply:
 #ifdef IP_RECVERR
 #error Not supported!
 #endif
-                /* ReactOS: use select instead of poll */
+                /* Windivs: use select instead of poll */
                 FD_ZERO(&infd);
                 FD_SET(cu->cu_fd, &infd);
 

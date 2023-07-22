@@ -1,9 +1,9 @@
 /*
- * PROJECT:     ReactOS GUI first stage setup application
+ * PROJECT:     Windivs GUI first stage setup application
  * LICENSE:     GPL-3.0-or-later (https://spdx.org/licenses/GPL-3.0-or-later)
  * PURPOSE:     Implements a TreeList control: a tree window with columns.
  * COPYRIGHT:   Copyright (C) Anton Zechner (az_software@inode.at) 2007
- *              Copyright (C) Sébastien Kirche (sebastien.kirche@free.fr) 2014
+ *              Copyright (C) Sï¿½bastien Kirche (sebastien.kirche@free.fr) 2014
  *
  * NOTE: Taken from the TreeList code found at https://github.com/sebkirche/treelist
  */
@@ -123,13 +123,13 @@ typedef		TVSORTEX				TV_SORTEX;
 #define 	VK_ICONCLK				0x10001				// Edit with click on icon
 #endif
 #ifndef		VK_EDITCLK
-#define 	VK_EDITCLK				0x10002				// Edit with click on augewähltes Element //visble element ?
+#define 	VK_EDITCLK				0x10002				// Edit with click on augewï¿½hltes Element //visble element ?
 #endif
 #ifdef		UNICODE
 #define		TV_UINICODE				1
-#else		
+#else
 #define		TV_UINICODE				0
-#endif		
+#endif
 
 #define TVC_CLASSNAME "SysTreeList32"
 
@@ -146,7 +146,7 @@ typedef		TVSORTEX				TV_SORTEX;
 #define 	TVC_MARKODD				8					// selected line (odd)
 #define 	TVC_MARKEVEN			9					// selected line (even)
 #define 	TVC_INSERT				10					// insertion point
-#define 	TVC_BOXBG				11					// background of buttons 
+#define 	TVC_BOXBG				11					// background of buttons
 #define 	TVC_COLBK				12					// background of marked column
 #define 	TVC_COLODD				13					// alternate odd color of marked column
 #define 	TVC_COLEVEN				14					// alternate even color of marked column
@@ -174,7 +174,7 @@ typedef		TVSORTEX				TV_SORTEX;
 #define 	TVCF_VWIDTH				LVCF_SUBITEM		// set variable width
 #define 	TVCF_MIN				LVCF_ORDER			// set minimum width
 #define 	TVCF_MARK				0x80000000			// to mark a column
-#define 	TVCF_FIXED				0x40000000			// can the column width can be changed 
+#define 	TVCF_FIXED				0x40000000			// can the column width can be changed
 #define 	TVCF_LASTSIZE			0x44332211			// Breite vor dem Fixieren wieder herstellen
 
 
@@ -217,7 +217,7 @@ typedef		TVSORTEX				TV_SORTEX;
 // constants for HitTest (flags)
 #define 	TVHT_SUBTOCOL(u)		(((unsigned)u)>>24)	// Convert column to column numbers mask
 #define 	TVHT_SUBMASK			0xFF000000			// Maske in der die Spalte gespeichert wird
-#define 	TVHT_ONRIGHTSPACE		0x00800000			// Auf rechtem Rand nach den Exträgen
+#define 	TVHT_ONRIGHTSPACE		0x00800000			// Auf rechtem Rand nach den Extrï¿½gen
 #define 	TVHT_ONSUBLABEL			0x00400000			// Koordinate ist auf dem Text eines Extraeintrages
 #define 	TVHT_ONSUBICON			0x00200000			// Koordinate ist auf einem Extraeintrag
 #define 	TVHT_ONSUBRIGHT			0x00100000			// Koordinate ist auf einem Extraeintrag rechts vom Text
@@ -267,12 +267,12 @@ typedef		TVSORTEX				TV_SORTEX;
 #define 	TVS_EX_STEPOUT			0x00004000			// can leave an edit control with the cursor buttons
 #define 	TVS_EX_BITCHECKBOX		0x00008000			// change only the first bit of the state
 #define 	TVS_EX_ITEMLINES		0x00010000			// draw the item separating lines
-#define 	TVS_EX_ALTERNATECOLOR	0x00020000			// use alternate lines background color 
+#define 	TVS_EX_ALTERNATECOLOR	0x00020000			// use alternate lines background color
 #define 	TVS_EX_SUBSELECT		0x00040000			// allow to select columns
 #define 	TVS_EX_FULLROWMARK		0x00080000			// the row mark fill the entire row
 #define 	TVS_EX_TOOLTIPNOTIFY	0x00100000			// send a TVN_ITEMTOOLTIP notify to query for tooltip
 #define 	TVS_EX_AUTOEXPANDICON	0x00200000			// use automaticaly the next icon for expanded items
-#define 	TVS_EX_NOCHARSELCET		0x00400000			// disable looping selection of items via keyboard 
+#define 	TVS_EX_NOCHARSELCET		0x00400000			// disable looping selection of items via keyboard
 #define 	TVS_EX_NOCOLUMNRESIZE	0x00800000			// user cannot change the columns width
 #define 	TVS_EX_HIDEHEADERS		0x01000000			// hide the header
 #define 	TVS_EX_GRAYEDDISABLE	0x02000000			// gray out the control when disabled
@@ -332,11 +332,11 @@ typedef		TVSORTEX				TV_SORTEX;
 #define 	TVM_SETFOCUSITEM		(TV_FIRST+128-34)
 #define 	TVM_GETCOLUMNORDERARRAY	(TV_FIRST+128-35)
 #define 	TVM_SETCOLUMNORDERARRAY	(TV_FIRST+128-36)
-#ifndef		TVM_GETITEMSTATE					  
-#define 	TVM_GETITEMSTATE		(TV_FIRST+39) 
-#endif											  
-#ifndef		TVM_GETEXTENDEDSTYLE				  
-#define 	TVM_GETEXTENDEDSTYLE	(TV_FIRST+45) 
+#ifndef		TVM_GETITEMSTATE
+#define 	TVM_GETITEMSTATE		(TV_FIRST+39)
+#endif
+#ifndef		TVM_GETEXTENDEDSTYLE
+#define 	TVM_GETEXTENDEDSTYLE	(TV_FIRST+45)
 #endif
 #ifndef		TVM_SETEXTENDEDSTYLE
 #define 	TVM_SETEXTENDEDSTYLE	(TV_FIRST+44)

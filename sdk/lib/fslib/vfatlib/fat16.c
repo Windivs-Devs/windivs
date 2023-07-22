@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS VFAT filesystem library
+ * PROJECT:     Windivs VFAT filesystem library
  * FILE:        fat16.c
  * PURPOSE:     Fat16 support
  * PROGRAMMERS: Casper S. Hornstrup (chorns@users.sourceforge.net)

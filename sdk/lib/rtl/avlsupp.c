@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Runtime Library
+ * PROJECT:         Windivs Runtime Library
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            lib/rtl/avlsupp.c
  * PURPOSE:         AVL Tree Internal Support Routines/Main Algorithms
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES ******************************************************************/

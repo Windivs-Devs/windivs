@@ -1,7 +1,7 @@
 /*
- * PROJECT:     ReactOS SM Helper Library
+ * PROJECT:     Windivs SM Helper Library
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
- * PURPOSE:     ReactOS-specific SM Debug Utility Function:
+ * PURPOSE:     Windivs-specific SM Debug Utility Function:
  *              Querying subsystem information.
  * COPYRIGHT:   Copyright 2005 Emanuele Aliberti <ea@reactos.com>
  *              Copyright 2022 Hermès Bélusca-Maïto <hermes.belusca-maito@reactos.org>

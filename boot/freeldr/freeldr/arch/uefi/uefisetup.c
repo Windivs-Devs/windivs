@@ -40,7 +40,7 @@ MachInit(const char *CmdLine)
     MachVtbl.VideoGetPaletteColor = UefiVideoGetPaletteColor;
     MachVtbl.VideoSync = UefiVideoSync;
     MachVtbl.Beep = UefiPcBeep;
-    MachVtbl.PrepareForReactOS = UefiPrepareForReactOS;
+    MachVtbl.PrepareForWindivs = UefiPrepareForWindivs;
     MachVtbl.GetMemoryMap = UefiMemGetMemoryMap;
     MachVtbl.GetExtendedBIOSData = UefiGetExtendedBIOSData;
     MachVtbl.GetFloppyCount = UefiGetFloppyCount;

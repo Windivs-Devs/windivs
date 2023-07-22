@@ -1,5 +1,5 @@
 /*
-    ReactOS Sound System
+    Windivs Sound System
     Sound Blaster DSP support
     Mixer routines
 

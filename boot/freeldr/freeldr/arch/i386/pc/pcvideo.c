@@ -1158,7 +1158,7 @@ PcVideoSync(VOID)
 }
 
 VOID
-PcVideoPrepareForReactOS(VOID)
+PcVideoPrepareForWindivs(VOID)
 {
     // PcVideoSetMode80x50_80x43();
     PcVideoSetMode80x25();

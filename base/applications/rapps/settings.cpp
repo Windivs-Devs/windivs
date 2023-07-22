@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications Manager
+ * PROJECT:     Windivs Applications Manager
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Functions to load / save settings from reg.
  * COPYRIGHT:   Copyright 2020 He Yang (1160386205@qq.com)
@@ -218,7 +218,7 @@ BOOL
 LoadSettings(PSETTINGS_INFO pSettingsInfo)
 {
     ATL::CRegKey RegKey;
-    if (RegKey.Open(HKEY_CURRENT_USER, L"Software\\ReactOS\\" RAPPS_NAME, KEY_READ) != ERROR_SUCCESS)
+    if (RegKey.Open(HKEY_CURRENT_USER, L"Software\\Windivs\\" RAPPS_NAME, KEY_READ) != ERROR_SUCCESS)
     {
         return FALSE;
     }
@@ -245,7 +245,7 @@ SaveSettings(HWND hwnd, PSETTINGS_INFO pSettingsInfo)
             (wp.showCmd == SW_MAXIMIZE || (wp.showCmd == SW_SHOWMINIMIZED && (wp.flags & WPF_RESTORETOMAXIMIZED)));
     }
 
-    if (RegKey.Create(HKEY_CURRENT_USER, L"Software\\ReactOS\\" RAPPS_NAME, NULL,
+    if (RegKey.Create(HKEY_CURRENT_USER, L"Software\\Windivs\\" RAPPS_NAME, NULL,
                       REG_OPTION_NON_VOLATILE, KEY_WRITE, NULL, NULL) != ERROR_SUCCESS)
     {
         return FALSE;

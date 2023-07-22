@@ -1,5 +1,5 @@
 /*
-* PROJECT:     ReactOS Universal Audio Class Driver
+* PROJECT:     Windivs Universal Audio Class Driver
 * LICENSE:     GPL - See COPYING in the top level directory
 * FILE:        drivers/usb/usbaudio/pool.c
 * PURPOSE:     USB Audio device driver.

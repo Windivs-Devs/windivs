@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Win32k subsystem
+ * PROJECT:     Windivs Win32k subsystem
  * LICENSE:     See COPYING in the top level directory
  * PURPOSE:     Miscellaneous User functions
  * COPYRIGHT:   2008-2020 James Tabor <james.tabor@reactos.org>
@@ -1276,7 +1276,7 @@ IntDefWindowProc(
           return 0;
       }
 
-      /* ReactOS only. */
+      /* Windivs only. */
       case WM_CBT:
       {
          switch (wParam)

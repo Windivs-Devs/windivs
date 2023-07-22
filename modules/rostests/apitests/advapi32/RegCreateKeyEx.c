@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS api tests
+ * PROJECT:     Windivs api tests
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Tests for RegCreateKeyExW.
  * COPYRIGHT:   Copyright 2023 Doug Lyons <douglyons@douglyons.com>
@@ -131,7 +131,7 @@ START_TEST(RegCreateKeyEx)
     ok(pSD != NULL, "LocalAlloc Error %ld\n", GetLastError());
     if (pSD == NULL)
         goto Cleanup;
- 
+
     bRes = InitializeSecurityDescriptor(pSD, SECURITY_DESCRIPTOR_REVISION);
     ok(bRes, "InitializeSecurityDescriptor Error %ld\n", GetLastError());
     if (!bRes)
@@ -214,7 +214,7 @@ Cleanup:
         LocalFree(pACL);
     if (pSD)
         LocalFree(pSD);
-    if (hkSub) 
+    if (hkSub)
         RegCloseKey(hkSub);
 
     // Delete the subkeys created for testing

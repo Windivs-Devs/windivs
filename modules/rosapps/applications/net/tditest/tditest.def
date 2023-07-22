@@ -1,4 +1,4 @@
-; TDI test driver - ReactOS Operating System
+; TDI test driver - Windivs Operating System
 
 LIBRARY TDITEST.SYS
 

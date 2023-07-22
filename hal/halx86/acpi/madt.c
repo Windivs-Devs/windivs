@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Kernel
+ * PROJECT:     Windivs Kernel
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Source File for MADT Table parsing
  * COPYRIGHT:   Copyright 2021 Justin Miller <justinmiller100@gmail.com>
@@ -74,7 +74,7 @@ HalpParseApicTables(
 
 VOID
 HalpPrintApicTables(VOID)
-{ 
+{
     UINT32 i;
 
     DPRINT1("HAL has detected a physical processor count of: %d\n", HalpApicInfoTable.ProcessorCount);

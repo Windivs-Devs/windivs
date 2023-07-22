@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          ReactOS kernel
+ * PROJECT:          Windivs kernel
  * PURPOSE:          Menus
  * FILE:             win32ss/user/ntuser/menu.c
  * PROGRAMER:        Thomas Weidenmueller (w3seek@users.sourceforge.net)
@@ -257,10 +257,10 @@ IntGetMenu(HWND hWnd)
        return UserGetMenuObject(UlongToHandle(Wnd->IDMenu));
 }
 
-PMENU get_win_sys_menu( HWND hwnd )   
+PMENU get_win_sys_menu( HWND hwnd )
 {
    PMENU ret = 0;
-   WND *win = ValidateHwndNoErr( hwnd );        
+   WND *win = ValidateHwndNoErr( hwnd );
    if (win)
    {
       ret = UserGetMenuObject(win->SystemMenu);
@@ -387,7 +387,7 @@ MenuInit(VOID)
       ghMenuFont = NULL;
       return FALSE;
     }
-    
+
     GreSetObjectOwner(ghMenuFont, GDI_OBJ_HMGR_PUBLIC);
     GreSetObjectOwner(ghMenuFontBold, GDI_OBJ_HMGR_PUBLIC);
 
@@ -451,7 +451,7 @@ static UINT  MENU_GetStartOfNextColumn(
 
     pItem = menu->rgItems;
     if (!pItem) return NO_SELECTED_ITEM;
- 
+
     for( ; i < menu->cItems; ++i ) {
 	if (pItem[i].fType & (MF_MENUBREAK | MF_MENUBARBREAK))
 	    return i;
@@ -579,7 +579,7 @@ static UINT FASTCALL MENU_FindSubMenu(PMENU *menu, PMENU SubTarget )
            {
               return i;
            }
-           else 
+           else
            {
               PMENU pSubMenu = item->spSubMenu;
               UINT pos = MENU_FindSubMenu( &pSubMenu, SubTarget );
@@ -1503,7 +1503,7 @@ static ITEM *MENU_FindItemByCoords( MENU *menu, POINT pt, UINT *pos )
     {
         //rect = item->rect;
         rect.left   = item->xItem;
-        rect.top    = item->yItem; 
+        rect.top    = item->yItem;
         rect.right  = item->cxItem; // Do this for now......
         rect.bottom = item->cyItem;
 
@@ -1852,7 +1852,7 @@ static void FASTCALL MENU_CalcItemSize( HDC hdc, PITEM lpitem, PMENU Menu, PWND 
         mis.itemWidth  = 0;
         co_IntSendMessage( UserHMGetHandle(pwndOwner), WM_MEASUREITEM, 0, (LPARAM)&mis );
         /* Tests reveal that Windows ( Win95 thru WinXP) adds twice the average
-         * width of a menufont character to the width of an owner-drawn menu. 
+         * width of a menufont character to the width of an owner-drawn menu.
          */
         Rect.right += mis.itemWidth + 2 * MenuCharSize.cx;
         if (menuBar) {
@@ -1878,7 +1878,7 @@ static void FASTCALL MENU_CalcItemSize( HDC hdc, PITEM lpitem, PMENU Menu, PWND 
     }
 
     lpitem->xItem  = orgX;
-    lpitem->yItem  = orgY; 
+    lpitem->yItem  = orgY;
     lpitem->cxItem = orgX;
     lpitem->cyItem = orgY;
 
@@ -1938,7 +1938,7 @@ static void FASTCALL MENU_CalcItemSize( HDC hdc, PITEM lpitem, PMENU Menu, PWND 
         LONG txtheight, txtwidth;
 
         rc.left   = lpitem->xItem;
-        rc.top    = lpitem->yItem; 
+        rc.top    = lpitem->yItem;
         rc.right  = lpitem->cxItem; // Do this for now......
         rc.bottom = lpitem->cyItem;
 
@@ -1946,7 +1946,7 @@ static void FASTCALL MENU_CalcItemSize( HDC hdc, PITEM lpitem, PMENU Menu, PWND 
             hfontOld = NtGdiSelectFont( hdc, ghMenuFontBold );
         }
         if (menuBar) {
-            txtheight = DrawTextW( hdc, lpitem->Xlpstr, -1, &rc, DT_SINGLELINE|DT_CALCRECT); 
+            txtheight = DrawTextW( hdc, lpitem->Xlpstr, -1, &rc, DT_SINGLELINE|DT_CALCRECT);
 
             lpitem->cxItem  += rc.right - rc.left;
             itemheight = max( max( itemheight, txtheight), UserGetSystemMetrics( SM_CYMENU) - 1);
@@ -2085,7 +2085,7 @@ static void FASTCALL MENU_PopupMenuCalcSize(PMENU Menu, PWND WndOwner)
        Menu->dwArrowsOn = 1;
     }
     else
-    {   
+    {
        Menu->dwArrowsOn = 0;
     }
     UserReleaseDC( 0, hdc, FALSE );
@@ -2214,7 +2214,7 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
     //RECT bmprc;
 
     if (!menuBar) {
-        arrow_bitmap_width  = gpsi->oembmi[OBI_MNARROW].cx; 
+        arrow_bitmap_width  = gpsi->oembmi[OBI_MNARROW].cx;
     }
 
     if (lpitem->fType & MF_SYSMENU)
@@ -2229,7 +2229,7 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
 
     UserSystemParametersInfo (SPI_GETFLATMENU, 0, &flat_menu, 0);
     bkgnd = (menuBar && flat_menu) ? COLOR_MENUBAR : COLOR_MENU;
-  
+
     /* Setup colors */
 
     if (lpitem->fState & MF_HILITE)
@@ -2257,7 +2257,7 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
     //TRACE("rect=%s\n", wine_dbgstr_rect( &lpitem->Rect));
     //rect = lpitem->Rect;
     rect.left   = lpitem->xItem;
-    rect.top    = lpitem->yItem; 
+    rect.top    = lpitem->yItem;
     rect.right  = lpitem->cxItem; // Do this for now......
     rect.bottom = lpitem->cyItem;
 
@@ -2402,8 +2402,8 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
         if( menuBar) {
             if( lpitem->hbmp == HBMMENU_CALLBACK)
                 bmprc.left = 3;
-            else 
-                bmprc.left = lpitem->Xlpstr ? MenuCharSize.cx : 0;          
+            else
+                bmprc.left = lpitem->Xlpstr ? MenuCharSize.cx : 0;
         }
         else if ((Menu->fFlags & MNS_STYLE_MASK) & MNS_NOCHECK)
             bmprc.left = 4;
@@ -2417,7 +2417,7 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
         if( menuBar && !(lpitem->hbmp == HBMMENU_CALLBACK))
             bmprc.top = 0;
         else
-            bmprc.top = (rect.bottom - rect.top - lpitem->cyBmp) / 2; 
+            bmprc.top = (rect.bottom - rect.top - lpitem->cyBmp) / 2;
 
         bmprc.bottom =  bmprc.top + lpitem->cyBmp;
     }
@@ -2436,7 +2436,7 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
          * Custom checkmark bitmaps are monochrome but not always 1bpp.
          */
         if( !((Menu->fFlags & MNS_STYLE_MASK) & MNS_NOCHECK)) {
-            bm = (lpitem->fState & MF_CHECKED) ? lpitem->hbmpChecked : 
+            bm = (lpitem->fState & MF_CHECKED) ? lpitem->hbmpChecked :
                 lpitem->hbmpUnchecked;
             if (bm)  /* we have a custom bitmap */
             {
@@ -2506,13 +2506,13 @@ static void FASTCALL MENU_DrawMenuItem(PWND Wnd, PMENU Menu, PWND WndOwner, HDC 
 
         if ( lpitem->fState & MFS_DEFAULT )
         {
-            hfontOld = NtGdiSelectFont(hdc, ghMenuFontBold);            
+            hfontOld = NtGdiSelectFont(hdc, ghMenuFontBold);
         }
 
         if (menuBar) {
             if( lpitem->hbmp)
               rect.left += lpitem->cxBmp;
-            if( !(lpitem->hbmp == HBMMENU_CALLBACK)) 
+            if( !(lpitem->hbmp == HBMMENU_CALLBACK))
               rect.left += MenuCharSize.cx;
             rect.right -= MenuCharSize.cx;
         }
@@ -2768,7 +2768,7 @@ UINT MENU_DrawMenuBar( HDC hDC, LPRECT lprect, PWND pWnd, BOOL suppress_draw )
        if (hfontOld) NtGdiSelectFont( hDC, hfontOld);
 
        return lppop->cyMenu;
-    }   
+    }
     else
     {
        return IntDrawMenuBarTemp(pWnd, hDC, lprect, lppop, NULL);
@@ -2777,7 +2777,7 @@ UINT MENU_DrawMenuBar( HDC hDC, LPRECT lprect, PWND pWnd, BOOL suppress_draw )
 
 /***********************************************************************
  *           MENU_InitPopup
- *   
+ *
  * Popup menu initialization before WM_ENTERMENULOOP.
  */
 static BOOL MENU_InitPopup( PWND pWndOwner, PMENU menu, UINT flags )
@@ -3190,7 +3190,7 @@ static void FASTCALL MENU_SelectItem(PWND pwndOwner, PMENU menu, UINT wIndex,
         if (sendMenuSelect)
         {
            ITEM *ip = &menu->rgItems[menu->iItem];
-           WPARAM wParam = MAKEWPARAM( ip->spSubMenu ? wIndex : ip->wID, 
+           WPARAM wParam = MAKEWPARAM( ip->spSubMenu ? wIndex : ip->wID,
                                        ip->fType | ip->fState |
                                       (ip->spSubMenu ? MF_POPUP : 0) |
                                       (menu->fFlags & MNF_SYSMENU ? MF_SYSMENU : 0 ) );
@@ -3198,9 +3198,9 @@ static void FASTCALL MENU_SelectItem(PWND pwndOwner, PMENU menu, UINT wIndex,
            co_IntSendMessage(UserHMGetHandle(pwndOwner), WM_MENUSELECT, wParam, (LPARAM) UserHMGetHandle(menu));
         }
     }
-    else if (sendMenuSelect) 
+    else if (sendMenuSelect)
     {
-        if (topmenu) 
+        if (topmenu)
         {
             int pos;
             pos = MENU_FindSubMenu(&topmenu, menu);
@@ -3324,7 +3324,7 @@ static PMENU FASTCALL MENU_ShowSubPopup(PWND WndOwner, PMENU Menu, BOOL SelectFi
   if (!Menu) return Menu;
 
   if (Menu->iItem == NO_SELECTED_ITEM) return Menu;
-  
+
   Item = &Menu->rgItems[Menu->iItem];
   if (!(Item->spSubMenu) || (Item->fState & (MF_GRAYED | MF_DISABLED)))
       return Menu;
@@ -3386,9 +3386,9 @@ static PMENU FASTCALL MENU_ShowSubPopup(PWND WndOwner, PMENU Menu, BOOL SelectFi
 
   if (!Item->yItem && !Item->xItem && !Item->cyItem && !Item->cxItem)
   {
-      Item->xItem  = Rect.left; 
-      Item->yItem  = Rect.top;  
-      Item->cxItem = Rect.right; // Do this for now...... 
+      Item->xItem  = Rect.left;
+      Item->yItem  = Rect.top;
+      Item->cxItem = Rect.right; // Do this for now......
       Item->cyItem = Rect.bottom;
   }
   Item->fState |= MF_MOUSESELECT;
@@ -3600,7 +3600,7 @@ static INT FASTCALL MENU_ButtonUp(MTRACKER *pmt, PMENU PtMenu, UINT Flags)
   {
       UINT Id = 0;
       ITEM *item;
-      
+
       if ( IS_SYSTEM_MENU(PtMenu) )
       {
           item = PtMenu->rgItems;
@@ -3689,7 +3689,7 @@ static BOOL FASTCALL MENU_MouseMove(MTRACKER *pmt, PMENU PtMenu, UINT Flags)
       if (IS_SYSTEM_MENU(PtMenu))
       {
           Index = 0;
-          //// ReactOS only HACK: CORE-2338
+          //// Windivs only HACK: CORE-2338
           // Windows tracks mouse moves to the system menu but does not open it.
           // Only keyboard tracking can do that.
           //
@@ -3800,13 +3800,13 @@ static LRESULT FASTCALL MENU_DoNextMenu(MTRACKER* pmt, UINT Vk, UINT wFlags)
               if (Vk == VK_LEFT)
               {
                   Id = MenuTmp->cItems - 1;
-   
+
                   /* Skip backwards over any system predefined icons,
                      eg. MDI close, restore etc icons                 */
                    while ((Id > 0) &&
                           (MenuTmp->rgItems[Id].wID >= SC_SIZE &&
                            MenuTmp->rgItems[Id].wID <= SC_RESTORE)) Id--;
- 
+
               }
               hNewMenu = UserHMGetHandle(MenuTmp);
           }
@@ -4118,11 +4118,11 @@ static INT FASTCALL MENU_TrackMenu(PMENU pmenu, UINT wFlags, INT x, INT y,
             }
             else
             {
-                /* ReactOS Checks */
+                /* Windivs Checks */
                 if (!VerifyWnd(mt.OwnerWnd)                            ||
                     !ValidateHwndNoErr(mt.CurrentMenu->hWnd)           ||
                      //pti->MessageQueue->QF_flags & QF_ACTIVATIONCHANGE || // See CORE-17338
-                     capture_win != IntGetCapture() ) // Should not happen, but this is ReactOS...
+                     capture_win != IntGetCapture() ) // Should not happen, but this is Windivs...
                 {
                    ErrorExit = TRUE; // Do not wait on dead windows, now win test_capture_4 works.
                    break;
@@ -5121,7 +5121,7 @@ UserMenuItemInfo(
       SetLastNtError(Status);
       return( FALSE);
    }
-   if ( Size != sizeof(MENUITEMINFOW) && 
+   if ( Size != sizeof(MENUITEMINFOW) &&
         Size != FIELD_OFFSET(MENUITEMINFOW, hbmpItem) &&
         Size != sizeof(ROSMENUITEMINFO) )
    {
@@ -6654,7 +6654,7 @@ NtUserTrackPopupMenuEx(
          tpm = *lptpm;
       }
       _SEH2_EXCEPT(EXCEPTION_EXECUTE_HANDLER)
-      { 
+      {
          _SEH2_YIELD(goto Exit);
       }
       _SEH2_END

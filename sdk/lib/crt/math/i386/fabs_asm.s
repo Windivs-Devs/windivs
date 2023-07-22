@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS kernel
+ * PROJECT:           Windivs kernel
  * PURPOSE:           Run-Time Library
  * FILE:              lib/sdk/crt/math/i386/fabs_asm.s
  * PROGRAMER:         Alex Ionescu (alex@relsoft.net)

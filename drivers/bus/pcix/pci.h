@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS PCI Bus Driver
+ * PROJECT:         Windivs PCI Bus Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            drivers/bus/pci/pci.h
  * PURPOSE:         Main Header File
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 #ifndef _PCIX_PCH_

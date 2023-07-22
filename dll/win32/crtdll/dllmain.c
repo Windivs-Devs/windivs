@@ -1,7 +1,7 @@
 /*
  * dllmain.c
  *
- * ReactOS CRTDLL.DLL Compatibility Library
+ * Windivs CRTDLL.DLL Compatibility Library
  *
  *  THIS SOFTWARE IS NOT COPYRIGHTED
  *

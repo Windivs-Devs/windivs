@@ -1,5 +1,5 @@
 /*
-    ReactOS Sound System
+    Windivs Sound System
     NT4 audio device and registry key names
 
     Author:

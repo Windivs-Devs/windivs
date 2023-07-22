@@ -1,5 +1,5 @@
 /*
- *  ReactOS
+ *  Windivs
  *
  *  regdump.h
  *

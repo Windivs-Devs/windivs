@@ -1,6 +1,6 @@
 /*
- * ReactOS Device Manager Applet
- * Copyright (C) 2004 - 2005 ReactOS Team
+ * Windivs Device Manager Applet
+ * Copyright (C) 2004 - 2005 Windivs Team
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,9 +18,9 @@
  */
 /*
  *
- * PROJECT:         ReactOS devmgr.dll
+ * PROJECT:         Windivs devmgr.dll
  * FILE:            lib/devmgr/advprop.c
- * PURPOSE:         ReactOS Device Manager
+ * PURPOSE:         Windivs Device Manager
  * PROGRAMMER:      Thomas Weidenmueller <w3seek@reactos.com>
  *                  Ged Murphy <gedmurphy@reactos.org>
  * UPDATE HISTORY:

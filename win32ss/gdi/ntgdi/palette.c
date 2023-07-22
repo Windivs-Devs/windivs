@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS Win32k subsystem
+ * PROJECT:           Windivs Win32k subsystem
  * PURPOSE:           GDI Palette Functions
  * FILE:              win32ss/gdi/ntgdi/palette.c
  * PROGRAMERS:        Jason Filby
@@ -769,7 +769,7 @@ IntGdiRealizePalette(HDC hDC)
 
     ASSERT(ppalDC->flFlags & PAL_INDEXED);
 
-    DPRINT1("RealizePalette unimplemented for %s\n", 
+    DPRINT1("RealizePalette unimplemented for %s\n",
             (pdc->dctype == DCTYPE_MEMORY ? "memory managed DCs" : "device DCs"));
 
 cleanup:

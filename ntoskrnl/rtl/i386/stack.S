@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * FILE:            ntoskrnl/rtl/i386/stack.S
  * PURPOSE:         Stack Support for RTL
  * PROGRAMMERS:     Alex Ionescu (alex.ionescu@reactos.org)

@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/po/poshtdwn.c
  * PURPOSE:         Power Manager Shutdown Code
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES ******************************************************************/
@@ -226,7 +226,7 @@ PopShutdownSystem(IN POWER_ACTION SystemAction)
             /* Call shutdown handler */
             //PopInvokeSystemStateHandler(PowerStateShutdownOff, NULL);
 
-            /* ReactOS Hack */
+            /* Windivs Hack */
             PopSetSystemPowerState(PowerSystemShutdown, SystemAction);
             PopShutdownHandler();
 

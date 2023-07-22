@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS VGA Font Editor
+ * PROJECT:     Windivs VGA Font Editor
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Romanian resource file
  * COPYRIGHT:   Copyright 2008 Colin Finck (colin@reactos.org)
@@ -14,7 +14,7 @@ CAPTION "About"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON           IDI_MAIN,                          IDC_STATIC, 10, 10, 20, 20
-    LTEXT          "Editor de font VGA ReactOS",      IDC_STATIC, 37, 10, 93, 10
+    LTEXT          "Editor de font VGA Windivs",      IDC_STATIC, 37, 10, 93, 10
     LTEXT          "Drept de autor 2008 Colin Finck", IDC_STATIC, 37, 20, 93, 10
     DEFPUSHBUTTON  "Î&nchide",                        IDCANCEL,   40, 44, 55, 15
 END
@@ -81,7 +81,7 @@ BEGIN
     IDS_UNSUPPORTEDPSF, "Format incompatibil de font PSF! Posibilitățile editorului se limitează la fonturile 8x8 fără moduri speciale."
     IDS_DOCNAME, "Font %1!u!"
     IDS_SAVEPROMPT, "Modificările în fișierul „%1” încă nu au fost păstrate.\n\nDoriți păstrarea lor?"
-    IDS_APPTITLE, "Editor de font VGA ReactOS"
+    IDS_APPTITLE, "Editor de font VGA Windivs"
     IDS_CLOSEEDIT, "Închideți mai întâi toate ferestrele de editare!"
 
     IDS_TOOLTIP_NEW, "Nou"

@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Boot Loader
+ * PROJECT:         Windivs Boot Loader
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/freeldr/freeldr/arch/arm/winldr.c
  * PURPOSE:         ARM Kernel Loader
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES ***************************************************************/

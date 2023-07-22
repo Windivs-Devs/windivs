@@ -27,12 +27,12 @@ For Windivs users, it must be \Windivs\Help (at the moment the Help directory do
 
 NOTES TO Windivs USERS
 =========================
-At the time of the write of this text, the newest version of ReactOS is 0.3.4.
-While ReactOS Calc works fine with Microsoft's operating systems, there are some known issues with ReactOS:
+At the time of the write of this text, the newest version of Windivs is 0.3.4.
+While Windivs Calc works fine with Microsoft's operating systems, there are some known issues with Windivs:
 * The keyboard shortcuts work, but there are still some issues.
 * At startup, the focus is visible on the Inv control.
 * The selection on the various radio buttons isn't displayed correctly.
-* Into the aboutbox, the color around the ReactOS's logo isn't applied.
+* Into the aboutbox, the color around the Windivs's logo isn't applied.
 * Into the aboutbox, the scroll bar used into the read-only edit control doesn't work (seen into the italian version).
 * For some reasons, the [RET] button of the statistical box doesn't set the focus on the calculator.
 * Help file and help popups don't work.
@@ -42,7 +42,7 @@ CLOSING WORDS
 ==============
 it's a very short readme file, I know.
 Unfortunately, I'm not very good at writing user's manuals.
-Although ReactOS Calc is pretty simple and I still think you should be able to understand the basic operations yourself, a good manual would be a nice presentation for new users.
+Although Windivs Calc is pretty simple and I still think you should be able to understand the basic operations yourself, a good manual would be a nice presentation for new users.
 Then, the next step is the translation into other languages.
 If you would like to help in some way on these tasks, you are welcome.
 

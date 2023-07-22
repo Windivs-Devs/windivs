@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Service Host
+ * PROJECT:     Windivs Service Host
  * LICENSE:     BSD - See COPYING.ARM in the top level directory
  * PURPOSE:     Global Header for Service Host
- * PROGRAMMERS: ReactOS Portable Systems Group
+ * PROGRAMMERS: Windivs Portable Systems Group
  *
  * REFERENCES:
  * https://www.geoffchappell.com/studies/windows/win32/services/svchost/process/globaldata.htm

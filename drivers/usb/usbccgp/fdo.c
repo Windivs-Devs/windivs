@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Universal Serial Bus Bulk Enhanced Host Controller Interface
+ * PROJECT:     Windivs Universal Serial Bus Bulk Enhanced Host Controller Interface
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        drivers/usb/usbccgp/fdo.c
  * PURPOSE:     USB  device driver.

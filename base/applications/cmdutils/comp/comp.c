@@ -1,6 +1,6 @@
 /*
- *  ReactOS Win32 Applications
- *  Copyright (C) 2005 ReactOS Team
+ *  Windivs Win32 Applications
+ *  Copyright (C) 2005 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 /*
- * PROJECT:     ReactOS Comp utility
+ * PROJECT:     Windivs Comp utility
  * COPYRIGHT:   See COPYING in the top level directory
  * FILE:        base/applications/cmdutils/comp/comp.c
  * PURPOSE:     Compares the contents of two files

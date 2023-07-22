@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS NDIS library
+ * PROJECT:     Windivs NDIS library
  * FILE:        ndis/miniport.h
  * PURPOSE:     Definitions for routines used by NDIS miniport drivers
  */

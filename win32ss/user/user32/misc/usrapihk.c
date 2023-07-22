@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/misc/usrapihk.c
  * PURPOSE:         User32.dll User32 Api Hook interface and support functions
  * PROGRAMMER:
@@ -18,7 +18,7 @@ WINE_DEFAULT_DEBUG_CHANNEL(user32);
 
 BOOL WINAPI RealAdjustWindowRectEx(LPRECT,DWORD,BOOL,DWORD);
 LRESULT WINAPI RealDefWindowProcA(HWND,UINT,WPARAM,LPARAM);
-LRESULT WINAPI RealDefWindowProcW(HWND,UINT,WPARAM,LPARAM); 
+LRESULT WINAPI RealDefWindowProcW(HWND,UINT,WPARAM,LPARAM);
 BOOL WINAPI RealDrawFrameControl(HDC,LPRECT,UINT,UINT);
 BOOL WINAPI RealGetScrollInfo(HWND,INT,LPSCROLLINFO);
 int WINAPI RealGetSystemMetrics(int);
@@ -164,7 +164,7 @@ FASTCALL
 EndUserApiHook(VOID)
 {
   HMODULE hModule;
-  USERAPIHOOKPROC pfn;  
+  USERAPIHOOKPROC pfn;
   BOOL Ret = FALSE;
 
   if ( !InterlockedDecrement(&gcCallUserApiHook) )

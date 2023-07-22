@@ -32,10 +32,10 @@ Pc98HwIdle(VOID)
 }
 
 VOID
-Pc98PrepareForReactOS(VOID)
+Pc98PrepareForWindivs(VOID)
 {
-    Pc98DiskPrepareForReactOS();
-    Pc98VideoPrepareForReactOS();
+    Pc98DiskPrepareForWindivs();
+    Pc98VideoPrepareForWindivs();
     DiskStopFloppyMotor();
     DebugDisableScreenPort();
 }
@@ -147,7 +147,7 @@ MachInit(const char *CmdLine)
     MachVtbl.VideoGetPaletteColor = Pc98VideoGetPaletteColor;
     MachVtbl.VideoSync = Pc98VideoSync;
     MachVtbl.Beep = Pc98Beep;
-    MachVtbl.PrepareForReactOS = Pc98PrepareForReactOS;
+    MachVtbl.PrepareForWindivs = Pc98PrepareForWindivs;
     MachVtbl.GetMemoryMap = Pc98MemGetMemoryMap;
     MachVtbl.GetExtendedBIOSData = Pc98GetExtendedBIOSData;
     MachVtbl.GetFloppyCount = Pc98GetFloppyCount;

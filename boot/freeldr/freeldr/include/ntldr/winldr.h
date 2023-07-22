@@ -39,7 +39,7 @@ typedef struct _ARC_DISK_SIGNATURE_EX
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-// ReactOS Loading Functions
+// Windivs Loading Functions
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -50,7 +50,7 @@ LoadAndBootWindows(
     IN PCHAR Envp[]);
 
 ARC_STATUS
-LoadReactOSSetup(
+LoadWindivsSetup(
     IN ULONG Argc,
     IN PCHAR Argv[],
     IN PCHAR Envp[]);

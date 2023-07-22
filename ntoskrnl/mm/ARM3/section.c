@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/section.c
  * PURPOSE:         ARM Memory Manager Section Support
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -978,7 +978,7 @@ _WARN("MiSessionCommitPageTables halfplemented for amd64")
             /* We don't, so the PDE shouldn't be ready yet */
             ASSERT(StartPde->u.Hard.Valid == 0);
 
-            /* ReactOS check to avoid MiEnsureAvailablePageOrWait */
+            /* Windivs check to avoid MiEnsureAvailablePageOrWait */
             ASSERT(MmAvailablePages >= 32);
 
             /* Acquire the PFN lock and grab a zero page */
@@ -1381,7 +1381,7 @@ MiMapViewOfDataSection(IN PCONTROL_AREA ControlArea,
     ViewSizeInPages = BYTES_TO_PAGES(*ViewSize);
 
     /* A VAD can now be allocated. Do so and zero it out */
-    /* FIXME: we are allocating a LONG VAD for ReactOS compatibility only */
+    /* FIXME: we are allocating a LONG VAD for Windivs compatibility only */
     ASSERT((AllocationType & MEM_RESERVE) == 0); /* ARM3 does not support this */
     Vad = ExAllocatePoolWithTag(NonPagedPool, sizeof(MMVAD_LONG), 'ldaV');
     if (!Vad)
@@ -1518,7 +1518,7 @@ VOID
 NTAPI
 MiSubsectionConsistent(IN PSUBSECTION Subsection)
 {
-    /* ReactOS only supports systems with 4K pages and 4K sectors */
+    /* Windivs only supports systems with 4K pages and 4K sectors */
     ASSERT(Subsection->u.SubsectionFlags.SectorEndOffset == 0);
 
     /* Therefore, then number of PTEs should be equal to the number of sectors */
@@ -1740,7 +1740,7 @@ MmGetFileObjectForSection(IN PVOID SectionObject)
     ASSERT(KeGetCurrentIrql() == PASSIVE_LEVEL);
     ASSERT(SectionObject != NULL);
 
-    /* Check if it's an ARM3, or ReactOS section */
+    /* Check if it's an ARM3, or Windivs section */
     if (MiIsRosSectionObject(SectionObject) == FALSE)
     {
         /* Return the file pointer stored in the control area */
@@ -2568,7 +2568,7 @@ MmCreateArm3Section(OUT PVOID *SectionObject,
                 return Status;
             }
 #else
-            /* ReactOS doesn't support this API yet, so do nothing */
+            /* Windivs doesn't support this API yet, so do nothing */
             Status = STATUS_SUCCESS;
 #endif
             /* Update the top-level IRP so that drivers know what's happening */

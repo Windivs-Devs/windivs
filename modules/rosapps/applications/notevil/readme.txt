@@ -1,5 +1,5 @@
 
-ReactOS Coders Console Parade
+Windivs Coders Console Parade
 -----------------------------
 
 The name "notevil" is from the well known Easter egg

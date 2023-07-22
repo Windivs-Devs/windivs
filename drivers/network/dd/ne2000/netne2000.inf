@@ -4,11 +4,11 @@
 
 [Version]
 Signature  = "$Windows NT$"
-;Signature  = "$ReactOS$"
+;Signature  = "$Windivs$"
 LayoutFile = layout.inf
 Class      = Net
 ClassGUID  = {4D36E972-E325-11CE-BFC1-08002BE10318}
-Provider   = %ReactOS%
+Provider   = %Windivs%
 DriverVer  = 02/15/2007,1.02
 
 [DestinationDirs]
@@ -63,7 +63,7 @@ LoadOrderGroup = NDIS
 
 [Strings]
 ; Non-localizable
-ReactOS = "Windivs Developers"
+Windivs = "Windivs Developers"
 
 RealtekMfg = "Realtek"
 

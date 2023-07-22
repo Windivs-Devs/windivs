@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/misc/exit.c
  * PURPOSE:         Shutdown related functions
  * PROGRAMMER:      Eric Kohl
@@ -94,7 +94,7 @@ ExitWindowsWorker(UINT uFlags,
     MSG msg;
 
     USER_API_MESSAGE ApiMessage;
-    PUSER_EXIT_REACTOS ExitReactOSRequest = &ApiMessage.Data.ExitReactOSRequest;
+    PUSER_EXIT_REACTOS ExitWindivsRequest = &ApiMessage.Data.ExitWindivsRequest;
 
     /*
      * 1- FIXME: Call NtUserCallOneParam(uFlags, ONEPARAM_ROUTINE_PREPAREFORLOGOFF);
@@ -106,24 +106,24 @@ ExitWindowsWorker(UINT uFlags,
      *    We can shutdown synchronously or asynchronously.
      */
 
-    // ExitReactOSRequest->LastError = ERROR_SUCCESS;
-    ExitReactOSRequest->Flags = uFlags;
+    // ExitWindivsRequest->LastError = ERROR_SUCCESS;
+    ExitWindivsRequest->Flags = uFlags;
 
     CsrClientCallServer((PCSR_API_MESSAGE)&ApiMessage,
                         NULL,
                         CSR_CREATE_API_NUMBER(USERSRV_SERVERDLL_INDEX, UserpExitWindowsEx),
-                        sizeof(*ExitReactOSRequest));
+                        sizeof(*ExitWindivsRequest));
 
     /* Set the last error accordingly */
     if (NT_SUCCESS(ApiMessage.Status) || ApiMessage.Status == STATUS_CANT_WAIT)
     {
-        if (ExitReactOSRequest->LastError != ERROR_SUCCESS)
-            UserSetLastError(ExitReactOSRequest->LastError);
+        if (ExitWindivsRequest->LastError != ERROR_SUCCESS)
+            UserSetLastError(ExitWindivsRequest->LastError);
     }
     else
     {
         UserSetLastNTError(ApiMessage.Status);
-        ExitReactOSRequest->Success = FALSE;
+        ExitWindivsRequest->Success = FALSE;
     }
 
     /*
@@ -132,7 +132,7 @@ ExitWindowsWorker(UINT uFlags,
      * return the real state of the operation now.
      */
     if (NT_SUCCESS(ApiMessage.Status))
-        return ExitReactOSRequest->Success;
+        return ExitWindivsRequest->Success;
 
     /*
      * In case something failed: we have a non-success status and:

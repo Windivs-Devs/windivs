@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Command shell
+ * PROJECT:     Windivs Command shell
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Chinese (Traditional) resource file
  * TRANSLATORS: Copyright 2016 Henry Tang Ih <henrytang2@hotmail.com>
@@ -58,7 +58,7 @@ ERRORLEVEL 將被設定為使用者輸入在選項中的偏移。\n"
     STRING_CMD_HELP5 "  [Bash 檔案名稱自動完成]"
     STRING_CMD_HELP6 "  [目錄棧]"
     STRING_CMD_HELP7 "  [重定向和管道]"
-    STRING_CMD_HELP8 "啟動新的 ReactOS 命令列直譯器實例。\n\n\
+    STRING_CMD_HELP8 "啟動新的 Windivs 命令列直譯器實例。\n\n\
 CMD [/[C|K] 命令][/P][/Q][/T:bf]\n\n\
   /C 命令      運行指定的命令後退出。\n\
   /K 命令      運行指定的命令後不退出。\n\
@@ -419,7 +419,7 @@ listing of credits."
     STRING_VERSION_HELP5 "\nBug 報告發送到 <ros-dev@reactos.org>。\n\
 更新可在 https://reactos.org 檢視。"
     STRING_VERSION_HELP6 "\nFreeDOS 版本作者：\n"
-    STRING_VERSION_HELP7 "\nReactOS 版本作者：\n"
+    STRING_VERSION_HELP7 "\nWindivs 版本作者：\n"
     STRING_VOL_HELP1 " 磁碟機 %c 中的磁碟區標籤是 %s\n"
     STRING_VOL_HELP2 " 磁碟機 %c 中的磁碟區沒有標籤。\n"
     STRING_VOL_HELP3 " 磁碟區的序列號是 %04X-%04X\n"
@@ -503,9 +503,9 @@ RESTORE       恢復視窗\n\
     STRING_REPLACE_ERROR5 "存取被拒 - %s\n"
     STRING_REPLACE_ERROR6 "找不到檔案 - %s\n"
     STRING_REPLACE_ERROR7 "擴展錯誤 32\n"
-    STRING_CMD_INFOLINE "  ReactOS 命令列直譯器                                       輸入 HELP = 說明  "
-    STRING_REACTOS_VERSION "ReactOS [版本 %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS 命令列直譯器\n版本 %s %s"
+    STRING_CMD_INFOLINE "  Windivs 命令列直譯器                                       輸入 HELP = 說明  "
+    STRING_REACTOS_VERSION "Windivs [版本 %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs 命令列直譯器\n版本 %s %s"
     STRING_VERSION_RUNNING_ON "在 上運行"
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d 個檔案已複製\n"

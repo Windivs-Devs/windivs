@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Service Control Manager
+ * PROJECT:     Windivs Service Control Manager
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        base/system/services/services.c
  * PURPOSE:     Main SCM controller
@@ -326,7 +326,7 @@ wWinMain(HINSTANCE hInstance,
     /* Update the services database */
     ScmGetBootAndSystemDriverState();
 
-    /* Register the Service Control Manager process with the ReactOS Subsystem */
+    /* Register the Service Control Manager process with the Windivs Subsystem */
     if (!RegisterServicesProcess(GetCurrentProcessId()))
     {
         DPRINT1("SERVICES: Could not register SCM process\n");

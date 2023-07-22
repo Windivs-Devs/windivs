@@ -3,7 +3,7 @@ FontName: Test
 FullName: Test
 FamilyName: Test
 Weight: Medium
-Copyright: Created by Magnus Olsen 2007 with FontForge 2.0 (http://fontforge.sf.net).\nThis font is only for ReactOS Testing kit \nand is complete free 
+Copyright: Created by Magnus Olsen 2007 with FontForge 2.0 (http://fontforge.sf.net).\nThis font is only for Windivs Testing kit \nand is complete free
 Comments: 2007-9-30: Created.
 Version: 001.000
 ItalicAngle: 0
@@ -40,7 +40,7 @@ OS2Vendor: 'PfEd'
 TtfTable: cvt  8
 !$MDh!/Lt+
 EndTtf
-LangName: 1033 
+LangName: 1033
 Encoding: ISO8859-1
 UnicodeInterp: none
 NameList: Adobe Glyph List

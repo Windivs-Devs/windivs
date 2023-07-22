@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS system libraries
+ * PROJECT:         Windivs system libraries
  * FILE:            dll/win32/kernel32/client/time.c
  * PURPOSE:         Time conversion functions
  * PROGRAMMER:      Ariadne

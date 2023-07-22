@@ -384,7 +384,7 @@ static BOOL check_live_target(struct process* pcs)
 
 #ifdef __REACTOS__
     /* Wine store their loader base address in peb.reserved[0] and load its symbol from there.
-     * ReactOS does not care about it, we are just happy if we managed to read the value */
+     * Windivs does not care about it, we are just happy if we managed to read the value */
     base = 1;
 #endif
 
@@ -492,7 +492,7 @@ BOOL WINAPI SymInitializeW(HANDLE hProcess, PCWSTR UserSearchPath, BOOL fInvadeP
 
     if (UserSearchPath)
     {
-        pcs->search_path = lstrcpyW(HeapAlloc(GetProcessHeap(), 0,      
+        pcs->search_path = lstrcpyW(HeapAlloc(GetProcessHeap(), 0,
                                               (lstrlenW(UserSearchPath) + 1) * sizeof(WCHAR)),
                                     UserSearchPath);
     }

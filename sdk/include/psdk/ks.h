@@ -1,5 +1,5 @@
 /*
-    ReactOS
+    Windivs
     Kernel Streaming API
 
     by Andrew Greenwood

@@ -54,7 +54,7 @@ ERRORLEVEL është vendosur për të kompensuar e shtyn përdoruesit kryesorë n
     STRING_CMD_HELP5 "  [Përfundimi i dokumentave të sistemit Bash]"
     STRING_CMD_HELP6 "  [raftet e skedave]"
     STRING_CMD_HELP7 "  [drejtimi i ri dhe udherrefyesi]"
-    STRING_CMD_HELP8 "Fillon një shembull të ri të përkthyesit së Komandave të ReactOS.\n\n\
+    STRING_CMD_HELP8 "Fillon një shembull të ri të përkthyesit së Komandave të Windivs.\n\n\
 CMD [/[C|K] komande][/P][/Q][/T:bf]\n\n\
   /C Komandë  Ekzekuton komanda e përcaktuar dhe përfundon.\n\
   /K Komandë  Ekzekuton komanda e përcaktuar dhe mbetet.\n\
@@ -530,9 +530,9 @@ title         titull i ri\n"
     STRING_REPLACE_ERROR5 "Refuzot hyrja - %s\n"
     STRING_REPLACE_ERROR6 "Nuk u gjet dokumenti - %s\n"
     STRING_REPLACE_ERROR7 "Error i zgjatur 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Command Prompt                                      Type HELP = Help  "
-    STRING_REACTOS_VERSION "ReactOS [Versioni %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Interpretuesi i komandave\nVersioni %s %s"
+    STRING_CMD_INFOLINE "  Windivs Command Prompt                                      Type HELP = Help  "
+    STRING_REACTOS_VERSION "Windivs [Versioni %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Interpretuesi i komandave\nVersioni %s %s"
     STRING_VERSION_RUNNING_ON "Funksionon në: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d file(s) copied\n"

@@ -608,7 +608,7 @@ static void get_points_bounds( RECTL *bounds, const POINT *pts, UINT count, WINE
     if (dc_attr)
     {
         POINT cur_pos;
-        GetCurrentPositionEx(dc_attr->hdc, &cur_pos); 
+        GetCurrentPositionEx(dc_attr->hdc, &cur_pos);
         bounds->left = bounds->right = cur_pos.x;
         bounds->top = bounds->bottom = cur_pos.y;
     }
@@ -1332,7 +1332,7 @@ static BOOL emfdrv_stretchblt( struct emf *emf, INT x_dst, INT y_dst, INT width_
     if (hdc_src && GDI_HANDLE_GET_TYPE(hdc_src) == GDILoObjType_LO_ALTDC_TYPE)
     {
         WINEDC * pldc = get_dc_ptr(hdc_src);
-        
+
         if (pldc->iType == LDC_EMFLDC)
         {
             return FALSE;
@@ -1497,7 +1497,7 @@ BOOL EMFDC_MaskBlt( WINEDC *dc_attr, INT x_dst, INT y_dst, INT width_dst, INT he
     if (hdc_src && GDI_HANDLE_GET_TYPE(hdc_src) == GDILoObjType_LO_ALTDC_TYPE)
     {
         WINEDC * pldc = get_dc_ptr(hdc_src);
-        
+
         if (pldc->iType == LDC_EMFLDC)
         {
             return FALSE;
@@ -1601,7 +1601,7 @@ BOOL EMFDC_PlgBlt( WINEDC *dc_attr, const POINT *points, HDC hdc_src, INT x_src,
     if (hdc_src && GDI_HANDLE_GET_TYPE(hdc_src) == GDILoObjType_LO_ALTDC_TYPE)
     {
         WINEDC * pldc = get_dc_ptr(hdc_src);
-        
+
         if (pldc->iType == LDC_EMFLDC)
         {
             return FALSE;
@@ -2234,7 +2234,7 @@ BOOL EMFDC_DeleteDC( WINEDC *dc_attr )
 
 
 //
-// ReactOS Print Support
+// Windivs Print Support
 //
 BOOL EMFDC_WriteEscape( WINEDC *dc_attr, INT nEscape, INT cbInput, LPSTR lpszInData, DWORD emrType)
 {

@@ -472,7 +472,7 @@ NtLdrGetHigherPriorityOptions(
 
 
 ARC_STATUS
-LoadReactOSSetup(
+LoadWindivsSetup(
     IN ULONG Argc,
     IN PCHAR Argv[],
     IN PCHAR Envp[])
@@ -516,7 +516,7 @@ LoadReactOSSetup(
         ERR("No 'BootType' value, aborting!\n");
         return EINVAL;
     }
-    if (_stricmp(ArgValue, "ReactOSSetup") != 0)
+    if (_stricmp(ArgValue, "WindivsSetup") != 0)
     {
         ERR("Unknown 'BootType' value '%s', aborting!\n", ArgValue);
         return EINVAL;
@@ -533,7 +533,7 @@ LoadReactOSSetup(
     /* Let the user know we started loading */
     UiDrawBackdrop();
     UiDrawStatusText("Setup is loading...");
-    UiDrawProgressBarCenter("Loading ReactOS Setup...");
+    UiDrawProgressBarCenter("Loading Windivs Setup...");
 
     /* Retrieve the system path */
     *BootPath = ANSI_NULL;

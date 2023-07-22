@@ -1,7 +1,7 @@
 /*
- * PROJECT:         ReactOS Multimedia Control Panel
+ * PROJECT:         Windivs Multimedia Control Panel
  * FILE:            dll/cpl/mmsys/speakervolume.c
- * PURPOSE:         ReactOS Multimedia Control Panel
+ * PURPOSE:         Windivs Multimedia Control Panel
  * PROGRAMMER:      Eric Kohl <eric.kohl@reactos.com>
  */
 

@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Boot Loader
+ * PROJECT:         Windivs Boot Loader
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/armllb/inc/osloader.h
  * PURPOSE:         Shared header between LLB and OS Loader
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 //

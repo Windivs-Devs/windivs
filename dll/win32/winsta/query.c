@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS winsta.dll
+ * PROJECT:         Windivs winsta.dll
  * FILE:            lib/winsta/query.c
  * PURPOSE:         WinStation
  * PROGRAMMER:      Samuel Serapi?n

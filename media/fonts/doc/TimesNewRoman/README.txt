@@ -1,4 +1,4 @@
-ReactOS "Times New Roman" fonts are based on Liberation Serif.
+Windivs "Times New Roman" fonts are based on Liberation Serif.
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
