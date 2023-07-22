@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel Streaming
+ * PROJECT:         Windivs Kernel Streaming
  * FILE:            lib/drivers/sound/mmixer/wave.c
  * PURPOSE:         Wave Handling Functions
  * PROGRAMMER:      Johannes Anderwald

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Setup Library
+ * PROJECT:     Windivs Setup Library
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Partition list functions
  * COPYRIGHT:   Copyright 2003-2019 Casper S. Hornstrup (chorns@users.sourceforge.net)

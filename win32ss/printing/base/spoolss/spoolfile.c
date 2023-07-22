@@ -1,8 +1,8 @@
 /*
- * PROJECT:     ReactOS Spooler Router
+ * PROJECT:     Windivs Spooler Router
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Functions related to Spool File
- * COPYRIGHT:   Copyright 1998-2022 ReactOS
+ * COPYRIGHT:   Copyright 1998-2022 Windivs
  */
 
 #include "precomp.h"

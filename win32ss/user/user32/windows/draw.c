@@ -1,5 +1,5 @@
 /*
- * ReactOS User32 Library
+ * Windivs User32 Library
  * - Various drawing functions
  *
  * Copyright 2001 Casper S. Hournstroup
@@ -1024,8 +1024,8 @@ static BOOL UITOOLS95_DrawFrameMenu(HDC dc, LPRECT r, UINT uFlags)
     /* save font */
     hOldFont = SelectObject(dc, hFont);
 
-    if ((uFlags & 0x1f) == DFCS_MENUARROWUP ||  
-        (uFlags & 0x1f) == DFCS_MENUARROWDOWN ) 
+    if ((uFlags & 0x1f) == DFCS_MENUARROWUP ||
+        (uFlags & 0x1f) == DFCS_MENUARROWDOWN )
     {
 #if 0
        if (uFlags & DFCS_INACTIVE)

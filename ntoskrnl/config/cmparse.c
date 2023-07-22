@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/config/cmparse.c
  * PURPOSE:         Configuration Manager - Object Manager Parse Interface

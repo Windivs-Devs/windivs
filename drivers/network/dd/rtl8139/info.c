@@ -1,5 +1,5 @@
 /*
- * ReactOS Realtek 8139 Driver
+ * Windivs Realtek 8139 Driver
  *
  * Copyright (C) 2013 Cameron Gutman
  *

@@ -1,5 +1,5 @@
 /*
- * ReactOS Calc (HtmlHelp support)
+ * Windivs Calc (HtmlHelp support)
  *
  * Copyright 2007-2017, Carlo Bramini
  *

@@ -1,5 +1,5 @@
 /*
- * ReactOS Explorer
+ * Windivs Explorer
  *
  * Copyright 2014 Giannis Adamopoulos
  *

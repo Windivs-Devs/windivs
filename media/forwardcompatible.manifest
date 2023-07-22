@@ -8,7 +8,7 @@
         <assemblyIdentity type="win32" name="Microsoft.Windows.GdiPlus" version="1.1.0.0" publicKeyToken="6595b64144ccf1df" processorArchitecture="*" language="*" />
     </dependentAssembly>
     <dependentAssembly>
-        <assemblyIdentity type="win32" name="ReactOS.Apisets" version="1.0.0.0" publicKeyToken="6595b64144ccf1df" processorArchitecture="*" language="*" />
+        <assemblyIdentity type="win32" name="Windivs.Apisets" version="1.0.0.0" publicKeyToken="6595b64144ccf1df" processorArchitecture="*" language="*" />
     </dependentAssembly>
 </dependency>
 </assembly>

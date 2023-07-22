@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:            See COPYING in the top level directory
- * PROJECT:              ReactOS kernel
+ * PROJECT:              Windivs kernel
  * FILE:                 dll/directx/ddraw/cleanup.c
  * PURPOSE:              DirectDraw Library
  * PROGRAMMER:           Magnus Olsen (greatlrd)

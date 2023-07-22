@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/windows/clipboard.c
  * PURPOSE:         Input
  * PROGRAMMER:      Casper S. Hornstrup (chorns@users.sourceforge.net)

@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS api tests
+ * PROJECT:         Windivs api tests
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         Test for wcstombs
  */
@@ -11,8 +11,8 @@
 #include <stdlib.h>
 #include <specstrings.h>
 
-#define LStrROS L"ReactOS"
-#define StrROS "ReactOS"
+#define LStrROS L"Windivs"
+#define StrROS "Windivs"
 
 START_TEST(wcstombs)
 {

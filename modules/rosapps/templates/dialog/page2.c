@@ -1,5 +1,5 @@
 /*
- *  ReactOS Standard Dialog Application Template
+ *  Windivs Standard Dialog Application Template
  *
  *  page2.c
  *

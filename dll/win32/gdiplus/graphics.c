@@ -42,14 +42,14 @@
 
 WINE_DEFAULT_DEBUG_CHANNEL(gdiplus);
 
-/* Mike "tamlin" Nordell 2012-09-14 for ReactOS:
+/* Mike "tamlin" Nordell 2012-09-14 for Windivs:
  * NOTE: Wine uses per-GpGraphics id's ('contid' starting from zero in
  * every GpGraphics). Windows seems to use process-global id's, or at
  * least more unique id's.
  * This have the following implications. It:
  * 1. fails the current gdiplus test case.
  * 2. is not what Windows does.
- * 
+ *
  * We therefore "obfuscate" the 'contid' a little to more match Windows'
  * behaviour. The observable behviour should still remain the same,
  * except for handing out more "unique" id's.
@@ -60,7 +60,7 @@ static volatile LONG g_priv_contid = GDIP_CONTID_STEP;
    (UINT)(InterlockedExchangeAdd(&g_priv_contid,GDIP_CONTID_STEP))
 
 
-/* ReactOS FIXME: Inspect */
+/* Windivs FIXME: Inspect */
 #define fmax max
 
 /* looks-right constants */

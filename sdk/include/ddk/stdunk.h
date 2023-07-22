@@ -1,5 +1,5 @@
 /*
-    ReactOS Kernel-Mode COM
+    Windivs Kernel-Mode COM
     IUnknown implementations
 
     This file is in the public domain.

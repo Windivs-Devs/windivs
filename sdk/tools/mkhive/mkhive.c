@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2003, 2006 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2003, 2006 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS hive maker
+ * PROJECT:         Windivs hive maker
  * FILE:            tools/mkhive/mkhive.c
  * PURPOSE:         Hive maker
  * PROGRAMMERS:     Eric Kohl

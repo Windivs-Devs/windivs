@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS TDI interface
+ * PROJECT:     Windivs TDI interface
  * FILE:        handle.c
  * PURPOSE:     TDI transport handle management
  */

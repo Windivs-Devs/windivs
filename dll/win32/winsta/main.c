@@ -1,6 +1,6 @@
 /*
- * ReactOS WinStation
- * Copyright (C) 2005 ReactOS Team
+ * Windivs WinStation
+ * Copyright (C) 2005 Windivs Team
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 /*
- * PROJECT:         ReactOS winsta.dll
+ * PROJECT:         Windivs winsta.dll
  * FILE:            lib/winsta/main.c
  * PURPOSE:         WinStation
  * PROGRAMMER:      Emanuele Aliberti <ea@reactos.com>

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS kernel
+ * PROJECT:           Windivs kernel
  * PURPOSE:           Window event handlers
  * PROGRAMER:         James Tabor <james.tabor@reactos.org>
  */

@@ -1,5 +1,5 @@
 /*
- * ReactOS Explorer
+ * Windivs Explorer
  *
  * Copyright 2009 Andrew Hill <ash77@reactos.org>
  *
