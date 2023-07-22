@@ -35,7 +35,7 @@ const CHAR LinuxCommandLinePrompt[] = "Enter the Linux kernel command line.\n\nE
 const CHAR BootDrivePrompt[] = "Enter the boot drive.\n\nExamples:\nfd0 - first floppy drive\nhd0 - first hard drive\nhd1 - second hard drive\ncd0 - first CD-ROM drive.\n\nBIOS drive numbers may also be used:\n0 - first floppy drive\n0x80 - first hard drive\n0x81 - second hard drive";
 const CHAR BootPartitionPrompt[] = "Enter the boot partition.\n\nEnter 0 for the active (bootable) partition.";
 const CHAR ARCPathPrompt[] = "Enter the boot ARC path.\n\nExamples:\nmulti(0)disk(0)rdisk(0)partition(1)\nmulti(0)disk(0)fdisk(0)";
-const CHAR ReactOSSystemPathPrompt[] = "Enter the path to your ReactOS system directory.\n\nExamples:\n\\REACTOS\n\\ROS";
+const CHAR ReactOSSystemPathPrompt[] = "Enter the path to your Windivs system directory.\n\nExamples:\n\\Windivs\n\\Win";
 const CHAR ReactOSOptionsPrompt[] = "Enter the load options you want passed to the kernel.\n\nExamples:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200\n/FASTDETECT /SOS /NOGUIBOOT\n/BASEVIDEO /MAXMEM=64\n/KERNEL=NTKRNLMP.EXE /HAL=HALMPS.DLL";
 const CHAR ReactOSSetupOptionsPrompt[] = "Enter additional load options you want passed to the ReactOS Setup.\nThese options will supplement those obtained from the TXTSETUP.SIF\nfile, unless you also specify the /SIFOPTIONSOVERRIDE option switch.\n\nExample:\n/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /NOGUIBOOT";
 const CHAR CustomBootPrompt[] = "Press ENTER to boot your custom boot setup.";
@@ -53,8 +53,8 @@ VOID OptionMenuCustomBoot(VOID)
         "Boot Sector File",
         "Linux",
 #endif
-        "ReactOS",
-        "ReactOS Setup"
+        "WIndivs",
+        "Windivs Setup"
         };
     ULONG SelectedMenuItem;
     OperatingSystemItem OperatingSystem;

@@ -46,15 +46,15 @@ static EVENT_LABEL_ITEM EventLabels[] =
 {
     {
         L"WindowsLogon",
-        L"ReactOS Logon",
+        L" Logon",
         IDS_REACTOS_LOGON,
-        L"ReactOS_Logon.wav"
+        L"_Logon.wav"
     },
     {
         L"WindowsLogoff",
-        L"ReactOS Logoff",
+        L" Logoff",
         IDS_REACTOS_LOGOFF,
-        L"ReactOS_Logoff.wav"
+        L"_Logoff.wav"
     },
     {
         NULL,
@@ -68,7 +68,7 @@ static SYSTEM_SCHEME_ITEM SystemSchemes[] =
 {
     {
         L".Default",
-        L"ReactOS Standard",
+        L" Standard",
         IDS_REACTOS_DEFAULT_SCHEME
     },
     {

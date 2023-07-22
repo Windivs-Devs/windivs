@@ -1651,7 +1651,7 @@ FileTypesDlg_OnItemChanging(HWND hwndDlg, PFILE_TYPE_ENTRY pEntry)
     if (pEntry->AppName[0])
         SetDlgItemTextW(hwndDlg, IDC_FILETYPES_APPNAME, pEntry->AppName);
     else
-        SetDlgItemTextW(hwndDlg, IDC_FILETYPES_APPNAME, L"ReactOS");
+        SetDlgItemTextW(hwndDlg, IDC_FILETYPES_APPNAME, L"");
 
     // Enable the Delete button
     if (pEntry->EditFlags & 0x00000010) // FTA_NoRemove
