@@ -204,28 +204,28 @@ static MUI_ENTRY enUSIntroPageEntries[] =
     {
         6,
         12,
-        "Windivs 2k3 is an operating system made to look",
+        "Windivs 2k3 is an operating system made to look and function",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         13,
-        "and function like Windows XP and Windows Server 2003.",
+        "like Windows XP and Windows Server 2003.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         15,
-        "It has compatibility with most (if not all) apps made for XP or Server 2003!",
+        "It has compatibility with most apps made for XP or Server 2003",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         16,
-        "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't tested it on real hardware.",
+        "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't \0tested it on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
