@@ -2,7 +2,7 @@ The Windivs Console Utilities Library v0.2
 ==========================================
 
 LICENSE:    GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
-COPYRIGHT:  Copyright 2017-2018 Windivs Team
+COPYRIGHT:  Copyright 2017-2018 ReactOS Team
             Copyright 2017-2018 Hermes Belusca-Maito
 CREDITS:    Thanks to the many people who originally wrote the code that finally
             ended up inside this library, with more or less refactoring, or

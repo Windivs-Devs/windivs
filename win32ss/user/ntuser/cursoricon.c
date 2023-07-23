@@ -3,7 +3,7 @@
  * PROJECT:          Windivs Win32k subsystem
  * PURPOSE:          Cursor and icon functions
  * FILE:             win32ss/user/ntuser/cursoricon.c
- * PROGRAMER:        Windivs Team
+ * PROGRAMER:        ReactOS Team
  */
 /*
  * We handle two types of cursors/icons:

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004 Windivs Team
+ * Copyright (C) 2004 ReactOS Team
  *
  * COPYRIGHT:       See COPYING in the top level directory
  * PROJECT:         Windivs diskspeed.exe

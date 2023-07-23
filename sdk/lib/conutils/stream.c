@@ -4,7 +4,7 @@
  * PURPOSE:     Provides basic abstraction wrappers around CRT streams or
  *              Win32 console API I/O functions, to deal with i18n + Unicode
  *              related problems.
- * COPYRIGHT:   Copyright 2017-2018 Windivs Team
+ * COPYRIGHT:   Copyright 2017-2018 ReactOS Team
  *              Copyright 2017-2018 Hermes Belusca-Maito
  */
 

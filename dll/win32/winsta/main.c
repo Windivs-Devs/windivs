@@ -1,6 +1,6 @@
 /*
  * Windivs WinStation
- * Copyright (C) 2005 Windivs Team
+ * Copyright (C) 2005 ReactOS Team
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public

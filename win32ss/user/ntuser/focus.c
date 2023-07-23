@@ -3,7 +3,7 @@
  * PROJECT:          Windivs Win32k subsystem
  * PURPOSE:          Focus functions
  * FILE:             win32ss/user/ntuser/focus.c
- * PROGRAMER:        Windivs Team
+ * PROGRAMER:        ReactOS Team
  */
 
 #include <win32k.h>
