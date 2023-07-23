@@ -197,40 +197,47 @@ static MUI_ENTRY ruRUIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "\204\240\255\255\240\357 \242\245\340\341\250\357 Windivs \255\240\345\256\244\250\342\341\357 \242 \240\253\354\344\240-\341\342\240\244\250\250 \340\240\247\340\240\241\256\342\252\250,",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "\254\255\256\246\245\341\342\242\256 \344\343\255\252\346\250\251 \250 \242\256\247\254\256\246\255\256\341\342\245\251 \245\351\361 \255\245 \244\256\242\245\244\245\255\353 \244\256 \243\256\342\256\242\255\256\341\342\250,",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "\250 \340\240\247\340\240\241\256\342\252\240 \250\244\361\342 \257\256\253\255\353\254 \345\256\244\256\254. \220\245\252\256\254\245\255\244\343\245\342\341\357 \250\341\257\256\253\354\247\256\242\240\342\354 \355\342\343 \252\256\257\250\356",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        14,
-        "\342\256\253\354\252\256 \242 \346\245\253\357\345 \256\247\255\240\252\256\254\253\245\255\250\357 \250 \342\245\341\342\250\340\256\242\240\255\250\357, \250 \255\250 \242 \252\256\245\254 \341\253\343\347\240\245 \252\240\252",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        15,
-        "\216\221 \244\253\357 \257\256\242\341\245\244\255\245\242\255\256\243\256 \250\341\257\256\253\354\247\256\242\240\255\250\357.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         6,
         17,
