@@ -45,6 +45,7 @@ list(APPEND SOURCE
     downloadmgr.idl
     drmexternals.idl
 #   dyngraph.idl
+    emptyvc.idl
     endpointvolume.idl
     exdisp.idl
     fusion.idl
