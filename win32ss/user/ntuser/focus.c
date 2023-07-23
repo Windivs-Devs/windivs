@@ -433,7 +433,7 @@ co_IntMakeWindowActive(PWND Window)
       {
          spwndOwner = spwndOwner->spwndOwner;
       }
-      spwndOwner->spwndLastActive = Window;
+      WndSetLastActive(spwndOwner, Window);
       return TRUE;
    }
    ERR("MakeWindowActive Failed!\n");
