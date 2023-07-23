@@ -197,40 +197,47 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "O Windivs est\240 em est\240gio RC, o que significa que n\306o est\240 completo",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "e est\240 em forte desenvolvimento. Recomenda-se o seu uso apenas para fins",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "de avalia\207\306o e teste e n\306o como seu sistema operativo de uso di\240rio.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        15,
-        "Fa\207a c\242pia de seguran\207a dos seus dados ou teste num computador",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        16,
-        "secund\240rio se pretende executar o Windivs em hardware real.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         8,
         19,

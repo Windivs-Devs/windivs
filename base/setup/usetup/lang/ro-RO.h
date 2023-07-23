@@ -119,26 +119,47 @@ static MUI_ENTRY roROWelcomePageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "Aceast\343 prim\343 etap\343 din instalarea Windivs va copia fi\272ierele",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "necesare \356n calculatorul dumneavoastr\343 \272i-l va preg\343ti pentru",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "cea de-a doua etap\343 a instal\343rii.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         8,
         16,

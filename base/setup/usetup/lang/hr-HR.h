@@ -198,40 +198,47 @@ static MUI_ENTRY hrHRIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "Windivs je u Alphi, \347to zna\237i da nije potpun svih funkcija",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "i nalazi se u intezivnom razvoju. Preporu\237uje se da se koristi",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "za testiranje te se ne preporu\237uje da se koristi kao dnevni",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        14,
-        "operativan sustav.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        16,
-        "Sigurnosno kopirajte svoje datoteke ili testirajte na pomo\206nom",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         6,
         17,

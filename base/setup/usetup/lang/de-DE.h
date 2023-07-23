@@ -197,40 +197,47 @@ static MUI_ENTRY deDEIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "Windivs befindet sich noch im RC Stadium. Noch sind nicht alle",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "wichtigen Funktionen implementiert und Sie m\201ssen mit dem Auftreten",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "schwerwiegender Fehler rechnen. Verwenden Sie es daher nur",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        14,
-        "zu Testzwecken auf einem Zweitcomputer, nicht als Produktivsystem!",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        16,
-        "Sichern Sie unbedingt vorher ihre bestehenden Daten!",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         8,
         19,

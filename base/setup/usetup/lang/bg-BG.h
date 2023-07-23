@@ -204,47 +204,47 @@ static MUI_ENTRY bgBGIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "Windivs \245 \242 \245\342\240\257 \240\253\344\240 \250 \255\245 \242\341\250\347\252\250 \344\343\255\252\346\250\250 \341\240 \255\240\253\250\346\245",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "\242 \254\256\254\245\255\342\240 \245 \242 \257\340\256\346\245\341 \255\240 \250\255\342\245\255\247\250\242\255\240 \340\240\247\340\240\241\256\342\252\240. \217\340\245\257\256\340\352\347\242\240 \341\245 \244\240 \341\245 ",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "\250\247\257\256\253\247\242\240 \341\240\254\256 \247\240 \342\245\341\342\242\240\255\245, \240 \255\245 \252\240\342\256 \256\257\245\340\240\346\250\256\255\255\240",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        14,
-        "\341\250\341\342\245\254\240 \247\240 \245\246\245\244\255\245\242\255\240 \343\257\256\342\340\245\241\240.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        16,
-        "\215\240\257\340\240\242\245\342\245 \340\245\247\245\340\242\255\256 \252\256\257\250\245 \255\240 \244\240\255\255\250\342\245 \341\250 \250\253\250 \342\245\341\342\242\240\251\342\245 \255\240 \244\340\343\243 \252\256\254\257\356\342\352\340",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        17,
-        "\247\240 \244\240 \250\247\257\256\253\247\242\240\342\245 Windivs \255\240 \344\250\247\250\347\245\341\252\250 \252\256\254\257\356\342\352\340.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         8,
         20,

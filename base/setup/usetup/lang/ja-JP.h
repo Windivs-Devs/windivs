@@ -197,40 +197,47 @@ static MUI_ENTRY jaJPIntroPageEntries[] =
         TEXT_ID_STATIC
     },
     {
-        6,
-        11,
-        "Windivs \312 \261\331\314\247 \300\336\335\266\262 \306 \261\330\244 \267\311\263 \266\336 \320\266\335\276\262 \303\336",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        12,
-        "\266\262\312\302 \301\255\263 \303\336\275\241 \274\300\266\336\257\303 \313\256\263\266 \317\300\312 \303\275\304 \323\270\303\267 \303\336 \311\320 \274\326\263",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "\275\331 \272\304 \246 \265\275\275\322 \274\317\275\241 \306\301\274\336\256\263 \303\267 \305 \274\326\263 \306\312 \265\275\275\322 \303\336\267\317\276\335\241",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        15,
-        "\274\336\257\273\262 \311 \312\260\304\336\263\252\261 \303\336 \300\322\275 \312\336\261\262 \312 \303\336\260\300 \246 \312\336\257\270\261\257\314\337 \275\331 \266",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        16,
-        "\326\313\336 \311 \312\337\277\272\335 \303\336 \274\326\263 \274\303 \270\300\336\273\262\241",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
+            6,
+            11,
+            "Windivs 2k3",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            12,
+            "Windivs 2k3 is an operating system made to look and function",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            13,
+            "like Windows XP and Windows Server 2003.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            15,
+            "It has compatibility with most apps made for XP or Server 2003",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            16,
+            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+                6,
+                17,
+                "yet tested it on real hardware.",
+                TEXT_STYLE_NORMAL,
+                TEXT_ID_STATIC
+            },
     {
         8,
         19,

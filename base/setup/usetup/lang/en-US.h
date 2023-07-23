@@ -225,10 +225,17 @@ static MUI_ENTRY enUSIntroPageEntries[] =
     {
         6,
         16,
-        "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't \0tested it on real hardware.",
+        "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
+    {
+            6,
+            17,
+            "yet tested it on real hardware.",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
     {
         8,
         19,
