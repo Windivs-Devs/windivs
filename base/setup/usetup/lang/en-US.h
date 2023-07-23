@@ -159,7 +159,7 @@ static MUI_ENTRY enUSWelcomePageEntries[] =
     {
         6,
         24,
-        "https://Windivs.org/",
+        "https://jpbandroid.github.io/jpb",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
