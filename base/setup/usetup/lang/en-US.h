@@ -197,35 +197,35 @@ static MUI_ENTRY enUSIntroPageEntries[] =
     {
         6,
         11,
-        "Windivs is in RC stage, meaning it is not feature-complete",
+        "Windivs 2k3",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         12,
-        "and is under heavy development. It is recommended to use it only for",
+        "Windivs 2k3 is an operating system made to look",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         13,
-        "evaluation and testing purposes and not as your daily-usage OS.",
+        "and function like Windows XP and Windows Server 2003.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         15,
-        "Backup your data or test on a secondary computer if you attempt",
+        "It has compatibility with most (if not all) apps made for XP or Server 2003!",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         16,
-        "to run Windivs on real hardware.",
+        "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't tested it on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -277,7 +277,7 @@ static MUI_ENTRY enUSLicensePageEntries[] =
     {
         8,
         8,
-        "The Windivs System is licensed under the terms of the",
+        "Windivs is licensed under the terms of the",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -298,7 +298,7 @@ static MUI_ENTRY enUSLicensePageEntries[] =
     {
         8,
         11,
-        "All software that is part of the Windivs system is",
+        "All software that is part of Windivs is",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
