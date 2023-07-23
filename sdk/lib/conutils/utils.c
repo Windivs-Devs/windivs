@@ -3,7 +3,7 @@
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     Base set of functions for loading string resources
  *              and message strings, and handle type identification.
- * COPYRIGHT:   Copyright 2017-2021 Windivs Team
+ * COPYRIGHT:   Copyright 2017-2021 ReactOS Team
  *              Copyright 2017-2021 Hermes Belusca-Maito
  */
 

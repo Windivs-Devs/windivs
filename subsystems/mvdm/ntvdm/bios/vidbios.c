@@ -44,7 +44,7 @@
 static const CHAR BiosInfo[] =
     "00000000000 Emulation of IBM VGA Compatible ROM\0"
     "CL-GD5434 VGA BIOS Version 1.41  \r\n"
-    "Copyright (C) Windivs Team 1996-"COPYRIGHT_YEAR"\r\n"
+    "Copyright (C) ReactOS Team 1996-"COPYRIGHT_YEAR"\r\n"
     "The original CL-GD5434 card was created by Cirrus Logic, Inc.\r\n\0"
     "BIOS Date: 06/17/13\0";
 

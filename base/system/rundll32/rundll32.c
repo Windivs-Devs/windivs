@@ -1,6 +1,6 @@
 /*
  * Windivs rundll32
- * Copyright (C) 2003-2004 Windivs Team
+ * Copyright (C) 2003-2004 ReactOS Team
  *
  * COPYRIGHT:       See COPYING in the top level directory
  * PROJECT:         Windivs rundll32.exe

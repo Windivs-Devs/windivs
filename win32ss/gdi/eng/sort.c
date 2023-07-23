@@ -3,7 +3,7 @@
  * PROJECT:          Windivs win32 subsystem
  * PURPOSE:
  * FILE:             win32ss/gdi/eng/sort.c
- * PROGRAMER:        Windivs Team
+ * PROGRAMER:        ReactOS Team
  */
 
 #include <win32k.h>

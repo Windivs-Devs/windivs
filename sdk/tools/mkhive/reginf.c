@@ -1,6 +1,6 @@
 /*
  *  Windivs kernel
- *  Copyright (C) 2003, 2006 Windivs Team
+ *  Copyright (C) 2003, 2006 ReactOS Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
