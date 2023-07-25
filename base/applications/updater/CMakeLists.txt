@@ -18,7 +18,7 @@ list(APPEND SOURCE
     d3dtest9.c
     precomp.h)
 
-add_rc_deps(dxdiag.rc ${CMAKE_CURRENT_SOURCE_DIR}/res/updaterico.ico)
+add_rc_deps(dxdiag.rc ${CMAKE_CURRENT_SOURCE_DIR}/res/updateico.ico)
 add_executable(updater ${SOURCE} dxdiag.rc)
 set_module_type(updater win32gui UNICODE)
 target_link_libraries(dxdiag dxguid udmihelp)
