@@ -4,5 +4,5 @@ list(APPEND SOURCE
         main.cpp
         main.h)
 set_module_type(updater win32gui UNICODE)
-add_importlibs(gdi32 wininet user32 shell32 shlwapi ole32 setupapi gdiplus msvcrt kernel32 ntdll)
+add_importlibs(wininet user32 shell32 shlwapi ole32 setupapi gdiplus msvcrt kernel32 ntdll)
 #add_executable(updater ${SOURCE})
