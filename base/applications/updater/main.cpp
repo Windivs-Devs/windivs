@@ -1,3 +1,17 @@
+#include "main.h"
+#include <shlobj_undoc.h>
+#include <shlguid_undoc.h>
+
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atltypes.h>
+#include <atlwin.h>
+#include <wininet.h>
+#include <shellutils.h>
+#include <ui/rosctrls.h>
+#include <gdiplus.h>
+#include <math.h>
+
 // Register the window class.
 const wchar_t CLASS_NAME[]  = L"Sample Window Class";
 
