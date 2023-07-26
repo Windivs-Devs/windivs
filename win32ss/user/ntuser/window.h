@@ -135,7 +135,7 @@ ReplaceWndPtr(_Inout_ PWND* ppwnd, _In_opt_ PWND pwndNew)
         UserReferenceObject(pwndNew);
     }
 
-    /* The dereference the previous one */
+    /* Then dereference the previous one */
     if (*ppwnd != NULL)
     {
         UserDereferenceObject(*ppwnd);
