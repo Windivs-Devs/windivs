@@ -1,7 +1,7 @@
 
 option(ENABLE_ROSAPPS "Enable building the Windivs extra applications" OFF)
 option(ENABLE_ROSTESTS "Enable building the Windivs test suite" OFF)
-option(ENABLE_WALLPAPERS "Integrate wallpapers into the built ISOs" OFF)
+option(ENABLE_WALLPAPERS "Integrate wallpapers into the built ISOs" ON)
 
 if(ENABLE_ROSAPPS)
     add_subdirectory(rosapps)
