@@ -8,7 +8,7 @@ static MUI_ENTRY huHUSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY huHULanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213",
+        " Windivs Astiv Beta 1 telep\241t\213",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY huHUWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -185,7 +185,7 @@ static MUI_ENTRY huHUIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -272,7 +272,7 @@ static MUI_ENTRY huHULicensePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -422,7 +422,7 @@ static MUI_ENTRY huHUDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -523,7 +523,7 @@ static MUI_ENTRY huHURepairPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -596,7 +596,7 @@ static MUI_ENTRY huHUUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -676,7 +676,7 @@ static MUI_ENTRY huHUComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -735,7 +735,7 @@ static MUI_ENTRY huHUFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -787,7 +787,7 @@ static MUI_ENTRY huHUQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -839,7 +839,7 @@ static MUI_ENTRY huHUDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -897,7 +897,7 @@ static MUI_ENTRY huHUSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -949,7 +949,7 @@ static MUI_ENTRY huHUBootPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1002,7 +1002,7 @@ static MUI_ENTRY huHUSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1082,7 +1082,7 @@ static MUI_ENTRY huHUConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1197,7 +1197,7 @@ static MUI_ENTRY huHUFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1235,7 +1235,7 @@ static MUI_ENTRY huHUCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1266,7 +1266,7 @@ static MUI_ENTRY huHUInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1325,7 +1325,7 @@ static MUI_ENTRY huHUFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1370,7 +1370,7 @@ static MUI_ENTRY huHUBootLoaderEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1429,7 +1429,7 @@ static MUI_ENTRY huHUBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1453,7 +1453,7 @@ static MUI_ENTRY huHUKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1512,7 +1512,7 @@ static MUI_ENTRY huHULayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1572,7 +1572,7 @@ static MUI_ENTRY huHUPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1604,7 +1604,7 @@ static MUI_ENTRY huHUSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1653,7 +1653,7 @@ static MUI_ENTRY huHUDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1705,7 +1705,7 @@ static MUI_ENTRY huHURegistryEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs Astiv Beta 1 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

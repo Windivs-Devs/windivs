@@ -4506,7 +4506,7 @@ RunUSetup(VOID)
         CONSOLE_ClearScreen();
         CONSOLE_Flush();
 
-        // CONSOLE_SetUnderlinedTextXY(4, 3, " ReactOS " KERNEL_VERSION_STR " Setup ");
+        // CONSOLE_SetUnderlinedTextXY(4, 3, " ReactOS Astiv Beta 1 Setup ");
 
         switch (Page)
         {
