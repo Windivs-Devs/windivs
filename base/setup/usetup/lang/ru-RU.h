@@ -1096,7 +1096,7 @@ static MUI_ENTRY ruRUChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs Astiv Beta 1 Setup ",
+        " Windivs Astiv Beta 2 (5231) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
