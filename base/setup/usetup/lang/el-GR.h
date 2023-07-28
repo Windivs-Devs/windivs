@@ -1090,7 +1090,7 @@ static MUI_ENTRY elGRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs Astiv Beta 2 (5231) Setup ",
+        " Windivs Astiv Beta 2 (5270) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1552,7 +1552,7 @@ static MUI_ENTRY elGRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs Astiv Beta 2 (5231) Setup ",
+        " Windivs Astiv Beta 2 (5270) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
