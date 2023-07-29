@@ -230,7 +230,7 @@ MmAccessFault(IN ULONG FaultCode,
         return MmArmAccessFault(FaultCode, Address, Mode, TrapInformation);
     }
 
-    /* Is there a Windivs address space yet? */
+    /* Is there a ReactOS address space yet? */
     if (MmGetKernelAddressSpace())
     {
         /* Check if this is an ARM3 memory area */
