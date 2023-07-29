@@ -625,7 +625,6 @@ public:
     LRESULT OnExplorerBar(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled);
     LRESULT RelayCommands(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled);
     HRESULT OnSearch();
-    LRESULT CreateStatusBar();
 
     static ATL::CWndClassInfo& GetWndClassInfo()
     {
@@ -794,7 +793,6 @@ HRESULT CShellBrowser::Initialize()
                                    0, 0, 500, 20, m_hWnd, (HMENU)IDC_STATUSBAR,
                                    _AtlBaseModule.GetModuleInstance(), 0);
 
-
     ShowWindow(SW_SHOWNORMAL);
     UpdateWindow();
 
@@ -806,22 +804,14 @@ HRESULT CShellBrowser::BrowseToPIDL(LPCITEMIDLIST pidl, long flags)
     CComPtr<IShellFolder>                   newFolder;
     FOLDERSETTINGS                          newFolderSettings;
     HRESULT                                 hResult;
-    CLSID                                   clsid;
-    BOOL                                    HasIconViewType;
 
     // called by shell view to browse to new folder
     // also called by explorer band to navigate to new folder
     hResult = SHBindToFolder(pidl, &newFolder);
     if (FAILED_UNEXPECTEDLY(hResult))
         return hResult;
-    IUnknown_GetClassID(newFolder, &clsid);
-    HasIconViewType = clsid == CLSID_MyComputer || clsid == CLSID_ControlPanel ||
-                      clsid == CLSID_ShellDesktop;
 
-    if (HasIconViewType)
-        newFolderSettings.ViewMode = FVM_ICON;
-    else
-        newFolderSettings.ViewMode = FVM_DETAILS;
+    newFolderSettings.ViewMode = FVM_ICON;
     newFolderSettings.fFlags = 0;
     hResult = BrowseToPath(newFolder, pidl, &newFolderSettings, flags);
     if (FAILED_UNEXPECTEDLY(hResult))
@@ -3611,7 +3601,7 @@ LRESULT CShellBrowser::OnDisconnectNetworkDrive(WORD wNotifyCode, WORD wID, HWND
 
 LRESULT CShellBrowser::OnAboutReactOS(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled)
 {
-    ShellAbout(m_hWnd, _T("Windivs"), NULL, NULL);
+    ShellAbout(m_hWnd, _T("ReactOS"), NULL, NULL);
     return 0;
 }
 
@@ -3683,12 +3673,11 @@ LRESULT CShellBrowser::OnOrganizeFavorites(WORD wNotifyCode, WORD wID, HWND hWnd
 LRESULT CShellBrowser::OnToggleStatusBarVisible(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled)
 {
     fStatusBarVisible = !fStatusBarVisible;
-
-    if (fStatusBarVisible)
-        CreateStatusBar();
-
-    ::ShowWindow(fStatusBar, fStatusBarVisible ? SW_SHOW : SW_HIDE);
-    RepositionBars();
+    if (fStatusBar)
+    {
+        ::ShowWindow(fStatusBar, fStatusBarVisible ? SW_SHOW : SW_HIDE);
+        RepositionBars();
+    }
 
     DWORD dwStatusBarVisible = fStatusBarVisible;
     SHRegSetUSValueW(L"Software\\Microsoft\\Internet Explorer\\Main",
@@ -3698,18 +3687,6 @@ LRESULT CShellBrowser::OnToggleStatusBarVisible(WORD wNotifyCode, WORD wID, HWND
                      sizeof(dwStatusBarVisible),
                      SHREGSET_FORCE_HKCU);
 
-    return 0;
-}
-
-LRESULT CShellBrowser::CreateStatusBar()
-{
-    if (!fStatusBar)
-    {
-        fStatusBar = CreateWindowExW(0, STATUSCLASSNAMEW, NULL, WS_CHILD | WS_VISIBLE |
-                                     WS_CLIPSIBLINGS | SBARS_SIZEGRIP | SBARS_TOOLTIPS,
-                                     0, 0, 500, 20, m_hWnd, (HMENU)FCIDM_TB_UPFOLDER,
-                                     _AtlBaseModule.GetModuleInstance(), 0);
-    }
     return 0;
 }
 
