@@ -10,7 +10,7 @@ static MUI_ENTRY trTRSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -48,7 +48,7 @@ static MUI_ENTRY trTRLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -100,7 +100,7 @@ static MUI_ENTRY trTRWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -187,7 +187,7 @@ static MUI_ENTRY trTRIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -274,7 +274,7 @@ static MUI_ENTRY trTRLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -410,7 +410,7 @@ static MUI_ENTRY trTRDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -518,7 +518,7 @@ static MUI_ENTRY trTRRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -591,7 +591,7 @@ static MUI_ENTRY trTRUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -671,7 +671,7 @@ static MUI_ENTRY trTRComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -730,7 +730,7 @@ static MUI_ENTRY trTRFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -775,7 +775,7 @@ static MUI_ENTRY trTRQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -827,7 +827,7 @@ static MUI_ENTRY trTRDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -886,7 +886,7 @@ static MUI_ENTRY trTRSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -938,7 +938,7 @@ static MUI_ENTRY trTRBootPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -984,7 +984,7 @@ static MUI_ENTRY trTRSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1064,7 +1064,7 @@ static MUI_ENTRY trTRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1186,7 +1186,7 @@ static MUI_ENTRY trTRConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1287,7 +1287,7 @@ static MUI_ENTRY trTRFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1325,7 +1325,7 @@ static MUI_ENTRY trTRCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1356,7 +1356,7 @@ static MUI_ENTRY trTRInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1408,7 +1408,7 @@ static MUI_ENTRY trTRFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1453,7 +1453,7 @@ static MUI_ENTRY trTRBootLoaderEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1512,7 +1512,7 @@ static MUI_ENTRY trTRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Setup ",
+        " Windivs 2k3 Service Pack 1 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1536,7 +1536,7 @@ static MUI_ENTRY trTRKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1595,7 +1595,7 @@ static MUI_ENTRY trTRLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1655,7 +1655,7 @@ static MUI_ENTRY trTRPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1687,7 +1687,7 @@ static MUI_ENTRY trTRSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1735,7 +1735,7 @@ static MUI_ENTRY trTRDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1787,7 +1787,7 @@ static MUI_ENTRY trTRRegistryEntries[] =
     {
         4,
         3,
-        " Windivs " KERNEL_VERSION_STR " Kur ",
+        " Windivs 2k3 Service Pack 1 Kur ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
