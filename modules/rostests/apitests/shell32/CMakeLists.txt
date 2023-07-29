@@ -15,7 +15,6 @@ list(APPEND SOURCE
     DragDrop.cpp
     ExtractIconEx.cpp
     FindExecutable.cpp
-    GetDisplayNameOf.cpp
     IShellFolderViewCB.cpp
     OpenAs_RunDLL.cpp
     PathResolve.cpp
