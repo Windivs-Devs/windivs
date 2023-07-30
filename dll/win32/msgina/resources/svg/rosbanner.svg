@@ -1190,7 +1190,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Background Workstation"
+     inkscape:label="Background Professional"
      style="display:inline">
     <image
        width="109.24213"
@@ -1732,7 +1732,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Workstation Text"
+     inkscape:label="Professional Text"
      style="display:none">
     <text
        xml:space="preserve"
@@ -1744,7 +1744,7 @@
          id="tspan188"
          x="74.901154"
          y="5.8208332"
-         style="font-size:5.64444px;fill:#ffffff;stroke-width:0.264583">Workstation</tspan></text>
+         style="font-size:5.64444px;fill:#ffffff;stroke-width:0.264583">Professional</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"

@@ -302,7 +302,7 @@ cmdStatistics(
         PrintMessageString(4379);
         ConPuts(StdOut, L"\n");
         ConPuts(StdOut, L"   Server\n");
-        ConPuts(StdOut, L"   Workstation\n");
+        ConPuts(StdOut, L"   Professional\n");
         ConPuts(StdOut, L"\n");
     }
 
