@@ -251,8 +251,8 @@ BEGIN
     IDS_PRODUCTTITLE "Produktauswahl"
     IDS_PRODUCTSUBTITLE "Die Auswahl der folgenden Produkte wirkt sich auf das Verhalten des Systems aus."
     IDS_PRODUCTSERVERNAME "Windivs Server"
-    IDS_PRODUCTWORKSTATIONNAME "Windivs Workstation"
+    IDS_PRODUCTWORKSTATIONNAME "Windivs Professional"
     IDS_PRODUCTSERVERINFO "Das System wird als Server erkannt. Die persönlichen Ordner ""Eigene Bilder"", ""Eigene Videos"" und ""Eigene Musik"" sind unabhängig von ""Eigene Dokumente""."
-    IDS_PRODUCTWORKSTATIONINFO "Das System wird als Workstation erkannt. Die persönlichen Ordner ""Eigene Bilder"", ""Eigene Videos"" und ""Eigene Musik"" sind Unterordner von ""Eigene Dokumente""."
+    IDS_PRODUCTWORKSTATIONINFO "Das System wird als Professional erkannt. Die persönlichen Ordner ""Eigene Bilder"", ""Eigene Videos"" und ""Eigene Musik"" sind Unterordner von ""Eigene Dokumente""."
     IDS_DEFAULT "(Standard)"
 END

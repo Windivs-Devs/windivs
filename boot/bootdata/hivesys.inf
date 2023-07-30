@@ -1400,7 +1400,7 @@ HKLM,"SYSTEM\CurrentControlSet\Control\Print\Providers",,0x00000010
 HKLM,"SYSTEM\CurrentControlSet\Control\ProductOptions","ProductType",2,"ServerNT"
 HKLM,"SYSTEM\CurrentControlSet\Control\ProductOptions","ProductSuite",0x00010002,"Terminal Server"
 ; Windivs specific - by default we report ourselves as Server for the user,
-; but we can also report as Workstation if some application needs it.
+; but we can also report as Professional if some application needs it.
 HKLM,"SYSTEM\CurrentControlSet\Control\Windivs\Settings\Version","ReportAsWorkstation",0x00010001,0x00000000
 ; Some installers check for SP2
 HKLM,"SYSTEM\CurrentControlSet\Control\Windows","CSDReleaseType",0x00010001,0x00000000

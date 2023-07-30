@@ -251,7 +251,7 @@ BEGIN
     IDS_PRODUCTTITLE "Product Options"
     IDS_PRODUCTSUBTITLE "You can choose a product option that affects the behaviour of the system."
     IDS_PRODUCTSERVERNAME "Windivs Server"
-    IDS_PRODUCTWORKSTATIONNAME "Windivs Workstation"
+    IDS_PRODUCTWORKSTATIONNAME "Windivs Professional"
     IDS_PRODUCTSERVERINFO "The system will be recognised as a server. Private folders ""My Pictures"", ""My Videos"" and ""My Music"" are independent from ""My Documents""."
     IDS_PRODUCTWORKSTATIONINFO "The system will be recognised as a workstation. Private folders ""My Pictures"", ""My Videos"" and ""My Music"" are in ""My Documents""."
     IDS_DEFAULT "(Default)"
