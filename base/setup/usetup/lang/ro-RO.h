@@ -107,7 +107,7 @@ static MUI_ENTRY roROWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -222,7 +222,7 @@ static MUI_ENTRY roROIntroPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -302,7 +302,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -466,7 +466,7 @@ static MUI_ENTRY roRODevicePageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -581,7 +581,7 @@ static MUI_ENTRY roRORepairPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -734,7 +734,7 @@ static MUI_ENTRY roROComputerPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -793,7 +793,7 @@ static MUI_ENTRY roROFlushPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -838,7 +838,7 @@ static MUI_ENTRY roROQuitPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -890,7 +890,7 @@ static MUI_ENTRY roRODisplayPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -949,7 +949,7 @@ static MUI_ENTRY roROSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1001,7 +1001,7 @@ static MUI_ENTRY roROBootPageEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1054,7 +1054,7 @@ static MUI_ENTRY roROSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1134,7 +1134,7 @@ static MUI_ENTRY roROChangeSystemPartition[] =
     {
         4,
         3,
-        " Instalare Astiv Beta 2 (5310) Windivs ",
+        " Instalare7 build 6469 Windivs ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1364,7 +1364,7 @@ static MUI_ENTRY roROFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1395,7 +1395,7 @@ static MUI_ENTRY roROCheckFSEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1426,7 +1426,7 @@ static MUI_ENTRY roROInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1485,7 +1485,7 @@ static MUI_ENTRY roROFileCopyEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1523,7 +1523,7 @@ static MUI_ENTRY roROBootLoaderEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1582,7 +1582,7 @@ static MUI_ENTRY roROBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs Astiv Beta 2 (5310) Setup ",
+        " Windivs7 build 6469 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1606,7 +1606,7 @@ static MUI_ENTRY roROKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC,
     },
@@ -1665,7 +1665,7 @@ static MUI_ENTRY roROLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1725,7 +1725,7 @@ static MUI_ENTRY roROPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1757,7 +1757,7 @@ static MUI_ENTRY roROSelectFSEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1811,7 +1811,7 @@ static MUI_ENTRY roRODeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1863,7 +1863,7 @@ static MUI_ENTRY roRORegistryEntries[] =
     {
         4,
         3,
-        " Instalare Windivs Astiv Beta 2 (5310) ",
+        " Instalare Windivs7 build 6469 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
