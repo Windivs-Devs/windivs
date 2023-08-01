@@ -10,7 +10,7 @@ static MUI_ENTRY esESSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -48,7 +48,7 @@ static MUI_ENTRY esESLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -100,7 +100,7 @@ static MUI_ENTRY esESWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -188,7 +188,7 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -275,7 +275,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -418,7 +418,7 @@ static MUI_ENTRY esESDevicePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -525,7 +525,7 @@ static MUI_ENTRY esESRepairPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -598,7 +598,7 @@ static MUI_ENTRY esESUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -678,7 +678,7 @@ static MUI_ENTRY esESComputerPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -737,7 +737,7 @@ static MUI_ENTRY esESFlushPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -782,7 +782,7 @@ static MUI_ENTRY esESQuitPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -834,7 +834,7 @@ static MUI_ENTRY esESDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -893,7 +893,7 @@ static MUI_ENTRY esESSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -945,7 +945,7 @@ static MUI_ENTRY esESBootPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -998,7 +998,7 @@ static MUI_ENTRY esESSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1079,7 +1079,7 @@ static MUI_ENTRY esESChangeSystemPartition[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1201,7 +1201,7 @@ static MUI_ENTRY esESConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1309,7 +1309,7 @@ static MUI_ENTRY esESFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1347,7 +1347,7 @@ static MUI_ENTRY esESCheckFSEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1378,7 +1378,7 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1437,7 +1437,7 @@ static MUI_ENTRY esESFileCopyEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1482,7 +1482,7 @@ static MUI_ENTRY esESBootLoaderEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1541,7 +1541,7 @@ static MUI_ENTRY etESBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1565,7 +1565,7 @@ static MUI_ENTRY esESKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1624,7 +1624,7 @@ static MUI_ENTRY esESLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1684,7 +1684,7 @@ static MUI_ENTRY esESPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1716,7 +1716,7 @@ static MUI_ENTRY esESSelectFSEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1764,7 +1764,7 @@ static MUI_ENTRY esESDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1816,7 +1816,7 @@ static MUI_ENTRY esESRegistryEntries[] =
     {
         4,
         3,
-        " Instalaci\242n de Windivs Astiv Beta 2 (5310) ",
+        " Instalaci\242n de Windivs Astiv Beta 2 (5337) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
