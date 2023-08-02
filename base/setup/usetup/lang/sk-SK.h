@@ -14,7 +14,7 @@ static MUI_ENTRY skSKSetupInitPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -52,7 +52,7 @@ static MUI_ENTRY skSKLanguagePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -104,7 +104,7 @@ static MUI_ENTRY skSKWelcomePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -191,7 +191,7 @@ static MUI_ENTRY skSKIntroPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -278,7 +278,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -421,7 +421,7 @@ static MUI_ENTRY skSKDevicePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -528,7 +528,7 @@ static MUI_ENTRY skSKRepairPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -601,7 +601,7 @@ static MUI_ENTRY skSKUpgradePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -681,7 +681,7 @@ static MUI_ENTRY skSKComputerPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -740,7 +740,7 @@ static MUI_ENTRY skSKFlushPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -785,7 +785,7 @@ static MUI_ENTRY skSKQuitPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -837,7 +837,7 @@ static MUI_ENTRY skSKDisplayPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -896,7 +896,7 @@ static MUI_ENTRY skSKSuccessPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -948,7 +948,7 @@ static MUI_ENTRY skSKBootPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1001,7 +1001,7 @@ static MUI_ENTRY skSKSelectPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1082,7 +1082,7 @@ static MUI_ENTRY skSKChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1204,7 +1204,7 @@ static MUI_ENTRY skSKConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1312,7 +1312,7 @@ static MUI_ENTRY skSKFormatPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1350,7 +1350,7 @@ static MUI_ENTRY skSKCheckFSEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1381,7 +1381,7 @@ static MUI_ENTRY skSKInstallDirectoryEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1440,7 +1440,7 @@ static MUI_ENTRY skSKFileCopyEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1485,7 +1485,7 @@ static MUI_ENTRY skSKBootLoaderEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1544,7 +1544,7 @@ static MUI_ENTRY skSKBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1568,7 +1568,7 @@ static MUI_ENTRY skSKKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1627,7 +1627,7 @@ static MUI_ENTRY skSKLayoutSettingsEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1687,7 +1687,7 @@ static MUI_ENTRY skSKPrepareCopyEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1719,7 +1719,7 @@ static MUI_ENTRY skSKSelectFSEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1767,7 +1767,7 @@ static MUI_ENTRY skSKDeletePartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1819,7 +1819,7 @@ static MUI_ENTRY skSKRegistryEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu Windivs7 build 6469 ",
+        " In\347tal\240tor syst\202mu Windivs7 build 6519 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

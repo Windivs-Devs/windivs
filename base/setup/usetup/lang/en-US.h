@@ -5,7 +5,7 @@ static MUI_ENTRY enUSSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -43,7 +43,7 @@ static MUI_ENTRY enUSLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -95,7 +95,7 @@ static MUI_ENTRY enUSWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -183,7 +183,7 @@ static MUI_ENTRY enUSIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -270,7 +270,7 @@ static MUI_ENTRY enUSLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -413,7 +413,7 @@ static MUI_ENTRY enUSDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -520,7 +520,7 @@ static MUI_ENTRY enUSRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -593,7 +593,7 @@ static MUI_ENTRY enUSUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -673,7 +673,7 @@ static MUI_ENTRY enUSComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -732,7 +732,7 @@ static MUI_ENTRY enUSFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -777,7 +777,7 @@ static MUI_ENTRY enUSQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -829,7 +829,7 @@ static MUI_ENTRY enUSDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -888,7 +888,7 @@ static MUI_ENTRY enUSSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -940,7 +940,7 @@ static MUI_ENTRY enUSBootPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -993,7 +993,7 @@ static MUI_ENTRY enUSSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1073,7 +1073,7 @@ static MUI_ENTRY enUSChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1195,7 +1195,7 @@ static MUI_ENTRY enUSConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1303,7 +1303,7 @@ static MUI_ENTRY enUSFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1341,7 +1341,7 @@ static MUI_ENTRY enUSCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1372,7 +1372,7 @@ static MUI_ENTRY enUSInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1431,7 +1431,7 @@ static MUI_ENTRY enUSFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1476,7 +1476,7 @@ static MUI_ENTRY enUSBootLoaderEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1535,7 +1535,7 @@ static MUI_ENTRY enUSBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1559,7 +1559,7 @@ static MUI_ENTRY enUSKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1618,7 +1618,7 @@ static MUI_ENTRY enUSLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1678,7 +1678,7 @@ static MUI_ENTRY enUSPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1710,7 +1710,7 @@ static MUI_ENTRY enUSSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1758,7 +1758,7 @@ static MUI_ENTRY enUSDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1810,7 +1810,7 @@ static MUI_ENTRY enUSRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6469 Setup ",
+        " Windivs7 build 6519 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
