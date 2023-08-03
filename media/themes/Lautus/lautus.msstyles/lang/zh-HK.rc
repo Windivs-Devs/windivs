@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Lautus Theme
+ * PROJECT:     Slate+ Theme
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Chinese (Hong Kong) resource file
  * TRANSLATORS: Copyright 2021 Chan Chilung <eason066@gmail.com>
@@ -9,12 +9,12 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_HONGKONG
 
 STRINGTABLE
 {
-1000, "Ater"
+1000, "Slate"
 }
 
 STRINGTABLE
 {
-2000, "Lautus Ater"
+2000, "Slate"
 }
 
 STRINGTABLE
@@ -33,7 +33,7 @@ STRINGTABLE
 
 STRINGTABLE
 {
-5000, "Lautus"
+5000, "Slate+"
 5001, "視覺樣式"
 5002, " Project"
 5003, "Pisarz, 基於 Luna Inspirat"
