@@ -1350,7 +1350,7 @@ BOOL WINAPI ShellAboutW( HWND hWnd, LPCWSTR szApp, LPCWSTR szOtherStuff,
 
     info.szApp        = szApp;
 #ifdef __REACTOS__
-    info.szOSVersion  = szVersionString;
+    info.szOSVersion  = szVersionString + ": Service Pack 2";
 #endif
     info.szOtherStuff = szOtherStuff;
     info.hIcon        = hIcon ? hIcon : LoadIconW( 0, (LPWSTR)IDI_WINLOGO );
