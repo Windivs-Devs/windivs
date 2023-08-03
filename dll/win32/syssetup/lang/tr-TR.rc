@@ -250,7 +250,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_CLASSIC "Klasik"
-    IDS_LAUTUS "Lautus"
+    IDS_LAUTUS "Slate+"
     IDS_LUNAR "Ay"
     IDS_MIZU "Mizu"
 END
