@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for ReactOS
+ * PROJECT:     PAINT for Windivs
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Czech resource file
  * TRANSLATORS: Copyright 2009-2010 Radek Liška aka Black_Fox <radekliska@gmail.com>
@@ -227,7 +227,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Malování"
     IDS_WINDOWTITLE "%s - Malování"
-    IDS_INFOTITLE "ReactOS Malování"
+    IDS_INFOTITLE "Windivs Malování"
     IDS_INFOTEXT "Dostupné pod licencí GNU Lesser General Public License (LGPL, viz. www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Chcete uložit provedené změny v %s?"
     IDS_DEFAULTFILENAME "Bez názvu"
@@ -262,5 +262,6 @@ BEGIN
     IDS_VERTICAL "Vertical"
     IDS_PRINTRES "%d x %d pixel/cm"
     IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
-    IDS_SAVEERROR "Failed to save an image as the following file:\n\n%s"
+    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_CANTSENDMAIL "Failed to send a mail."
 END

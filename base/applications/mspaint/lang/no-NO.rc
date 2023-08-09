@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for ReactOS
+ * PROJECT:     PAINT for Windivs
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Norwegian resource file
  * TRANSLATOR:  Copyright 2009 Lars Martin Hambro (LMH1) <lars_martin4@hotmail.com>
@@ -226,7 +226,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Paint"
     IDS_WINDOWTITLE "%s - Paint"
-    IDS_INFOTITLE "Paint for ReactOS"
+    IDS_INFOTITLE "Paint for Windivs"
     IDS_INFOTEXT "Tilgjengelig under GNU Lesser General Public License (LGPL, se http://www.gnu.org/home.nb.html)"
     IDS_SAVEPROMPTTEXT "Vil du lagre endringene til %s?"
     IDS_DEFAULTFILENAME "Utennavn"
@@ -261,5 +261,6 @@ BEGIN
     IDS_VERTICAL "Vertical"
     IDS_PRINTRES "%d x %d pixel/cm"
     IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
-    IDS_SAVEERROR "Failed to save an image as the following file:\n\n%s"
+    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_CANTSENDMAIL "Failed to send a mail."
 END
