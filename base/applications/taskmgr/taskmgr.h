@@ -94,8 +94,6 @@ void FillSolidRect(HDC hDC, LPCRECT lpRect, COLORREF clr);
 void LoadSettings(void);
 void SaveSettings(void);
 void TaskManager_OnRestoreMainWindow(void);
-void TaskManager_OnEnterMenuLoop(HWND hWnd);
-void TaskManager_OnExitMenuLoop(HWND hWnd);
 void TaskManager_OnMenuSelect(HWND hWnd, UINT nItemID, UINT nFlags, HMENU hSysMenu);
 void TaskManager_OnViewUpdateSpeed(DWORD);
 void TaskManager_OnTabWndSelChange(void);

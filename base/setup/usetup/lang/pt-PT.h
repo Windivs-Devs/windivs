@@ -98,21 +98,21 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Bem-vindo ao assist\210nte de instala\207\306o do Windivs.",
+        "Bem-vindo ao assist\210nte de instala\207\306o do ReactOS.",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Esta fase da instala\207\306o prepara o Windivs para ser",
+        "Esta fase da instala\207\306o prepara o ReactOS para ser",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,14 +126,14 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Pressione ENTER para instalar ou actualizar o Windivs.",
+        "\x07  Pressione ENTER para instalar ou actualizar o ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Para reparar uma instala\207\306o do Windivs, pressione R.",
+        "\x07  Para reparar uma instala\207\306o do ReactOS, pressione R.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -147,21 +147,21 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         8,
         21,
-        "\x07  Para sair sem instalar o Windivs, pressione F3.",
+        "\x07  Para sair sem instalar o ReactOS, pressione F3.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Para mais informa\207\344es sobre o Windivs, visite o s\241tio:",
+        "Para mais informa\207\344es sobre o ReactOS, visite o s\241tio:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://Windivs.org/",
+        "https://reactos.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -185,59 +185,52 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Windivs Vers\306o Status",
+        "ReactOS Vers\306o Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
-            6,
-            11,
-            "Windivs 2k3",
-            TEXT_STYLE_NORMAL,
-            TEXT_ID_STATIC
-        },
-        {
-            6,
-            12,
-            "Windivs 2k3 is an operating system made to look and function",
-            TEXT_STYLE_NORMAL,
-            TEXT_ID_STATIC
-        },
-        {
-            6,
-            13,
-            "like Windows XP and Windows Server 2003.",
-            TEXT_STYLE_NORMAL,
-            TEXT_ID_STATIC
-        },
-        {
-            6,
-            15,
-            "It has compatibility with most apps made for XP or Server 2003",
-            TEXT_STYLE_NORMAL,
-            TEXT_ID_STATIC
-        },
-        {
-            6,
-            16,
-            "It is advised to install Windivs 2k3 on a VM, as I (the dev) haven't",
-            TEXT_STYLE_NORMAL,
-            TEXT_ID_STATIC
-        },
-        {
-                6,
-                17,
-                "yet tested it on real hardware.",
-                TEXT_STYLE_NORMAL,
-                TEXT_ID_STATIC
-            },
+        6,
+        11,
+        "O ReactOS est\240 em est\240gio Alpha, o que significa que n\306o est\240 completo",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        12,
+        "e est\240 em forte desenvolvimento. Recomenda-se o seu uso apenas para fins",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        13,
+        "de avalia\207\306o e teste e n\306o como seu sistema operativo de uso di\240rio.",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        15,
+        "Fa\207a c\242pia de seguran\207a dos seus dados ou teste num computador",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        16,
+        "secund\240rio se pretende executar o ReactOS em hardware real.",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
     {
         8,
         19,
@@ -272,7 +265,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -286,7 +279,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         8,
         8,
-        "O Windivs est\240 licenciado sob os termos da licen\207a",
+        "O ReactOS est\240 licenciado sob os termos da licen\207a",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1037,7 +1030,7 @@ static MUI_ENTRY ptPTSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Para configurar o Windivs no item seleccionado, pressione ENTER.",
+        "\x07  Para configurar o ReactOS no item seleccionado, pressione ENTER.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1090,7 +1083,7 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1111,14 +1104,14 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         6,
         16,
-        "formato n\306o suportado pelo Windivs.",
+        "formato n\306o suportado pelo ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Para instalar o Windivs com sucesso, o instalador deve alterar",
+        "Para instalar o ReactOS com sucesso, o instalador deve alterar",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1188,7 +1181,7 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         6,
         35,
-        "ap\242s a instala\207\306o do Windivs ser concluida.",
+        "ap\242s a instala\207\306o do ReactOS ser concluida.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1212,7 +1205,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1240,7 +1233,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "(Windivs) ou outro e programas fornecidos pelo fabricante do hardware.",
+        "(ReactOS) ou outro e programas fornecidos pelo fabricante do hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1268,7 +1261,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computador pelo disco r\241gido at\202 concluir a instala\207\306o do Windivs.",
+        "computador pelo disco r\241gido at\202 concluir a instala\207\306o do ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1320,7 +1313,7 @@ static MUI_ENTRY ptPTFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1358,7 +1351,7 @@ static MUI_ENTRY ptPTCheckFSEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1389,21 +1382,21 @@ static MUI_ENTRY ptPTInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "O instalador ir\240 copiar os ficheiros para a parti\207\306o seleccionada.",
+        "O instalador ir\240 copiar os arquivos para a parti\207\306o seleccionada.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Seleccione o direct\242rio onde deseja que o Windivs seja instalado:",
+        "Seleccione o direct\242rio onde deseja que o ReactOS seja instalado:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1417,7 +1410,7 @@ static MUI_ENTRY ptPTInstallDirectoryEntries[] =
     {
         6,
         15,
-        "o texto e escreva o nome do direct\242rio onde deseja que o Windivs",
+        "o texto e escreva o nome do direct\242rio onde deseja que o ReactOS",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1448,7 +1441,7 @@ static MUI_ENTRY ptPTFileCopyEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1462,7 +1455,7 @@ static MUI_ENTRY ptPTFileCopyEntries[] =
     {
         0,
         13,
-        "ficheiros do Windivs para a pasta de instala\207\306o.",
+        "arquivos do ReactOS para a pasta de instala\207\306o.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1493,7 +1486,7 @@ static MUI_ENTRY ptPTBootLoaderEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1552,7 +1545,7 @@ static MUI_ENTRY ptPTBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1576,7 +1569,7 @@ static MUI_ENTRY ptPTKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1635,7 +1628,7 @@ static MUI_ENTRY ptPTLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1789,7 +1782,7 @@ static MUI_ENTRY ptPTDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1848,7 +1841,7 @@ static MUI_ENTRY ptPTRegistryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs Astiv Beta 1 ",
+        " Instala\207\306o do ReactOS " KERNEL_VERSION_STR " ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1883,32 +1876,17 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "O Windivs n\306o est\240 completamente instalado no computador.\n"
+        "O ReactOS n\306o est\240 completamente instalado no computador.\n"
         "Se sair da instala\207\306o agora, precisar\240 executa-la\n"
-        "novamente para instalar o Windivs.\n"
+        "novamente para instalar o ReactOS.\n"
         "\n"
         "  \x07  Para continuar a instala\207\306o, pressione ENTER.\n"
         "  \x07  Para sair da instala\207\306o, pressione F3.",
         "F3=Sair  ENTER=Continuar"
     },
     {
-        // ERROR_NO_BUILD_PATH
-        "Falha ao criar os caminhos para o direct\242rio de instala\207\306o do ReactOS!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
-        // ERROR_SOURCE_PATH
-        "N\306o pode excluir a parti\207\306o que cont\202m a fonte de instala\207\306o!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
-        // ERROR_SOURCE_DIR
-        "N\306o pode instalar o ReactOS dentro do direct\242rio de origem da instala\207\306o!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
         // ERROR_NO_HDD
-        "N\306o foi poss\241vel localizar um disco r\241gido.\n",
+        "N\306o foi poss\241vel localizar um disco r\241digo.\n",
         "ENTER=Reiniciar"
     },
     {
@@ -1918,17 +1896,17 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_LOAD_TXTSETUPSIF
-        "N\306o foi poss\241vel carregar o ficheiro TXTSETUP.SIF.\n",
+        "N\306o foi poss\241vel carregar o arquivo TXTSETUP.SIF.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_CORRUPT_TXTSETUPSIF
-        "O ficheiro TXTSETUP.SIF est\240 corrompido.\n",
+        "O arquivos TXTSETUP.SIF est\240 corrompido.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_SIGNATURE_TXTSETUPSIF,
-        "O ficheiro TXTSETUP.SIF est\240 com a assinatura incorrecta.\n",
+        "O arquivo TXTSETUP.SIF est\240 com a assinatura incorrecta.\n",
         "ENTER=Reiniciar"
     },
     {
@@ -2009,12 +1987,12 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_IMPORT_HIVE,
-        "N\306o foi poss\241vel importar o ficheiro de estrutura.",
+        "N\306o foi poss\241vel importar o arquivo de estrutura.",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_FIND_REGISTRY
-        "N\306o foi poss\241vel encontrar os ficheiros do registo.",
+        "N\306o foi poss\241vel encontrar os arquivos do registo.",
         "ENTER=Reiniciar"
     },
     {
@@ -2029,22 +2007,22 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_INVALID_CABINET_INF,
-        "O ficheiro cab n\306o cont\202m um ficheiro inf v\240lido.\n",
+        "O arquivo cab n\306o cont\202m um arquivo inf v\240lido.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_CABINET_MISSING,
-        "N\306o foi poss\241vel econtrar o ficheiro cab.\n",
+        "N\306o foi poss\241vel econtrar o arquivo cab.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_CABINET_SCRIPT,
-        "O ficheiro cab n\306o cont\202m um script de instala\207\306o.\n",
+        "O arquivo cab n\306o cont\202m um script de instala\207\306o.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_COPY_QUEUE,
-        "N\306o foi poss\241vel abrir a lista de ficheiros para c\242pia.\n",
+        "N\306o foi poss\241vel abrir a lista de arquivos para c\242pia.\n",
         "ENTER=Reiniciar"
     },
     {
@@ -2055,13 +2033,13 @@ MUI_ERROR ptPTErrorEntries[] =
     {
         // ERROR_TXTSETUP_SECTION,
         "N\306o foi poss\241vel encontrar a sec\207\306o '%S' no\n"
-        "ficheiro TXTSETUP.SIF.\n",
+        "arquivo TXTSETUP.SIF.\n",
         "ENTER=Reiniciar"
     },
     {
         // ERROR_CABINET_SECTION,
         "N\306o foi poss\241vel encontrar a sec\207\306o '%S' no\n"
-        "ficheiro cab.\n",
+        "arquivo cab.\n",
         "ENTER=Reiniciar"
     },
     {

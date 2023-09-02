@@ -8,8 +8,10 @@
 #include <apitest.h>
 #include <shlwapi.h>
 #include <shlobj.h>
+#include <stdio.h>
 #include <shlwapi_undoc.h>
 #include <versionhelpers.h>
+#include <strsafe.h>
 
 #include <pseh/pseh2.h>
 
@@ -96,7 +98,7 @@ public:
                 if (lstrcmpiW(pszPropName, L"GUID1") == 0)
                 {
                     V_VT(pvari) = (VT_UI1 | VT_ARRAY);
-                    V_ARRAY(pvari) = CreateByteArray(&IID_IShellLink, sizeof(IID));
+                    V_ARRAY(pvari) = CreateByteArray(&IID_IShellLinkW, sizeof(IID));
                     return S_OK;
                 }
 
@@ -225,7 +227,7 @@ static void SHPropertyBag_ReadTest(void)
     ok_long(hr, S_OK);
     ok_int(s_cRead, 1);
     ok_int(s_cWrite, 0);
-    ok_int(IsEqualGUID(guid, IID_IShellLink), TRUE);
+    ok_int(IsEqualGUID(guid, IID_IShellLinkW), TRUE);
 
     ResetTest(VT_EMPTY, L"GUID2");
     hr = SHPropertyBag_ReadGUID(&dummy, L"GUID2", &guid);
@@ -325,8 +327,522 @@ static void SHPropertyBag_WriteTest(void)
     ok_int(s_cWrite, 1);
 }
 
+static void SHPropertyBag_OnMemory(void)
+{
+    HRESULT hr;
+    VARIANT vari;
+
+    IPropertyBag *pPropBag = NULL;
+    hr = SHCreatePropertyBagOnMemory(STGM_READWRITE, IID_IPropertyBag, (void**)&pPropBag);
+    ok_long(hr, S_OK);
+    if (pPropBag == NULL)
+    {
+        skip("pPropBag was NULL\n");
+        return;
+    }
+
+    VariantInit(&vari);
+    hr = pPropBag->Read(L"InvalidName", &vari, NULL);
+    ok_long(hr, E_FAIL);
+    VariantClear(&vari);
+
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    VariantInit(&vari);
+    hr = pPropBag->Read(L"Name1", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_long(V_VT(&vari), VT_UI4);
+    ok_long(V_UI4(&vari), 0xDEADFACE);
+    VariantClear(&vari);
+
+    pPropBag->Release();
+    pPropBag = NULL;
+
+    hr = SHCreatePropertyBagOnMemory(STGM_READ, IID_IPropertyBag, (void**)&pPropBag);
+    ok_long(hr, S_OK);
+
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, (IsWindowsVistaOrGreater() ? S_OK : E_ACCESSDENIED));
+    VariantClear(&vari);
+
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xFEEDF00D;
+    hr = pPropBag->Read(L"Name1", &vari, NULL);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, S_OK);
+        ok_int(V_VT(&vari), VT_UI4);
+        ok_long(V_UI4(&vari), 0xDEADFACE);
+    }
+    else
+    {
+        ok_long(hr, E_FAIL);
+        ok_int(V_VT(&vari), VT_EMPTY);
+        ok_long(V_UI4(&vari), 0xFEEDF00D);
+    }
+    VariantClear(&vari);
+
+    pPropBag->Release();
+    pPropBag = NULL;
+
+    hr = SHCreatePropertyBagOnMemory(STGM_WRITE, IID_IPropertyBag, (void**)&pPropBag);
+    ok_long(hr, S_OK);
+
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xFEEDF00D;
+    hr = pPropBag->Read(L"Name1", &vari, NULL);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, S_OK);
+        ok_int(V_VT(&vari), VT_UI4);
+        ok_long(V_UI4(&vari), 0xDEADFACE);
+    }
+    else
+    {
+        ok_long(hr, E_ACCESSDENIED);
+        ok_int(V_VT(&vari), VT_EMPTY);
+        ok_long(V_UI4(&vari), 0xFEEDF00D);
+    }
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    hr = SHCreatePropertyBagOnMemory(STGM_READWRITE, IID_IPropertyBag2, (void**)&pPropBag);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, E_NOINTERFACE);
+    }
+    else
+    {
+        ok_long(hr, S_OK);
+        pPropBag->Release();
+    }
+
+    hr = SHCreatePropertyBagOnMemory(STGM_READ, IID_IPropertyBag2, (void**)&pPropBag);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, E_NOINTERFACE);
+    }
+    else
+    {
+        ok_long(hr, S_OK);
+        pPropBag->Release();
+    }
+
+    hr = SHCreatePropertyBagOnMemory(STGM_WRITE, IID_IPropertyBag2, (void**)&pPropBag);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, E_NOINTERFACE);
+    }
+    else
+    {
+        ok_long(hr, S_OK);
+        pPropBag->Release();
+    }
+}
+
+static void SHPropertyBag_OnRegKey(void)
+{
+    HKEY hKey, hSubKey;
+    LONG error;
+    VARIANT vari;
+    WCHAR szText[MAX_PATH];
+    IStream *pStream;
+    GUID guid;
+    BYTE guid_and_extra[sizeof(GUID) + sizeof(GUID)];
+
+    // Create HKCU\Software\ReactOS registry key
+    error = RegCreateKeyW(HKEY_CURRENT_USER, L"Software\\ReactOS", &hKey);
+    if (error)
+    {
+        skip("FAILED to create HKCU\\Software\\ReactOS\n");
+        return;
+    }
+
+    IPropertyBag *pPropBag;
+    HRESULT hr;
+
+    // Try to create new registry key
+    RegDeleteKeyW(hKey, L"PropBagTest");
+    hr = SHCreatePropertyBagOnRegKey(hKey, L"PropBagTest", 0,
+                                     IID_IPropertyBag, (void **)&pPropBag);
+    ok_long(hr, HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND));
+
+    // Try to create new registry key
+    RegDeleteKeyW(hKey, L"PropBagTest");
+    hr = SHCreatePropertyBagOnRegKey(hKey, L"PropBagTest", STGM_READWRITE,
+                                     IID_IPropertyBag, (void **)&pPropBag);
+    ok_long(hr, HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND));
+
+    // Create new registry key
+    RegDeleteKeyW(hKey, L"PropBagTest");
+    hr = SHCreatePropertyBagOnRegKey(hKey, L"PropBagTest", STGM_CREATE | STGM_READWRITE,
+                                     IID_IPropertyBag, (void **)&pPropBag);
+    if (FAILED(hr))
+    {
+        skip("SHCreatePropertyBagOnRegKey FAILED\n");
+        RegCloseKey(hKey);
+        return;
+    }
+
+    // Write UI4
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Read UI4
+    VariantInit(&vari);
+    hr = pPropBag->Read(L"Name1", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_long(V_VT(&vari), VT_UI4);
+    ok_long(V_UI4(&vari), 0xDEADFACE);
+    VariantClear(&vari);
+
+    // Write BSTR
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    V_BSTR(&vari) = SysAllocString(L"StrValue");
+    hr = pPropBag->Write(L"Name2", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Read BSTR
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    hr = pPropBag->Read(L"Name2", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_long(V_VT(&vari), VT_BSTR);
+    ok_wstr(V_BSTR(&vari), L"StrValue");
+    VariantClear(&vari);
+
+    // Write GUID
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UNKNOWN;
+    V_UNKNOWN(&vari) = SHCreateMemStream((BYTE*)&IID_IShellLinkW, sizeof(IID_IShellLinkW));
+    hr = pPropBag->Write(L"Name4", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Read GUID
+    VariantInit(&vari);
+    V_VT(&vari) = VT_EMPTY;
+    hr = pPropBag->Read(L"Name4", &vari, NULL);
+    if (IsWindowsVistaOrGreater())
+    {
+        ok_long(hr, S_OK);
+        ok_long(V_VT(&vari), VT_UNKNOWN);
+        pStream = (IStream*)V_UNKNOWN(&vari);
+        FillMemory(&guid, sizeof(guid), 0xEE);
+        hr = pStream->Read(&guid, sizeof(guid), NULL);
+        ok_long(hr, S_OK);
+        ok_int(::IsEqualGUID(guid, IID_IShellLinkW), TRUE);
+    }
+    else // XP/2k3 Read is buggy
+    {
+        ok_long(hr, E_FAIL);
+        ok_long(V_VT(&vari), VT_EMPTY);
+    }
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    // Check registry
+    error = RegOpenKeyExW(hKey, L"PropBagTest", 0, KEY_READ, &hSubKey);
+    ok_long(error, ERROR_SUCCESS);
+    DWORD dwType, dwValue, cbValue = sizeof(dwValue);
+    error = RegQueryValueExW(hSubKey, L"Name1", NULL, &dwType, (BYTE*)&dwValue, &cbValue);
+    ok_long(error, ERROR_SUCCESS);
+    ok_long(dwType, REG_DWORD);
+    ok_long(dwValue, 0xDEADFACE);
+    ok_long(cbValue, sizeof(DWORD));
+    cbValue = sizeof(szText);
+    error = RegQueryValueExW(hSubKey, L"Name2", NULL, &dwType, (BYTE*)szText, &cbValue);
+    ok_long(error, ERROR_SUCCESS);
+    ok_long(dwType, REG_SZ);
+    ok_wstr(szText, L"StrValue");
+    cbValue = sizeof(guid_and_extra);
+    error = RegQueryValueExW(hSubKey, L"Name4", NULL, &dwType, (BYTE*)&guid_and_extra, &cbValue);
+    ok_long(error, ERROR_SUCCESS);
+    ok_long(dwType, REG_BINARY);
+    ok_int(memcmp(&guid_and_extra, &GUID_NULL, sizeof(GUID)), 0);
+    ok_int(memcmp(&guid_and_extra[sizeof(GUID)], &IID_IShellLinkW, sizeof(GUID)), 0);
+    RegCloseKey(hSubKey);
+
+    // Create as read-only
+    hr = SHCreatePropertyBagOnRegKey(hKey, L"PropBagTest", STGM_READ,
+                                     IID_IPropertyBag, (void **)&pPropBag);
+    ok_long(hr, S_OK);
+
+    // Read UI4
+    VariantInit(&vari);
+    hr = pPropBag->Read(L"Name1", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_long(V_VT(&vari), VT_UI4);
+    ok_long(V_UI4(&vari), 0xDEADFACE);
+    VariantClear(&vari);
+
+    // Write UI4
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, E_ACCESSDENIED);
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    // Create as write-only IPropertyBag2
+    hr = SHCreatePropertyBagOnRegKey(hKey, L"PropBagTest", STGM_WRITE,
+                                     IID_IPropertyBag2, (void **)&pPropBag);
+    ok_long(hr, S_OK);
+
+    // Write UI4
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name3", &vari);
+    ok_long(hr, E_NOTIMPL);
+    VariantClear(&vari);
+
+    // Read UI4
+    VariantInit(&vari);
+    V_UI4(&vari) = 0xFEEDF00D;
+    hr = pPropBag->Read(L"Name3", &vari, NULL);
+    ok_long(hr, E_NOTIMPL);
+    ok_int(V_VT(&vari), VT_EMPTY);
+    ok_long(V_UI4(&vari), 0xFEEDF00D);
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    // Clean up
+    RegDeleteKeyW(hKey, L"PropBagTest");
+    RegCloseKey(hKey);
+}
+
+static void SHPropertyBag_SHSetIniStringW(void)
+{
+    WCHAR szIniFile[MAX_PATH];
+    WCHAR szValue[MAX_PATH];
+    BOOL bRet;
+    DWORD dwRet;
+
+    ExpandEnvironmentStringsW(L"%TEMP%\\SHSetIniString.ini", szIniFile, _countof(szIniFile));
+
+    DeleteFileW(szIniFile);
+
+    trace("%ls\n", szIniFile);
+
+    bRet = SHSetIniStringW(L"TestSection", L"Key", L"Value", szIniFile);
+    ok_int(bRet, TRUE);
+
+    WritePrivateProfileStringW(NULL, NULL, NULL, szIniFile);
+
+    dwRet = SHGetIniStringW(L"TestSection", L"Key", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 5);
+    ok_wstr(szValue, L"Value");
+
+    bRet = SHSetIniStringW(L"TestSection", L"Key", NULL, szIniFile);
+    ok_int(bRet, TRUE);
+
+    WritePrivateProfileStringW(NULL, NULL, NULL, szIniFile);
+
+    dwRet = SHGetIniStringW(L"TestSection", L"Key", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 0);
+    ok_wstr(szValue, L"");
+
+    bRet = SHSetIniStringW(L"TestSection", L"Key", L"ABC\x3042\x3044\x3046\x2665", szIniFile);
+    ok_int(bRet, TRUE);
+
+    WritePrivateProfileStringW(NULL, NULL, NULL, szIniFile);
+
+    dwRet = SHGetIniStringW(L"TestSection", L"Key", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 7);
+    ok_wstr(szValue, L"ABC\x3042\x3044\x3046\x2665");
+
+    szValue[0] = 0x3000;
+    szValue[1] = UNICODE_NULL;
+    dwRet = SHGetIniStringW(L"TestSection", L"NotExistentKey", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 0);
+    ok_wstr(szValue, L"");
+
+    DeleteFileW(szIniFile);
+}
+
+static void SHPropertyBag_OnIniFile(void)
+{
+    WCHAR szIniFile[MAX_PATH], szValue[MAX_PATH];
+    HRESULT hr;
+    IPropertyBag *pPropBag;
+    VARIANT vari;
+    DWORD dwRet;
+
+    ExpandEnvironmentStringsW(L"%TEMP%\\SHPropertyBag.ini", szIniFile, _countof(szIniFile));
+
+    DeleteFileW(szIniFile);
+    fclose(_wfopen(szIniFile, L"w"));
+
+    trace("%ls\n", szIniFile);
+
+    // read-write
+    hr = SHCreatePropertyBagOnProfileSection(
+        szIniFile,
+        L"TestSection",
+        STGM_READWRITE,
+        IID_IPropertyBag,
+        (void**)&pPropBag);
+    ok_long(hr, S_OK);
+    ok_int(PathFileExistsW(szIniFile), TRUE);
+
+    // Write UI4
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    V_UI4(&vari) = 0xDEADFACE;
+    hr = pPropBag->Write(L"Name1", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Write BSTR
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    V_BSTR(&vari) = SysAllocString(L"StrValue");
+    hr = pPropBag->Write(L"Name2", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Write BSTR (dirty UTF-7)
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    V_BSTR(&vari) = SysAllocString(L"ABC\x3042\x3044\x3046\x2665");
+    hr = pPropBag->Write(L"@Name3", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    // Write BSTR (clean UTF-7)
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    V_BSTR(&vari) = SysAllocString(L"1234abc");
+    hr = pPropBag->Write(L"@Name4", &vari);
+    ok_long(hr, S_OK);
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    // Flush
+    WritePrivateProfileStringW(NULL, NULL, NULL, szIniFile);
+
+    // Check INI file
+    dwRet = GetPrivateProfileStringW(L"TestSection", L"Name1", L"BAD", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 10);
+    ok_wstr(szValue, L"3735943886");
+
+    dwRet = GetPrivateProfileStringW(L"TestSection", L"Name2", L"BAD", szValue, _countof(szValue), szIniFile);
+    ok_long(dwRet, 8);
+    ok_wstr(szValue, L"StrValue");
+
+    GetPrivateProfileStringW(L"TestSection", L"Name3", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_int(memcmp(szValue, L"ABC", 3 * sizeof(WCHAR)), 0);
+
+    GetPrivateProfileStringW(L"TestSection.A", L"Name3", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_int(memcmp(szValue, L"ABC", 3 * sizeof(WCHAR)), 0);
+
+    GetPrivateProfileStringW(L"TestSection.W", L"Name3", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_wstr(szValue, L"ABC+MEIwRDBGJmU-"); // UTF-7
+
+    GetPrivateProfileStringW(L"TestSection", L"Name4", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_wstr(szValue, L"1234abc");
+
+    GetPrivateProfileStringW(L"TestSection.A", L"Name4", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_wstr(szValue, L"NotFound");
+
+    GetPrivateProfileStringW(L"TestSection.W", L"Name4", L"NotFound", szValue, _countof(szValue), szIniFile);
+    ok_wstr(szValue, L"NotFound");
+
+    // read-only
+    hr = SHCreatePropertyBagOnProfileSection(
+        szIniFile,
+        NULL,
+        STGM_READ,
+        IID_IPropertyBag,
+        (void**)&pPropBag);
+    ok_long(hr, S_OK);
+
+    // Read UI4
+    VariantInit(&vari);
+    V_VT(&vari) = VT_UI4;
+    hr = pPropBag->Read(L"TestSection\\Name1", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_long(V_UI4(&vari), 0xDEADFACE);
+    VariantClear(&vari);
+
+    // Read BSTR
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    hr = pPropBag->Read(L"TestSection\\Name2", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_wstr(V_BSTR(&vari), L"StrValue");
+    VariantClear(&vari);
+
+    // Read BSTR (dirty UTF-7)
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    hr = pPropBag->Read(L"TestSection\\@Name3", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_wstr(V_BSTR(&vari), L"ABC\x3042\x3044\x3046\x2665");
+    VariantClear(&vari);
+
+    // Read BSTR (clean UTF-7)
+    VariantInit(&vari);
+    V_VT(&vari) = VT_BSTR;
+    hr = pPropBag->Read(L"TestSection\\@Name4", &vari, NULL);
+    ok_long(hr, S_OK);
+    ok_wstr(V_BSTR(&vari), L"1234abc");
+    VariantClear(&vari);
+
+    pPropBag->Release();
+
+    DeleteFileW(szIniFile);
+}
+
+static void SHPropertyBag_PerScreenRes(void)
+{
+    WCHAR szBuff1[64], szBuff2[64];
+    StringCchPrintfW(szBuff1, _countof(szBuff1), L"%dx%d(%d)",
+                     GetSystemMetrics(SM_CXFULLSCREEN), GetSystemMetrics(SM_CYFULLSCREEN),
+                     GetSystemMetrics(SM_CMONITORS));
+
+    szBuff2[0] = UNICODE_NULL;
+    SHGetPerScreenResName(szBuff2, _countof(szBuff2), 0);
+    ok_wstr(szBuff1, szBuff2);
+}
+
 START_TEST(SHPropertyBag)
 {
     SHPropertyBag_ReadTest();
     SHPropertyBag_WriteTest();
+    SHPropertyBag_OnMemory();
+    SHPropertyBag_OnRegKey();
+    SHPropertyBag_SHSetIniStringW();
+    SHPropertyBag_OnIniFile();
+    SHPropertyBag_PerScreenRes();
 }

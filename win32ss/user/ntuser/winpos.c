@@ -1,10 +1,9 @@
 /*
- * COPYRIGHT:        See COPYING in the top level directory
- * PROJECT:          Windivs kernel
- * PURPOSE:          Windows
- * FILE:             win32ss/user/ntuser/winpos.c
- * PROGRAMER:        Casper S. Hornstrup (chorns@users.sourceforge.net)
- *                   Katayama Hirofumi MZ (katayama.hirofumi.mz@gmail.com)
+ * COPYRIGHT:   See COPYING in the top level directory
+ * PROJECT:     ReactOS kernel
+ * PURPOSE:     Windows
+ * PROGRAMER:   Casper S. Hornstrup (chorns@users.sourceforge.net)
+ *              Katayama Hirofumi MZ (katayama.hirofumi.mz@gmail.com)
  */
 
 #include <win32k.h>
@@ -264,7 +263,7 @@ SelectWindowRgn(PWND Window, HRGN hRgnClip)
         /* Delete no longer needed region handle */
         IntGdiSetRegionOwner(Window->hrgnClip, GDI_OBJ_HMGR_POWNED);
         GreDeleteObject(Window->hrgnClip);
-        Window->hrgnClip = NULL;
+        Window->hrgnClip = NULL;       
     }
 
     if (hRgnClip > HRGN_WINDOW)
@@ -460,7 +459,7 @@ done:
 
    if (gpqForeground && (!gpqForeground->spwndActive || Wnd == gpqForeground->spwndActive))
    {
-      /* Windivs can pass WndTo = NULL to co_IntSetForegroundWindow and returns FALSE. */
+      /* ReactOS can pass WndTo = NULL to co_IntSetForegroundWindow and returns FALSE. */
       //ERR("WinPosActivateOtherWindow Set FG 0x%p hWnd %p\n",WndTo, WndTo ? WndTo->head.h : 0);
       if (co_IntSetForegroundWindow(WndTo))
       {
@@ -789,7 +788,7 @@ WinPosFindIconPos(PWND Window, POINT *Pos)
    if (UserIsDesktopWindow(pwndParent))
    {
       ERR("FIXME: Parent is Desktop, Min off screen!\n");
-      /* FIXME: Windivs doesn't support iconic minimize to desktop */
+      /* FIXME: ReactOS doesn't support iconic minimize to desktop */
       Pos->x = Pos->y = -32000;
       Window->InternalPos.flags |= WPF_MININIT;
       Window->InternalPos.IconPos.x = Pos->x;
@@ -910,7 +909,7 @@ UserGetWindowBorders(DWORD Style, DWORD ExStyle, SIZE *Size, BOOL WithClient)
 
 //
 // Fix CORE-5177
-// See winetests:user32:win.c:wine_AdjustWindowRectEx,
+// See winetests:user32:win.c:wine_AdjustWindowRectEx, 
 // Simplified version.
 //
 DWORD IntGetWindowBorders(DWORD Style, DWORD ExStyle)
@@ -1345,7 +1344,7 @@ co_WinPosDoWinPosChanging(PWND Window,
  *
  * FIXME: hide/show owned popups when owner visibility changes.
  *
- * Windivs: See bug CORE-6129 and CORE-6554.
+ * ReactOS: See bug CORE-6129 and CORE-6554.
  *
  */
  ////
@@ -2175,7 +2174,7 @@ co_WinPosSetWindowPos(
                 }
                 IntInvalidateWindows(Window, DirtyRgn, RDW_ERASE | RDW_FRAME | RDW_INVALIDATE | RDW_ALLCHILDREN);
              }
-             else if ( RgnType != ERROR && RgnType == NULLREGION ) // Must be the same. See CORE-7166 & CORE-15934, NC HACK fix.
+             else if (RgnType != ERROR && RgnType == NULLREGION) // Must be the same. See CORE-7166 & CORE-15934, NC HACK fix.
              {
                 if ( !PosChanged &&
                      !(WinPos.flags & SWP_DEFERERASE) &&
@@ -2195,7 +2194,7 @@ co_WinPosSetWindowPos(
                         /*
                          * Check if we have these specific windows style bits set/reset.
                          * FIXME: There may be other combinations of styles that need this handling as well.
-                         * This fixes the Windivs Calculator buttons disappearing in CORE-16827.
+                         * This fixes the ReactOS Calculator buttons disappearing in CORE-16827.
                          */
                         if ((Window->style & WS_CLIPSIBLINGS) && !(Window->style & (WS_POPUP | WS_CLIPCHILDREN | WS_SIZEBOX)))
                         {
@@ -2224,7 +2223,7 @@ co_WinPosSetWindowPos(
       }
 
       /* Expose what was covered before but not covered anymore */
-      if ( VisBefore != NULL )
+      if (VisBefore != NULL)
       {
          PREGION ExposedRgn = IntSysCreateRectpRgn(0, 0, 0, 0);
          if (ExposedRgn)
@@ -2234,7 +2233,7 @@ co_WinPosSetWindowPos(
                                OldWindowRect.left - NewWindowRect.left,
                                OldWindowRect.top  - NewWindowRect.top);
 
-             if ( VisAfter != NULL )
+             if (VisAfter != NULL)
                 RgnType = IntGdiCombineRgn(ExposedRgn, ExposedRgn, VisAfter, RGN_DIFF);
 
              if (RgnType != ERROR && RgnType != NULLREGION)
@@ -2275,14 +2274,14 @@ co_WinPosSetWindowPos(
 
    if ( !PosChanged &&
          (WinPos.flags & SWP_FRAMECHANGED) &&
-        !(WinPos.flags & SWP_DEFERERASE) &&    // Prevent sending WM_SYNCPAINT message.
+        !(WinPos.flags & SWP_DEFERERASE) &&    // Prevent sending WM_SYNCPAINT message. 
          VisAfter )
    {
        PWND Parent = Window->spwndParent;
        if ( !(Window->style & WS_CHILD) && (Parent) && (Parent->style & WS_CLIPCHILDREN))
        {
            TRACE("SWP_FRAMECHANGED Parent %p WS_CLIPCHILDREN %p\n",Parent,Window);
-           UserSyncAndPaintWindows( Parent, RDW_CLIPCHILDREN); // NC should redraw here, see NC HACK fix.
+           UserSyncAndPaintWindows(Parent, RDW_CLIPCHILDREN); // NC should redraw here, see NC HACK fix.
        }
    }
 

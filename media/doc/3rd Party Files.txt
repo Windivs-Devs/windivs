@@ -8,6 +8,7 @@ Please update this file when you port/sync an external project.
 
 Title: rdesktop
 Path: base/applications/mstsc
+Path: modules/rosapps/applications/net/tsclient
 Used Version: 1.8.3
 License: GPL-3.0-or-later (https://spdx.org/licenses/GPL-3.0-or-later.html)
 URL: https://github.com/rdesktop/rdesktop
@@ -166,7 +167,7 @@ URL: https://code.google.com/archive/p/cmediadrivers/
 Title: PCI hardware IDs database
 Path: hal/halx86/legacy/bus/pci_classes.ids
 Path: hal/halx86/legacy/bus/pci_vendors.ids
-Used Version: 2020.11.14
+Used Version: 2023.06.19
 License: GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later.html)
 URL: https://pci-ids.ucw.cz/
 URL: https://github.com/pciutils/pciids
@@ -218,6 +219,12 @@ Path: sdk/lib/fslib/vfatlib/check
 Used Version: 4.1
 License: GPL-3.0-or-later (https://spdx.org/licenses/GPL-3.0-or-later.html)
 URL: https://github.com/dosfstools/dosfstools
+
+Title: Microsoft Windows Driver Frameworks (WDF)
+Path: sdk/lib/drivers/wdf
+Used Version: git commit d9c6040
+License: MIT (https://spdx.org/licenses/MIT.html)
+URL: https://github.com/microsoft/Windows-Driver-Frameworks
 
 Title: libmpg123 (used by winemp3.acm)
 Path: sdk/lib/3rdparty/libmpg123

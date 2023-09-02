@@ -126,10 +126,15 @@ CONSTANT(IPI_LEVEL),
 CONSTANT(POWER_LEVEL),
 CONSTANT(PROFILE_LEVEL),
 CONSTANT(HIGH_LEVEL),
-RAW("#ifdef NT_UP"),
-{TYPE_CONSTANT, "SYNCH_LEVEL", DISPATCH_LEVEL},
+
+RAW("#ifndef CONFIG_SMP"),
+CONSTANTX(SYNCH_LEVEL, DISPATCH_LEVEL),
 RAW("#else"),
-{TYPE_CONSTANT, "SYNCH_LEVEL", (IPI_LEVEL - 2)},
+#if defined(_M_IX86) && (NTDDI_VERSION < NTDDI_WS03)
+CONSTANTX(SYNCH_LEVEL, (IPI_LEVEL - 1)),
+#else
+CONSTANTX(SYNCH_LEVEL, (IPI_LEVEL - 2)),
+#endif
 RAW("#endif"),
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
@@ -926,10 +931,10 @@ OFFSET(IbWow64CfgBitMap, PS_SYSTEM_DLL_INIT_BLOCK, Wow64CfgBitMap),
 OFFSET(IbMitigationOptionsMap, PS_SYSTEM_DLL_INIT_BLOCK, MitigationOptionsMap),
 
 HEADER("Extended context"),
-OFFSET(CxxLegacyOffset 0x8
-OFFSET(CxxLegacyLength 0xc
-OFFSET(CxxXStateOffset 0x10
-OFFSET(CxxXStateLength 0x14
+OFFSET(CxxLegacyOffset 0x8),
+OFFSET(CxxLegacyLength 0xc),
+OFFSET(CxxXStateOffset 0x10),
+OFFSET(CxxXStateLength 0x14),
 
 HEADER("Enclave call dispatch frame"),
 OFFSET(EcEnclaveNumber, ???, EnclaveNumber),

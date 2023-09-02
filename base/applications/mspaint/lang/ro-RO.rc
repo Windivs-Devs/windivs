@@ -4,7 +4,7 @@
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2009 Petru Dimitriu <petrimetri@gmail.com>
  *              Copyright 2011-2018 Ștefan Fulea <stefan.fulea@mail.com>
- *              Copyright 2022 Andrei Miloiu <miloiuandrei@gmail.com>
+ *              Copyright 2022-2023 Andrei Miloiu <miloiuandrei@gmail.com>
  */
 
 LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
@@ -16,17 +16,17 @@ BEGIN
     POPUP "&Fișier"
     BEGIN
         MENUITEM "&Nou\tCtrl+N", IDM_FILENEW
-        MENUITEM "&Deschidere…\tCtrl+O", IDM_FILEOPEN
+        MENUITEM "&Deschidere...\tCtrl+O", IDM_FILEOPEN
         MENUITEM "&Păstrează\tCtrl+S", IDM_FILESAVE
-        MENUITEM "Păst&rare în…", IDM_FILESAVEAS
+        MENUITEM "Păst&rare în...", IDM_FILESAVEAS
         MENUITEM SEPARATOR
-        MENUITEM "Din aparat media…", IDM_FILEFROMSCANNERORCAMERA
+        MENUITEM "Din aparat media...", IDM_FILEFROMSCANNERORCAMERA
         MENUITEM SEPARATOR
         MENUITEM "Pre&vizionează pagina", IDM_FILEPAGEVIEW
-        MENUITEM "C&onfigurare pagină…", IDM_FILEPAGESETUP
-        MENUITEM "I&mprimă…\tCtrl+P", IDM_FILEPRINT
+        MENUITEM "C&onfigurare pagină...", IDM_FILEPAGESETUP
+        MENUITEM "I&mprimă...\tCtrl+P", IDM_FILEPRINT
         MENUITEM SEPARATOR
-        MENUITEM "Transmite…", IDM_FILESEND
+        MENUITEM "Transmite...", IDM_FILESEND
         MENUITEM SEPARATOR
         MENUITEM "Decor de birou (în c&arou)", IDM_FILEASWALLPAPERPLANE
         MENUITEM "Decor de birou (&centrat)", IDM_FILEASWALLPAPERCENTERED
@@ -48,8 +48,8 @@ BEGIN
         MENUITEM "In&versează selecția", IDM_EDITINVERTSELECTION
         MENUITEM "Selecte&ază tot\tCtrl+A", IDM_EDITSELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "C&opiere în…", IDM_EDITCOPYTO
-        MENUITEM "Lipire di&n…", IDM_EDITPASTEFROM
+        MENUITEM "C&opiere în...", IDM_EDITCOPYTO
+        MENUITEM "Lipire di&n...", IDM_EDITPASTEFROM
     END
     POPUP "&Afișare"
     BEGIN
@@ -78,26 +78,26 @@ BEGIN
     END
     POPUP "I&magine"
     BEGIN
-        MENUITEM "&Rotire/Oglindire…\tCtrl+R", IDM_IMAGEROTATEMIRROR
-        MENUITEM "Întin&dere/Înclinare…\tCtrl+W", IDM_IMAGESTRETCHSKEW
+        MENUITEM "&Rotire/Oglindire...\tCtrl+R", IDM_IMAGEROTATEMIRROR
+        MENUITEM "Întin&dere/Înclinare...\tCtrl+W", IDM_IMAGESTRETCHSKEW
         MENUITEM "Recoltea&ză", IDM_IMAGECROP
         MENUITEM "In&versează culorile\tCtrl+I", IDM_IMAGEINVERTCOLORS
-        MENUITEM "&Atribute…\tCtrl+E", IDM_IMAGEATTRIBUTES
+        MENUITEM "&Atribute...\tCtrl+E", IDM_IMAGEATTRIBUTES
         MENUITEM "Șt&erge imaginea", IDM_IMAGEDELETEIMAGE
         MENUITEM "Mod &opac", IDM_IMAGEDRAWOPAQUE
     END
     POPUP "&Culori"
     BEGIN
-        MENUITEM "&Editare paletă…", IDM_COLORSEDITPALETTE
+        MENUITEM "&Editare paletă...", IDM_COLORSEDITPALETTE
         MENUITEM SEPARATOR
         MENUITEM "Paletă &modernă", IDM_COLORSMODERNPALETTE
         MENUITEM "Paletă &veche", IDM_COLORSOLDPALETTE
     END
     POPUP "Aj&utor"
     BEGIN
-        MENUITEM "&Manual…", IDM_HELPHELPTOPICS
+        MENUITEM "&Manual...", IDM_HELPHELPTOPICS
         MENUITEM SEPARATOR
-        MENUITEM "&Despre…", IDM_HELPINFO
+        MENUITEM "&Despre...", IDM_HELPINFO
     END
 END
 
@@ -105,18 +105,18 @@ ID_POPUPMENU MENU
 BEGIN
     POPUP "Popup #0"
     BEGIN
-        MENUITEM "C&ut\tCtrl+X", IDM_EDITCUT
-        MENUITEM "Copy\tCtrl+C", IDM_EDITCOPY
-        MENUITEM "&Paste\tCtrl+V", IDM_EDITPASTE
-        MENUITEM "De&lete selection\tDel", IDM_EDITDELETESELECTION
-        MENUITEM "Select &All\tCtrl+A", IDM_EDITSELECTALL
+        MENUITEM "&Decupează\tCtrl+X", IDM_EDITCUT
+        MENUITEM "&Copiază\tCtrl+C", IDM_EDITCOPY
+        MENUITEM "&Lipește\tCtrl+V", IDM_EDITPASTE
+        MENUITEM "Șt&erge selecția\tDel", IDM_EDITDELETESELECTION
+        MENUITEM "Selecte&ază tot\tCtrl+A", IDM_EDITSELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "C&opy to...", IDM_EDITCOPYTO
-        MENUITEM "Paste &from...", IDM_EDITPASTEFROM
+        MENUITEM "C&opiere în...", IDM_EDITCOPYTO
+        MENUITEM "Lipire di&n...", IDM_EDITPASTEFROM
         MENUITEM SEPARATOR
-        MENUITEM "Rotate/&Mirror...\tCtrl+R", IDM_IMAGEROTATEMIRROR
-        MENUITEM "&Stretch/Skew...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "&Invert colors\tCtrl+I", IDM_IMAGEINVERTCOLORS
+        MENUITEM "&Rotire/Oglindire...\tCtrl+R", IDM_IMAGEROTATEMIRROR
+        MENUITEM "Întindere/În&clinare...\tCtrl+W", IDM_IMAGESTRETCHSKEW
+        MENUITEM "&Inversează culorile\tCtrl+I", IDM_IMAGEINVERTCOLORS
     END
 END
 
@@ -214,7 +214,7 @@ BEGIN
 END
 
 IDD_FONTS DIALOG 0, 0, 225, 25
-CAPTION "Fonts"
+CAPTION "Fonturi"
 STYLE DS_CENTER | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 EXSTYLE WS_EX_TOOLWINDOW
 FONT 8, "MS Shell Dlg"
@@ -263,5 +263,7 @@ BEGIN
     IDS_VERTICAL "Vertical"
     IDS_PRINTRES "%d x %d pixeli/cm"
     IDS_CANTPASTE "Nu a putut fi lipit din clipboard. Formatul de date este fie incorect, fie nesuportat."
-    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_SAVEERROR "Eșec în păstrarea imaginii bitmap („hartă de biți”) în fișierul:\n\n%s"
+    IDS_CANTSENDMAIL "Eșec în trimiterea unei scrisori."
+    IDS_LOSECOLOR "În această operațiune informațiile legate de culoare vor fi pierdute. Sigur veți continua?"
 END
