@@ -1,5 +1,5 @@
 /*
- * Windivs Explorer
+ * ReactOS Explorer
  *
  * Copyright 2009 Andrew Hill <ash77 at domain reactos.org>
  *
@@ -292,7 +292,6 @@ private:
     CComPtr<IShellView>                     fCurrentShellView;          //
     LPITEMIDLIST                            fCurrentDirectoryPIDL;      //
     HWND                                    fStatusBar;
-    bool                                    fStatusBarVisible;
     CToolbarProxy                           fToolbarProxy;
     barInfo                                 fClientBars[3];
     CComPtr<ITravelLog>                     fTravelLog;
@@ -306,6 +305,7 @@ private:
     IBindCtx                                *fHistoryBindContext;
     HDSA menuDsa;
     HACCEL m_hAccel;
+    ShellSettings m_settings;
 public:
 #if 0
     ULONG InternalAddRef()
@@ -350,7 +350,7 @@ public:
     HRESULT UpdateUpState();
     void UpdateGotoMenu(HMENU theMenu);
     void UpdateViewMenu(HMENU theMenu);
-    void LoadSettings();
+    void LoadCabinetState();
 
 /*    // *** IDockingWindowFrame methods ***
     virtual HRESULT STDMETHODCALLTYPE AddToolbar(IUnknown *punkSrc, LPCWSTR pwszItem, DWORD dwAddFlags);
@@ -624,6 +624,9 @@ public:
     LRESULT OnRefresh(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled);
     LRESULT OnExplorerBar(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled);
     LRESULT RelayCommands(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled);
+    LRESULT OnSettingsChange(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+    LRESULT OnGetSettingsPtr(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+    LRESULT OnAppCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
     HRESULT OnSearch();
 
     static ATL::CWndClassInfo& GetWndClassInfo()
@@ -674,6 +677,9 @@ public:
         COMMAND_RANGE_HANDLER(IDM_GOTO_TRAVEL_FIRSTTARGET, IDM_GOTO_TRAVEL_LASTTARGET, OnGoTravel)
         COMMAND_RANGE_HANDLER(IDM_EXPLORERBAND_BEGINCUSTOM, IDM_EXPLORERBAND_ENDCUSTOM, OnExplorerBar)
         MESSAGE_HANDLER(WM_COMMAND, RelayCommands)
+        MESSAGE_HANDLER(BWM_SETTINGCHANGE, OnSettingsChange)
+        MESSAGE_HANDLER(BWM_GETSETTINGSPTR, OnGetSettingsPtr)
+        MESSAGE_HANDLER(WM_APPCOMMAND, OnAppCommand)
     END_MSG_MAP()
 
     BEGIN_CONNECTION_POINT_MAP(CShellBrowser)
@@ -714,6 +720,7 @@ CShellBrowser::CShellBrowser()
     fHistoryObject = NULL;
     fHistoryStream = NULL;
     fHistoryBindContext = NULL;
+    m_settings.Load();
 }
 
 CShellBrowser::~CShellBrowser()
@@ -783,11 +790,11 @@ HRESULT CShellBrowser::Initialize()
 
     fToolbarProxy.Initialize(m_hWnd, clientBar);
 
-    LoadSettings();
+    LoadCabinetState();
 
     // create status bar
     DWORD dwStatusStyle = WS_CHILD | WS_CLIPSIBLINGS | SBARS_SIZEGRIP | SBARS_TOOLTIPS;
-    if (fStatusBarVisible)
+    if (m_settings.fStatusBarVisible)
         dwStatusStyle |= WS_VISIBLE;
     fStatusBar = ::CreateWindowExW(0, STATUSCLASSNAMEW, NULL, dwStatusStyle,
                                    0, 0, 500, 20, m_hWnd, (HMENU)IDC_STATUSBAR,
@@ -804,14 +811,23 @@ HRESULT CShellBrowser::BrowseToPIDL(LPCITEMIDLIST pidl, long flags)
     CComPtr<IShellFolder>                   newFolder;
     FOLDERSETTINGS                          newFolderSettings;
     HRESULT                                 hResult;
+    CLSID                                   clsid;
+    BOOL                                    HasIconViewType;
 
     // called by shell view to browse to new folder
     // also called by explorer band to navigate to new folder
     hResult = SHBindToFolder(pidl, &newFolder);
     if (FAILED_UNEXPECTEDLY(hResult))
         return hResult;
+    // HACK & FIXME: Get view mode from shellbag when fully implemented.
+    IUnknown_GetClassID(newFolder, &clsid);
+    HasIconViewType = clsid == CLSID_MyComputer || clsid == CLSID_ControlPanel ||
+                      clsid == CLSID_ShellDesktop;
 
-    newFolderSettings.ViewMode = FVM_ICON;
+    if (HasIconViewType)
+        newFolderSettings.ViewMode = FVM_ICON;
+    else
+        newFolderSettings.ViewMode = FVM_DETAILS;
     newFolderSettings.fFlags = 0;
     hResult = BrowseToPath(newFolder, pidl, &newFolderSettings, flags);
     if (FAILED_UNEXPECTEDLY(hResult))
@@ -1440,7 +1456,7 @@ void CShellBrowser::RepositionBars()
 
     GetClientRect(&clientRect);
 
-    if (fStatusBarVisible && fStatusBar)
+    if (m_settings.fStatusBarVisible && fStatusBar)
     {
         ::GetWindowRect(fStatusBar, &statusRect);
         ::SetWindowPos(fStatusBar, NULL, clientRect.left, clientRect.bottom - (statusRect.bottom - statusRect.top),
@@ -1508,13 +1524,8 @@ void CShellBrowser::RepositionBars()
                         clientRect.bottom - clientRect.top, SWP_NOOWNERZORDER | SWP_NOZORDER);
 }
 
-void CShellBrowser::LoadSettings()
+void CShellBrowser::LoadCabinetState()
 {
-    fStatusBarVisible = SHRegGetBoolUSValueW(L"Software\\Microsoft\\Internet Explorer\\Main",
-                                             L"StatusBarOther",
-                                             FALSE,
-                                             FALSE);
-
     fCabinetState.fFullPathTitle = SHRegGetBoolUSValueW(L"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CabinetState",
                                                         L"FullPath",
                                                         FALSE,
@@ -1748,7 +1759,7 @@ void CShellBrowser::UpdateViewMenu(HMENU theMenu)
         menuItemInfo.hSubMenu = toolbarMenu;
         SetMenuItemInfo(theMenu, IDM_VIEW_TOOLBARS, FALSE, &menuItemInfo);
     }
-    SHCheckMenuItem(theMenu, IDM_VIEW_STATUSBAR, fStatusBarVisible ? TRUE : FALSE);
+    SHCheckMenuItem(theMenu, IDM_VIEW_STATUSBAR, m_settings.fStatusBarVisible ? TRUE : FALSE);
 }
 
 HRESULT CShellBrowser::BuildExplorerBandMenu()
@@ -3672,21 +3683,9 @@ LRESULT CShellBrowser::OnOrganizeFavorites(WORD wNotifyCode, WORD wID, HWND hWnd
 
 LRESULT CShellBrowser::OnToggleStatusBarVisible(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL &bHandled)
 {
-    fStatusBarVisible = !fStatusBarVisible;
-    if (fStatusBar)
-    {
-        ::ShowWindow(fStatusBar, fStatusBarVisible ? SW_SHOW : SW_HIDE);
-        RepositionBars();
-    }
-
-    DWORD dwStatusBarVisible = fStatusBarVisible;
-    SHRegSetUSValueW(L"Software\\Microsoft\\Internet Explorer\\Main",
-                     L"StatusBarOther",
-                     REG_DWORD,
-                     &dwStatusBarVisible,
-                     sizeof(dwStatusBarVisible),
-                     SHREGSET_FORCE_HKCU);
-
+    m_settings.fStatusBarVisible = !m_settings.fStatusBarVisible;
+    m_settings.Save();
+    SendMessageW(BWM_SETTINGCHANGE, 0, (LPARAM)&m_settings);
     return 0;
 }
 
@@ -3788,6 +3787,51 @@ LRESULT CShellBrowser::RelayCommands(UINT uMsg, WPARAM wParam, LPARAM lParam, BO
 {
     if (HIWORD(wParam) == 0 && LOWORD(wParam) < FCIDM_SHVIEWLAST && fCurrentShellViewWindow != NULL)
         return SendMessage(fCurrentShellViewWindow, uMsg, wParam, lParam);
+    return 0;
+}
+
+LRESULT CShellBrowser::OnSettingsChange(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    /* Refresh child windows */
+    ::SendMessageW(fClientBars[BIInternetToolbar].hwnd, uMsg, wParam, lParam);
+
+    /* Refresh status bar */
+    if (fStatusBar)
+    {
+        ::ShowWindow(fStatusBar, m_settings.fStatusBarVisible ? SW_SHOW : SW_HIDE);
+        RepositionBars();
+    }
+
+    return 0;
+}
+
+LRESULT CShellBrowser::OnGetSettingsPtr(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    if (!lParam)
+        return ERROR_INVALID_PARAMETER;
+
+    *(ShellSettings**)lParam = &m_settings;
+    return NO_ERROR;
+}
+
+// WM_APPCOMMAND
+LRESULT CShellBrowser::OnAppCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    UINT uCmd = GET_APPCOMMAND_LPARAM(lParam);
+    switch (uCmd)
+    {
+        case APPCOMMAND_BROWSER_BACKWARD:
+            GoBack();
+            break;
+
+        case APPCOMMAND_BROWSER_FORWARD:
+            GoForward();
+            break;
+
+        default:
+            FIXME("uCmd: %u\n", uCmd);
+            break;
+    }
     return 0;
 }
 

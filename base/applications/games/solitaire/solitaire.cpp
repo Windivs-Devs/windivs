@@ -2,6 +2,7 @@
 
 #include <winreg.h>
 #include <commctrl.h>
+#include <shellapi.h>
 #include <tchar.h>
 
 #include "resource.h"
@@ -60,7 +61,7 @@ VOID LoadSettings(VOID)
     HKEY hKey;
 
     if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                       _T("Software\\Windivs\\Solitaire"),
+                       _T("Software\\ReactOS\\Solitaire"),
                        0,
                        NULL,
                        REG_OPTION_NON_VOLATILE,
@@ -97,7 +98,7 @@ VOID SaveSettings(VOID)
     HKEY hKey;
 
     if (RegCreateKeyEx(HKEY_CURRENT_USER,
-                       _T("Software\\Windivs\\Solitaire"),
+                       _T("Software\\ReactOS\\Solitaire"),
                        0,
                        NULL,
                        REG_OPTION_NON_VOLATILE,
@@ -738,8 +739,8 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
                 return 0;
 
             case IDM_HELP_ABOUT:
-                ShellAboutW(hwnd, szAppName, MsgAbout,
-                            LoadIconW(hInstance, MAKEINTRESOURCE(IDI_SOLITAIRE)));
+                ShellAbout(hwnd, szAppName, MsgAbout,
+                           LoadIcon(hInstance, MAKEINTRESOURCE(IDI_SOLITAIRE)));
                 return 0;
 
             case IDM_GAME_EXIT:

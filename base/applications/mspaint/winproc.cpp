@@ -141,6 +141,16 @@ void CMainWindow::saveImage(BOOL overwrite)
 {
     canvasWindow.finishDrawing();
 
+    // Is the extension not supported?
+    PWCHAR pchDotExt = PathFindExtensionW(g_szFileName);
+    if (pchDotExt && *pchDotExt && !CImageDx::IsExtensionSupported(pchDotExt))
+    {
+        // Remove the extension
+        PathRemoveExtensionW(g_szFileName);
+        // No overwrite
+        overwrite = FALSE;
+    }
+
     if (g_isAFile && overwrite)
     {
         imageModel.SaveImage(g_szFileName);
@@ -589,13 +599,12 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
     {
         case IDM_HELPINFO:
         {
-            HICON paintIcon = LoadIcon(g_hinstExe, MAKEINTRESOURCE(IDI_APPICON));
             TCHAR infotitle[100];
             TCHAR infotext[200];
             LoadString(g_hinstExe, IDS_INFOTITLE, infotitle, _countof(infotitle));
             LoadString(g_hinstExe, IDS_INFOTEXT, infotext, _countof(infotext));
-            ShellAbout(m_hWnd, infotitle, infotext, paintIcon);
-            DeleteObject(paintIcon);
+            ShellAbout(m_hWnd, infotitle, infotext,
+                       LoadIcon(g_hinstExe, MAKEINTRESOURCE(IDI_APPICON)));
             break;
         }
         case IDM_HELPHELPTOPICS:
@@ -656,6 +665,13 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
                 GlobalFree(pd.hDevMode);
             if (pd.hDevNames)
                 GlobalFree(pd.hDevNames);
+            break;
+        case IDM_FILESEND:
+            canvasWindow.finishDrawing();
+            if (!OpenMailer(m_hWnd, g_szFileName))
+            {
+                ShowError(IDS_CANTSENDMAIL);
+            }
             break;
         case IDM_FILEASWALLPAPERPLANE:
             RegistrySettings::SetWallpaper(g_szFileName, RegistrySettings::TILED);
@@ -933,7 +949,22 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
         {
             if (attributesDialog.DoModal(mainWindow.m_hWnd))
             {
-                imageModel.Crop(attributesDialog.newWidth, attributesDialog.newHeight, 0, 0);
+                if (attributesDialog.m_bBlackAndWhite && !imageModel.IsBlackAndWhite())
+                {
+                    CString strText(MAKEINTRESOURCE(IDS_LOSECOLOR));
+                    CString strTitle(MAKEINTRESOURCE(IDS_PROGRAMNAME));
+                    INT id = MessageBox(strText, strTitle, MB_ICONINFORMATION | MB_YESNOCANCEL);
+                    if (id != IDYES)
+                        break;
+
+                    imageModel.PushBlackAndWhite();
+                }
+
+                if (imageModel.GetWidth() != attributesDialog.newWidth ||
+                    imageModel.GetHeight() != attributesDialog.newHeight)
+                {
+                    imageModel.Crop(attributesDialog.newWidth, attributesDialog.newHeight);
+                }
             }
             break;
         }

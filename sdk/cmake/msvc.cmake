@@ -312,7 +312,7 @@ function(fixup_load_config _target)
     # msvc knows how to generate a load_config so no hacks here
 endfunction()
 
-function(generate_import_lib _libname _dllname _spec_file)
+function(generate_import_lib _libname _dllname _spec_file __version_arg)
 
     set(_def_file ${CMAKE_CURRENT_BINARY_DIR}/${_libname}_implib.def)
     set(_asm_stubs_file ${CMAKE_CURRENT_BINARY_DIR}/${_libname}_stubs.asm)
@@ -320,7 +320,7 @@ function(generate_import_lib _libname _dllname _spec_file)
     # Generate the def and asm stub files
     add_custom_command(
         OUTPUT ${_asm_stubs_file} ${_def_file}
-        COMMAND native-spec2def --ms -a=${SPEC2DEF_ARCH} --implib -n=${_dllname} -d=${_def_file} -l=${_asm_stubs_file} ${CMAKE_CURRENT_SOURCE_DIR}/${_spec_file}
+        COMMAND native-spec2def --ms ${__version_arg} -a=${SPEC2DEF_ARCH} --implib -n=${_dllname} -d=${_def_file} -l=${_asm_stubs_file} ${CMAKE_CURRENT_SOURCE_DIR}/${_spec_file}
         DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${_spec_file} native-spec2def)
 
     # Compile the generated asm stub file
@@ -386,6 +386,8 @@ function(spec2def _dllname _spec_file)
 
     if(__spec2def_VERSION)
         set(__version_arg "--version=0x${__spec2def_VERSION}")
+    else()
+        set(__version_arg "--version=${DLL_EXPORT_VERSION}")
     endif()
 
     # Generate exports def and C stubs file for the DLL
@@ -395,7 +397,7 @@ function(spec2def _dllname _spec_file)
         DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${_spec_file} native-spec2def)
 
     if(__spec2def_ADD_IMPORTLIB)
-        generate_import_lib(lib${_file} ${_dllname} ${_spec_file})
+        generate_import_lib(lib${_file} ${_dllname} ${_spec_file} "${__version_arg}")
         if(__spec2def_NO_PRIVATE_WARNINGS)
             set_property(TARGET lib${_file} APPEND PROPERTY STATIC_LIBRARY_OPTIONS /ignore:4104)
         endif()
@@ -409,21 +411,15 @@ endmacro()
 # PSEH workaround
 set(PSEH_LIB "pseh")
 
-# Use a full path for the x86 version of ml when using x64 VS.
-# It's not a problem when using the DDK/WDK because, in x64 mode,
-# both the x86 and x64 versions of ml are available.
-if(ARCH STREQUAL "amd64")
+# Setup MASM/ML for compiling 16-bit x86 ASM code on x86 or non-x86 ports.
+if(NOT ARCH STREQUAL "i386")
     if((MSVC_VERSION LESS_EQUAL 1900) AND (DEFINED ENV{VCINSTALLDIR}))
         set(CMAKE_ASM16_COMPILER $ENV{VCINSTALLDIR}/bin/ml.exe)
     elseif(DEFINED ENV{VCToolsInstallDir})
-        set(CMAKE_ASM16_COMPILER $ENV{VCToolsInstallDir}/bin/HostX86/x86/ml.exe)
+        set(CMAKE_ASM16_COMPILER $ENV{VCToolsInstallDir}/bin/Host$ENV{VSCMD_ARG_HOST_ARCH}/x86/ml.exe)
     else()
         set(CMAKE_ASM16_COMPILER ml.exe)
     endif()
-elseif(ARCH STREQUAL "arm")
-    set(CMAKE_ASM16_COMPILER armasm.exe)
-elseif(ARCH STREQUAL "arm64")
-    set(CMAKE_ASM16_COMPILER armasm64.exe)
 else()
     set(CMAKE_ASM16_COMPILER ml.exe)
 endif()
@@ -446,11 +442,7 @@ function(CreateBootSectorTarget _target_name _asm_file _binary_file _base_addres
         COMMAND ${CMAKE_C_COMPILER} /nologo ${_no_std_includes_flag} /I${REACTOS_SOURCE_DIR}/sdk/include/asm /I${REACTOS_BINARY_DIR}/sdk/include/asm ${_includes} ${_defines} /D__ASM__ /D_USE_ML /EP /c ${_asm_file} > ${_temp_file}
         DEPENDS ${_asm_file})
 
-    if(ARCH STREQUAL "arm" OR ARCH STREQUAL "arm64")
-        set(_asm16_command ${CMAKE_ASM16_COMPILER} -nologo -o ${_object_file} ${_temp_file})
-    else()
-        set(_asm16_command ${CMAKE_ASM16_COMPILER} /nologo /Cp /Fo${_object_file} /c /Ta ${_temp_file})
-    endif()
+    set(_asm16_command ${CMAKE_ASM16_COMPILER} /nologo /Cp /Fo${_object_file} /c /Ta ${_temp_file})
 
     add_custom_command(
         OUTPUT ${_object_file}

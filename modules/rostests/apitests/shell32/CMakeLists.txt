@@ -15,6 +15,7 @@ list(APPEND SOURCE
     DragDrop.cpp
     ExtractIconEx.cpp
     FindExecutable.cpp
+    GetDisplayNameOf.cpp
     IShellFolderViewCB.cpp
     OpenAs_RunDLL.cpp
     PathResolve.cpp
@@ -24,6 +25,7 @@ list(APPEND SOURCE
     SHCreateFileDataObject.cpp
     SHCreateFileExtractIconW.cpp
     SHParseDisplayName.cpp
+    She.cpp
     ShellExecCmdLine.cpp
     ShellExecuteEx.cpp
     ShellExecuteW.cpp
