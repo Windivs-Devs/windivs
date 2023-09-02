@@ -105,7 +105,7 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         6,
         8,
-        "Bem-vindo ao assist\210nte de instala\207\306o do Windivs.",
+        "Bem-vindo ao assist\210nte de instala\207\306o do ReactOS.",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -161,7 +161,7 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         6,
         24,
-        "https://Windivs.org/",
+        "https://reactos.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -588,7 +588,7 @@ static MUI_ENTRY ptPTUpgradePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 6568 ",
+        " Instala\207\306o do Windivs Astiv Beta 1 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1892,23 +1892,8 @@ MUI_ERROR ptPTErrorEntries[] =
         "F3=Sair  ENTER=Continuar"
     },
     {
-        // ERROR_NO_BUILD_PATH
-        "Falha ao criar os caminhos para o direct\242rio de instala\207\306o do ReactOS!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
-        // ERROR_SOURCE_PATH
-        "N\306o pode excluir a parti\207\306o que cont\202m a fonte de instala\207\306o!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
-        // ERROR_SOURCE_DIR
-        "N\306o pode instalar o ReactOS dentro do direct\242rio de origem da instala\207\306o!\n"
-        "ENTER = Reiniciar o computador"
-    },
-    {
         // ERROR_NO_HDD
-        "N\306o foi poss\241vel localizar um disco r\241gido.\n",
+        "N\306o foi poss\241vel localizar um disco r\241digo.\n",
         "ENTER=Reiniciar"
     },
     {

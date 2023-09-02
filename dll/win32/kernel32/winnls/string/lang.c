@@ -32,6 +32,12 @@ DEBUG_CHANNEL(nls);
     #include "japanese.h"
 #endif
 
+#undef WINVER
+#define WINVER DLL_EXPORT_VERSION
+
+/* From winnls.h */
+#define LOCALE_NAME_USER_DEFAULT    NULL
+
 #define REG_SZ 1
 extern int wine_fold_string(int flags, const WCHAR *src, int srclen, WCHAR *dst, int dstlen);
 extern int wine_get_sortkey(int flags, const WCHAR *src, int srclen, char *dst, int dstlen);
@@ -2758,6 +2764,29 @@ INT WINAPI CompareStringA(LCID lcid, DWORD flags,
     if (str2W != buf2W) HeapFree(GetProcessHeap(), 0, str2W);
     return ret;
 }
+
+#if (WINVER >= 0x0600)
+/******************************************************************************
+ *           CompareStringOrdinal    (KERNEL32.@)
+ */
+INT WINAPI CompareStringOrdinal(const WCHAR *str1, INT len1, const WCHAR *str2, INT len2, BOOL ignore_case)
+{
+    int ret;
+
+    if (!str1 || !str2)
+    {
+        SetLastError(ERROR_INVALID_PARAMETER);
+        return 0;
+    }
+    if (len1 < 0) len1 = strlenW(str1);
+    if (len2 < 0) len2 = strlenW(str2);
+
+    ret = RtlCompareUnicodeStrings( str1, len1, str2, len2, ignore_case );
+    if (ret < 0) return CSTR_LESS_THAN;
+    if (ret > 0) return CSTR_GREATER_THAN;
+    return CSTR_EQUAL;
+}
+#endif
 
 #ifdef __REACTOS__
 HANDLE NLS_RegOpenKey(HANDLE hRootKey, LPCWSTR szKeyName)

@@ -30,28 +30,6 @@ ShortSizeFormatW(LONGLONG llNumber)
  */
 EXTERN_C BOOL
 WINAPI
-SHFindComputer(LPCITEMIDLIST pidl1, LPCITEMIDLIST pidl2)
-{
-    FIXME("SHFindComputer() stub\n");
-    return FALSE;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C BOOL
-WINAPI
-SHLimitInputCombo(HWND hWnd, LPVOID lpUnknown)
-{
-    FIXME("SHLimitInputCombo() stub\n");
-    return FALSE;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C BOOL
-WINAPI
 PathIsEqualOrSubFolder(LPWSTR lpFolder, LPWSTR lpSubFolder)
 {
     FIXME("PathIsEqualOrSubFolder() stub\n");
@@ -146,17 +124,6 @@ GetFileDescriptor(FILEGROUPDESCRIPTOR *pFileGroupDesc, BOOL bUnicode, INT iIndex
  */
 EXTERN_C BOOL
 WINAPI
-SHIsTempDisplayMode(VOID)
-{
-    FIXME("SHIsTempDisplayMode() stub\n");
-    return FALSE;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C BOOL
-WINAPI
 MakeShellURLFromPathW(LPCWSTR lpPath, LPWSTR lpUrl, INT cchMax)
 {
     FIXME("MakeShellURLFromPathW() stub\n");
@@ -199,18 +166,6 @@ WINAPI
 SHMultiFileProperties(IDataObject *pDataObject, DWORD dwFlags)
 {
     FIXME("SHMultiFileProperties() stub\n");
-    return E_FAIL;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C HRESULT
-WINAPI
-SHCreatePropertyBag(REFIID refIId, LPVOID *lpUnknown)
-{
-    /* Call SHCreatePropertyBagOnMemory() from shlwapi.dll */
-    FIXME("SHCreatePropertyBag() stub\n");
     return E_FAIL;
 }
 
@@ -449,28 +404,6 @@ SheSetCurDrive(INT iIndex)
 {
     FIXME("SheSetCurDrive() stub\n");
     return 1;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C LPWSTR
-WINAPI
-SheRemoveQuotesW(LPWSTR lpInput)
-{
-    FIXME("SheRemoveQuotesW() stub\n");
-    return NULL;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C LPSTR
-WINAPI
-SheRemoveQuotesA(LPSTR lpInput)
-{
-    FIXME("SheRemoveQuotesA() stub\n");
-    return NULL;
 }
 
 /*

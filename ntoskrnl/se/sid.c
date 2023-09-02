@@ -558,13 +558,6 @@ SepSidInToken(
  * given access control entry. This identifier
  * is valid for the whole of its lifetime.
  *
- * @param[in] AceType
- * The type of an access control entry. This
- * type that is given by the calling thread
- * must coincide with the actual ACE that is
- * given in the second parameter otherwise this
- * can potentially lead to UNDEFINED behavior!
- *
  * @param[in] Ace
  * A pointer to an access control entry, which
  * can be obtained from a DACL.
@@ -577,60 +570,49 @@ SepSidInToken(
 PSID
 NTAPI
 SepGetSidFromAce(
-    _In_ UCHAR AceType,
     _In_ PACE Ace)
 {
-    PSID Sid;
+    PULONG Flags;
+    ULONG GuidSize = 0;
+    PSID Sid = NULL;
     PAGED_CODE();
 
     /* Sanity check */
     ASSERT(Ace);
 
-    /* Initialize the SID */
-    Sid = NULL;
-
     /* Obtain the SID based upon ACE type */
-    switch (AceType)
+    switch (Ace->Header.AceType)
     {
         case ACCESS_DENIED_ACE_TYPE:
-        {
-            Sid = (PSID)&((PACCESS_DENIED_ACE)Ace)->SidStart;
-            break;
-        }
-
         case ACCESS_ALLOWED_ACE_TYPE:
+        case SYSTEM_AUDIT_ACE_TYPE:
+        case SYSTEM_ALARM_ACE_TYPE:
         {
-            Sid = (PSID)&((PACCESS_ALLOWED_ACE)Ace)->SidStart;
+            Sid = (PSID)&((PKNOWN_ACE)Ace)->SidStart;
             break;
         }
 
         case ACCESS_DENIED_OBJECT_ACE_TYPE:
-        {
-            Sid = (PSID)&((PACCESS_DENIED_OBJECT_ACE)Ace)->SidStart;
-            break;
-        }
-
         case ACCESS_ALLOWED_OBJECT_ACE_TYPE:
         {
-            Sid = (PSID)&((PACCESS_ALLOWED_OBJECT_ACE)Ace)->SidStart;
-            break;
-        }
+            Flags = (PULONG)&((PKNOWN_OBJECT_ACE)Ace)->Flags;
+            if (*Flags & ACE_OBJECT_TYPE_PRESENT)
+            {
+                GuidSize += sizeof(GUID);
+            }
 
-        case SYSTEM_AUDIT_ACE_TYPE:
-        {
-            Sid = (PSID)&((PSYSTEM_AUDIT_ACE)Ace)->SidStart;
-            break;
-        }
+            if (*Flags & ACE_INHERITED_OBJECT_TYPE_PRESENT)
+            {
+                GuidSize += sizeof(GUID);
+            }
 
-        case SYSTEM_ALARM_ACE_TYPE:
-        {
-            Sid = (PSID)&((PSYSTEM_ALARM_ACE)Ace)->SidStart;
+            Sid = (PSID)((ULONG_PTR)&((PKNOWN_OBJECT_ACE)Ace)->SidStart + GuidSize);
             break;
         }
 
         default:
         {
-            DPRINT1("SepGetSidFromAce(): Unknown ACE type (Ace 0x%p, Type %u)\n", Ace, AceType);
+            DPRINT1("SepGetSidFromAce(): Unknown ACE type (Ace 0x%p, Type %u)\n", Ace, Ace->Header.AceType);
             break;
         }
     }

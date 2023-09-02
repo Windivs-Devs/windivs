@@ -365,16 +365,15 @@ PlayLogonSound(
         CloseHandle(hThread);
 }
 
-/* NOTE: Shutdown sound plays synchronously */
 static
 VOID
-PlayShutdownSound(
+PlayLogoffSound(
     _In_ PWLSESSION Session)
 {
     if (!ImpersonateLoggedOnUser(Session->UserToken))
         return;
 
-    PlaySoundRoutine(L"SystemExit", FALSE, SND_ALIAS | SND_NODEFAULT);
+    PlaySoundRoutine(L"WindowsLogoff", FALSE, SND_ALIAS | SND_NODEFAULT);
 
     RevertToSelf();
 }
@@ -787,8 +786,8 @@ DestroyLogoffSecurityAttributes(
 static
 NTSTATUS
 HandleLogoff(
-    _Inout_ PWLSESSION Session,
-    _In_ DWORD wlxAction)
+    IN OUT PWLSESSION Session,
+    IN UINT Flags)
 {
     PLOGOFF_SHUTDOWN_DATA LSData;
     PSECURITY_ATTRIBUTES psa;
@@ -803,7 +802,7 @@ HandleLogoff(
         ERR("Failed to allocate mem for thread data\n");
         return STATUS_NO_MEMORY;
     }
-    LSData->Flags = EWX_LOGOFF;
+    LSData->Flags = Flags;
     LSData->Session = Session;
 
     Status = CreateLogoffSecurityAttributes(&psa);
@@ -843,8 +842,7 @@ HandleLogoff(
 
     SwitchDesktop(Session->WinlogonDesktop);
 
-    if (WLX_SHUTTINGDOWN(wlxAction))
-        PlayShutdownSound(Session);
+    PlayLogoffSound(Session);
 
     SetWindowStationUser(Session->InteractiveWindowStation,
                          &LuidNone, NULL, 0);
@@ -1062,13 +1060,17 @@ DoGenericAction(
             break;
         case WLX_SAS_ACTION_LOGOFF: /* 0x04 */
         case WLX_SAS_ACTION_SHUTDOWN: /* 0x05 */
+        case WLX_SAS_ACTION_FORCE_LOGOFF: /* 0x09 */
         case WLX_SAS_ACTION_SHUTDOWN_POWER_OFF: /* 0x0a */
         case WLX_SAS_ACTION_SHUTDOWN_REBOOT: /* 0x0b */
             if (Session->LogonState != STATE_LOGGED_OFF)
             {
+                UINT LogOffFlags = EWX_LOGOFF;
+                if (wlxAction == WLX_SAS_ACTION_FORCE_LOGOFF)
+                    LogOffFlags |= EWX_FORCE;
                 if (!Session->Gina.Functions.WlxIsLogoffOk(Session->Gina.Context))
                     break;
-                if (!NT_SUCCESS(HandleLogoff(Session, wlxAction)))
+                if (!NT_SUCCESS(HandleLogoff(Session, LogOffFlags)))
                 {
                     RemoveStatusMessage(Session);
                     break;

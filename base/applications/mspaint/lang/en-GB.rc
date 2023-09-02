@@ -27,7 +27,7 @@ BEGIN
         MENUITEM "Send...", IDM_FILESEND
         MENUITEM SEPARATOR
         MENUITEM "Set as wallpaper (Tiled)", IDM_FILEASWALLPAPERPLANE
-        MENUITEM "Set as wallpaper (Centered)", IDM_FILEASWALLPAPERCENTERED
+        MENUITEM "Set as wallpaper (Centred)", IDM_FILEASWALLPAPERCENTERED
         MENUITEM "Set as wallpaper (Stretched)", IDM_FILEASWALLPAPERSTRETCHED
         MENUITEM SEPARATOR
         MENUITEM "Most recently used file", IDM_FILEMOSTRECENTLYUSEDFILE, GRAYED
@@ -78,10 +78,10 @@ BEGIN
     BEGIN
         MENUITEM "Rotate/&Mirror...\tCtrl+R", IDM_IMAGEROTATEMIRROR
         MENUITEM "&Stretch/Skew...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "&Crop", IDM_IMAGECROP
+        MENUITEM "C&rop", IDM_IMAGECROP
         MENUITEM "&Invert colours\tCtrl+I", IDM_IMAGEINVERTCOLORS
         MENUITEM "&Attributes...\tCtrl+E", IDM_IMAGEATTRIBUTES
-        MENUITEM "Delete image\tCtrl+Shft+N", IDM_IMAGEDELETEIMAGE
+        MENUITEM "&Clear image\tCtrl+Shft+N", IDM_IMAGEDELETEIMAGE
         MENUITEM "&Draw opaque", IDM_IMAGEDRAWOPAQUE
     END
     POPUP "&Colours"
@@ -103,8 +103,8 @@ ID_POPUPMENU MENU
 BEGIN
     POPUP "Popup #0"
     BEGIN
-        MENUITEM "C&ut\tCtrl+X", IDM_EDITCUT
-        MENUITEM "Copy\tCtrl+C", IDM_EDITCOPY
+        MENUITEM "Cu&t\tCtrl+X", IDM_EDITCUT
+        MENUITEM "&Copy\tCtrl+C", IDM_EDITCOPY
         MENUITEM "&Paste\tCtrl+V", IDM_EDITPASTE
         MENUITEM "De&lete selection\tDel", IDM_EDITDELETESELECTION
         MENUITEM "Select &All\tCtrl+A", IDM_EDITSELECTALL
@@ -114,7 +114,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Rotate/&Mirror...\tCtrl+R", IDM_IMAGEROTATEMIRROR
         MENUITEM "&Stretch/Skew...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "&Invert colors\tCtrl+I", IDM_IMAGEINVERTCOLORS
+        MENUITEM "&Invert colours\tCtrl+I", IDM_IMAGEINVERTCOLORS
     END
 END
 
@@ -262,4 +262,6 @@ BEGIN
     IDS_PRINTRES "%d x %d dots per inch"
     IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
     IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_CANTSENDMAIL "Failed to send a mail."
+    IDS_LOSECOLOR "The color information will be lost in this operation. Are you sure to proceed?"
 END

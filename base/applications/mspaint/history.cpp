@@ -267,3 +267,21 @@ HBITMAP ImageModel::CopyBitmap()
     m_hbmOld = ::SelectObject(m_hDrawingDC, m_hBms[m_currInd]); // Re-select
     return ret;
 }
+
+BOOL ImageModel::IsBlackAndWhite()
+{
+    ::SelectObject(m_hDrawingDC, m_hbmOld); // De-select
+    BOOL bBlackAndWhite = IsBitmapBlackAndWhite(m_hBms[m_currInd]);
+    m_hbmOld = ::SelectObject(m_hDrawingDC, m_hBms[m_currInd]); // Re-select
+    return bBlackAndWhite;
+}
+
+void ImageModel::PushBlackAndWhite()
+{
+    ::SelectObject(m_hDrawingDC, m_hbmOld); // De-select
+    HBITMAP hNewBitmap = ConvertToBlackAndWhite(m_hBms[m_currInd]);
+    m_hbmOld = ::SelectObject(m_hDrawingDC, m_hBms[m_currInd]); // Re-select
+
+    if (hNewBitmap)
+        PushImageForUndo(hNewBitmap);
+}
