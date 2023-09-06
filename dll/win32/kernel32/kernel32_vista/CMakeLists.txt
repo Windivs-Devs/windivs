@@ -10,7 +10,7 @@ list(APPEND SOURCE
     DllMain.c
     GetFileInformationByHandleEx.c
     GetTickCount64.c
-    InitOnceExecuteOnce.c
+    InitOnce.c
     sync.c
     vista.c
     ${CMAKE_CURRENT_BINARY_DIR}/kernel32_vista.def)
