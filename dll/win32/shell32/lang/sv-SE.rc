@@ -192,7 +192,7 @@ BEGIN
     LTEXT "Kort&kommando:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&Kör:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "K&ommentar:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Sök mål...", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -488,7 +488,7 @@ CAPTION "Logga ut från Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Är du säker på att du vill logga ut?", -1, 49, 15, 131, 8
+    LTEXT "Är du säker på att du vill logga ut?", -1, 49, 15, 132, 8
     DEFPUSHBUTTON "&Logga ut", IDOK, 49, 38, 43, 14
     PUSHBUTTON "Avbryt", IDCANCEL, 99, 38, 43, 14
 END
@@ -853,6 +853,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "Kunde inte visa dialogen Bläddra (internt fel)"
     IDS_RUNDLG_BROWSE_CAPTION "Bläddra"
     IDS_RUNDLG_BROWSE_FILTER "Körbara filer (*.exe)\0*.exe\0Alla filer (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Start-meny\\Program"

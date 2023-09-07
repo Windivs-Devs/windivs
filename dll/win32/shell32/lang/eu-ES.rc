@@ -199,7 +199,7 @@ BEGIN
     LTEXT "Las&ter-tekla:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "Exe&kutatu:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "&Iruzkina:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Bilatu helburua...", IDC_SHORTCUT_FIND, 9, 172, 62, 14, ES_LEFT
@@ -494,10 +494,10 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Amaitu Windivs saioa"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 7, 7, 20, 20
-    LTEXT "Ziur zaude saioa amaitu nahi duzula?", -1, 35, 16, 146, 8
-    DEFPUSHBUTTON "Ama&itu saioa", IDOK, 41, 39, 50, 14
-    PUSHBUTTON "Utzi", IDCANCEL, 95, 39, 50, 14
+    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
+    LTEXT "Ziur zaude saioa amaitu nahi duzula?", -1, 49, 15, 132, 8
+    DEFPUSHBUTTON "Ama&itu saioa", IDOK, 49, 38, 53, 14
+    PUSHBUTTON "Utzi", IDCANCEL, 109, 38, 53, 14
 END
 
 IDD_LOG_OFF_FANCY DIALOGEX 0, 0, 208, 122
@@ -858,6 +858,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "Ezin du Arakatu dialogoa ireki (barneko errorea)"
     IDS_RUNDLG_BROWSE_CAPTION "Arakatu"
     IDS_RUNDLG_BROWSE_FILTER "Exekutatuko fitxategi (*.exe)\0*.exe\0Fitxategi denak (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Hasi Menua\\Programak"

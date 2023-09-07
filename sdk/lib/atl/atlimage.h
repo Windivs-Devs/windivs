@@ -6,12 +6,6 @@
 #ifndef __ATLIMAGE_H__
 #define __ATLIMAGE_H__
 
-// !!!!
-// TODO: The backend (gdi+) that this class relies on is not yet complete!
-//       Before that is finished, this class will not be a perfect replacement.
-//       See rostest/apitests/atl/CImage_WIP.txt for test results.
-// !!!!
-
 #pragma once
 
 #include <atlcore.h>        // for ATL Core
@@ -43,7 +37,7 @@ public:
         DIBOR_TOPDOWN               // top-down DIB
     };
 
-    CImage() throw()
+    CImage() noexcept
     {
         m_hBitmap = NULL;
         m_hOldBitmap = NULL;
@@ -58,13 +52,13 @@ public:
         s_gdiplus.IncreaseCImageCount();
     }
 
-    virtual ~CImage() throw()
+    virtual ~CImage() noexcept
     {
         Destroy();
         s_gdiplus.DecreaseCImageCount();
     }
 
-    operator HBITMAP() throw()
+    operator HBITMAP() noexcept
     {
         return m_hBitmap;
     }
@@ -74,12 +68,12 @@ public:
         s_gdiplus.ReleaseGDIPlus();
     }
 
-    void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw()
+    void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) noexcept
     {
         AttachInternal(hBitmap, eOrientation, -1);
     }
 
-    HBITMAP Detach() throw()
+    HBITMAP Detach() noexcept
     {
         m_eOrientation = DIBOR_DEFAULT;
         m_bHasAlphaChannel = false;
@@ -91,30 +85,43 @@ public:
         return hBitmap;
     }
 
-    HDC GetDC() const throw()
+    HDC GetDC() const noexcept
     {
-        if (m_hDC)
-            return m_hDC;
+        ATLASSERT(m_nDCRefCount >= 0);
+        if (::InterlockedIncrement(&m_nDCRefCount) == 1)
+        {
+            ATLASSERT(m_hDC == NULL);
+            ATLASSERT(m_hOldBitmap == NULL);
 
-        m_hDC = ::CreateCompatibleDC(NULL);
-        m_hOldBitmap = (HBITMAP)::SelectObject(m_hDC, m_hBitmap);
+            m_hDC = ::CreateCompatibleDC(NULL);
+            ATLASSERT(m_hDC != NULL);
+
+            m_hOldBitmap = (HBITMAP)::SelectObject(m_hDC, m_hBitmap);
+            ATLASSERT(m_hOldBitmap != NULL);
+        }
+
         return m_hDC;
     }
 
-    void ReleaseDC() const throw()
+    void ReleaseDC() const noexcept
     {
-        ATLASSERT(m_hDC);
+        ATLASSERT(m_nDCRefCount > 0);
 
-        if (m_hDC == NULL)
+        if (::InterlockedDecrement(&m_nDCRefCount) != 0)
             return;
 
         if (m_hOldBitmap)
         {
+            ATLASSERT(m_hDC != NULL);
             ::SelectObject(m_hDC, m_hOldBitmap);
             m_hOldBitmap = NULL;
         }
-        ::DeleteDC(m_hDC);
-        m_hDC = NULL;
+
+        if (m_hDC)
+        {
+            ::DeleteDC(m_hDC);
+            m_hDC = NULL;
+        }
     }
 
     BOOL AlphaBlend(HDC hDestDC,
@@ -163,7 +170,7 @@ public:
 
     BOOL BitBlt(HDC hDestDC, int xDest, int yDest,
                 int nDestWidth, int nDestHeight,
-                int xSrc, int ySrc, DWORD dwROP = SRCCOPY) const throw()
+                int xSrc, int ySrc, DWORD dwROP = SRCCOPY) const noexcept
     {
         GetDC();
         BOOL ret = ::BitBlt(hDestDC, xDest, yDest, nDestWidth, nDestHeight,
@@ -172,18 +179,18 @@ public:
         return ret;
     }
     BOOL BitBlt(HDC hDestDC, int xDest, int yDest,
-                DWORD dwROP = SRCCOPY) const throw()
+                DWORD dwROP = SRCCOPY) const noexcept
     {
         return BitBlt(hDestDC, xDest, yDest,
                       GetWidth(), GetHeight(), 0, 0, dwROP);
     }
     BOOL BitBlt(HDC hDestDC, const POINT& pointDest,
-                DWORD dwROP = SRCCOPY) const throw()
+                DWORD dwROP = SRCCOPY) const noexcept
     {
         return BitBlt(hDestDC, pointDest.x, pointDest.y, dwROP);
     }
     BOOL BitBlt(HDC hDestDC, const RECT& rectDest, const POINT& pointSrc,
-                DWORD dwROP = SRCCOPY) const throw()
+                DWORD dwROP = SRCCOPY) const noexcept
     {
         return BitBlt(hDestDC, rectDest.left, rectDest.top,
                       rectDest.right - rectDest.left,
@@ -191,18 +198,18 @@ public:
                       pointSrc.x, pointSrc.y, dwROP);
     }
 
-    BOOL Create(int nWidth, int nHeight, int nBPP, DWORD dwFlags = 0) throw()
+    BOOL Create(int nWidth, int nHeight, int nBPP, DWORD dwFlags = 0) noexcept
     {
         return CreateEx(nWidth, nHeight, nBPP, BI_RGB, NULL, dwFlags);
     }
 
     BOOL CreateEx(int nWidth, int nHeight, int nBPP, DWORD eCompression,
-                  const DWORD* pdwBitmasks = NULL, DWORD dwFlags = 0) throw()
+                  const DWORD* pdwBitmasks = NULL, DWORD dwFlags = 0) noexcept
     {
         return CreateInternal(nWidth, nHeight, nBPP, eCompression, pdwBitmasks, dwFlags);
     }
 
-    void Destroy() throw()
+    void Destroy() noexcept
     {
         if (m_hBitmap)
         {
@@ -211,7 +218,7 @@ public:
     }
 
     BOOL Draw(HDC hDestDC, int xDest, int yDest, int nDestWidth, int nDestHeight,
-              int xSrc, int ySrc, int nSrcWidth, int nSrcHeight) const throw()
+              int xSrc, int ySrc, int nSrcWidth, int nSrcHeight) const noexcept
     {
         ATLASSERT(IsTransparencySupported());
         if (m_bHasAlphaChannel)
@@ -235,7 +242,7 @@ public:
                               xSrc, ySrc, nSrcWidth, nSrcHeight);
         }
     }
-    BOOL Draw(HDC hDestDC, const RECT& rectDest, const RECT& rectSrc) const throw()
+    BOOL Draw(HDC hDestDC, const RECT& rectDest, const RECT& rectSrc) const noexcept
     {
         return Draw(hDestDC, rectDest.left, rectDest.top,
                     rectDest.right - rectDest.left,
@@ -244,28 +251,28 @@ public:
                     rectSrc.right - rectSrc.left,
                     rectSrc.bottom - rectSrc.top);
     }
-    BOOL Draw(HDC hDestDC, int xDest, int yDest) const throw()
+    BOOL Draw(HDC hDestDC, int xDest, int yDest) const noexcept
     {
         return Draw(hDestDC, xDest, yDest, GetWidth(), GetHeight());
     }
-    BOOL Draw(HDC hDestDC, const POINT& pointDest) const throw()
+    BOOL Draw(HDC hDestDC, const POINT& pointDest) const noexcept
     {
         return Draw(hDestDC, pointDest.x, pointDest.y);
     }
     BOOL Draw(HDC hDestDC, int xDest, int yDest,
-              int nDestWidth, int nDestHeight) const throw()
+              int nDestWidth, int nDestHeight) const noexcept
     {
         return Draw(hDestDC, xDest, yDest, nDestWidth, nDestHeight,
                     0, 0, GetWidth(), GetHeight());
     }
-    BOOL Draw(HDC hDestDC, const RECT& rectDest) const throw()
+    BOOL Draw(HDC hDestDC, const RECT& rectDest) const noexcept
     {
         return Draw(hDestDC, rectDest.left, rectDest.top,
                     rectDest.right - rectDest.left,
                     rectDest.bottom - rectDest.top);
     }
 
-    void *GetBits() throw()
+    void *GetBits() noexcept
     {
         ATLASSERT(IsDIBSection());
         BYTE *pb = (BYTE *)m_bm.bmBits;
@@ -276,14 +283,14 @@ public:
         return pb;
     }
 
-    int GetBPP() const throw()
+    int GetBPP() const noexcept
     {
         ATLASSERT(m_hBitmap);
         return m_bm.bmBitsPixel;
     }
 
     void GetColorTable(UINT iFirstColor, UINT nColors,
-                       RGBQUAD* prgbColors) const throw()
+                       RGBQUAD* prgbColors) const noexcept
     {
         ATLASSERT(IsDIBSection());
         GetDC();
@@ -291,13 +298,13 @@ public:
         ReleaseDC();
     }
 
-    int GetHeight() const throw()
+    int GetHeight() const noexcept
     {
         ATLASSERT(m_hBitmap);
         return m_bm.bmHeight;
     }
 
-    int GetMaxColorTableEntries() const throw()
+    int GetMaxColorTableEntries() const noexcept
     {
         ATLASSERT(IsDIBSection());
         if (m_ds.dsBmih.biClrUsed && m_ds.dsBmih.biBitCount < 16)
@@ -317,7 +324,7 @@ public:
         }
     }
 
-    int GetPitch() const throw()
+    int GetPitch() const noexcept
     {
         ATLASSERT(IsDIBSection());
         if (m_eOrientation == DIBOR_BOTTOMUP)
@@ -326,7 +333,7 @@ public:
             return m_bm.bmWidthBytes;
     }
 
-    COLORREF GetPixel(int x, int y) const throw()
+    COLORREF GetPixel(int x, int y) const noexcept
     {
         GetDC();
         COLORREF ret = ::GetPixel(m_hDC, x, y);
@@ -334,7 +341,7 @@ public:
         return ret;
     }
 
-    void* GetPixelAddress(int x, int y) throw()
+    void* GetPixelAddress(int x, int y) noexcept
     {
         ATLASSERT(IsDIBSection());
         BYTE *pb = (BYTE *)GetBits();
@@ -343,35 +350,35 @@ public:
         return pb;
     }
 
-    COLORREF GetTransparentColor() const throw()
+    COLORREF GetTransparentColor() const noexcept
     {
         return m_clrTransparentColor;
     }
 
-    int GetWidth() const throw()
+    int GetWidth() const noexcept
     {
         ATLASSERT(m_hBitmap);
         return m_bm.bmWidth;
     }
 
-    bool IsDIBSection() const throw()
+    bool IsDIBSection() const noexcept
     {
         ATLASSERT(m_hBitmap);
         return m_bIsDIBSection;
     }
 
-    bool IsIndexed() const throw()
+    bool IsIndexed() const noexcept
     {
         ATLASSERT(IsDIBSection());
         return GetBPP() <= 8;
     }
 
-    bool IsNull() const throw()
+    bool IsNull() const noexcept
     {
         return m_hBitmap == NULL;
     }
 
-    HRESULT Load(LPCTSTR pszFileName) throw()
+    HRESULT Load(LPCTSTR pszFileName) noexcept
     {
         if (!InitGDIPlus())
             return E_FAIL;
@@ -400,7 +407,7 @@ public:
             Attach(hbm);
         return (status == Ok ? S_OK : E_FAIL);
     }
-    HRESULT Load(IStream* pStream) throw()
+    HRESULT Load(IStream* pStream) noexcept
     {
         if (!InitGDIPlus())
             return E_FAIL;
@@ -428,13 +435,13 @@ public:
     }
 
     // NOTE: LoadFromResource loads BITMAP resource only
-    void LoadFromResource(HINSTANCE hInstance, LPCTSTR pszResourceName) throw()
+    void LoadFromResource(HINSTANCE hInstance, LPCTSTR pszResourceName) noexcept
     {
         HANDLE hHandle = ::LoadImage(hInstance, pszResourceName,
                                      IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION);
         Attach(reinterpret_cast<HBITMAP>(hHandle));
     }
-    void LoadFromResource(HINSTANCE hInstance, UINT nIDResource) throw()
+    void LoadFromResource(HINSTANCE hInstance, UINT nIDResource) noexcept
     {
         LoadFromResource(hInstance, MAKEINTRESOURCE(nIDResource));
     }
@@ -442,7 +449,7 @@ public:
     BOOL MaskBlt(HDC hDestDC, int xDest, int yDest,
                  int nDestWidth, int nDestHeight, int xSrc, int ySrc,
                  HBITMAP hbmMask, int xMask, int yMask,
-                 DWORD dwROP = SRCCOPY) const throw()
+                 DWORD dwROP = SRCCOPY) const noexcept
     {
         ATLASSERT(IsTransparencySupported());
         GetDC();
@@ -454,20 +461,20 @@ public:
     }
     BOOL MaskBlt(HDC hDestDC, const RECT& rectDest, const POINT& pointSrc,
                  HBITMAP hbmMask, const POINT& pointMask,
-                 DWORD dwROP = SRCCOPY) const throw()
+                 DWORD dwROP = SRCCOPY) const noexcept
     {
         return MaskBlt(hDestDC, rectDest.left, rectDest.top,
             rectDest.right - rectDest.left, rectDest.bottom - rectDest.top,
             pointSrc.x, pointSrc.y, hbmMask, pointMask.x, pointMask.y, dwROP);
     }
     BOOL MaskBlt(HDC hDestDC, int xDest, int yDest,
-                 HBITMAP hbmMask, DWORD dwROP = SRCCOPY) const throw()
+                 HBITMAP hbmMask, DWORD dwROP = SRCCOPY) const noexcept
     {
         return MaskBlt(hDestDC, xDest, yDest, GetWidth(), GetHeight(),
                        0, 0, hbmMask, 0, 0, dwROP);
     }
     BOOL MaskBlt(HDC hDestDC, const POINT& pointDest,
-                 HBITMAP hbmMask, DWORD dwROP = SRCCOPY) const throw()
+                 HBITMAP hbmMask, DWORD dwROP = SRCCOPY) const noexcept
     {
         return MaskBlt(hDestDC, pointDest.x, pointDest.y, hbmMask, dwROP);
     }
@@ -475,7 +482,7 @@ public:
     BOOL PlgBlt(HDC hDestDC, const POINT* pPoints,
                 int xSrc, int ySrc, int nSrcWidth, int nSrcHeight,
                 HBITMAP hbmMask = NULL,
-                int xMask = 0, int yMask = 0) const throw()
+                int xMask = 0, int yMask = 0) const noexcept
     {
         ATLASSERT(IsTransparencySupported());
         GetDC();
@@ -486,26 +493,26 @@ public:
         return ret;
     }
     BOOL PlgBlt(HDC hDestDC, const POINT* pPoints,
-                HBITMAP hbmMask = NULL) const throw()
+                HBITMAP hbmMask = NULL) const noexcept
     {
         return PlgBlt(hDestDC, pPoints, 0, 0, GetWidth(), GetHeight(),
                       hbmMask);
     }
     BOOL PlgBlt(HDC hDestDC, const POINT* pPoints, const RECT& rectSrc,
-                HBITMAP hbmMask, const POINT& pointMask) const throw()
+                HBITMAP hbmMask, const POINT& pointMask) const noexcept
     {
         return PlgBlt(hDestDC, pPoints, rectSrc.left, rectSrc.top,
             rectSrc.right - rectSrc.left, rectSrc.bottom - rectSrc.top,
             hbmMask, pointMask.x, pointMask.y);
     }
     BOOL PlgBlt(HDC hDestDC, const POINT* pPoints, const RECT& rectSrc,
-                HBITMAP hbmMask = NULL) const throw()
+                HBITMAP hbmMask = NULL) const noexcept
     {
         POINT pointMask = {0, 0};
         return PlgBlt(hDestDC, pPoints, rectSrc, hbmMask, pointMask);
     }
 
-    HRESULT Save(IStream* pStream, GUID *guidFileType) const throw()
+    HRESULT Save(IStream* pStream, GUID *guidFileType) const noexcept
     {
         if (!InitGDIPlus())
             return E_FAIL;
@@ -536,7 +543,7 @@ public:
     }
 
     HRESULT Save(LPCTSTR pszFileName,
-                 REFGUID guidFileType = GUID_NULL) const throw()
+                 REFGUID guidFileType = GUID_NULL) const noexcept
     {
         if (!InitGDIPlus())
             return E_FAIL;
@@ -578,7 +585,7 @@ public:
     }
 
     void SetColorTable(UINT iFirstColor, UINT nColors,
-                       const RGBQUAD* prgbColors) throw()
+                       const RGBQUAD* prgbColors) noexcept
     {
         ATLASSERT(IsDIBSection());
         GetDC();
@@ -586,14 +593,14 @@ public:
         ReleaseDC();
     }
 
-    void SetPixel(int x, int y, COLORREF color) throw()
+    void SetPixel(int x, int y, COLORREF color) noexcept
     {
         GetDC();
         ::SetPixelV(m_hDC, x, y, color);
         ReleaseDC();
     }
 
-    void SetPixelIndexed(int x, int y, int iIndex) throw()
+    void SetPixelIndexed(int x, int y, int iIndex) noexcept
     {
         ATLASSERT(IsIndexed());
         GetDC();
@@ -601,12 +608,12 @@ public:
         ReleaseDC();
     }
 
-    void SetPixelRGB(int x, int y, BYTE r, BYTE g, BYTE b) throw()
+    void SetPixelRGB(int x, int y, BYTE r, BYTE g, BYTE b) noexcept
     {
         SetPixel(x, y, RGB(r, g, b));
     }
 
-    COLORREF SetTransparentColor(COLORREF rgbTransparent) throw()
+    COLORREF SetTransparentColor(COLORREF rgbTransparent) noexcept
     {
         ATLASSERT(m_hBitmap);
         COLORREF rgbOldColor = m_clrTransparentColor;
@@ -617,7 +624,7 @@ public:
     BOOL StretchBlt(HDC hDestDC, int xDest, int yDest,
                     int nDestWidth, int nDestHeight,
                     int xSrc, int ySrc, int nSrcWidth, int nSrcHeight,
-                    DWORD dwROP = SRCCOPY) const throw()
+                    DWORD dwROP = SRCCOPY) const noexcept
     {
         GetDC();
         BOOL ret = ::StretchBlt(hDestDC, xDest, yDest, nDestWidth, nDestHeight,
@@ -627,20 +634,20 @@ public:
     }
     BOOL StretchBlt(HDC hDestDC, int xDest, int yDest,
                     int nDestWidth, int nDestHeight,
-                    DWORD dwROP = SRCCOPY) const throw()
+                    DWORD dwROP = SRCCOPY) const noexcept
     {
         return StretchBlt(hDestDC, xDest, yDest, nDestWidth, nDestHeight,
                           0, 0, GetWidth(), GetHeight(), dwROP);
     }
     BOOL StretchBlt(HDC hDestDC, const RECT& rectDest,
-                    DWORD dwROP = SRCCOPY) const throw()
+                    DWORD dwROP = SRCCOPY) const noexcept
     {
         return StretchBlt(hDestDC, rectDest.left, rectDest.top,
                           rectDest.right - rectDest.left,
                           rectDest.bottom - rectDest.top, dwROP);
     }
     BOOL StretchBlt(HDC hDestDC, const RECT& rectDest,
-                    const RECT& rectSrc, DWORD dwROP = SRCCOPY) const throw()
+                    const RECT& rectSrc, DWORD dwROP = SRCCOPY) const noexcept
     {
         return StretchBlt(hDestDC, rectDest.left, rectDest.top,
                           rectDest.right - rectDest.left,
@@ -653,7 +660,7 @@ public:
     BOOL TransparentBlt(HDC hDestDC, int xDest, int yDest,
                         int nDestWidth, int nDestHeight,
                         int xSrc, int ySrc, int nSrcWidth, int nSrcHeight,
-                        UINT crTransparent = CLR_INVALID) const throw()
+                        UINT crTransparent = CLR_INVALID) const noexcept
     {
         ATLASSERT(IsTransparencySupported());
         GetDC();
@@ -666,13 +673,13 @@ public:
     }
     BOOL TransparentBlt(HDC hDestDC, int xDest, int yDest,
                         int nDestWidth, int nDestHeight,
-                        UINT crTransparent = CLR_INVALID) const throw()
+                        UINT crTransparent = CLR_INVALID) const noexcept
     {
         return TransparentBlt(hDestDC, xDest, yDest, nDestWidth, nDestHeight,
                               0, 0, GetWidth(), GetHeight(), crTransparent);
     }
     BOOL TransparentBlt(HDC hDestDC, const RECT& rectDest,
-                        UINT crTransparent = CLR_INVALID) const throw()
+                        UINT crTransparent = CLR_INVALID) const noexcept
     {
         return TransparentBlt(hDestDC, rectDest.left, rectDest.top,
                               rectDest.right - rectDest.left,
@@ -680,7 +687,7 @@ public:
     }
     BOOL TransparentBlt(
        HDC hDestDC, const RECT& rectDest,
-       const RECT& rectSrc, UINT crTransparent = CLR_INVALID) const throw()
+       const RECT& rectSrc, UINT crTransparent = CLR_INVALID) const noexcept
     {
         return TransparentBlt(hDestDC, rectDest.left, rectDest.top,
             rectDest.right - rectDest.left, rectDest.bottom - rectDest.left,
@@ -688,7 +695,7 @@ public:
             rectSrc.bottom - rectSrc.top, crTransparent);
     }
 
-    static BOOL IsTransparencySupported() throw()
+    static BOOL IsTransparencySupported() noexcept
     {
         return TRUE;
     }
@@ -874,7 +881,7 @@ private:
         LONG m_nCImageObjects;
         DWORD m_dwLastError;
 
-        void _clear_funs() throw()
+        void _clear_funs() noexcept
         {
             Startup = NULL;
             Shutdown = NULL;
@@ -892,7 +899,7 @@ private:
         }
 
         template <typename T_FUN>
-        T_FUN _get_fun(T_FUN& fun, LPCSTR name) throw()
+        T_FUN _get_fun(T_FUN& fun, LPCSTR name) noexcept
         {
             if (!fun)
                 fun = reinterpret_cast<T_FUN>(::GetProcAddress(m_hInst, name));
@@ -915,7 +922,7 @@ private:
         FUN_SaveImageToFile         SaveImageToFile;
         FUN_SaveImageToStream       SaveImageToStream;
 
-        CInitGDIPlus() throw()
+        CInitGDIPlus() noexcept
             : m_hInst(NULL)
             , m_dwToken(0)
             , m_nCImageObjects(0)
@@ -925,13 +932,13 @@ private:
             ::InitializeCriticalSection(&m_sect);
         }
 
-        ~CInitGDIPlus() throw()
+        ~CInitGDIPlus() noexcept
         {
             ReleaseGDIPlus();
             ::DeleteCriticalSection(&m_sect);
         }
 
-        bool Init() throw()
+        bool Init() noexcept
         {
             ::EnterCriticalSection(&m_sect);
 
@@ -968,7 +975,7 @@ private:
             return ret;
         }
 
-        void ReleaseGDIPlus() throw()
+        void ReleaseGDIPlus() noexcept
         {
             ::EnterCriticalSection(&m_sect);
             if (m_dwToken)
@@ -987,14 +994,14 @@ private:
             ::LeaveCriticalSection(&m_sect);
         }
 
-        void IncreaseCImageCount() throw()
+        void IncreaseCImageCount() noexcept
         {
             ::EnterCriticalSection(&m_sect);
             ++m_nCImageObjects;
             ::LeaveCriticalSection(&m_sect);
         }
 
-        void DecreaseCImageCount() throw()
+        void DecreaseCImageCount() noexcept
         {
             ::EnterCriticalSection(&m_sect);
             if (--m_nCImageObjects == 0)
@@ -1007,7 +1014,7 @@ private:
 
     static CInitGDIPlus s_gdiplus;
 
-    static bool InitGDIPlus() throw()
+    static bool InitGDIPlus() noexcept
     {
         return s_gdiplus.Init();
     }
@@ -1016,6 +1023,7 @@ private:
     HBITMAP             m_hBitmap;
     mutable HBITMAP     m_hOldBitmap;
     mutable HDC         m_hDC;
+    mutable LONG        m_nDCRefCount = 0;
     DIBOrientation      m_eOrientation;
     bool                m_bHasAlphaChannel;
     bool                m_bIsDIBSection;
@@ -1126,7 +1134,7 @@ private:
     }
 
     void AttachInternal(HBITMAP hBitmap, DIBOrientation eOrientation,
-                        LONG iTransColor) throw()
+                        LONG iTransColor) noexcept
     {
         Destroy();
 
@@ -1146,7 +1154,7 @@ private:
 
     BOOL CreateInternal(int nWidth, int nHeight, int nBPP,
                         DWORD eCompression, const DWORD* pdwBitmasks = NULL,
-                        DWORD dwFlags = 0) throw()
+                        DWORD dwFlags = 0) noexcept
     {
         ATLASSERT(nWidth != 0);
         ATLASSERT(nHeight != 0);
@@ -1213,7 +1221,34 @@ private:
 
 DECLSPEC_SELECTANY CImage::CInitGDIPlus CImage::s_gdiplus;
 
-}
+class CImageDC
+{
+private:
+    const CImage& m_image;
+    HDC m_hDC;
+
+public:
+    CImageDC(const CImage& image)
+        : m_image(image)
+        , m_hDC(image.GetDC())
+    {
+    }
+
+    virtual ~CImageDC() noexcept
+    {
+        m_image.ReleaseDC();
+    }
+
+    operator HDC() const noexcept
+    {
+        return m_hDC;
+    }
+
+    CImageDC(const CImageDC&) = delete;
+    CImageDC& operator=(const CImageDC&) = delete;
+};
+
+} // namespace ATL
 
 #endif
 

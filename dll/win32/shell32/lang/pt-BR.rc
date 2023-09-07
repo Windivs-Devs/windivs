@@ -192,7 +192,7 @@ BEGIN
     LTEXT "&Tecla de atalho:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&Executar:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "C&omentário:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Procurar Alvo...", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -482,13 +482,13 @@ BEGIN
     ICON "", 12301, 50, 89, 21, 20, SS_REALSIZECONTROL
 END
 
-IDD_LOG_OFF DIALOGEX 0, 0, 188, 60
+IDD_LOG_OFF DIALOGEX 0, 0, 212, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Log Off Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Você tem certeza que desejar realizar log off?", -1, 35, 15, 148, 8
+    LTEXT "Você tem certeza que desejar realizar log off?", -1, 49, 15, 156, 8
     DEFPUSHBUTTON "&Log Off", IDOK, 49, 38, 43, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 99, 38, 43, 14
 END
@@ -853,6 +853,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "Unable to display Browse dialog box (internal error)"
     IDS_RUNDLG_BROWSE_CAPTION "Procurar"
     IDS_RUNDLG_BROWSE_FILTER "Arquivos Executáveis (*.exe)\0*.exe\0Todos os arquivos (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Menu Iniciar\\Programas"

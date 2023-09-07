@@ -192,7 +192,7 @@ BEGIN
     LTEXT "&Billentyűparancs:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&Futtatás:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "&Megjegyzés:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Cé&l keresése...", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -488,9 +488,9 @@ CAPTION "Kijelentkezés a Windivs-ből"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "Biztosan ki akar jelentkezni?", -1, 49, 15, 131, 8
+    LTEXT "Biztosan ki akar jelentkezni?", -1, 49, 15, 132, 8
     DEFPUSHBUTTON "&Kijelentkezés", IDOK, 49, 38, 53, 14
-    PUSHBUTTON "Mégse", IDCANCEL, 109, 38, 43, 14
+    PUSHBUTTON "Mégse", IDCANCEL, 109, 38, 53, 14
 END
 
 IDD_LOG_OFF_FANCY DIALOGEX 0, 0, 208, 122
@@ -805,11 +805,11 @@ BEGIN
     IDS_COPYERRORSAME "'%s' nem másolható: a forrás- és célfájl ugyanaz."
     IDS_MOVEERRORSUBFOLDER "'%s' nem mozgatható: a célmappa a forrásmappa egyik almappája."
     IDS_COPYERRORSUBFOLDER "'%s' nem másolható: a célmappa a forrásmappa egyik almappája."
-    IDS_MOVEERROR "Cannot move '%s': %s"
-    IDS_COPYERROR "Cannot copy '%s': %s"
+    IDS_MOVEERROR "'%s' nem mozgatható: %s"
+    IDS_COPYERROR "'%s' nem másolható: %s"
 
-    IDS_CREATEFILE_DENIED "Could not create file %1"
-    IDS_CREATEFILE_CAPTION "Error creating file"
+    IDS_CREATEFILE_DENIED "Nem sikerült a(z) %1 fájl létrehozása"
+    IDS_CREATEFILE_CAPTION "Hiba a fájl létrehozásakor"
     IDS_CREATEFOLDER_DENIED "Nem sikerült a(z) '%1' mappa létrehozása."
     IDS_CREATEFOLDER_CAPTION "Nem sikerült létrehozni a mappát"
     IDS_DELETEITEM_CAPTION "Állomány törlés megerősítése"
@@ -853,6 +853,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_CAPTION "Tallózás"
     IDS_RUNDLG_BROWSE_FILTER "Futtatható fájlok (*.exe)\0*.exe\0Minden fájl (*.*)\0*.*\0"
 
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
+
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Start menü\\Programok"
     IDS_PERSONAL "Dokumentumok"
@@ -884,7 +889,7 @@ BEGIN
     IDS_NETWORKPLACE "Hálózati helyek"
 
     IDS_NEWFOLDER "Új mappa"
-    IDS_NEWITEMFORMAT "New %s"
+    IDS_NEWITEMFORMAT "Új %s"
 
     IDS_DRIVE_FIXED "Helyi lemez"
     IDS_DRIVE_CDROM "CD-meghajtó"
@@ -902,7 +907,7 @@ BEGIN
     IDS_SHELL_ABOUT_AUTHORS "&Készítők"
     IDS_SHELL_ABOUT_CHANGELOG "&Changelog"
     IDS_SHELL_ABOUT_BACK "< &Vissza"
-    FCIDM_SHVIEW_NEW "Ne&w" /* A menu item with an ampersand */
+    FCIDM_SHVIEW_NEW "Ú&j" /* A menu item with an ampersand */
     FCIDM_SHVIEW_NEWFOLDER "&Mappa"
     FCIDM_SHVIEW_NEWLINK "&Parancsikon"
     IDS_FOLDER_OPTIONS "Mappabeállítások"

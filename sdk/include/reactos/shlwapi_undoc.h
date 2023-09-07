@@ -69,6 +69,19 @@ HRESULT WINAPI SHWriteDataBlockList(IStream* lpStream, LPDBLIST lpList);
 HRESULT WINAPI SHReadDataBlockList(IStream* lpStream, LPDBLIST* lppList);
 VOID WINAPI SHFreeDataBlockList(LPDBLIST lpList);
 
+LONG
+WINAPI
+RegCreateKeyExWrapW(
+    _In_ HKEY hKey,
+    _In_ LPCWSTR lpSubKey,
+    _In_ DWORD Reserved,
+    _In_opt_ LPWSTR lpClass,
+    _In_ DWORD dwOptions,
+    _In_ REGSAM samDesired,
+    _In_opt_ LPSECURITY_ATTRIBUTES lpSecurityAttributes,
+    _Out_ PHKEY phkResult,
+    _Out_opt_ LPDWORD lpdwDisposition);
+
 /* Redirected to kernel32.ExpandEnvironmentStringsA/W */
 DWORD WINAPI SHExpandEnvironmentStringsA(LPCSTR,LPSTR,DWORD);
 DWORD WINAPI SHExpandEnvironmentStringsW(LPCWSTR,LPWSTR,DWORD);
@@ -263,6 +276,7 @@ BOOL WINAPI PathFileExistsDefExtW(LPWSTR lpszPath, DWORD dwWhich);
 BOOL WINAPI PathFindOnPathExW(LPWSTR lpszFile, LPCWSTR *lppszOtherDirs, DWORD dwWhich);
 VOID WINAPI FixSlashesAndColonW(LPWSTR);
 BOOL WINAPI PathIsValidCharW(WCHAR c, DWORD dwClass);
+BOOL WINAPI SHGetPathFromIDListWrapW(LPCITEMIDLIST pidl, LPWSTR pszPath);
 
 #ifdef __cplusplus
 } /* extern "C" */

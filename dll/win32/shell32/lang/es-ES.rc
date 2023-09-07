@@ -201,7 +201,7 @@ BEGIN
     LTEXT "&Tecla de método abreviado:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&Ejecutar:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "C&omentario:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&Abrir ubicación...", IDC_SHORTCUT_FIND, 9, 172, 62, 14, ES_LEFT
@@ -491,15 +491,15 @@ BEGIN
     ICON "", 12301, 50, 89, 21, 20, SS_REALSIZECONTROL
 END
 
-IDD_LOG_OFF DIALOGEX 0, 0, 188, 60
+IDD_LOG_OFF DIALOGEX 0, 0, 212, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Cerrar sesión de Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 7, 7, 20, 20
-    LTEXT "¿Esta seguro de que quiere cerrar la sesión?", -1, 35, 16, 146, 8
-    DEFPUSHBUTTON "&Cerrar sesión", IDOK, 41, 39, 50, 14
-    PUSHBUTTON "Cancelar", IDCANCEL, 95, 39, 50, 14
+    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
+    LTEXT "¿Esta seguro de que quiere cerrar la sesión?", -1, 49, 15, 156, 8
+    DEFPUSHBUTTON "&Cerrar sesión", IDOK, 49, 38, 53, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 109, 38, 53, 14
 END
 
 IDD_LOG_OFF_FANCY DIALOGEX 0, 0, 208, 122
@@ -862,6 +862,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "No se pudo mostrar el diálogo Examinar (error interno)"
     IDS_RUNDLG_BROWSE_CAPTION "Examinar"
     IDS_RUNDLG_BROWSE_FILTER "Archivos ejecutables (*.exe)\0*.exe\0Todos los archivos (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Menú Inicio\\Programas"
