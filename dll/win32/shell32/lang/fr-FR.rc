@@ -164,7 +164,7 @@ CAPTION "Exécuter"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_RUNDLG_ICON, 7, 11, 18, 20, WS_VISIBLE
-    LTEXT "Entrez le nom d'un programme, d'un dossier, d'un document ou d'une ressource Internet, et Windivs l'ouvrira pour vous.", 12289, 36, 4, 185, 26
+    LTEXT "Entrez le nom d'un programme, d'un dossier, d'un document ou d'une ressource Internet, et ReactOS l'ouvrira pour vous.", 12289, 36, 4, 185, 26
     LTEXT "&Ouvrir :", 12305, 7, 39, 26, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 184, 100
     DEFPUSHBUTTON "OK", IDOK, 62, 70, 50, 14, WS_TABSTOP
@@ -192,7 +192,7 @@ BEGIN
     LTEXT "&Touche de raccourci :", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&Exécuter :", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "C&ommentaire :", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "Trouver la cible...", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -414,7 +414,7 @@ BEGIN
     GROUPBOX "Tâches", -1, 7, 10, 249, 45
     CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 25, 21, 20
     AUTORADIOBUTTON "Afficher les tâches habituelles dans les dossiers", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 205, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Utiliser les dossiers Windivs class&iques", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 205, 10
+    AUTORADIOBUTTON "Utiliser les dossiers ReactOS class&iques", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 205, 10
     GROUPBOX "Parcourir les dossiers", -1, 7, 60, 249, 45, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
     AUTORADIOBUTTON "Ouvrir tous les dossiers dans la &même fenêtre", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 205, 10, WS_TABSTOP | WS_GROUP
@@ -482,15 +482,15 @@ BEGIN
     ICON "", 12301, 50, 89, 21, 20, SS_REALSIZECONTROL
 END
 
-IDD_LOG_OFF DIALOGEX 0, 0, 188, 60
+IDD_LOG_OFF DIALOGEX 0, 0, 212, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Fermer Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 7, 7, 20, 20
-    LTEXT "Êtes-vous sûr de vouloir fermer Windivs ?", -1, 35, 16, 146, 8
-    DEFPUSHBUTTON "Fermer", IDOK, 41, 39, 50, 14
-    PUSHBUTTON "Annuler", IDCANCEL, 95, 39, 50, 14
+    ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
+    LTEXT "Êtes-vous sûr de vouloir fermer Windivs?", -1, 49, 15, 156, 8
+    DEFPUSHBUTTON "&Fermer", IDOK, 49, 38, 43, 14
+    PUSHBUTTON "Annuler", IDCANCEL, 99, 38, 43, 14
 END
 
 IDD_LOG_OFF_FANCY DIALOGEX 0, 0, 208, 122
@@ -502,14 +502,14 @@ BEGIN
     PUSHBUTTON "&Switch User", IDC_SWITCH_USER_BUTTON, 55, 46, 22, 20, BS_OWNERDRAW | WS_DISABLED | WS_GROUP
     PUSHBUTTON "&Fermer", IDC_LOG_OFF_BUTTON, 132, 46, 22, 20, BS_OWNERDRAW
     PUSHBUTTON "Annuler", IDCANCEL, 162, 103, 40, 12, WS_GROUP | BS_FLAT
-    LTEXT "Fermer Windivs", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 130, 19
+    LTEXT "Fermer ReactOS", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 130, 19
     CTEXT "Switch User", IDC_SWITCH_USER_STATIC, 41, 70, 51, 11
     CTEXT "Fermer", IDC_LOG_OFF_STATIC, 118, 70, 51, 11
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Déconnecter Windivs"
+CAPTION "Déconnecter ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_DISCONN, IDC_STATIC, 8, 6, 21, 20
@@ -523,7 +523,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CLIPSIBLIN
 CAPTION "Exécution automatique"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Sélectionnez un type de contenu, puis choisissez une action que Windivs réalisera automatiquement quand ce type sera utilisé dans ce périphérique :", 1000, 7, 7, 215, 20
+    LTEXT "Sélectionnez un type de contenu, puis choisissez une action que ReactOS réalisera automatiquement quand ce type sera utilisé dans ce périphérique :", 1000, 7, 7, 215, 20
     CONTROL "", 1001, "COMBOBOXEX32", WS_TABSTOP | 0x00000043, 7, 27, 212, 200
     GROUPBOX "Actions", -1, 7, 45, 212, 146
     AUTORADIOBUTTON "Sélectionnez une action à réaliser :", 1005, 14, 54, 202, 10, WS_GROUP
@@ -539,7 +539,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
     LTEXT "Ce disque ou dispositif contient plus d'un type de fichiers.", 1001, 32, 7, 191, 20
-    LTEXT "Que voulez-vous que Windivs fasse ?", 1002, 32, 31, 188, 8
+    LTEXT "Que voulez-vous que ReactOS fasse ?", 1002, 32, 31, 188, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 188, 139
     DEFPUSHBUTTON "OK", IDOK, 96, 186, 60, 14
     PUSHBUTTON "Annuler", IDCANCEL, 160, 186, 60, 14
@@ -551,10 +551,10 @@ CAPTION "Contenu mixte"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "Windivs peut réaliser la même action chaque fois que vous insérez un disque ou connectez un dispositif avec ce type de fichiers :", 1001, 30, 7, 193, 20
+    LTEXT "ReactOS peut réaliser la même action chaque fois que vous insérez un disque ou connectez un dispositif avec ce type de fichiers :", 1001, 30, 7, 193, 20
     ICON "", 1005, 32, 27, 11, 10, SS_REALSIZECONTROL
     EDITTEXT 1006, 49, 28, 177, 14, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Que voulez-vous que Windivs fasse ?", 1002, 32, 41, 190, 8
+    LTEXT "Que voulez-vous que ReactOS fasse ?", 1002, 32, 41, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 55, 188, 112
     AUTOCHECKBOX "Toujours réaliser l'action sélectionnée.", 1004, 32, 171, 190, 10
     DEFPUSHBUTTON "OK", IDOK, 96, 185, 60, 14
@@ -567,8 +567,8 @@ CAPTION "Exécution automatique"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "Windivs peut réaliser la même action chaque fois que vous connectez ce dispositif.", 1001, 32, 7, 190, 22
-    LTEXT "Que voulez-vous que Windivs fasse ?", 1002, 32, 31, 190, 8
+    LTEXT "ReactOS peut réaliser la même action chaque fois que vous connectez ce dispositif.", 1001, 32, 7, 190, 22
+    LTEXT "Que voulez-vous que ReactOS fasse ?", 1002, 32, 31, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 187, 96
     AUTOCHECKBOX "Toujours réaliser l'action sélectionnée", 1004, 32, 143, 190, 8
     DEFPUSHBUTTON "OK", IDOK, 94, 160, 60, 14
@@ -577,7 +577,7 @@ END
 
 IDD_SHUTDOWN DIALOGEX 0, 0, 211, 103
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Fermer Windivs"
+CAPTION "Fermer ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 8240, -1, 6, 6, 21, 20, SS_REALSIZECONTROL | WS_GROUP
@@ -853,6 +853,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "Impossible d'afficher la boîte de dialogue pour la recherche de fichier (erreur interne)"
     IDS_RUNDLG_BROWSE_CAPTION "Parcourir"
     IDS_RUNDLG_BROWSE_FILTER "Fichiers exécutables (*.exe)\0*.exe\0Tous les fichiers (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "Menu Démarrer\\Programmes"

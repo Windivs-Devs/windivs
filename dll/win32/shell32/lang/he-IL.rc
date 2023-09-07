@@ -194,7 +194,7 @@ BEGIN
     LTEXT "מקש קיצור:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "הפעל:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "הערה:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "פתח מיקום קובץ", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -490,7 +490,7 @@ CAPTION "התנתקות מ-Windivs"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "האם אתה בטוח שברצונך להתנתק?", -1, 49, 15, 131, 8
+    LTEXT "האם אתה בטוח שברצונך להתנתק?", -1, 49, 15, 132, 8
     DEFPUSHBUTTON "התנתק", IDOK, 49, 38, 43, 14
     PUSHBUTTON "ביטול", IDCANCEL, 99, 38, 43, 14
 END
@@ -855,6 +855,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_ERROR "Unable to display Browse dialog box (internal error)"
     IDS_RUNDLG_BROWSE_CAPTION "עיון"
     IDS_RUNDLG_BROWSE_FILTER "Executable Files (*.exe)\0*.exe\0All Files (*.*)\0*.*\0"
+
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
 
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "תפריט ההתחלה\\תכניות"

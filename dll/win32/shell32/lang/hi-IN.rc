@@ -1,3 +1,10 @@
+/*
+ * PROJECT:     ReactOS Shell32
+ * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
+ * PURPOSE:     Hindi (India) resource file
+ * TRANSLATOR:  Copyright 2019 Arnav Bhatt <arnavbhatt2004@gmail.com>
+ */
+
 LANGUAGE LANG_HINDI, SUBLANG_HINDI_INDIA
 
 MENU_001 MENUEX
@@ -192,7 +199,7 @@ BEGIN
     LTEXT "शॉर्टकट &की:", IDC_SHORTCUT_KEY, 8, 117, 68, 10
     CONTROL "", IDC_SHORTCUT_KEY_HOTKEY, "msctls_hotkey32", WS_VISIBLE | WS_CHILD | WS_BORDER | WS_TABSTOP, 79, 115, 150, 14
     LTEXT "&रन:", IDC_SHORTCUT_RUN, 8, 136, 68, 10
-    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 14, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX IDC_SHORTCUT_RUN_COMBO, 79, 134, 150, 54, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
     LTEXT "&टिप्पणी:", IDC_SHORTCUT_COMMENT, 8, 154, 68, 10
     EDITTEXT IDC_SHORTCUT_COMMENT_EDIT, 79, 152, 150, 14, ES_AUTOHSCROLL
     PUSHBUTTON "&टारगेट ढूंढें...", IDC_SHORTCUT_FIND, 9, 172, 70, 14, ES_LEFT
@@ -488,7 +495,7 @@ CAPTION "लॉग ऑफ़ रिऐक्ट ओएस"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
-    LTEXT "क्या आप वाकई लॉग आफ़ करना चाहते हैं?", -1, 49, 15, 131, 8
+    LTEXT "क्या आप वाकई लॉग आफ़ करना चाहते हैं?", -1, 49, 15, 132, 8
     DEFPUSHBUTTON "&लॉग आफ़", IDOK, 49, 38, 43, 14
     PUSHBUTTON "रद्द करें", IDCANCEL, 99, 38, 43, 14
 END
@@ -849,6 +856,11 @@ BEGIN
     IDS_RUNDLG_BROWSE_CAPTION "ब्राउज़"
     IDS_RUNDLG_BROWSE_FILTER "एक्सेक्यूटेबल फ़ाइलें (*.exe)\0*.exe\0सारे फ़ाइलें (*.*)\0*.*\0"
 
+    /* Shortcut property sheet */
+    IDS_SHORTCUT_RUN_NORMAL "Normal window"
+    IDS_SHORTCUT_RUN_MIN "Minimized"
+    IDS_SHORTCUT_RUN_MAX "Maximized"
+
     /* Shell folder path default values. See also: dll/win32/userenv/lang */
     IDS_PROGRAMS "प्रारंभ मेनू\\प्रोग्राम"
     IDS_PERSONAL "मेरे डॉक्यूमेंट"
@@ -1020,7 +1032,7 @@ BEGIN
     IDS_SPECIFY_ACTION "आपको एक कार्रवाई निर्दिष्ट करनी चाहिए।"
     IDS_INVALID_PROGRAM "निर्दिष्ट प्रोग्राम नहीं मिल सका। सुनिश्चित करें कि फ़ाइल का नाम और पथ सही है।"
     IDS_REMOVE_ACTION "क्या आप वाकई इस कार्रवाई को हटाना चाहते हैं?"
-    IDS_ACTION_EXISTS "इस फ़ाइल प्रकार के लिए कार्रवाई '% s' पहले से ही पंजीकृत है। कृपया एक अलग नाम दर्ज करें और पुनः प्रयास करें।"
+    IDS_ACTION_EXISTS "इस फ़ाइल प्रकार के लिए कार्रवाई '%s' पहले से ही पंजीकृत है। कृपया एक अलग नाम दर्ज करें और पुनः प्रयास करें।"
     IDS_EXE_FILTER "प्रोग्राम\0*.exe\0सारे फ़ाइल\0*.*\0"
     IDS_EDITING_ACTION "प्रकार के लिए संपादन कार्रवाई:"
     IDS_NO_ICONS "फ़ाइल '%s' में कोई आइकन नहीं है।\n\nसूची से एक आइकन चुनें या एक अलग फ़ाइल निर्दिष्ट करें।"

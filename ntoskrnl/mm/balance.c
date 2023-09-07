@@ -1,11 +1,9 @@
 /*
- * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
- * FILE:            ntoskrnl/mm/balance.c
- * PURPOSE:         kernel memory management functions
- *
- * PROGRAMMERS:     David Welch (welch@cwcom.net)
- *                  Cameron Gutman (cameron.gutman@reactos.org)
+ * COPYRIGHT:   See COPYING in the top level directory
+ * PROJECT:     ReactOS kernel
+ * PURPOSE:     kernel memory management functions
+ * PROGRAMMERS: David Welch <welch@cwcom.net>
+ *              Cameron Gutman <cameron.gutman@reactos.org>
  */
 
 /* INCLUDES *****************************************************************/
@@ -144,7 +142,7 @@ MmTrimUserMemory(ULONG Target, ULONG Priority, PULONG NrFreedPages)
 
     (*NrFreedPages) = 0;
 
-    DPRINT1("MM BALANCER: %s\n", Priority ? "Paging out!" : "Removing access bit!");
+    DPRINT("MM BALANCER: %s\n", Priority ? "Paging out!" : "Removing access bit!");
 
     FirstPage = MmGetLRUFirstUserPage();
     CurrentPage = FirstPage;
@@ -316,6 +314,15 @@ MmRequestPageMemoryConsumer(ULONG Consumer, BOOLEAN CanWait,
                             PPFN_NUMBER AllocatedPage)
 {
     PFN_NUMBER Page;
+    static INT i = 0;
+    static LARGE_INTEGER TinyTime = {{-1L, -1L}};
+
+    /* Delay some requests for the Memory Manager to recover pages */
+    if (i++ >= 100)
+    {
+        KeDelayExecutionThread(KernelMode, FALSE, &TinyTime);
+        i = 0;
+    }
 
     /*
      * Actually allocate the page.
@@ -335,6 +342,10 @@ MmRequestPageMemoryConsumer(ULONG Consumer, BOOLEAN CanWait,
     return(STATUS_SUCCESS);
 }
 
+VOID
+CcRosTrimCache(
+    _In_ ULONG Target,
+    _Out_ PULONG NrFreed);
 
 VOID NTAPI
 MiBalancerThread(PVOID Unused)
@@ -361,6 +372,8 @@ MiBalancerThread(PVOID Unused)
         if (Status == STATUS_WAIT_0 || Status == STATUS_WAIT_1)
         {
             ULONG InitialTarget = 0;
+            ULONG Target;
+            ULONG NrFreedPages;
 
             do
             {
@@ -370,6 +383,14 @@ MiBalancerThread(PVOID Unused)
                 for (i = 0; i < MC_MAXIMUM; i++)
                 {
                     InitialTarget = MiTrimMemoryConsumer(i, InitialTarget);
+                }
+
+                /* Trim cache */
+                Target = max(InitialTarget, abs(MiMinimumAvailablePages - MmAvailablePages));
+                if (Target)
+                {
+                    CcRosTrimCache(Target, &NrFreedPages);
+                    InitialTarget -= min(NrFreedPages, InitialTarget);
                 }
 
                 /* No pages left to swap! */
