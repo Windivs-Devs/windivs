@@ -8,7 +8,7 @@ static MUI_ENTRY bgBGSetupInitPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY bgBGLanguagePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY bgBGWelcomePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -192,7 +192,7 @@ static MUI_ENTRY bgBGIntroPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY bgBGLicensePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -422,7 +422,7 @@ static MUI_ENTRY bgBGDevicePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -529,7 +529,7 @@ static MUI_ENTRY bgBGRepairPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -602,7 +602,7 @@ static MUI_ENTRY bgBGUpgradePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -682,7 +682,7 @@ static MUI_ENTRY bgBGComputerPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -741,7 +741,7 @@ static MUI_ENTRY bgBGFlushPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -786,7 +786,7 @@ static MUI_ENTRY bgBGQuitPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -838,7 +838,7 @@ static MUI_ENTRY bgBGDisplayPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -897,7 +897,7 @@ static MUI_ENTRY bgBGSuccessPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -949,7 +949,7 @@ static MUI_ENTRY bgBGBootPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1002,7 +1002,7 @@ static MUI_ENTRY bgBGSelectPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1083,7 +1083,7 @@ static MUI_ENTRY bgBGChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 6568 \210\255\341\342\240\253\240\346\250\357 ",
+        " Windivs7 build 6608 \210\255\341\342\240\253\240\346\250\357 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1205,7 +1205,7 @@ static MUI_ENTRY bgBGConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1313,7 +1313,7 @@ static MUI_ENTRY bgBGFormatPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1350,7 +1350,7 @@ static MUI_ENTRY bgBGCheckFSEntries[] =
 {
     {
         4,
-        3, " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        3, " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1381,7 +1381,7 @@ static MUI_ENTRY bgBGInstallDirectoryEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1440,7 +1440,7 @@ static MUI_ENTRY bgBGFileCopyEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1486,7 +1486,7 @@ static MUI_ENTRY bgBGBootLoaderEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1545,7 +1545,7 @@ static MUI_ENTRY bgBGBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6568 \210\255\341\342\240\253\240\346\250\357 ",
+        " Windivs7 build 6608 \210\255\341\342\240\253\240\346\250\357 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1569,7 +1569,7 @@ static MUI_ENTRY bgBGKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1628,7 +1628,7 @@ static MUI_ENTRY bgBGLayoutSettingsEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1688,7 +1688,7 @@ static MUI_ENTRY bgBGPrepareCopyEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1720,7 +1720,7 @@ static MUI_ENTRY bgBGSelectFSEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1768,7 +1768,7 @@ static MUI_ENTRY bgBGDeletePartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1820,7 +1820,7 @@ static MUI_ENTRY bgBGRegistryEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6568 .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs7 build 6608 .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
