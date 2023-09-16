@@ -31,7 +31,7 @@
 #ifdef __REACTOS__
 #include "winnls.h"
 #include <shlguid_undoc.h>
-#include <rpcproxy.h>
+#include <rpcproxy.h> /* for __wine_register_resources / __wine_unregister_resources */
 #endif
 #include "shlwapi.h"
 #include "wininet.h"
@@ -104,6 +104,10 @@ HRESULT WINAPI DllGetClassObject(REFCLSID rclsid, REFIID riid, void **ppv)
     else if (IsEqualGUID(riid, &IID_IMruDataList))
     {
         return CMruLongList_CreateInstance(0, ppv, 0);
+    }
+    else if (IsEqualGUID(riid, &IID_IMruPidlList))
+    {
+        return CMruPidlList_CreateInstance(0, ppv, 0);
     }
 #endif
 
