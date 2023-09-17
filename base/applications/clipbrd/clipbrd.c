@@ -4,14 +4,26 @@
  * PURPOSE:     Provides a view of the contents of the Windivs clipboard.
  * COPYRIGHT:   Copyright 2015-2018 Ricardo Hanke
  *              Copyright 2015-2018 Hermes Belusca-Maito
+ *              Copyright 2023 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
  */
 
 #include "precomp.h"
+#include <shlobj.h> /* For CFSTR_... */
 
 static const WCHAR szClassName[] = L"ClipBookWClass";
 
 CLIPBOARD_GLOBALS Globals;
 SCROLLSTATE Scrollstate;
+
+static void InitGlobals(HINSTANCE hInstance)
+{
+    ZeroMemory(&Globals, sizeof(Globals));
+    Globals.hInstance = hInstance;
+
+    /* Registered clipboard formats */
+    Globals.uCFSTR_FILENAMEA = RegisterClipboardFormatA(CFSTR_FILENAMEA);
+    Globals.uCFSTR_FILENAMEW = RegisterClipboardFormatW(CFSTR_FILENAMEW);
+}
 
 static void SaveClipboardToFile(void)
 {
@@ -110,6 +122,8 @@ static void LoadClipboardFromDrop(HDROP hDrop)
 static void SetDisplayFormat(UINT uFormat)
 {
     RECT rc;
+
+    CacheClear();
 
     CheckMenuItem(Globals.hMenu, Globals.uCheckedItem, MF_BYCOMMAND | MF_UNCHECKED);
     Globals.uCheckedItem = uFormat + CMD_AUTOMATIC;
@@ -271,14 +285,16 @@ static void OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
     COLORREF crOldBkColor, crOldTextColor;
     RECT rc;
 
-    if (!OpenClipboard(Globals.hMainWnd))
-        return;
-
     hdc = BeginPaint(hWnd, &ps);
 
-    /* Erase the background if needed */
-    if (ps.fErase)
-        FillRect(ps.hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
+    /* Erase the background */
+    FillRect(ps.hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
+
+    if (!OpenClipboard(Globals.hMainWnd))
+    {
+        EndPaint(hWnd, &ps);
+        return;
+    }
 
     /* Set the correct background and text colors */
     crOldBkColor   = SetBkColor(ps.hdc, GetSysColor(COLOR_WINDOW));
@@ -299,6 +315,7 @@ static void OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
         case CF_TEXT:
         case CF_OEMTEXT:
         case CF_UNICODETEXT:
+        case CF_HDROP:
         {
             DrawTextFromClipboard(Globals.uDisplayFormat, ps, Scrollstate);
             break;
@@ -358,15 +375,15 @@ static void OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
             break;
         }
 
-        case CF_HDROP:
-        {
-            GetClientRect(hWnd, &rc);
-            HDropFromClipboard(hdc, &rc);
-            break;
-        }
-
         default:
         {
+            if (Globals.uDisplayFormat == Globals.uCFSTR_FILENAMEA ||
+                Globals.uDisplayFormat == Globals.uCFSTR_FILENAMEW)
+            {
+                DrawTextFromClipboard(Globals.uDisplayFormat, ps, Scrollstate);
+                break;
+            }
+
             GetClientRect(hWnd, &rc);
             DrawTextFromResource(Globals.hInstance, ERROR_UNSUPPORTED_FORMAT,
                                  hdc, &rc, DT_CENTER | DT_WORDBREAK | DT_NOPREFIX);
@@ -381,6 +398,16 @@ static void OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
     EndPaint(hWnd, &ps);
 
     CloseClipboard();
+}
+
+void CacheClear(void)
+{
+    Globals.bExtentCached = Globals.bTextCached = FALSE;
+    if (Globals.pszTextCache)
+    {
+        free(Globals.pszTextCache);
+        Globals.pszTextCache = NULL;
+    }
 }
 
 static LRESULT WINAPI MainWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -448,6 +475,8 @@ static LRESULT WINAPI MainWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lP
                 }
             }
 
+            CacheClear();
+
             PostQuitMessage(0);
             break;
         }
@@ -514,21 +543,6 @@ static LRESULT WINAPI MainWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lP
 
             GetClipboardDataDimensions(Globals.uDisplayFormat, &rc);
             UpdateWindowScrollState(hWnd, rc.right, rc.bottom, &Scrollstate);
-
-            // NOTE: There still are little problems drawing
-            // the background when displaying clipboard text.
-            if (!IsClipboardFormatSupported(Globals.uDisplayFormat) ||
-                Globals.uDisplayFormat == CF_DSPTEXT ||
-                Globals.uDisplayFormat == CF_TEXT    ||
-                Globals.uDisplayFormat == CF_OEMTEXT ||
-                Globals.uDisplayFormat == CF_UNICODETEXT)
-            {
-                InvalidateRect(Globals.hMainWnd, NULL, TRUE);
-            }
-            else
-            {
-                InvalidateRect(Globals.hMainWnd, NULL, FALSE);
-            }
 
             break;
         }
@@ -690,16 +704,16 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
             break;
     }
 
-    ZeroMemory(&Globals, sizeof(Globals));
-    Globals.hInstance = hInstance;
+    InitGlobals(hInstance);
 
     ZeroMemory(&wndclass, sizeof(wndclass));
     wndclass.cbSize = sizeof(wndclass);
+    wndclass.style = CS_HREDRAW | CS_VREDRAW;
     wndclass.lpfnWndProc = MainWndProc;
     wndclass.hInstance = hInstance;
     wndclass.hIcon = LoadIconW(hInstance, MAKEINTRESOURCEW(CLIPBRD_ICON));
     wndclass.hCursor = LoadCursorW(0, IDC_ARROW);
-    wndclass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wndclass.hbrBackground = NULL; /* The background will be erased in WM_PAINT handling */
     wndclass.lpszMenuName = MAKEINTRESOURCEW(MAIN_MENU);
     wndclass.lpszClassName = szClassName;
 
