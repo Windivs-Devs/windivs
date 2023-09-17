@@ -72,84 +72,77 @@ void DrawTextFromResource(HINSTANCE hInstance, UINT uID, HDC hDC, LPRECT lpRect,
         DrawTextW(hDC, lpBuffer, nCount, lpRect, uFormat);
 }
 
+static BOOL CALLBACK
+DrawTextCallback(UINT uFormat, LPCVOID text, SIZE_T cch, BOOL bAnsi, HDC hdc, LPRECT prc)
+{
+    RECT rc = *prc;
+    INT x = -Scrollstate.CurrentX, y = -Scrollstate.CurrentY;
+    SIZE_T ich, cchLine;
+    TEXTMETRIC tm;
+
+    GetTextMetrics(hdc, &tm);
+
+    if (bAnsi)
+    {
+        LPCSTR pch0 = text, pch1;
+        for (ich = 0; ich < cch; pch0 = pch1 + 1)
+        {
+            pch1 = FindNewLineA(pch0, cch - ich);
+
+            if (y + tm.tmHeight < rc.top)
+            {
+                y += tm.tmHeight;
+                ich += pch1 - pch0 + 1;
+                continue;
+            }
+
+            if (y >= rc.bottom)
+                break;
+
+            cchLine = pch1 - pch0;
+            if (cchLine > 0 && pch0[cchLine - 1] == '\r')
+                --cchLine;
+
+            TabbedTextOutA(hdc, x, y, pch0, cchLine, 0, NULL, x);
+
+            y += tm.tmHeight;
+            ich += pch1 - pch0 + 1;
+        }
+    }
+    else
+    {
+        LPCWSTR pch0 = text, pch1;
+        for (ich = 0; ich < cch; pch0 = pch1 + 1)
+        {
+            pch1 = FindNewLineW(pch0, cch - ich);
+
+            if (y + tm.tmHeight < rc.top)
+            {
+                y += tm.tmHeight;
+                ich += pch1 - pch0 + 1;
+                continue;
+            }
+
+            if (y >= rc.bottom)
+                break;
+
+            cchLine = pch1 - pch0;
+            if (cchLine > 0 && pch0[cchLine - 1] == L'\r')
+                --cchLine;
+
+            TabbedTextOutW(hdc, x, y, pch0, cchLine, 0, NULL, x);
+
+            y += tm.tmHeight;
+            ich += pch1 - pch0 + 1;
+        }
+    }
+
+    return TRUE;
+}
+
 void DrawTextFromClipboard(UINT uFormat, PAINTSTRUCT ps, SCROLLSTATE state)
 {
-    POINT ptOrg;
-    HGLOBAL hGlobal;
-    PVOID lpText, ptr;
-    SIZE_T lineSize;
-    INT FirstLine, LastLine;
-
-    hGlobal = GetClipboardData(uFormat);
-    if (!hGlobal)
-        return;
-
-    lpText = GlobalLock(hGlobal);
-    if (!lpText)
-        return;
-
-    /* Find the first and last line indices to display (Note that CurrentX/Y are in pixels!) */
-    FirstLine = max(0, (state.CurrentY + ps.rcPaint.top) / Globals.CharHeight);
-    // LastLine = min(LINES - 1, (state.CurrentY + ps.rcPaint.bottom) / Globals.CharHeight);
-    // NOTE: Can be less or greater than the actual number of lines in the text.
-    LastLine = (state.CurrentY + ps.rcPaint.bottom) / Globals.CharHeight;
-
-    /* Find the first text line to display */
-    while (FirstLine > 0)
-    {
-        if (uFormat == CF_UNICODETEXT)
-        {
-            if (*(LPCWSTR)lpText == UNICODE_NULL)
-                break;
-            GetLineExtentW(lpText, (LPCWSTR*)&ptr);
-        }
-        else
-        {
-            if (*(LPCSTR)lpText == ANSI_NULL)
-                break;
-            GetLineExtentA(lpText, (LPCSTR*)&ptr);
-        }
-
-        --FirstLine;
-        --LastLine;
-
-        lpText = ptr;
-    }
-
-    ptOrg.x = ps.rcPaint.left;
-    ptOrg.y = /* FirstLine */ max(0, (state.CurrentY + ps.rcPaint.top) / Globals.CharHeight)
-                    * Globals.CharHeight - state.CurrentY;
-
-    /* Display each line from the current one up to the last one */
-    ++LastLine;
-    while (LastLine >= 0)
-    {
-        if (uFormat == CF_UNICODETEXT)
-        {
-            if (*(LPCWSTR)lpText == UNICODE_NULL)
-                break;
-            lineSize = GetLineExtentW(lpText, (LPCWSTR*)&ptr);
-            TabbedTextOutW(ps.hdc, /*ptOrg.x*/0 - state.CurrentX, ptOrg.y,
-                           lpText, lineSize, 0, NULL,
-                           /*ptOrg.x*/0 - state.CurrentX);
-        }
-        else
-        {
-            if (*(LPCSTR)lpText == ANSI_NULL)
-                break;
-            lineSize = GetLineExtentA(lpText, (LPCSTR*)&ptr);
-            TabbedTextOutA(ps.hdc, /*ptOrg.x*/0 - state.CurrentX, ptOrg.y,
-                           lpText, lineSize, 0, NULL,
-                           /*ptOrg.x*/0 - state.CurrentX);
-        }
-
-        --LastLine;
-
-        ptOrg.y += Globals.CharHeight;
-        lpText = ptr;
-    }
-
-    GlobalUnlock(hGlobal);
+    DoText(uFormat, DrawTextCallback, ps.hdc, &ps.rcPaint);
 }
 
 void BitBltFromClipboard(PAINTSTRUCT ps, SCROLLSTATE state, DWORD dwRop)
@@ -331,43 +324,20 @@ void PlayEnhMetaFileFromClipboard(HDC hdc, const RECT *lpRect)
     PlayEnhMetaFile(hdc, hEmf, lpRect);
 }
 
-static LPWSTR AllocStrCat(LPWSTR psz, LPCWSTR cat)
+LPWSTR AllocStrCat(LPWSTR psz, LPCWSTR cat)
 {
-    INT cch;
+    size_t cch;
     LPWSTR pszNew;
 
     if (psz == NULL)
         return _wcsdup(cat);
 
-    cch = lstrlenW(psz) + lstrlenW(cat) + 1;
+    cch = wcslen(psz) + wcslen(cat) + 1;
     pszNew = realloc(psz, cch * sizeof(WCHAR));
     if (!pszNew)
         return psz;
 
-    lstrcatW(pszNew, cat);
-    return pszNew;
-}
-
-void HDropFromClipboard(HDC hdc, const RECT *lpRect)
-{
-    LPWSTR pszAlloc = NULL;
-    WCHAR szFile[MAX_PATH + 2];
-    HDROP hDrop = (HDROP)GetClipboardData(CF_HDROP);
-    UINT iFile, cFiles = DragQueryFileW(hDrop, 0xFFFFFFFF, NULL, 0);
-    RECT rc = *lpRect;
-
-    FillRect(hdc, &rc, (HBRUSH)(COLOR_WINDOW + 1));
-
-    for (iFile = 0; iFile < cFiles; ++iFile)
-    {
-        DragQueryFileW(hDrop, iFile, szFile, _countof(szFile));
-        lstrcatW(szFile, L"\r\n");
-        pszAlloc = AllocStrCat(pszAlloc, szFile);
-    }
-
-    DrawTextW(hdc, pszAlloc, -1, &rc,
-              DT_LEFT | DT_NOPREFIX | DT_EXTERNALLEADING | DT_WORD_ELLIPSIS);
-    free(pszAlloc);
+    return wcscat(pszNew, cat);
 }
 
 BOOL RealizeClipboardPalette(HDC hdc)

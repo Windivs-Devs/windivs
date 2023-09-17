@@ -47,9 +47,20 @@ typedef struct _CLIPBOARD_GLOBALS
     UINT uDisplayFormat;
     UINT uCheckedItem;
 
+    BOOL bExtentCached;
+    RECT rcExtentCache;
+
+    BOOL bTextCached;
+    LPWSTR pszTextCache;
+    SIZE_T cchTextCache;
+
     /* Metrics of the current font */
     LONG CharWidth;
     LONG CharHeight;
+
+    /* Registered clipboard formats */
+    UINT uCFSTR_FILENAMEA;
+    UINT uCFSTR_FILENAMEW;
 } CLIPBOARD_GLOBALS;
 
 extern CLIPBOARD_GLOBALS Globals;
