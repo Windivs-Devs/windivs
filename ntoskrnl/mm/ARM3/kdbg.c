@@ -38,7 +38,7 @@ extern PPOOL_TRACKER_BIG_PAGES PoolBigPageTable;
 #define POOL_NEXT_BLOCK(x)  POOL_BLOCK((x), (x)->BlockSize)
 #define POOL_PREV_BLOCK(x)  POOL_BLOCK((x), -((x)->PreviousSize))
 
-VOID MiDumpPoolConsumers(BOOLEAN CalledFromDbg, ULONG Tag, ULONG Mask, ULONG Flags);
+VOID MiDumpPoolConsumers(BOOLEAN CalledFromDbg, ULONG Tag, ULONG Mask, ULONG_PTR Flags);
 
 /* PRIVATE FUNCTIONS **********************************************************/
 
