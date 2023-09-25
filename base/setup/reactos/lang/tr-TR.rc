@@ -9,32 +9,32 @@ LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "ReactOS Kur Sihirbazına'na Hoş Geldiniz", IDC_STARTTITLE, 115, 8, 195, 24
-    LTEXT "Bu CD'den, henüz ReactOS'u doğrudan kuramazsınız. Lütfen ReactOS'u kurmak için bu CD'den bilgisayarınızı yeniden başlatınız.", IDC_STATIC, 115, 40, 195, 100
+    LTEXT "Windivs Kur Sihirbazına'na Hoş Geldiniz", IDC_STARTTITLE, 115, 8, 195, 24
+    LTEXT "Bu CD'den, henüz Windivs'u doğrudan kuramazsınız. Lütfen Windivs'u kurmak için bu CD'den bilgisayarınızı yeniden başlatınız.", IDC_STATIC, 115, 40, 195, 100
     LTEXT "Kurulumdan çıkmak için İptal'e tıklayınız.", IDC_STATIC, 115, 169, 195, 17
 END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    AUTORADIOBUTTON "ReactOS'u Yükleme", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
-    LTEXT "ReactOS'un yeni bir kopyasını yükle. Bu seçenek, dosyalarınızı, ayarlarınızı ve programlarınızı korumaz. Disklere ve bölümlere değişiklikler yapabilirsiniz.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
-    AUTORADIOBUTTON "Kurulu ReactOS'u Onarma ya da Yükseltme", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "Kurulu olan ReactOS'un günceller ya da onarır. Bu seçenek, dosyalarınızı, ayarlarınızı ve programlarınızı korur. Bu seçenek yalnızca ReactOS bu bilgisayarda önceden kuruluysa kullanılabilir.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
+    AUTORADIOBUTTON "Windivs'u Yükleme", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
+    LTEXT "Windivs'un yeni bir kopyasını yükle. Bu seçenek, dosyalarınızı, ayarlarınızı ve programlarınızı korumaz. Disklere ve bölümlere değişiklikler yapabilirsiniz.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
+    AUTORADIOBUTTON "Kurulu Windivs'u Onarma ya da Yükseltme", IDC_UPDATE, 7, 50, 277, 10
+    LTEXT "Kurulu olan Windivs'un günceller ya da onarır. Bu seçenek, dosyalarınızı, ayarlarınızı ve programlarınızı korur. Bu seçenek yalnızca Windivs bu bilgisayarda önceden kuruluysa kullanılabilir.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
     LTEXT "Aygıtları kurmak için İleri'ye tıklayınız.", IDC_STATIC, 7, 128, 297, 8
 END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT       "ReactOS Kurulum Yöneticisi aşağıda listelenen ReactOS kurulumlarının birini yükseltebilir ya da eğer ReactOS kurulumu zarar görmüşse kurulum yöneticisi onu onarmaya çalışabilir.", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "Windivs Kurulum Yöneticisi aşağıda listelenen Windivs kurulumlarının birini yükseltebilir ya da eğer Windivs kurulumu zarar görmüşse kurulum yöneticisi onu onarmaya çalışabilir.", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "&Yükseltme yapma", IDC_SKIPUPGRADE, 230, 128, 80, 14
     LTEXT       "Seçilen işletim sistemi kurulumu için İleri'ye ya da yükseltme yapmadan bir yeni kuruluma devam etmek için 'Yükseltme yapma''ya tıklayınız.", IDC_STATIC, 7, 124, 222, 16
@@ -42,7 +42,7 @@ END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Bilgisayar:", IDC_STATIC, 20, 15, 80, 10
@@ -56,7 +56,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -100,7 +100,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Kurulum türü:", IDC_STATIC, 18, 5, 74, 11
@@ -119,14 +119,14 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Hedef dizin:", IDC_STATIC, 18, 89, 74, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "Bütün kurulum ayarlarının doğru olduğunu onaylıyorum. Ayrıca, ReactOS'un alfa durumunda yazılım olduğunu ve bilgisayarımı bozacağını veya verilerimi bozacağını kabul ediyorum.",
+    AUTOCHECKBOX "Bütün kurulum ayarlarının doğru olduğunu onaylıyorum. Ayrıca, Windivs'un alfa durumunda yazılım olduğunu ve bilgisayarımı bozacağını veya verilerimi bozacağını kabul ediyorum.",
         IDC_CONFIRM_INSTALL, 7, 104, 303, 18, BS_MULTILINE
     LTEXT "Lütfen bütün kurulum ayarlarının doğru olduğundan emin olunuz,\nardından kurulum işlemine başlamak için Kur'a tıklayınız.", IDC_STATIC, 7, 124, 303, 18
 END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Dosyalar yükleniyor...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -136,11 +136,11 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Kur"
+CAPTION "Windivs Kur"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "ReactOS Kurulum Sihirbazını Tamamlama", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "ReactOS kurulumunun ilk aşamasını başarıyla bitirdiniz.", IDC_STATIC, 20, 50, 277, 10
+    LTEXT "Windivs Kurulum Sihirbazını Tamamlama", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "Windivs kurulumunun ilk aşamasını başarıyla bitirdiniz.", IDC_STATIC, 20, 50, 277, 10
     LTEXT "Bitir'e tıkladığınızda bilgisayarınız yeniden başlatılacaktır.", IDC_STATIC, 20, 80, 277, 10
     CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
     LTEXT "Eğer bir sürücüde bir CD varsa onu çıkartınız. Sonra, bilgisayarınızı yeniden başlatmak için Bitir'e tıklayınız.", IDC_STATIC, 10, 180, 297, 20
@@ -148,7 +148,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_TYPETITLE "ReactOS Kurulum Yöneticisine Hoş Geldiniz"
+    IDS_TYPETITLE "Windivs Kurulum Yöneticisine Hoş Geldiniz"
     IDS_TYPESUBTITLE "Kurulum türünü seçiniz."
     IDS_DEVICETITLE "Ana Aygıtların Kurulumu"
     IDS_DEVICESUBTITLE "Ekran ve Klavye ayarlarını yapınız."
@@ -160,10 +160,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "Kurulumun ilk aşaması bitirildi, ikinci aşamaya geçmek için yeniden başlatınız."
     IDS_SUMMARYTITLE "Kurulum Özeti"
     IDS_SUMMARYSUBTITLE "Kurulumdan aygıtına uygulanmadan önce gözden geçirmek için listelenen kurulum seçenekleri."
-    IDS_ABORTSETUP "ReactOS, bilgisayarınıza tümüyle kurulamadı. Eğer şimdi Kurulum Yöneticisinden çıkarsanız, ReactOS'u kurmak için Kurulum Yöneticisini yeniden çalıştırmayı isteybilirsiniz. Gerçekten çıkılsın mı?"
+    IDS_ABORTSETUP "Windivs, bilgisayarınıza tümüyle kurulamadı. Eğer şimdi Kurulum Yöneticisinden çıkarsanız, Windivs'u kurmak için Kurulum Yöneticisini yeniden çalıştırmayı isteybilirsiniz. Gerçekten çıkılsın mı?"
     IDS_ABORTSETUP2 "Kurulum iptal edilsin mi?"
     IDS_NO_TXTSETUP_SIF """txtsetup.sif"" bulunamıyor.\nKurulum Yöneticisi sürdüremiyor."
-    IDS_CAPTION "ReactOS Kur"
+    IDS_CAPTION "Windivs Kur"
 END
 
 STRINGTABLE
