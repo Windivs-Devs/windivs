@@ -987,6 +987,10 @@ BEGIN
     IDS_OBJECTS "%d elem"
     IDS_OBJECTS_SELECTED "%d kijelölt elem"
 
+    IDS_RECYCLE_CLEANER_DISPLAYNAME "Recycle Bin"
+    IDS_RECYCLE_CLEANER_DESCRIPTION "The Recycle Bin contains files you have deleted from your computer. These files are not permanently removed until you empty the Recycle Bin."
+    IDS_RECYCLE_CLEANER_BUTTON_TEXT "&View Files"
+
     IDS_TITLE_MYCOMP "Számítógép"
     IDS_TITLE_MYNET "Hálózati helyek"
     IDS_TITLE_BIN_1 "Lomtár (tele)"
