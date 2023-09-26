@@ -11,9 +11,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jpb &lt;jakub.baranski.33@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="windivs-astiv+" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)">
+      <created>1695754904560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695754904560</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)">
+      <created>1695755070023</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695755070023</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -31,14 +56,6 @@
                       </list>
                     </value>
                   </entry>
-                  <entry key="date">
-                    <value>
-                      <list>
-                        <option value="1689289200000" />
-                        <option value="" />
-                      </list>
-                    </value>
-                  </entry>
                 </map>
               </option>
             </State>
@@ -46,5 +63,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)" />
+    <MESSAGE value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
   </component>
 </project>
