@@ -4,15 +4,9 @@ if(DLL_EXPORT_VERSION GREATER_EQUAL 0x600)
 endif()
 
 list(APPEND TEXTFILES
-        textfiles/Slate/ExtraLargeNormal.INI
-        textfiles/Slate/LargeFontsNormal.INI
-        textfiles/Slate/NormalNormal.INI
-        textfiles/Basic/ExtraLargeNormal.INI
-        textfiles/Basic/LargeFontsNormal.INI
-        textfiles/Basic/NormalNormal.INI
-        textfiles/Glass/ExtraLargeNormal.INI
-        textfiles/Glass/LargeFontsNormal.INI
-        textfiles/Glass/NormalNormal.INI)
+    textfiles/ExtraLargeNormal.INI
+    textfiles/LargeFontsNormal.INI
+    textfiles/NormalNormal.INI)
 
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/textfiles)
 foreach(_file ${TEXTFILES})
