@@ -18,7 +18,7 @@ static MUI_ENTRY plPLSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -56,7 +56,7 @@ static MUI_ENTRY plPLLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -108,7 +108,7 @@ static MUI_ENTRY plPLWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -195,7 +195,7 @@ static MUI_ENTRY plPLIntroPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -275,7 +275,7 @@ static MUI_ENTRY plPLLicensePageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -418,7 +418,7 @@ static MUI_ENTRY plPLDevicePageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -525,7 +525,7 @@ static MUI_ENTRY plPLRepairPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -598,7 +598,7 @@ static MUI_ENTRY plPLUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920  ",
+        " Instalator Windivs7 build 7000  ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -678,7 +678,7 @@ static MUI_ENTRY plPLComputerPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -737,7 +737,7 @@ static MUI_ENTRY plPLFlushPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -782,7 +782,7 @@ static MUI_ENTRY plPLQuitPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -834,7 +834,7 @@ static MUI_ENTRY plPLDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -893,7 +893,7 @@ static MUI_ENTRY plPLSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -945,7 +945,7 @@ static MUI_ENTRY plPLBootPageEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -998,7 +998,7 @@ static MUI_ENTRY plPLSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1078,7 +1078,7 @@ static MUI_ENTRY plPLChangeSystemPartition[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1200,7 +1200,7 @@ static MUI_ENTRY plPLConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1308,7 +1308,7 @@ static MUI_ENTRY plPLFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1346,7 +1346,7 @@ static MUI_ENTRY plPLCheckFSEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1377,7 +1377,7 @@ static MUI_ENTRY plPLInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1436,7 +1436,7 @@ static MUI_ENTRY plPLFileCopyEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1481,7 +1481,7 @@ static MUI_ENTRY plPLBootLoaderEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1540,7 +1540,7 @@ static MUI_ENTRY plPLBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 6920 Setup ",
+        " Windivs7 build 7000 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1564,7 +1564,7 @@ static MUI_ENTRY plPLKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1623,7 +1623,7 @@ static MUI_ENTRY plPLLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1683,7 +1683,7 @@ static MUI_ENTRY plPLPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1715,7 +1715,7 @@ static MUI_ENTRY plPLSelectFSEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1763,7 +1763,7 @@ static MUI_ENTRY plPLDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1815,7 +1815,7 @@ static MUI_ENTRY plPLRegistryEntries[] =
     {
         4,
         3,
-        " Instalator Windivs7 build 6920 ",
+        " Instalator Windivs7 build 7000 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
