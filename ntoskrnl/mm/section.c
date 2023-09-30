@@ -16,8 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  *
- * PROJECT:         Windivs kernel
- * FILE:            ntoskrnl/mm/section.c
+ * PROJECT:         ReactOS kernel
  * PURPOSE:         Implements section objects
  *
  * PROGRAMMERS:     Rex Jolliff
@@ -3874,7 +3873,7 @@ NtQuerySection(
             }
             else
             {
-                DPRINT1("Unimplemented code path!");
+                DPRINT1("Unimplemented code path\n");
             }
 
             _SEH2_TRY
