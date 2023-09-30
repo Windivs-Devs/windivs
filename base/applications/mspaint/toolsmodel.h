@@ -28,6 +28,14 @@ enum TOOLTYPE
     TOOL_MAX = TOOL_RRECT,
 };
 
+enum BrushStyle
+{
+    BrushStyleRound,
+    BrushStyleSquare,
+    BrushStyleForeSlash,
+    BrushStyleBackSlash,
+};
+
 /* CLASSES **********************************************************/
 
 struct ToolBase
@@ -67,8 +75,10 @@ class ToolsModel
 {
 private:
     int m_lineWidth;
+    INT m_penWidth;
+    INT m_brushWidth;
     int m_shapeStyle;
-    int m_brushStyle;
+    BrushStyle m_brushStyle;
     TOOLTYPE m_activeTool;
     TOOLTYPE m_oldActiveTool;
     int m_airBrushWidth;
@@ -85,21 +95,40 @@ public:
     ~ToolsModel();
 
     BOOL IsSelection() const;
+
     int GetLineWidth() const;
     void SetLineWidth(int nLineWidth);
+    void MakeLineThickerOrThinner(BOOL bThinner);
+
+    INT GetPenWidth() const;
+    void SetPenWidth(INT nPenWidth);
+    void MakePenThickerOrThinner(BOOL bThinner);
+
     int GetShapeStyle() const;
     void SetShapeStyle(int nShapeStyle);
-    int GetBrushStyle() const;
-    void SetBrushStyle(int nBrushStyle);
+
+    INT GetBrushWidth() const;
+    void SetBrushWidth(INT nBrushWidth);
+    void MakeBrushThickerOrThinner(BOOL bThinner);
+
+    BrushStyle GetBrushStyle() const;
+    void SetBrushStyle(BrushStyle nBrushStyle);
+
     TOOLTYPE GetActiveTool() const;
     TOOLTYPE GetOldActiveTool() const;
     void SetActiveTool(TOOLTYPE nActiveTool);
+
     int GetAirBrushWidth() const;
     void SetAirBrushWidth(int nAirBrushWidth);
+    void MakeAirBrushThickerOrThinner(BOOL bThinner);
+
     int GetRubberRadius() const;
     void SetRubberRadius(int nRubberRadius);
+    void MakeRubberThickerOrThinner(BOOL bThinner);
+
     BOOL IsBackgroundTransparent() const;
     void SetBackgroundTransparent(BOOL bTransparent);
+
     int GetZoom() const;
     void SetZoom(int nZoom);
 

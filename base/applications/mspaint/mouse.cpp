@@ -112,10 +112,7 @@ struct FreeSelTool : ToolBase
     void OnDrawOverlayOnImage(HDC hdc) override
     {
         if (!selectionModel.IsLanded())
-        {
-            selectionModel.DrawBackgroundPoly(hdc, selectionModel.m_rgbBack);
             selectionModel.DrawSelection(hdc, paletteModel.GetBgColor(), toolsModel.IsBackgroundTransparent());
-        }
 
         if (canvasWindow.m_drawing)
         {
@@ -208,10 +205,7 @@ struct RectSelTool : ToolBase
     void OnDrawOverlayOnImage(HDC hdc) override
     {
         if (!selectionModel.IsLanded())
-        {
-            selectionModel.DrawBackgroundRect(hdc, selectionModel.m_rgbBack);
             selectionModel.DrawSelection(hdc, paletteModel.GetBgColor(), toolsModel.IsBackgroundTransparent());
-        }
 
         if (canvasWindow.m_drawing)
         {
@@ -325,6 +319,11 @@ struct TwoPointDrawTool : ToolBase
     {
         m_bDrawing = FALSE;
         ToolBase::OnCancelDraw();
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeLineThickerOrThinner(bMinus);
     }
 };
 
@@ -505,8 +504,11 @@ struct RubberTool : SmoothDrawTool
             Erase(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, m_bg, toolsModel.GetRubberRadius());
         else
             Replace(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, m_fg, m_bg, toolsModel.GetRubberRadius());
-        g_ptEnd.x = x;
-        g_ptEnd.y = y;
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeRubberThickerOrThinner(bMinus);
     }
 };
 
@@ -593,10 +595,12 @@ struct PenTool : SmoothDrawTool
     void draw(BOOL bLeftButton, LONG x, LONG y) override
     {
         COLORREF rgb = bLeftButton ? m_fg : m_bg;
-        Line(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, rgb, 1);
-        ::SetPixelV(m_hdc, x, y, rgb);
-        g_ptEnd.x = x;
-        g_ptEnd.y = y;
+        Line(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, rgb, toolsModel.GetPenWidth());
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakePenThickerOrThinner(bMinus);
     }
 };
 
@@ -610,9 +614,13 @@ struct BrushTool : SmoothDrawTool
     void draw(BOOL bLeftButton, LONG x, LONG y) override
     {
         COLORREF rgb = bLeftButton ? m_fg : m_bg;
-        Brush(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, rgb, toolsModel.GetBrushStyle());
-        g_ptEnd.x = x;
-        g_ptEnd.y = y;
+        Brush(m_hdc, g_ptEnd.x, g_ptEnd.y, x, y, rgb, toolsModel.GetBrushStyle(),
+              toolsModel.GetBrushWidth());
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeBrushThickerOrThinner(bMinus);
     }
 };
 
@@ -627,6 +635,11 @@ struct AirBrushTool : SmoothDrawTool
     {
         COLORREF rgb = bLeftButton ? m_fg : m_bg;
         Airbrush(m_hdc, x, y, rgb, toolsModel.GetAirBrushWidth());
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeAirBrushThickerOrThinner(bMinus);
     }
 };
 
@@ -869,6 +882,11 @@ struct BezierTool : ToolBase
         m_bDrawing = FALSE;
         ToolBase::OnFinishDraw();
     }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeLineThickerOrThinner(bMinus);
+    }
 };
 
 // TOOL_RECT
@@ -996,6 +1014,11 @@ struct ShapeTool : ToolBase
         s_pointSP = 0;
 
         ToolBase::OnFinishDraw();
+    }
+
+    void OnSpecialTweak(BOOL bMinus) override
+    {
+        toolsModel.MakeLineThickerOrThinner(bMinus);
     }
 };
 
