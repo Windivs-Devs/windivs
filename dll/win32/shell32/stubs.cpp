@@ -30,6 +30,28 @@ ShortSizeFormatW(LONGLONG llNumber)
  */
 EXTERN_C BOOL
 WINAPI
+SHFindComputer(LPCITEMIDLIST pidl1, LPCITEMIDLIST pidl2)
+{
+    FIXME("SHFindComputer() stub\n");
+    return FALSE;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C BOOL
+WINAPI
+SHLimitInputCombo(HWND hWnd, LPVOID lpUnknown)
+{
+    FIXME("SHLimitInputCombo() stub\n");
+    return FALSE;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C BOOL
+WINAPI
 PathIsEqualOrSubFolder(LPWSTR lpFolder, LPWSTR lpSubFolder)
 {
     FIXME("PathIsEqualOrSubFolder() stub\n");
@@ -124,6 +146,17 @@ GetFileDescriptor(FILEGROUPDESCRIPTOR *pFileGroupDesc, BOOL bUnicode, INT iIndex
  */
 EXTERN_C BOOL
 WINAPI
+SHIsTempDisplayMode(VOID)
+{
+    FIXME("SHIsTempDisplayMode() stub\n");
+    return FALSE;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C BOOL
+WINAPI
 MakeShellURLFromPathW(LPCWSTR lpPath, LPWSTR lpUrl, INT cchMax)
 {
     FIXME("MakeShellURLFromPathW() stub\n");
@@ -166,6 +199,18 @@ WINAPI
 SHMultiFileProperties(IDataObject *pDataObject, DWORD dwFlags)
 {
     FIXME("SHMultiFileProperties() stub\n");
+    return E_FAIL;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C HRESULT
+WINAPI
+SHCreatePropertyBag(REFIID refIId, LPVOID *lpUnknown)
+{
+    /* Call SHCreatePropertyBagOnMemory() from shlwapi.dll */
+    FIXME("SHCreatePropertyBag() stub\n");
     return E_FAIL;
 }
 
@@ -404,6 +449,28 @@ SheSetCurDrive(INT iIndex)
 {
     FIXME("SheSetCurDrive() stub\n");
     return 1;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C LPWSTR
+WINAPI
+SheRemoveQuotesW(LPWSTR lpInput)
+{
+    FIXME("SheRemoveQuotesW() stub\n");
+    return NULL;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C LPSTR
+WINAPI
+SheRemoveQuotesA(LPSTR lpInput)
+{
+    FIXME("SheRemoveQuotesA() stub\n");
+    return NULL;
 }
 
 /*
@@ -952,6 +1019,38 @@ Printers_GetPidl(LPCITEMIDLIST pidl, LPCWSTR lpName, DWORD dwUnknown1, DWORD dwU
 /*
  * Unimplemented
  */
+EXTERN_C INT
+WINAPI
+Int64ToString(LONGLONG llInt64,
+              LPWSTR lpOut,
+              UINT uSize,
+              BOOL bUseFormat,
+              NUMBERFMT *pNumberFormat,
+              DWORD dwNumberFlags)
+{
+    FIXME("Int64ToString() stub\n");
+    return 0;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C INT
+WINAPI
+LargeIntegerToString(LARGE_INTEGER *pLargeInt,
+                     LPWSTR lpOut,
+                     UINT uSize,
+                     BOOL bUseFormat,
+                     NUMBERFMT *pNumberFormat,
+                     DWORD dwNumberFlags)
+{
+    FIXME("LargeIntegerToString() stub\n");
+    return 0;
+}
+
+/*
+ * Unimplemented
+ */
 EXTERN_C LONG
 WINAPI
 Printers_AddPrinterPropPages(LPVOID lpUnknown1, LPVOID lpUnknown2)
@@ -1104,6 +1203,28 @@ SHSetUserPicturePathW(LPCWSTR lpPath, int csidl, LPVOID lpUnknown)
  */
 EXTERN_C BOOL
 WINAPI
+SHOpenEffectiveToken(LPVOID Token)
+{
+    FIXME("SHOpenEffectiveToken() stub\n");
+    return FALSE;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C BOOL
+WINAPI
+SHTestTokenPrivilegeW(HANDLE hToken, LPDWORD ReturnLength)
+{
+    FIXME("SHTestTokenPrivilegeW() stub\n");
+    return FALSE;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C BOOL
+WINAPI
 SHShouldShowWizards(LPVOID lpUnknown)
 {
     FIXME("SHShouldShowWizards() stub\n");
@@ -1156,6 +1277,17 @@ SHGetProcessDword(DWORD dwUnknown1, DWORD dwUnknown2)
     return 0;
 }
 
+/*
+ * Unimplemented
+ */
+EXTERN_C LPVOID
+WINAPI
+SHGetUserSessionId(HANDLE hHandle)
+{
+    FIXME("SHGetUserSessionId() stub\n");
+    return NULL;
+}
+
 EXTERN_C
 DWORD WINAPI CheckStagingArea(VOID)
 {
@@ -1168,4 +1300,15 @@ DWORD WINAPI SHGetComputerDisplayNameW(DWORD param1, DWORD param2, DWORD param3,
 {
     FIXME("SHGetComputerDisplayNameW() stub\n");
     return E_FAIL;
+}
+
+/*
+ * Unimplemented
+ */
+EXTERN_C HINSTANCE
+WINAPI
+SHGetShellStyleHInstance(VOID)
+{
+    FIXME("SHGetShellStyleHInstance() stub\n");
+    return NULL;
 }

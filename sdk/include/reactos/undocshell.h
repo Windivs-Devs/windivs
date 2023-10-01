@@ -189,8 +189,6 @@ DWORD WINAPI SHNetConnectionDialog(
     LPCWSTR lpstrRemoteName,
     DWORD dwType);
 
-BOOL WINAPI SHIsTempDisplayMode(VOID);
-
 /****************************************************************************
  * Cabinet Window Messages
  */
@@ -646,57 +644,12 @@ BOOL WINAPI SHInitRestricted(LPCVOID unused, LPCVOID inpRegKey);
 #define SMC_EXEC 4
 INT WINAPI Shell_GetCachedImageIndex(LPCWSTR szPath, INT nIndex, UINT bSimulateDoc);
 
-HRESULT WINAPI SHCreatePropertyBag(_In_ REFIID riid, _Out_ void **ppvObj);
-HRESULT WINAPI SHLimitInputCombo(HWND hWnd, IShellFolder *psf);
 HRESULT WINAPI SHGetImageList(int iImageList, REFIID riid, void **ppv);
 
 BOOL WINAPI GUIDFromStringW(
     _In_   PCWSTR psz,
     _Out_  LPGUID pguid
     );
-
-LPSTR WINAPI SheRemoveQuotesA(LPSTR psz);
-LPWSTR WINAPI SheRemoveQuotesW(LPWSTR psz);
-
-/* Flags for Int64ToString and LargeIntegerToString */
-#define FMT_USE_NUMDIGITS 0x01
-#define FMT_USE_LEADZERO  0x02
-#define FMT_USE_GROUPING  0x04
-#define FMT_USE_DECIMAL   0x08
-#define FMT_USE_THOUSAND  0x10
-#define FMT_USE_NEGNUMBER 0x20
-
-INT WINAPI
-Int64ToString(
-    _In_ LONGLONG llValue,
-    _Out_writes_z_(cchOut) LPWSTR pszOut,
-    _In_ UINT cchOut,
-    _In_ BOOL bUseFormat,
-    _In_opt_ const NUMBERFMTW *pNumberFormat,
-    _In_ DWORD dwNumberFlags);
-
-INT WINAPI
-LargeIntegerToString(
-    _In_ const LARGE_INTEGER *pLargeInt,
-    _Out_writes_z_(cchOut) LPWSTR pszOut,
-    _In_ UINT cchOut,
-    _In_ BOOL bUseFormat,
-    _In_opt_ const NUMBERFMTW *pNumberFormat,
-    _In_ DWORD dwNumberFlags);
-
-BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken);
-DWORD WINAPI SHGetUserSessionId(_In_opt_ HANDLE hToken);
-
-typedef HRESULT (CALLBACK *PRIVILEGED_FUNCTION)(LPARAM lParam);
-
-HRESULT WINAPI
-SHInvokePrivilegedFunctionW(
-    _In_z_ LPCWSTR pszName,
-    _In_ PRIVILEGED_FUNCTION fn,
-    _In_opt_ LPARAM lParam);
-
-BOOL WINAPI
-SHTestTokenPrivilegeW(_In_opt_ HANDLE hToken, _In_z_ LPCWSTR lpName);
 
 /*****************************************************************************
  * Shell32 resources
