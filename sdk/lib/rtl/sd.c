@@ -42,7 +42,7 @@ RtlpValidateSDOffsetAndSize(IN ULONG Offset,
 
 VOID
 NTAPI
-RtlpQuerySecurityDescriptor(IN PSECURITY_DESCRIPTOR SecurityDescriptor,
+RtlpQuerySecurityDescriptor(IN PISECURITY_DESCRIPTOR SecurityDescriptor,
                             OUT PSID *Owner,
                             OUT PULONG OwnerSize,
                             OUT PSID *PrimaryGroup,
@@ -644,7 +644,7 @@ RtlAbsoluteToSelfRelativeSD(IN PSECURITY_DESCRIPTOR AbsoluteSecurityDescriptor,
  */
 NTSTATUS
 NTAPI
-RtlMakeSelfRelativeSD(IN PSECURITY_DESCRIPTOR SecurityDescriptor,
+RtlMakeSelfRelativeSD(IN PSECURITY_DESCRIPTOR AbsoluteSD,
                       OUT PSECURITY_DESCRIPTOR SelfRelativeSD,
                       IN OUT PULONG BufferLength)
 {
@@ -652,11 +652,12 @@ RtlMakeSelfRelativeSD(IN PSECURITY_DESCRIPTOR SecurityDescriptor,
     PACL Sacl, Dacl;
     ULONG OwnerLength, GroupLength, SaclLength, DaclLength, TotalLength;
     ULONG_PTR Current;
+    PISECURITY_DESCRIPTOR Sd = (PISECURITY_DESCRIPTOR)AbsoluteSD;
     PISECURITY_DESCRIPTOR_RELATIVE RelSd = (PISECURITY_DESCRIPTOR_RELATIVE)SelfRelativeSD;
     PAGED_CODE_RTL();
 
     /* Query all components */
-    RtlpQuerySecurityDescriptor(SecurityDescriptor,
+    RtlpQuerySecurityDescriptor(Sd,
                                 &Owner,
                                 &OwnerLength,
                                 &Group,
@@ -686,7 +687,7 @@ RtlMakeSelfRelativeSD(IN PSECURITY_DESCRIPTOR SecurityDescriptor,
 
     /* Copy the header fields */
     RtlCopyMemory(RelSd,
-                  SecurityDescriptor,
+                  Sd,
                   FIELD_OFFSET(SECURITY_DESCRIPTOR_RELATIVE, Owner));
 
     /* Set the current copy pointer */

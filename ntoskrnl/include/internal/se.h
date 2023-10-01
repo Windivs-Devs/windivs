@@ -77,7 +77,7 @@ typedef struct _TOKEN_AUDIT_POLICY_INFORMATION
 FORCEINLINE
 PSID
 SepGetGroupFromDescriptor(
-    _Inout_ PSECURITY_DESCRIPTOR _Descriptor)
+    _Inout_ PVOID _Descriptor)
 {
     PISECURITY_DESCRIPTOR Descriptor = (PISECURITY_DESCRIPTOR)_Descriptor;
     PISECURITY_DESCRIPTOR_RELATIVE SdRel;
@@ -97,7 +97,7 @@ SepGetGroupFromDescriptor(
 FORCEINLINE
 PSID
 SepGetOwnerFromDescriptor(
-    _Inout_ PSECURITY_DESCRIPTOR _Descriptor)
+    _Inout_ PVOID _Descriptor)
 {
     PISECURITY_DESCRIPTOR Descriptor = (PISECURITY_DESCRIPTOR)_Descriptor;
     PISECURITY_DESCRIPTOR_RELATIVE SdRel;
@@ -117,7 +117,7 @@ SepGetOwnerFromDescriptor(
 FORCEINLINE
 PACL
 SepGetDaclFromDescriptor(
-    _Inout_ PSECURITY_DESCRIPTOR _Descriptor)
+    _Inout_ PVOID _Descriptor)
 {
     PISECURITY_DESCRIPTOR Descriptor = (PISECURITY_DESCRIPTOR)_Descriptor;
     PISECURITY_DESCRIPTOR_RELATIVE SdRel;
@@ -139,7 +139,7 @@ SepGetDaclFromDescriptor(
 FORCEINLINE
 PACL
 SepGetSaclFromDescriptor(
-    _Inout_ PSECURITY_DESCRIPTOR _Descriptor)
+    _Inout_ PVOID _Descriptor)
 {
     PISECURITY_DESCRIPTOR Descriptor = (PISECURITY_DESCRIPTOR)_Descriptor;
     PISECURITY_DESCRIPTOR_RELATIVE SdRel;
