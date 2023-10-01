@@ -155,7 +155,6 @@ BEGIN
     LTEXT "", IDC_ABOUT_PHYSMEM, 167, 152, 88, 10
     DEFPUSHBUTTON "確定", IDOK, 220, 178, 50, 14
     PUSHBUTTON "", IDC_ABOUT_AUTHORS, 5, 178, 70, 14
-
 END
 
 IDD_ABOUT_AUTHORS DIALOGEX 35, 90, 235, 85
@@ -909,7 +908,6 @@ BEGIN
     IDS_OPEN_WITH_OTHER "其它程式："
 
     IDS_SHELL_ABOUT_AUTHORS "作者(&A)"
-    IDS_SHELL_ABOUT_CHANGELOG "&Changelog"
     IDS_SHELL_ABOUT_BACK "< 返回(&B)"
     FCIDM_SHVIEW_NEW "新增(&W)" /* A menu item with an ampersand */
     FCIDM_SHVIEW_NEWFOLDER "新增資料夾(&F)"
@@ -992,10 +990,6 @@ BEGIN
     IDS_MENU_EMPTY "（空）"
     IDS_OBJECTS "%d 個物件"
     IDS_OBJECTS_SELECTED "已選擇 %d 個物件"
-
-    IDS_RECYCLE_CLEANER_DISPLAYNAME "Recycle Bin"
-    IDS_RECYCLE_CLEANER_DESCRIPTION "The Recycle Bin contains files you have deleted from your computer. These files are not permanently removed until you empty the Recycle Bin."
-    IDS_RECYCLE_CLEANER_BUTTON_TEXT "&View Files"
 
     IDS_TITLE_MYCOMP "我的電腦"
     IDS_TITLE_MYNET "網絡上的芳鄰"
