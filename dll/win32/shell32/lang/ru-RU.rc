@@ -141,7 +141,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_ABOUT_ICON, 7, 55, 21, 20
     LTEXT "", IDC_ABOUT_APPNAME, 35, 55, 200, 10, SS_NOPREFIX
-    LTEXT "Release Candidate 2\0", IDC_ABOUT_VERSION, 35, 65, 250, 10
+    LTEXT "", IDC_ABOUT_VERSION, 35, 65, 250, 10, SS_NOPREFIX
     LTEXT "Copyright 1996-", IDC_STATIC, 35, 75, 53, 10
     LTEXT COPYRIGHT_YEAR, IDC_STATIC, 88, 75, 17, 10
     LTEXT " Команда Windivs\0", IDC_STATIC, 105, 75, 65, 10
@@ -154,6 +154,7 @@ BEGIN
     LTEXT "", IDC_ABOUT_PHYSMEM, 167, 152, 88, 10
     DEFPUSHBUTTON "OK", IDOK, 220, 178, 50, 14
     PUSHBUTTON "", IDC_ABOUT_AUTHORS, 5, 178, 70, 14
+
 END
 
 IDD_ABOUT_AUTHORS DIALOGEX 35, 90, 235, 85
@@ -907,6 +908,7 @@ BEGIN
     IDS_OPEN_WITH_OTHER "Другие программы:"
 
     IDS_SHELL_ABOUT_AUTHORS "&Авторы"
+    IDS_SHELL_ABOUT_CHANGELOG "&Changelog"
     IDS_SHELL_ABOUT_BACK "< &Назад"
     FCIDM_SHVIEW_NEW "Созд&ать" /* A menu item with an ampersand */
     FCIDM_SHVIEW_NEWFOLDER "&Папка"
@@ -989,6 +991,10 @@ BEGIN
     IDS_MENU_EMPTY "(пусто)"
     IDS_OBJECTS "Объектов: %d"
     IDS_OBJECTS_SELECTED "Выделено объектов: %d"
+
+    IDS_RECYCLE_CLEANER_DISPLAYNAME "Recycle Bin"
+    IDS_RECYCLE_CLEANER_DESCRIPTION "The Recycle Bin contains files you have deleted from your computer. These files are not permanently removed until you empty the Recycle Bin."
+    IDS_RECYCLE_CLEANER_BUTTON_TEXT "&View Files"
 
     IDS_TITLE_MYCOMP "Мой компьютер"
     IDS_TITLE_MYNET "Сетевое окружение"
