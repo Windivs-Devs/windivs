@@ -49,7 +49,7 @@ list(APPEND SOURCE
     client/console/history.c
     client/console/init.c
     client/console/readwrite.c
-    client/console/vista.c
+    #client/console/vista.c
     client/file/backup.c
     client/file/cnotify.c
     client/file/copy.c
