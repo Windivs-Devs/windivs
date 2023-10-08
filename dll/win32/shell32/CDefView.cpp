@@ -889,7 +889,7 @@ HRESULT CDefView::MapListToFolder(UINT ListCol)
         }
         else if (count)
         {
-            TRACE("m_ListToFolderColMap cache miss while mapping %d!\n", ListCol);
+            TRACE("m_ListToFolderColMap cache miss while mapping %d\n", ListCol);
         }
     }
     return SHGetLVColumnSubItem(m_ListView.m_hWnd, ListCol);
@@ -1760,7 +1760,7 @@ LRESULT CDefView::DoColumnContextMenu(LPARAM lParam)
 {
     const UINT maxItems = 15; // Feels about right
     const UINT idMore = 0x1337;
-    UINT idFirst = idMore, idLast = idFirst;
+    UINT idFirst = idMore + 1, idLast = idFirst;
     UINT lastValidListCol = 0; // Keep track of where the new column should be inserted
     UINT showMore = GetKeyState(VK_SHIFT) < 0;
     POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
@@ -2273,7 +2273,7 @@ LRESULT CDefView::OnCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHand
 
     if (dwCmdID >= DVIDM_ARRANGESORT_FIRST && dwCmdID <= DVIDM_ARRANGESORT_LAST)
     {
-        UINT listCol = (UINT) GetMenuItemDataById(m_hMenuArrangeModes, dwCmdID);
+        UINT listCol = (UINT)GetMenuItemDataById(m_hMenuArrangeModes, dwCmdID);
         _Sort(listCol);
         return 0;
     }
