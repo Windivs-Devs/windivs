@@ -303,7 +303,7 @@
 #define _STLP_CALL __cdecl
 
 // Always build multithreaded code
-#define _STLP_THREADS 1
+#define _STLP_THREADS
 
 #if 0
 
