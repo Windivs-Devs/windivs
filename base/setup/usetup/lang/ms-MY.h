@@ -5,7 +5,7 @@ static MUI_ENTRY msMYSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -43,7 +43,7 @@ static MUI_ENTRY msMYLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -95,7 +95,7 @@ static MUI_ENTRY msMYWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -182,7 +182,7 @@ static MUI_ENTRY msMYIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -262,7 +262,7 @@ static MUI_ENTRY msMYLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -405,7 +405,7 @@ static MUI_ENTRY msMYDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -512,7 +512,7 @@ static MUI_ENTRY msMYRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -585,7 +585,7 @@ static MUI_ENTRY msMYUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -665,7 +665,7 @@ static MUI_ENTRY msMYComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -724,7 +724,7 @@ static MUI_ENTRY msMYFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -769,7 +769,7 @@ static MUI_ENTRY msMYQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -821,7 +821,7 @@ static MUI_ENTRY msMYDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -880,7 +880,7 @@ static MUI_ENTRY msMYSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -932,7 +932,7 @@ static MUI_ENTRY msMYBootPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -985,7 +985,7 @@ static MUI_ENTRY msMYSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1058,7 +1058,7 @@ static MUI_ENTRY msMYChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1180,7 +1180,7 @@ static MUI_ENTRY msMYConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1288,7 +1288,7 @@ static MUI_ENTRY msMYFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1326,7 +1326,7 @@ static MUI_ENTRY msMYCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1357,7 +1357,7 @@ static MUI_ENTRY msMYInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1416,7 +1416,7 @@ static MUI_ENTRY msMYFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1461,7 +1461,7 @@ static MUI_ENTRY msMYBootLoaderEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1520,7 +1520,7 @@ static MUI_ENTRY msMYBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1544,7 +1544,7 @@ static MUI_ENTRY msMYKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1603,7 +1603,7 @@ static MUI_ENTRY msMYLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1663,7 +1663,7 @@ static MUI_ENTRY msMYPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1695,7 +1695,7 @@ static MUI_ENTRY msMYSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1743,7 +1743,7 @@ static MUI_ENTRY msMYDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1795,7 +1795,7 @@ static MUI_ENTRY msMYRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Persediaan ",
+        " Windivs7 build 7100 Persediaan ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

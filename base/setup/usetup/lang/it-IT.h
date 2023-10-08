@@ -5,7 +5,7 @@ static MUI_ENTRY itITSetupInitPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -43,7 +43,7 @@ static MUI_ENTRY itITLanguagePageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -95,7 +95,7 @@ static MUI_ENTRY itITWelcomePageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -182,7 +182,7 @@ static MUI_ENTRY itITIntroPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -262,7 +262,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -405,7 +405,7 @@ static MUI_ENTRY itITDevicePageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -512,7 +512,7 @@ static MUI_ENTRY itITRepairPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -585,7 +585,7 @@ static MUI_ENTRY itITUpgradePageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -665,7 +665,7 @@ static MUI_ENTRY itITComputerPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -724,7 +724,7 @@ static MUI_ENTRY itITFlushPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -769,7 +769,7 @@ static MUI_ENTRY itITQuitPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -821,7 +821,7 @@ static MUI_ENTRY itITDisplayPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -880,7 +880,7 @@ static MUI_ENTRY itITSuccessPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -932,7 +932,7 @@ static MUI_ENTRY itITBootPageEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -985,7 +985,7 @@ static MUI_ENTRY itITBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1009,7 +1009,7 @@ static MUI_ENTRY itITSelectPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1089,7 +1089,7 @@ static MUI_ENTRY itITChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1211,7 +1211,7 @@ static MUI_ENTRY itITConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1326,7 +1326,7 @@ static MUI_ENTRY itITFormatPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1364,7 +1364,7 @@ static MUI_ENTRY itITCheckFSEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1395,7 +1395,7 @@ static MUI_ENTRY itITInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1454,7 +1454,7 @@ static MUI_ENTRY itITFileCopyEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1499,7 +1499,7 @@ static MUI_ENTRY itITBootLoaderEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1558,7 +1558,7 @@ static MUI_ENTRY itITKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1617,7 +1617,7 @@ static MUI_ENTRY itITLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1677,7 +1677,7 @@ static MUI_ENTRY itITPrepareCopyEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1709,7 +1709,7 @@ static MUI_ENTRY itITSelectFSEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1757,7 +1757,7 @@ static MUI_ENTRY itITDeletePartitionEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1809,7 +1809,7 @@ static MUI_ENTRY itITRegistryEntries[] =
     {
         4,
         3,
-        " Installazione di Windivs7 build 7028 ",
+        " Installazione di Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
