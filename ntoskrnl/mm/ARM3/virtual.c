@@ -284,15 +284,15 @@ MiDeleteSystemPageableVm(IN PMMPTE PointerPte,
     KIRQL OldIrql;
     ASSERT(KeGetCurrentIrql() <= APC_LEVEL);
 
-    /* Lock the system working set */
-    MiLockWorkingSet(CurrentThread, &MmSystemCacheWs);
-
     /* Loop all pages */
     while (PageCount)
     {
         /* Make sure there's some data about the page */
         if (PointerPte->u.Long)
         {
+            /* Lock the system working set */
+            MiLockWorkingSet(CurrentThread, &MmSystemCacheWs);
+
             /* Normally this is one possibility -- freeing a valid page */
             if (PointerPte->u.Hard.Valid)
             {
@@ -326,7 +326,7 @@ MiDeleteSystemPageableVm(IN PMMPTE PointerPte,
                 /* Destroy the PTE */
                 MI_ERASE_PTE(PointerPte);
             }
-            else
+            else if (PointerPte->u.Long)
             {
                 /* As always, only handle current ARM3 scenarios */
                 ASSERT(PointerPte->u.Soft.Prototype == 0);
@@ -345,6 +345,9 @@ MiDeleteSystemPageableVm(IN PMMPTE PointerPte,
                 MI_ERASE_PTE(PointerPte);
             }
 
+            /* Release the working set */
+            MiUnlockWorkingSet(CurrentThread, &MmSystemCacheWs);
+
             /* Actual legitimate pages */
             ActualPages++;
         }
@@ -353,9 +356,6 @@ MiDeleteSystemPageableVm(IN PMMPTE PointerPte,
         PointerPte++;
         PageCount--;
     }
-
-    /* Release the working set */
-    MiUnlockWorkingSet(CurrentThread, &MmSystemCacheWs);
 
     /* Flush the entire TLB */
     KeFlushEntireTb(TRUE, TRUE);
