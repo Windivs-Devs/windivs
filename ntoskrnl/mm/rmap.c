@@ -98,24 +98,25 @@ GetEntry:
         ExReleaseRundownProtection(&Process->RundownProtect);
         return Status;
     }
-    AddressSpace = &Process->Vm;
 
+    /* Attach to it, if needed */
+    ASSERT(PsGetCurrentProcess() == PsInitialSystemProcess);
+    if (Process != PsInitialSystemProcess)
+        KeAttachProcess(&Process->Pcb);
+
+    AddressSpace = &Process->Vm;
     MmLockAddressSpace(AddressSpace);
 
     MemoryArea = MmLocateMemoryAreaByAddress(AddressSpace, Address);
     if (MemoryArea == NULL || MemoryArea->DeleteInProgress)
     {
         MmUnlockAddressSpace(AddressSpace);
+        if (Process != PsInitialSystemProcess)
+            KeDetachProcess();
         ExReleaseRundownProtection(&Process->RundownProtect);
         ObDereferenceObject(Process);
         goto GetEntry;
     }
-
-
-    /* Attach to it, if needed */
-    ASSERT(PsGetCurrentProcess() == PsInitialSystemProcess);
-    if (Process != PsInitialSystemProcess)
-        KeAttachProcess(&Process->Pcb);
 
     if (MmGetPfnForProcess(Process, Address) != Page)
     {
