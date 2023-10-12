@@ -4010,6 +4010,8 @@ MmMapViewOfSection(
     PMMSUPPORT AddressSpace;
     NTSTATUS Status = STATUS_SUCCESS;
     BOOLEAN NotAtBase = FALSE;
+    BOOLEAN IsAttached = FALSE;
+    KAPC_STATE ApcState;
 
     if (MiIsRosSectionObject(SectionObject) == FALSE)
     {
@@ -4032,6 +4034,12 @@ MmMapViewOfSection(
     if (!Protect || Protect & ~PAGE_FLAGS_VALID_FOR_SECTION)
     {
         return STATUS_INVALID_PAGE_PROTECTION;
+    }
+
+    if (PsGetCurrentProcess() != Process)
+    {
+        KeStackAttachProcess(&Process->Pcb, &ApcState);
+        IsAttached = TRUE;
     }
 
     /* FIXME: We should keep this, but it would break code checking equality */
@@ -4100,15 +4108,15 @@ MmMapViewOfSection(
             /* Fail if the user requested a fixed base address. */
             if ((*BaseAddress) != NULL)
             {
-                MmUnlockAddressSpace(AddressSpace);
-                return STATUS_CONFLICTING_ADDRESSES;
+                Status = STATUS_CONFLICTING_ADDRESSES;
+                goto Exit;
             }
             /* Otherwise find a gap to map the image. */
             ImageBase = (ULONG_PTR)MmFindGap(AddressSpace, PAGE_ROUND_UP(ImageSize), MM_VIRTMEM_GRANULARITY, FALSE);
             if (ImageBase == 0)
             {
-                MmUnlockAddressSpace(AddressSpace);
-                return STATUS_CONFLICTING_ADDRESSES;
+                Status = STATUS_CONFLICTING_ADDRESSES;
+                goto Exit;
             }
             /* Remember that we loaded image at a different base address */
             NotAtBase = TRUE;
@@ -4139,8 +4147,7 @@ MmMapViewOfSection(
                     MmUnlockSectionSegment(&SectionSegments[i]);
                 }
 
-                MmUnlockAddressSpace(AddressSpace);
-                return Status;
+                goto Exit;
             }
         }
 
@@ -4163,22 +4170,22 @@ MmMapViewOfSection(
         if ((Protect & (PAGE_READWRITE|PAGE_EXECUTE_READWRITE)) &&
                 !(Section->InitialPageProtection & (PAGE_READWRITE|PAGE_EXECUTE_READWRITE)))
         {
-            MmUnlockAddressSpace(AddressSpace);
-            return STATUS_SECTION_PROTECTION;
+            Status = STATUS_SECTION_PROTECTION;
+            goto Exit;
         }
         /* check for read access */
         if ((Protect & (PAGE_READONLY|PAGE_WRITECOPY|PAGE_EXECUTE_READ|PAGE_EXECUTE_WRITECOPY)) &&
                 !(Section->InitialPageProtection & (PAGE_READONLY|PAGE_READWRITE|PAGE_WRITECOPY|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)))
         {
-            MmUnlockAddressSpace(AddressSpace);
-            return STATUS_SECTION_PROTECTION;
+            Status = STATUS_SECTION_PROTECTION;
+            goto Exit;
         }
         /* check for execute access */
         if ((Protect & (PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)) &&
                 !(Section->InitialPageProtection & (PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY)))
         {
-            MmUnlockAddressSpace(AddressSpace);
-            return STATUS_SECTION_PROTECTION;
+            Status = STATUS_SECTION_PROTECTION;
+            goto Exit;
         }
 
         if (SectionOffset == NULL)
@@ -4192,8 +4199,8 @@ MmMapViewOfSection(
 
         if ((ViewOffset % PAGE_SIZE) != 0)
         {
-            MmUnlockAddressSpace(AddressSpace);
-            return STATUS_MAPPED_ALIGNMENT;
+            Status = STATUS_MAPPED_ALIGNMENT;
+            goto Exit;
         }
 
         if ((*ViewSize) == 0)
@@ -4222,17 +4229,23 @@ MmMapViewOfSection(
         MmUnlockSectionSegment(Segment);
         if (!NT_SUCCESS(Status))
         {
-            MmUnlockAddressSpace(AddressSpace);
-            return Status;
+            goto Exit;
         }
     }
-
-    MmUnlockAddressSpace(AddressSpace);
 
     if (NotAtBase)
         Status = STATUS_IMAGE_NOT_AT_BASE;
     else
         Status = STATUS_SUCCESS;
+
+Exit:
+
+    MmUnlockAddressSpace(AddressSpace);
+
+    if (IsAttached)
+    {
+        KeUnstackDetachProcess(&ApcState);
+    }
 
     return Status;
 }

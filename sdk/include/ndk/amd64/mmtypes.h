@@ -148,14 +148,12 @@ typedef struct _MMPTE_LIST
 typedef struct _MMPTE_HARDWARE
 {
     ULONG64 Valid:1;
-#if (NTDDI_VERSION >= NTDDI_LONGHORN)
-    ULONG64 Dirty1:1;
+#ifndef CONFIG_SMP
+    ULONG64 Write : 1;
+#elif (NTDDI_VERSION >= NTDDI_LONGHORN)
+    ULONG64 Dirty1 : 1;
 #else
-#ifdef CONFIG_SMP
-    ULONG64 Writable:1;
-#else
-    ULONG64 Write:1;
-#endif
+    ULONG64 Writable : 1;
 #endif
     ULONG64 Owner:1;
     ULONG64 WriteThrough:1;
@@ -166,16 +164,15 @@ typedef struct _MMPTE_HARDWARE
     ULONG64 Global:1;
     ULONG64 CopyOnWrite:1;
     ULONG64 Prototype:1;
+#ifdef CONFIG_SMP
+    ULONG64 Write : 1;
+#else
+    ULONG64 reserved0 : 1;
+#endif
 #if (NTDDI_VERSION >= NTDDI_LONGHORN)
-    ULONG64 Write:1;
     ULONG64 PageFrameNumber:36;
     ULONG64 reserved1:4;
 #else
-#ifdef CONFIG_SMP
-    ULONG64 Write:1;
-#else
-    ULONG64 reserved0:1;
-#endif
     ULONG64 PageFrameNumber:28;
     ULONG64 reserved1:12;
 #endif
