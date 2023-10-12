@@ -42,7 +42,8 @@ public:
 
     VOID cancelDrawing();
     VOID finishDrawing();
-    VOID Update(HWND hwndFrom);
+    VOID updateScrollInfo();
+    VOID resetScrollPos();
 
     VOID ImageToCanvas(POINT& pt);
     VOID ImageToCanvas(RECT& rc);
@@ -62,7 +63,6 @@ protected:
     RECT GetBaseRect();
     VOID DoDraw(HDC hDC, RECT& rcClient, RECT& rcPaint);
     VOID OnHVScroll(WPARAM wParam, INT fnBar);
-    VOID drawZoomFrame(INT mouseX, INT mouseY);
 
     HITTEST SelectionHitTest(POINT ptImage);
     VOID StartSelectionDrag(HITTEST hit, POINT ptImage);

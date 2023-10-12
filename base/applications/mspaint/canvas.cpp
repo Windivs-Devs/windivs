@@ -29,18 +29,6 @@ CCanvasWindow::~CCanvasWindow()
         ::DeleteObject(m_ahbmCached[1]);
 }
 
-VOID CCanvasWindow::drawZoomFrame(INT mouseX, INT mouseY)
-{
-    // FIXME: Draw the border of the area that is to be zoomed in
-    CRect rc;
-    GetImageRect(rc);
-    ImageToCanvas(rc);
-
-    HDC hdc = GetDC();
-    DrawXorRect(hdc, &rc);
-    ReleaseDC(hdc);
-}
-
 RECT CCanvasWindow::GetBaseRect()
 {
     CRect rcBase;
@@ -180,7 +168,7 @@ VOID CCanvasWindow::DoDraw(HDC hDC, RECT& rcClient, RECT& rcPaint)
     ::DeleteDC(hdcMem0);
 }
 
-VOID CCanvasWindow::Update(HWND hwndFrom)
+VOID CCanvasWindow::updateScrollInfo()
 {
     CRect rcClient;
     GetClientRect(&rcClient);
@@ -211,10 +199,16 @@ VOID CCanvasWindow::Update(HWND hwndFrom)
     SetScrollInfo(SB_VERT, &si);
 }
 
+VOID CCanvasWindow::resetScrollPos()
+{
+    SetScrollPos(SB_HORZ, 0);
+    SetScrollPos(SB_VERT, 0);
+}
+
 LRESULT CCanvasWindow::OnSize(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
     if (m_hWnd)
-        Update(m_hWnd);
+        updateScrollInfo();
 
     return 0;
 }
@@ -245,7 +239,7 @@ VOID CCanvasWindow::OnHVScroll(WPARAM wParam, INT fnBar)
             break;
     }
     SetScrollInfo(fnBar, &si);
-    Update(m_hWnd);
+    updateScrollInfo();
     Invalidate(FALSE); // FIXME: Flicker
 }
 
@@ -376,6 +370,9 @@ LRESULT CCanvasWindow::OnMouseMove(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL
     POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
     CanvasToImage(pt);
 
+    if (toolsModel.GetActiveTool() == TOOL_ZOOM)
+        Invalidate();
+
     if (m_hitSelection != HIT_NONE)
     {
         SelectionDragging(pt);
@@ -384,14 +381,6 @@ LRESULT CCanvasWindow::OnMouseMove(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL
 
     if (!m_drawing || toolsModel.GetActiveTool() <= TOOL_AIRBRUSH)
     {
-        if (toolsModel.GetActiveTool() == TOOL_ZOOM)
-        {
-            Invalidate(FALSE);
-            UpdateWindow();
-            CanvasToImage(pt);
-            drawZoomFrame(pt.x, pt.y);
-        }
-
         TRACKMOUSEEVENT tme = { sizeof(tme) };
         tme.dwFlags = TME_LEAVE;
         tme.hwndTrack = m_hWnd;
@@ -400,8 +389,12 @@ LRESULT CCanvasWindow::OnMouseMove(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL
 
         if (!m_drawing)
         {
+            RECT rcImage;
+            GetImageRect(rcImage);
+
             CString strCoord;
-            strCoord.Format(_T("%ld, %ld"), pt.x, pt.y);
+            if (::PtInRect(&rcImage, pt))
+                strCoord.Format(_T("%ld, %ld"), pt.x, pt.y);
             ::SendMessage(g_hStatusBar, SB_SETTEXT, 1, (LPARAM) (LPCTSTR) strCoord);
         }
     }
@@ -627,7 +620,7 @@ LRESULT CCanvasWindow::OnLRButtonUp(BOOL bLeftButton, UINT nMsg, WPARAM wParam, 
 
     m_hitCanvasSizeBox = HIT_NONE;
     toolsModel.resetTool(); // resets the point-buffer of the polygon and bezier functions
-    Update(NULL);
+    updateScrollInfo();
     Invalidate(TRUE);
     return 0;
 }
