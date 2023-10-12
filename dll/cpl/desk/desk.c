@@ -17,6 +17,8 @@
 
 #define NUM_APPLETS    (1)
 
+VOID WINAPI Control_RunDLLW(HWND hWnd, HINSTANCE hInst, LPCWSTR cmd, DWORD nCmdShow);
+
 static LONG APIENTRY DisplayApplet(HWND hwnd, UINT uMsg, LPARAM wParam, LPARAM lParam);
 
 INT_PTR CALLBACK ThemesPageProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
@@ -317,16 +319,13 @@ InstallScreenSaverW(
     IN LPCWSTR pszFile,
     IN UINT nCmdShow)
 {
-    WCHAR pszSystemDir[MAX_PATH];
-    WCHAR pszDrive[3];
-    WCHAR pszPath[MAX_PATH];
-    WCHAR pszFilename[MAX_PATH];
-    WCHAR pszExt[MAX_PATH];
-    LPWSTR pszOutName;
-    UINT uCompressionType=FILE_COMPRESSION_NONE;
-    DWORD dwSourceSize;
-    DWORD dwTargetSize;
-    DWORD rc;
+    LRESULT rc;
+    HKEY regKey;
+    INT Timeout = 0;
+    DWORD dwLen;
+    HANDLE hFile;
+    WIN32_FIND_DATAW fdFile;
+    WCHAR szFullPath[MAX_PATH];
 
     if (!pszFile)
     {
@@ -336,26 +335,52 @@ InstallScreenSaverW(
     }
     DPRINT("InstallScreenSaver() Installing screensaver %ls\n", pszFile);
 
-    rc = SetupGetFileCompressionInfoW(pszFile, &pszOutName, &dwSourceSize, &dwTargetSize, &uCompressionType);
-    if (ERROR_SUCCESS != rc)
+    /* Retrieve the actual path to the file and verify whether it exists */
+    dwLen = GetFullPathNameW(pszFile, _countof(szFullPath), szFullPath, NULL);
+    if (dwLen == 0 || dwLen > _countof(szFullPath))
     {
-        DPRINT("InstallScreenSaver() SetupGetFileCompressionInfo failed with error 0x%lx\n", rc);
-        SetLastError(rc);
+        DPRINT("InstallScreenSaver() File %ls not accessible\n", pszFile);
         return;
     }
-    if (!GetSystemDirectoryW((LPWSTR)pszSystemDir, sizeof(pszSystemDir)/sizeof(WCHAR)))
+    hFile = FindFirstFile(szFullPath, &fdFile);
+    if (hFile == INVALID_HANDLE_VALUE)
     {
-        MyFree(pszOutName);
-        DPRINT("InstallScreenSaver() GetSystemDirectory failed with error 0x%lx\n", GetLastError());
+        DPRINT("InstallScreenSaver() Find %ls not found\n", pszFile);
         return;
     }
-    _wsplitpath(pszOutName, pszDrive, pszPath, pszFilename, pszExt);
-    MyFree(pszOutName);
-    StringCbCatW(pszSystemDir, sizeof(pszSystemDir), L"\\");
-    StringCbCatW(pszSystemDir, sizeof(pszSystemDir), pszFilename);
-    StringCbCatW(pszSystemDir, sizeof(pszSystemDir), pszExt);
-    rc = SetupDecompressOrCopyFileW(pszFile, pszSystemDir, &uCompressionType);
-    DPRINT("InstallScreenSaver() Copying to %ls, compression type %d return 0x%lx\n", pszFile, uCompressionType, rc);
+    FindClose(hFile);
+
+    rc = RegOpenKeyExW(HKEY_CURRENT_USER,
+                       L"Control Panel\\Desktop",
+                       0,
+                       KEY_SET_VALUE,
+                       &regKey);
+    if (rc == ERROR_SUCCESS)
+    {
+        /* Set the screensaver */
+        SIZE_T Length = wcslen(szFullPath) * sizeof(WCHAR);
+        rc = RegSetValueExW(regKey,
+                            L"SCRNSAVE.EXE",
+                            0,
+                            REG_SZ,
+                            (PBYTE)szFullPath,
+                            (DWORD)Length);
+        RegCloseKey(regKey);
+    }
+    if (rc != ERROR_SUCCESS)
+    {
+        DPRINT("InstallScreenSaver() Could not change the current screensaver\n");
+        return;
+    }
+
+    SystemParametersInfoW(SPI_SETSCREENSAVEACTIVE, TRUE, 0, SPIF_UPDATEINIFILE);
+
+    /* If no screensaver timeout is present, default to 10 minutes (600 seconds) */
+    if (!SystemParametersInfoW(SPI_GETSCREENSAVETIMEOUT, 0, &Timeout, 0) || (Timeout <= 0))
+        SystemParametersInfoW(SPI_SETSCREENSAVETIMEOUT, 600, 0, SPIF_UPDATEINIFILE);
+
+    /* Open the ScreenSaver page in this desk.cpl instance */
+    Control_RunDLLW(hWindow, hInstance, L"desk.cpl,,1", nCmdShow);
 }
 
 void

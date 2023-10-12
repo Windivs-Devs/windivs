@@ -8,6 +8,9 @@
 
 #include "wshtcpip.h"
 
+//#define WIN32_NO_STATUS
+//#include <windows.h>
+//#include <ntndk.h>
 #include <iptypes.h>
 #include <wine/list.h>
 

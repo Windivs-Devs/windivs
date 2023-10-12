@@ -5,7 +5,7 @@ static MUI_ENTRY idIDSetupInitPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -43,7 +43,7 @@ static MUI_ENTRY idIDLanguagePageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -95,7 +95,7 @@ static MUI_ENTRY idIDWelcomePageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -183,7 +183,7 @@ static MUI_ENTRY idIDIntroPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -263,7 +263,7 @@ static MUI_ENTRY idIDLicensePageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -406,7 +406,7 @@ static MUI_ENTRY idIDDevicePageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -513,7 +513,7 @@ static MUI_ENTRY idIDRepairPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -586,7 +586,7 @@ static MUI_ENTRY idIDUpgradePageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -666,7 +666,7 @@ static MUI_ENTRY idIDComputerPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -725,7 +725,7 @@ static MUI_ENTRY idIDFlushPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -770,7 +770,7 @@ static MUI_ENTRY idIDQuitPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -822,7 +822,7 @@ static MUI_ENTRY idIDDisplayPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -881,7 +881,7 @@ static MUI_ENTRY idIDSuccessPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -933,7 +933,7 @@ static MUI_ENTRY idIDBootPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -986,7 +986,7 @@ static MUI_ENTRY idIDSelectPartitionEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1066,7 +1066,7 @@ static MUI_ENTRY idIDChangeSystemPartition[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1188,7 +1188,7 @@ static MUI_ENTRY idIDConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1296,7 +1296,7 @@ static MUI_ENTRY idIDFormatPartitionEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1334,7 +1334,7 @@ static MUI_ENTRY idIDCheckFSEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1365,7 +1365,7 @@ static MUI_ENTRY idIDInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1424,7 +1424,7 @@ static MUI_ENTRY idIDFileCopyEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1469,7 +1469,7 @@ static MUI_ENTRY idIDBootLoaderEntries[] =
     {
         4,
         3,
-        "Penyetelan Windivs7 build 7000 ",
+        "Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1528,7 +1528,7 @@ static MUI_ENTRY idIDBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1552,7 +1552,7 @@ static MUI_ENTRY idIDKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1611,7 +1611,7 @@ static MUI_ENTRY idIDLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1671,7 +1671,7 @@ static MUI_ENTRY idIDPrepareCopyEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1703,7 +1703,7 @@ static MUI_ENTRY idIDSelectFSEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1751,7 +1751,7 @@ static MUI_ENTRY idIDDeletePartitionEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1803,7 +1803,7 @@ static MUI_ENTRY idIDRegistryEntries[] =
     {
         4,
         3,
-        " Penyetelan Windivs7 build 7000 ",
+        " Penyetelan Windivs7 build 7028 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
