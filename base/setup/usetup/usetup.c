@@ -3173,7 +3173,7 @@ CheckFileSystemPage(PINPUT_RECORD Ir)
 
     if (!GetNextUncheckedPartition(PartitionList, NULL, &PartEntry))
     {
-        return INSTALL_DIRECTORY_PAGE;
+        return BOOTLOADER_CHOICE_PAGE;
     }
 
     ASSERT(PartEntry->IsPartitioned && PartEntry->PartitionNumber != 0);
@@ -3822,7 +3822,7 @@ RegistryStatus(IN REGISTRY_STATUS RegStatus, ...)
  *
  * Next pages:
  *  SuccessPage (if RepairUpdate)
- *  BootLoaderPage (default)
+ *  BootLoaderChoicePage (default)
  *  QuitPage
  *
  * SIDEEFFECTS
@@ -3853,51 +3853,32 @@ RegistryPage(PINPUT_RECORD Ir)
     else
     {
         CONSOLE_SetStatusText(MUIGetString(STRING_DONE));
-        return BOOT_LOADER_PAGE;
+        return BOOTLOADER_INSTALL_PAGE;
     }
 }
 
 
 /*
- * Displays the BootLoaderPage.
+ * Displays the BootLoaderChoicePage.
  *
  * Next pages:
- *  SuccessPage (if RepairUpdate)
- *  BootLoaderHarddiskMbrPage
- *  BootLoaderHarddiskVbrPage
- *  BootLoaderFloppyPage
  *  SuccessPage
  *  QuitPage
- *
- * SIDEEFFECTS
- *  Calls RegInitializeRegistry
- *  Calls ImportRegistryFile
- *  Calls SetDefaultPagefile
- *  Calls SetMountedDeviceValues
  *
  * RETURNS
  *   Number of the next page.
  */
 static PAGE_NUMBER
-BootLoaderPage(PINPUT_RECORD Ir)
+BootLoaderChoicePage(PINPUT_RECORD Ir)
 {
     USHORT Line = 12;
-    WCHAR PathBuffer[MAX_PATH];
 
     CONSOLE_SetStatusText(MUIGetString(STRING_PLEASEWAIT));
 
     /* We must have a supported system partition by now */
     ASSERT(SystemPartition && SystemPartition->IsPartitioned && SystemPartition->PartitionNumber != 0);
 
-    RtlFreeUnicodeString(&USetupData.SystemRootPath);
-    RtlStringCchPrintfW(PathBuffer, ARRAYSIZE(PathBuffer),
-            L"\\Device\\Harddisk%lu\\Partition%lu\\",
-            SystemPartition->DiskEntry->DiskNumber,
-            SystemPartition->PartitionNumber);
-    RtlCreateUnicodeString(&USetupData.SystemRootPath, PathBuffer);
-    DPRINT1("SystemRootPath: %wZ\n", &USetupData.SystemRootPath);
-
-    /* For unattended setup, skip MBR installation or install on floppy if needed */
+    /* For unattended setup, skip MBR installation or install on removable disk if needed */
     if (IsUnattendedSetup)
     {
         if ((USetupData.MBRInstallType == 0) ||
@@ -3909,8 +3890,8 @@ BootLoaderPage(PINPUT_RECORD Ir)
 
     /*
      * We may install an MBR or VBR, but before that, check whether
-     * we need to actually install the VBR on floppy/removable media
-     * if the system partition is not recognized.
+     * we need to actually install the VBR on removable disk if the
+     * system partition is not recognized.
      */
     if ((SystemPartition->DiskEntry->DiskStyle != PARTITION_STYLE_MBR) ||
         !IsRecognizedPartition(SystemPartition->PartitionType))
@@ -3929,7 +3910,7 @@ BootLoaderPage(PINPUT_RECORD Ir)
         }
     }
 
-    MUIDisplayPage(BOOT_LOADER_PAGE);
+    MUIDisplayPage(BOOTLOADER_CHOICE_PAGE);
     CONSOLE_InvertTextXY(8, Line, 60, 1);
 
     while (TRUE)
@@ -4006,7 +3987,7 @@ BootLoaderPage(PINPUT_RECORD Ir)
             }
             else if (Line == 14)
             {
-                /* Install on floppy */
+                /* Install on removable disk */
                 USetupData.MBRInstallType = 1;
                 break;
             }
@@ -4017,51 +3998,28 @@ BootLoaderPage(PINPUT_RECORD Ir)
                 break;
             }
 
-            return BOOT_LOADER_PAGE;
+            return BOOTLOADER_CHOICE_PAGE;
         }
     }
 
 Quit:
-    switch (USetupData.MBRInstallType)
-    {
-        /* Skip MBR installation */
-        case 0:
-            return SUCCESS_PAGE;
-
-        /* Install on floppy */
-        case 1:
-            return BOOT_LOADER_FLOPPY_PAGE;
-
-        /* Install on both MBR and VBR or VBR only */
-        case 2:
-        case 3:
-            return BOOT_LOADER_INSTALLATION_PAGE;
-    }
-
-    return BOOT_LOADER_PAGE;
+    /* Continue the installation; the bootloader is installed at the end */
+    return INSTALL_DIRECTORY_PAGE;
 }
 
 
 /*
- * Displays the BootLoaderFloppyPage.
- *
- * Next pages:
- *  SuccessPage (At once)
- *  QuitPage
- *
- * SIDEEFFECTS
- *  Calls InstallFatBootcodeToFloppy()
- *
- * RETURNS
- *   Number of the next page.
+ * Installs the bootloader on removable disk.
  */
-static PAGE_NUMBER
-BootLoaderFloppyPage(PINPUT_RECORD Ir)
+static BOOLEAN
+BootLoaderRemovableDiskPage(PINPUT_RECORD Ir)
 {
     NTSTATUS Status;
 
-    MUIDisplayPage(BOOT_LOADER_FLOPPY_PAGE);
-
+Retry:
+    CONSOLE_ClearScreen();
+    CONSOLE_Flush();
+    MUIDisplayPage(BOOTLOADER_REMOVABLE_DISK_PAGE);
 //  CONSOLE_SetStatusText(MUIGetString(STRING_PLEASEWAIT));
 
     while (TRUE)
@@ -4072,7 +4030,7 @@ BootLoaderFloppyPage(PINPUT_RECORD Ir)
             (Ir->Event.KeyEvent.wVirtualKeyCode == VK_F3))  /* F3 */
         {
             if (ConfirmQuit(Ir))
-                return QUIT_PAGE;
+                return FALSE;
 
             break;
         }
@@ -4086,39 +4044,24 @@ BootLoaderFloppyPage(PINPUT_RECORD Ir)
                     MUIDisplayError(ERROR_NO_FLOPPY, Ir, POPUP_WAIT_ENTER);
 
                 /* TODO: Print error message */
-                return BOOT_LOADER_FLOPPY_PAGE;
+                goto Retry;
             }
 
-            return SUCCESS_PAGE;
+            return TRUE;
         }
     }
 
-    return BOOT_LOADER_FLOPPY_PAGE;
+    goto Retry;
 }
 
-
 /*
- * Displays the BootLoaderInstallationPage.
- *
- * Next pages:
- *  SuccessPage (At once)
- *  QuitPage
- *
- * SIDEEFFECTS
- *  Calls InstallVBRToPartition() if VBR installation is chosen.
- *  Otherwise both InstallVBRToPartition() and InstallMbrBootCodeToDisk()
- *  are called if both MBR and VBR installation is chosen.
- *
- * RETURNS
- *   Number of the next page.
+ * Installs the bootloader on hard-disk.
  */
-static PAGE_NUMBER
-BootLoaderInstallationPage(PINPUT_RECORD Ir)
+static BOOLEAN
+BootLoaderHardDiskPage(PINPUT_RECORD Ir)
 {
     NTSTATUS Status;
     WCHAR DestinationDevicePathBuffer[MAX_PATH];
-
-    MUIDisplayPage(BOOT_LOADER_INSTALLATION_PAGE);
 
     if (USetupData.MBRInstallType == 2)
     {
@@ -4131,7 +4074,7 @@ BootLoaderInstallationPage(PINPUT_RECORD Ir)
         {
             MUIDisplayError(ERROR_WRITE_BOOT, Ir, POPUP_WAIT_ENTER,
                             SystemPartition->FileSystem);
-            return QUIT_PAGE;
+            return FALSE;
         }
 
         /* Step 2: Write the MBR if the disk containing the system partition is not a super-floppy */
@@ -4147,7 +4090,7 @@ BootLoaderInstallationPage(PINPUT_RECORD Ir)
             {
                 DPRINT1("InstallMbrBootCodeToDisk() failed (Status %lx)\n", Status);
                 MUIDisplayError(ERROR_INSTALL_BOOTCODE, Ir, POPUP_WAIT_ENTER, L"MBR");
-                return QUIT_PAGE;
+                return FALSE;
             }
         }
     }
@@ -4161,11 +4104,61 @@ BootLoaderInstallationPage(PINPUT_RECORD Ir)
         {
             MUIDisplayError(ERROR_WRITE_BOOT, Ir, POPUP_WAIT_ENTER,
                             SystemPartition->FileSystem);
-            return QUIT_PAGE;
+            return FALSE;
         }
     }
 
-    return SUCCESS_PAGE;
+    return TRUE;
+}
+
+/*
+ * Actually installs the bootloader, at the end of the installation.
+ * The media where the bootloader is going to be installed, has already
+ * been chosen before -- See BootLoaderChoicePage().
+ *
+ * Next pages:
+ *  SuccessPage (At once)
+ *  QuitPage
+ *
+ * RETURNS
+ *   Number of the next page.
+ */
+static PAGE_NUMBER
+BootLoaderInstallPage(PINPUT_RECORD Ir)
+{
+    WCHAR PathBuffer[MAX_PATH];
+
+    // /* We must have a supported system partition by now */
+    // ASSERT(SystemPartition && SystemPartition->IsPartitioned && SystemPartition->PartitionNumber != 0);
+
+    RtlFreeUnicodeString(&USetupData.SystemRootPath);
+    RtlStringCchPrintfW(PathBuffer, ARRAYSIZE(PathBuffer),
+            L"\\Device\\Harddisk%lu\\Partition%lu\\",
+            SystemPartition->DiskEntry->DiskNumber,
+            SystemPartition->PartitionNumber);
+    RtlCreateUnicodeString(&USetupData.SystemRootPath, PathBuffer);
+    DPRINT1("SystemRootPath: %wZ\n", &USetupData.SystemRootPath);
+
+    MUIDisplayPage(BOOTLOADER_INSTALL_PAGE);
+
+    switch (USetupData.MBRInstallType)
+    {
+        /* Skip installation */
+        case 0:
+            return SUCCESS_PAGE;
+
+        /* Install on removable disk */
+        case 1:
+            return BootLoaderRemovableDiskPage(Ir) ? SUCCESS_PAGE : QUIT_PAGE;
+
+        /* Install on hard-disk (both MBR and VBR, or VBR only) */
+        case 2:
+        case 3:
+            return BootLoaderHardDiskPage(Ir) ? SUCCESS_PAGE : QUIT_PAGE;
+
+        default:
+            return SUCCESS_PAGE;
+    }
 }
 
 
@@ -4598,6 +4591,11 @@ RunUSetup(VOID)
                 Page = CheckFileSystemPage(&Ir);
                 break;
 
+            /* Bootloader installation choice page */
+            case BOOTLOADER_CHOICE_PAGE:
+                Page = BootLoaderChoicePage(&Ir);
+                break;
+
             /* Installation pages */
             case INSTALL_DIRECTORY_PAGE:
                 Page = InstallDirectoryPage(&Ir);
@@ -4615,17 +4613,10 @@ RunUSetup(VOID)
                 Page = RegistryPage(&Ir);
                 break;
 
-            /* Bootloader installation pages */
-            case BOOT_LOADER_PAGE:
-                Page = BootLoaderPage(&Ir);
-                break;
-
-            case BOOT_LOADER_FLOPPY_PAGE:
-                Page = BootLoaderFloppyPage(&Ir);
-                break;
-
-            case BOOT_LOADER_INSTALLATION_PAGE:
-                Page = BootLoaderInstallationPage(&Ir);
+            /* Bootloader installation page */
+            case BOOTLOADER_INSTALL_PAGE:
+            // case BOOTLOADER_REMOVABLE_DISK_PAGE:
+                Page = BootLoaderInstallPage(&Ir);
                 break;
 
             /* Repair pages */
