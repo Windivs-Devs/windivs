@@ -46,7 +46,7 @@ MIDIERR_STILLPLAYING,    "Această operație nu poate fi executată cât timp su
 MIDIERR_NOMAP,           "Lipsește harta MIDI. Poate fi o problemă cu modulul-pilot, sau cu fișierul MIDIMAP.CFG care fie lipsește, fie este corupt."
 MIDIERR_NOTREADY,        "Portul transmite date către dispozitiv. Așteptați până datele sunt transmise în totalitate, apoi reîncercați."
 MIDIERR_NODEVICE,        "Configuratorul MIDI este asociat unui dispozitiv care nu este instalat în sistem."
-MIDIERR_INVALIDSETUP,    "Configuratorul MIDI este deteriorat. Copiați fișierul original MIDIMAP.CFG în directorul SYSTEM din ReactOS, apoi reîncercați."
+MIDIERR_INVALIDSETUP,    "Configuratorul MIDI este deteriorat. Copiați fișierul original MIDIMAP.CFG în directorul SYSTEM din Windivs, apoi reîncercați."
 
 /* MCI errors */
 MCIERR_INVALID_DEVICE_ID,         "Identificator de dispozitiv MCI nevalid. Utilizați identificatorul obținut la deschiderea dispozitivului MCI."
@@ -67,7 +67,7 @@ MCIERR_MISSING_PARAMETER,         "Comanda specificată necesită un parametru. 
 MCIERR_UNSUPPORTED_FUNCTION,      "Dispozitivul MCI pe care-l utilizați nu acceptă comanda specificată."
 MCIERR_FILE_NOT_FOUND,            "Fișierul specificat nu poate fi găsit. Asigurați-vă că numele și calea fișierului sunt corecte."
 MCIERR_DEVICE_NOT_READY,          "Modulul-pilot al dispozitivului nu este gata."
-MCIERR_INTERNAL,                  "A apărut o problemă la inițializarea MCI. Încercați repornirea ReactOS."
+MCIERR_INTERNAL,                  "A apărut o problemă la inițializarea MCI. Încercați repornirea Windivs."
 MCIERR_DRIVER,                    "A apărut o problemă la modulul-pilot al dispozitibului. Modulul-pilot este închis. Eroarea nu poate fi accesată."
 MCIERR_CANNOT_USE_ALL,            "În această comandă „all” ca nume de dispozitiv nu este permis."
 MCIERR_MULTIPLE,                  "Au survenit erori în mai mult de un dispozitiv. Specificați separat fiecare comandă și dispozitiv pentru a identifica dispozitivul care a cauzat eroarea."
