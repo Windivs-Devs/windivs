@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="" />
+    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="Remove HELP bar from CMD">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +25,24 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2W8CQ2yuP74zeAwLG4VNxRMV900" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/jpb/reactos"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)">
       <created>1695754904560</created>
@@ -38,7 +58,28 @@
       <option name="project" value="LOCAL" />
       <updated>1695755070023</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="" />
+      <created>1696104801003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696104801003</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Bugfixes">
+      <created>1696104969089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696104969089</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Remove HELP bar from CMD">
+      <created>1696105260538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696105260538</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -46,19 +87,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="windivs7-dev" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -67,6 +96,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)" />
     <MESSAGE value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
+    <MESSAGE value="Bugfixes" />
+    <MESSAGE value="Remove HELP bar from CMD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove HELP bar from CMD" />
   </component>
 </project>
