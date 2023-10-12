@@ -231,8 +231,8 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
         return NULL;
 
     HDC hScreenDC = ::GetDC(NULL);
-    g_xDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSX);
-    g_yDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSY);
+    g_xDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSX);
+    g_yDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSY);
     ::ReleaseDC(NULL, hScreenDC);
 
     return SetBitmapAndInfo(hBitmap, name, pFound, isFile);
@@ -272,7 +272,7 @@ HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
 
     // load the image
     CImageDx img;
-    float xDpi, yDpi;
+    float xDpi = 0, yDpi = 0;
     HRESULT hr = img.LoadDx(name, &xDpi, &yDpi);
     if (FAILED(hr) && fIsMainFile)
     {
@@ -290,12 +290,16 @@ HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
     if (!fIsMainFile)
         return hBitmap;
 
+    if (xDpi <= 0 || yDpi <= 0)
+    {
+        HDC hDC = ::GetDC(NULL);
+        xDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSX);
+        yDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSY);
+        ::ReleaseDC(NULL, hDC);
+    }
+
     g_xDpi = xDpi;
     g_yDpi = yDpi;
-    if (g_xDpi <= 0)
-        g_xDpi = 96;
-    if (g_yDpi <= 0)
-        g_yDpi = 96;
 
     SetBitmapAndInfo(hBitmap, name, &find, TRUE);
     return hBitmap;
