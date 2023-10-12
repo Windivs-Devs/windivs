@@ -12,7 +12,7 @@ static MUI_ENTRY sqALSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -50,7 +50,7 @@ static MUI_ENTRY sqALLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -102,7 +102,7 @@ static MUI_ENTRY sqALWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -189,7 +189,7 @@ static MUI_ENTRY sqALIntroPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -269,7 +269,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -412,7 +412,7 @@ static MUI_ENTRY sqALDevicePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -519,7 +519,7 @@ static MUI_ENTRY sqALRepairPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -592,7 +592,7 @@ static MUI_ENTRY sqALUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -672,7 +672,7 @@ static MUI_ENTRY sqALComputerPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -731,7 +731,7 @@ static MUI_ENTRY sqALFlushPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -776,7 +776,7 @@ static MUI_ENTRY sqALQuitPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -828,7 +828,7 @@ static MUI_ENTRY sqALDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -887,7 +887,7 @@ static MUI_ENTRY sqALSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -939,7 +939,7 @@ static MUI_ENTRY sqALSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1020,7 +1020,7 @@ static MUI_ENTRY sqALChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1142,7 +1142,7 @@ static MUI_ENTRY sqALConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1250,7 +1250,7 @@ static MUI_ENTRY sqALFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1288,7 +1288,7 @@ static MUI_ENTRY sqALCheckFSEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1319,7 +1319,7 @@ static MUI_ENTRY sqALInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1378,7 +1378,7 @@ static MUI_ENTRY sqALFileCopyEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1423,7 +1423,7 @@ static MUI_ENTRY sqALBootLoaderChoicePageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1482,7 +1482,7 @@ static MUI_ENTRY sqALBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1513,7 +1513,7 @@ static MUI_ENTRY sqALBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1566,7 +1566,7 @@ static MUI_ENTRY sqALKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1625,7 +1625,7 @@ static MUI_ENTRY sqALLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1685,7 +1685,7 @@ static MUI_ENTRY sqALPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1717,7 +1717,7 @@ static MUI_ENTRY sqALSelectFSEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1765,7 +1765,7 @@ static MUI_ENTRY sqALDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1817,7 +1817,7 @@ static MUI_ENTRY sqALRegistryEntries[] =
     {
         4,
         3,
-        " Instalimi i Windivs7 build 7028 ",
+        " Instalimi i Windivs7 build 7100 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
