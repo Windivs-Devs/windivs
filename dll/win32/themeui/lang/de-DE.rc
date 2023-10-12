@@ -16,8 +16,8 @@ BEGIN
     IDS_PUMPKIN "Kürbis"
     IDS_RAIN "Regentag"
     IDS_RWB "Red, White, and Blue"
-    IDS_CLASSIC "ReactOS Klassisch"
-    IDS_STANDARD "ReactOS Standard"
+    IDS_CLASSIC "Windivs Klassisch"
+    IDS_STANDARD "Windivs Standard"
     IDS_ROSE "Rose"
     IDS_SAND "Sand" //Desert
     IDS_SLATE "Schiefer"

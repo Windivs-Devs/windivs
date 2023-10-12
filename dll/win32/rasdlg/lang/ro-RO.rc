@@ -1,6 +1,6 @@
 /*
  * FILE:       dll/win32/rasdlg/lang/ro-RO.rc
- *             ReactOS Project (https://reactos.org)
+ *             Windivs Project (https://reactos.org)
  * TRANSLATOR: Ștefan Fulea (stefan dot fulea at mail dot com)
  */
 
@@ -73,7 +73,7 @@ BEGIN
     AUTOCHECKBOX "Permite MS-CHAP vechi (pentru servere &Win 95)", 200, 46, 162, 198, 10, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Micr&osoft CHAP versiunea 2 (MS-CHAP v2)", 1492, 28, 176, 200, 10, BS_TOP | BS_MULTILINE
     CONTROL "", -1, "STATIC", SS_LEFTNOWORDWRAP | SS_SUNKEN | WS_GROUP, 28, 189, 208, 1
-    AUTOCHECKBOX "Pentru protocoalele &bazate pe MS-CHAP, utilizează nume și parole de autentificare în ReactOS (și eventual, domenii)", 1549, 28, 195, 213, 24, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Pentru protocoalele &bazate pe MS-CHAP, utilizează nume și parole de autentificare în Windivs (și eventual, domenii)", 1549, 28, 195, 213, 24, BS_TOP | BS_MULTILINE
     DEFPUSHBUTTON "Con&firmă", 1, 127, 232, 60, 14
     PUSHBUTTON "A&nulează", 2, 192, 232, 60, 14
 END
@@ -167,7 +167,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Apelare și închidere automată"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "ReactOS poate apela/închide automat dispozitivele în funcție de cantitatea de informație transmisă și recepționată.", 1085, 9, 7, 253, 30
+    LTEXT "Windivs poate apela/închide automat dispozitivele în funcție de cantitatea de informație transmisă și recepționată.", 1085, 9, 7, 253, 30
     GROUPBOX "Apelare automată", -1, 6, 38, 249, 71
     LTEXT "Apelează o altă linie când conexiunea satisface condițiile următoare:", 1083, 16, 51, 237, 16, NOT WS_GROUP
     LTEXT "Este activă de cel &puțin:", -1, 16, 73, 100, 8
@@ -630,7 +630,7 @@ BEGIN
     AUTORADIOBUTTON "&Avansată (configurație particularizată)", 1541, 14, 102, 198, 8, BS_NOTIFY
     LTEXT "&Validează identitatea mea astfel:", 1537, 26, 29, 187, 8, NOT WS_GROUP
     COMBOBOX 1178, 26, 40, 184, 78, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    AUTOCHECKBOX "&Utilizează automat datele de autentificare din ReactOS (și domeniul dacă e cazul)", 1174, 26, 58, 184, 18, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "&Utilizează automat datele de autentificare din Windivs (și domeniul dacă e cazul)", 1174, 26, 58, 184, 18, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Solicită c&riptarea datelor\n(deconectează dacă nu este posibil)", 1169, 26, 82, 183, 18, BS_TOP | BS_MULTILINE
     LTEXT "Utilizarea acestor opțiuni cere cunoștințe ale protocoalelor de securitate.", 1539, 15, 114, 134, 20
     PUSHBUTTON "&Opțiuni…", 1180, 151, 115, 60, 14
@@ -687,7 +687,7 @@ BEGIN
     GROUPBOX "Opțiuni de apelare", 1289, 7, 2, 213, 64
     AUTOCHECKBOX "Reprezintă e&voluția conectării", 1284, 16, 14, 201, 10
     AUTOCHECKBOX "Solicită n&ume, parole, certificate, etc.", 1554, 16, 27, 201, 10
-    AUTOCHECKBOX "Include &domeniul de autentificare ReactOS", 1555, 16, 39, 201, 10
+    AUTOCHECKBOX "Include &domeniul de autentificare Windivs", 1555, 16, 39, 201, 10
     AUTOCHECKBOX "Solicită nu&mărul de telefon", 1285, 16, 52, 200, 10, BS_TOP | BS_MULTILINE
     GROUPBOX "Opțiuni de reapelare", 1290, 6, 72, 213, 79
     LTEXT "Încercări de re&apelare:", 1300, 16, 87, 123, 8
@@ -1278,7 +1278,7 @@ STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Creare conexiune nouă"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Scrieți numele serviciului în următorul câmp de text. Dacă veți lăsa acet câmp necompletat, ReactOS va detecta și va configura automat serviciul în momentul conectării efective.", -1, 10, 7, 301, 25
+    LTEXT "Scrieți numele serviciului în următorul câmp de text. Dacă veți lăsa acet câmp necompletat, Windivs va detecta și va configura automat serviciul în momentul conectării efective.", -1, 10, 7, 301, 25
     LTEXT "N&umele serviciului (opțional):", -1, 22, 32, 229, 8
     EDITTEXT 1593, 22, 44, 275, 14, ES_AUTOHSCROLL
 END
@@ -1303,7 +1303,7 @@ BEGIN
     AUTORADIOBUTTON "&Avansată (particularizată)", 1541, 14, 100, 197, 8, BS_NOTIFY
     LTEXT "&Validează-mi identitatea în felul următor:", 1537, 26, 29, 183, 8, NOT WS_GROUP
     COMBOBOX 1178, 26, 40, 184, 78, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_VSCROLL | NOT WS_TABSTOP
-    AUTOCHECKBOX "Utilizează a&utomat numele și parola de utilizator ReactOS (și domeniul dacă există)", 1174, 26, 59, 182, 18, BS_TOP | BS_MULTILINE
+    AUTOCHECKBOX "Utilizează a&utomat numele și parola de utilizator Windivs (și domeniul dacă există)", 1174, 26, 59, 182, 18, BS_TOP | BS_MULTILINE
     AUTOCHECKBOX "Solicită &criptarea datelor (deconectează dacă nu este posibil)", 1169, 26, 81, 182, 18, BS_TOP | BS_MULTILINE
     LTEXT "Utilizarea acestor opțiuni cere cunoștințe ale protocoalelor de securitate.", 1539, 26, 111, 182, 18
     PUSHBUTTON "&Opțiuni…", 1180, 151, 134, 60, 14
@@ -1476,7 +1476,7 @@ BEGIN
     GROUPBOX "Opțiuni de apelare", 1289, 8, 7, 214, 56
     AUTOCHECKBOX "Reprezintă &evoluția conectării", 1284, 16, 17, 199, 10
     AUTOCHECKBOX "Solicită n&ume, parole, certificate, etc.", 1554, 16, 32, 199, 10
-    AUTOCHECKBOX "Include &domeniul de autentificare ReactOS", 1555, 16, 47, 178, 10
+    AUTOCHECKBOX "Include &domeniul de autentificare Windivs", 1555, 16, 47, 178, 10
     GROUPBOX "Opțiuni de reapelare", 1290, 8, 68, 214, 89
     LTEXT "În&cercări de reapelare:", 1300, 16, 81, 121, 8
     EDITTEXT 1287, 140, 77, 70, 14, ES_AUTOHSCROLL | ES_NUMBER
@@ -1803,7 +1803,7 @@ BEGIN
     AUTORADIOBUTTON "&Permite conexiuni virtuale private", 7053, 29, 63, 265, 10, BS_TOP | BS_MULTILINE | WS_GROUP
     AUTORADIOBUTTON "N&u permite conexiuni virtuale private", 7054, 29, 78, 265, 10, BS_TOP | BS_MULTILINE | NOT WS_TABSTOP
     LTEXT "Doriți permiterea conexiunilor virtuale private (VPN) către acest calculator?", -1, 17, 49, 275, 8
-    LTEXT " Dacă veți permite conexiuni VPN, ReactOS va modifica paravanul conexiunilor pentru a permite calculatorului să transmită și să recepționeze pachete VPN.", -1, 10, 25, 293, 25
+    LTEXT " Dacă veți permite conexiuni VPN, Windivs va modifica paravanul conexiunilor pentru a permite calculatorului să transmită și să recepționeze pachete VPN.", -1, 10, 25, 293, 25
 END
 
 7055 DIALOGEX 0, 0, 317, 143
@@ -1892,7 +1892,7 @@ BEGIN
     244 "Deoarece această conexiune este la moment activă, unele modificări își vor face efectul abia la următoarea apelare.\0"
     245 "Nu există conexiuni disponibile pentru toți utilizatorii.  Înainte de apelare este necesar să vă autentificați.\0"
     246 "Agenda de telefoane este goală.\n\nApăsați „Închide” și adăugați o înregistrare.\0"
-    247 "Din cauza restricțiilor de importare/exportare, criptarea datelor nu este disponibilă în această versiune ReactOS.\0"
+    247 "Din cauza restricțiilor de importare/exportare, criptarea datelor nu este disponibilă în această versiune Windivs.\0"
     248 "Introduceți o adresă X.25 în următoarea pagină.\0"
     249 "Eroare %1: %2\0"
     250 "%1\n\nEroare %2: %3\0"
@@ -2115,7 +2115,7 @@ BEGIN
     501 "Care este numele sau adresa serverului VPN?\0"
     502 "Apelarea la cerere nu a putut fi dezactivată.\0"
     503 "Rețea publică\0"
-    504 "ReactOS poate asigura preconectarea la o rețea publică.\0"
+    504 "Windivs poate asigura preconectarea la o rețea publică.\0"
     505 "VPN1\0"
     506 "Partajarea conexiunii de Internet\0"
     507 "Puteți permite unei rețele locale accesarea resurselor prin această conexiune de linie comutată.\0"
@@ -2241,8 +2241,8 @@ BEGIN
     1611 "Conexiune de bandă largă\0"
     1612 "Ați ales să utilizați o cheie prepartajată dar nu ați specificat nici una.\nIntroduceți o cheie prepartajată.\0"
     1613 "Eșec la transmiterea informațiilor de autentificare\0"
-    1634 "Deoarece serviciul instrumentației de gestionare ReactOS (WMI) a fost dezactivat, ReactOS nu poate afișa proprietățile acestei conexiuni sau ale rețelei locale.\n\nPentru a configura proprietățile acestei conexiuni sau ale rețelei locale, este necesară activarea serviciului WMI. Pentru a realiza asta, mergeți în Panoul de control, deschideți Servicii, executați clic dreapta pe Instrumentația de Gestionare ReactOS, și alegeți Pornește.\0"
-    1635 "Proprietățile acestei conexiuni nu pot fi reprezentate. E posibil ca informațiile instrumentației de gestionare a ReactOS (WMI) să fie corupte. Pentru a corecta, utilizați „Restaurare sistem” pentru a readuce sistemul la o stare precedentă (numită punct de restaurare). „Restaurare sistem” este amplasat în „Instrumente de sistem”, la „Accesorii”.\0"
+    1634 "Deoarece serviciul instrumentației de gestionare Windivs (WMI) a fost dezactivat, Windivs nu poate afișa proprietățile acestei conexiuni sau ale rețelei locale.\n\nPentru a configura proprietățile acestei conexiuni sau ale rețelei locale, este necesară activarea serviciului WMI. Pentru a realiza asta, mergeți în Panoul de control, deschideți Servicii, executați clic dreapta pe Instrumentația de Gestionare Windivs, și alegeți Pornește.\0"
+    1635 "Proprietățile acestei conexiuni nu pot fi reprezentate. E posibil ca informațiile instrumentației de gestionare a Windivs (WMI) să fie corupte. Pentru a corecta, utilizați „Restaurare sistem” pentru a readuce sistemul la o stare precedentă (numită punct de restaurare). „Restaurare sistem” este amplasat în „Instrumente de sistem”, la „Accesorii”.\0"
     1646 "Acceptă cererea de ecou\0"
     1647 "Acceptă cererea de marcaj temporal\0"
     1648 "Acceptă cererea de mască\0"
@@ -2355,7 +2355,7 @@ BEGIN
     7385 "Portul de conexiune (%s)\0"
     7386 "„Conexiuni de rețea” nu poate reprezenta unele opțiuni specializate ale conexiunilor de intrare care au fost stabilite utilizând „Gestionarul utilizatorului local” sau consola „Policici de acces în rețea”.  Pentru a completa sau corecta informații ale conexiunilor de intrare, va trebui să utilizați acele console.\0"
     7387 "Opțiunea de retroapelare a utilizatorului necesită introducerea unui număr valid de retroapelare.\0"
-    7388 "ReactOS trebuie să se repornească pentru a completa această acțiune.  Permiteți această repornire acum?\0"
+    7388 "Windivs trebuie să se repornească pentru a completa această acțiune.  Permiteți această repornire acum?\0"
     7389 "Dispozitivul ales nu are disponibile opțiuni de configurare.\0"
     7390 "Domeniu nevalid\0"
     7391 "Ați cerut ca „%1” să fie dezactivat pentru conexiunile de intrare.  Pentru a dezactiva aceasta, e necesară oprirea serviciului „Server”.  Odată oprit, nici un director partajat sau imprimantă din acest calculator nu vor mai fi disponibile altor calculatoare.  Doriți scoaterea unei console sistem care va permite oprirea serviciului „Server”?\r\n\nÎn „Gestionarea calculatorului”, clic pe „Instrumente de sistem”, apoi clic pe „Servicii”.  În panoul din dreapta, clic-dreapta pe „Server”, apoi alegeți oprirea lui.\0"
