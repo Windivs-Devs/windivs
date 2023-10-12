@@ -6,7 +6,7 @@ LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
 
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Zobrazovač obrázkov a faxov systému ReactOS"
+    IDS_APPTITLE "Zobrazovač obrázkov a faxov systému Windivs"
     IDS_SETASDESKBG "Nastaviť ako pozadie pracovnej plochy"
     IDS_NOPREVIEW "No preview available."
     IDS_PREVIEW "Preview" // Náhľad, Ukážka, Prezrieť ???
