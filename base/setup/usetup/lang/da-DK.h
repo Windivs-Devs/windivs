@@ -8,7 +8,7 @@ static MUI_ENTRY daDKSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY daDKLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY daDKWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -185,7 +185,7 @@ static MUI_ENTRY daDKIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY daDKDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -515,7 +515,7 @@ static MUI_ENTRY daDKRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -595,7 +595,7 @@ static MUI_ENTRY daDKUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -675,7 +675,7 @@ static MUI_ENTRY daDKComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -734,7 +734,7 @@ static MUI_ENTRY daDKFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -779,7 +779,7 @@ static MUI_ENTRY daDKQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -831,7 +831,7 @@ static MUI_ENTRY daDKDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -890,7 +890,7 @@ static MUI_ENTRY daDKSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -942,7 +942,7 @@ static MUI_ENTRY daDKSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1022,7 +1022,7 @@ static MUI_ENTRY daDKChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7100 Setup ",
+        " Windivs7 build 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1144,7 +1144,7 @@ static MUI_ENTRY daDKConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1245,7 +1245,7 @@ static MUI_ENTRY daDKFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1283,7 +1283,7 @@ static MUI_ENTRY daDKCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1314,7 +1314,7 @@ static MUI_ENTRY daDKInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1373,7 +1373,7 @@ static MUI_ENTRY daDKFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1418,7 +1418,7 @@ static MUI_ENTRY daDKBootLoaderChoicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1477,7 +1477,7 @@ static MUI_ENTRY daDKBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 Setup ",
+        " Windivs7 build 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1508,7 +1508,7 @@ static MUI_ENTRY daDKBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1561,7 +1561,7 @@ static MUI_ENTRY daDKKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1620,7 +1620,7 @@ static MUI_ENTRY daDKLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1680,7 +1680,7 @@ static MUI_ENTRY daDKPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1712,7 +1712,7 @@ static MUI_ENTRY daDKSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1760,7 +1760,7 @@ static MUI_ENTRY daDKDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1812,7 +1812,7 @@ static MUI_ENTRY daDKRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 installationen ",
+        " Windivs7 build 7127 installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

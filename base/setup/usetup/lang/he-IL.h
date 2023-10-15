@@ -9,7 +9,7 @@ static MUI_ENTRY heILSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -47,7 +47,7 @@ static MUI_ENTRY heILLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -99,7 +99,7 @@ static MUI_ENTRY heILWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -187,7 +187,7 @@ static MUI_ENTRY heILIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -267,7 +267,7 @@ static MUI_ENTRY heILLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -410,7 +410,7 @@ static MUI_ENTRY heILDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -517,7 +517,7 @@ static MUI_ENTRY heILRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -590,7 +590,7 @@ static MUI_ENTRY heILUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -670,7 +670,7 @@ static MUI_ENTRY heILComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -729,7 +729,7 @@ static MUI_ENTRY heILFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -774,7 +774,7 @@ static MUI_ENTRY heILQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -826,7 +826,7 @@ static MUI_ENTRY heILDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -885,7 +885,7 @@ static MUI_ENTRY heILSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -937,7 +937,7 @@ static MUI_ENTRY heILSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1017,7 +1017,7 @@ static MUI_ENTRY heILChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7100 Setup ",
+        " Windivs7 build 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1139,7 +1139,7 @@ static MUI_ENTRY heILConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1247,7 +1247,7 @@ static MUI_ENTRY heILFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1285,7 +1285,7 @@ static MUI_ENTRY heILCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1316,7 +1316,7 @@ static MUI_ENTRY heILInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1375,7 +1375,7 @@ static MUI_ENTRY heILFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1420,7 +1420,7 @@ static MUI_ENTRY heILBootLoaderChoicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1479,7 +1479,7 @@ static MUI_ENTRY heILBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 Setup ",
+        " Windivs7 build 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1510,7 +1510,7 @@ static MUI_ENTRY heILBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1556,7 +1556,7 @@ static MUI_ENTRY heILKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1615,7 +1615,7 @@ static MUI_ENTRY heILLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1675,7 +1675,7 @@ static MUI_ENTRY heILPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1707,7 +1707,7 @@ static MUI_ENTRY heILSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1755,7 +1755,7 @@ static MUI_ENTRY heILDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1807,7 +1807,7 @@ static MUI_ENTRY heILRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7100 \232\220\227\232\204 ",
+        " Windivs7 build 7127 \232\220\227\232\204 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
