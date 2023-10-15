@@ -1030,7 +1030,7 @@ static MUI_ENTRY elGRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1492,7 +1492,7 @@ static MUI_ENTRY elGRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " Windivs7 build 7100 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
