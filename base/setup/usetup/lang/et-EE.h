@@ -8,14 +8,14 @@ static MUI_ENTRY etEESetupInitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs7 Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY etEELanguagePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,21 +98,21 @@ static MUI_ENTRY etEEWelcomePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Tere tulemast ReactOS'i paigaldusse",
+        "Tere tulemast Windivs7'i paigaldusse",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Selles paigaldamise etapis kopeeritakse ReactOSi failid arvutisse ja",
+        "Selles paigaldamise etapis kopeeritakse Windivs7i failid arvutisse ja",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,42 +126,42 @@ static MUI_ENTRY etEEWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Vajuta R, et ReactOS'i parandada.",
+        "\x07  Vajuta R, et Windivs7'i parandada.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Vajuta L, et n\204ha ReactOS'i litsentsi ja kasutamise tingimusi",
+        "\x07  Vajuta L, et n\204ha Windivs7'i litsentsi ja kasutamise tingimusi",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Vajuta F3, et v\204ljuda ReactOS'i paigaldamata.",
+        "\x07  Vajuta F3, et v\204ljuda Windivs7'i paigaldamata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "ReactOS'i kohta saab rohkem infot:",
+        "Windivs7'i kohta saab rohkem infot:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://reactos.org/",
+        "https://Windivs7.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -185,21 +185,21 @@ static MUI_ENTRY etEEIntroPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS'i versiooni seisund",
+        "Windivs7'i versiooni seisund",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS on alfa etapis, mis t\204hendab et see ei ole veel funktsionaalselt",
+        "Windivs7 on alfa etapis, mis t\204hendab et see ei ole veel funktsionaalselt",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -227,21 +227,21 @@ static MUI_ENTRY etEEIntroPageEntries[] =
     {
         6,
         16,
-        "ReactOS'i p\204ris riistvara peal'.",
+        "Windivs7'i p\204ris riistvara peal'.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Vajuta ENTER, et siseneda ReactOS'i paigaldusse.",
+        "\x07  Vajuta ENTER, et siseneda Windivs7'i paigaldusse.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Vajuta F3, et lahkuda ReactOS'i paigaldamata.",
+        "\x07  Vajuta F3, et lahkuda Windivs7'i paigaldamata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS kasutab GNU \201ldist avalikku litsentsi(GPL),",
+        "Windivs7 kasutab GNU \201ldist avalikku litsentsi(GPL),",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -300,7 +300,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         8,
         11,
-        "Kogu ReactOS'i s\201steem on seega kaitstud GPL litsentsiga",
+        "Kogu Windivs7'i s\201steem on seega kaitstud GPL litsentsiga",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -328,7 +328,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         8,
         16,
-        "piiranguid kehtiva seadusega s\204testatud piirides. ReactOSi",
+        "piiranguid kehtiva seadusega s\204testatud piirides. Windivs7i",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY etEEDevicePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -515,14 +515,14 @@ static MUI_ENTRY etEERepairPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS'i paigaldusprogramm on varajases arendusfaasis. Praegu ei ole",
+        "Windivs7'i paigaldusprogramm on varajases arendusfaasis. Praegu ei ole",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -588,21 +588,21 @@ static MUI_ENTRY etEEUpgradePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs7 Setup can upgrade one of the available Windivs7 installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs7 installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -644,7 +644,7 @@ static MUI_ENTRY etEEUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -668,7 +668,7 @@ static MUI_ENTRY etEEComputerPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -727,7 +727,7 @@ static MUI_ENTRY etEEFlushPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -772,14 +772,14 @@ static MUI_ENTRY etEEQuitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS ei ole t\204ielikult paigaldatud.",
+        "Windivs7 ei ole t\204ielikult paigaldatud.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -824,7 +824,7 @@ static MUI_ENTRY etEEDisplayPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -883,14 +883,14 @@ static MUI_ENTRY etEESuccessPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS'i p\344hilised komponendid on edukalt paigaldatud.",
+        "Windivs7'i p\344hilised komponendid on edukalt paigaldatud.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -935,7 +935,7 @@ static MUI_ENTRY etEESelectPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -963,7 +963,7 @@ static MUI_ENTRY etEESelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Vajuta ENTER, et paigaldada ReactOS valitud partitsioonile.",
+        "\x07  Vajuta ENTER, et paigaldada Windivs7 valitud partitsioonile.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1016,7 +1016,7 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1037,14 +1037,14 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs7, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1114,7 +1114,7 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1138,7 +1138,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1159,7 +1159,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programme, programme millega alustada ops\201steeme (nagu ReactOS) v\344i muid",
+        "programme, programme millega alustada ops\201steeme (nagu Windivs7) v\344i muid",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1194,7 +1194,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "arvutit k\344vakettalt kuni l\344petate ReactOS'i paigalduse.",
+        "arvutit k\344vakettalt kuni l\344petate Windivs7'i paigalduse.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1246,7 +1246,7 @@ static MUI_ENTRY etEEFormatPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1284,7 +1284,7 @@ static MUI_ENTRY etEECheckFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1315,21 +1315,21 @@ static MUI_ENTRY etEEInstallDirectoryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS paigaldatakse valitud partitsioonile.",
+        "Windivs7 paigaldatakse valitud partitsioonile.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Vali kaust, kuhu ReactOS paigaldada:",
+        "Vali kaust, kuhu Windivs7 paigaldada:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1343,7 +1343,7 @@ static MUI_ENTRY etEEInstallDirectoryEntries[] =
     {
         6,
         15,
-        "tr\201ki asemele kaust, kuhu ReactOS installeerida.",
+        "tr\201ki asemele kaust, kuhu Windivs7 installeerida.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1374,14 +1374,14 @@ static MUI_ENTRY etEEFileCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Palun oota, kuni ReactOS paigaldatakse sihtkausta.",
+        "Palun oota, kuni Windivs7 paigaldatakse sihtkausta.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1419,7 +1419,7 @@ static MUI_ENTRY etEEBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1478,7 +1478,7 @@ static MUI_ENTRY etEEBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1509,7 +1509,7 @@ static MUI_ENTRY etEEBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1555,7 +1555,7 @@ static MUI_ENTRY etEEKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1614,7 +1614,7 @@ static MUI_ENTRY etEELayoutSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1674,14 +1674,14 @@ static MUI_ENTRY etEEPrepareCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Arvutit valmistatakse ette ReactOSi failide kopeerimiseks.",
+        "Arvutit valmistatakse ette Windivs7i failide kopeerimiseks.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1706,7 +1706,7 @@ static MUI_ENTRY etEESelectFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1754,7 +1754,7 @@ static MUI_ENTRY etEEDeletePartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1806,7 +1806,7 @@ static MUI_ENTRY etEERegistryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " paigaldus ",
+        " Windivs7 7127 paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1841,9 +1841,9 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS ei ole t\204ielikult paigaldatud.\n"
+        "Windivs7 ei ole t\204ielikult paigaldatud.\n"
         "Kui paigaldamine praegu katkestada, siis tuleb\n"
-        "ReactOS'i paigaldamiseks paigaldusprogramm uuesti k\204ivitada.\n"
+        "Windivs7'i paigaldamiseks paigaldusprogramm uuesti k\204ivitada.\n"
         "\n"
         "  \x07  Vajuta ENTER paigalduse j\204tmaiseks.\n"
         "  \x07  Vajuta F3 paigalduse seiskamiseks.",
@@ -1851,7 +1851,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs7 installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1861,7 +1861,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs7 within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2058,7 +2058,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         //ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Valitud partitsioon ei ole piisavalt suur ReactOS'i paigaldamiseks.\n"
+        "Valitud partitsioon ei ole piisavalt suur Windivs7'i paigaldamiseks.\n"
         "Paigalduse partitsioon peab v\204heamlt %lu MB suur olema.\n"
         "\n"
         "  * Vajuta mis tahes klahvi, et j\204tkata.",
@@ -2242,13 +2242,13 @@ MUI_STRING etEEStrings[] =
     {STRING_PARTFORMAT,
     "J\204rgmisena vormindatakse seda partitsiooni."},
     {STRING_NONFORMATTEDPART,
-    "Oled valinud ReactOS'i paigaldamise uuele v\344i vormindamata partitsioonile."},
+    "Oled valinud Windivs7'i paigaldamise uuele v\344i vormindamata partitsioonile."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "S\201steemipartitsioon on veel vormindamata."},
     {STRING_NONFORMATTEDOTHERPART,
     "Uus partitsioon on veel vormindamata."},
     {STRING_INSTALLONPART,
-    "ReactOS paigaldatakse partitsioonile"},
+    "Windivs7 paigaldatakse partitsioonile"},
     {STRING_CONTINUE,
     "ENTER = J\204tka"},
     {STRING_QUITCONTINUE,

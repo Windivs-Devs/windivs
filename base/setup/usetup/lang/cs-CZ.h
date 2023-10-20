@@ -14,14 +14,14 @@ static MUI_ENTRY csCZSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs7 Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -52,7 +52,7 @@ static MUI_ENTRY csCZLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -104,21 +104,21 @@ static MUI_ENTRY csCZWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "V\241tejte v instalaci ReactOS",
+        "V\241tejte v instalaci Windivs7",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Tato \237\240st instalace nakop\241ruje opera\237n\241 syst\202m ReactOS do va\347eho",
+        "Tato \237\240st instalace nakop\241ruje opera\237n\241 syst\202m Windivs7 do va\347eho",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -132,42 +132,42 @@ static MUI_ENTRY csCZWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Stisknut\241m R zah\240j\241te opravu ReactOS.",
+        "\x07  Stisknut\241m R zah\240j\241te opravu Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Stiskut\241m L zobraz\241te Licen\237n\241 podm\241nky ReactOS.",
+        "\x07  Stiskut\241m L zobraz\241te Licen\237n\241 podm\241nky Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Stisknut\241m F3 ukon\237\241te instalaci ReactOS.",
+        "\x07  Stisknut\241m F3 ukon\237\241te instalaci Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "V\241ce informac\241 o ReactOS naleznete na adrese:",
+        "V\241ce informac\241 o Windivs7 naleznete na adrese:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://reactos.org/",
+        "https://Windivs7.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -191,21 +191,21 @@ static MUI_ENTRY csCZIntroPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Version Status",
+        "Windivs7 Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS is in Alpha stage, meaning it is not feature-complete",
+        "Windivs7 is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -233,21 +233,21 @@ static MUI_ENTRY csCZIntroPageEntries[] =
     {
         6,
         16,
-        "to run ReactOS on real hardware.",
+        "to run Windivs7 on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue ReactOS Setup.",
+        "\x07  Press ENTER to continue Windivs7 Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -271,7 +271,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -285,7 +285,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         8,
         8,
-        "The ReactOS System is licensed under the terms of the",
+        "The Windivs7 System is licensed under the terms of the",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -306,7 +306,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         8,
         11,
-        "All software that is part of the ReactOS system is",
+        "All software that is part of the Windivs7 system is",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -341,7 +341,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         8,
         17,
-        "ReactOS only covers distribution to third parties.",
+        "Windivs7 only covers distribution to third parties.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -355,7 +355,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License with ReactOS please visit",
+        "GNU General Public License with Windivs7 please visit",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -414,7 +414,7 @@ static MUI_ENTRY csCZDevicePageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -521,14 +521,14 @@ static MUI_ENTRY csCZRepairPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalace ReactOS je v ran\202 v\354vojov\202 f\240zi. Zat\241m nejsou",
+        "Instalace Windivs7 je v ran\202 v\354vojov\202 f\240zi. Zat\241m nejsou",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -594,21 +594,21 @@ static MUI_ENTRY csCZUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs7 Setup can upgrade one of the available Windivs7 installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs7 installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -650,7 +650,7 @@ static MUI_ENTRY csCZUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -674,7 +674,7 @@ static MUI_ENTRY csCZComputerPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -733,7 +733,7 @@ static MUI_ENTRY csCZFlushPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -778,14 +778,14 @@ static MUI_ENTRY csCZQuitPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS nen\241 kompletn\330 nainstalov\240n.",
+        "Windivs7 nen\241 kompletn\330 nainstalov\240n.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -830,7 +830,7 @@ static MUI_ENTRY csCZDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -889,14 +889,14 @@ static MUI_ENTRY csCZSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Z\240kladn\241 sou\237\240sti ReactOS byly \243sp\330\347n\330 nainstalov\240ny.",
+        "Z\240kladn\241 sou\237\240sti Windivs7 byly \243sp\330\347n\330 nainstalov\240ny.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -941,7 +941,7 @@ static MUI_ENTRY csCZSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -969,7 +969,7 @@ static MUI_ENTRY csCZSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Stisknut\241m kl\240vesy ENTER nainstalujete ReactOS na zvolen\354 odd\241l.",
+        "\x07  Stisknut\241m kl\240vesy ENTER nainstalujete Windivs7 na zvolen\354 odd\241l.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1021,7 +1021,7 @@ static MUI_ENTRY csCZChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1042,14 +1042,14 @@ static MUI_ENTRY csCZChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs7, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1119,7 +1119,7 @@ static MUI_ENTRY csCZChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1143,7 +1143,7 @@ static MUI_ENTRY csCZConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1164,7 +1164,7 @@ static MUI_ENTRY csCZConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programs, programs to start an operating system (like ReactOS) or other",
+        "programs, programs to start an operating system (like Windivs7) or other",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1199,7 +1199,7 @@ static MUI_ENTRY csCZConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computer from the harddisk until you finished the ReactOS Setup.",
+        "computer from the harddisk until you finished the Windivs7 Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1251,7 +1251,7 @@ static MUI_ENTRY csCZFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1289,7 +1289,7 @@ static MUI_ENTRY csCZCheckFSEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1320,21 +1320,21 @@ static MUI_ENTRY csCZInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalace nyn\241 na zvolen\354 odd\241l nakop\241ruje soubory ReactOS.",
+        "Instalace nyn\241 na zvolen\354 odd\241l nakop\241ruje soubory Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Zvolte adres\240\375, kam bude ReactOS nainstalov\240n:",
+        "Zvolte adres\240\375, kam bude Windivs7 nainstalov\240n:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1348,7 +1348,7 @@ static MUI_ENTRY csCZInstallDirectoryEntries[] =
     {
         6,
         15,
-        "vyma\247te text cesty a pot\202 zapi\347te cestu, do kter\202 chcete ReactOS",
+        "vyma\247te text cesty a pot\202 zapi\347te cestu, do kter\202 chcete Windivs7",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1379,7 +1379,7 @@ static MUI_ENTRY csCZFileCopyEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1424,7 +1424,7 @@ static MUI_ENTRY csCZBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1483,7 +1483,7 @@ static MUI_ENTRY csCZBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1514,7 +1514,7 @@ static MUI_ENTRY csCZBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1560,7 +1560,7 @@ static MUI_ENTRY csCZKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1619,7 +1619,7 @@ static MUI_ENTRY csCZLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1679,14 +1679,14 @@ static MUI_ENTRY csCZPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalace p\375iprav\241 po\237\241ta\237 na kop\241rov\240n\241 soubor\205 ReactOS.",
+        "Instalace p\375iprav\241 po\237\241ta\237 na kop\241rov\240n\241 soubor\205 Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1711,7 +1711,7 @@ static MUI_ENTRY csCZSelectFSEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1759,7 +1759,7 @@ static MUI_ENTRY csCZDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1811,7 +1811,7 @@ static MUI_ENTRY csCZRegistryEntries[] =
     {
         4,
         3,
-        " Instalace ReactOS " KERNEL_VERSION_STR " ",
+        " Instalace Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1846,9 +1846,9 @@ MUI_ERROR csCZErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS nen\241 ve va\347em po\237\241ta\237i kompletn\330 nainstalov\240n.\n"
+        "Windivs7 nen\241 ve va\347em po\237\241ta\237i kompletn\330 nainstalov\240n.\n"
         "Pokud nyn\241 instalaci ukon\237\241te, budete ji muset pro\n"
-        "nainstalov\240n\241 ReactOS spustit znovu.\n"
+        "nainstalov\240n\241 Windivs7 spustit znovu.\n"
         "\n"
         "  \x07  Stisknut\241m kl\240vesy ENTER budete pokra\237ovat v instalaci.\n"
         "  \x07  Stisknut\241m F3 ukon\237\241te instalaci.",
@@ -1856,7 +1856,7 @@ MUI_ERROR csCZErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs7 installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1866,7 +1866,7 @@ MUI_ERROR csCZErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs7 within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2065,7 +2065,7 @@ MUI_ERROR csCZErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Zvolen\354 odd\241l nen\241 pro instalaci ReactOS dostate\237n\330 velk\354.\n"
+        "Zvolen\354 odd\241l nen\241 pro instalaci Windivs7 dostate\237n\330 velk\354.\n"
         "Instala\237n\241 odd\241l mus\241 m\241t velikost alespo\345 %lu MB.\n"
         "\n"
         "  * Pokra\237ujte stisknut\241m libovoln\202 kl\240vesy.",
@@ -2248,13 +2248,13 @@ MUI_STRING csCZStrings[] =
     {STRING_PARTFORMAT,
     "Tento odd\241l bude zform\240tov\240n."},
     {STRING_NONFORMATTEDPART,
-    "Zvolili jste instalaci ReactOS na nov\354 nebo nezform\240tovan\354 odd\241l."},
+    "Zvolili jste instalaci Windivs7 na nov\354 nebo nezform\240tovan\354 odd\241l."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "The system partition is not formatted yet."},
     {STRING_NONFORMATTEDOTHERPART,
     "The new partition is not formatted yet."},
     {STRING_INSTALLONPART,
-    "Instalace nakop\241ruje ReactOS na odd\241l"},
+    "Instalace nakop\241ruje Windivs7 na odd\241l"},
     {STRING_CONTINUE,
     "ENTER = Pokra\237ovat"},
     {STRING_QUITCONTINUE,

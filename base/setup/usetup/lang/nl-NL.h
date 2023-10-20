@@ -13,14 +13,14 @@ static MUI_ENTRY nlNLSetupInitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs7 Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -51,7 +51,7 @@ static MUI_ENTRY nlNLLanguagePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -103,21 +103,21 @@ static MUI_ENTRY nlNLWelcomePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Welkom bij ReactOS Setup",
+        "Welkom bij Windivs7 Setup",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Dit deel van de installatie kopieert ReactOS naar uw computer",
+        "Dit deel van de installatie kopieert Windivs7 naar uw computer",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -131,28 +131,28 @@ static MUI_ENTRY nlNLWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Druk op R om ReactOS te repareren.",
+        "\x07  Druk op R om Windivs7 te repareren.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Druk op L om de ReactOS licentieovereenkomst te bekijken.",
+        "\x07  Druk op L om de Windivs7 licentieovereenkomst te bekijken.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Druk op F3 als u Setup wilt afsluiten zonder ReactOS te",
+        "\x07  Druk op F3 als u Setup wilt afsluiten zonder Windivs7 te",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -166,14 +166,14 @@ static MUI_ENTRY nlNLWelcomePageEntries[] =
     {
         6,
         24,
-        "Voor meer informatie over ReactOS bezoekt u:",
+        "Voor meer informatie over Windivs7 bezoekt u:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         25,
-        "https://reactos.org/",
+        "https://Windivs7.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -197,21 +197,21 @@ static MUI_ENTRY nlNLIntroPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Version Status",
+        "Windivs7 Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS is in Alpha stage, meaning it is not feature-complete",
+        "Windivs7 is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -239,21 +239,21 @@ static MUI_ENTRY nlNLIntroPageEntries[] =
     {
         6,
         16,
-        "to run ReactOS on real hardware.",
+        "to run Windivs7 on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue ReactOS Setup.",
+        "\x07  Press ENTER to continue Windivs7 Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -277,7 +277,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -291,7 +291,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         8,
         8,
-        "The ReactOS System is licensed under the terms of the",
+        "The Windivs7 System is licensed under the terms of the",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -312,7 +312,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         8,
         11,
-        "All software that is part of the ReactOS system is",
+        "All software that is part of the Windivs7 system is",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -347,7 +347,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         8,
         17,
-        "ReactOS only covers distribution to third parties.",
+        "Windivs7 only covers distribution to third parties.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -361,7 +361,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License with ReactOS please visit",
+        "GNU General Public License with Windivs7 please visit",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -420,7 +420,7 @@ static MUI_ENTRY nlNLDevicePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -520,14 +520,14 @@ static MUI_ENTRY nlNLRepairPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Setup is nog in een vroege ontwikkelingsfase",
+        "Windivs7 Setup is nog in een vroege ontwikkelingsfase",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -555,7 +555,7 @@ static MUI_ENTRY nlNLRepairPageEntries[] =
     {
         8,
         15,
-        "\x07  Druk op U om ReactOS bij te werken.",
+        "\x07  Druk op U om Windivs7 bij te werken.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -600,21 +600,21 @@ static MUI_ENTRY nlNLUpgradePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs7 Setup can upgrade one of the available Windivs7 installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs7 installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -656,7 +656,7 @@ static MUI_ENTRY nlNLUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -680,7 +680,7 @@ static MUI_ENTRY nlNLComputerPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -739,7 +739,7 @@ static MUI_ENTRY nlNLFlushPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -784,14 +784,14 @@ static MUI_ENTRY nlNLQuitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS is niet volledig ge\x8Bnstalleerd.",
+        "Windivs7 is niet volledig ge\x8Bnstalleerd.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -836,7 +836,7 @@ static MUI_ENTRY nlNLDisplayPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -895,14 +895,14 @@ static MUI_ENTRY nlNLSuccessPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "De basisonderdelen van ReactOS zijn succesvol ge\x8Bnstalleerd.",
+        "De basisonderdelen van Windivs7 zijn succesvol ge\x8Bnstalleerd.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -947,7 +947,7 @@ static MUI_ENTRY nlNLSelectPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -975,7 +975,7 @@ static MUI_ENTRY nlNLSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Druk op ENTER om ReactOS te installeren op de geselecteerde partitie.",
+        "\x07  Druk op ENTER om Windivs7 te installeren op de geselecteerde partitie.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1028,7 +1028,7 @@ static MUI_ENTRY nlNLChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1049,14 +1049,14 @@ static MUI_ENTRY nlNLChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs7, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1126,7 +1126,7 @@ static MUI_ENTRY nlNLChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1150,7 +1150,7 @@ static MUI_ENTRY nlNLConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1171,7 +1171,7 @@ static MUI_ENTRY nlNLConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programs, programs to start an operating system (like ReactOS) or other",
+        "programs, programs to start an operating system (like Windivs7) or other",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1206,7 +1206,7 @@ static MUI_ENTRY nlNLConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computer from the harddisk until you finished the ReactOS Setup.",
+        "computer from the harddisk until you finished the Windivs7 Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1258,7 +1258,7 @@ static MUI_ENTRY nlNLFormatPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1296,7 +1296,7 @@ static MUI_ENTRY nlNLCheckFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1327,21 +1327,21 @@ static MUI_ENTRY nlNLInstallDirectoryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Setup installeert ReactOS bestanden op de geselecteerde partitie.",
+        "Setup installeert Windivs7 bestanden op de geselecteerde partitie.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Geef een pad op waar ReactOS ge\x8Bnstalleerd moet worden:",
+        "Geef een pad op waar Windivs7 ge\x8Bnstalleerd moet worden:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1355,7 +1355,7 @@ static MUI_ENTRY nlNLInstallDirectoryEntries[] =
     {
         6,
         15,
-        "karakters te verwijderen en voer dan in waar u ReactOS",
+        "karakters te verwijderen en voer dan in waar u Windivs7",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1386,14 +1386,14 @@ static MUI_ENTRY nlNLFileCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Bezig met het kopi\x89ren van bestanden naar uw ReactOS installatiemap.",
+        "Bezig met het kopi\x89ren van bestanden naar uw Windivs7 installatiemap.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1431,7 +1431,7 @@ static MUI_ENTRY nlNLBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1490,7 +1490,7 @@ static MUI_ENTRY nlNLBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1521,7 +1521,7 @@ static MUI_ENTRY nlNLBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1574,7 +1574,7 @@ static MUI_ENTRY nlNLkeyboardSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1633,7 +1633,7 @@ static MUI_ENTRY nlNLLayoutSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1693,14 +1693,14 @@ static MUI_ENTRY nlNLPrepareCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Setup bereidt uw computer voor op het kopi\x89ren van ReactOS bestanden.",
+        "Setup bereidt uw computer voor op het kopi\x89ren van Windivs7 bestanden.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1725,7 +1725,7 @@ static MUI_ENTRY nlNLSelectFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1773,7 +1773,7 @@ static MUI_ENTRY nlNLDeletePartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1825,7 +1825,7 @@ static MUI_ENTRY nlNLRegistryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1866,9 +1866,9 @@ MUI_ERROR nlNLErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS is niet geheel ge\x8Bnstalleerd op uw\n"
+        "Windivs7 is niet geheel ge\x8Bnstalleerd op uw\n"
         "computer. Als u Setup nu afsluit moet u\n"
-        "Setup opnieuw starten om ReactOS te installeren.\n"
+        "Setup opnieuw starten om Windivs7 te installeren.\n"
         "\n"
         "  \x07  Druk op ENTER om door te gaan met Setup.\n"
         "  \x07  Druk op F3 om Setup af te sluiten.",
@@ -1876,7 +1876,7 @@ MUI_ERROR nlNLErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs7 installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1886,7 +1886,7 @@ MUI_ERROR nlNLErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs7 within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2089,7 +2089,7 @@ MUI_ERROR nlNLErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "The selected partition is not large enough to install ReactOS.\n"
+        "The selected partition is not large enough to install Windivs7.\n"
         "The install partition must have a size of at least %lu MB.\n"
         "\n"
         "  * Druk op een toets om door te gaan.",
@@ -2274,13 +2274,13 @@ MUI_STRING nlNLStrings[] =
     {STRING_PARTFORMAT,
     "Deze partitie zal vervolgens geformatteerd worden."},
     {STRING_NONFORMATTEDPART,
-    "U wilt ReactOS installeren op een nieuwe of ongeformatteerde partitie."},
+    "U wilt Windivs7 installeren op een nieuwe of ongeformatteerde partitie."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "The system partition is not formatted yet."},
     {STRING_NONFORMATTEDOTHERPART,
     "The new partition is not formatted yet."},
     {STRING_INSTALLONPART,
-    "Setup installeert ReactOS op Partitie"},
+    "Setup installeert Windivs7 op Partitie"},
     {STRING_CONTINUE,
     "ENTER = Doorgaan"},
     {STRING_QUITCONTINUE,

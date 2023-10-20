@@ -5,14 +5,14 @@ static MUI_ENTRY itITSetupInitPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs7 Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -43,7 +43,7 @@ static MUI_ENTRY itITLanguagePageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -95,21 +95,21 @@ static MUI_ENTRY itITWelcomePageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Benvenuto all'installazione di ReactOS",
+        "Benvenuto all'installazione di Windivs7",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Questa parte dell'installazione copia ReactOS nel vostro computer",
+        "Questa parte dell'installazione copia Windivs7 nel vostro computer",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -123,14 +123,14 @@ static MUI_ENTRY itITWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Premere R per riparare ReactOS.",
+        "\x07  Premere R per riparare Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -144,21 +144,21 @@ static MUI_ENTRY itITWelcomePageEntries[] =
     {
         8,
         21,
-        "\x07  Premere F3 per uscire senza installare ReactOS.",
+        "\x07  Premere F3 per uscire senza installare Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Per maggiori informazioni riguardo ReactOS, visitate il sito:",
+        "Per maggiori informazioni riguardo Windivs7, visitate il sito:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         24,
-        "https://reactos.org/",
+        "https://Windivs7.org/",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -182,21 +182,21 @@ static MUI_ENTRY itITIntroPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Status versione ReactOS",
+        "Status versione Windivs7",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS \x8A nello stadio di sviluppo Alpha, significa che non tutte le",
+        "Windivs7 \x8A nello stadio di sviluppo Alpha, significa che non tutte le",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -231,14 +231,14 @@ static MUI_ENTRY itITIntroPageEntries[] =
     {
         8,
         18,
-        "\x07  Premere INVIO per continuare l'installazione di ReactOS.",
+        "\x07  Premere INVIO per continuare l'installazione di Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         20,
-        "\x07  Premere F3 per uscire senza installare ReactOS.",
+        "\x07  Premere F3 per uscire senza installare Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -262,7 +262,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -276,7 +276,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS aderisce ai termini di licenza",
+        "Windivs7 aderisce ai termini di licenza",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -297,7 +297,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         8,
         11,
-        "Tutto il software che fa parte del sistema ReactOS viene",
+        "Tutto il software che fa parte del sistema Windivs7 viene",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -332,7 +332,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         8,
         17,
-        "di ReactOS copre solo la distribuzione a terze parti.",
+        "di Windivs7 copre solo la distribuzione a terze parti.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -346,7 +346,7 @@ static MUI_ENTRY itITLicensePageEntries[] =
     {
         8,
         19,
-        "della licenza GNU GPL con ReactOS, visiti il sito:",
+        "della licenza GNU GPL con Windivs7, visiti il sito:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -405,7 +405,7 @@ static MUI_ENTRY itITDevicePageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -512,14 +512,14 @@ static MUI_ENTRY itITRepairPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Il setup di ReactOS \x8A ancora in una fase preliminare.",
+        "Il setup di Windivs7 \x8A ancora in una fase preliminare.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -585,21 +585,21 @@ static MUI_ENTRY itITUpgradePageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs7 Setup can upgrade one of the available Windivs7 installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs7 installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -641,7 +641,7 @@ static MUI_ENTRY itITUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -665,7 +665,7 @@ static MUI_ENTRY itITComputerPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -724,7 +724,7 @@ static MUI_ENTRY itITFlushPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -769,14 +769,14 @@ static MUI_ENTRY itITQuitPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS non \x8A stato installato completamente.",
+        "Windivs7 non \x8A stato installato completamente.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -821,7 +821,7 @@ static MUI_ENTRY itITDisplayPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -880,14 +880,14 @@ static MUI_ENTRY itITSuccessPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "I componenti base di ReactOS sono stati installati correttamente.",
+        "I componenti base di Windivs7 sono stati installati correttamente.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -932,7 +932,7 @@ static MUI_ENTRY itITSelectPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -960,7 +960,7 @@ static MUI_ENTRY itITSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Premere INVIO per installare ReactOS sulla partizione selezionata.",
+        "\x07  Premere INVIO per installare Windivs7 sulla partizione selezionata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1012,7 +1012,7 @@ static MUI_ENTRY itITChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1033,14 +1033,14 @@ static MUI_ENTRY itITChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs7, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1110,7 +1110,7 @@ static MUI_ENTRY itITChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1134,7 +1134,7 @@ static MUI_ENTRY itITConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1162,7 +1162,7 @@ static MUI_ENTRY itITConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "sistema operativo (come ReactOS o altri), programmi forniti",
+        "sistema operativo (come Windivs7 o altri), programmi forniti",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1197,7 +1197,7 @@ static MUI_ENTRY itITConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         18,
-        "il computer dall'harddisk fino al termine dell'installazione di ReactOS.",
+        "il computer dall'harddisk fino al termine dell'installazione di Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1249,7 +1249,7 @@ static MUI_ENTRY itITFormatPartitionEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1287,7 +1287,7 @@ static MUI_ENTRY itITCheckFSEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1318,21 +1318,21 @@ static MUI_ENTRY itITInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Il setup installer\x85 i file di ReactOS nella partizione selezionata.",
+        "Il setup installer\x85 i file di Windivs7 nella partizione selezionata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Scegliere una cartella dove si vuole che ReactOS venga installato:",
+        "Scegliere una cartella dove si vuole che Windivs7 venga installato:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1346,7 +1346,7 @@ static MUI_ENTRY itITInstallDirectoryEntries[] =
     {
         6,
         15,
-        "la cartella desiderata per l'installazione di ReactOS.",
+        "la cartella desiderata per l'installazione di Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1377,21 +1377,21 @@ static MUI_ENTRY itITFileCopyEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         11,
         12,
-        "Attendere mentre il setup di ReactOS copia i file nella",
+        "Attendere mentre il setup di Windivs7 copia i file nella",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         18,
         13,
-        "cartella di installazione di ReactOS.",
+        "cartella di installazione di Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1422,7 +1422,7 @@ static MUI_ENTRY itITBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1481,7 +1481,7 @@ static MUI_ENTRY itITBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 7127 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1512,7 +1512,7 @@ static MUI_ENTRY itITBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1565,7 +1565,7 @@ static MUI_ENTRY itITKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1624,7 +1624,7 @@ static MUI_ENTRY itITLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1684,14 +1684,14 @@ static MUI_ENTRY itITPrepareCopyEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Setup sta preparando il computer per la copia dei file di ReactOS.",
+        "Setup sta preparando il computer per la copia dei file di Windivs7.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1716,7 +1716,7 @@ static MUI_ENTRY itITSelectFSEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1764,7 +1764,7 @@ static MUI_ENTRY itITDeletePartitionEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1816,7 +1816,7 @@ static MUI_ENTRY itITRegistryEntries[] =
     {
         4,
         3,
-        " Installazione di ReactOS " KERNEL_VERSION_STR " ",
+        " Installazione di Windivs7 7127 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1851,9 +1851,9 @@ MUI_ERROR itITErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS non \x8A stato installato completamente nel\n"
+        "Windivs7 non \x8A stato installato completamente nel\n"
         "vostro computer. Se esce adesso, dovr\x85 eseguire il\n"
-        "Setup nuovamente per installare ReactOS.\n"
+        "Setup nuovamente per installare Windivs7.\n"
         "\n"
         "  \x07  Premere INVIO per continuare il setup.\n"
         "  \x07  Premere F3 per uscire.",
@@ -1861,7 +1861,7 @@ MUI_ERROR itITErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs7 installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1871,7 +1871,7 @@ MUI_ERROR itITErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs7 within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2070,7 +2070,7 @@ MUI_ERROR itITErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Spazio nella partizione insufficiente per installare ReactOS.\n"
+        "Spazio nella partizione insufficiente per installare Windivs7.\n"
         "La partizione deve avere una dimensione di almeno %lu MB.\n"
         "\n"
         "  * Premere un tasto qualsiasi per continuare.",
@@ -2253,13 +2253,13 @@ MUI_STRING itITStrings[] =
     {STRING_PARTFORMAT,
     "Questa partizione sar\x85 formattata successivamente."},
     {STRING_NONFORMATTEDPART,
-    "Avete scelto di installare ReactOS su una partizione nuova o non formattata."},
+    "Avete scelto di installare Windivs7 su una partizione nuova o non formattata."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "La partizione di sistema non \x8A stata ancora formattata."},
     {STRING_NONFORMATTEDOTHERPART,
     "La nuova partizione non \x8A stata ancora formattata."},
     {STRING_INSTALLONPART,
-    "Il setup installer\x85 ReactOS sulla partitione"},
+    "Il setup installer\x85 Windivs7 sulla partitione"},
     {STRING_CONTINUE,
     "INVIO = Continua"},
     {STRING_QUITCONTINUE,

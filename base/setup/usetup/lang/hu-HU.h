@@ -8,14 +8,14 @@ static MUI_ENTRY huHUSetupInitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "K\202rem v\240rjon am\241g a Reactos telep\241t\213 inicializ\240lja mag\240t",
+        "K\202rem v\240rjon am\241g a Windivs7 telep\241t\213 inicializ\240lja mag\240t",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY huHULanguagePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213",
+        " Windivs7 7127 telep\241t\213",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,21 +98,21 @@ static MUI_ENTRY huHUWelcomePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "\232dv\224z\224lj\201k a ReactOS telep\241t\213ben",
+        "\232dv\224z\224lj\201k a Windivs7 telep\241t\213ben",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "A telep\241t\213nek ez a r\202sze felm\240solja a ReactOS oper\240ci\242s rendszert",
+        "A telep\241t\213nek ez a r\202sze felm\240solja a Windivs7 oper\240ci\242s rendszert",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,14 +126,14 @@ static MUI_ENTRY huHUWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Nyomjon ENTER-t a ReactOS telep\241t\202s\202hez vagy friss\241t\202s\202hez.",
+        "\x07  Nyomjon ENTER-t a Windivs7 telep\241t\202s\202hez vagy friss\241t\202s\202hez.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Nyomjon R-t egy megl\202v\213, m\240r telep\241tett ReactOS helyre\240ll\241t\240s\240hoz.",
+        "\x07  Nyomjon R-t egy megl\202v\213, m\240r telep\241tett Windivs7 helyre\240ll\241t\240s\240hoz.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -161,7 +161,7 @@ static MUI_ENTRY huHUWelcomePageEntries[] =
     {
         6,
         24,
-        "https://reactos.org/ weboldalra.",
+        "https://Windivs7.org/ weboldalra.",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -185,21 +185,21 @@ static MUI_ENTRY huHUIntroPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS verzi\242inform\240ci\242k",
+        "Windivs7 verzi\242inform\240ci\242k",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "A ReactOS alfa \240llapotban van, ami azt jelenti, hogy m\202g",
+        "A Windivs7 alfa \240llapotban van, ami azt jelenti, hogy m\202g",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY huHULicensePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY huHULicensePageEntries[] =
     {
         8,
         8,
-        "A ReactOS rendszer GNU GPL licenc alatt lett k\224zreadva",
+        "A Windivs7 rendszer GNU GPL licenc alatt lett k\224zreadva",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -300,7 +300,7 @@ static MUI_ENTRY huHULicensePageEntries[] =
     {
         8,
         11,
-        "Ez\202rt az \224sszes szoftver, amely a ReactOS rendszer r\202sze,",
+        "Ez\202rt az \224sszes szoftver, amely a Windivs7 rendszer r\202sze,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -335,7 +335,7 @@ static MUI_ENTRY huHULicensePageEntries[] =
     {
         8,
         17,
-        "t\224rv\202nyeket. A ReactOS licence csak a harmadik feleknek t\224rt\202n\213",
+        "t\224rv\202nyeket. A Windivs7 licence csak a harmadik feleknek t\224rt\202n\213",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -415,7 +415,7 @@ static MUI_ENTRY huHUDevicePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -516,14 +516,14 @@ static MUI_ENTRY huHURepairPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "A ReactOS telep\241t\213 korai fejleszt\202si f\240zisban van. M\202g nem",
+        "A Windivs7 telep\241t\213 korai fejleszt\202si f\240zisban van. M\202g nem",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -589,21 +589,21 @@ static MUI_ENTRY huHUUpgradePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "A ReactOS telep\241t\213 friss\241teni tudja az al\240bbi megl\202v\213 ReactOS",
+        "A Windivs7 telep\241t\213 friss\241teni tudja az al\240bbi megl\202v\213 Windivs7",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "telep\241t\202sek egyik\202t, vagy, ha egy ReactOS rendszer megs\202r\201lt,",
+        "telep\241t\202sek egyik\202t, vagy, ha egy Windivs7 rendszer megs\202r\201lt,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -669,7 +669,7 @@ static MUI_ENTRY huHUComputerPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -728,7 +728,7 @@ static MUI_ENTRY huHUFlushPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -780,14 +780,14 @@ static MUI_ENTRY huHUQuitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "A ReactOS nincs teljesen feltelep\241tve.",
+        "A Windivs7 nincs teljesen feltelep\241tve.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -832,7 +832,7 @@ static MUI_ENTRY huHUDisplayPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -890,14 +890,14 @@ static MUI_ENTRY huHUSuccessPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "A ReactOS alapvet\213 \224sszetev\213i sikeresen feltelep\201ltek.",
+        "A Windivs7 alapvet\213 \224sszetev\213i sikeresen feltelep\201ltek.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -942,7 +942,7 @@ static MUI_ENTRY huHUSelectPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -970,7 +970,7 @@ static MUI_ENTRY huHUSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Nyomjon ENTER-t a ReactOS kijel\224lt part\241ci\242ra val\242 telep\241t\202s\202hez.",
+        "\x07  Nyomjon ENTER-t a Windivs7 kijel\224lt part\241ci\242ra val\242 telep\241t\202s\202hez.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1022,7 +1022,7 @@ static MUI_ENTRY huHUConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1050,7 +1050,7 @@ static MUI_ENTRY huHUConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "(pl. ReactOS) ind\241tanak vagy egy\202b szoftverek, melyeket",
+        "(pl. Windivs7) ind\241tanak vagy egy\202b szoftverek, melyeket",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1085,7 +1085,7 @@ static MUI_ENTRY huHUConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         18,
-        "a sz\240m\241t\242g\202pet a merevlemezr\213l am\241g nem v\202gez a ReactOS telep\241t\202s\202vel.",
+        "a sz\240m\241t\242g\202pet a merevlemezr\213l am\241g nem v\202gez a Windivs7 telep\241t\202s\202vel.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1137,7 +1137,7 @@ static MUI_ENTRY huHUFormatPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1175,7 +1175,7 @@ static MUI_ENTRY huHUCheckFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1206,21 +1206,21 @@ static MUI_ENTRY huHUInstallDirectoryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "A telep\241t\213 felm\240solja a ReactOS f\240jljait a kijel\224lt part\241ci\242ra.",
+        "A telep\241t\213 felm\240solja a Windivs7 f\240jljait a kijel\224lt part\241ci\242ra.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "V\240lasszon egy mapp\240t ahov\240 a ReactOS-t telep\241teni szeretn\202:",
+        "V\240lasszon egy mapp\240t ahov\240 a Windivs7-t telep\241teni szeretn\202:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1241,7 +1241,7 @@ static MUI_ENTRY huHUInstallDirectoryEntries[] =
     {
         6,
         16,
-        "a ReactOS-t telep\241teni szeretn\202.",
+        "a Windivs7-t telep\241teni szeretn\202.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1265,14 +1265,14 @@ static MUI_ENTRY huHUFileCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "K\202rem v\240rjon, am\241g a ReactOS telep\241t\213 felm\240solja a f\240jlokat a ReactOS",
+        "K\202rem v\240rjon, am\241g a Windivs7 telep\241t\213 felm\240solja a f\240jlokat a Windivs7",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1310,7 +1310,7 @@ static MUI_ENTRY huHUBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1369,7 +1369,7 @@ static MUI_ENTRY huHUBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1400,7 +1400,7 @@ static MUI_ENTRY huHUBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1453,7 +1453,7 @@ static MUI_ENTRY huHUKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1512,7 +1512,7 @@ static MUI_ENTRY huHULayoutSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1572,14 +1572,14 @@ static MUI_ENTRY huHUPrepareCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "A telep\241t\213 el\213k\202sz\241ti a sz\240m\241t\242g\202pet a ReactOS f\240jlok m\240sol\240s\240ra.",
+        "A telep\241t\213 el\213k\202sz\241ti a sz\240m\241t\242g\202pet a Windivs7 f\240jlok m\240sol\240s\240ra.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1604,7 +1604,7 @@ static MUI_ENTRY huHUSelectFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1653,7 +1653,7 @@ static MUI_ENTRY huHUDeletePartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1705,7 +1705,7 @@ static MUI_ENTRY huHURegistryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " telep\241t\213 ",
+        " Windivs7 7127 telep\241t\213 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1739,9 +1739,9 @@ MUI_ERROR huHUErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "A ReactOS nincs teljesen telep\241tve a sz\240m\241t\242g\202pre.\n"
+        "A Windivs7 nincs teljesen telep\241tve a sz\240m\241t\242g\202pre.\n"
         "Ha most kil\202p a telep\241t\213b\213l, \243jra futtatnia kell azt\n"
-        "a ReactOS telep\241t\202s\202hez.\n"
+        "a Windivs7 telep\241t\202s\202hez.\n"
         "\n"
         "  \x07 Nyomjon ENTER-t a telep\241t\202s folytat\240s\240hoz.\n"
         "  \x07 Nyomjon F3-at a kil\202p\202shez.\n",
@@ -1749,7 +1749,7 @@ MUI_ERROR huHUErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Nem siker\201lt fel\202p\241teni a telep\241t\202si \243tvonalakat a ReactOS telep\241t\202si mapp\240hoz!\n"
+        "Nem siker\201lt fel\202p\241teni a telep\241t\202si \243tvonalakat a Windivs7 telep\241t\202si mapp\240hoz!\n"
         "ENTER = Sz\240m\241t\242g\202p \243jraind\241t\240sa"
     },
     {
@@ -1759,7 +1759,7 @@ MUI_ERROR huHUErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "Nem lehet a ReactOS-t a telep\241t\202si forr\240s mapp\240j\240ba telep\241teni!\n"
+        "Nem lehet a Windivs7-t a telep\241t\202si forr\240s mapp\240j\240ba telep\241teni!\n"
         "ENTER = Sz\240m\241t\242g\202p \243jraind\241t\240sa"
     },
     {
@@ -1959,7 +1959,7 @@ MUI_ERROR huHUErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "A kijel\224lt part\241ci\242 nem el\202g nagy a ReactOS telep\241t\202s\202hez.\n"
+        "A kijel\224lt part\241ci\242 nem el\202g nagy a Windivs7 telep\241t\202s\202hez.\n"
         "A telep\241t\202si part\241ci\242nak legal\240bb %lu MB-nak kell lennie.\n"
         "\n"
         "  * Nyomjon meg egy gombot a folytat\240shoz.",
@@ -2138,13 +2138,13 @@ MUI_STRING huHUStrings[] =
     {STRING_PARTFORMAT,
     "K\224vetkez\213 l\202p\202sk\202nt ez a part\241ci\242 form\240zva lesz."},
     {STRING_NONFORMATTEDPART,
-    "A ReactOS egy \243j / nem form\240zott part\241ci\242ra telep\241t\202s\202t v\240lasztotta."},
+    "A Windivs7 egy \243j / nem form\240zott part\241ci\242ra telep\241t\202s\202t v\240lasztotta."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "A rendszerpart\241ci\242 m\202g nincs form\240zva."},
     {STRING_NONFORMATTEDOTHERPART,
     "Az \243j part\241ci\242 m\202g nincs form\240zva."},
     {STRING_INSTALLONPART,
-    "A telep\241t\213 az al\240bbi part\241ci\242ra telep\241ti a ReactOS-t:"},
+    "A telep\241t\213 az al\240bbi part\241ci\242ra telep\241ti a Windivs7-t:"},
     {STRING_CONTINUE,
     "ENTER = Folytat\240s"},
     {STRING_QUITCONTINUE,
