@@ -3173,7 +3173,7 @@ CheckFileSystemPage(PINPUT_RECORD Ir)
 
     if (!GetNextUncheckedPartition(PartitionList, NULL, &PartEntry))
     {
-        return BOOTLOADER_SELECT_PAGE;
+        return BOOTLOADER_CHOICE_PAGE;
     }
 
     ASSERT(PartEntry->IsPartitioned && PartEntry->PartitionNumber != 0);
@@ -3821,7 +3821,8 @@ RegistryStatus(IN REGISTRY_STATUS RegStatus, ...)
  * Displays the RegistryPage.
  *
  * Next pages:
- *  BootLoaderSelectPage
+ *  SuccessPage (if RepairUpdate)
+ *  BootLoaderChoicePage (default)
  *  QuitPage
  *
  * SIDEEFFECTS
@@ -3858,7 +3859,7 @@ RegistryPage(PINPUT_RECORD Ir)
 
 
 /*
- * Displays the BootLoaderSelectPage.
+ * Displays the BootLoaderChoicePage.
  *
  * Next pages:
  *  SuccessPage
@@ -3868,7 +3869,7 @@ RegistryPage(PINPUT_RECORD Ir)
  *   Number of the next page.
  */
 static PAGE_NUMBER
-BootLoaderSelectPage(PINPUT_RECORD Ir)
+BootLoaderChoicePage(PINPUT_RECORD Ir)
 {
     USHORT Line = 12;
 
@@ -3876,17 +3877,6 @@ BootLoaderSelectPage(PINPUT_RECORD Ir)
 
     /* We must have a supported system partition by now */
     ASSERT(SystemPartition && SystemPartition->IsPartitioned && SystemPartition->PartitionNumber != 0);
-
-    /*
-     * If we repair an existing installation and we made it up to here,
-     * this means a valid bootloader and boot entry have been found.
-     * Thus, there is no need to re-install it: skip its installation.
-     */
-    if (RepairUpdateFlag)
-    {
-        USetupData.MBRInstallType = 0;
-        goto Quit;
-    }
 
     /* For unattended setup, skip MBR installation or install on removable disk if needed */
     if (IsUnattendedSetup)
@@ -3920,7 +3910,7 @@ BootLoaderSelectPage(PINPUT_RECORD Ir)
         }
     }
 
-    MUIDisplayPage(BOOTLOADER_SELECT_PAGE);
+    MUIDisplayPage(BOOTLOADER_CHOICE_PAGE);
     CONSOLE_InvertTextXY(8, Line, 60, 1);
 
     while (TRUE)
@@ -4003,12 +3993,12 @@ BootLoaderSelectPage(PINPUT_RECORD Ir)
             }
             else if (Line == 15)
             {
-                /* Skip installation */
+                /* Skip MBR installation */
                 USetupData.MBRInstallType = 0;
                 break;
             }
 
-            return BOOTLOADER_SELECT_PAGE;
+            return BOOTLOADER_CHOICE_PAGE;
         }
     }
 
@@ -4122,9 +4112,9 @@ BootLoaderHardDiskPage(PINPUT_RECORD Ir)
 }
 
 /*
- * Actually installs the bootloader at the end of the installation.
- * The bootloader installation place has already been chosen before,
- * see BootLoaderSelectPage().
+ * Actually installs the bootloader, at the end of the installation.
+ * The media where the bootloader is going to be installed, has already
+ * been chosen before -- See BootLoaderChoicePage().
  *
  * Next pages:
  *  SuccessPage (At once)
@@ -4149,8 +4139,7 @@ BootLoaderInstallPage(PINPUT_RECORD Ir)
     RtlCreateUnicodeString(&USetupData.SystemRootPath, PathBuffer);
     DPRINT1("SystemRootPath: %wZ\n", &USetupData.SystemRootPath);
 
-    if (USetupData.MBRInstallType != 0)
-        MUIDisplayPage(BOOTLOADER_INSTALL_PAGE);
+    MUIDisplayPage(BOOTLOADER_INSTALL_PAGE);
 
     switch (USetupData.MBRInstallType)
     {
@@ -4602,9 +4591,9 @@ RunUSetup(VOID)
                 Page = CheckFileSystemPage(&Ir);
                 break;
 
-            /* Bootloader selection page */
-            case BOOTLOADER_SELECT_PAGE:
-                Page = BootLoaderSelectPage(&Ir);
+            /* Bootloader installation choice page */
+            case BOOTLOADER_CHOICE_PAGE:
+                Page = BootLoaderChoicePage(&Ir);
                 break;
 
             /* Installation pages */

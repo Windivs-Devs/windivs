@@ -818,22 +818,22 @@ MiUnmapViewOfSection(IN PEPROCESS Process,
     /* Check if we need to lock the address space */
     if (!Flags) MmLockAddressSpace(&Process->Vm);
 
-    /* Check for Mm Region */
-    MemoryArea = MmLocateMemoryAreaByAddress(&Process->Vm, BaseAddress);
-    if ((MemoryArea) && (MemoryArea->Type != MEMORY_AREA_OWNED_BY_ARM3))
-    {
-        /* Call Mm API */
-        NTSTATUS Status = MiRosUnmapViewOfSection(Process, BaseAddress, Process->ProcessExiting);
-        if (!Flags) MmUnlockAddressSpace(&Process->Vm);
-        return Status;
-    }
-
     /* Check if we should attach to the process */
     if (CurrentProcess != Process)
     {
         /* The process is different, do an attach */
         KeStackAttachProcess(&Process->Pcb, &ApcState);
         Attached = TRUE;
+    }
+
+    /* Check for Mm Region */
+    MemoryArea = MmLocateMemoryAreaByAddress(&Process->Vm, BaseAddress);
+    if ((MemoryArea) && (MemoryArea->Type != MEMORY_AREA_OWNED_BY_ARM3))
+    {
+        /* Call Mm API */
+        Status = MiRosUnmapViewOfSection(Process, BaseAddress, Process->ProcessExiting);
+        if (!Flags) MmUnlockAddressSpace(&Process->Vm);
+        goto Quickie;
     }
 
     /* Check if the process is already dead */

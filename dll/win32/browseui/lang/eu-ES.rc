@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS browseui
+ * PROJECT:     Windivs browseui
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
  * PURPOSE:     Spanish (Basque) resource file
  * TRANSLATOR:  Copyright 2021 Julen Urizar Compains <julenuri@hotmail.com>
@@ -79,7 +79,7 @@ BEGIN
     END
     POPUP "&Laguntza", FCIDM_MENU_HELP
     BEGIN
-        MENUITEM "&ReactOS-i buruz", IDM_HELP_ABOUT
+        MENUITEM "&Windivs-i buruz", IDM_HELP_ABOUT
     END
 END
 
@@ -111,7 +111,7 @@ BEGIN
         END
         MENUITEM "&Ireki karpeta", IDM_OPEN_FOLDER
         MENUITEM "&Mostrar texto", IDM_SHOW_TEXT
-    END    
+    END
 END
 
 /* Dialogs */
@@ -347,6 +347,6 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PARSE_ADDR_ERR_TITLE "ReactOS Explorer"
-    IDS_PARSE_ADDR_ERR_TEXT "ReactOS Explorer cannot find '%1'. Check the spelling and try again."
+    IDS_PARSE_ADDR_ERR_TITLE "Windivs Explorer"
+    IDS_PARSE_ADDR_ERR_TEXT "Windivs Explorer cannot find '%1'. Check the spelling and try again."
 END

@@ -88,6 +88,42 @@ inline BOOL _ROS_FAILED_HELPER(HRESULT hr, const char* expr, const char* filenam
 } /* extern "C" */
 #endif /* defined(__cplusplus) */
 
+static inline UINT
+SHELL_ErrorBoxHelper(HWND hwndOwner, UINT Error)
+{
+    WCHAR buf[400];
+    UINT cch, msgId, u32_errstr = 2;
+
+    if (!IsWindowVisible(hwndOwner))
+        hwndOwner = NULL;
+    if (Error == ERROR_SUCCESS)
+        Error = ERROR_INTERNAL_ERROR;
+
+    msgId = Error;
+retry:
+    cch = FormatMessageW(FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+                         NULL, msgId, 0, buf, _countof(buf), NULL);
+    if (!cch)
+    {
+        if (HIWORD(msgId) == HIWORD(HRESULT_FROM_WIN32(1)))
+        {
+            msgId = LOWORD(msgId);
+            goto retry;
+        }
+        cch = LoadStringW(LoadLibrary(TEXT("USER32")), u32_errstr, buf, _countof(buf));
+        wsprintfW(buf + cch, L"\n\n%#x (%d)", Error, Error);
+    }
+    MessageBoxW(hwndOwner, buf, NULL, MB_OK | MB_ICONSTOP);
+    return Error;
+}
+#ifdef __cplusplus
+template<class H> static UINT
+SHELL_ErrorBox(H hwndOwner, UINT Error = GetLastError())
+{
+    return SHELL_ErrorBoxHelper(hwndOwner, Error);
+}
+#endif
+
 #ifdef __cplusplus
 template <typename T>
 class CComCreatorCentralInstance
@@ -408,6 +444,18 @@ HRESULT inline ShellObjectCreatorInit(T1 initArg1, T2 initArg2, T3 initArg3, T4 
     pobj->Release(); /* In case of failure the object will be released */
 
     return hResult;
+}
+
+template<class P, class R> static HRESULT SHILClone(P pidl, R *ppOut)
+{
+    R r = *ppOut = (R)ILClone((PIDLIST_RELATIVE)pidl);
+    return r ? S_OK : E_OUTOFMEMORY;
+}
+
+template<class B, class R> static HRESULT SHILCombine(B base, PCUIDLIST_RELATIVE sub, R *ppOut)
+{
+    R r = *ppOut = (R)ILCombine((PCIDLIST_ABSOLUTE)base, sub);
+    return r ? S_OK : E_OUTOFMEMORY;
 }
 
 HRESULT inline SHSetStrRet(LPSTRRET pStrRet, LPCSTR pstrValue)
