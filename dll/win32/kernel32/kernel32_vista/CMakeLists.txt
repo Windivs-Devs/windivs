@@ -13,6 +13,8 @@ list(APPEND SOURCE
     sync.c
     vista.c)
 
+# These functions are not exported from kernel32_vista (yet).
+# They are only used when NT6 exports in kernel32 are enabled.
 if(DLL_EXPORT_VERSION GREATER_EQUAL 0x600)
     list(APPEND SOURCE
         ../client/console/vista.c)

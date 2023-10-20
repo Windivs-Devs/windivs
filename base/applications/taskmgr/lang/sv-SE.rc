@@ -4,13 +4,13 @@ LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
 
 IDR_TASKMANAGER MENU
 BEGIN
-    POPUP "&Arkiv"
+    POPUP "&Arkiv" //FIXME: accelerator collision &A
     BEGIN
         MENUITEM "&Ny Aktivitet (Kör...)", ID_FILE_NEW
         MENUITEM SEPARATOR
         MENUITEM "&Avsluta Aktivitetshanteraren", ID_FILE_EXIT
     END
-    POPUP "&Alternativ"
+    POPUP "&Alternativ" //FIXME: accelerator collision &A
     BEGIN
         MENUITEM "&Alltid överst", ID_OPTIONS_ALWAYSONTOP, CHECKED
         MENUITEM "&Minimera vid användning", ID_OPTIONS_MINIMIZEONUSE, CHECKED
@@ -50,15 +50,15 @@ BEGIN
     END
     POPUP "Sh&ut Down"
     BEGIN
-        MENUITEM "Stand &By",                  ID_SHUTDOWN_STANDBY
-        MENUITEM "&Hibernate",                 ID_SHUTDOWN_HIBERNATE
-        MENUITEM "T&urn Off",                  ID_SHUTDOWN_POWEROFF
-        MENUITEM "&Restart",                   ID_SHUTDOWN_REBOOT
-        MENUITEM "&Log Off %s",                ID_SHUTDOWN_LOGOFF
-        MENUITEM "&Switch User\tWinKey+L",     ID_SHUTDOWN_SWITCHUSER, GRAYED
-        MENUITEM "Loc&k Computer\tWinKey+L",   ID_SHUTDOWN_LOCKCOMPUTER
-        MENUITEM "&Disconnect",                ID_SHUTDOWN_DISCONNECT, GRAYED
-        MENUITEM "&Eject Computer",            ID_SHUTDOWN_EJECT_COMPUTER, GRAYED
+        MENUITEM "Stand &By", ID_SHUTDOWN_STANDBY
+        MENUITEM "&Hibernate", ID_SHUTDOWN_HIBERNATE
+        MENUITEM "T&urn Off", ID_SHUTDOWN_POWEROFF
+        MENUITEM "&Restart", ID_SHUTDOWN_REBOOT
+        MENUITEM "&Log Off %s", ID_SHUTDOWN_LOGOFF
+        MENUITEM "&Switch User\tWinKey+L", ID_SHUTDOWN_SWITCHUSER, GRAYED
+        MENUITEM "Loc&k Computer\tWinKey+L", ID_SHUTDOWN_LOCKCOMPUTER
+        MENUITEM "&Disconnect", ID_SHUTDOWN_DISCONNECT, GRAYED
+        MENUITEM "&Eject Computer", ID_SHUTDOWN_EJECT_COMPUTER, GRAYED
     END
     POPUP "&Hjälp"
     BEGIN

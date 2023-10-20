@@ -1902,25 +1902,24 @@ AdvProcDetailsDlgProc(IN HWND hwndDlg,
                 if ((HWND)wParam == GetDlgItem(hwndDlg, IDC_DETAILSPROPVALUE))
                 {
                     WCHAR szColName[255];
+
+                    if (!LoadStringW(hDllInstance, IDS_COPY, szColName, _countof(szColName)))
+                        break;
+
                     INT nSelectedItems = ListView_GetSelectedCount((HWND)wParam);
+                    POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
                     HMENU hPopup = CreatePopupMenu();
 
-                    if (LoadString(hDllInstance, IDS_COPY, szColName, sizeof(szColName) / sizeof(szColName[0])))
-                    {
-                        AppendMenuW(hPopup, MF_STRING, IDS_MENU_COPY, szColName);
+                    AppendMenuW(hPopup, MF_STRING, IDS_MENU_COPY, szColName);
 
-                        if (nSelectedItems <= 0)
-                            EnableMenuItem(hPopup, IDS_MENU_COPY, MF_BYCOMMAND | MF_GRAYED);
+                    if (nSelectedItems <= 0)
+                        EnableMenuItem(hPopup, IDS_MENU_COPY, MF_BYCOMMAND | MF_GRAYED);
 
-                        POINT pt;
-                        GetCursorPos(&pt);
-
-                        TrackPopupMenu(hPopup, TPM_LEFTALIGN, pt.x, pt.y, 0, hwndDlg, NULL);
-                        Ret = TRUE;
-                    }
-
+                    TrackPopupMenu(hPopup, TPM_LEFTALIGN, pt.x, pt.y, 0, hwndDlg, NULL);
                     DestroyMenu(hPopup);
+                    Ret = TRUE;
                 }
+                break;
             }
 
             case WM_COMMAND:
@@ -1942,44 +1941,45 @@ AdvProcDetailsDlgProc(IN HWND hwndDlg,
                         INT nSelectedItems = ListView_GetSelectedCount(hwndListView);
                         INT nSelectedId = ListView_GetSelectionMark(hwndListView);
 
-                        if (nSelectedId >= 0 && nSelectedItems > 0)
+                        if (nSelectedId < 0 || nSelectedItems <= 0)
+                            break;
+
+                        TCHAR szItemName[MAX_PATH];
+                        HGLOBAL hGlobal;
+                        LPWSTR pszBuffer;
+
+                        ListView_GetItemText(hwndListView,
+                                             nSelectedId, 0,
+                                             szItemName,
+                                             _countof(szItemName));
+
+                        hGlobal = GlobalAlloc(GHND, MAX_PATH);
+                        if (!hGlobal)
+                            break;
+                        pszBuffer = (LPWSTR)GlobalLock(hGlobal);
+                        if (!pszBuffer)
                         {
-                            TCHAR szItemName[MAX_PATH];
-                            HGLOBAL hGlobal;
-                            LPWSTR pszBuffer;
-
-                            ListView_GetItemText(hwndListView,
-                                                 nSelectedId, 0,
-                                                 szItemName,
-                                                 MAX_PATH);
-
-                            hGlobal = GlobalAlloc(GHND, MAX_PATH);
-                            pszBuffer = (LPWSTR)GlobalLock(hGlobal);
-
-                            if (pszBuffer == NULL)
-                            {
-                                GlobalFree(hGlobal);
-                                return Ret;
-                            }
-
-                            wsprintfW(pszBuffer, L"%s", szItemName);
-
-                            GlobalUnlock(hGlobal);
-
-                            if (OpenClipboard(NULL))
-                            {
-                                EmptyClipboard();
-                                SetClipboardData(CF_UNICODETEXT, hGlobal);
-                                CloseClipboard();
-                                Ret = TRUE;
-                            }
-                            else
-                            {
-                                GlobalFree(hGlobal);
-                            }
+                            GlobalFree(hGlobal);
+                            break;
                         }
+
+                        wsprintf(pszBuffer, L"%s", szItemName);
+
+                        GlobalUnlock(hGlobal);
+
+                        if (OpenClipboard(NULL))
+                        {
+                            EmptyClipboard();
+                            SetClipboardData(CF_UNICODETEXT, hGlobal);
+                            CloseClipboard();
+                            Ret = TRUE;
+                        }
+                        else
+                        {
+                            GlobalFree(hGlobal);
+                        }
+                        break;
                     }
-                    break;
                 }
                 break;
             }
