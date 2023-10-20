@@ -228,7 +228,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Pictare"
     IDS_WINDOWTITLE "%s - Pictare"
-    IDS_INFOTITLE "Pictare pentru Windivs"
+    IDS_INFOTITLE "Pictare pentru ReactOS"
     IDS_INFOTEXT "Disponibilă sub licența GNU Lesser General Public (vedeți www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Doriți păstrarea modificărilor din %s?"
     IDS_DEFAULTFILENAME "Fără nume"
