@@ -579,21 +579,6 @@ struct ZoomTool : ToolBase
             DrawXorRect(hdc, &rcView);
     }
 
-    void OnDrawOverlayOnCanvas(HDC hdc) override
-    {
-        CRect rc;
-        canvasWindow.GetImageRect(rc);
-        canvasWindow.ImageToCanvas(rc);
-
-        POINT pt;
-        ::GetCursorPos(&pt);
-        ::ScreenToClient(canvasWindow, &pt);
-
-        // FIXME: Draw the border of the area that is to be zoomed in
-        if (rc.PtInRect(pt))
-            DrawXorRect(hdc, &rc);
-    }
-
     void OnButtonDown(BOOL bLeftButton, LONG x, LONG y, BOOL bDoubleClick) override
     {
         INT newZoom, oldZoom = toolsModel.GetZoom();
