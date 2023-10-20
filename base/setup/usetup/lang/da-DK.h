@@ -8,14 +8,14 @@ static MUI_ENTRY daDKSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the Windivs Setup initializes itself",
+        "Please wait while the ReactOS Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY daDKLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,21 +98,21 @@ static MUI_ENTRY daDKWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Velkommen til Windivs installationen",
+        "Velkommen til ReactOS installationen",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Denne del af installationen vil kopiere Windivs opreativsystemet",
+        "Denne del af installationen vil kopiere ReactOS opreativsystemet",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,35 +126,35 @@ static MUI_ENTRY daDKWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade Windivs.",
+        "\x07  Press ENTER to install or upgrade ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Tryk p\206 R reparere Windivs.",
+        "\x07  Tryk p\206 R reparere ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Tryk p\206 L for at f\206 vist Windivs licensbetingelser og vilk\206r.",
+        "\x07  Tryk p\206 L for at f\206 vist ReactOS licensbetingelser og vilk\206r.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Tryk p\206 F3 for at afslutte uden at installere Windivs.",
+        "\x07  Tryk p\206 F3 for at afslutte uden at installere ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "For at f\206 mere infomation om Windivs, g\206 ind p\206:",
+        "For at f\206 mere infomation om ReactOS, g\206 ind p\206:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -185,21 +185,21 @@ static MUI_ENTRY daDKIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Windivs Version Status",
+        "ReactOS Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Windivs is in Alpha stage, meaning it is not feature-complete",
+        "ReactOS is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -227,21 +227,21 @@ static MUI_ENTRY daDKIntroPageEntries[] =
     {
         6,
         16,
-        "to run Windivs on real hardware.",
+        "to run ReactOS on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue Windivs Setup.",
+        "\x07  Press ENTER to continue ReactOS Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing Windivs.",
+        "\x07  Press F3 to quit without installing ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         8,
         8,
-        "Windivs systemet er licenseret under betingelserne beskrevet i",
+        "ReactOS systemet er licenseret under betingelserne beskrevet i",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -300,7 +300,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         8,
         11,
-        "Alt software som er en del af Windivs systemet er",
+        "Alt software som er en del af ReactOS systemet er",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -335,7 +335,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         8,
         17,
-        "Windivs d\221kker kun distribution til tredjeparter",
+        "ReactOS d\221kker kun distribution til tredjeparter",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -349,7 +349,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         8,
         19,
-        "af GNU General Public Licensen sammen med Windivs, bes\233g siden",
+        "af GNU General Public Licensen sammen med ReactOS, bes\233g siden",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -384,7 +384,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         8,
         26,
-        "om Windivs KAN BRUGES TIL NOGET BESTEMT.",
+        "om ReactOS KAN BRUGES TIL NOGET BESTEMT.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY daDKDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -515,14 +515,14 @@ static MUI_ENTRY daDKRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Windivs installationen er i en tilelig udviklingsfase. Derfor",
+        "ReactOS installationen er i en tilelig udviklingsfase. Derfor",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -595,21 +595,21 @@ static MUI_ENTRY daDKUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The Windivs Setup can upgrade one of the available Windivs installations",
+        "The ReactOS Setup can upgrade one of the available ReactOS installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a Windivs installation is damaged, the Setup program",
+        "listed below, or, if a ReactOS installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -651,7 +651,7 @@ static MUI_ENTRY daDKUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing Windivs.",
+        "\x07  Press F3 to quit without installing ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -675,7 +675,7 @@ static MUI_ENTRY daDKComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -734,7 +734,7 @@ static MUI_ENTRY daDKFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -779,14 +779,14 @@ static MUI_ENTRY daDKQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Windivs er ikke blevet helt installeret.",
+        "ReactOS er ikke blevet helt installeret.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -831,7 +831,7 @@ static MUI_ENTRY daDKDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -890,14 +890,14 @@ static MUI_ENTRY daDKSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "De grundl\221ggende komponenter i Windivs blev installeret med success.",
+        "De grundl\221ggende komponenter i ReactOS blev installeret med success.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -937,65 +937,12 @@ static MUI_ENTRY daDKSuccessPageEntries[] =
     }
 };
 
-static MUI_ENTRY daDKBootPageEntries[] =
-{
-    {
-        4,
-        3,
-        " Windivs7 build 7028 installationen ",
-        TEXT_STYLE_UNDERLINE,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        8,
-        "Installationen kan ikke installere opstartsl\221seren p\206",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        9,
-        "din computers hardisk",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        13,
-        "S\221t en formateret diskette i drev A: og",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        6,
-        14,
-        "tryk p\206 ENTER.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        0,
-        0,
-        "ENTER = Forts\221t   F3 = Afslut",
-        TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
-        TEXT_ID_STATIC
-    },
-    {
-        0,
-        0,
-        NULL,
-        0
-    }
-
-};
-
 static MUI_ENTRY daDKSelectPartitionEntries[] =
 {
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1023,7 +970,7 @@ static MUI_ENTRY daDKSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Tryk p\206 ENTER for at installere Windivs til den valgte patition.",
+        "\x07  Tryk p\206 ENTER for at installere ReactOS til den valgte patition.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1075,7 +1022,7 @@ static MUI_ENTRY daDKChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " ReactOS " KERNEL_VERSION_STR " Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1096,14 +1043,14 @@ static MUI_ENTRY daDKChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by Windivs.",
+        "uses a format not supported by ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install Windivs, the Setup program must change",
+        "In order to successfully install ReactOS, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1173,7 +1120,7 @@ static MUI_ENTRY daDKChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of Windivs.",
+        "to the original one after finishing the installation of ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1197,7 +1144,7 @@ static MUI_ENTRY daDKConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1218,7 +1165,7 @@ static MUI_ENTRY daDKConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "oprativsystem (s\206 som Windivs) eller styreprogrammer til hardware.",
+        "oprativsystem (s\206 som ReactOS) eller styreprogrammer til hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1246,7 +1193,7 @@ static MUI_ENTRY daDKConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "fra din harddisk f\233r at du har gennemf\233rt installatonen af Windivs.",
+        "fra din harddisk f\233r at du har gennemf\233rt installatonen af ReactOS.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1298,7 +1245,7 @@ static MUI_ENTRY daDKFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1336,7 +1283,7 @@ static MUI_ENTRY daDKCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1367,7 +1314,7 @@ static MUI_ENTRY daDKInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1381,7 +1328,7 @@ static MUI_ENTRY daDKInstallDirectoryEntries[] =
     {
         6,
         9,
-        "V\221lg den mappe hvor du \233nsker Windivs skal installeres:",
+        "V\221lg den mappe hvor du \233nsker ReactOS skal installeres:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1402,7 +1349,7 @@ static MUI_ENTRY daDKInstallDirectoryEntries[] =
     {
         6,
         16,
-        "Windivs skal installeres til.",
+        "ReactOS skal installeres til.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1426,21 +1373,21 @@ static MUI_ENTRY daDKFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Vent mens Windivs installationen kopiere filer til din",
+        "Vent mens ReactOS installationen kopiere filer til din",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
     {
         0,
         13,
-        "Windivs-installationsmappe.",
+        "ReactOS-installationsmappe.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1466,19 +1413,19 @@ static MUI_ENTRY daDKFileCopyEntries[] =
     }
 };
 
-static MUI_ENTRY daDKBootLoaderEntries[] =
+static MUI_ENTRY daDKBootLoaderSelectPageEntries[] =
 {
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Installatione af opstartsl\221ser",
+        "Please select where Setup should install the bootloader:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1530,8 +1477,15 @@ static MUI_ENTRY daDKBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 Setup ",
+        " ReactOS " KERNEL_VERSION_STR " Setup ",
         TEXT_STYLE_UNDERLINE,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        8,
+        "Installatione af opstartsl\221ser.",
+        TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
@@ -1549,12 +1503,65 @@ static MUI_ENTRY daDKBootLoaderInstallPageEntries[] =
     }
 };
 
+static MUI_ENTRY daDKBootLoaderRemovableDiskPageEntries[] =
+{
+    {
+        4,
+        3,
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
+        TEXT_STYLE_UNDERLINE,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        8,
+        "Installationen kan ikke installere opstartsl\221seren p\206",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        9,
+        "din computers harddisk.",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        13,
+        "S\221t en formateret diskette i drev A:",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        6,
+        14,
+        "og tryk p\206 ENTER.",
+        TEXT_STYLE_NORMAL,
+        TEXT_ID_STATIC
+    },
+    {
+        0,
+        0,
+        "ENTER = Forts\221t   F3 = Afslut",
+        TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+        TEXT_ID_STATIC
+    },
+    {
+        0,
+        0,
+        NULL,
+        0
+    }
+
+};
+
 static MUI_ENTRY daDKKeyboardSettingsEntries[] =
 {
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1613,7 +1620,7 @@ static MUI_ENTRY daDKLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1673,14 +1680,14 @@ static MUI_ENTRY daDKPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Installationen g\233r din computer klar til at kopiere Windivs filerne.",
+        "Installationen g\233r din computer klar til at kopiere ReactOS filerne.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1705,7 +1712,7 @@ static MUI_ENTRY daDKSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1753,7 +1760,7 @@ static MUI_ENTRY daDKDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1805,7 +1812,7 @@ static MUI_ENTRY daDKRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7028 installationen ",
+        " ReactOS " KERNEL_VERSION_STR " installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1840,9 +1847,9 @@ MUI_ERROR daDKErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "Windivs er endnu ikke f\221rdiginstalleret p\206\n"
+        "ReactOS er endnu ikke f\221rdiginstalleret p\206\n"
         "din computer. Hvis du afslutter installationen nu skal\n"
-        "du k\233rer installationen igen for at installere Windivs.\n"
+        "du k\233rer installationen igen for at installere ReactOS.\n"
         "\n"
         "  \x07  Tryk p\206 ENTER for at forts\221tte installationen.\n"
         "  \x07  Tryk p\206 F3 afslutte installationen.",
@@ -1850,7 +1857,7 @@ MUI_ERROR daDKErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the Windivs installation directory!\n"
+        "Failed to build the installation paths for the ReactOS installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1860,7 +1867,7 @@ MUI_ERROR daDKErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install Windivs within the installation source directory!\n"
+        "You cannot install ReactOS within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2059,7 +2066,7 @@ MUI_ERROR daDKErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Den valgte partition er ikke stor nok til at installere Windivs.\n"
+        "Den valgte partition er ikke stor nok til at installere ReactOS.\n"
         "The install partition must have a size of at least %lu MB.\n"
         "installationspartitionen skal mindst have %lu MB ledig.\n"
         "\n"
@@ -2183,8 +2190,8 @@ MUI_PAGE daDKPages[] =
         daDKKeyboardSettingsEntries
     },
     {
-        BOOT_LOADER_PAGE,
-        daDKBootLoaderEntries
+        BOOTLOADER_SELECT_PAGE,
+        daDKBootLoaderSelectPageEntries
     },
     {
         LAYOUT_SETTINGS_PAGE,
@@ -2199,12 +2206,12 @@ MUI_PAGE daDKPages[] =
         daDKSuccessPageEntries
     },
     {
-        BOOT_LOADER_INSTALLATION_PAGE,
+        BOOTLOADER_INSTALL_PAGE,
         daDKBootLoaderInstallPageEntries
     },
     {
-        BOOT_LOADER_FLOPPY_PAGE,
-        daDKBootPageEntries
+        BOOTLOADER_REMOVABLE_DISK_PAGE,
+        daDKBootLoaderRemovableDiskPageEntries
     },
     {
         REGISTRY_PAGE,
@@ -2243,13 +2250,13 @@ MUI_STRING daDKStrings[] =
     {STRING_PARTFORMAT,
     "Denne partition vil blive formateret som det n\221ste."},
     {STRING_NONFORMATTEDPART,
-    "Du har valgt at installere Windivs til en ny eller uformateret partition."},
+    "Du har valgt at installere ReactOS til en ny eller uformateret partition."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "Systempartitionen er endnu ikke blevet formateret."},
     {STRING_NONFORMATTEDOTHERPART,
     "Den nye partition er endnu ikke blevet formateret."},
     {STRING_INSTALLONPART,
-    "Installationen installere Windivs p\206 partitionen"},
+    "Installationen installere ReactOS p\206 partitionen"},
     {STRING_CONTINUE,
     "ENTER = Forts\221t"},
     {STRING_QUITCONTINUE,

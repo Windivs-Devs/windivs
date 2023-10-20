@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for Windivs
+ * PROJECT:    PAINT for ReactOS
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Window procedure of the tool settings window
  * COPYRIGHT:  Copyright 2015 Benedikt Freisen <b.freisen@gmx.net>
@@ -281,7 +281,7 @@ VOID CToolSettingsWindow::drawBox(HDC hdc, LPCRECT prc)
     }
 }
 
-LRESULT CToolSettingsWindow::OnCreate(UINT nMsg, WPARAM wParam, LPARAM lParam, WINBOOL& bHandled)
+LRESULT CToolSettingsWindow::OnCreate(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
     /* preloading the draw transparent/nontransparent icons for later use */
     m_hNontranspIcon = (HICON)LoadImage(g_hinstExe, MAKEINTRESOURCE(IDI_NONTRANSPARENT),
@@ -294,8 +294,8 @@ LRESULT CToolSettingsWindow::OnCreate(UINT nMsg, WPARAM wParam, LPARAM lParam, W
     ::InflateRect(&trackbarZoomPos, -1, -1);
 
     trackbarZoom.Create(TRACKBAR_CLASS, m_hWnd, trackbarZoomPos, NULL, WS_CHILD | TBS_VERT | TBS_AUTOTICKS);
-    trackbarZoom.SendMessage(TBM_SETRANGE, (WPARAM) TRUE, MAKELPARAM(MIN_ZOOM_TRACK, MAX_ZOOM_TRACK));
-    trackbarZoom.SendMessage(TBM_SETPOS, (WPARAM) TRUE, (LPARAM) DEFAULT_ZOOM_TRACK);
+    trackbarZoom.SendMessage(TBM_SETRANGE, TRUE, MAKELPARAM(MIN_ZOOM_TRACK, MAX_ZOOM_TRACK));
+    trackbarZoom.SendMessage(TBM_SETPOS, TRUE, DEFAULT_ZOOM_TRACK);
     return 0;
 }
 
@@ -308,8 +308,8 @@ LRESULT CToolSettingsWindow::OnDestroy(UINT nMsg, WPARAM wParam, LPARAM lParam, 
 
 LRESULT CToolSettingsWindow::OnVScroll(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-    INT trackPos = (INT)(MAX_ZOOM_TRACK - trackbarZoom.SendMessage(TBM_GETPOS, 0, 0));
-    zoomTo(MIN_ZOOM << trackPos, 0, 0);
+    INT trackPos = MAX_ZOOM_TRACK - (INT)trackbarZoom.SendMessage(TBM_GETPOS, 0, 0);
+    canvasWindow.zoomTo(MIN_ZOOM << trackPos);
 
     INT zoomRate = toolsModel.GetZoom();
 
@@ -322,7 +322,6 @@ LRESULT CToolSettingsWindow::OnVScroll(UINT nMsg, WPARAM wParam, LPARAM lParam, 
     ::SendMessage(g_hStatusBar, SB_SETTEXT, 1, (LPARAM)(LPCTSTR)strZoom);
 
     OnToolsModelZoomChanged(nMsg, wParam, lParam, bHandled);
-
     return 0;
 }
 
@@ -359,9 +358,7 @@ LRESULT CToolSettingsWindow::OnPaint(UINT nMsg, WPARAM wParam, LPARAM lParam, BO
     PAINTSTRUCT ps;
     HDC hdc = BeginPaint(&ps);
 
-    if (toolsModel.GetActiveTool() == TOOL_ZOOM)
-        ::DrawEdge(hdc, &rect1, BDR_SUNKENOUTER, BF_RECT);
-    else
+    if (toolsModel.GetActiveTool() != TOOL_ZOOM)
         ::DrawEdge(hdc, &rect1, BDR_SUNKENOUTER, BF_RECT | BF_MIDDLE);
 
     if (toolsModel.GetActiveTool() >= TOOL_RECT)
@@ -496,6 +493,6 @@ LRESULT CToolSettingsWindow::OnToolsModelZoomChanged(UINT nMsg, WPARAM wParam, L
         tempZoom = tempZoom >> 1;
     }
 
-    trackbarZoom.SendMessage(TBM_SETPOS, (WPARAM) TRUE, (LPARAM)(MAX_ZOOM_TRACK - tbPos));
+    trackbarZoom.SendMessage(TBM_SETPOS, TRUE, MAX_ZOOM_TRACK - tbPos);
     return 0;
 }

@@ -231,8 +231,8 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
         return NULL;
 
     HDC hScreenDC = ::GetDC(NULL);
-    g_xDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSX);
-    g_yDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSY);
+    g_xDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSX);
+    g_yDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSY);
     ::ReleaseDC(NULL, hScreenDC);
 
     return SetBitmapAndInfo(hBitmap, name, pFound, isFile);
@@ -241,6 +241,7 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
 HBITMAP SetBitmapAndInfo(HBITMAP hBitmap, LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
 {
     // update image
+    canvasWindow.updateScrollPos();
     imageModel.PushImageForUndo(hBitmap);
     imageModel.ClearHistory();
 
@@ -293,8 +294,8 @@ HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
     if (xDpi <= 0 || yDpi <= 0)
     {
         HDC hDC = ::GetDC(NULL);
-        xDpi = ::GetDeviceCaps(hDC, LOGPIXELSX);
-        yDpi = ::GetDeviceCaps(hDC, LOGPIXELSY);
+        xDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSX);
+        yDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSY);
         ::ReleaseDC(NULL, hDC);
     }
 
