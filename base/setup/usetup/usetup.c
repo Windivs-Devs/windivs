@@ -3173,7 +3173,7 @@ CheckFileSystemPage(PINPUT_RECORD Ir)
 
     if (!GetNextUncheckedPartition(PartitionList, NULL, &PartEntry))
     {
-        return BOOTLOADER_CHOICE_PAGE;
+        return BOOTLOADER_SELECT_PAGE;
     }
 
     ASSERT(PartEntry->IsPartitioned && PartEntry->PartitionNumber != 0);
@@ -3821,8 +3821,7 @@ RegistryStatus(IN REGISTRY_STATUS RegStatus, ...)
  * Displays the RegistryPage.
  *
  * Next pages:
- *  SuccessPage (if RepairUpdate)
- *  BootLoaderChoicePage (default)
+ *  BootLoaderSelectPage
  *  QuitPage
  *
  * SIDEEFFECTS
@@ -3859,7 +3858,7 @@ RegistryPage(PINPUT_RECORD Ir)
 
 
 /*
- * Displays the BootLoaderChoicePage.
+ * Displays the BootLoaderSelectPage.
  *
  * Next pages:
  *  SuccessPage
@@ -3869,7 +3868,7 @@ RegistryPage(PINPUT_RECORD Ir)
  *   Number of the next page.
  */
 static PAGE_NUMBER
-BootLoaderChoicePage(PINPUT_RECORD Ir)
+BootLoaderSelectPage(PINPUT_RECORD Ir)
 {
     USHORT Line = 12;
 
@@ -3877,6 +3876,17 @@ BootLoaderChoicePage(PINPUT_RECORD Ir)
 
     /* We must have a supported system partition by now */
     ASSERT(SystemPartition && SystemPartition->IsPartitioned && SystemPartition->PartitionNumber != 0);
+
+    /*
+     * If we repair an existing installation and we made it up to here,
+     * this means a valid bootloader and boot entry have been found.
+     * Thus, there is no need to re-install it: skip its installation.
+     */
+    if (RepairUpdateFlag)
+    {
+        USetupData.MBRInstallType = 0;
+        goto Quit;
+    }
 
     /* For unattended setup, skip MBR installation or install on removable disk if needed */
     if (IsUnattendedSetup)
@@ -3910,7 +3920,7 @@ BootLoaderChoicePage(PINPUT_RECORD Ir)
         }
     }
 
-    MUIDisplayPage(BOOTLOADER_CHOICE_PAGE);
+    MUIDisplayPage(BOOTLOADER_SELECT_PAGE);
     CONSOLE_InvertTextXY(8, Line, 60, 1);
 
     while (TRUE)
@@ -3993,12 +4003,12 @@ BootLoaderChoicePage(PINPUT_RECORD Ir)
             }
             else if (Line == 15)
             {
-                /* Skip MBR installation */
+                /* Skip installation */
                 USetupData.MBRInstallType = 0;
                 break;
             }
 
-            return BOOTLOADER_CHOICE_PAGE;
+            return BOOTLOADER_SELECT_PAGE;
         }
     }
 
@@ -4112,9 +4122,9 @@ BootLoaderHardDiskPage(PINPUT_RECORD Ir)
 }
 
 /*
- * Actually installs the bootloader, at the end of the installation.
- * The media where the bootloader is going to be installed, has already
- * been chosen before -- See BootLoaderChoicePage().
+ * Actually installs the bootloader at the end of the installation.
+ * The bootloader installation place has already been chosen before,
+ * see BootLoaderSelectPage().
  *
  * Next pages:
  *  SuccessPage (At once)
@@ -4139,7 +4149,8 @@ BootLoaderInstallPage(PINPUT_RECORD Ir)
     RtlCreateUnicodeString(&USetupData.SystemRootPath, PathBuffer);
     DPRINT1("SystemRootPath: %wZ\n", &USetupData.SystemRootPath);
 
-    MUIDisplayPage(BOOTLOADER_INSTALL_PAGE);
+    if (USetupData.MBRInstallType != 0)
+        MUIDisplayPage(BOOTLOADER_INSTALL_PAGE);
 
     switch (USetupData.MBRInstallType)
     {
@@ -4499,7 +4510,7 @@ RunUSetup(VOID)
         CONSOLE_ClearScreen();
         CONSOLE_Flush();
 
-        // CONSOLE_SetUnderlinedTextXY(4, 3, " ReactOS build 6920 Setup ");
+        // CONSOLE_SetUnderlinedTextXY(4, 3, " ReactOS " KERNEL_VERSION_STR " Setup ");
 
         switch (Page)
         {
@@ -4591,9 +4602,9 @@ RunUSetup(VOID)
                 Page = CheckFileSystemPage(&Ir);
                 break;
 
-            /* Bootloader installation choice page */
-            case BOOTLOADER_CHOICE_PAGE:
-                Page = BootLoaderChoicePage(&Ir);
+            /* Bootloader selection page */
+            case BOOTLOADER_SELECT_PAGE:
+                Page = BootLoaderSelectPage(&Ir);
                 break;
 
             /* Installation pages */
