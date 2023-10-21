@@ -6,12 +6,18 @@
  */
 
 #include "precomp.h"
-#include <math.h>
 
 INT g_fileSize = 0;
 float g_xDpi = 96;
 float g_yDpi = 96;
 SYSTEMTIME g_fileTime;
+
+#define WIDTHBYTES(i) (((i) + 31) / 32 * 4)
+
+struct BITMAPINFOEX : BITMAPINFO
+{
+    RGBQUAD bmiColorsExtra[256 - 1];
+};
 
 /* FUNCTIONS ********************************************************/
 
@@ -142,11 +148,13 @@ GetDIBHeight(HBITMAP hBitmap)
     return bm.bmHeight;
 }
 
-BOOL SaveDIBToFile(HBITMAP hBitmap, LPCWSTR FileName, BOOL fIsMainFile)
+BOOL SaveDIBToFile(HBITMAP hBitmap, LPCWSTR FileName, BOOL fIsMainFile, REFGUID guidFileType)
 {
+    CWaitCursor waitCursor;
+
     CImageDx img;
     img.Attach(hBitmap);
-    HRESULT hr = img.SaveDx(FileName, GUID_NULL, g_xDpi, g_yDpi);
+    HRESULT hr = img.SaveDx(FileName, guidFileType, g_xDpi, g_yDpi);
     img.Detach();
 
     if (FAILED(hr))
@@ -223,8 +231,8 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
         return NULL;
 
     HDC hScreenDC = ::GetDC(NULL);
-    g_xDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSX);
-    g_yDpi = ::GetDeviceCaps(hScreenDC, LOGPIXELSY);
+    g_xDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSX);
+    g_yDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSY);
     ::ReleaseDC(NULL, hScreenDC);
 
     return SetBitmapAndInfo(hBitmap, name, pFound, isFile);
@@ -233,6 +241,7 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
 HBITMAP SetBitmapAndInfo(HBITMAP hBitmap, LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
 {
     // update image
+    canvasWindow.updateScrollPos();
     imageModel.PushImageForUndo(hBitmap);
     imageModel.ClearHistory();
 
@@ -243,6 +252,8 @@ HBITMAP SetBitmapAndInfo(HBITMAP hBitmap, LPCWSTR name, LPWIN32_FIND_DATAW pFoun
 
 HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
 {
+    CWaitCursor waitCursor;
+
     // find the file
     WIN32_FIND_DATA find;
     HANDLE hFind = ::FindFirstFileW(name, &find);
@@ -262,10 +273,16 @@ HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
 
     // load the image
     CImageDx img;
-    float xDpi, yDpi;
+    float xDpi = 0, yDpi = 0;
     HRESULT hr = img.LoadDx(name, &xDpi, &yDpi);
+    if (FAILED(hr) && fIsMainFile)
+    {
+        imageModel.ClearHistory();
+        hr = img.LoadDx(name, &xDpi, &yDpi);
+    }
     if (FAILED(hr))
     {
+        ATLTRACE("hr: 0x%08lX\n", hr);
         ShowError(IDS_LOADERRORTEXT, name);
         return NULL;
     }
@@ -274,12 +291,16 @@ HBITMAP DoLoadImageFile(HWND hwnd, LPCWSTR name, BOOL fIsMainFile)
     if (!fIsMainFile)
         return hBitmap;
 
+    if (xDpi <= 0 || yDpi <= 0)
+    {
+        HDC hDC = ::GetDC(NULL);
+        xDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSX);
+        yDpi = (float)::GetDeviceCaps(hDC, LOGPIXELSY);
+        ::ReleaseDC(NULL, hDC);
+    }
+
     g_xDpi = xDpi;
     g_yDpi = yDpi;
-    if (g_xDpi <= 0)
-        g_xDpi = 96;
-    if (g_yDpi <= 0)
-        g_yDpi = 96;
 
     SetBitmapAndInfo(hBitmap, name, &find, TRUE);
     return hBitmap;
@@ -324,12 +345,10 @@ HBITMAP Rotate90DegreeBlt(HDC hDC1, INT cx, INT cy, BOOL bRight, BOOL bMono)
     return hbm2;
 }
 
-#ifndef M_PI
-    #define M_PI 3.14159265
-#endif
-
 HBITMAP SkewDIB(HDC hDC1, HBITMAP hbm, INT nDegree, BOOL bVertical, BOOL bMono)
 {
+    CWaitCursor waitCursor;
+
     if (nDegree == 0)
         return CopyDIBImage(hbm);
 
@@ -391,6 +410,8 @@ struct BITMAPINFODX : BITMAPINFO
 
 HGLOBAL BitmapToClipboardDIB(HBITMAP hBitmap)
 {
+    CWaitCursor waitCursor;
+
     BITMAP bm;
     if (!GetObject(hBitmap, sizeof(BITMAP), &bm))
         return NULL;
@@ -452,6 +473,8 @@ HGLOBAL BitmapToClipboardDIB(HBITMAP hBitmap)
 
 HBITMAP BitmapFromClipboardDIB(HGLOBAL hGlobal)
 {
+    CWaitCursor waitCursor;
+
     LPBYTE pb = (LPBYTE)GlobalLock(hGlobal);
     if (!pb)
         return NULL;
@@ -497,6 +520,8 @@ HBITMAP BitmapFromClipboardDIB(HGLOBAL hGlobal)
 
 HBITMAP BitmapFromHEMF(HENHMETAFILE hEMF)
 {
+    CWaitCursor waitCursor;
+
     ENHMETAHEADER header;
     if (!GetEnhMetaFileHeader(hEMF, sizeof(header), &header))
         return NULL;
@@ -514,4 +539,94 @@ HBITMAP BitmapFromHEMF(HENHMETAFILE hEMF)
     DeleteDC(hDC);
 
     return hbm;
+}
+
+BOOL IsBitmapBlackAndWhite(HBITMAP hbm)
+{
+    CWaitCursor waitCursor;
+
+    BITMAP bm;
+    if (!::GetObjectW(hbm, sizeof(bm), &bm))
+        return FALSE;
+
+    if (bm.bmBitsPixel == 1)
+        return TRUE;
+
+    BITMAPINFOEX bmi;
+    ZeroMemory(&bmi, sizeof(bmi));
+    bmi.bmiHeader.biSize = sizeof(bmi.bmiHeader);
+    bmi.bmiHeader.biWidth = bm.bmWidth;
+    bmi.bmiHeader.biHeight = bm.bmHeight;
+    bmi.bmiHeader.biPlanes = 1;
+    bmi.bmiHeader.biBitCount = 24;
+
+    DWORD widthbytes = WIDTHBYTES(24 * bm.bmWidth);
+    DWORD cbBits = widthbytes * bm.bmHeight;
+    LPBYTE pbBits = new BYTE[cbBits];
+
+    HDC hdc = ::CreateCompatibleDC(NULL);
+    ::GetDIBits(hdc, hbm, 0, bm.bmHeight, pbBits, &bmi, DIB_RGB_COLORS);
+    ::DeleteDC(hdc);
+
+    BOOL bBlackAndWhite = TRUE;
+    for (LONG y = 0; y < bm.bmHeight; ++y)
+    {
+        LPBYTE pbLine = &pbBits[widthbytes * y];
+        for (LONG x = 0; x < bm.bmWidth; ++x)
+        {
+            BYTE Blue = *pbLine++;
+            BYTE Green = *pbLine++;
+            BYTE Red = *pbLine++;
+            COLORREF rgbColor = RGB(Red, Green, Blue);
+            if (rgbColor != RGB(0, 0, 0) && rgbColor != RGB(255, 255, 255))
+            {
+                bBlackAndWhite = FALSE;
+                goto Finish;
+            }
+        }
+    }
+
+Finish:
+    delete[] pbBits;
+
+    return bBlackAndWhite;
+}
+
+HBITMAP ConvertToBlackAndWhite(HBITMAP hbm)
+{
+    CWaitCursor waitCursor;
+
+    BITMAP bm;
+    if (!::GetObject(hbm, sizeof(bm), &bm))
+        return NULL;
+
+    BITMAPINFOEX bmi;
+    ZeroMemory(&bmi, sizeof(bmi));
+    bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+    bmi.bmiHeader.biWidth = bm.bmWidth;
+    bmi.bmiHeader.biHeight = bm.bmHeight;
+    bmi.bmiHeader.biPlanes = 1;
+    bmi.bmiHeader.biBitCount = 1;
+    bmi.bmiColors[1].rgbBlue = 255;
+    bmi.bmiColors[1].rgbGreen = 255;
+    bmi.bmiColors[1].rgbRed = 255;
+    HDC hdc = ::CreateCompatibleDC(NULL);
+    LPVOID pvMonoBits;
+    HBITMAP hMonoBitmap = ::CreateDIBSection(hdc, &bmi, DIB_RGB_COLORS, &pvMonoBits, NULL, 0);
+    if (!hMonoBitmap)
+    {
+        ::DeleteDC(hdc);
+        return NULL;
+    }
+
+    HBITMAP hNewBitmap = CreateDIBWithProperties(bm.bmWidth, bm.bmHeight);
+    if (hNewBitmap)
+    {
+        ::GetDIBits(hdc, hbm, 0, bm.bmHeight, pvMonoBits, &bmi, DIB_RGB_COLORS);
+        ::SetDIBits(hdc, hNewBitmap, 0, bm.bmHeight, pvMonoBits, &bmi, DIB_RGB_COLORS);
+    }
+    ::DeleteObject(hMonoBitmap);
+    ::DeleteDC(hdc);
+
+    return hNewBitmap;
 }

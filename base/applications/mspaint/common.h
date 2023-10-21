@@ -43,7 +43,8 @@ enum HITTEST // hit
 
 /* FUNCTIONS ********************************************************/
 
-BOOL zoomTo(int newZoom, int mouseX, int mouseY);
 BOOL nearlyEqualPoints(INT x0, INT y0, INT x1, INT y1);
-void updateStartAndLast(LONG x, LONG y);
-void updateLast(LONG x, LONG y);
+BOOL OpenMailer(HWND hWnd, LPCWSTR pszPathName);
+
+#define DEG2RAD(degree) (((degree) * M_PI) / 180)
+#define RAD2DEG(radian) ((LONG)(((radian) * 180) / M_PI))

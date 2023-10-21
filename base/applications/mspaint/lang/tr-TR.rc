@@ -89,7 +89,7 @@ BEGIN
     BEGIN
         MENUITEM "&Renk Paletini Düzenle...", IDM_COLORSEDITPALETTE
         MENUITEM SEPARATOR
-        MENUITEM "&Çağdaş Renk Paleti", IDM_COLORSMODERNPALETTE
+        MENUITEM "&Yeni Renk Paleti", IDM_COLORSMODERNPALETTE
         MENUITEM "&Eski Renk Paleti", IDM_COLORSOLDPALETTE
     END
     POPUP "&Yardım"
@@ -104,18 +104,18 @@ ID_POPUPMENU MENU
 BEGIN
     POPUP "Popup #0"
     BEGIN
-        MENUITEM "C&ut\tCtrl+X", IDM_EDITCUT
-        MENUITEM "Copy\tCtrl+C", IDM_EDITCOPY
-        MENUITEM "&Paste\tCtrl+V", IDM_EDITPASTE
-        MENUITEM "De&lete selection\tDel", IDM_EDITDELETESELECTION
-        MENUITEM "Select &All\tCtrl+A", IDM_EDITSELECTALL
+        MENUITEM "&Kes\tCtrl+X", IDM_EDITCUT
+        MENUITEM "K&opyala\tCtrl+C", IDM_EDITCOPY
+        MENUITEM "Y&apıştır\tCtrl+V", IDM_EDITPASTE
+        MENUITEM "&Seçimi Sil\tDel", IDM_EDITDELETESELECTION
+        MENUITEM "&Tümünü Seç\tCtrl+A", IDM_EDITSELECTALL
         MENUITEM SEPARATOR
-        MENUITEM "C&opy to...", IDM_EDITCOPYTO
-        MENUITEM "Paste &from...", IDM_EDITPASTEFROM
+        MENUITEM "Ş&uraya Kopyala...", IDM_EDITCOPYTO
+        MENUITEM "Şu&radan Yapıştır...", IDM_EDITPASTEFROM
         MENUITEM SEPARATOR
-        MENUITEM "Rotate/&Mirror...\tCtrl+R", IDM_IMAGEROTATEMIRROR
-        MENUITEM "&Stretch/Skew...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "&Invert colors\tCtrl+I", IDM_IMAGEINVERTCOLORS
+        MENUITEM "&Döndür ya da Yansıt...\tCtrl+R", IDM_IMAGEROTATEMIRROR
+        MENUITEM "&Yeniden Boyutlandır veya Eğ...\tCtrl+W", IDM_IMAGESTRETCHSKEW
+        MENUITEM "Re&nkleri Tersine Çevir\tCtrl+I", IDM_IMAGEINVERTCOLORS
     END
 END
 
@@ -140,6 +140,10 @@ BEGIN
     "^I", IDM_IMAGEINVERTCOLORS
     "^E", IDM_IMAGEATTRIBUTES
     "N", IDM_IMAGEDELETEIMAGE, CONTROL, SHIFT, VIRTKEY
+    VK_ADD, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_SUBTRACT, IDM_CTRL_MINUS, CONTROL, VIRTKEY
+    VK_OEM_PLUS, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_OEM_MINUS, IDM_CTRL_MINUS, CONTROL, VIRTKEY
 END
 
 IDD_MIRRORROTATE DIALOGEX 100, 100, 180, 100
@@ -261,6 +265,8 @@ BEGIN
     IDS_UNDERLINE "Altı Çizgili"
     IDS_VERTICAL "Düşey"
     IDS_PRINTRES "%d x %d pixel/cm"
-    IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
-    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_CANTPASTE "Panodan yapıştırma işlemi başarısız oldu. Veri biçimi bozuk veya desteklenmiyor olabilir."
+    IDS_SAVEERROR "Dosya kaydetme başarısız oldu:\n\n%s"
+    IDS_CANTSENDMAIL "Mail gönderme başarısız oldu."
+    IDS_LOSECOLOR "Renk biçimi bu işlem sonrası kaybolacaktır. Bu işlemi yapmak istediğinizden emin misiniz?"
 END

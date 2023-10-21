@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for Windivs
+ * PROJECT:     PAINT for ReactOS
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Russian resource file
  * TRANSLATORS: Copyright 2009 Dmitry Chapyshev <dmitry@reactos.org>
@@ -143,6 +143,10 @@ BEGIN
     "^I", IDM_IMAGEINVERTCOLORS
     "^E", IDM_IMAGEATTRIBUTES
     "N", IDM_IMAGEDELETEIMAGE, CONTROL, SHIFT, VIRTKEY
+    VK_ADD, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_SUBTRACT, IDM_CTRL_MINUS, CONTROL, VIRTKEY
+    VK_OEM_PLUS, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_OEM_MINUS, IDM_CTRL_MINUS, CONTROL, VIRTKEY
 END
 
 IDD_MIRRORROTATE DIALOGEX 100, 100, 180, 100
@@ -230,7 +234,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Paint"
     IDS_WINDOWTITLE "%s - Paint"
-    IDS_INFOTITLE "Paint для Windivs"
+    IDS_INFOTITLE "Paint для ReactOS"
     IDS_INFOTEXT "Распространяется под лицензией GNU Lesser General Public License (LGPL, см. www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Сохранить изменения в %s?"
     IDS_DEFAULTFILENAME "Безымянный"
@@ -266,4 +270,6 @@ BEGIN
     IDS_PRINTRES "%d x %d точек/см"
     IDS_CANTPASTE "Не удалось вставить из буфера обмена. Формат данных либо некорректный, либо не поддерживается."
     IDS_SAVEERROR "Не удалось сохранить точечный рисунок в файл:\n\n%s"
+    IDS_CANTSENDMAIL "Не удалось отправить письмо."
+    IDS_LOSECOLOR "В результате этой операции сведения о цвете будут потеряны. Продолжить?"
 END

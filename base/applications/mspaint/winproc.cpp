@@ -41,42 +41,12 @@ static HWND DoHtmlHelpW(HWND hwndCaller, LPCWSTR pszFile, UINT uCommand, DWORD_P
     return s_pHtmlHelpW(hwndCaller, pszFile, uCommand, dwData);
 }
 
-BOOL
-zoomTo(int newZoom, int mouseX, int mouseY)
-{
-    int x, y, w, h;
-    RECT clientRectScrollbox;
-    canvasWindow.GetClientRect(&clientRectScrollbox);
-
-    RECT clientRectImageArea;
-    ::SetRect(&clientRectImageArea, 0, 0, imageModel.GetWidth(), imageModel.GetHeight());
-    Zoomed(clientRectImageArea);
-
-    w = clientRectImageArea.right * newZoom / toolsModel.GetZoom();
-    h = clientRectImageArea.bottom * newZoom / toolsModel.GetZoom();
-    if (!w || !h)
-    {
-        return FALSE;
-    }
-    w = clientRectImageArea.right * clientRectScrollbox.right / w;
-    h = clientRectImageArea.bottom * clientRectScrollbox.bottom / h;
-    x = max(0, min(clientRectImageArea.right - w, mouseX - w / 2)) * newZoom / toolsModel.GetZoom();
-    y = max(0, min(clientRectImageArea.bottom - h, mouseY - h / 2)) * newZoom / toolsModel.GetZoom();
-
-    toolsModel.SetZoom(newZoom);
-
-    canvasWindow.Invalidate(TRUE);
-
-    canvasWindow.SendMessage(WM_HSCROLL, MAKEWPARAM(SB_THUMBPOSITION, x), 0);
-    canvasWindow.SendMessage(WM_VSCROLL, MAKEWPARAM(SB_THUMBPOSITION, y), 0);
-    return TRUE;
-}
-
 void CMainWindow::alignChildrenToMainWindow()
 {
     RECT clientRect, rc;
     GetClientRect(&clientRect);
     RECT rcSpace = clientRect;
+    const UINT uFlags = (SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION | SWP_NOCOPYBITS);
 
     if (::IsWindowVisible(g_hStatusBar))
     {
@@ -93,7 +63,7 @@ void CMainWindow::alignChildrenToMainWindow()
             hDWP = ::DeferWindowPos(hDWP, toolBoxContainer, NULL,
                                     rcSpace.right - CX_TOOLBAR, rcSpace.top,
                                     CX_TOOLBAR, rcSpace.bottom - rcSpace.top,
-                                    SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION);
+                                    uFlags);
             rcSpace.right -= CX_TOOLBAR;
         }
         else
@@ -101,7 +71,7 @@ void CMainWindow::alignChildrenToMainWindow()
             hDWP = ::DeferWindowPos(hDWP, toolBoxContainer, NULL,
                                     rcSpace.left, rcSpace.top,
                                     CX_TOOLBAR, rcSpace.bottom - rcSpace.top,
-                                    SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION);
+                                    uFlags);
             rcSpace.left += CX_TOOLBAR;
         }
     }
@@ -113,7 +83,7 @@ void CMainWindow::alignChildrenToMainWindow()
             hDWP = ::DeferWindowPos(hDWP, paletteWindow, NULL,
                                     rcSpace.left, rcSpace.bottom - CY_PALETTE,
                                     rcSpace.right - rcSpace.left, CY_PALETTE,
-                                    SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION);
+                                    uFlags);
             rcSpace.bottom -= CY_PALETTE;
         }
         else
@@ -121,7 +91,7 @@ void CMainWindow::alignChildrenToMainWindow()
             hDWP = ::DeferWindowPos(hDWP, paletteWindow, NULL,
                                     rcSpace.left, rcSpace.top,
                                     rcSpace.right - rcSpace.left, CY_PALETTE,
-                                    SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION);
+                                    uFlags);
             rcSpace.top += CY_PALETTE;
         }
     }
@@ -131,7 +101,7 @@ void CMainWindow::alignChildrenToMainWindow()
         hDWP = ::DeferWindowPos(hDWP, canvasWindow, NULL,
                                 rcSpace.left, rcSpace.top,
                                 rcSpace.right - rcSpace.left, rcSpace.bottom - rcSpace.top,
-                                SWP_NOZORDER | SWP_NOACTIVATE | SWP_NOREPOSITION);
+                                uFlags);
     }
 
     ::EndDeferWindowPos(hDWP);
@@ -205,20 +175,20 @@ LRESULT CMainWindow::OnMouseWheel(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL&
 {
     INT zDelta = (SHORT)HIWORD(wParam);
 
-    if (::GetAsyncKeyState(VK_CONTROL) < 0)
+    if (::GetKeyState(VK_CONTROL) < 0) // Ctrl+Wheel
     {
         if (zDelta < 0)
         {
             if (toolsModel.GetZoom() > MIN_ZOOM)
-                zoomTo(toolsModel.GetZoom() / 2, 0, 0);
+                canvasWindow.zoomTo(toolsModel.GetZoom() / 2);
         }
         else if (zDelta > 0)
         {
             if (toolsModel.GetZoom() < MAX_ZOOM)
-                zoomTo(toolsModel.GetZoom() * 2, 0, 0);
+                canvasWindow.zoomTo(toolsModel.GetZoom() * 2);
         }
     }
-    else
+    else // Wheel only
     {
         UINT nCount = 3;
         if (::GetAsyncKeyState(VK_SHIFT) < 0)
@@ -657,6 +627,13 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             if (pd.hDevNames)
                 GlobalFree(pd.hDevNames);
             break;
+        case IDM_FILESEND:
+            canvasWindow.finishDrawing();
+            if (!OpenMailer(m_hWnd, g_szFileName))
+            {
+                ShowError(IDS_CANTSENDMAIL);
+            }
+            break;
         case IDM_FILEASWALLPAPERPLANE:
             RegistrySettings::SetWallpaper(g_szFileName, RegistrySettings::TILED);
             break;
@@ -687,6 +664,16 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
                 if (toolsModel.IsSelection())
                 {
                     canvasWindow.cancelDrawing();
+                    if (toolsModel.GetActiveTool() == TOOL_FREESEL ||
+                        toolsModel.GetActiveTool() == TOOL_RECTSEL)
+                    {
+                        imageModel.Undo();
+                        if (selectionModel.m_nSelectionBrush == 2) // Selection Brush is drawn
+                        {
+                            imageModel.Undo();
+                            selectionModel.m_nSelectionBrush = 0;
+                        }
+                    }
                     break;
                 }
             }
@@ -724,13 +711,13 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             selectionModel.TakeOff();
 
             {
-                HBITMAP hbm = selectionModel.CopyBitmap();
-                if (hbm)
+                HBITMAP hbmLocked = selectionModel.LockBitmap();
+                if (hbmLocked)
                 {
-                    HGLOBAL hGlobal = BitmapToClipboardDIB(hbm);
+                    HGLOBAL hGlobal = BitmapToClipboardDIB(hbmLocked);
                     if (hGlobal)
                         ::SetClipboardData(CF_DIB, hGlobal);
-                    ::DeleteObject(hbm);
+                    selectionModel.UnlockBitmap(hbmLocked);
                 }
             }
 
@@ -848,10 +835,9 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             WCHAR szFileName[MAX_LONG_PATH] = L"*.png";
             if (GetSaveFileName(szFileName, _countof(szFileName)))
             {
-                HBITMAP hbm = selectionModel.CopyBitmap();
-                if (!SaveDIBToFile(hbm, szFileName, FALSE))
-                    ShowError(IDS_SAVEERROR, szFileName);
-                ::DeleteObject(hbm);
+                HBITMAP hbmLocked = selectionModel.LockBitmap();
+                SaveDIBToFile(hbmLocked, szFileName, FALSE);
+                selectionModel.UnlockBitmap(hbmLocked);
             }
             break;
         }
@@ -863,8 +849,6 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
                 HBITMAP hbmNew = DoLoadImageFile(m_hWnd, szFileName, FALSE);
                 if (hbmNew)
                     InsertSelectionFromHBITMAP(hbmNew, m_hWnd);
-                else
-                    ShowError(IDS_LOADERRORTEXT, szFileName);
             }
             break;
         }
@@ -895,45 +879,75 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             imageModel.NotifyImageChanged();
             break;
         case IDM_IMAGEROTATEMIRROR:
-            switch (mirrorRotateDialog.DoModal(mainWindow.m_hWnd))
             {
-                case 1: /* flip horizontally */
-                    if (selectionModel.m_bShow)
-                        selectionModel.FlipHorizontally();
-                    else
-                        imageModel.FlipHorizontally();
-                    break;
-                case 2: /* flip vertically */
-                    if (selectionModel.m_bShow)
-                        selectionModel.FlipVertically();
-                    else
-                        imageModel.FlipVertically();
-                    break;
-                case 3: /* rotate 90 degrees */
-                    if (selectionModel.m_bShow)
-                        selectionModel.RotateNTimes90Degrees(1);
-                    else
-                        imageModel.RotateNTimes90Degrees(1);
-                    break;
-                case 4: /* rotate 180 degrees */
-                    if (selectionModel.m_bShow)
-                        selectionModel.RotateNTimes90Degrees(2);
-                    else
-                        imageModel.RotateNTimes90Degrees(2);
-                    break;
-                case 5: /* rotate 270 degrees */
-                    if (selectionModel.m_bShow)
-                        selectionModel.RotateNTimes90Degrees(3);
-                    else
-                        imageModel.RotateNTimes90Degrees(3);
-                    break;
+                CWaitCursor waitCursor;
+                canvasWindow.updateScrollPos();
+                switch (mirrorRotateDialog.DoModal(mainWindow.m_hWnd))
+                {
+                    case 1: /* flip horizontally */
+                    {
+                        if (selectionModel.m_bShow)
+                            selectionModel.FlipHorizontally();
+                        else
+                            imageModel.FlipHorizontally();
+                        break;
+                    }
+                    case 2: /* flip vertically */
+                    {
+                        if (selectionModel.m_bShow)
+                            selectionModel.FlipVertically();
+                        else
+                            imageModel.FlipVertically();
+                        break;
+                    }
+                    case 3: /* rotate 90 degrees */
+                    {
+                        if (selectionModel.m_bShow)
+                            selectionModel.RotateNTimes90Degrees(1);
+                        else
+                            imageModel.RotateNTimes90Degrees(1);
+                        break;
+                    }
+                    case 4: /* rotate 180 degrees */
+                    {
+                        if (selectionModel.m_bShow)
+                            selectionModel.RotateNTimes90Degrees(2);
+                        else
+                            imageModel.RotateNTimes90Degrees(2);
+                        break;
+                    }
+                    case 5: /* rotate 270 degrees */
+                    {
+                        if (selectionModel.m_bShow)
+                            selectionModel.RotateNTimes90Degrees(3);
+                        else
+                            imageModel.RotateNTimes90Degrees(3);
+                        break;
+                    }
+                }
             }
             break;
         case IDM_IMAGEATTRIBUTES:
         {
             if (attributesDialog.DoModal(mainWindow.m_hWnd))
             {
-                imageModel.Crop(attributesDialog.newWidth, attributesDialog.newHeight, 0, 0);
+                CWaitCursor waitCursor;
+                if (attributesDialog.m_bBlackAndWhite && !imageModel.IsBlackAndWhite())
+                {
+                    CString strText(MAKEINTRESOURCE(IDS_LOSECOLOR));
+                    CString strTitle(MAKEINTRESOURCE(IDS_PROGRAMNAME));
+                    INT id = MessageBox(strText, strTitle, MB_ICONINFORMATION | MB_YESNOCANCEL);
+                    if (id != IDYES)
+                        break;
+
+                    imageModel.PushBlackAndWhite();
+                }
+
+                if (imageModel.GetWidth() != attributesDialog.newWidth ||
+                    imageModel.GetHeight() != attributesDialog.newHeight)
+                {
+                    imageModel.Crop(attributesDialog.newWidth, attributesDialog.newHeight);
+                }
             }
             break;
         }
@@ -941,6 +955,7 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
         {
             if (stretchSkewDialog.DoModal(mainWindow.m_hWnd))
             {
+                CWaitCursor waitCursor;
                 if (selectionModel.m_bShow)
                 {
                     selectionModel.StretchSkew(stretchSkewDialog.percentage.x, stretchSkewDialog.percentage.y,
@@ -961,7 +976,6 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             imageModel.PushImageForUndo(selectionModel.CopyBitmap());
             selectionModel.HideSelection();
             break;
-
         case IDM_VIEWTOOLBOX:
             registrySettings.ShowToolBox = !toolBoxContainer.IsWindowVisible();
             toolBoxContainer.ShowWindow(registrySettings.ShowToolBox ? SW_SHOWNOACTIVATE : SW_HIDE);
@@ -1000,31 +1014,38 @@ LRESULT CMainWindow::OnCommand(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bH
             break;
 
         case IDM_VIEWZOOM125:
-            zoomTo(125, 0, 0);
+            canvasWindow.zoomTo(125);
             break;
         case IDM_VIEWZOOM25:
-            zoomTo(250, 0, 0);
+            canvasWindow.zoomTo(250);
             break;
         case IDM_VIEWZOOM50:
-            zoomTo(500, 0, 0);
+            canvasWindow.zoomTo(500);
             break;
         case IDM_VIEWZOOM100:
-            zoomTo(1000, 0, 0);
+            canvasWindow.zoomTo(1000);
             break;
         case IDM_VIEWZOOM200:
-            zoomTo(2000, 0, 0);
+            canvasWindow.zoomTo(2000);
             break;
         case IDM_VIEWZOOM400:
-            zoomTo(4000, 0, 0);
+            canvasWindow.zoomTo(4000);
             break;
         case IDM_VIEWZOOM800:
-            zoomTo(8000, 0, 0);
+            canvasWindow.zoomTo(8000);
             break;
 
         case IDM_VIEWFULLSCREEN:
             // Create and show the fullscreen window
             fullscreenWindow.DoCreate();
             fullscreenWindow.ShowWindow(SW_SHOWMAXIMIZED);
+            break;
+
+        case IDM_CTRL_PLUS:
+            toolsModel.SpecialTweak(FALSE);
+            break;
+        case IDM_CTRL_MINUS:
+            toolsModel.SpecialTweak(TRUE);
             break;
     }
     return 0;

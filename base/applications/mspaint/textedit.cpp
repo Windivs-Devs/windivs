@@ -187,6 +187,12 @@ LRESULT CTextEditWindow::OnNCHitTest(UINT nMsg, WPARAM wParam, LPARAM lParam, BO
 
 LRESULT CTextEditWindow::OnSetCursor(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
+    if (CWaitCursor::IsWaiting())
+    {
+        bHandled = FALSE;
+        return 0;
+    }
+
     UINT nHitTest = LOWORD(lParam);
     if (nHitTest == HTCAPTION)
     {
@@ -334,8 +340,8 @@ void CTextEditWindow::UpdateFont()
     ZeroMemory(&lf, sizeof(lf));
     lf.lfCharSet = DEFAULT_CHARSET; // registrySettings.CharSet; // Ignore
     lf.lfWeight = (registrySettings.Bold ? FW_BOLD : FW_NORMAL);
-    lf.lfItalic = registrySettings.Italic;
-    lf.lfUnderline = registrySettings.Underline;
+    lf.lfItalic = (BYTE)registrySettings.Italic;
+    lf.lfUnderline = (BYTE)registrySettings.Underline;
     lstrcpyn(lf.lfFaceName, registrySettings.strFontName, _countof(lf.lfFaceName));
 
     HDC hdc = GetDC();

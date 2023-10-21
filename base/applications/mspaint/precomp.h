@@ -22,6 +22,8 @@
 #include <commdlg.h>
 #include <commctrl.h>
 #include <stdlib.h>
+#define _USE_MATH_DEFINES /* for M_PI */
+#include <math.h>
 #include <shellapi.h>
 #include <htmlhelp.h>
 #include "atlimagedx.h"
@@ -51,6 +53,7 @@
 #include "toolsmodel.h"
 #include "winproc.h"
 #include "dialogs.h"
+#include <ui/CWaitCursor.h>
 #include "globalvar.h"
 
 #endif /* _MSPAINT_H */

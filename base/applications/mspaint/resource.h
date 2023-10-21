@@ -22,6 +22,7 @@
 #define IDC_ZOOM     532
 #define IDC_PEN      533
 #define IDC_AIRBRUSH 534
+#define IDC_HANDDRAG 535
 
 #define IDI_HORZSTRETCH 535
 #define IDI_VERTSTRETCH 536
@@ -101,6 +102,9 @@
 #define IDM_ITALIC      281
 #define IDM_UNDERLINE   282
 #define IDM_VERTICAL    283
+
+#define IDM_CTRL_PLUS   290
+#define IDM_CTRL_MINUS  291
 
 /* the following 16 numbers need to be in order, increasing by 1 */
 #define ID_FREESEL  600
@@ -221,3 +225,5 @@
 #define IDS_PRINTRES    939
 #define IDS_CANTPASTE   940
 #define IDS_SAVEERROR   941
+#define IDS_CANTSENDMAIL 942
+#define IDS_LOSECOLOR   943

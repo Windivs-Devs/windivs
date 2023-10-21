@@ -107,7 +107,7 @@ BEGIN
     POPUP "Popup #0"
     BEGIN
         MENUITEM "&Wytnij\tCtrl+X", IDM_EDITCUT
-        MENUITEM "Kopiuj\tCtrl+C", IDM_EDITCOPY
+        MENUITEM "&Kopiuj\tCtrl+C", IDM_EDITCOPY
         MENUITEM "Wkl&ej\tCtrl+V", IDM_EDITPASTE
         MENUITEM "Wyczyść z&aznaczenie\tDel", IDM_EDITDELETESELECTION
         MENUITEM "&Zaznacz wszystko\tCtrl+A", IDM_EDITSELECTALL
@@ -142,6 +142,10 @@ BEGIN
     "^I", IDM_IMAGEINVERTCOLORS
     "^E", IDM_IMAGEATTRIBUTES
     "N", IDM_IMAGEDELETEIMAGE, CONTROL, SHIFT, VIRTKEY
+    VK_ADD, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_SUBTRACT, IDM_CTRL_MINUS, CONTROL, VIRTKEY
+    VK_OEM_PLUS, IDM_CTRL_PLUS, CONTROL, VIRTKEY
+    VK_OEM_MINUS, IDM_CTRL_MINUS, CONTROL, VIRTKEY
 END
 
 IDD_MIRRORROTATE DIALOGEX 100, 100, 180, 100
@@ -265,4 +269,6 @@ BEGIN
     IDS_PRINTRES "%d x %d piksel/cm"
     IDS_CANTPASTE "Nie można wkleić ze schowka. Format danych jest nieprawidłowy lub nieobsługiwany."
     IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
+    IDS_CANTSENDMAIL "Failed to send a mail."
+    IDS_LOSECOLOR "The color information will be lost in this operation. Are you sure to proceed?"
 END

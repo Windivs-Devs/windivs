@@ -15,9 +15,13 @@ ImageModel imageModel;
 void ImageModel::NotifyImageChanged()
 {
     if (canvasWindow.IsWindow())
-        canvasWindow.Invalidate(FALSE);
+    {
+        canvasWindow.updateScrollRange();
+        canvasWindow.Invalidate();
+    }
+
     if (miniature.IsWindow())
-        miniature.Invalidate(FALSE);
+        miniature.Invalidate();
 }
 
 ImageModel::ImageModel()
@@ -99,6 +103,15 @@ void ImageModel::ResetToPrevious()
 
 void ImageModel::ClearHistory()
 {
+    for (int i = 0; i < HISTORYSIZE; ++i)
+    {
+        if (m_hBms[i] && i != m_currInd)
+        {
+            ::DeleteObject(m_hBms[i]);
+            m_hBms[i] = NULL;
+        }
+    }
+
     m_undoSteps = 0;
     m_redoSteps = 0;
 }
@@ -261,9 +274,54 @@ void ImageModel::Clamp(POINT& pt) const
 
 HBITMAP ImageModel::CopyBitmap()
 {
+    HBITMAP hBitmap = LockBitmap();
+    HBITMAP ret = CopyDIBImage(hBitmap);
+    UnlockBitmap(hBitmap);
+    return ret;
+}
+
+BOOL ImageModel::IsBlackAndWhite()
+{
+    HBITMAP hBitmap = LockBitmap();
+    BOOL bBlackAndWhite = IsBitmapBlackAndWhite(hBitmap);
+    UnlockBitmap(hBitmap);
+    return bBlackAndWhite;
+}
+
+void ImageModel::PushBlackAndWhite()
+{
+    HBITMAP hBitmap = LockBitmap();
+    HBITMAP hNewBitmap = ConvertToBlackAndWhite(hBitmap);
+    UnlockBitmap(hBitmap);
+
+    if (hNewBitmap)
+        PushImageForUndo(hNewBitmap);
+}
+
+HBITMAP ImageModel::LockBitmap()
+{
     // NOTE: An app cannot select a bitmap into more than one device context at a time.
     ::SelectObject(m_hDrawingDC, m_hbmOld); // De-select
-    HBITMAP ret = CopyDIBImage(m_hBms[m_currInd]);
-    m_hbmOld = ::SelectObject(m_hDrawingDC, m_hBms[m_currInd]); // Re-select
-    return ret;
+    HBITMAP hbmLocked = m_hBms[m_currInd];
+    m_hBms[m_currInd] = NULL;
+    return hbmLocked;
+}
+
+void ImageModel::UnlockBitmap(HBITMAP hbmLocked)
+{
+    m_hBms[m_currInd] = hbmLocked;
+    m_hbmOld = ::SelectObject(m_hDrawingDC, hbmLocked); // Re-select
+}
+
+void ImageModel::SelectionClone(BOOL bUndoable)
+{
+    if (!selectionModel.m_bShow || ::IsRectEmpty(&selectionModel.m_rc))
+        return;
+
+    if (bUndoable)
+        PushImageForUndo(CopyBitmap());
+
+    selectionModel.DrawSelection(m_hDrawingDC, paletteModel.GetBgColor(),
+                                 toolsModel.IsBackgroundTransparent());
+    NotifyImageChanged();
 }
