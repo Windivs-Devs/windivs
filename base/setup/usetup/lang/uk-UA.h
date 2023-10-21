@@ -13,7 +13,7 @@ static MUI_ENTRY ukUASetupInitPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -51,7 +51,7 @@ static MUI_ENTRY ukUALanguagePageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -103,7 +103,7 @@ static MUI_ENTRY ukUAWelcomePageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -190,7 +190,7 @@ static MUI_ENTRY ukUAIntroPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -270,7 +270,7 @@ static MUI_ENTRY ukUALicensePageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -413,7 +413,7 @@ static MUI_ENTRY ukUADevicePageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -520,7 +520,7 @@ static MUI_ENTRY ukUARepairPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -593,7 +593,7 @@ static MUI_ENTRY ukUAUpgradePageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -673,7 +673,7 @@ static MUI_ENTRY ukUAComputerPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -732,7 +732,7 @@ static MUI_ENTRY ukUAFlushPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -777,7 +777,7 @@ static MUI_ENTRY ukUAQuitPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -829,7 +829,7 @@ static MUI_ENTRY ukUADisplayPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -888,7 +888,7 @@ static MUI_ENTRY ukUASuccessPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -940,7 +940,7 @@ static MUI_ENTRY ukUABootPageEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -993,7 +993,7 @@ static MUI_ENTRY ukUASelectPartitionEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1074,7 +1074,7 @@ static MUI_ENTRY ukUAChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs Astiv+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1196,7 +1196,7 @@ static MUI_ENTRY ukUAConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1304,7 +1304,7 @@ static MUI_ENTRY ukUAFormatPartitionEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1342,7 +1342,7 @@ static MUI_ENTRY ukUACheckFSEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1373,7 +1373,7 @@ static MUI_ENTRY ukUAInstallDirectoryEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1432,7 +1432,7 @@ static MUI_ENTRY ukUAFileCopyEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1477,7 +1477,7 @@ static MUI_ENTRY ukUABootLoaderEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1536,7 +1536,7 @@ static MUI_ENTRY ukUABootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs Astiv+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1560,7 +1560,7 @@ static MUI_ENTRY ukUAKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1619,7 +1619,7 @@ static MUI_ENTRY ukUALayoutSettingsEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1679,7 +1679,7 @@ static MUI_ENTRY ukUAPrepareCopyEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1711,7 +1711,7 @@ static MUI_ENTRY ukUASelectFSEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1759,7 +1759,7 @@ static MUI_ENTRY ukUADeletePartitionEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1811,7 +1811,7 @@ static MUI_ENTRY ukUARegistryEntries[] =
     {
         4,
         3,
-        " \202\341\342\240\255\256\242\253\245\255\255\357 ReactOS " KERNEL_VERSION_STR " ",
+        " \202\341\342\240\255\256\242\253\245\255\255\357 Windivs Astiv+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

@@ -8,7 +8,7 @@ static MUI_ENTRY bgBGSetupInitPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY bgBGLanguagePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY bgBGWelcomePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -192,7 +192,7 @@ static MUI_ENTRY bgBGIntroPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY bgBGLicensePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -422,7 +422,7 @@ static MUI_ENTRY bgBGDevicePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -529,7 +529,7 @@ static MUI_ENTRY bgBGRepairPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -602,7 +602,7 @@ static MUI_ENTRY bgBGUpgradePageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -682,7 +682,7 @@ static MUI_ENTRY bgBGComputerPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -741,7 +741,7 @@ static MUI_ENTRY bgBGFlushPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -786,7 +786,7 @@ static MUI_ENTRY bgBGQuitPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -838,7 +838,7 @@ static MUI_ENTRY bgBGDisplayPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -897,7 +897,7 @@ static MUI_ENTRY bgBGSuccessPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -949,7 +949,7 @@ static MUI_ENTRY bgBGBootPageEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1002,7 +1002,7 @@ static MUI_ENTRY bgBGSelectPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1038,7 +1038,7 @@ static MUI_ENTRY bgBGSelectPartitionEntries[] =
         8,
         15,
         "\x07  \215\240\342\250\341\255\245\342\245 P \247\240 \341\352\247\244\240\242\240\255\245 \255\240 \243\253\240\242\245\255 \244\357\253.",
-//        "\x07  Натиснете C за създаване на нов дял.",
+//        "\x07  ┬Н┬а├в┬и├б┬н┬е├в┬е C ┬з┬а ├б├к┬з┬д┬а┬в┬а┬н┬е ┬н┬а ┬н┬о┬в ┬д├п┬л.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1066,7 +1066,7 @@ static MUI_ENTRY bgBGSelectPartitionEntries[] =
     {
         0,
         0,
-        "   \217\256\347\240\252\240\251\342\245...",  /* Редът да не се превежда, защото списъкът с дяловете ще се размести */
+        "   \217\256\347\240\252\240\251\342\245...",  /* ┬Р┬е┬д├к├в ┬д┬а ┬н┬е ├б┬е ┬п├а┬е┬в┬е┬ж┬д┬а, ┬з┬а├й┬о├в┬о ├б┬п┬и├б├к┬к├к├в ├б ┬д├п┬л┬о┬в┬е├в┬е ├й┬е ├б┬е ├а┬а┬з┬м┬е├б├в┬и */
         TEXT_TYPE_STATUS,
         TEXT_ID_STATIC
     },
@@ -1083,7 +1083,7 @@ static MUI_ENTRY bgBGChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " \210\255\341\342\240\253\240\346\250\357 ",
+        " Windivs Astiv+ \210\255\341\342\240\253\240\346\250\357 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1205,7 +1205,7 @@ static MUI_ENTRY bgBGConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1313,7 +1313,7 @@ static MUI_ENTRY bgBGFormatPartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\250\340\240\255\245 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1350,7 +1350,7 @@ static MUI_ENTRY bgBGCheckFSEntries[] =
 {
     {
         4,
-        3, " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        3, " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1381,7 +1381,7 @@ static MUI_ENTRY bgBGInstallDirectoryEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1440,7 +1440,7 @@ static MUI_ENTRY bgBGFileCopyEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1454,7 +1454,7 @@ static MUI_ENTRY bgBGFileCopyEntries[] =
     {
         30,
         13,
-       // "избраната папка.",
+       // "┬и┬з┬б├а┬а┬н┬а├в┬а ┬п┬а┬п┬к┬а.",
        "",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
@@ -1486,7 +1486,7 @@ static MUI_ENTRY bgBGBootLoaderEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1545,7 +1545,7 @@ static MUI_ENTRY bgBGBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " \210\255\341\342\240\253\240\346\250\357 ",
+        " Windivs Astiv+ \210\255\341\342\240\253\240\346\250\357 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1569,7 +1569,7 @@ static MUI_ENTRY bgBGKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1628,7 +1628,7 @@ static MUI_ENTRY bgBGLayoutSettingsEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1688,7 +1688,7 @@ static MUI_ENTRY bgBGPrepareCopyEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1720,7 +1720,7 @@ static MUI_ENTRY bgBGSelectFSEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1768,7 +1768,7 @@ static MUI_ENTRY bgBGDeletePartitionEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1820,7 +1820,7 @@ static MUI_ENTRY bgBGRegistryEntries[] =
     {
         4,
         3,
-        " \210\255\341\342\240\253\240\346\250\357 \255\240 ReactOS " KERNEL_VERSION_STR " .",
+        " \210\255\341\342\240\253\240\346\250\357 \255\240 Windivs Astiv+ .",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -2237,7 +2237,7 @@ MUI_STRING bgBGStrings[] =
      "   \214\256\253\357 \250\247\347\240\252\240\251\342\245..."},
     {STRING_INSTALLCREATEPARTITION,
      "   ENTER = \210\255\341\342\240\253\250\340\240\251   P = \221\352\247\244\240\251\342\245 \257\352\340\242\250\347\245\255   E = \221\352\247\244\240\251\342\245 \340\240\247\350\250\340\245\255   F3 = \210\247\345\256\244"},
-//     "   ENTER = Слагане   C = Създаване на дял   F3 = Изход"},
+//     "   ENTER = тАШ┬л┬а┬г┬а┬н┬е   C = тАШ├к┬з┬д┬а┬в┬а┬н┬е ┬н┬а ┬д├п┬л   F3 = ╦Ж┬з├е┬о┬д"},
     {STRING_INSTALLCREATELOGICAL,
      "   ENTER = \210\255\341\342\240\253\250\340\240\251   L = \221\352\247\244\240\251 \253\256\243\250\347\245\341\252\250 \257\240\340\342\250\350\352\255   F3 = \210\247\345\256\244"},
     {STRING_INSTALLDELETEPARTITION,
