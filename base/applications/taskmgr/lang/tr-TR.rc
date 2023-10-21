@@ -124,7 +124,7 @@ BEGIN
     POPUP "DUMMY"
     BEGIN
         MENUITEM "&İşlemi Sonlandır", ID_PROCESS_PAGE_ENDPROCESS
-        MENUITEM "İ&şlem Ağacını Sonlandır", ID_PROCESS_PAGE_ENDPROCESSTREE
+        MENUITEM "İ&şlem ağacını Sonlandır", ID_PROCESS_PAGE_ENDPROCESSTREE
         MENUITEM "&Hata Ayıkla", ID_PROCESS_PAGE_DEBUG
         MENUITEM SEPARATOR
         POPUP "&Önceliği Aayarla"
@@ -148,7 +148,7 @@ END
 IDD_TASKMGR_DIALOG DIALOGEX 0, 0, 264, 246
 STYLE DS_SHELLFONT | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP |
       WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION "Görev Yöneticisi"
+CAPTION "Windivs Görev Yöneticisi"
 MENU IDR_TASKMANAGER
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -324,8 +324,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APP_TITLE "Görev Yöneticisi"
-    IDC_TASKMGR "Görev Yöneticisi"
+    IDS_APP_TITLE "Windivs Görev Yöneticisi"
+    IDC_TASKMGR "Windivs Görev Yöneticisi"
     IDS_IDLE_PROCESS "Boş Sistem İşlemi"
 END
 
@@ -379,8 +379,8 @@ BEGIN
     ID_PROCESS_PAGE_SETPRIORITY_NORMAL "İşlemi NORMAL öncelik sınıfına getirir."
     ID_PROCESS_PAGE_SETPRIORITY_BELOWNORMAL "İşlemi NORMAL ALTI öncelik sınıfına getirir."
     ID_PROCESS_PAGE_SETPRIORITY_LOW "İşlemi DÜŞÜK öncelik sınıfına getirir."
-    ID_PROCESS_PAGE_PROPERTIES "Shows process file properties"
-    ID_PROCESS_PAGE_OPENFILELOCATION "Opens process file location"
+    ID_PROCESS_PAGE_PROPERTIES "İşlemin dosyasının özelliklerini gösterir."
+    ID_PROCESS_PAGE_OPENFILELOCATION "İşlemin dosyasının konumunu açar."
 END
 
 STRINGTABLE
@@ -428,15 +428,15 @@ BEGIN
     IDS_MENU_SHOWKERNELTIMES "&Çekirdek Sürelerini Göster"
     IDS_CREATENEWTASK "Yeni Görev Oluşturma"
     IDS_CREATENEWTASK_DESC "Bir programın, bir dizinin, bir belgenin veya bir İnternet kaynağının adını yazınız, Görev Yöneticisi onu sizin için açacaktır."
-    IDS_MSG_ACCESSPROCESSAFF "İşlemci İlişkisinin Erişilemedi veya Ayarlanadı"
+    IDS_MSG_ACCESSPROCESSAFF "İşlemci İlişkisine Erişilemedi veya Ayarlanamadı."
     IDS_MSG_PROCESSONEPRO "İşlemin en azından bir işlemciyle ilişkisi olmalıdır."
     IDS_MSG_INVALIDOPTION "Geçersiz Seçenek"
-    IDS_MSG_UNABLEDEBUGPROCESS "Hata Ayıklama İşleminin Yapılamadı"
+    IDS_MSG_UNABLEDEBUGPROCESS "Hata Ayıklama İşlemi Yapılamadı"
     IDS_MSG_WARNINGDEBUG "UYARI: Bu işlemde hata ayıklama veri kaybıyla sonuçlanabilir.\nHata ayıklayıcı bağlamak istediğinizden emin misiniz?"
     IDS_MSG_TASKMGRWARNING "Görev Yöneticisi Uyarısı"
     IDS_MSG_WARNINGTERMINATING "UYARI: Bir işlemin sonlandırılması, veri\nkaybı ve sistem kararsızlığı dahil pek çok istenmeyen sonuca neden\nolabilir. İşleme, işlem sonlandırılmadan önce durumunu veya verisini\nkaydetme fırsatı verilmeyecektir. İşlemi\nsonlandırmak istediğinizden emin misiniz?"
     IDS_MSG_UNABLETERMINATEPRO "İşlem Sonlandırlamadı"
-    IDS_MSG_CLOSESYSTEMPROCESS "Bu çok önemli bir sistem işlemidir. Görev Yöneticisi bu işlemi sonlandırmayacak."
+    IDS_MSG_CLOSESYSTEMPROCESS "Bu kritik bir sistem işlemidir. Görev Yöneticisi bu işlemi sonlandırmamaz."
     IDS_MSG_UNABLECHANGEPRIORITY "Öncelik Değiştirilemedi"
     IDS_MSG_WARNINGCHANGEPRIORITY "UYARI: Bu işlemin öncelik sınıfının değiştirilmesi, sistem\nkararsızlığı dahil pek çok istenmeyen sonuca neden olabilir. Öncelik\nsınıfını değiştirmek istediğinizden emin misiniz?"
     IDS_MSG_TRAYICONCPUUSAGE "CPU Kullanımı: %%%d"
