@@ -13,6 +13,7 @@
 #include <tchar.h>
 #include <atlbase.h>
 #include <atlcom.h>
+#include <atlimage.h>
 #include <atlpath.h>
 #include <atlstr.h>
 #include <atlwin.h>

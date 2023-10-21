@@ -1055,18 +1055,38 @@ protected:
         return NULL;
     }
 
-    static CLSID
-    FindCodecForFileType(REFGUID guidFileType, const Gdiplus::ImageCodecInfo *pCodecs, UINT nCodecs)
+    struct FORMAT_ENTRY
     {
-        for (UINT iInfo = 0; iInfo < nCodecs; ++iInfo)
+        GUID guid;
+        LPCWSTR mime;
+    };
+
+    bool GetClsidFromFileType(CLSID *clsid, const GUID *guid) const
+    {
+        static const FORMAT_ENTRY table[] =
         {
-            if (::IsEqualGUID(pCodecs[iInfo].FormatID, guidFileType))
-                return pCodecs[iInfo].Clsid;
+            {Gdiplus::ImageFormatJPEG, L"image/jpeg"},
+            {Gdiplus::ImageFormatPNG, L"image/png"},
+            {Gdiplus::ImageFormatBMP, L"image/bmp"},
+            {Gdiplus::ImageFormatGIF, L"image/gif"},
+            {Gdiplus::ImageFormatTIFF, L"image/tiff"}
+        };
+        const size_t count = _countof(table);
+        for (size_t i = 0; i < count; ++i)
+        {
+            if (::IsEqualGUID(table[i].guid, *guid))
+            {
+                int num = GetEncoderClsid(table[i].mime, clsid);
+                if (num >= 0)
+                {
+                    return true;
+                }
+            }
         }
-        return CLSID_NULL;
+        return false;
     }
 
-    static Gdiplus::ImageCodecInfo* _getAllEncoders(UINT& cEncoders)
+    int GetEncoderClsid(LPCWSTR mime, CLSID *clsid) const
     {
         UINT count = 0, total_size = 0;
         GetCommon().GetImageEncodersSize(&count, &total_size);
