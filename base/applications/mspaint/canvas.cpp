@@ -229,7 +229,7 @@ VOID CCanvasWindow::OnHVScroll(WPARAM wParam, INT fnBar)
     {
         case SB_THUMBTRACK:
         case SB_THUMBPOSITION:
-            si.nPos = (SHORT)HIWORD(wParam);
+            si.nPos = HIWORD(wParam);
             break;
         case SB_LINELEFT:
             si.nPos -= 5;
@@ -244,9 +244,9 @@ VOID CCanvasWindow::OnHVScroll(WPARAM wParam, INT fnBar)
             si.nPos += si.nPage;
             break;
     }
-    si.nPos = max(min(si.nPos, si.nMax), si.nMin);
     SetScrollInfo(fnBar, &si);
-    Invalidate();
+    Update(m_hWnd);
+    Invalidate(FALSE); // FIXME: Flicker
 }
 
 LRESULT CCanvasWindow::OnHScroll(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
@@ -264,17 +264,6 @@ LRESULT CCanvasWindow::OnVScroll(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 LRESULT CCanvasWindow::OnLRButtonDown(BOOL bLeftButton, UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
     POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
-
-    m_nMouseDownMsg = nMsg;
-    BOOL bLeftButton = (nMsg == WM_LBUTTONDOWN);
-
-    if (nMsg == WM_MBUTTONDOWN)
-    {
-        m_ptOrig = pt;
-        SetCapture();
-        ::SetCursor(::LoadCursor(g_hinstExe, MAKEINTRESOURCE(IDC_HANDDRAG)));
-        return 0;
-    }
 
     HITTEST hitSelection = SelectionHitTest(pt);
     if (hitSelection != HIT_NONE)
@@ -376,17 +365,6 @@ LRESULT CCanvasWindow::OnRButtonDblClk(UINT nMsg, WPARAM wParam, LPARAM lParam, 
 LRESULT CCanvasWindow::OnMouseMove(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
     POINT pt = { GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
-
-    if (m_nMouseDownMsg == WM_MBUTTONDOWN)
-    {
-        INT x = GetScrollPos(SB_HORZ) - (pt.x - m_ptOrig.x);
-        INT y = GetScrollPos(SB_VERT) - (pt.y - m_ptOrig.y);
-        SendMessage(WM_HSCROLL, MAKEWPARAM(SB_THUMBPOSITION, x), 0);
-        SendMessage(WM_VSCROLL, MAKEWPARAM(SB_THUMBPOSITION, y), 0);
-        m_ptOrig = pt;
-        return 0;
-    }
-
     CanvasToImage(pt);
 
     if (m_hitSelection != HIT_NONE)
@@ -655,12 +633,8 @@ LRESULT CCanvasWindow::OnRButtonUp(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL
     return OnLRButtonUp(FALSE, nMsg, wParam, lParam, bHandled);
 }
 
-    if (m_nMouseDownMsg == WM_MBUTTONDOWN)
-    {
-        ::SetCursor(::LoadCursor(g_hinstExe, MAKEINTRESOURCE(IDC_HANDDRAG)));
-        return 0;
-    }
-
+LRESULT CCanvasWindow::OnSetCursor(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
     POINT pt;
     ::GetCursorPos(&pt);
     ScreenToClient(&pt);
