@@ -89,7 +89,7 @@ BEGIN
     BEGIN
         MENUITEM "&Renk Paletini Düzenle...", IDM_COLORSEDITPALETTE
         MENUITEM SEPARATOR
-        MENUITEM "&Çağdaş Renk Paleti", IDM_COLORSMODERNPALETTE
+        MENUITEM "&Yeni Renk Paleti", IDM_COLORSMODERNPALETTE
         MENUITEM "&Eski Renk Paleti", IDM_COLORSOLDPALETTE
     END
     POPUP "&Yardım"
@@ -265,8 +265,8 @@ BEGIN
     IDS_UNDERLINE "Altı Çizgili"
     IDS_VERTICAL "Düşey"
     IDS_PRINTRES "%d x %d pixel/cm"
-    IDS_CANTPASTE "Failed to paste from the clipboard. The data format is either incorrect or not supported."
-    IDS_SAVEERROR "Failed to save the bitmap to file:\n\n%s"
-    IDS_CANTSENDMAIL "Failed to send a mail."
-    IDS_LOSECOLOR "The color information will be lost in this operation. Are you sure to proceed?"
+    IDS_CANTPASTE "Panodan yapıştırma işlemi başarısız oldu. Veri biçimi bozuk veya desteklenmiyor olabilir."
+    IDS_SAVEERROR "Dosya kaydetme başarısız oldu:\n\n%s"
+    IDS_CANTSENDMAIL "Mail gönderme başarısız oldu."
+    IDS_LOSECOLOR "Renk biçimi bu işlem sonrası kaybolacaktır. Bu işlemi yapmak istediğinizden emin misiniz?"
 END
