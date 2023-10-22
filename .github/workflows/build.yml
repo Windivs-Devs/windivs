@@ -12,8 +12,6 @@ jobs:
         exclude:
           - dllver: 0x600
             compiler: clang
-          - dllver: 0x600
-            config: Release
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
