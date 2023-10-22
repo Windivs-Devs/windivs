@@ -112,8 +112,8 @@ PUBLIC RtlCaptureContext
  *     _In_ PCONTEXT ContextRecord@<rcx>,
  *     PEXCEPTION_RECORD *ExceptionRecord@<rdx>);
  */
-PUBLIC RtlRestoreContext
-.PROC RtlRestoreContext
+PUBLIC RtlRestoreContext2
+.PROC RtlRestoreContext2
 
     /* Allocate space */
     sub rsp, HEX(8)
