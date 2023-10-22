@@ -1225,7 +1225,6 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
     hwndDummy = CreateWindowExW(0, L"DummyPreviewWindowClass", L"Active window", WS_OVERLAPPEDWINDOW | WS_VSCROLL, 30, 30, 300, 150, 0, 0, hDllInst, NULL);
     if (!hwndDummy)
         return E_FAIL;
-    SetThemeAppProperties(GetThemeAppProperties() | STAP_ALLOW_CONTROLS);
 
     hres = OpenThemeFile(pszThemeFileName, pszColorName, pszSizeName, &hThemeFile,0);
     if (FAILED(hres))
