@@ -1132,3 +1132,51 @@ RtlSetUnwindContext(
     *ContextPointers.Xmm14 = Context->Xmm14;
     *ContextPointers.Xmm15 = Context->Xmm15;
 }
+
+VOID
+RtlRestoreContext(
+    _In_ PCONTEXT ContextRecord,
+    _In_ PEXCEPTION_RECORD ExceptionRecord)
+{
+    if (ExceptionRecord != NULL)
+    {
+        /* Check for longjump */
+        if ((ExceptionRecord->ExceptionCode == STATUS_LONGJUMP) &&
+            (ExceptionRecord->NumberParameters >= 1))
+        {
+            _JUMP_BUFFER* JumpBuffer = (_JUMP_BUFFER*)ExceptionRecord->ExceptionInformation[0];
+            ContextRecord->Rbx = JumpBuffer->Rbx;
+            ContextRecord->Rsp = JumpBuffer->Rsp;
+            ContextRecord->Rbp = JumpBuffer->Rbp;
+            ContextRecord->Rsi = JumpBuffer->Rsi;
+            ContextRecord->Rdi = JumpBuffer->Rdi;
+            ContextRecord->R12 = JumpBuffer->R12;
+            ContextRecord->R13 = JumpBuffer->R13;
+            ContextRecord->R14 = JumpBuffer->R14;
+            ContextRecord->R15 = JumpBuffer->R15;
+            ContextRecord->Rip = JumpBuffer->Rip;
+            ContextRecord->Xmm6 = *(M128A*)&JumpBuffer->Xmm6;
+            ContextRecord->Xmm7 = *(M128A*)&JumpBuffer->Xmm7;
+            ContextRecord->Xmm8 = *(M128A*)&JumpBuffer->Xmm8;
+            ContextRecord->Xmm9 = *(M128A*)&JumpBuffer->Xmm9;
+            ContextRecord->Xmm10 = *(M128A*)&JumpBuffer->Xmm10;
+            ContextRecord->Xmm11 = *(M128A*)&JumpBuffer->Xmm11;
+            ContextRecord->Xmm12 = *(M128A*)&JumpBuffer->Xmm12;
+            ContextRecord->Xmm13 = *(M128A*)&JumpBuffer->Xmm13;
+            ContextRecord->Xmm14 = *(M128A*)&JumpBuffer->Xmm14;
+            ContextRecord->Xmm15 = *(M128A*)&JumpBuffer->Xmm15;
+            ContextRecord->MxCsr = JumpBuffer->MxCsr;
+            ContextRecord->FltSave.MxCsr = JumpBuffer->MxCsr;
+            ContextRecord->FltSave.ControlWord = JumpBuffer->FpCsr;
+        }
+        else if ((ExceptionRecord->ExceptionCode == STATUS_UNWIND_CONSOLIDATE) &&
+                 (ExceptionRecord->NumberParameters >= 1))
+        {
+            PVOID(CALLBACK * consolidate)(EXCEPTION_RECORD*) = (void*)ExceptionRecord->ExceptionInformation[0];
+            //ContextRecord->Rip = (ULONG64)call_consolidate_callback(ContextRecord, consolidate, ExceptionRecord);
+            ContextRecord->Rip = (ULONG64)consolidate(ExceptionRecord);
+        }
+    }
+
+    NtContinue(ContextRecord, FALSE);
+}
