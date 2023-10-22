@@ -1096,9 +1096,9 @@ DrawWindowForNCPreview(
         return;
 
     DWORD dwStyle = pcontext->wi.dwStyle;
-
+    DWORD dwExStyle = pcontext->wi.dwExStyle;
     pcontext->CaptionHeight = GetThemeSysSize(pcontext->theme,
-        pcontext->wi.dwExStyle & WS_EX_TOOLWINDOW
+        dwExStyle & WS_EX_TOOLWINDOW
             ? SM_CYSMSIZE
             : SM_CYSIZE
         ) + pcontext->wi.cyWindowBorders
@@ -1200,8 +1200,11 @@ DrawWindowForNCPreview(
     SelectObject(hDC, pen);
 
     OffsetRect(&rcClientNew, -pcontext->wi.rcWindow.left, -pcontext->wi.rcWindow.top);
-    rcClientNew.right++;
-    rcClientNew.bottom++;
+    if (!(dwExStyle & WS_EX_DLGMODALFRAME))
+    {
+        rcClientNew.right++;
+        rcClientNew.bottom++;
+    }
     pcontext->wi.rcClient = rcClientNew;
     if (drawClientAreaColor)
         Rectangle(hDC, rcClientNew.left, rcClientNew.top, rcClientNew.right, rcClientNew.bottom);
@@ -1269,15 +1272,18 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
     context.wi.dwStyle |= WS_VISIBLE;
 
     context.hRgn = CreateRectRgnIndirect(&context.wi.rcWindow);
+    RECT rcAdjPreview = { prcPreview->left, prcPreview->top, prcPreview->right, prcPreview->bottom };
+    INT previewWidth = rcAdjPreview.right - rcAdjPreview.left;
+    INT previewHeight = rcAdjPreview.bottom - rcAdjPreview.top;
 
     /* Draw inactive preview window */
     context.Active = FALSE;
     SetWindowTextW(hwndDummy, L"Inactive Window");
     DrawWindowForNCPreview(hDC, &context
-        , prcPreview->left + 8
-        , prcPreview->top + 8
-        , prcPreview->right - 25
-        , prcPreview->bottom - 40
+        , rcAdjPreview.left
+        , rcAdjPreview.top
+        , rcAdjPreview.right - 17
+        , rcAdjPreview.bottom - 20
         , TRUE
         , NULL
     );
@@ -1289,10 +1295,10 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
     DWORD textDrawFlags = DT_NOPREFIX | DT_SINGLELINE | DT_WORDBREAK;
     RECT rcWindowClient;
     DrawWindowForNCPreview(hDC, &context
-        , prcPreview->left + 18
-        , prcPreview->top + 30
-        , prcPreview->right - 8
-        , prcPreview->bottom - 20
+        , rcAdjPreview.left + 10
+        , rcAdjPreview.top + 22
+        , rcAdjPreview.right
+        , rcAdjPreview.bottom
         , TRUE
         , &rcWindowClient
     );
@@ -1309,30 +1315,42 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
 
     /* Draw preview dialog window */
     SetWindowTextW(hwndDummy, L"Message Box");
-    context.wi.dwStyle &= ~(WS_VSCROLL | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_THICKFRAME);
-    context.wi.dwExStyle = WS_EX_DLGMODALFRAME;
+    DWORD dwStyleNew = WS_VISIBLE | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_DLGFRAME;
+    SetWindowLongPtr(hwndDummy, GWL_STYLE, dwStyleNew);
+    DWORD dwExStyleNew = WS_EX_DLGMODALFRAME;
+    SetWindowLongPtr(hwndDummy, GWL_EXSTYLE, dwExStyleNew);
 
-    INT msgBoxHeight = prcPreview->bottom - prcPreview->top;
+    if (GetWindowInfo(hwndDummy, &context.wi))
+    {
+        context.wi.dwStyle = dwStyleNew;
+        context.wi.dwExStyle = dwExStyleNew;
+    }
+    else
+        return E_FAIL;
+    
+
+    INT msgBoxHalfWidth = 75;
+    INT msgBoxHCenter = rcAdjPreview.left + (previewWidth / 2);
+    INT msgBoxVCenter = rcAdjPreview.top + (previewHeight / 2);
+    if (previewHeight % 2 != 0)
+        msgBoxVCenter++;
 
     DrawWindowForNCPreview(hDC, &context
-        , prcPreview->left + 98
-        , prcPreview->top + ((msgBoxHeight / 5) * 3) - 53
-        , prcPreview->right - 99
-        , prcPreview->bottom - 27
+        , msgBoxHCenter - msgBoxHalfWidth
+        , msgBoxVCenter - 29
+        , msgBoxHCenter + msgBoxHalfWidth
+        , msgBoxVCenter + 71
         , FALSE
         , &rcWindowClient
     );
     DrawThemeBackground(context.theme, hDC, WP_DIALOG, 0, &rcWindowClient, NULL);
 
-    INT msgBoxWidth = rcWindowClient.right - rcWindowClient.left;
-    msgBoxHeight = rcWindowClient.bottom - rcWindowClient.top;
-
     /* Draw preview dialog button */
     HTHEME hBtnTheme = OpenThemeDataFromFile(hThemeFile, hwndDummy, L"BUTTON", OTD_NONCLIENT);
     if (hBtnTheme)
     {
-        INT btnCenterH = rcWindowClient.left + (msgBoxWidth / 2);
-        INT btnCenterV = rcWindowClient.top + (msgBoxHeight / 2);
+        INT btnCenterH = rcWindowClient.left + ((rcWindowClient.right - rcWindowClient.left) / 2);
+        INT btnCenterV = rcWindowClient.top + ((rcWindowClient.bottom - rcWindowClient.top) / 2);
         RECT rcBtn =
         {
             btnCenterH - 40
@@ -1340,9 +1358,11 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
             , btnCenterH + 40
             , btnCenterV + 15
         };
-        DrawThemeBackground(hBtnTheme, hDC, BP_PUSHBUTTON, PBS_NORMAL, &rcBtn, NULL);
+        int btnPart = BP_PUSHBUTTON;
+        int btnState = PBS_DEFAULTED;
+        DrawThemeBackground(hBtnTheme, hDC, btnPart, btnState, &rcBtn, NULL);
         MARGINS btnContentMargins;
-        if (GetThemeMargins(hBtnTheme, hDC, BP_PUSHBUTTON, PBS_NORMAL, TMT_CONTENTMARGINS, NULL, &btnContentMargins) == S_OK)
+        if (GetThemeMargins(hBtnTheme, hDC, btnPart, btnState, TMT_CONTENTMARGINS, NULL, &btnContentMargins) == S_OK)
         {
             rcBtn.left += btnContentMargins.cxLeftWidth;
             rcBtn.top += btnContentMargins.cyTopHeight;
@@ -1352,10 +1372,10 @@ HRESULT WINAPI DrawNCPreview(HDC hDC,
 
         LPCWSTR btnText = L"OK";
         LOGFONTW lfBtn;
-        if ((GetThemeFont(hBtnTheme, hDC, BP_PUSHBUTTON, PBS_NORMAL, TMT_FONT, &lfBtn) != S_OK) && textFont)
+        if ((GetThemeFont(hBtnTheme, hDC, btnPart, btnState, TMT_FONT, &lfBtn) != S_OK) && textFont)
             SelectFont(hDC, textFont);
 
-        DrawThemeText(hBtnTheme, hDC, BP_PUSHBUTTON, PBS_NORMAL, btnText, -1, DT_CENTER | DT_VCENTER | textDrawFlags, 0, &rcBtn);
+        DrawThemeText(hBtnTheme, hDC, btnPart, btnState, btnText, -1, DT_CENTER | DT_VCENTER | textDrawFlags, 0, &rcBtn);
         CloseThemeData(hBtnTheme);
     }
 
