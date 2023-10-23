@@ -1922,8 +1922,14 @@ HRESULT CDefView::InvokeContextMenuCommand(CComPtr<IContextMenu> &pCM, UINT uCom
 
     ZeroMemory(&cmi, sizeof(cmi));
     cmi.cbSize = sizeof(cmi);
-    cmi.lpVerb = MAKEINTRESOURCEA(uCommand);
     cmi.hwnd = m_hWnd;
+
+    if (uCommand == FCIDM_SHVIEW_COPYTO)
+        cmi.lpVerb = "copyto";
+    else if (uCommand == FCIDM_SHVIEW_MOVETO)
+        cmi.lpVerb = "moveto";
+    else
+        cmi.lpVerb = MAKEINTRESOURCEA(uCommand);
 
     if (GetKeyState(VK_SHIFT) & 0x8000)
         cmi.fMask |= CMIC_MASK_SHIFT_DOWN;
