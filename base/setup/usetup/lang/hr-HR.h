@@ -8,7 +8,7 @@ static MUI_ENTRY hrHRSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY hrHRLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY hrHRWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -186,7 +186,7 @@ static MUI_ENTRY hrHRIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -273,7 +273,7 @@ static MUI_ENTRY hrHRLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -416,7 +416,7 @@ static MUI_ENTRY hrHRDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -523,7 +523,7 @@ static MUI_ENTRY hrHRRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -596,7 +596,7 @@ static MUI_ENTRY hrHRUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -676,7 +676,7 @@ static MUI_ENTRY hrHRComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -735,7 +735,7 @@ static MUI_ENTRY hrHRFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -780,7 +780,7 @@ static MUI_ENTRY hrHRQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -832,7 +832,7 @@ static MUI_ENTRY hrHRDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -891,7 +891,7 @@ static MUI_ENTRY hrHRSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -943,7 +943,7 @@ static MUI_ENTRY hrHRSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1023,7 +1023,7 @@ static MUI_ENTRY hrHRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1145,7 +1145,7 @@ static MUI_ENTRY hrHRConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1253,7 +1253,7 @@ static MUI_ENTRY hrHRFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1298,7 +1298,7 @@ static MUI_ENTRY hrHRCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1329,7 +1329,7 @@ static MUI_ENTRY hrHRInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1388,7 +1388,7 @@ static MUI_ENTRY hrHRFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1433,7 +1433,7 @@ static MUI_ENTRY hrHRBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1492,7 +1492,7 @@ static MUI_ENTRY hrHRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1530,7 +1530,7 @@ static MUI_ENTRY hrHRBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1583,7 +1583,7 @@ static MUI_ENTRY hrHRKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1642,7 +1642,7 @@ static MUI_ENTRY hrHRLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1702,7 +1702,7 @@ static MUI_ENTRY hrHRPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1734,7 +1734,7 @@ static MUI_ENTRY hrHRSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1782,7 +1782,7 @@ static MUI_ENTRY hrHRDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1834,7 +1834,7 @@ static MUI_ENTRY hrHRRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 7137 instalacija ",
+        " Windivs7 build 7137 instalacija ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
