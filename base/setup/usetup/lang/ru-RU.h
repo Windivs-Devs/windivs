@@ -1036,7 +1036,7 @@ static MUI_ENTRY ruRUChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7137 Setup ",
+        " WIndivs7 Beta 2 (7201) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
