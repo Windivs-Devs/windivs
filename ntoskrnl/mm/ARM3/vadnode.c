@@ -1,9 +1,9 @@
 /*
- * PROJECT:         Windivs Kernel
+ * PROJECT:         ReactOS Kernel
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            ntoskrnl/mm/ARM3/vadnode.c
  * PURPOSE:         ARM Memory Manager VAD Node Algorithms
- * PROGRAMMERS:     Windivs Portable Systems Group
+ * PROGRAMMERS:     ReactOS Portable Systems Group
  *                  Timo Kreuzer (timo.kreuzer@reactos.org)
  */
 
@@ -43,12 +43,13 @@ CHAR MmReadWrite[32] =
 
 /* FUNCTIONS ******************************************************************/
 
-extern MM_AVL_TABLE MiRosKernelVadRoot;;
+extern MM_AVL_TABLE MiRosKernelVadRoot;
 
 #if DBG
+
 static
 VOID
-MiDbgAssertIsLockedForRead(PMM_AVL_TABLE Table)
+MiDbgAssertIsLockedForRead(_In_ PMM_AVL_TABLE Table)
 {
     if (Table == &MmSectionBasedRoot)
     {
@@ -67,15 +68,15 @@ MiDbgAssertIsLockedForRead(PMM_AVL_TABLE Table)
     {
         /* Need to hold either the process working-set lock or
            the current process' AddressCreationLock */
-        ASSERT(Table == &PsGetCurrentProcess()->VadRoot);
-        ASSERT(MI_WS_OWNER(PsGetCurrentProcess()) ||
-               (PsGetCurrentProcess()->AddressCreationLock.Owner == KeGetCurrentThread()));
+        PEPROCESS Process = CONTAINING_RECORD(Table, EPROCESS, VadRoot);
+        ASSERT(MI_WS_OWNER(Process) ||
+               (Process->AddressCreationLock.Owner == KeGetCurrentThread()));
     }
 }
 
 static
 VOID
-MiDbgAssertIsLockedForWrite(PMM_AVL_TABLE Table)
+MiDbgAssertIsLockedForWrite(_In_ PMM_AVL_TABLE Table)
 {
     if (Table == &MmSectionBasedRoot)
     {
@@ -93,22 +94,22 @@ MiDbgAssertIsLockedForWrite(PMM_AVL_TABLE Table)
     {
         /* Need to hold both the process working-set lock exclusive and
            the current process' AddressCreationLock */
-        ASSERT(Table == &PsGetCurrentProcess()->VadRoot);
-        ASSERT(KeGetCurrentThread()->ApcState.Process == &PsGetCurrentProcess()->Pcb);
+        PEPROCESS Process = CONTAINING_RECORD(Table, EPROCESS, VadRoot);
+        ASSERT(Process == PsGetCurrentProcess());
         ASSERT(PsGetCurrentThread()->OwnsProcessWorkingSetExclusive);
-        ASSERT(PsGetCurrentProcess()->AddressCreationLock.Owner == KeGetCurrentThread());
+        ASSERT(Process->AddressCreationLock.Owner == KeGetCurrentThread());
     }
 }
 
 #define ASSERT_LOCKED_FOR_READ(Table) MiDbgAssertIsLockedForRead(Table)
 #define ASSERT_LOCKED_FOR_WRITE(Table) MiDbgAssertIsLockedForWrite(Table)
 
-#else
+#else // DBG
 
 #define ASSERT_LOCKED_FOR_READ(Table)
 #define ASSERT_LOCKED_FOR_WRITE(Table)
 
-#endif
+#endif // DBG
 
 PMMVAD
 NTAPI
@@ -457,7 +458,7 @@ MiRemoveNode(IN PMMADDRESS_NODE Node,
         else Table->NodeHint = Table->BalancedRoot.RightChild;
     }
 
-    /* Free the node from Windivs view as well */
+    /* Free the node from ReactOS view as well */
     Vad = (PMMVAD_LONG)Node;
     if ((Table != &MmSectionBasedRoot) && (Vad->u.VadFlags.Spare == 0))
     {
@@ -467,12 +468,12 @@ MiRemoveNode(IN PMMADDRESS_NODE Node,
         /* Check if this is VM VAD */
         if (Vad->ControlArea == NULL)
         {
-            /* We store the Windivs MEMORY_AREA here */
+            /* We store the ReactOS MEMORY_AREA here */
             MemoryArea = (PMEMORY_AREA)Vad->FirstPrototypePte;
         }
         else
         {
-            /* This is a section VAD. We store the Windivs MEMORY_AREA here */
+            /* This is a section VAD. We store the ReactOS MEMORY_AREA here */
             MemoryArea = (PMEMORY_AREA)Vad->u4.Banked;
         }
 
