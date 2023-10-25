@@ -213,6 +213,7 @@ MmAccessFault(IN ULONG FaultCode,
 {
     PMEMORY_AREA MemoryArea = NULL;
     NTSTATUS Status;
+    BOOLEAN IsArm3Fault = FALSE;
 
     /* Cute little hack for ROS */
     if ((ULONG_PTR)Address >= (ULONG_PTR)MmSystemRangeStart)
@@ -235,8 +236,6 @@ MmAccessFault(IN ULONG FaultCode,
         DPRINT("ARM3 fault %p\n", Address);
         return MmArmAccessFault(FaultCode, Address, Mode, TrapInformation);
     }
-
-    BOOLEAN IsArm3Fault = FALSE;
 
     /* Is there a ReactOS address space yet? */
     if (MmGetKernelAddressSpace())
@@ -271,8 +270,9 @@ MmAccessFault(IN ULONG FaultCode,
 
     /* Is this an ARM3 memory area, or is there no address space yet? */
     if (IsArm3Fault ||
-        ((MemoryArea == NULL) && ((ULONG_PTR)Address >= (ULONG_PTR)MmPagedPoolStart)
-            && ((ULONG_PTR)Address < (ULONG_PTR)MmPagedPoolEnd)) ||
+        ((MemoryArea == NULL) &&
+         ((ULONG_PTR)Address >= (ULONG_PTR)MmPagedPoolStart) &&
+         ((ULONG_PTR)Address < (ULONG_PTR)MmPagedPoolEnd)) ||
         (!MmGetKernelAddressSpace()))
     {
         /* This is an ARM3 fault */
