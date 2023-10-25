@@ -1257,7 +1257,7 @@ static MUI_ENTRY euESFormatPartitionEntries[] =
     },
     {
         6,
-        10,
+        16,
         "Orain instalazioa formatuko du partizioa. Sakatu SARTU jarraitzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_FORMAT_PROMPT
@@ -2298,9 +2298,9 @@ MUI_STRING euESStrings[] =
     {STRING_CONSOLEFAIL3,
     "USB teklatua ez dago oraindik osoan euskarri\r\n"},
     {STRING_FORMATTINGPART,
-    "Instalazioa zure disko formateatzen ari da"},
+    "Setup is formatting the partition..."},
     {STRING_CHECKINGDISK,
-    "Instalazioa zure disko ikusten ari da"},
+    "Setup is checking the disk..."},
     {STRING_FORMATDISK1,
     " Formatu partizioa %S sistemaren fitxategia (format azkar) "},
     {STRING_FORMATDISK2,

@@ -1273,7 +1273,7 @@ static MUI_ENTRY ptPTFormatPartitionEntries[] =
     },
     {
         6,
-        10,
+        16,
         "O instalador ir\240 formatar a parti\207\306o. Para continuar, pressione ENTER.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_FORMAT_PROMPT
@@ -2336,9 +2336,9 @@ MUI_STRING ptPTStrings[] =
     {STRING_CONSOLEFAIL3,
     "Os teclados USB ainda n\306o s\306o completamente suportados\r\n"},
     {STRING_FORMATTINGPART,
-    "O instalador est\240 a formatar o disco"},
+    "Setup is formatting the partition..."},
     {STRING_CHECKINGDISK,
-    "O instalador est\240 a verificar o disco"},
+    "Setup is checking the disk..."},
     {STRING_FORMATDISK1,
     " Formatar a parti\207\306o utilizando o sistema de arquivos %S (R\240pido) "},
     {STRING_FORMATDISK2,

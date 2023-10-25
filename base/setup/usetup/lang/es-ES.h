@@ -1262,7 +1262,7 @@ static MUI_ENTRY esESFormatPartitionEntries[] =
     },
     {
         6,
-        10,
+        16,
         "El instalador formatear\240 la partici\242n. Pulse INTRO para continuar.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_FORMAT_PROMPT
@@ -2303,9 +2303,9 @@ MUI_STRING esESStrings[] =
     {STRING_CONSOLEFAIL3,
     "Todav\241a no hay soporte del todo para los teclados USB\r\n"},
     {STRING_FORMATTINGPART,
-    "El instalador est\240 formateando el disco"},
+    "Setup is formatting the partition..."},
     {STRING_CHECKINGDISK,
-    "El instalador est\240 verificando el disco"},
+    "Setup is checking the disk..."},
     {STRING_FORMATDISK1,
     " Formatear la partici\242n con sistema de archivos %S (formato r\240pido) "},
     {STRING_FORMATDISK2,
