@@ -29,6 +29,19 @@ static BOOL OpenEffectiveToken(DWORD DesiredAccess, HANDLE *phToken)
 }
 
 /*************************************************************************
+ *                ShortSizeFormatW (SHELL32.204)
+ */
+EXTERN_C
+LPWSTR WINAPI
+ShortSizeFormatW(
+    _In_ DWORD dwNumber,
+    _Out_writes_z_(0x8FFF) LPWSTR pszBuffer)
+{
+    TRACE("(%lu, %p)\n", dwNumber, pszBuffer);
+    return StrFormatByteSizeW(dwNumber, pszBuffer, 0x8FFF);
+}
+
+/*************************************************************************
  *                SHOpenEffectiveToken (SHELL32.235)
  */
 EXTERN_C BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken)

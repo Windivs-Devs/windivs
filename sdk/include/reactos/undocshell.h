@@ -684,6 +684,8 @@ LargeIntegerToString(
     _In_opt_ const NUMBERFMTW *pNumberFormat,
     _In_ DWORD dwNumberFlags);
 
+LPWSTR WINAPI ShortSizeFormatW(_In_ DWORD dwNumber, _Out_writes_z_(0x8FFF) LPWSTR pszBuffer);
+
 BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken);
 DWORD WINAPI SHGetUserSessionId(_In_opt_ HANDLE hToken);
 
