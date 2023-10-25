@@ -317,11 +317,14 @@ ThemeDrawScrollBarEx(PDRAW_CONTEXT pcontext, INT nBar, PSCROLLBARINFO psbi, POIN
 void 
 ThemeDrawScrollBar(PDRAW_CONTEXT pcontext, INT nBar, POINT* pt)
 {
+    SCROLLBARINFO sbi;
 
     if (((nBar == SB_VERT) && !(pcontext->wi.dwStyle & WS_VSCROLL)) ||
-        ((nBar == SB_HORZ) && !(pcontext->wi.dwStyle & WS_HSCROLL))) return;
+        ((nBar == SB_HORZ) && !(pcontext->wi.dwStyle & WS_HSCROLL)))
+    {
+        return;
+    }
 
-    SCROLLBARINFO sbi;
     sbi.cbSize = sizeof(sbi);
     GetScrollBarInfo(pcontext->hWnd, SCROLL_getObjectId(nBar), &sbi);
     ThemeDrawScrollBarEx(pcontext, nBar, &sbi, pt);
