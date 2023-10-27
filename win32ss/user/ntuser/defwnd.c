@@ -529,11 +529,11 @@ DefWndScreenshot(PWND pWnd)
 }
 
 /**
- * Toggle the language on Alt+Shift or Ctrl+Shift.
+ * Toggle the input language on Alt+Shift or Ctrl+Shift.
  * The behaviour depends on key "HKCU\Keyboard Layout\Toggle", value "Language Hotkey".
  * @see https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976564%28v=technet.10%29
  */
-static VOID FASTCALL IntLanguageToggle(PWND Wnd)
+static VOID FASTCALL IntToggleInputLanguage(PWND Wnd)
 {
     RTL_ATOM ClassAtom = 0;
     UNICODE_STRING ustrClass, ustrWindow;
@@ -816,7 +816,7 @@ IntDefWindowProc(
          {
              if (gdwLanguageToggleKey == 2)
              {
-                 IntLanguageToggle(Wnd);
+                 IntToggleInputLanguage(Wnd);
                  break;
              }
          }
@@ -982,7 +982,7 @@ IntDefWindowProc(
                 {
                     if (gdwLanguageToggleKey == 1)
                     {
-                        IntLanguageToggle(Wnd);
+                        IntToggleInputLanguage(Wnd);
                         break;
                     }
                 }
