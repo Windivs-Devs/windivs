@@ -812,11 +812,13 @@ IntDefWindowProc(
                co_IntSendMessage(UserHMGetHandle(Wnd), WM_CONTEXTMENU, (WPARAM)UserHMGetHandle(Wnd), MAKELPARAM(-1, -1));
             }
          }
-         else if (wParam == VK_SHIFT && gdwLanguageToggleKey == 2 &&
-                  (UserGetKeyState(VK_CONTROL) & 0x8000)) // Ctrl+Shift
+         else if (wParam == VK_SHIFT && (UserGetKeyState(VK_CONTROL) & 0x8000)) // Ctrl+Shift
          {
-             IntLanguageToggle(Wnd);
-             break;
+             if (gdwLanguageToggleKey == 2)
+             {
+                 IntLanguageToggle(Wnd);
+                 break;
+             }
          }
          if (g_bWindowSnapEnabled && (IS_KEY_DOWN(gafAsyncKeyState, VK_LWIN) || IS_KEY_DOWN(gafAsyncKeyState, VK_RWIN)))
          {
@@ -976,9 +978,13 @@ IntDefWindowProc(
                    wParamTmp = UserGetKeyState(VK_SHIFT) & 0x8000 ? SC_PREVWINDOW : SC_NEXTWINDOW;
                    co_IntSendMessage( Active, WM_SYSCOMMAND, wParamTmp, wParam );
                 }
-                else if (wParam == VK_SHIFT && gdwLanguageToggleKey == 1) // Alt+Shift
+                else if (wParam == VK_SHIFT) // Alt+Shift
                 {
-                    IntLanguageToggle(Wnd);
+                    if (gdwLanguageToggleKey == 1)
+                    {
+                        IntLanguageToggle(Wnd);
+                        break;
+                    }
                 }
             }
             else if( wParam == VK_F10 )
