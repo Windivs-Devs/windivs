@@ -539,11 +539,10 @@ static VOID FASTCALL IntToggleInputLanguage(PWND Wnd)
     UNICODE_STRING ustrClass, ustrWindow;
     HWND hwndSwitch;
 
+    /* Use kbswitcher window of kbswitch.exe */
     RtlInitUnicodeString(&ustrClass, L"kbswitcher");
-    RtlInitUnicodeString(&ustrWindow, L"");
-
     IntGetAtomFromStringOrAtom(&ustrClass, &ClassAtom);
-
+    RtlInitUnicodeString(&ustrWindow, L"");
     hwndSwitch = IntFindWindow(UserGetDesktopWindow(), NULL, ClassAtom, &ustrWindow);
     if (!hwndSwitch)
         return;
