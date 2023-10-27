@@ -39,6 +39,14 @@ typedef struct
 }APPLET, *PAPPLET;
 
 
+// eject.c
+INT_PTR
+CALLBACK
+ConfirmRemovalDlgProc(
+    HWND hwndDlg,
+    UINT uMsg,
+    WPARAM wParam,
+    LPARAM lParam);
 
 // hotplug.c
 LONG

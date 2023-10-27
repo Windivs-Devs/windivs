@@ -528,10 +528,33 @@ DefWndScreenshot(PWND pWnd)
     UserCloseClipboard();
 }
 
+/**
+ * Toggle the input language on Alt+Shift or Ctrl+Shift.
+ * The behaviour depends on key "HKCU\Keyboard Layout\Toggle", value "Language Hotkey".
+ * @see https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976564%28v=technet.10%29
+ */
+static VOID FASTCALL IntToggleInputLanguage(PWND Wnd)
+{
+    RTL_ATOM ClassAtom = 0;
+    UNICODE_STRING ustrClass, ustrWindow;
+    HWND hwndSwitch;
+
+    /* Use kbswitcher window of kbswitch.exe */
+    RtlInitUnicodeString(&ustrClass, L"kbswitcher");
+    IntGetAtomFromStringOrAtom(&ustrClass, &ClassAtom);
+    RtlInitUnicodeString(&ustrWindow, L"");
+    hwndSwitch = IntFindWindow(UserGetDesktopWindow(), NULL, ClassAtom, &ustrWindow);
+    if (!hwndSwitch)
+        return;
+
+#define ID_NEXTLAYOUT 10003
+    UserPostMessage(hwndSwitch, WM_COMMAND, ID_NEXTLAYOUT, (LPARAM)UserHMGetHandle(Wnd));
+#undef ID_NEXTLAYOUT
+}
+
 /*
    Win32k counterpart of User DefWindowProc
  */
-/* Win: xxxRealDefWindowProc */
 LRESULT FASTCALL
 IntDefWindowProc(
    PWND Wnd,
@@ -788,6 +811,14 @@ IntDefWindowProc(
                co_IntSendMessage(UserHMGetHandle(Wnd), WM_CONTEXTMENU, (WPARAM)UserHMGetHandle(Wnd), MAKELPARAM(-1, -1));
             }
          }
+         else if (wParam == VK_SHIFT && (UserGetKeyState(VK_CONTROL) & 0x8000)) // Ctrl+Shift
+         {
+             if (gdwLanguageToggleKey == 2)
+             {
+                 IntToggleInputLanguage(Wnd);
+                 break;
+             }
+         }
          if (g_bWindowSnapEnabled && (IS_KEY_DOWN(gafAsyncKeyState, VK_LWIN) || IS_KEY_DOWN(gafAsyncKeyState, VK_RWIN)))
          {
             BOOL IsTaskBar;
@@ -948,20 +979,10 @@ IntDefWindowProc(
                 }
                 else if (wParam == VK_SHIFT) // Alt+Shift
                 {
-                    RTL_ATOM ClassAtom = 0;
-                    UNICODE_STRING ustrClass, ustrWindow;
-                    HWND hwndSwitch;
-
-                    RtlInitUnicodeString(&ustrClass, L"kbswitcher");
-                    RtlInitUnicodeString(&ustrWindow, L"");
-
-                    IntGetAtomFromStringOrAtom(&ustrClass, &ClassAtom);
-
-                    hwndSwitch = IntFindWindow(UserGetDesktopWindow(), NULL, ClassAtom, &ustrWindow);
-                    if (hwndSwitch)
+                    if (gdwLanguageToggleKey == 1)
                     {
-#define ID_NEXTLAYOUT 10003
-                        UserPostMessage(hwndSwitch, WM_COMMAND, ID_NEXTLAYOUT, (LPARAM)UserHMGetHandle(Wnd));
+                        IntToggleInputLanguage(Wnd);
+                        break;
                     }
                 }
             }

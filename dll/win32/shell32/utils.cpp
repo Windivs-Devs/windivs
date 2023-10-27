@@ -29,6 +29,19 @@ static BOOL OpenEffectiveToken(DWORD DesiredAccess, HANDLE *phToken)
 }
 
 /*************************************************************************
+ *                ShortSizeFormatW (SHELL32.204)
+ */
+EXTERN_C
+LPWSTR WINAPI
+ShortSizeFormatW(
+    _In_ DWORD dwNumber,
+    _Out_writes_z_(0x8FFF) LPWSTR pszBuffer)
+{
+    TRACE("(%lu, %p)\n", dwNumber, pszBuffer);
+    return StrFormatByteSizeW(dwNumber, pszBuffer, 0x8FFF);
+}
+
+/*************************************************************************
  *                SHOpenEffectiveToken (SHELL32.235)
  */
 EXTERN_C BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken)
@@ -162,6 +175,20 @@ Quit:
         CloseHandle(hNewToken);
 
     return ret;
+}
+
+BOOL IsShutdownAllowed(VOID)
+{
+    return SHTestTokenPrivilegeW(NULL, SE_SHUTDOWN_NAME);
+}
+
+/*************************************************************************
+ *                IsSuspendAllowed (SHELL32.53)
+ */
+BOOL WINAPI IsSuspendAllowed(VOID)
+{
+    TRACE("()\n");
+    return IsShutdownAllowed() && IsPwrSuspendAllowed();
 }
 
 /*************************************************************************
@@ -451,4 +478,42 @@ LargeIntegerToString(
 {
     return Int64ToString(pLargeInt->QuadPart, pszOut, cchOut, bUseFormat,
                          pNumberFormat, dwNumberFlags);
+}
+
+/*************************************************************************
+ *  SHOpenPropSheetA [SHELL32.707]
+ *
+ * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj/nf-shlobj-shopenpropsheeta
+ */
+EXTERN_C
+BOOL WINAPI
+SHOpenPropSheetA(
+    _In_opt_z_ LPCSTR pszCaption,
+    _In_opt_ HKEY *ahKeys,
+    _In_ UINT cKeys,
+    _In_ const CLSID *pclsidDefault,
+    _In_ IDataObject *pDataObject,
+    _In_opt_ IShellBrowser *pShellBrowser,
+    _In_opt_z_ LPCSTR pszStartPage)
+{
+    WCHAR szStartPageW[MAX_PATH], szCaptionW[MAX_PATH];
+    LPCWSTR pszCaptionW = NULL, pszStartPageW = NULL;
+
+    TRACE("(%s, %p, %u, %p, %p, %p, %s)", pszCaption, ahKeys, cKeys, pclsidDefault, pDataObject,
+          pShellBrowser, pszStartPage);
+
+    if (pszCaption)
+    {
+        SHAnsiToUnicode(pszCaption, szCaptionW, _countof(szCaptionW));
+        pszCaptionW = szCaptionW;
+    }
+
+    if (pszStartPage)
+    {
+        SHAnsiToUnicode(pszStartPage, szStartPageW, _countof(szStartPageW));
+        pszStartPageW = szStartPageW;
+    }
+
+    return SHOpenPropSheetW(pszCaptionW, ahKeys, cKeys, pclsidDefault,
+                            pDataObject, pShellBrowser, pszStartPageW);
 }
