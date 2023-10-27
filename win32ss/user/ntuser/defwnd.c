@@ -812,6 +812,12 @@ IntDefWindowProc(
                co_IntSendMessage(UserHMGetHandle(Wnd), WM_CONTEXTMENU, (WPARAM)UserHMGetHandle(Wnd), MAKELPARAM(-1, -1));
             }
          }
+         else if (wParam == VK_SHIFT && gdwLanguageToggleKey == 2 &&
+                  (UserGetKeyState(VK_CONTROL) & 0x8000)) // Ctrl+Shift
+         {
+             IntLanguageToggle(Wnd);
+             break;
+         }
          if (g_bWindowSnapEnabled && (IS_KEY_DOWN(gafAsyncKeyState, VK_LWIN) || IS_KEY_DOWN(gafAsyncKeyState, VK_RWIN)))
          {
             BOOL IsTaskBar;
@@ -974,11 +980,6 @@ IntDefWindowProc(
                 {
                     IntLanguageToggle(Wnd);
                 }
-            }
-            else if (wParam == VK_SHIFT && (UserGetKeyState(VK_CONTROL) & 0x8000) &&
-                     gdwLanguageToggleKey == 2) // Ctrl+Shift
-            {
-                IntLanguageToggle(Wnd);
             }
             else if( wParam == VK_F10 )
             {
