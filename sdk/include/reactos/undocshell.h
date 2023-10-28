@@ -612,6 +612,61 @@ HRESULT WINAPI ShellExecCmdLine(
     LPVOID pUnused,
     DWORD dwSeclFlags);
 
+HINSTANCE WINAPI
+RealShellExecuteA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess);
+
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess);
+
+HINSTANCE WINAPI
+RealShellExecuteExA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags);
+
+HINSTANCE WINAPI
+RealShellExecuteExW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags);
+
 /* RegisterShellHook types */
 #define RSH_DEREGISTER        0
 #define RSH_REGISTER          1

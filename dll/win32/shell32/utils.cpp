@@ -484,6 +484,200 @@ Int64GetNumFormat(
 }
 
 /*************************************************************************
+ *                RealShellExecuteExA (SHELL32.266)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteExA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags)
+{
+    SHELLEXECUTEINFOA ExecInfo;
+
+    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
+          hwnd, debugstr_a(lpOperation), debugstr_a(lpFile), debugstr_a(lpParameters),
+          debugstr_a(lpDirectory), lpReserved, debugstr_a(lpClass),
+          hInstApp, nShowCmd, lphProcess, dwFlags);
+
+    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
+    ExecInfo.hwnd = hwnd;
+    ExecInfo.lpVerb = lpOperation;
+    ExecInfo.lpFile = lpFile;
+    ExecInfo.lpParameters = lpParameters;
+    ExecInfo.lpDirectory = lpDirectory;
+    ExecInfo.nShow = nShowCmd;
+    ExecInfo.cbSize = sizeof(ExecInfo);
+    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
+
+    if (hInstApp)
+    {
+        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
+        ExecInfo.hInstApp = hInstApp;
+    }
+
+    if (lpClass)
+    {
+        ExecInfo.fMask |= SEE_MASK_HASCLASS;
+        ExecInfo.lpClass = lpClass;
+    }
+
+    if (dwFlags & 1)
+        ExecInfo.fMask |= SEE_MASK_HASTITLE;
+
+    if (dwFlags & 2)
+        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
+
+    if (lphProcess)
+    {
+        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
+        ShellExecuteExA(&ExecInfo);
+        *lphProcess = ExecInfo.hProcess;
+    }
+    else
+    {
+        ShellExecuteExA(&ExecInfo);
+    }
+
+    return ExecInfo.hInstApp;
+}
+
+/*************************************************************************
+ *                RealShellExecuteExW (SHELL32.267)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteExW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags)
+{
+    SHELLEXECUTEINFOW ExecInfo;
+
+    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
+          hwnd, debugstr_w(lpOperation), debugstr_w(lpFile), debugstr_w(lpParameters),
+          debugstr_w(lpDirectory), lpReserved, debugstr_w(lpClass),
+          hInstApp, nShowCmd, lphProcess, dwFlags);
+
+    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
+    ExecInfo.hwnd = hwnd;
+    ExecInfo.lpVerb = lpOperation;
+    ExecInfo.lpFile = lpFile;
+    ExecInfo.lpParameters = lpParameters;
+    ExecInfo.lpDirectory = lpDirectory;
+    ExecInfo.nShow = nShowCmd;
+    ExecInfo.cbSize = sizeof(ExecInfo);
+    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
+
+    if (hInstApp)
+    {
+        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
+        ExecInfo.hInstApp = hInstApp;
+    }
+
+    if (lpClass)
+    {
+        ExecInfo.fMask |= SEE_MASK_HASCLASS;
+        ExecInfo.lpClass = lpClass;
+    }
+
+    if (dwFlags & 1)
+        ExecInfo.fMask |= SEE_MASK_HASTITLE;
+
+    if (dwFlags & 2)
+        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
+
+    if (lphProcess)
+    {
+        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
+        ShellExecuteExW(&ExecInfo);
+        *lphProcess = ExecInfo.hProcess;
+    }
+    else
+    {
+        ShellExecuteExW(&ExecInfo);
+    }
+
+    return ExecInfo.hInstApp;
+}
+
+/*************************************************************************
+ *                RealShellExecuteA (SHELL32.265)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess)
+{
+    return RealShellExecuteExA(hwnd,
+                               lpOperation,
+                               lpFile,
+                               lpParameters,
+                               lpDirectory,
+                               lpReserved,
+                               lpClass,
+                               hInstApp,
+                               nShowCmd,
+                               lphProcess,
+                               0);
+}
+
+/*************************************************************************
+ *                RealShellExecuteW (SHELL32.268)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess)
+{
+    return RealShellExecuteExW(hwnd,
+                               lpOperation,
+                               lpFile,
+                               lpParameters,
+                               lpDirectory,
+                               lpReserved,
+                               lpClass,
+                               hInstApp,
+                               nShowCmd,
+                               lphProcess,
+                               0);
+}
+
+/*************************************************************************
  *  Int64ToString [SHELL32.209]
  *
  * @see http://undoc.airesoft.co.uk/shell32.dll/Int64ToString.php
