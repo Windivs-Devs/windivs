@@ -15,7 +15,7 @@ static MUI_ENTRY etEESetupInitPageEntries[] =
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -105,7 +105,7 @@ static MUI_ENTRY etEEWelcomePageEntries[] =
     {
         6,
         8,
-        "Tere tulemast ReactOS'i paigaldusse",
+        "Tere tulemast Windivs'i paigaldusse",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
@@ -126,35 +126,35 @@ static MUI_ENTRY etEEWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Vajuta R, et ReactOS'i parandada.",
+        "\x07  Vajuta R, et Windivs'i parandada.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Vajuta L, et n\204ha ReactOS'i litsentsi ja kasutamise tingimusi",
+        "\x07  Vajuta L, et n\204ha Windivs'i litsentsi ja kasutamise tingimusi",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Vajuta F3, et v\204ljuda ReactOS'i paigaldamata.",
+        "\x07  Vajuta F3, et v\204ljuda Windivs'i paigaldamata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "ReactOS'i kohta saab rohkem infot:",
+        "Windivs'i kohta saab rohkem infot:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -192,14 +192,14 @@ static MUI_ENTRY etEEIntroPageEntries[] =
     {
         6,
         8,
-        "ReactOS'i versiooni seisund",
+        "Windivs'i versiooni seisund",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS on alfa etapis, mis t\204hendab et see ei ole veel funktsionaalselt",
+        "Windivs on alfa etapis, mis t\204hendab et see ei ole veel funktsionaalselt",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -227,21 +227,21 @@ static MUI_ENTRY etEEIntroPageEntries[] =
     {
         6,
         16,
-        "ReactOS'i p\204ris riistvara peal'.",
+        "Windivs'i p\204ris riistvara peal'.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Vajuta ENTER, et siseneda ReactOS'i paigaldusse.",
+        "\x07  Vajuta ENTER, et siseneda Windivs'i paigaldusse.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Vajuta F3, et lahkuda ReactOS'i paigaldamata.",
+        "\x07  Vajuta F3, et lahkuda Windivs'i paigaldamata.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS kasutab GNU \201ldist avalikku litsentsi(GPL),",
+        "Windivs kasutab GNU \201ldist avalikku litsentsi(GPL),",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -300,7 +300,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         8,
         11,
-        "Kogu ReactOS'i s\201steem on seega kaitstud GPL litsentsiga",
+        "Kogu Windivs'i s\201steem on seega kaitstud GPL litsentsiga",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -522,7 +522,7 @@ static MUI_ENTRY etEERepairPageEntries[] =
     {
         6,
         8,
-        "ReactOS'i paigaldusprogramm on varajases arendusfaasis. Praegu ei ole",
+        "Windivs'i paigaldusprogramm on varajases arendusfaasis. Praegu ei ole",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -595,14 +595,14 @@ static MUI_ENTRY etEEUpgradePageEntries[] =
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs Setup can upgrade one of the available Windivs installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -644,7 +644,7 @@ static MUI_ENTRY etEEUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -779,7 +779,7 @@ static MUI_ENTRY etEEQuitPageEntries[] =
     {
         10,
         6,
-        "ReactOS ei ole t\204ielikult paigaldatud.",
+        "Windivs ei ole t\204ielikult paigaldatud.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -890,7 +890,7 @@ static MUI_ENTRY etEESuccessPageEntries[] =
     {
         10,
         6,
-        "ReactOS'i p\344hilised komponendid on edukalt paigaldatud.",
+        "Windivs'i p\344hilised komponendid on edukalt paigaldatud.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1016,7 +1016,7 @@ static MUI_ENTRY etEESelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Vajuta ENTER, et paigaldada ReactOS valitud partitsioonile.",
+        "\x07  Vajuta ENTER, et paigaldada Windivs valitud partitsioonile.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1090,14 +1090,14 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1167,7 +1167,7 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1212,7 +1212,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programme, programme millega alustada ops\201steeme (nagu ReactOS) v\344i muid",
+        "programme, programme millega alustada ops\201steeme (nagu Windivs) v\344i muid",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1247,7 +1247,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "arvutit k\344vakettalt kuni l\344petate ReactOS'i paigalduse.",
+        "arvutit k\344vakettalt kuni l\344petate Windivs'i paigalduse.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1375,14 +1375,14 @@ static MUI_ENTRY etEEInstallDirectoryEntries[] =
     {
         6,
         8,
-        "ReactOS paigaldatakse valitud partitsioonile.",
+        "Windivs paigaldatakse valitud partitsioonile.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Vali kaust, kuhu ReactOS paigaldada:",
+        "Vali kaust, kuhu Windivs paigaldada:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1396,7 +1396,7 @@ static MUI_ENTRY etEEInstallDirectoryEntries[] =
     {
         6,
         15,
-        "tr\201ki asemele kaust, kuhu ReactOS installeerida.",
+        "tr\201ki asemele kaust, kuhu Windivs installeerida.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1434,7 +1434,7 @@ static MUI_ENTRY etEEFileCopyEntries[] =
     {
         0,
         12,
-        "Palun oota, kuni ReactOS paigaldatakse sihtkausta.",
+        "Palun oota, kuni Windivs paigaldatakse sihtkausta.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1841,9 +1841,9 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS ei ole t\204ielikult paigaldatud.\n"
+        "Windivs ei ole t\204ielikult paigaldatud.\n"
         "Kui paigaldamine praegu katkestada, siis tuleb\n"
-        "ReactOS'i paigaldamiseks paigaldusprogramm uuesti k\204ivitada.\n"
+        "Windivs'i paigaldamiseks paigaldusprogramm uuesti k\204ivitada.\n"
         "\n"
         "  \x07  Vajuta ENTER paigalduse j\204tmaiseks.\n"
         "  \x07  Vajuta F3 paigalduse seiskamiseks.",
@@ -1851,7 +1851,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1861,7 +1861,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2058,7 +2058,7 @@ MUI_ERROR etEEErrorEntries[] =
     },
     {
         //ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Valitud partitsioon ei ole piisavalt suur ReactOS'i paigaldamiseks.\n"
+        "Valitud partitsioon ei ole piisavalt suur Windivs'i paigaldamiseks.\n"
         "Paigalduse partitsioon peab v\204heamlt %lu MB suur olema.\n"
         "\n"
         "  * Vajuta mis tahes klahvi, et j\204tkata.",
@@ -2242,13 +2242,13 @@ MUI_STRING etEEStrings[] =
     {STRING_PARTFORMAT,
     "J\204rgmisena vormindatakse seda partitsiooni."},
     {STRING_NONFORMATTEDPART,
-    "Oled valinud ReactOS'i paigaldamise uuele v\344i vormindamata partitsioonile."},
+    "Oled valinud Windivs'i paigaldamise uuele v\344i vormindamata partitsioonile."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "S\201steemipartitsioon on veel vormindamata."},
     {STRING_NONFORMATTEDOTHERPART,
     "Uus partitsioon on veel vormindamata."},
     {STRING_INSTALLONPART,
-    "ReactOS paigaldatakse partitsioonile"},
+    "Windivs paigaldatakse partitsioonile"},
     {STRING_CONTINUE,
     "ENTER = J\204tka"},
     {STRING_QUITCONTINUE,

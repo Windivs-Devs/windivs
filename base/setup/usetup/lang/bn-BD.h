@@ -12,7 +12,7 @@ static MUI_ENTRY bnBDSetupInitPageEntries[] =
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -102,14 +102,14 @@ static MUI_ENTRY bnBDWelcomePageEntries[] =
     {
         6,
         8,
-        "Welcome to ReactOS Setup",
+        "Welcome to Windivs Setup",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "This part of the setup copies the ReactOS Operating System to your",
+        "This part of the setup copies the Windivs Operating System to your",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -123,36 +123,36 @@ static MUI_ENTRY bnBDWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-     // "\x07  Press R to repair a ReactOS installation using the Recovery Console.",
-        "\x07  Press R to repair a ReactOS installation.",
+     // "\x07  Press R to repair a Windivs installation using the Recovery Console.",
+        "\x07  Press R to repair a Windivs installation.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press L to view the ReactOS Licensing Terms and Conditions.",
+        "\x07  Press L to view the Windivs Licensing Terms and Conditions.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "For more information on ReactOS, please visit:",
+        "For more information on Windivs, please visit:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -190,14 +190,14 @@ static MUI_ENTRY bnBDIntroPageEntries[] =
     {
         6,
         8,
-        "ReactOS Version Status",
+        "Windivs Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS is in Alpha stage, meaning it is not feature-complete",
+        "Windivs is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -225,21 +225,21 @@ static MUI_ENTRY bnBDIntroPageEntries[] =
     {
         6,
         16,
-        "to run ReactOS on real hardware.",
+        "to run Windivs on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue ReactOS Setup.",
+        "\x07  Press ENTER to continue Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -277,7 +277,7 @@ static MUI_ENTRY bnBDLicensePageEntries[] =
     {
         8,
         8,
-        "The ReactOS System is licensed under the terms of the",
+        "The Windivs System is licensed under the terms of the",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -298,7 +298,7 @@ static MUI_ENTRY bnBDLicensePageEntries[] =
     {
         8,
         11,
-        "All software that is part of the ReactOS system is",
+        "All software that is part of the Windivs system is",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -333,7 +333,7 @@ static MUI_ENTRY bnBDLicensePageEntries[] =
     {
         8,
         17,
-        "ReactOS only covers distribution to third parties.",
+        "Windivs only covers distribution to third parties.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -347,7 +347,7 @@ static MUI_ENTRY bnBDLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License with ReactOS please visit",
+        "GNU General Public License with Windivs please visit",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -520,7 +520,7 @@ static MUI_ENTRY bnBDRepairPageEntries[] =
     {
         6,
         8,
-        "ReactOS Setup is in an early development phase. It does not yet",
+        "Windivs Setup is in an early development phase. It does not yet",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -593,14 +593,14 @@ static MUI_ENTRY bnBDUpgradePageEntries[] =
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs Setup can upgrade one of the available Windivs installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -642,7 +642,7 @@ static MUI_ENTRY bnBDUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -777,7 +777,7 @@ static MUI_ENTRY bnBDQuitPageEntries[] =
     {
         10,
         6,
-        "ReactOS is not completely installed.",
+        "Windivs is not completely installed.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -888,7 +888,7 @@ static MUI_ENTRY bnBDSuccessPageEntries[] =
     {
         10,
         6,
-        "The basic components of ReactOS have been installed successfully.",
+        "The basic components of Windivs have been installed successfully.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1038,7 +1038,7 @@ static MUI_ENTRY bnBDSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Press ENTER to install ReactOS onto the selected partition.",
+        "\x07  Press ENTER to install Windivs onto the selected partition.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1111,14 +1111,14 @@ static MUI_ENTRY bnBDChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1188,7 +1188,7 @@ static MUI_ENTRY bnBDChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1233,7 +1233,7 @@ static MUI_ENTRY bnBDConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programs, programs to start an operating system (like ReactOS) or other",
+        "programs, programs to start an operating system (like Windivs) or other",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1268,7 +1268,7 @@ static MUI_ENTRY bnBDConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computer from the harddisk until you finished the ReactOS Setup.",
+        "computer from the harddisk until you finished the Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1396,14 +1396,14 @@ static MUI_ENTRY bnBDInstallDirectoryEntries[] =
     {
         6,
         8,
-        "Setup installs ReactOS files onto the selected partition. Choose a",
+        "Setup installs Windivs files onto the selected partition. Choose a",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "directory where you want ReactOS to be installed:",
+        "directory where you want Windivs to be installed:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1417,7 +1417,7 @@ static MUI_ENTRY bnBDInstallDirectoryEntries[] =
     {
         6,
         15,
-        "characters and then type the directory where you want ReactOS to",
+        "characters and then type the directory where you want Windivs to",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1455,7 +1455,7 @@ static MUI_ENTRY bnBDFileCopyEntries[] =
     {
         0,
         12,
-        "Please wait while ReactOS Setup copies files to your ReactOS",
+        "Please wait while Windivs Setup copies files to your Windivs",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1678,7 +1678,7 @@ static MUI_ENTRY bnBDPrepareCopyEntries[] =
     {
         6,
         8,
-        "Setup prepares your computer for copying the ReactOS files.",
+        "Setup prepares your computer for copying the Windivs files.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1838,9 +1838,9 @@ MUI_ERROR bnBDErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS is not completely installed on your\n"
+        "Windivs is not completely installed on your\n"
         "computer. If you quit Setup now, you will need to\n"
-        "run Setup again to install ReactOS.\n"
+        "run Setup again to install Windivs.\n"
         "\n"
         "  \x07  Press ENTER to continue Setup.\n"
         "  \x07  Press F3 to quit Setup.",
@@ -1848,7 +1848,7 @@ MUI_ERROR bnBDErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1858,7 +1858,7 @@ MUI_ERROR bnBDErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2057,7 +2057,7 @@ MUI_ERROR bnBDErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "The selected partition is not large enough to install ReactOS.\n"
+        "The selected partition is not large enough to install Windivs.\n"
         "The install partition must have a size of at least %lu MB.\n"
         "\n"
         "  * Press any key to continue.",
@@ -2240,13 +2240,13 @@ MUI_STRING bnBDStrings[] =
     {STRING_PARTFORMAT,
     "This Partition will be formatted next."},
     {STRING_NONFORMATTEDPART,
-    "You chose to install ReactOS on a new or unformatted Partition."},
+    "You chose to install Windivs on a new or unformatted Partition."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "The system partition is not formatted yet."},
     {STRING_NONFORMATTEDOTHERPART,
     "The new partition is not formatted yet."},
     {STRING_INSTALLONPART,
-    "Setup installs ReactOS onto Partition"},
+    "Setup installs Windivs onto Partition"},
     {STRING_CONTINUE,
     "ENTER = Continue"},
     {STRING_QUITCONTINUE,

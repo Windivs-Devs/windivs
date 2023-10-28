@@ -12,7 +12,7 @@ static MUI_ENTRY idIDSetupInitPageEntries[] =
     {
         0,
         20,
-        "Harap tunggu saat Penyetelan ReactOS menginisialisasi",
+        "Harap tunggu saat Penyetelan Windivs menginisialisasi",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -102,14 +102,14 @@ static MUI_ENTRY idIDWelcomePageEntries[] =
     {
         6,
         8,
-        "Selamat datang di Penyetelan ReactOS",
+        "Selamat datang di Penyetelan Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Bagian dari penyetelan ini menyalin Sistem Operasi ReactOS ke",
+        "Bagian dari penyetelan ini menyalin Sistem Operasi Windivs ke",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -123,36 +123,36 @@ static MUI_ENTRY idIDWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Tekan ENTER untuk memasang atau meningkatkan ReactOS.",
+        "\x07  Tekan ENTER untuk memasang atau meningkatkan Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-     // "\x07  Tekan R untuk memperbaiki instalasi ReactOS menggunakan Konsol Pemulihan.",
-        "\x07  Tekan R untuk memperbaiki instalasi ReactOS.",
+     // "\x07  Tekan R untuk memperbaiki instalasi Windivs menggunakan Konsol Pemulihan.",
+        "\x07  Tekan R untuk memperbaiki instalasi Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Tekan L untuk menampilkan Syarat dan Ketentuan Lisensi ReactOS.",
+        "\x07  Tekan L untuk menampilkan Syarat dan Ketentuan Lisensi Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Tekan F3 untuk keluar tanpa memasang ReactOS.",
+        "\x07  Tekan F3 untuk keluar tanpa memasang Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Untuk informasi lebih lanjut terkait ReactOS, mohon kunjungi:",
+        "Untuk informasi lebih lanjut terkait Windivs, mohon kunjungi:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -190,21 +190,21 @@ static MUI_ENTRY idIDIntroPageEntries[] =
     {
         6,
         8,
-        "Status Versi ReactOS",
+        "Status Versi Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS saat ini dalam tahap Alpha, artinya belum lengkap fitur dan",
+        "Windivs saat ini dalam tahap Alpha, artinya belum lengkap fitur dan",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         12,
-        "dalam pengembangan berat. ReactOS direkomendasikan hanya untuk",
+        "dalam pengembangan berat. Windivs direkomendasikan hanya untuk",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -225,21 +225,21 @@ static MUI_ENTRY idIDIntroPageEntries[] =
     {
         6,
         16,
-        "berkenan untuk menjalankan ReactOS pada perangkat keras murni.",
+        "berkenan untuk menjalankan Windivs pada perangkat keras murni.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Tekan ENTER untuk melanjutkan Penyetelan ReactOS.",
+        "\x07  Tekan ENTER untuk melanjutkan Penyetelan Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Tekan F3 untuk keluar tanpa memasang ReactOS.",
+        "\x07  Tekan F3 untuk keluar tanpa memasang Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -277,7 +277,7 @@ static MUI_ENTRY idIDLicensePageEntries[] =
     {
         8,
         8,
-        "Sistem ReactOS dilisensikan berdasarkan ketentuan",
+        "Sistem Windivs dilisensikan berdasarkan ketentuan",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -298,7 +298,7 @@ static MUI_ENTRY idIDLicensePageEntries[] =
     {
         8,
         11,
-        "Semua perangkat lunak yang menjadi bagian dari sistem ReactOS,",
+        "Semua perangkat lunak yang menjadi bagian dari sistem Windivs,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -333,7 +333,7 @@ static MUI_ENTRY idIDLicensePageEntries[] =
     {
         8,
         17,
-        "Lisensi ReactOS hanya mencakup distribusi ke pihak ketiga.",
+        "Lisensi Windivs hanya mencakup distribusi ke pihak ketiga.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -347,7 +347,7 @@ static MUI_ENTRY idIDLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License dengan ReactOS silahkan kunjungi",
+        "GNU General Public License dengan Windivs silahkan kunjungi",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -520,7 +520,7 @@ static MUI_ENTRY idIDRepairPageEntries[] =
     {
         6,
         8,
-        "Penyetelan ReactOS masih dalam tahap pengembangan awal di mana masih",
+        "Penyetelan Windivs masih dalam tahap pengembangan awal di mana masih",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -593,14 +593,14 @@ static MUI_ENTRY idIDUpgradePageEntries[] =
     {
         6,
         8,
-        "Penyetelan ReactOS dapat meningkatkan salah satu dari instalasi",
+        "Penyetelan Windivs dapat meningkatkan salah satu dari instalasi",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "ReactOS yang tersedia di bawah ini, atau, jika instalasi ReactOS",
+        "Windivs yang tersedia di bawah ini, atau, jika instalasi Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -642,7 +642,7 @@ static MUI_ENTRY idIDUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Tekan F3 untuk keluar tanpa memasang ReactOS.",
+        "\x07  Tekan F3 untuk keluar tanpa memasang Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -777,7 +777,7 @@ static MUI_ENTRY idIDQuitPageEntries[] =
     {
         10,
         6,
-        "ReactOS tidak terpasang sepenuhnya.",
+        "Windivs tidak terpasang sepenuhnya.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -888,7 +888,7 @@ static MUI_ENTRY idIDSuccessPageEntries[] =
     {
         10,
         6,
-        "Komponen dasar ReactOS berhasil dipasang.",
+        "Komponen dasar Windivs berhasil dipasang.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1014,7 +1014,7 @@ static MUI_ENTRY idIDSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Tekan ENTER untuk memasang ReactOS pada partisi terpilih.",
+        "\x07  Tekan ENTER untuk memasang Windivs pada partisi terpilih.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1087,14 +1087,14 @@ static MUI_ENTRY idIDChangeSystemPartition[] =
     {
         6,
         16,
-        "menggunakan format yang tidak didukung oleh ReactOS.",
+        "menggunakan format yang tidak didukung oleh Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Agar instalasi ReactOS berhasil, program Penyetelan harus",
+        "Agar instalasi Windivs berhasil, program Penyetelan harus",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1164,7 +1164,7 @@ static MUI_ENTRY idIDChangeSystemPartition[] =
     {
         6,
         35,
-        "asli setelah menyelesaikan instalasi ReactOS.",
+        "asli setelah menyelesaikan instalasi Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1216,7 +1216,7 @@ static MUI_ENTRY idIDConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "ReactOS) atau program lain yang disediakan oleh pabrik perangkat keras.",
+        "Windivs) atau program lain yang disediakan oleh pabrik perangkat keras.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1244,7 +1244,7 @@ static MUI_ENTRY idIDConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "komputer dari harddisk hingga Anda menyelesaikan Penyetelan ReactOS.",
+        "komputer dari harddisk hingga Anda menyelesaikan Penyetelan Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1372,7 +1372,7 @@ static MUI_ENTRY idIDInstallDirectoryEntries[] =
     {
         6,
         8,
-        "Penyetelan memasang berkas ReactOS pada partisi terpilih. Pilih",
+        "Penyetelan memasang berkas Windivs pada partisi terpilih. Pilih",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1400,7 +1400,7 @@ static MUI_ENTRY idIDInstallDirectoryEntries[] =
     {
         6,
         16,
-        "anda inginkan untuk memasang ReactOS.",
+        "anda inginkan untuk memasang Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1431,14 +1431,14 @@ static MUI_ENTRY idIDFileCopyEntries[] =
     {
         0,
         12,
-        "Harap tunggu sementara Penyetelan ReactOS menyalin Berkas ke",
+        "Harap tunggu sementara Penyetelan Windivs menyalin Berkas ke",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
     {
         0,
         13,
-        "folder instalasi ReactOS Anda.",
+        "folder instalasi Windivs Anda.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1678,7 +1678,7 @@ static MUI_ENTRY idIDPrepareCopyEntries[] =
     {
         6,
         8,
-        "Penyetelan menpersiapkan komputer Anda untuk menyalin berkas ReactOS.",
+        "Penyetelan menpersiapkan komputer Anda untuk menyalin berkas Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1838,9 +1838,9 @@ MUI_ERROR idIDErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS tidak terpasang sepenuhnya pada komputer\n"
+        "Windivs tidak terpasang sepenuhnya pada komputer\n"
         "anda. Jika anda keluar sekarang, anda akan memulai\n"
-        "lagi Penyetelan untuk memasang ReactOS.\n"
+        "lagi Penyetelan untuk memasang Windivs.\n"
         "\n"
         "  \x07  Tekan ENTER untuk melanjutkan Penyetelan.\n"
         "  \x07  Tekan F3 untuk keluar dari Penyetelan.",
@@ -1848,7 +1848,7 @@ MUI_ERROR idIDErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Gagal membangun jalur instalasi untuk direktori instalasi ReactOS!\n"
+        "Gagal membangun jalur instalasi untuk direktori instalasi Windivs!\n"
         "ENTER = Mulai ulang komputer"
     },
     {
@@ -1858,7 +1858,7 @@ MUI_ERROR idIDErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "Anda tidak dapat memasang ReactOS yang di dalamnya berisi direktori sumber instalasi!\n"
+        "Anda tidak dapat memasang Windivs yang di dalamnya berisi direktori sumber instalasi!\n"
         "ENTER = Mulai ulang komputer"
     },
     {
@@ -2057,7 +2057,7 @@ MUI_ERROR idIDErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Partisi yang dipilih tidak cukup besar untuk memasang ReactOS.\n"
+        "Partisi yang dipilih tidak cukup besar untuk memasang Windivs.\n"
         "Partisi instalasi harus memiliki ukuran setidaknya %lu MB.\n"
         "\n"
         "  * Tekan tombol apapun untuk lanjut.",
@@ -2240,13 +2240,13 @@ MUI_STRING idIDStrings[] =
     {STRING_PARTFORMAT,
     "Partisi ini selanjutnya akan diformat."},
     {STRING_NONFORMATTEDPART,
-    "Pilihlah untuk memasang ReactOS pada partisi baru atau yang belum diformat."},
+    "Pilihlah untuk memasang Windivs pada partisi baru atau yang belum diformat."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "Partisi sistem ini belum diformat."},
     {STRING_NONFORMATTEDOTHERPART,
     "Partisi baru ini belum diformat."},
     {STRING_INSTALLONPART,
-    "Penyetelan memasang ReactOS pada Partisi"},
+    "Penyetelan memasang Windivs pada Partisi"},
     {STRING_CONTINUE,
     "ENTER = Lanjut"},
     {STRING_QUITCONTINUE,

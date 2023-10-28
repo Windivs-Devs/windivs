@@ -15,7 +15,7 @@ static MUI_ENTRY ptPTSetupInitPageEntries[] =
     {
         0,
         20,
-        "Por favor aguarde enquanto o Instalador do ReactOS inicializa",
+        "Por favor aguarde enquanto o Instalador do Windivs inicializa",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -105,14 +105,14 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         6,
         8,
-        "Bem-vindo ao assist\210nte de instala\207\306o do ReactOS.",
+        "Bem-vindo ao assist\210nte de instala\207\306o do Windivs.",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Esta fase da instala\207\306o prepara o ReactOS para ser",
+        "Esta fase da instala\207\306o prepara o Windivs para ser",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -126,14 +126,14 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Pressione ENTER para instalar ou actualizar o ReactOS.",
+        "\x07  Pressione ENTER para instalar ou actualizar o Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Para reparar uma instala\207\306o do ReactOS, pressione R.",
+        "\x07  Para reparar uma instala\207\306o do Windivs, pressione R.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -147,14 +147,14 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         8,
         21,
-        "\x07  Para sair sem instalar o ReactOS, pressione F3.",
+        "\x07  Para sair sem instalar o Windivs, pressione F3.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Para mais informa\207\344es sobre o ReactOS, visite o s\241tio:",
+        "Para mais informa\207\344es sobre o Windivs, visite o s\241tio:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -192,14 +192,14 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
     {
         6,
         8,
-        "ReactOS Vers\306o Status",
+        "Windivs Vers\306o Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "O ReactOS est\240 em est\240gio Alpha, o que significa que n\306o est\240 completo",
+        "O Windivs est\240 em est\240gio Alpha, o que significa que n\306o est\240 completo",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -227,21 +227,21 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
     {
         6,
         16,
-        "secund\240rio se pretende executar o ReactOS em hardware real.",
+        "secund\240rio se pretende executar o Windivs em hardware real.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Pressione ENTER para continuar a instala\207\306o do ReactOS.",
+        "\x07  Pressione ENTER para continuar a instala\207\306o do Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Pressione F3 para terminar sem instalar o ReactOS.",
+        "\x07  Pressione F3 para terminar sem instalar o Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -279,7 +279,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         8,
         8,
-        "O ReactOS est\240 licenciado sob os termos da licen\207a",
+        "O Windivs est\240 licenciado sob os termos da licen\207a",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -300,7 +300,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         8,
         11,
-        "Todo o software que faz parte do sistema ReactOS \202 portanto,",
+        "Todo o software que faz parte do sistema Windivs \202 portanto,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -335,7 +335,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         8,
         17,
-        "A licen\207a do ReactOS abrange apenas a distribui\207\306o a terceiros.",
+        "A licen\207a do Windivs abrange apenas a distribui\207\306o a terceiros.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -349,7 +349,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public License com o ReactOS por favor visite",
+        "GNU General Public License com o Windivs por favor visite",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -515,7 +515,7 @@ static MUI_ENTRY ptPTRepairPageEntries[] =
     {
         6,
         8,
-        "O instalador do ReactOS est\240 em fase inicial de desenvolvimento e",
+        "O instalador do Windivs est\240 em fase inicial de desenvolvimento e",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -588,14 +588,14 @@ static MUI_ENTRY ptPTUpgradePageEntries[] =
     {
         6,
         8,
-        "Com o Instalador do ReactOS pode actualizar uma das instala\207\344es",
+        "Com o Instalador do Windivs pode actualizar uma das instala\207\344es",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "dispon\241veis listadas abaixo, ou, se tem uma instala\207\306o do ReactOS",
+        "dispon\241veis listadas abaixo, ou, se tem uma instala\207\306o do Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -637,7 +637,7 @@ static MUI_ENTRY ptPTUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Pressione F3 para terminar sem instalar o ReactOS.",
+        "\x07  Pressione F3 para terminar sem instalar o Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -786,7 +786,7 @@ static MUI_ENTRY ptPTQuitPageEntries[] =
     {
         10,
         6,
-        "O ReactOS n\306o foi totalmente instalado neste computador.",
+        "O Windivs n\306o foi totalmente instalado neste computador.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -897,7 +897,7 @@ static MUI_ENTRY ptPTSuccessPageEntries[] =
     {
         10,
         6,
-        "Os componentes b\240sicos do ReactOS foram instalados com sucesso.",
+        "Os componentes b\240sicos do Windivs foram instalados com sucesso.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1030,7 +1030,7 @@ static MUI_ENTRY ptPTSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Para configurar o ReactOS no item seleccionado, pressione ENTER.",
+        "\x07  Para configurar o Windivs no item seleccionado, pressione ENTER.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1104,14 +1104,14 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         6,
         16,
-        "formato n\306o suportado pelo ReactOS.",
+        "formato n\306o suportado pelo Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Para instalar o ReactOS com sucesso, o instalador deve alterar",
+        "Para instalar o Windivs com sucesso, o instalador deve alterar",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1181,7 +1181,7 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         6,
         35,
-        "ap\242s a instala\207\306o do ReactOS ser concluida.",
+        "ap\242s a instala\207\306o do Windivs ser concluida.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1233,7 +1233,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "(ReactOS) ou outro e programas fornecidos pelo fabricante do hardware.",
+        "(Windivs) ou outro e programas fornecidos pelo fabricante do hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1261,7 +1261,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computador pelo disco r\241gido at\202 concluir a instala\207\306o do ReactOS.",
+        "computador pelo disco r\241gido at\202 concluir a instala\207\306o do Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1396,7 +1396,7 @@ static MUI_ENTRY ptPTInstallDirectoryEntries[] =
     {
         6,
         9,
-        "Seleccione o direct\242rio onde deseja que o ReactOS seja instalado:",
+        "Seleccione o direct\242rio onde deseja que o Windivs seja instalado:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1410,7 +1410,7 @@ static MUI_ENTRY ptPTInstallDirectoryEntries[] =
     {
         6,
         15,
-        "o texto e escreva o nome do direct\242rio onde deseja que o ReactOS",
+        "o texto e escreva o nome do direct\242rio onde deseja que o Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1455,7 +1455,7 @@ static MUI_ENTRY ptPTFileCopyEntries[] =
     {
         0,
         13,
-        "ficheiros do ReactOS para a pasta de instala\207\306o.",
+        "ficheiros do Windivs para a pasta de instala\207\306o.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1709,7 +1709,7 @@ static MUI_ENTRY ptPTPrepareCopyEntries[] =
     {
         6,
         9,
-        "do ReactOS.",
+        "do Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1876,9 +1876,9 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "O ReactOS n\306o est\240 completamente instalado no computador.\n"
+        "O Windivs n\306o est\240 completamente instalado no computador.\n"
         "Se sair da instala\207\306o agora, precisar\240 executa-la\n"
-        "novamente para instalar o ReactOS.\n"
+        "novamente para instalar o Windivs.\n"
         "\n"
         "  \x07  Para continuar a instala\207\306o, pressione ENTER.\n"
         "  \x07  Para sair da instala\207\306o, pressione F3.",
@@ -1886,7 +1886,7 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Falha ao criar os caminhos para o direct\242rio de instala\207\306o do ReactOS!\n"
+        "Falha ao criar os caminhos para o direct\242rio de instala\207\306o do Windivs!\n"
         "ENTER = Reiniciar o computador"
     },
     {
@@ -1896,7 +1896,7 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "N\306o pode instalar o ReactOS dentro do direct\242rio de origem da instala\207\306o!\n"
+        "N\306o pode instalar o Windivs dentro do direct\242rio de origem da instala\207\306o!\n"
         "ENTER = Reiniciar o computador"
     },
     {
@@ -2095,7 +2095,7 @@ MUI_ERROR ptPTErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "A parti\207\306o selecionada n\306o \202 grande o suficiente para instalar o ReactOS.\n"
+        "A parti\207\306o selecionada n\306o \202 grande o suficiente para instalar o Windivs.\n"
         "A parti\207\306o de instala\207\306o deve ter um tamanho de pelo menos %lu MB.\n"
         "\n"
         "  * Pressione qualquer tecla para continuar.",
@@ -2279,13 +2279,13 @@ MUI_STRING ptPTStrings[] =
     {STRING_PARTFORMAT,
     "Esta parti\207\306o ser\240 formatada logo em seguida."},
     {STRING_NONFORMATTEDPART,
-    "Solicitou instalar o ReactOS numa parti\207\306o nova ou sem formato."},
+    "Solicitou instalar o Windivs numa parti\207\306o nova ou sem formato."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "A parti\207\306o ainda n\306o est\240 formatada."},
     {STRING_NONFORMATTEDOTHERPART,
     "A nova parti\207\306o ainda n\306o est\240 formatada."},
     {STRING_INSTALLONPART,
-    "O instalador instala o ReactOS na parti\207\306o"},
+    "O instalador instala o Windivs na parti\207\306o"},
     {STRING_CONTINUE,
     "ENTER=Continuar"},
     {STRING_QUITCONTINUE,
