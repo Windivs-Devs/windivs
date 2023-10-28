@@ -239,6 +239,22 @@ HICON WINAPI SHGetFileIcon(
 
 BOOL WINAPI FileIconInit(BOOL bFullInit);
 
+WORD WINAPI
+ExtractIconResInfoA(
+    _In_ HANDLE hHandle,
+    _In_ LPCSTR lpFileName,
+    _In_ WORD wIndex,
+    _Out_ LPWORD lpSize,
+    _Out_ LPHANDLE lpIcon);
+
+WORD WINAPI
+ExtractIconResInfoW(
+    _In_ HANDLE hHandle,
+    _In_ LPCWSTR lpFileName,
+    _In_ WORD wIndex,
+    _Out_ LPWORD lpSize,
+    _Out_ LPHANDLE lpIcon);
+
 /****************************************************************************
  * File Menu Routines
  */
@@ -687,7 +703,7 @@ LargeIntegerToString(
 LPWSTR WINAPI
 ShortSizeFormatW(
     _In_ DWORD dwNumber,
-    _Out_writes_z_(0x8FFF) LPWSTR pszBuffer);
+    _Out_writes_(0x8FFF) LPWSTR pszBuffer);
 
 BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken);
 DWORD WINAPI SHGetUserSessionId(_In_opt_ HANDLE hToken);
@@ -703,6 +719,13 @@ SHInvokePrivilegedFunctionW(
 BOOL WINAPI
 SHTestTokenPrivilegeW(_In_opt_ HANDLE hToken, _In_z_ LPCWSTR lpName);
 BOOL WINAPI IsSuspendAllowed(VOID);
+
+BOOL WINAPI
+Activate_RunDLL(
+    _In_ DWORD dwUnused1,
+    _In_ LPVOID lpUnused2,
+    _In_ LPVOID lpUnused3,
+    _In_ LPVOID lpUnused4);
 
 /*****************************************************************************
  * Shell32 resources
