@@ -9,7 +9,10 @@
 
 WINE_DEFAULT_DEBUG_CHANNEL(shell);
 
-static BOOL OpenEffectiveToken(DWORD DesiredAccess, HANDLE *phToken)
+static BOOL
+OpenEffectiveToken(
+    _In_ DWORD DesiredAccess,
+    _Out_ HANDLE *phToken)
 {
     BOOL ret;
 
@@ -29,13 +32,68 @@ static BOOL OpenEffectiveToken(DWORD DesiredAccess, HANDLE *phToken)
 }
 
 /*************************************************************************
+ *                SHSetFolderPathA (SHELL32.231)
+ *
+ * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shsetfolderpatha
+ */
+EXTERN_C
+HRESULT WINAPI
+SHSetFolderPathA(
+    _In_ INT csidl,
+    _In_ HANDLE hToken,
+    _In_ DWORD dwFlags,
+    _In_ LPCSTR pszPath)
+{
+    TRACE("(%d, %p, 0x%X, %s)\n", csidl, hToken, dwFlags, debugstr_a(pszPath));
+    CStringW strPathW(pszPath);
+    return SHSetFolderPathW(csidl, hToken, dwFlags, strPathW);
+}
+
+/*************************************************************************
+ *                PathIsSlowA (SHELL32.240)
+ *
+ * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj/nf-shlobj-pathisslowa
+ */
+EXTERN_C
+BOOL WINAPI
+PathIsSlowA(
+    _In_ LPCSTR pszFile,
+    _In_ DWORD dwAttr)
+{
+    TRACE("(%s, 0x%X)\n", debugstr_a(pszFile), dwAttr);
+    CStringW strFileW(pszFile);
+    return PathIsSlowW(strFileW, dwAttr);
+}
+
+/*************************************************************************
+ *                ExtractIconResInfoA (SHELL32.221)
+ */
+EXTERN_C
+WORD WINAPI
+ExtractIconResInfoA(
+    _In_ HANDLE hHandle,
+    _In_ LPCSTR lpFileName,
+    _In_ WORD wIndex,
+    _Out_ LPWORD lpSize,
+    _Out_ LPHANDLE lpIcon)
+{
+    TRACE("(%p, %s, %u, %p, %p)\n", hHandle, debugstr_a(lpFileName), wIndex, lpSize, lpIcon);
+
+    if (!lpFileName)
+        return 0;
+
+    CStringW strFileNameW(lpFileName);
+    return ExtractIconResInfoW(hHandle, strFileNameW, wIndex, lpSize, lpIcon);
+}
+
+/*************************************************************************
  *                ShortSizeFormatW (SHELL32.204)
  */
 EXTERN_C
 LPWSTR WINAPI
 ShortSizeFormatW(
     _In_ DWORD dwNumber,
-    _Out_writes_z_(0x8FFF) LPWSTR pszBuffer)
+    _Out_writes_(0x8FFF) LPWSTR pszBuffer)
 {
     TRACE("(%lu, %p)\n", dwNumber, pszBuffer);
     return StrFormatByteSizeW(dwNumber, pszBuffer, 0x8FFF);
@@ -81,7 +139,7 @@ EXTERN_C DWORD WINAPI SHGetUserSessionId(_In_opt_ HANDLE hToken)
 EXTERN_C
 HRESULT WINAPI
 SHInvokePrivilegedFunctionW(
-    _In_z_ LPCWSTR pszName,
+    _In_ LPCWSTR pszName,
     _In_ PRIVILEGED_FUNCTION fn,
     _In_opt_ LPARAM lParam)
 {
@@ -123,7 +181,9 @@ SHInvokePrivilegedFunctionW(
  */
 EXTERN_C
 BOOL WINAPI
-SHTestTokenPrivilegeW(_In_opt_ HANDLE hToken, _In_z_ LPCWSTR lpName)
+SHTestTokenPrivilegeW(
+    _In_opt_ HANDLE hToken,
+    _In_ LPCWSTR lpName)
 {
     LUID Luid;
     DWORD dwLength;
@@ -327,7 +387,7 @@ SHFindComputer(LPCITEMIDLIST pidlRoot, LPCITEMIDLIST pidlSavedSearch)
 static HRESULT
 Int64ToStr(
     _In_ LONGLONG llValue,
-    _Out_writes_z_(cchValue) LPWSTR pszValue,
+    _Out_writes_(cchValue) LPWSTR pszValue,
     _In_ UINT cchValue)
 {
     WCHAR szBuff[40];
@@ -374,9 +434,9 @@ Int64GetNumFormat(
     _Out_ NUMBERFMTW *pDest,
     _In_opt_ const NUMBERFMTW *pSrc,
     _In_ DWORD dwNumberFlags,
-    _Out_writes_z_(cchDecimal) LPWSTR pszDecimal,
+    _Out_writes_(cchDecimal) LPWSTR pszDecimal,
     _In_ INT cchDecimal,
-    _Out_writes_z_(cchThousand) LPWSTR pszThousand,
+    _Out_writes_(cchThousand) LPWSTR pszThousand,
     _In_ INT cchThousand)
 {
     WCHAR szBuff[20];
@@ -424,6 +484,200 @@ Int64GetNumFormat(
 }
 
 /*************************************************************************
+ *                RealShellExecuteExA (SHELL32.266)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteExA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags)
+{
+    SHELLEXECUTEINFOA ExecInfo;
+
+    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
+          hwnd, debugstr_a(lpOperation), debugstr_a(lpFile), debugstr_a(lpParameters),
+          debugstr_a(lpDirectory), lpReserved, debugstr_a(lpClass),
+          hInstApp, nShowCmd, lphProcess, dwFlags);
+
+    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
+    ExecInfo.hwnd = hwnd;
+    ExecInfo.lpVerb = lpOperation;
+    ExecInfo.lpFile = lpFile;
+    ExecInfo.lpParameters = lpParameters;
+    ExecInfo.lpDirectory = lpDirectory;
+    ExecInfo.nShow = nShowCmd;
+    ExecInfo.cbSize = sizeof(ExecInfo);
+    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
+
+    if (hInstApp)
+    {
+        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
+        ExecInfo.hInstApp = hInstApp;
+    }
+
+    if (lpClass)
+    {
+        ExecInfo.fMask |= SEE_MASK_HASCLASS;
+        ExecInfo.lpClass = lpClass;
+    }
+
+    if (dwFlags & 1)
+        ExecInfo.fMask |= SEE_MASK_HASTITLE;
+
+    if (dwFlags & 2)
+        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
+
+    if (lphProcess)
+    {
+        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
+        ShellExecuteExA(&ExecInfo);
+        *lphProcess = ExecInfo.hProcess;
+    }
+    else
+    {
+        ShellExecuteExA(&ExecInfo);
+    }
+
+    return ExecInfo.hInstApp;
+}
+
+/*************************************************************************
+ *                RealShellExecuteExW (SHELL32.267)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteExW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags)
+{
+    SHELLEXECUTEINFOW ExecInfo;
+
+    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
+          hwnd, debugstr_w(lpOperation), debugstr_w(lpFile), debugstr_w(lpParameters),
+          debugstr_w(lpDirectory), lpReserved, debugstr_w(lpClass),
+          hInstApp, nShowCmd, lphProcess, dwFlags);
+
+    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
+    ExecInfo.hwnd = hwnd;
+    ExecInfo.lpVerb = lpOperation;
+    ExecInfo.lpFile = lpFile;
+    ExecInfo.lpParameters = lpParameters;
+    ExecInfo.lpDirectory = lpDirectory;
+    ExecInfo.nShow = nShowCmd;
+    ExecInfo.cbSize = sizeof(ExecInfo);
+    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
+
+    if (hInstApp)
+    {
+        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
+        ExecInfo.hInstApp = hInstApp;
+    }
+
+    if (lpClass)
+    {
+        ExecInfo.fMask |= SEE_MASK_HASCLASS;
+        ExecInfo.lpClass = lpClass;
+    }
+
+    if (dwFlags & 1)
+        ExecInfo.fMask |= SEE_MASK_HASTITLE;
+
+    if (dwFlags & 2)
+        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
+
+    if (lphProcess)
+    {
+        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
+        ShellExecuteExW(&ExecInfo);
+        *lphProcess = ExecInfo.hProcess;
+    }
+    else
+    {
+        ShellExecuteExW(&ExecInfo);
+    }
+
+    return ExecInfo.hInstApp;
+}
+
+/*************************************************************************
+ *                RealShellExecuteA (SHELL32.265)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess)
+{
+    return RealShellExecuteExA(hwnd,
+                               lpOperation,
+                               lpFile,
+                               lpParameters,
+                               lpDirectory,
+                               lpReserved,
+                               lpClass,
+                               hInstApp,
+                               nShowCmd,
+                               lphProcess,
+                               0);
+}
+
+/*************************************************************************
+ *                RealShellExecuteW (SHELL32.268)
+ */
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess)
+{
+    return RealShellExecuteExW(hwnd,
+                               lpOperation,
+                               lpFile,
+                               lpParameters,
+                               lpDirectory,
+                               lpReserved,
+                               lpClass,
+                               hInstApp,
+                               nShowCmd,
+                               lphProcess,
+                               0);
+}
+
+/*************************************************************************
  *  Int64ToString [SHELL32.209]
  *
  * @see http://undoc.airesoft.co.uk/shell32.dll/Int64ToString.php
@@ -432,7 +686,7 @@ EXTERN_C
 INT WINAPI
 Int64ToString(
     _In_ LONGLONG llValue,
-    _Out_writes_z_(cchOut) LPWSTR pszOut,
+    _Out_writes_(cchOut) LPWSTR pszOut,
     _In_ UINT cchOut,
     _In_ BOOL bUseFormat,
     _In_opt_ const NUMBERFMTW *pNumberFormat,
@@ -470,7 +724,7 @@ EXTERN_C
 INT WINAPI
 LargeIntegerToString(
     _In_ const LARGE_INTEGER *pLargeInt,
-    _Out_writes_z_(cchOut) LPWSTR pszOut,
+    _Out_writes_(cchOut) LPWSTR pszOut,
     _In_ UINT cchOut,
     _In_ BOOL bUseFormat,
     _In_opt_ const NUMBERFMTW *pNumberFormat,
@@ -481,6 +735,123 @@ LargeIntegerToString(
 }
 
 /*************************************************************************
+ *  CopyStreamUI [SHELL32.726]
+ *
+ * Copy a stream to another stream with displaying progress.
+ */
+EXTERN_C
+HRESULT WINAPI
+CopyStreamUI(
+    _In_ IStream *pSrc,
+    _Out_ IStream *pDst,
+    _Inout_opt_ IProgressDialog *pProgress,
+    _In_opt_ DWORDLONG dwlSize)
+{
+    HRESULT hr = E_FAIL;
+    DWORD cbBuff, cbRead, dwSizeToWrite;
+    DWORDLONG cbDone;
+    LPVOID pBuff;
+    STATSTG Stat;
+    BYTE szBuff[1024];
+
+    TRACE("(%p, %p, %p, %I64u)\n", pSrc, pDst, pProgress, dwlSize);
+
+    if (dwlSize == 0) // Invalid size?
+    {
+        // Get the stream size
+        ZeroMemory(&Stat, sizeof(Stat));
+        if (FAILED(pSrc->Stat(&Stat, 1)))
+            pProgress = NULL; // No size info. Disable progress
+        else
+            dwlSize = Stat.cbSize.QuadPart;
+    }
+
+    if (!pProgress) // Progress is disabled?
+    {
+        ULARGE_INTEGER uliSize;
+
+        if (dwlSize > 0)
+            uliSize.QuadPart = dwlSize;
+        else
+            uliSize.HighPart = uliSize.LowPart = INVALID_FILE_SIZE;
+
+        return pSrc->CopyTo(pDst, uliSize, NULL, NULL); // One punch
+    }
+
+    // Allocate the buffer if necessary
+    if (dwlSize > 0 && dwlSize <= sizeof(szBuff))
+    {
+        cbBuff = sizeof(szBuff);
+        pBuff = szBuff;
+    }
+    else
+    {
+#define COPY_STREAM_DEFAULT_BUFFER_SIZE 0x4000
+        cbBuff = COPY_STREAM_DEFAULT_BUFFER_SIZE;
+        pBuff = LocalAlloc(LMEM_FIXED, cbBuff);
+        if (!pBuff) // Low memory?
+        {
+            cbBuff = sizeof(szBuff);
+            pBuff = szBuff;
+        }
+#undef COPY_STREAM_DEFAULT_BUFFER_SIZE
+    }
+
+    // Start reading
+    LARGE_INTEGER zero;
+    zero.QuadPart = 0;
+    pSrc->Seek(zero, 0, NULL);
+    pDst->Seek(zero, 0, NULL);
+    cbDone = 0;
+    if (pProgress) // Progress is enabled?
+        pProgress->SetProgress64(cbDone, dwlSize);
+
+    // Repeat reading and writing until goal
+    while (SUCCEEDED(pSrc->Read(pBuff, cbBuff, &cbRead)))
+    {
+        // Calculate the size to write
+        if (dwlSize > 0)
+            dwSizeToWrite = (DWORD)min((DWORDLONG)(dwlSize - cbDone), (DWORDLONG)cbRead);
+        else
+            dwSizeToWrite = cbRead;
+
+        if (dwSizeToWrite == 0) // No need to write?
+        {
+            hr = S_OK;
+            break;
+        }
+
+        hr = pDst->Write(pBuff, dwSizeToWrite, NULL);
+        if (hr != S_OK)
+            break;
+
+        cbDone += dwSizeToWrite;
+
+        if (pProgress) // Progress is enabled?
+        {
+            if (pProgress->HasUserCancelled()) // Cancelled?
+            {
+                hr = HRESULT_FROM_WIN32(ERROR_CANCELLED);
+                break;
+            }
+            pProgress->SetProgress64(cbDone, dwlSize);
+        }
+
+        if (dwlSize > 0 && cbDone >= dwlSize) // Reached the goal?
+        {
+            hr = S_OK;
+            break;
+        }
+    }
+
+    // Free the buffer if necessary
+    if (pBuff != szBuff)
+        LocalFree(pBuff);
+
+    return hr;
+}
+
+/*************************************************************************
  *  SHOpenPropSheetA [SHELL32.707]
  *
  * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj/nf-shlobj-shopenpropsheeta
@@ -488,32 +859,85 @@ LargeIntegerToString(
 EXTERN_C
 BOOL WINAPI
 SHOpenPropSheetA(
-    _In_opt_z_ LPCSTR pszCaption,
+    _In_opt_ LPCSTR pszCaption,
     _In_opt_ HKEY *ahKeys,
     _In_ UINT cKeys,
     _In_ const CLSID *pclsidDefault,
     _In_ IDataObject *pDataObject,
     _In_opt_ IShellBrowser *pShellBrowser,
-    _In_opt_z_ LPCSTR pszStartPage)
+    _In_opt_ LPCSTR pszStartPage)
 {
-    WCHAR szStartPageW[MAX_PATH], szCaptionW[MAX_PATH];
+    CStringW strStartPageW, strCaptionW;
     LPCWSTR pszCaptionW = NULL, pszStartPageW = NULL;
 
-    TRACE("(%s, %p, %u, %p, %p, %p, %s)", pszCaption, ahKeys, cKeys, pclsidDefault, pDataObject,
-          pShellBrowser, pszStartPage);
+    TRACE("(%s, %p, %u, %p, %p, %p, %s)", debugstr_a(pszCaption), ahKeys, cKeys, pclsidDefault,
+          pDataObject, pShellBrowser, debugstr_a(pszStartPage));
 
     if (pszCaption)
     {
-        SHAnsiToUnicode(pszCaption, szCaptionW, _countof(szCaptionW));
-        pszCaptionW = szCaptionW;
+        strStartPageW = pszCaption;
+        pszCaptionW = strCaptionW;
     }
 
     if (pszStartPage)
     {
-        SHAnsiToUnicode(pszStartPage, szStartPageW, _countof(szStartPageW));
-        pszStartPageW = szStartPageW;
+        strStartPageW = pszStartPage;
+        pszStartPageW = strStartPageW;
     }
 
     return SHOpenPropSheetW(pszCaptionW, ahKeys, cKeys, pclsidDefault,
                             pDataObject, pShellBrowser, pszStartPageW);
+}
+
+/*************************************************************************
+ *  Activate_RunDLL [SHELL32.105]
+ *
+ * Unlocks the foreground window and allows the shell window to become the
+ * foreground window. Every parameter is unused.
+ */
+EXTERN_C
+BOOL WINAPI
+Activate_RunDLL(
+    _In_ DWORD dwUnused1,
+    _In_ LPVOID lpUnused2,
+    _In_ LPVOID lpUnused3,
+    _In_ LPVOID lpUnused4)
+{
+    DWORD dwPID;
+
+    UNREFERENCED_PARAMETER(dwUnused1);
+    UNREFERENCED_PARAMETER(lpUnused2);
+    UNREFERENCED_PARAMETER(lpUnused3);
+    UNREFERENCED_PARAMETER(lpUnused4);
+
+    TRACE("(%lu, %p, %p, %p)\n", dwUnused1, lpUnused2, lpUnused3, lpUnused4);
+
+    GetWindowThreadProcessId(GetShellWindow(), &dwPID);
+    return AllowSetForegroundWindow(dwPID);
+}
+
+/*************************************************************************
+ *                SHStartNetConnectionDialogA (SHELL32.12)
+ *
+ * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shstartnetconnectiondialoga
+ */
+EXTERN_C
+HRESULT WINAPI
+SHStartNetConnectionDialogA(
+    _In_ HWND hwnd,
+    _In_ LPCSTR pszRemoteName,
+    _In_ DWORD dwType)
+{
+    LPCWSTR pszRemoteNameW = NULL;
+    CStringW strRemoteNameW;
+
+    TRACE("(%p, %s, %lu)\n", hwnd, debugstr_a(pszRemoteName), dwType);
+
+    if (pszRemoteName)
+    {
+        strRemoteNameW = pszRemoteName;
+        pszRemoteNameW = strRemoteNameW;
+    }
+
+    return SHStartNetConnectionDialogW(hwnd, pszRemoteNameW, dwType);
 }

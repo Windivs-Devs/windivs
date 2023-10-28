@@ -37,7 +37,7 @@ extern "C" {
 #define SEE_MASK_UNICODE	0x00004000
 #define SEE_MASK_NO_CONSOLE	0x00008000
 /*
- * NOTE: The following three flags are undocumented and are not present in the
+ * NOTE: The following 5 flags are undocumented and are not present in the
  * official Windows SDK. However they are used in shobjidl.idl to define some
  * CMIC_MASK_* flags, these ones being mentioned in the MSDN documentation of
  * the CMINVOKECOMMANDINFOEX structure.
@@ -48,6 +48,8 @@ extern "C" {
 #define SEE_MASK_HASLINKNAME	0x00010000
 #define SEE_MASK_HASTITLE	0x00020000
 #define SEE_MASK_FLAG_SEPVDM	0x00040000
+#define SEE_MASK_UNKNOWN_0x1000 0x1000 /* FIXME: Name */
+#define SEE_MASK_HASCLASS 0x80000 /* FIXME: Name */
 /* END NOTE */
 #define SEE_MASK_ASYNCOK	0x00100000
 #define SEE_MASK_HMONITOR	0x00200000

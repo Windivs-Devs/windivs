@@ -239,6 +239,22 @@ HICON WINAPI SHGetFileIcon(
 
 BOOL WINAPI FileIconInit(BOOL bFullInit);
 
+WORD WINAPI
+ExtractIconResInfoA(
+    _In_ HANDLE hHandle,
+    _In_ LPCSTR lpFileName,
+    _In_ WORD wIndex,
+    _Out_ LPWORD lpSize,
+    _Out_ LPHANDLE lpIcon);
+
+WORD WINAPI
+ExtractIconResInfoW(
+    _In_ HANDLE hHandle,
+    _In_ LPCWSTR lpFileName,
+    _In_ WORD wIndex,
+    _Out_ LPWORD lpSize,
+    _Out_ LPHANDLE lpIcon);
+
 /****************************************************************************
  * File Menu Routines
  */
@@ -596,6 +612,61 @@ HRESULT WINAPI ShellExecCmdLine(
     LPVOID pUnused,
     DWORD dwSeclFlags);
 
+HINSTANCE WINAPI
+RealShellExecuteA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess);
+
+EXTERN_C
+HINSTANCE WINAPI
+RealShellExecuteW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess);
+
+HINSTANCE WINAPI
+RealShellExecuteExA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags);
+
+HINSTANCE WINAPI
+RealShellExecuteExW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPCVOID lpReserved,
+    _In_opt_ LPCWSTR lpClass,
+    _In_ HINSTANCE hInstApp,
+    _In_ WORD nShowCmd,
+    _Out_opt_ HANDLE *lphProcess,
+    _In_opt_ DWORD dwFlags);
+
 /* RegisterShellHook types */
 #define RSH_DEREGISTER        0
 #define RSH_REGISTER          1
@@ -687,7 +758,7 @@ LargeIntegerToString(
 LPWSTR WINAPI
 ShortSizeFormatW(
     _In_ DWORD dwNumber,
-    _Out_writes_z_(0x8FFF) LPWSTR pszBuffer);
+    _Out_writes_(0x8FFF) LPWSTR pszBuffer);
 
 BOOL WINAPI SHOpenEffectiveToken(_Out_ LPHANDLE phToken);
 DWORD WINAPI SHGetUserSessionId(_In_opt_ HANDLE hToken);
@@ -703,6 +774,13 @@ SHInvokePrivilegedFunctionW(
 BOOL WINAPI
 SHTestTokenPrivilegeW(_In_opt_ HANDLE hToken, _In_z_ LPCWSTR lpName);
 BOOL WINAPI IsSuspendAllowed(VOID);
+
+BOOL WINAPI
+Activate_RunDLL(
+    _In_ DWORD dwUnused1,
+    _In_ LPVOID lpUnused2,
+    _In_ LPVOID lpUnused3,
+    _In_ LPVOID lpUnused4);
 
 /*****************************************************************************
  * Shell32 resources
@@ -793,6 +871,14 @@ LONG WINAPI SHRegQueryValueExW(
 #else
     #define SHRegQueryValueEx SHRegQueryValueExA
 #endif
+
+EXTERN_C
+HRESULT WINAPI
+CopyStreamUI(
+    _In_ IStream *pSrc,
+    _Out_ IStream *pDst,
+    _Inout_opt_ IProgressDialog *pProgress,
+    _In_opt_ DWORDLONG dwlSize);
 
 /*****************************************************************************
  * INVALID_FILETITLE_CHARACTERS
