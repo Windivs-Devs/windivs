@@ -116,6 +116,18 @@ void ImageModel::ClearHistory()
     m_redoSteps = 0;
 }
 
+void ImageModel::PushImageForUndo()
+{
+    HBITMAP hbm = CopyBitmap();
+    if (hbm == NULL)
+    {
+        ShowOutOfMemory();
+        return;
+    }
+
+    PushImageForUndo(hbm);
+}
+
 void ImageModel::PushImageForUndo(HBITMAP hbm)
 {
     ATLTRACE("%s: %d\n", __FUNCTION__, m_currInd);
