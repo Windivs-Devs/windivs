@@ -898,22 +898,48 @@ SHOpenPropSheetA(
 EXTERN_C
 BOOL WINAPI
 Activate_RunDLL(
-    _In_ DWORD dwUnused1,
-    _In_ LPVOID lpUnused2,
-    _In_ LPVOID lpUnused3,
-    _In_ LPVOID lpUnused4)
+    _In_ HWND hwnd,
+    _In_ HINSTANCE hinst,
+    _In_ LPCWSTR cmdline,
+    _In_ INT cmdshow)
 {
-    DWORD dwPID;
+    DWORD dwProcessID;
 
-    UNREFERENCED_PARAMETER(dwUnused1);
-    UNREFERENCED_PARAMETER(lpUnused2);
-    UNREFERENCED_PARAMETER(lpUnused3);
-    UNREFERENCED_PARAMETER(lpUnused4);
+    UNREFERENCED_PARAMETER(hwnd);
+    UNREFERENCED_PARAMETER(hinst);
+    UNREFERENCED_PARAMETER(cmdline);
+    UNREFERENCED_PARAMETER(cmdshow);
 
-    TRACE("(%lu, %p, %p, %p)\n", dwUnused1, lpUnused2, lpUnused3, lpUnused4);
+    TRACE("(%p, %p, %s, %d)\n", hwnd, hinst, debugstr_w(cmdline), cmdline);
 
-    GetWindowThreadProcessId(GetShellWindow(), &dwPID);
-    return AllowSetForegroundWindow(dwPID);
+    GetWindowThreadProcessId(GetShellWindow(), &dwProcessID);
+    return AllowSetForegroundWindow(dwProcessID);
+}
+
+/*************************************************************************
+ *                SHStartNetConnectionDialogA (SHELL32.12)
+ *
+ * @see https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shstartnetconnectiondialoga
+ */
+EXTERN_C
+HRESULT WINAPI
+SHStartNetConnectionDialogA(
+    _In_ HWND hwnd,
+    _In_ LPCSTR pszRemoteName,
+    _In_ DWORD dwType)
+{
+    LPCWSTR pszRemoteNameW = NULL;
+    CStringW strRemoteNameW;
+
+    TRACE("(%p, %s, %lu)\n", hwnd, debugstr_a(pszRemoteName), dwType);
+
+    if (pszRemoteName)
+    {
+        strRemoteNameW = pszRemoteName;
+        pszRemoteNameW = strRemoteNameW;
+    }
+
+    return SHStartNetConnectionDialogW(hwnd, pszRemoteNameW, dwType);
 }
 
 /*************************************************************************

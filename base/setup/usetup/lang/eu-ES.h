@@ -969,7 +969,7 @@ static MUI_ENTRY euESSelectPartitionEntries[] =
     {
         8,
         15,
-        "\x07  Sakatu P partizio nagusi bat sortzeko.",
+        "\x07  Sakatu C partizio nagusi/logika bat sortzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -983,13 +983,6 @@ static MUI_ENTRY euESSelectPartitionEntries[] =
     {
         8,
         19,
-        "\x07  Sakatu L partizio logika bat sortzeko.",
-        TEXT_STYLE_NORMAL,
-        TEXT_ID_STATIC
-    },
-    {
-        8,
-        21,
         "\x07  Sakatu D dagoen partizio kentzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
@@ -2226,9 +2219,9 @@ MUI_STRING euESStrings[] =
     {STRING_PLEASEWAIT,
      "   Itxaron mesedez..."},
     {STRING_INSTALLCREATEPARTITION,
-     "   SARTU = Instalatu   P = Sortu Nagusia   E = Sortu Luzatuta   F3 = Irten"},
+     "   SARTU = Instalatu   C = Sortu Nagusia   E = Sortu Luzatuta   F3 = Irten"},
     {STRING_INSTALLCREATELOGICAL,
-     "   SARTU = Instalatu   L = Sortu Partizio Logika   F3 = Irten"},
+     "   SARTU = Instalatu   C = Sortu Partizio Logika   F3 = Irten"},
     {STRING_INSTALLDELETEPARTITION,
      "   SARTU = Instalatu   D = Ezabatu Partitioa   F3 = Irten"},
     {STRING_DELETEPARTITION,
@@ -2298,9 +2291,9 @@ MUI_STRING euESStrings[] =
     {STRING_CONSOLEFAIL3,
     "USB teklatua ez dago oraindik osoan euskarri\r\n"},
     {STRING_FORMATTINGPART,
-    "Setup is formatting the partition..."},
+    "Instalazioa partizioa formateatzen ari da..."},
     {STRING_CHECKINGDISK,
-    "Setup is checking the disk..."},
+    "Instalazioa diskoa ikusten ari da..."},
     {STRING_FORMATDISK1,
     " Formatu partizioa %S sistemaren fitxategia (format azkar) "},
     {STRING_FORMATDISK2,
