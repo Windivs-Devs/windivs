@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="Remove mapicode.h">
+    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="Remove HELP bar from CMD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jpb/reactos&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/jpb/reactos"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)">
@@ -79,14 +79,7 @@
       <option name="project" value="LOCAL" />
       <updated>1696105260538</updated>
     </task>
-    <task id="LOCAL-00005" summary="Remove mapicode.h">
-      <created>1697384120382</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1697384120382</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,7 +98,6 @@
     <MESSAGE value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
     <MESSAGE value="Bugfixes" />
     <MESSAGE value="Remove HELP bar from CMD" />
-    <MESSAGE value="Remove mapicode.h" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove mapicode.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove HELP bar from CMD" />
   </component>
 </project>
