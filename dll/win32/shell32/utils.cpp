@@ -484,200 +484,6 @@ Int64GetNumFormat(
 }
 
 /*************************************************************************
- *                RealShellExecuteExA (SHELL32.266)
- */
-EXTERN_C
-HINSTANCE WINAPI
-RealShellExecuteExA(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCSTR lpOperation,
-    _In_opt_ LPCSTR lpFile,
-    _In_opt_ LPCSTR lpParameters,
-    _In_opt_ LPCSTR lpDirectory,
-    _In_opt_ LPCVOID lpReserved,
-    _In_opt_ LPCSTR lpClass,
-    _In_ HINSTANCE hInstApp,
-    _In_ WORD nShowCmd,
-    _Out_opt_ HANDLE *lphProcess,
-    _In_opt_ DWORD dwFlags)
-{
-    SHELLEXECUTEINFOA ExecInfo;
-
-    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
-          hwnd, debugstr_a(lpOperation), debugstr_a(lpFile), debugstr_a(lpParameters),
-          debugstr_a(lpDirectory), lpReserved, debugstr_a(lpClass),
-          hInstApp, nShowCmd, lphProcess, dwFlags);
-
-    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
-    ExecInfo.hwnd = hwnd;
-    ExecInfo.lpVerb = lpOperation;
-    ExecInfo.lpFile = lpFile;
-    ExecInfo.lpParameters = lpParameters;
-    ExecInfo.lpDirectory = lpDirectory;
-    ExecInfo.nShow = nShowCmd;
-    ExecInfo.cbSize = sizeof(ExecInfo);
-    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
-
-    if (hInstApp)
-    {
-        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
-        ExecInfo.hInstApp = hInstApp;
-    }
-
-    if (lpClass)
-    {
-        ExecInfo.fMask |= SEE_MASK_HASCLASS;
-        ExecInfo.lpClass = lpClass;
-    }
-
-    if (dwFlags & 1)
-        ExecInfo.fMask |= SEE_MASK_HASTITLE;
-
-    if (dwFlags & 2)
-        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
-
-    if (lphProcess)
-    {
-        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
-        ShellExecuteExA(&ExecInfo);
-        *lphProcess = ExecInfo.hProcess;
-    }
-    else
-    {
-        ShellExecuteExA(&ExecInfo);
-    }
-
-    return ExecInfo.hInstApp;
-}
-
-/*************************************************************************
- *                RealShellExecuteExW (SHELL32.267)
- */
-EXTERN_C
-HINSTANCE WINAPI
-RealShellExecuteExW(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCWSTR lpOperation,
-    _In_opt_ LPCWSTR lpFile,
-    _In_opt_ LPCWSTR lpParameters,
-    _In_opt_ LPCWSTR lpDirectory,
-    _In_opt_ LPCVOID lpReserved,
-    _In_opt_ LPCWSTR lpClass,
-    _In_ HINSTANCE hInstApp,
-    _In_ WORD nShowCmd,
-    _Out_opt_ HANDLE *lphProcess,
-    _In_opt_ DWORD dwFlags)
-{
-    SHELLEXECUTEINFOW ExecInfo;
-
-    TRACE("(%p, %s, %s, %s, %s, %p, %s, %p, %u, %p, %lu)\n",
-          hwnd, debugstr_w(lpOperation), debugstr_w(lpFile), debugstr_w(lpParameters),
-          debugstr_w(lpDirectory), lpReserved, debugstr_w(lpClass),
-          hInstApp, nShowCmd, lphProcess, dwFlags);
-
-    ZeroMemory(&ExecInfo, sizeof(ExecInfo));
-    ExecInfo.hwnd = hwnd;
-    ExecInfo.lpVerb = lpOperation;
-    ExecInfo.lpFile = lpFile;
-    ExecInfo.lpParameters = lpParameters;
-    ExecInfo.lpDirectory = lpDirectory;
-    ExecInfo.nShow = nShowCmd;
-    ExecInfo.cbSize = sizeof(ExecInfo);
-    ExecInfo.fMask = SEE_MASK_UNKNOWN_0x1000 | SEE_MASK_FLAG_NO_UI;
-
-    if (hInstApp)
-    {
-        ExecInfo.fMask |= SEE_MASK_FLAG_SEPVDM;
-        ExecInfo.hInstApp = hInstApp;
-    }
-
-    if (lpClass)
-    {
-        ExecInfo.fMask |= SEE_MASK_HASCLASS;
-        ExecInfo.lpClass = lpClass;
-    }
-
-    if (dwFlags & 1)
-        ExecInfo.fMask |= SEE_MASK_HASTITLE;
-
-    if (dwFlags & 2)
-        ExecInfo.fMask |= SEE_MASK_NO_CONSOLE;
-
-    if (lphProcess)
-    {
-        ExecInfo.fMask |= SEE_MASK_NOCLOSEPROCESS;
-        ShellExecuteExW(&ExecInfo);
-        *lphProcess = ExecInfo.hProcess;
-    }
-    else
-    {
-        ShellExecuteExW(&ExecInfo);
-    }
-
-    return ExecInfo.hInstApp;
-}
-
-/*************************************************************************
- *                RealShellExecuteA (SHELL32.265)
- */
-EXTERN_C
-HINSTANCE WINAPI
-RealShellExecuteA(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCSTR lpOperation,
-    _In_opt_ LPCSTR lpFile,
-    _In_opt_ LPCSTR lpParameters,
-    _In_opt_ LPCSTR lpDirectory,
-    _In_opt_ LPCVOID lpReserved,
-    _In_opt_ LPCSTR lpClass,
-    _In_ HINSTANCE hInstApp,
-    _In_ WORD nShowCmd,
-    _Out_opt_ HANDLE *lphProcess)
-{
-    return RealShellExecuteExA(hwnd,
-                               lpOperation,
-                               lpFile,
-                               lpParameters,
-                               lpDirectory,
-                               lpReserved,
-                               lpClass,
-                               hInstApp,
-                               nShowCmd,
-                               lphProcess,
-                               0);
-}
-
-/*************************************************************************
- *                RealShellExecuteW (SHELL32.268)
- */
-EXTERN_C
-HINSTANCE WINAPI
-RealShellExecuteW(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCWSTR lpOperation,
-    _In_opt_ LPCWSTR lpFile,
-    _In_opt_ LPCWSTR lpParameters,
-    _In_opt_ LPCWSTR lpDirectory,
-    _In_opt_ LPCVOID lpReserved,
-    _In_opt_ LPCWSTR lpClass,
-    _In_ HINSTANCE hInstApp,
-    _In_ WORD nShowCmd,
-    _Out_opt_ HANDLE *lphProcess)
-{
-    return RealShellExecuteExW(hwnd,
-                               lpOperation,
-                               lpFile,
-                               lpParameters,
-                               lpDirectory,
-                               lpReserved,
-                               lpClass,
-                               hInstApp,
-                               nShowCmd,
-                               lphProcess,
-                               0);
-}
-
-/*************************************************************************
  *  Int64ToString [SHELL32.209]
  *
  * @see http://undoc.airesoft.co.uk/shell32.dll/Int64ToString.php
@@ -737,7 +543,7 @@ LargeIntegerToString(
 /*************************************************************************
  *  CopyStreamUI [SHELL32.726]
  *
- * Copy a stream to another stream with displaying progress.
+ * Copy a stream to another stream with optional progress display.
  */
 EXTERN_C
 HRESULT WINAPI
@@ -751,8 +557,9 @@ CopyStreamUI(
     DWORD cbBuff, cbRead, dwSizeToWrite;
     DWORDLONG cbDone;
     LPVOID pBuff;
+    CComHeapPtr<BYTE> pHeapPtr;
     STATSTG Stat;
-    BYTE szBuff[1024];
+    BYTE abBuff[1024];
 
     TRACE("(%p, %p, %p, %I64u)\n", pSrc, pDst, pProgress, dwlSize);
 
@@ -760,7 +567,7 @@ CopyStreamUI(
     {
         // Get the stream size
         ZeroMemory(&Stat, sizeof(Stat));
-        if (FAILED(pSrc->Stat(&Stat, 1)))
+        if (FAILED(pSrc->Stat(&Stat, STATFLAG_NONAME)))
             pProgress = NULL; // No size info. Disable progress
         else
             dwlSize = Stat.cbSize.QuadPart;
@@ -779,20 +586,23 @@ CopyStreamUI(
     }
 
     // Allocate the buffer if necessary
-    if (dwlSize > 0 && dwlSize <= sizeof(szBuff))
+    if (dwlSize > 0 && dwlSize <= sizeof(abBuff))
     {
-        cbBuff = sizeof(szBuff);
-        pBuff = szBuff;
+        cbBuff = sizeof(abBuff);
+        pBuff = abBuff;
     }
     else
     {
 #define COPY_STREAM_DEFAULT_BUFFER_SIZE 0x4000
         cbBuff = COPY_STREAM_DEFAULT_BUFFER_SIZE;
-        pBuff = LocalAlloc(LMEM_FIXED, cbBuff);
-        if (!pBuff) // Low memory?
+        if (pHeapPtr.AllocateBytes(cbBuff))
         {
-            cbBuff = sizeof(szBuff);
-            pBuff = szBuff;
+            pBuff = pHeapPtr;
+        }
+        else // Low memory?
+        {
+            cbBuff = sizeof(abBuff);
+            pBuff = abBuff;
         }
 #undef COPY_STREAM_DEFAULT_BUFFER_SIZE
     }
@@ -803,12 +613,15 @@ CopyStreamUI(
     pSrc->Seek(zero, 0, NULL);
     pDst->Seek(zero, 0, NULL);
     cbDone = 0;
-    if (pProgress) // Progress is enabled?
-        pProgress->SetProgress64(cbDone, dwlSize);
+    pProgress->SetProgress64(cbDone, dwlSize);
 
     // Repeat reading and writing until goal
-    while (SUCCEEDED(pSrc->Read(pBuff, cbBuff, &cbRead)))
+    for (;;)
     {
+        hr = pSrc->Read(pBuff, cbBuff, &cbRead);
+        if (FAILED(hr))
+            break;
+
         // Calculate the size to write
         if (dwlSize > 0)
             dwSizeToWrite = (DWORD)min((DWORDLONG)(dwlSize - cbDone), (DWORDLONG)cbRead);
@@ -827,15 +640,12 @@ CopyStreamUI(
 
         cbDone += dwSizeToWrite;
 
-        if (pProgress) // Progress is enabled?
+        if (pProgress->HasUserCancelled()) // Cancelled?
         {
-            if (pProgress->HasUserCancelled()) // Cancelled?
-            {
-                hr = HRESULT_FROM_WIN32(ERROR_CANCELLED);
-                break;
-            }
-            pProgress->SetProgress64(cbDone, dwlSize);
+            hr = HRESULT_FROM_WIN32(ERROR_CANCELLED);
+            break;
         }
+        pProgress->SetProgress64(cbDone, dwlSize);
 
         if (dwlSize > 0 && cbDone >= dwlSize) // Reached the goal?
         {
@@ -843,10 +653,6 @@ CopyStreamUI(
             break;
         }
     }
-
-    // Free the buffer if necessary
-    if (pBuff != szBuff)
-        LocalFree(pBuff);
 
     return hr;
 }

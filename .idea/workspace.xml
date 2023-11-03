@@ -1,126 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="NONE" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="merge" />
+    <list default="true" id="5810d0d5-75ef-4507-bff2-92e27f6590fe" name="Changes" comment="ReactOS Merge">
+      <change afterPath="$PROJECT_DIR$/dll/win32/imm32/softkbd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/dialogs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/dialogs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/history.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/history.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/history.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/history.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/mouse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/precomp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/registry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/registry.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/textedit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/textedit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/winproc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/winproc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/bg-BG.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/cs-CZ.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/da-DK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/da-DK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/el-GR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/el-GR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/et-EE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/et-EE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/fi-FI.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/fi-FI.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/he-IL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hr-HR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hr-HR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hu-HU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hy-AM.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hy-AM.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/it-IT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/lt-LT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/lt-LT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ms-MY.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ms-MY.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/nl-NL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/no-NO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pt-BR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pt-BR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sk-SK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sl-SI.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sl-SI.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sq-AL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sv-SE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sv-SE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/th-TH.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/th-TH.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/uk-UA.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/taskmgr/taskmgr.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/taskmgr/taskmgr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/services/w32time/w32time.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/services/w32time/w32time.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/setup/lib/mui.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/setup/lib/mui.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot/bootdata/livecd.ini" beforeDir="false" afterPath="$PROJECT_DIR$/boot/bootdata/livecd.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot/bootdata/txtsetup.sif" beforeDir="false" afterPath="$PROJECT_DIR$/boot/bootdata/txtsetup.sif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/mmsys/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/mmsys/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/directx/dsound_new/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/directx/dsound_new/precomp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/ctf.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/ctf.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/imm.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/imm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/imm32.spec" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/imm32.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/keymsg.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/keymsg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/precomp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/adapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/adapter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/api.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/api.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/connection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/connection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dispatcher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dispatcher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dll.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dll.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dma_slave.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dma_slave.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm_port.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm_port.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_dmus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_topology.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_topology.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavecyclic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavepci.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavert.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/interrupt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/interrupt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irpstream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irpstream.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_dmus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_fmsynth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_fmsynth.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_dmus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavecyclic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavepci.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavert.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pool.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_dmus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_topology.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_topology.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavecyclic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavepci.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavert.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavertstream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavertstream.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/power.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/power.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/propertyhandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/propertyhandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/purecall.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/purecall.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/registry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/registry.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/resource.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/service_group.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/service_group.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/undoc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/undoc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/unregister.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/unregister.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/version.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/version.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/hdaudbus/hdaudbus.h" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/hdaudbus/hdaudbus.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hal/halx86/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hal/halx86/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdk/include/psdk/imm.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/psdk/imm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdk/include/reactos/imm32_undoc.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/reactos/imm32_undoc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/defwnd.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/defwnd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/input.h" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/input.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/keyboard.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/misc.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/misc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/msgqueue.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/msgqueue.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/ntuser.h" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/ntuser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/sysparams.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/sysparams.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win32ss/user/user32/windows/defwnd.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/user32/windows/defwnd.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="jpb &lt;jakub.baranski.33@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="windivs8-dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2W8CQ2yuP74zeAwLG4VNxRMV900" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jpb/reactos&quot;
-  }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="reactos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="reactos" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)">
-      <created>1695754904560</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695754904560</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)">
-      <created>1695755070023</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695755070023</updated>
-    </task>
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="" />
-      <created>1696104801003</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1696104801003</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Bugfixes">
-      <created>1696104969089</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696104969089</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Remove HELP bar from CMD">
-      <created>1696105260538</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696105260538</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Update version">
-      <created>1697384414138</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1697384414138</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixes">
-      <created>1698702123341</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698702123341</updated>
-    </task>
-    <task id="LOCAL-00007" summary="merge">
-      <created>1698703391129</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698703391129</updated>
-    </task>
-    <task id="LOCAL-00008" summary="merge">
-      <created>1698703583232</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698703583232</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,32 +140,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="windivs7-dev" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Windivs branding into RApps&#10;&#10;(cherry picked from commit 4289bb182cb6f09aaffd3d18d3b1a963e485ea98)" />
-    <MESSAGE value="Change branding from ReactOS to Windivs across more of the OS&#10;&#10;(cherry picked from commit 4a71d2d821624a9b73055c4459d54a8e69b604eb)" />
-    <MESSAGE value="Bugfixes" />
-    <MESSAGE value="Remove HELP bar from CMD" />
-    <MESSAGE value="Update version" />
-    <MESSAGE value="fixes" />
-    <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="ReactOS Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReactOS Merge" />
   </component>
 </project>
