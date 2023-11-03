@@ -1,5 +1,5 @@
 /*
- * PROJECT:     Windivs Task Manager
+ * PROJECT:     ReactOS Task Manager
  * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
  * PURPOSE:     Application Entry-point
  * COPYRIGHT:   Copyright 1999-2001 Brian Palmer <brianp@reactos.org>
@@ -783,7 +783,7 @@ void OnSize( WPARAM nType, int cx, int cy )
 void LoadSettings(void)
 {
     HKEY   hKey;
-    WCHAR  szSubKey[] = L"Software\\Windivs\\TaskManager";
+    WCHAR  szSubKey[] = L"Software\\ReactOS\\TaskManager";
     int    i;
     DWORD  dwSize;
 
@@ -846,7 +846,7 @@ void LoadSettings(void)
 void SaveSettings(void)
 {
     HKEY hKey;
-    WCHAR szSubKey[] = L"Software\\Windivs\\TaskManager";
+    WCHAR szSubKey[] = L"Software\\ReactOS\\TaskManager";
 
     /* Open (or create) the key */
     if (RegCreateKeyExW(HKEY_CURRENT_USER, szSubKey, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_WRITE, NULL, &hKey, NULL) != ERROR_SUCCESS)
@@ -1058,10 +1058,10 @@ void TaskManager_OnTabWndSelChange(void)
 
 BOOL ConfirmMessageBox(HWND hWnd, LPCWSTR Text, LPCWSTR Title, UINT Type)
 {
-    UINT positive = (Type & 0xF) <= MB_OKCANCEL ? IDOK : IDYES;
+    UINT positive = ((Type & 0xF) <= MB_OKCANCEL ? IDOK : IDYES);
     if (GetKeyState(VK_SHIFT) < 0)
         return TRUE;
-    return MessageBoxW(hWnd, Text, Title, Type) == positive;
+    return (MessageBoxW(hWnd, Text, Title, Type) == positive);
 }
 
 VOID ShowWin32Error(DWORD dwError)
