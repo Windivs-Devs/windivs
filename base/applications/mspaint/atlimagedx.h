@@ -50,7 +50,7 @@ public:
         return TRUE;
     }
 
-    HRESULT LoadDx(LPCTSTR pszFileName, float *pxDpi, float *pyDpi) throw()
+    HRESULT LoadDx(LPCWSTR pszFileName, float *pxDpi, float *pyDpi) throw()
     {
         // convert the file name string into Unicode
         CStringW pszNameW(pszFileName);
@@ -81,8 +81,8 @@ public:
         return (status == Ok ? S_OK : E_FAIL);
     }
 
-    HRESULT SaveDx(LPCTSTR pszFileName, REFGUID guidFileType = GUID_NULL,
-                   float xDpi = 0, float yDpi = 0) const throw()
+    HRESULT SaveDx(LPCWSTR pszFileName, REFGUID guidFileType = GUID_NULL,
+                   float xDpi = 0, float yDpi = 0) throw()
     {
         using namespace Gdiplus;
         ATLASSERT(m_hbm);
@@ -112,6 +112,24 @@ public:
         // set the resolution
         SetResolution(pBitmap, xDpi, yDpi);
 
+        // Get encoders
+        UINT cEncoders = 0;
+        ImageCodecInfo* pEncoders = GetAllEncoders(cEncoders);
+
+        // if the file type is null, get the file type from extension
+        CLSID clsid;
+        if (::IsEqualGUID(guidFileType, GUID_NULL))
+        {
+            CStringW strExt(PathFindExtensionW(pszFileName));
+            clsid = FindCodecForExtension(strExt, pEncoders, cEncoders);
+        }
+        else
+        {
+            clsid = FindCodecForFileType(guidFileType, pEncoders, cEncoders);
+        }
+
+        delete[] pEncoders;
+
         // save to file
         Status status;
         status = GetCommon().SaveImageToFile(pBitmap, pszNameW, &clsid, NULL);
@@ -131,9 +149,39 @@ protected:
         return reinterpret_cast<TYPE>(proc);
     }
 
-    typedef St (WINGDIPAPI *GETIMAGEHORIZONTALRESOLUTION)(Im *, float*);
-    typedef St (WINGDIPAPI *GETIMAGEVERTICALRESOLUTION)(Im *, float*);
-    typedef St (WINGDIPAPI *BITMAPSETRESOLUTION)(Bm *, float, float);
+    // CImage::FindCodecForExtension is private. We have to duplicate it at here...
+    static CLSID
+    FindCodecForExtension(LPCWSTR dotext, const Gdiplus::ImageCodecInfo *pCodecs, UINT nCodecs)
+    {
+        for (UINT i = 0; i < nCodecs; ++i)
+        {
+            CStringW strSpecs(pCodecs[i].FilenameExtension);
+            int ichOld = 0, ichSep;
+            for (;;)
+            {
+                ichSep = strSpecs.Find(L';', ichOld);
+
+                CStringW strSpec;
+                if (ichSep < 0)
+                    strSpec = strSpecs.Mid(ichOld);
+                else
+                    strSpec = strSpecs.Mid(ichOld, ichSep - ichOld);
+
+                int ichDot = strSpec.ReverseFind(L'.');
+                if (ichDot >= 0)
+                    strSpec = strSpec.Mid(ichDot);
+
+                if (!dotext || strSpec.CompareNoCase(dotext) == 0)
+                    return pCodecs[i].Clsid;
+
+                if (ichSep < 0)
+                    break;
+
+                ichOld = ichSep + 1;
+            }
+        }
+        return CLSID_NULL;
+    }
 
     GETIMAGEHORIZONTALRESOLUTION    GetImageHorizontalResolution;
     GETIMAGEVERTICALRESOLUTION      GetImageVerticalResolution;
