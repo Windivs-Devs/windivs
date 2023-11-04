@@ -255,55 +255,6 @@ void ToolsModel::NotifyZoomChanged()
         canvasWindow.SendMessage(WM_TOOLSMODELZOOMCHANGED);
 }
 
-void ToolsModel::OnButtonDown(BOOL bLeftButton, LONG x, LONG y, BOOL bDoubleClick)
-{
-    m_pToolObject->beginEvent();
-    g_ptStart.x = g_ptEnd.x = x;
-    g_ptStart.y = g_ptEnd.y = y;
-    m_pToolObject->OnButtonDown(bLeftButton, x, y, bDoubleClick);
-    m_pToolObject->endEvent();
-}
-
-void ToolsModel::OnMouseMove(BOOL bLeftButton, LONG x, LONG y)
-{
-    m_pToolObject->beginEvent();
-    if (m_pToolObject->OnMouseMove(bLeftButton, x, y))
-    {
-        g_ptEnd.x = x;
-        g_ptEnd.y = y;
-    }
-    m_pToolObject->endEvent();
-}
-
-void ToolsModel::OnButtonUp(BOOL bLeftButton, LONG x, LONG y)
-{
-    m_pToolObject->beginEvent();
-    if (m_pToolObject->OnButtonUp(bLeftButton, x, y))
-    {
-        g_ptEnd.x = x;
-        g_ptEnd.y = y;
-    }
-    m_pToolObject->endEvent();
-}
-
-void ToolsModel::OnEndDraw(BOOL bCancel)
-{
-    ATLTRACE("ToolsModel::OnEndDraw(%d)\n", bCancel);
-    m_pToolObject->beginEvent();
-    m_pToolObject->OnEndDraw(bCancel);
-    m_pToolObject->endEvent();
-}
-
-void ToolsModel::OnDrawOverlayOnImage(HDC hdc)
-{
-    m_pToolObject->OnDrawOverlayOnImage(hdc);
-}
-
-void ToolsModel::OnDrawOverlayOnCanvas(HDC hdc)
-{
-    m_pToolObject->OnDrawOverlayOnCanvas(hdc);
-}
-
 void ToolsModel::resetTool()
 {
     m_pToolObject->reset();
@@ -315,9 +266,4 @@ void ToolsModel::selectAll()
     OnButtonDown(TRUE, 0, 0, FALSE);
     OnMouseMove(TRUE, imageModel.GetWidth(), imageModel.GetHeight());
     OnButtonUp(TRUE, imageModel.GetWidth(), imageModel.GetHeight());
-}
-
-void ToolsModel::SpecialTweak(BOOL bMinus)
-{
-    m_pToolObject->OnSpecialTweak(bMinus);
 }
