@@ -1,125 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5810d0d5-75ef-4507-bff2-92e27f6590fe" name="Changes" comment="ReactOS Merge">
-      <change afterPath="$PROJECT_DIR$/dll/win32/imm32/softkbd.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/applications/mspaint/img/airbrush.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/applications/mspaint/img/color.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/applications/mspaint/img/fill.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/applications/mspaint/img/pen.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/applications/mspaint/img/zoom.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dll/win32/shell32/CCopyMoveToMenu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dll/win32/shlwapi/utils.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/calc/resource.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/calc/resource.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/atlimagedx.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/atlimagedx.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/canvas.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/canvas.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/dialogs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/dialogs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/dib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/dib.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/drawing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/drawing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/drawing.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/drawing.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/fullscreen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/fullscreen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/fullscreen.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/fullscreen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/globalvar.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/globalvar.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/history.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/history.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/history.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/history.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/airbrush_cur.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/color_cur.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/fill_cur.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/fontstoolbar.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/fontstoolbar.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/handdrag.cur" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/handdrag.cur" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/horzskew.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/horzskew.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/horzstretch.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/horzstretch.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/iconbar.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/iconbar.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/nontransparent.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/nontransparent.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/paint.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/paint.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/paint.svg" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/paint.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/pen_cur.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/transparency.xcf" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/transparency.xcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/transparent.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/transparent.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/vertskew.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/vertskew.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/vertstretch.ico" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/img/vertstretch.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/icons/zoom_cur.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/bg-BG.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/cs-CZ.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/en-GB.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/en-GB.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/et-EE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/et-EE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/eu-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/eu-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/fr-FR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/fr-FR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/he-IL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/hu-HU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/it-IT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/nl-NL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/no-NO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/pt-BR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/pt-BR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/sk-SK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/sq-AL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/sv-SE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/sv-SE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/uk-UA.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/vi-VN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/vi-VN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-CN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-CN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-HK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-HK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-TW.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/lang/zh-TW.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/miniature.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/miniature.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/miniature.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/miniature.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/mouse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/precomp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/palette.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/palette.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/registry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/registry.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/registry.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/registry.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/rsrc.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/rsrc.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/selectionmodel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/sizebox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/sizebox.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/textedit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/textedit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/textedit.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/textedit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolbox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolbox.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolbox.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolbox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsettings.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsettings.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsettings.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/toolsmodel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/applications/mspaint/winproc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/winproc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/bg-BG.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/cs-CZ.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/da-DK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/da-DK.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/de-DE.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/el-GR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/el-GR.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/en-US.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/es-ES.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/et-EE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/et-EE.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/fi-FI.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/fi-FI.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/he-IL.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hr-HR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hr-HR.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hu-HU.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/hy-AM.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/hy-AM.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/id-ID.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/it-IT.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ja-JP.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/lt-LT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/lt-LT.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ms-MY.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ms-MY.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/nl-NL.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/no-NO.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pl-PL.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pt-BR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pt-BR.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/pt-PT.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ro-RO.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/ru-RU.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sk-SK.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sl-SI.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sl-SI.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sq-AL.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/sv-SE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/sv-SE.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/th-TH.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/th-TH.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/tr-TR.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/notepad/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/lang/uk-UA.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/applications/taskmgr/taskmgr.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/taskmgr/taskmgr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/services/w32time/w32time.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/services/w32time/w32time.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/setup/lib/mui.c" beforeDir="false" afterPath="$PROJECT_DIR$/base/setup/lib/mui.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/bootdata/livecd.ini" beforeDir="false" afterPath="$PROJECT_DIR$/boot/bootdata/livecd.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/bootdata/txtsetup.sif" beforeDir="false" afterPath="$PROJECT_DIR$/boot/bootdata/txtsetup.sif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/cpl/mmsys/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/mmsys/lang/ja-JP.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/directx/dsound_new/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/directx/dsound_new/precomp.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/ctf.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/ctf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/imm.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/imm.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/imm32.spec" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/imm32.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/keymsg.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/keymsg.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/imm32/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/imm32/precomp.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/lang/ro-RO.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/utils.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/adapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/adapter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/api.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/api.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/connection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/connection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dispatcher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dispatcher.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dll.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dll.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dma_slave.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/dma_slave.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm_port.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/drm_port.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_dmus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_topology.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_topology.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavecyclic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavepci.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/filter_wavert.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/interrupt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/interrupt.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irp.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irpstream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/irpstream.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_dmus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_fmsynth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/miniport_fmsynth.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_dmus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavecyclic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavepci.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pin_wavert.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/pool.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_dmus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_dmus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_topology.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_topology.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavecyclic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavecyclic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavepci.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavepci.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavert.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavert.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavertstream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/port_wavertstream.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/power.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/power.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/propertyhandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/propertyhandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/purecall.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/purecall.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/registry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/registry.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/resource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/service_group.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/service_group.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/undoc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/undoc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/unregister.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/unregister.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/version.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/backpln/portcls/version.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/wdm/audio/hdaudbus/hdaudbus.h" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/wdm/audio/hdaudbus/hdaudbus.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hal/halx86/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hal/halx86/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/include/psdk/imm.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/psdk/imm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/include/reactos/imm32_undoc.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/reactos/imm32_undoc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/defwnd.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/defwnd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/input.h" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/input.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/keyboard.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/misc.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/misc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/msgqueue.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/msgqueue.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/ntuser.h" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/ntuser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/ntuser/sysparams.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/ntuser/sysparams.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win32ss/user/user32/windows/defwnd.c" beforeDir="false" afterPath="$PROJECT_DIR$/win32ss/user/user32/windows/defwnd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/mspaint/winproc.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/mspaint/winproc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/notepad/rsrc.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/notepad/rsrc.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/rapps/include/appinfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/rapps/include/appinfo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/applications/regedit/regedit.rc" beforeDir="false" afterPath="$PROJECT_DIR$/base/applications/regedit/regedit.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/bg-BG.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/cs-CZ.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/el-GR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/el-GR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/et-EE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/et-EE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/fr-FR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/fr-FR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/he-IL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/hu-HU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/it-IT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/nl-NL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/no-NO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/pt-BR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/pt-BR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/sk-SK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/sq-AL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/uk-UA.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/zh-CN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/zh-CN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/zh-HK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/zh-HK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/access/lang/zh-TW.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/access/lang/zh-TW.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/eject.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/eject.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/enum.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/enum.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/hotplug.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/fr-FR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/fr-FR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-CN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-CN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-HK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-HK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-TW.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/lang/zh-TW.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/cpl/hotplug/resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/cpl/hotplug/resource.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lanconnectui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lanconnectui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/bg-BG.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/cs-CZ.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/da-DK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/da-DK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/el-GR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/el-GR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/fr-FR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/fr-FR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/he-IL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/hi-IN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/hi-IN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/hu-HU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/it-IT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/nl-NL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/no-NO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/sk-SK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/sq-AL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/sv-SE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/sv-SE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/uk-UA.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-CN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-CN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-HK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-HK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-TW.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/lang/zh-TW.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/shellext/netshell/res/netshell.rgs" beforeDir="false" afterPath="$PROJECT_DIR$/dll/shellext/netshell/res/netshell.rgs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/aclui/aclui.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/aclui/aclui.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/advapi32/wine/security.c" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/advapi32/wine/security.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/bg-BG.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/bg-BG.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/cs-CZ.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/cs-CZ.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/da-DK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/da-DK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/de-DE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/de-DE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/el-GR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/el-GR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/en-US.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/en-US.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/es-ES.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/es-ES.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/fr-FR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/fr-FR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/he-IL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/he-IL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/hu-HU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/hu-HU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/id-ID.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/id-ID.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/it-IT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/it-IT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ja-JP.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ja-JP.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/nl-NL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/nl-NL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/no-NO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/no-NO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/pl-PL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/pl-PL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/pt-PT.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/pt-PT.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ro-RO.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ro-RO.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ru-RU.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/ru-RU.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sk-SK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sk-SK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sq-AL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sq-AL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sv-SE.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/sv-SE.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/tr-TR.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/tr-TR.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/uk-UA.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/uk-UA.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-CN.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-CN.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-HK.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-HK.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-TW.rc" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/netcfgx/lang/zh-TW.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/CCopyToMenu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/CCopyToMoveToMenu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/CMoveToMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/CCopyMoveToMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shell32/precomp.h" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shell32/precomp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shlwapi/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shlwapi/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dll/win32/shlwapi/shlwapi.spec" beforeDir="false" afterPath="$PROJECT_DIR$/dll/win32/shlwapi/shlwapi.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdk/include/reactos/shlwapi_undoc.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/reactos/shlwapi_undoc.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +222,36 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectId" id="2XraeRhdkzMuweHNXGRLgx9KHzn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="ReactOS Merge">
+      <created>1699049328776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699049328776</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5810d0d5-75ef-4507-bff2-92e27f6590fe" name="Changes" comment="ReactOS Merge" />
+      <created>1699389748216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699389748216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
