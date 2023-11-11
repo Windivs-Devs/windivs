@@ -1,6 +1,5 @@
 /* Copyright (C) 1994 DJ Delorie, see COPYING.DJ for details */
 #include <precomp.h>
-#include <compat_undoc.h>
 
 /*
  * @implemented
@@ -13,9 +12,12 @@ _memicmp(const void *s1, const void *s2, size_t n)
     {
         if (!s1 || !s2)
         {
-            if (n)
+            if (n != 0)
+            {
                 MSVCRT_INVALID_PMT(NULL, EINVAL);
-            return n ? _NLSCMPERROR : 0;
+                return _NLSCMPERROR;
+            }
+            return 0;
         }
     }
 
