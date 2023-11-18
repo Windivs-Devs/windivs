@@ -50,7 +50,7 @@ BOOL OpenMailer(HWND hWnd, LPCWSTR pszPathName);
 #define RAD2DEG(radian) ((LONG)(((radian) * 180) / M_PI))
 
 template <typename T>
-void Swap(T& a, T& b)
+inline void Swap(T& a, T& b)
 {
     T tmp = a;
     a = b;
