@@ -409,6 +409,7 @@ RestrictDrawDirection(DIRECTION dir, LONG x0, LONG y0, LONG& x1, LONG& y1)
 struct SmoothDrawTool : ToolBase
 {
     DIRECTION m_direction = NO_DIRECTION;
+    BOOL m_bShiftDown = FALSE;
 
     SmoothDrawTool(TOOLTYPE type) : ToolBase(type)
     {
@@ -421,11 +422,12 @@ struct SmoothDrawTool : ToolBase
         m_direction = NO_DIRECTION;
         imageModel.PushImageForUndo();
         imageModel.NotifyImageChanged();
+        m_bShiftDown = (::GetKeyState(VK_SHIFT) & 0x8000); // Is Shift key pressed?
     }
 
     BOOL OnMouseMove(BOOL bLeftButton, LONG& x, LONG& y) override
     {
-        if (::GetKeyState(VK_SHIFT) < 0) // Shift key is pressed
+        if (m_bShiftDown)
         {
             if (m_direction == NO_DIRECTION)
             {
@@ -438,14 +440,10 @@ struct SmoothDrawTool : ToolBase
         }
         else
         {
-            if (m_direction != NO_DIRECTION)
-            {
-                m_direction = NO_DIRECTION;
-                draw(bLeftButton, x, y);
-                g_ptStart.x = g_ptEnd.x = x;
-                g_ptStart.y = g_ptEnd.y = y;
-                return TRUE;
-            }
+            draw(bLeftButton, x, y);
+            g_ptStart.x = g_ptEnd.x = x;
+            g_ptStart.y = g_ptEnd.y = y;
+            return TRUE;
         }
 
         draw(bLeftButton, x, y);
@@ -455,7 +453,7 @@ struct SmoothDrawTool : ToolBase
 
     BOOL OnButtonUp(BOOL bLeftButton, LONG& x, LONG& y) override
     {
-        if (m_direction != NO_DIRECTION)
+        if (m_bShiftDown && m_direction != NO_DIRECTION)
         {
             RestrictDrawDirection(m_direction, g_ptStart.x, g_ptStart.y, x, y);
         }

@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for Windivs
+ * PROJECT:    PAINT for ReactOS
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Window procedure of the main window and all children apart from
  *             hPalWin, hToolSettings and hSelection
@@ -110,6 +110,16 @@ void CMainWindow::alignChildrenToMainWindow()
 void CMainWindow::saveImage(BOOL overwrite)
 {
     canvasWindow.finishDrawing();
+
+    // Is the extension not supported?
+    PWCHAR pchDotExt = PathFindExtensionW(g_szFileName);
+    if (pchDotExt && *pchDotExt && !CImageDx::IsExtensionSupported(pchDotExt))
+    {
+        // Remove the extension
+        PathRemoveExtensionW(g_szFileName);
+        // No overwrite
+        overwrite = FALSE;
+    }
 
     if (g_isAFile && overwrite)
     {

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     PAINT for Windivs
+ * PROJECT:     PAINT for ReactOS
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     English (United Kingdom) resource file
  * TRANSLATOR:  Copyright 2009 Benedikt Freisen <b.freisen@gmx.net>
@@ -27,7 +27,7 @@ BEGIN
         MENUITEM "Send...", IDM_FILESEND
         MENUITEM SEPARATOR
         MENUITEM "Set as wallpaper (Tiled)", IDM_FILEASWALLPAPERPLANE
-        MENUITEM "Set as wallpaper (Centered)", IDM_FILEASWALLPAPERCENTERED
+        MENUITEM "Set as wallpaper (Centred)", IDM_FILEASWALLPAPERCENTERED
         MENUITEM "Set as wallpaper (Stretched)", IDM_FILEASWALLPAPERSTRETCHED
         MENUITEM SEPARATOR
         MENUITEM "Most recently used file", IDM_FILEMOSTRECENTLYUSEDFILE, GRAYED
@@ -114,7 +114,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "Rotate/&Mirror...\tCtrl+R", IDM_IMAGEROTATEMIRROR
         MENUITEM "&Stretch/Skew...\tCtrl+W", IDM_IMAGESTRETCHSKEW
-        MENUITEM "&Invert colors\tCtrl+I", IDM_IMAGEINVERTCOLORS
+        MENUITEM "&Invert colours\tCtrl+I", IDM_IMAGEINVERTCOLORS
     END
 END
 
@@ -230,7 +230,7 @@ STRINGTABLE
 BEGIN
     IDS_PROGRAMNAME "Paint"
     IDS_WINDOWTITLE "%s - Paint"
-    IDS_INFOTITLE "Paint for Windivs"
+    IDS_INFOTITLE "Paint for ReactOS"
     IDS_INFOTEXT "Available under the GNU Lesser General Public License (LGPL, see www.gnu.org)"
     IDS_SAVEPROMPTTEXT "Do you want to save the changes to %s?"
     IDS_DEFAULTFILENAME "Unnamed"

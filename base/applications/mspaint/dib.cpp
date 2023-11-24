@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for Windivs
+ * PROJECT:    PAINT for ReactOS
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Some DIB related functions
  * COPYRIGHT:  Copyright 2015 Benedikt Freisen <b.freisen@gmx.net>
@@ -228,7 +228,10 @@ HBITMAP InitializeImage(LPCWSTR name, LPWIN32_FIND_DATAW pFound, BOOL isFile)
     COLORREF white = RGB(255, 255, 255);
     HBITMAP hBitmap = CreateColorDIB(registrySettings.BMPWidth, registrySettings.BMPHeight, white);
     if (hBitmap == NULL)
+    {
+        ShowOutOfMemory();
         return NULL;
+    }
 
     HDC hScreenDC = ::GetDC(NULL);
     g_xDpi = (float)::GetDeviceCaps(hScreenDC, LOGPIXELSX);

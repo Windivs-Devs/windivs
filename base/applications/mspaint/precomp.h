@@ -13,7 +13,6 @@
 #include <tchar.h>
 #include <atlbase.h>
 #include <atlcom.h>
-#include <atlimage.h>
 #include <atlpath.h>
 #include <atlstr.h>
 #include <atlwin.h>
@@ -28,10 +27,6 @@
 #include <htmlhelp.h>
 #include <strsafe.h>
 #include "atlimagedx.h"
-#ifdef _DEBUG
-    #define _CRTDBG_MAP_ALLOC
-    #include <crtdbg.h>
-#endif
 
 #include <debug.h>
 

@@ -1,5 +1,5 @@
 /*
- * PROJECT:    PAINT for Windivs
+ * PROJECT:    PAINT for ReactOS
  * LICENSE:    LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:    Initializing everything
  * COPYRIGHT:  Copyright 2015 Benedikt Freisen <b.freisen@gmx.net>
@@ -21,6 +21,18 @@ BOOL g_showGrid = FALSE;
 CMainWindow mainWindow;
 
 /* FUNCTIONS ********************************************************/
+
+void ShowOutOfMemory(void)
+{
+    WCHAR szText[256];
+    ::FormatMessageW(FORMAT_MESSAGE_IGNORE_INSERTS | FORMAT_MESSAGE_FROM_SYSTEM,
+                     NULL,
+                     ERROR_OUTOFMEMORY,
+                     0,
+                     szText, _countof(szText),
+                     NULL);
+    mainWindow.MessageBox(szText, NULL, MB_ICONERROR);
+}
 
 // get file name extension from filter string
 static BOOL
@@ -300,11 +312,6 @@ HWND CMainWindow::DoCreate()
 INT WINAPI
 wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, INT nCmdShow)
 {
-#ifdef _DEBUG
-    // Report any memory leaks on exit
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-#endif
-
     g_hinstExe = hInstance;
 
     // Initialize common controls library

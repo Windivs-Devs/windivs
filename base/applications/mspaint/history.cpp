@@ -197,6 +197,7 @@ void ImageModel::Crop(int nWidth, int nHeight, int nOffsetX, int nOffsetY)
     {
         ShowOutOfMemory();
         return;
+    }
 
     // Put the master image as a sub-image
     RECT rcPart = { -nOffsetX, -nOffsetY, GetWidth() - nOffsetX, GetHeight() - nOffsetY };
@@ -291,8 +292,7 @@ void ImageModel::RotateNTimes90Degrees(int iN)
         case 3:
         {
             HBITMAP hbm = Rotate90DegreeBlt(m_hDrawingDC, GetWidth(), GetHeight(), iN == 1, FALSE);
-            if (hbm)
-                PushImageForUndo(hbm);
+            PushImageForUndo(hbm);
             break;
         }
         case 2:
@@ -334,8 +334,7 @@ void ImageModel::PushBlackAndWhite()
     HBITMAP hNewBitmap = ConvertToBlackAndWhite(hBitmap);
     UnlockBitmap(hBitmap);
 
-    if (hNewBitmap)
-        PushImageForUndo(hNewBitmap);
+    PushImageForUndo(hNewBitmap);
 }
 
 HBITMAP ImageModel::LockBitmap()
@@ -359,7 +358,7 @@ void ImageModel::SelectionClone(BOOL bUndoable)
         return;
 
     if (bUndoable)
-        PushImageForUndo(CopyBitmap());
+        PushImageForUndo();
 
     selectionModel.DrawSelection(m_hDrawingDC, paletteModel.GetBgColor(),
                                  toolsModel.IsBackgroundTransparent());
