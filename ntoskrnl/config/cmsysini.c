@@ -26,7 +26,11 @@ BOOLEAN HvShutdownComplete;
 PVOID CmpRegistryLockCallerCaller, CmpRegistryLockCaller;
 BOOLEAN CmpFlushOnLockRelease;
 BOOLEAN CmpSpecialBootCondition;
-BOOLEAN CmpNoWrite;
+
+/* Disable registry hive writes, until the IO subsystem is initialized
+ * and disk access is enabled (when the SM signals so after AUTOCHK) */
+BOOLEAN CmpNoWrite = TRUE;
+
 BOOLEAN CmpWasSetupBoot;
 BOOLEAN CmpProfileLoaded;
 BOOLEAN CmpNoVolatileCreates;
@@ -1365,9 +1369,10 @@ CmpInitializeHiveList(VOID)
     ULONG i;
     USHORT RegStart;
     PSECURITY_DESCRIPTOR SecurityDescriptor;
+
     PAGED_CODE();
 
-    /* Allow writing for now */
+    /* Reenable hive writes now */
     CmpNoWrite = FALSE;
 
     /* Build the file name and registry name strings */
