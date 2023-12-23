@@ -7,7 +7,7 @@ LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
  * in front of the FileDescription value of the version stamping.
  */
 #undef REACTOS_STR_FILE_DESCRIPTION
-#define REACTOS_STR_FILE_DESCRIPTION    L"\x200e\x200e" L"ReactOS-Welcome"
+#define REACTOS_STR_FILE_DESCRIPTION    L"\x200e\x200e" L"Windivs-Welcome"
 #include <reactos/version.rc>
 
 /* String Tables */
@@ -16,7 +16,7 @@ LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
 STRINGTABLE
 BEGIN
     IDS_APPTITLE "ברוכים הבאים - ReactOS"
-    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
+    IDS_DEFAULT_TOPIC_TITLE "Windivs"
     IDS_DEFAULT_TOPIC_DESC "ברוכים הבאים למערכת ההפעלה ReactOS,\nבחר נושא מצד ימין"
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "הראה חלון זה שוב"

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Calc
+ * PROJECT:     Windivs Calc
  * LICENSE:     LGPL-2.0-or-later (https://spdx.org/licenses/LGPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2009 Petru Dimitriu <petrimetri@gmail.com>
@@ -413,7 +413,7 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "Minicalculator ReactOS"
+    IDS_CALC_NAME "Minicalculator Windivs"
     IDS_AUTHOR "Scris de Carlo Bramini"
 END
 

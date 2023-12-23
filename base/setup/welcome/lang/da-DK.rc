@@ -5,8 +5,8 @@ LANGUAGE LANG_DANISH, SUBLANG_DEFAULT
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS - Velkommen"
-    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
+    IDS_APPTITLE "Windivs - Velkommen"
+    IDS_DEFAULT_TOPIC_TITLE "Windivs"
     IDS_DEFAULT_TOPIC_DESC "Velkommen til ReactOS operativ System.\n\nKlik på et emne til venstre."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Vis denne dialog igen ved opstart"

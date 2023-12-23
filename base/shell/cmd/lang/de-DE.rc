@@ -52,7 +52,7 @@ ERRORLEVEL wird auf den Offset der Taste, welche der Benutzer gedrückt hat, ges
     STRING_CMD_HELP5 "  [Bash Dateinamen-Vervollständigung]"
     STRING_CMD_HELP6 "  [Verzeichnis-Stack]"
     STRING_CMD_HELP7 "  [Weiterleitung und Piping]"
-    STRING_CMD_HELP8 "Startet eine neue Instanz der ReactOS Eingabeaufforderung.\n\n\
+    STRING_CMD_HELP8 "Startet eine neue Instanz der Windivs Eingabeaufforderung.\n\n\
 CMD [/[C|K] Befehl][/P][/Q][/T:bf]\n\n\
   /C Befehl     Führt den Befehl in der Zeichenfolge aus. Anschließend\n\
                 wird diese Instanz beendet.\n\
@@ -440,10 +440,10 @@ VER [/C][/R][/W]\n\n\
  Free Software Foundation entweder in Version 2 oder\n\
  (nach eigenem Belieben) jeder höheren Version veröffentlicht, verändern."
     STRING_VERSION_HELP5 "\nSenden Sie Fehlerberichte an <ros-dev@reactos.org>.\n\
-Updates sind auf der offiziellen ReactOS-Webseite verfügbar:\n\
+Updates sind auf der offiziellen Windivs-Webseite verfügbar:\n\
 https://reactos.org"
     STRING_VERSION_HELP6 "\nFreeDOS-Version programmiert von:\n"
-    STRING_VERSION_HELP7 "\nReactOS-Version programmiert von:\n"
+    STRING_VERSION_HELP7 "\nWindivs-Version programmiert von:\n"
     STRING_VOL_HELP1 " Datenträger im Laufwerk %c ist %s\n"
     STRING_VOL_HELP2 " Datenträger im Laufwerk %c hat keine Bezeichnung.\n"
     STRING_VOL_HELP3 " Datenträger-Seriennummer: %04X-%04X\n"
@@ -527,9 +527,9 @@ Titel         neuer Titel"
     STRING_REPLACE_ERROR5 "Zugriff verweigert - %s\n"
     STRING_REPLACE_ERROR6 "Keine Dateien gefunden - %s\n"
     STRING_REPLACE_ERROR7 "Erweiterter Fehler 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Eingabeaufforderung                            HELP eingeben = Hilfe  "
-    STRING_REACTOS_VERSION "ReactOS [Version %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Eingabeaufforderung\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Windivs Eingabeaufforderung                            HELP eingeben = Hilfe  "
+    STRING_REACTOS_VERSION "Windivs [Version %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Eingabeaufforderung\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Läuft in: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d Datei(en) kopiert\n"

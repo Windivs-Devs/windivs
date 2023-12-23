@@ -237,7 +237,7 @@ CreateCommonFreeLdrSections(
 
     /* TitleText */
     IniCacheInsertKey(IniSection, NULL, INSERT_LAST,
-                      L"TitleText", L"ReactOS Boot Manager");
+                      L"TitleText", L"Windivs Boot Manager");
 
     /* MinimalUI */
     IniCacheInsertKey(IniSection, NULL, INSERT_LAST,
@@ -1256,7 +1256,7 @@ FreeLdrEnumerateBootEntries(
             goto DoEnum;
         }
 
-        // TODO: What to do with "Windows" ; "WindowsNT40" ; "ReactOSSetup" ?
+        // TODO: What to do with "Windows" ; "WindowsNT40" ; "WindivsSetup" ?
         if ((_wcsicmp(KeyData, L"Windows2003")     == 0) ||
             (_wcsicmp(KeyData, L"\"Windows2003\"") == 0))
         {

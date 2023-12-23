@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Command shell
+ * PROJECT:     Windivs Command shell
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Portuguese (Brazilian) resource file
  * TRANSLATOR:  Copyright 2022 Fernando Isnaldo Silva de Faria <fernando-i@outlook.com>
@@ -55,7 +55,7 @@ CHOICE [/C[:]opções][/N][/S][/T[:]c,nn][texto]\n\n\
     STRING_CMD_HELP5 "[conclusão do nome do arquivo Bash]"
     STRING_CMD_HELP6 "[pilha de diretórios]"
     STRING_CMD_HELP7 "[redirecionamentos e tubulação]"
-    STRING_CMD_HELP8 "Inicia uma nova instância do interpretador da linha de comando ReactOS.\n\n\
+    STRING_CMD_HELP8 "Inicia uma nova instância do interpretador da linha de comando Windivs.\n\n\
 CMD [/[C|K] comando] [/P][/Q][/T:bf]\n\n\
   /C comando   Executa o comando especificado e termina.\n\
   Comando /K   Executa o comando especificado e permanece.\n\
@@ -470,7 +470,7 @@ lista de créditos. "
     STRING_VERSION_HELP5 "\nEnvie relatórios de bug para <ros-dev@reactos.org>.\n\
 As atualizações estão disponíveis em: http://www.reactos.org"
     STRING_VERSION_HELP6 "\nVersão do FreeDOS escrita por:\n"
-    STRING_VERSION_HELP7 "\nReactOS versão escrita por:\n"
+    STRING_VERSION_HELP7 "\nWindivs versão escrita por:\n"
     STRING_VOL_HELP1 "O volume na unidade %c é %s\n"
     STRING_VOL_HELP2 "Volume na unidade %c não tem nome.\n"
     STRING_VOL_HELP3 "Número de série do volume é %04X-%04X\n"
@@ -554,9 +554,9 @@ título      Novo título\n"
     STRING_REPLACE_ERROR5 "Acesso negado - %s\n"
     STRING_REPLACE_ERROR6 "Nenhum arquivo encontrado - %s\n"
     STRING_REPLACE_ERROR7 "Erro estendido 32\n"
-    STRING_CMD_INFOLINE "Prompt de comandos do ReactOS \tHELP = Ajuda"
-    STRING_REACTOS_VERSION "ReactOS [Versão %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Interpretador de linha de comando\nVersão %s %s"
+    STRING_CMD_INFOLINE "Prompt de comandos do Windivs \tHELP = Ajuda"
+    STRING_REACTOS_VERSION "Windivs [Versão %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Interpretador de linha de comando\nVersão %s %s"
     STRING_VERSION_RUNNING_ON "Em execução em:"
     STRING_VERSION_RUNVER "%s [Versão %d.%d.%d] %s"
     STRING_COPY_FILE "%d arquivo(s) copiado(s)\n"

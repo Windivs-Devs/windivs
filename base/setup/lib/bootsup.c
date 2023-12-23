@@ -71,58 +71,58 @@ CreateFreeLoaderReactOSEntries(
     Options->OsLoadPath = ArcPath;
 
     /* ReactOS */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS");
-    BootEntry->FriendlyName = L"\"ReactOS\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs");
+    BootEntry->FriendlyName = L"\"Windivs\"";
     Options->OsLoadOptions  = L"/FASTDETECT";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs"));
 
     /* ReactOS_Debug */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Debug");
-    BootEntry->FriendlyName = L"\"ReactOS (Debug)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Debug");
+    BootEntry->FriendlyName = L"\"Windivs (Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Debug"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Debug"));
 
 #ifdef _WINKD_
     /* ReactOS_VBoxDebug */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_VBoxDebug");
-    BootEntry->FriendlyName = L"\"ReactOS (VBox Debug)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_VBoxDebug");
+    BootEntry->FriendlyName = L"\"Windivs (VBox Debug)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=VBOX /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_VBoxDebug"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_VBoxDebug"));
 #endif
 #if DBG
 #ifndef _WINKD_
     /* ReactOS_KdSerial */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_KdSerial");
-    BootEntry->FriendlyName = L"\"ReactOS (RosDbg)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_KdSerial");
+    BootEntry->FriendlyName = L"\"Windivs (RosDbg)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /KDSERIAL";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_KdSerial"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_KdSerial"));
 #endif
 
     /* ReactOS_Screen */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Screen");
-    BootEntry->FriendlyName = L"\"ReactOS (Screen)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Screen");
+    BootEntry->FriendlyName = L"\"Windivs (Screen)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=SCREEN /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Screen"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Screen"));
 
     /* ReactOS_LogFile */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_LogFile");
-    BootEntry->FriendlyName = L"\"ReactOS (Log file)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_LogFile");
+    BootEntry->FriendlyName = L"\"Windivs (Log file)\"";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=FILE /SOS";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_LogFile"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_LogFile"));
 
     /* ReactOS_Ram */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_Ram");
-    BootEntry->FriendlyName = L"\"ReactOS (RAM Disk)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_Ram");
+    BootEntry->FriendlyName = L"\"Windivs (RAM Disk)\"";
     Options->OsLoadPath     = L"ramdisk(0)\\ReactOS";
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /RDPATH=reactos.img /RDIMAGEOFFSET=32256";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_Ram"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_Ram"));
 
     /* ReactOS_EMS */
-    // BootEntry->BootEntryKey = MAKESTRKEY(L"ReactOS_EMS");
-    BootEntry->FriendlyName = L"\"ReactOS (Emergency Management Services)\"";
+    // BootEntry->BootEntryKey = MAKESTRKEY(L"Windivs_EMS");
+    BootEntry->FriendlyName = L"\"Windivs (Emergency Management Services)\"";
     Options->OsLoadPath     = ArcPath;
     Options->OsLoadOptions  = L"/DEBUG /DEBUGPORT=COM1 /BAUDRATE=115200 /SOS /redirect=com2 /redirectbaudrate=115200";
-    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"ReactOS_EMS"));
+    AddBootStoreEntry(BootStoreHandle, BootEntry, MAKESTRKEY(L"Windivs_EMS"));
 #endif
 
 
@@ -130,15 +130,15 @@ CreateFreeLoaderReactOSEntries(
 #if DBG && !defined(_WINKD_)
     if (IsUnattendedSetup)
     {
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS_KdSerial");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs_KdSerial");
     }
     else
 #endif
     {
 #if DBG
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS_Debug");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs_Debug");
 #else
-        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"ReactOS");
+        BootOptions.CurrentBootEntryKey = MAKESTRKEY(L"Windivs");
 #endif
     }
 
@@ -315,9 +315,9 @@ SkipThisEntry:
     if (Type == FreeLdr && wcscmp(Data->SectionName, (PWSTR)BootEntry->BootEntryKey)== 0)
     {
         RtlStringCchPrintfW(Data->SectionName, ARRAYSIZE(Data->SectionName),
-                            L"ReactOS_%lu", Data->i);
+                            L"Windivs_%lu", Data->i);
         RtlStringCchPrintfW(Data->OsName, ARRAYSIZE(Data->OsName),
-                            L"\"ReactOS %lu\"", Data->i);
+                            L"\"Windivs %lu\"", Data->i);
         Data->i++;
     }
     return STATUS_SUCCESS;
@@ -345,8 +345,8 @@ UpdateFreeLoaderIni(
     Data.UseExistingEntry = TRUE;
     Data.i = 1;
     Data.ArcPath = ArcPath;
-    RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS");
-    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS\"");
+    RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs");
+    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs\"");
 
     //
     // FIXME: We temporarily use EnumerateBootStoreEntries, until
@@ -354,11 +354,11 @@ UpdateFreeLoaderIni(
     //
     Status = EnumerateBootStoreEntries(BootStoreHandle, EnumerateReactOSEntries, &Data);
 
-    /* Create a new "ReactOS" entry if there is none already existing that suits us */
+    /* Create a new "Windivs" entry if there is none already existing that suits us */
     if (!Data.UseExistingEntry)
     {
-        // RtlStringCchPrintfW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS_%lu", Data.i);
-        // RtlStringCchPrintfW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS %lu\"", Data.i);
+        // RtlStringCchPrintfW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs_%lu", Data.i);
+        // RtlStringCchPrintfW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs %lu\"", Data.i);
 
         BootEntry->Version = FreeLdr;
         BootEntry->BootFilePath = NULL;
@@ -406,8 +406,8 @@ UpdateBootIni(
     Data.UseExistingEntry = TRUE;
     // Data.i = 1;
     Data.ArcPath = EntryName;
-    // RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"ReactOS");
-    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"ReactOS\"");
+    // RtlStringCchCopyW(Data.SectionName, ARRAYSIZE(Data.SectionName), L"Windivs");
+    RtlStringCchCopyW(Data.OsName, ARRAYSIZE(Data.OsName), L"\"Windivs\"");
 
     //
     // FIXME: We temporarily use EnumerateBootStoreEntries, until
@@ -916,7 +916,7 @@ InstallFatBootcodeToPartition(
         DPRINT1("Update 'boot.ini'\n");
         Status = UpdateBootIni(SystemRootPath->Buffer,
                                L"C:\\bootsect.ros",
-                               L"\"ReactOS\"");
+                               L"\"Windivs\"");
         if (!NT_SUCCESS(Status))
         {
             DPRINT1("UpdateBootIni() failed (Status %lx)\n", Status);

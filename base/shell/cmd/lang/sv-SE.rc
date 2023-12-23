@@ -50,7 +50,7 @@ ERRORLEVEL sätts till nummer för knappen användaren väljer.\n"
     STRING_CMD_HELP5 "  [Bash filnamnändelse]"
     STRING_CMD_HELP6 "  [mapplista]"
     STRING_CMD_HELP7 "  [omadressering och datakanaler]"
-    STRING_CMD_HELP8 "Starta en ny instans av ReactOS kommandotolk.\n\n\
+    STRING_CMD_HELP8 "Starta en ny instans av Windivs kommandotolk.\n\n\
 CMD [/[C|K] kommando][/P][/Q][/T:bf]\n\n\
   /C kommando  Kör angivet kommando och avslutar.\n\
   /K kommando  Kör angivet kommando men avslutar inte.\n\
@@ -309,7 +309,7 @@ Ledetexten kan bli satt sammen av normale tegn och følgende spesielle koder:\n\
   $Q   = (likhetstegn)\n\
   $S   (space)\n\
   $T   aktuell klokkeslett\n\
-  $V   Versionsnummer för ReactOS\n\
+  $V   Versionsnummer för Windivs\n\
   $_   Retur och linjeskift\n\
   $$   $ (dollar tegn)\n"
     STRING_PROMPT_HELP2 "  $+   Visa aktuell dybde av mappstakken"
@@ -420,7 +420,7 @@ VERIFY [ON | OFF]\n\n\
 Skriv VERIFY uten parametre för att visa aktuell VERIFY inställninar.\n"
     STRING_VERIFY_HELP2 "VERIFY är %s.\n"
     STRING_VERIFY_HELP3 "Måste ange ON eller OFF."
-    STRING_VERSION_HELP1 "Visa ReactOS versionen\n\n\
+    STRING_VERSION_HELP1 "Visa Windivs versionen\n\n\
 VER [/C][/R][/W]\n\n\
   /C  Visa anerkjennelse.\n\
   /R  Visa videreformidlingsinformasjon.\n\
@@ -440,7 +440,7 @@ liste av anerkjennelser."
     STRING_VERSION_HELP5 "\nSend bug rapporter till <ros-dev@reactos.org>.\n\
 oppdateringer är tilgjengelig her: https://reactos.org"
     STRING_VERSION_HELP6 "\nFreeDOS version skruvet av:\n"
-    STRING_VERSION_HELP7 "\nReactOS version skrivet av:\n"
+    STRING_VERSION_HELP7 "\nWindivs version skrivet av:\n"
     STRING_VOL_HELP1 " Volymen i enhet %c är %s\n"
     STRING_VOL_HELP2 " Volymen i enhet %c har inget namn.\n"
     STRING_VOL_HELP3 " Volymens serienummer är %04X-%04X\n"
@@ -524,9 +524,9 @@ tittel        ny tittel\n"
     STRING_REPLACE_ERROR5 "Tillgång nekas - %s\n"
     STRING_REPLACE_ERROR6 "Ingna filer hittades - %s\n"
     STRING_REPLACE_ERROR7 "Extended Error 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Command Prompt                                      Type HELP = Help  "
-    STRING_REACTOS_VERSION "ReactOS [Version %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Kommandotolk\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Windivs Command Prompt                                      Type HELP = Help  "
+    STRING_REACTOS_VERSION "Windivs [Version %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Kommandotolk\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Körs på: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d file(r) kopierades\n"

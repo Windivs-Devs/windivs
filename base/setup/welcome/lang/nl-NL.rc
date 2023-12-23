@@ -5,8 +5,8 @@ LANGUAGE LANG_DUTCH, SUBLANG_NEUTRAL
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS - Welkom"
-    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
+    IDS_APPTITLE "Windivs - Welkom"
+    IDS_DEFAULT_TOPIC_TITLE "Windivs"
     IDS_DEFAULT_TOPIC_DESC "Welkom bij het ReactOS besturingssysteem.\n\nKlik links op een onderwerp."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Ga terug naar dit scherm"

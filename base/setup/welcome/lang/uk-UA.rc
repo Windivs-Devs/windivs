@@ -7,8 +7,8 @@ LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS - Ласкаво просимо"
-    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
+    IDS_APPTITLE "Windivs - Ласкаво просимо"
+    IDS_DEFAULT_TOPIC_TITLE "Windivs"
     IDS_DEFAULT_TOPIC_DESC "Ласкаво просимо до операційної системи ReactOS.\n\nКлацніть по темі ліворуч"
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Показувати цей діалог знов"

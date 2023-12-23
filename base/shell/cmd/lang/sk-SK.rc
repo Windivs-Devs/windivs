@@ -56,7 +56,7 @@ ERRORLEVEL is set to offset of key user presses in choices.\n"
     STRING_CMD_HELP5 "  [Bash filename completion]"
     STRING_CMD_HELP6 "  [directory stack]"
     STRING_CMD_HELP7 "  [redirections and piping]"
-    STRING_CMD_HELP8 "Starts a new instance of the ReactOS command line interpreter.\n\n\
+    STRING_CMD_HELP8 "Starts a new instance of the Windivs command line interpreter.\n\n\
 CMD [/[C|K] command][/P][/Q][/T:bf]\n\n\
   /C command  Runs the specified command and terminates.\n\
   /K command  Runs the specified command and remains.\n\
@@ -448,7 +448,7 @@ listing of credits."
     STRING_VERSION_HELP5 "\nHlásenia o chybách zasielajte na <ros-dev@reactos.org>.\n\
 Aktualizácie sú dostupné na: https://reactos.org"
     STRING_VERSION_HELP6 "\nFreeDOS version written by:\n"
-    STRING_VERSION_HELP7 "\nReactOS version written by:\n"
+    STRING_VERSION_HELP7 "\nWindivs version written by:\n"
     STRING_VOL_HELP1 " Volume in drive %c is %s\n"
     STRING_VOL_HELP2 " Volume in drive %c has no label.\n"
     STRING_VOL_HELP3 " Volume Serial Number is %04X-%04X\n"
@@ -532,9 +532,9 @@ title         new title\n"
     STRING_REPLACE_ERROR5 "Prístup zamietnutý - %s\n"
     STRING_REPLACE_ERROR6 "Žiadne súbory sa nenašli - %s\n"
     STRING_REPLACE_ERROR7 "Extended Error 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Command Prompt                                      Type HELP = Help  "
-    STRING_REACTOS_VERSION "ReactOS [Verzia %s %s]\n"
-    STRING_CMD_SHELLINFO "\nInterpréter príkazového riadku systému ReactOS\nVerzia %s %s"
+    STRING_CMD_INFOLINE "  Windivs Command Prompt                                      Type HELP = Help  "
+    STRING_REACTOS_VERSION "Windivs [Verzia %s %s]\n"
+    STRING_CMD_SHELLINFO "\nInterpréter príkazového riadku systému Windivs\nVerzia %s %s"
     STRING_VERSION_RUNNING_ON "Running on: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d súbor(ov) skopírovaný(ch)\n"

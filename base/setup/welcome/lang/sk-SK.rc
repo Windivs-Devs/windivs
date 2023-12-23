@@ -7,8 +7,8 @@ LANGUAGE LANG_SLOVAK, SUBLANG_DEFAULT
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "ReactOS - Vitajte"
-    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
+    IDS_APPTITLE "Windivs - Vitajte"
+    IDS_DEFAULT_TOPIC_TITLE "Windivs"
     IDS_DEFAULT_TOPIC_DESC "Vitajte v operačnom systéme ReactOS.\n\nKliknite na tlačidlo v ľavom stĺpci."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Zobraziť toto okno aj nabudúce"

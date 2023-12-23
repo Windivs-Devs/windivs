@@ -24,7 +24,7 @@ END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ReactOS Setup"
+CAPTION "Windivs Setup"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
@@ -153,7 +153,7 @@ BEGIN
     IDS_RESTARTSUBTITLE "Giai đoạn đầu của việc thiết lập đã được hoàn thành, khởi động lại máy tính để tiếp tuc với giai đoạn hai"
     IDS_SUMMARYTITLE "Tóm lược quá trình cài đặt"
     IDS_SUMMARYSUBTITLE "Liệt kê các thuộc tính đã lựa chọn nhằm kiểm lại trước khi áp dụng vào thiết bị được chọn"
-    IDS_ABORTSETUP "ReactOS vẵn chưa được hoàn tất cài đặt trên máy tính của bạn. Nếu bây giờ bạn hủy trình Thiết lập, lần tới ban sẽ cần phải chạy lại trình Thiết lập để cài đặt ReactOS. Bạn thực sự muốn bỏ?"
+    IDS_ABORTSETUP "Windivs vẵn chưa được hoàn tất cài đặt trên máy tính của bạn. Nếu bây giờ bạn hủy trình Thiết lập, lần tới ban sẽ cần phải chạy lại trình Thiết lập để cài đặt ReactOS. Bạn thực sự muốn bỏ?"
     IDS_ABORTSETUP2 "Hủy bỏ trình Thiết lập?"
     IDS_NO_TXTSETUP_SIF "Không thể tìm được tập tin 'txtsetup.sif'.\nTrình Thiết lập không thể tiếp tục"
     IDS_CAPTION "Cài đặt ReactOS"

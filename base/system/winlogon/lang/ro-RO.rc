@@ -1,5 +1,5 @@
 /*
- * PROJECT: ReactOS Winlogon
+ * PROJECT: Windivs Winlogon
  * FILE:    base/system/winlogon/lang/ro-RO.rc
  * PURPOSE: Romanian Language File for Winlogon
  * TRANSLATORS:
@@ -25,7 +25,7 @@ CAPTION "Eroare interfață de utilizator"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Fișierul DLL al interfeței „%s” nu a putut fi încărcat.", IDC_GINALOADFAILED, 39, 16, 156, 24
-    LTEXT "Reinstalați ReactOS pentru a rezolva această problemă.", IDC_GINALOADFAILEDCONTACT, 39, 53, 151, 25
+    LTEXT "Reinstalați Windivs pentru a rezolva această problemă.", IDC_GINALOADFAILEDCONTACT, 39, 53, 151, 25
     DEFPUSHBUTTON "&Repornire", 1, 80, 91, 68, 14
 END
 
