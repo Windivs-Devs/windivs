@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS DNS Shared Library
+ * PROJECT:     Windivs DNS Shared Library
  * FILE:        lib/dnslib/addr.c
  * PURPOSE:     Contains the Address Family Information Tables
  */

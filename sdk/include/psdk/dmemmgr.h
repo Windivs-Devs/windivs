@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:            This file is in the public domain.
- * PROJECT:              ReactOS kernel
+ * PROJECT:              Windivs kernel
  * FILE:                 include/psdk/dmemmgr.h
  * PURPOSE:              Directx headers
  * PROGRAMMER:           Magnus Olsen (greatlrd)

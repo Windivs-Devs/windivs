@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS kernel
+ * PROJECT:         Windivs kernel
  * FILE:            ntdll/dispatch/amd64/dispatch.S
  * PURPOSE:         Usermode dispatcher stubs
  *

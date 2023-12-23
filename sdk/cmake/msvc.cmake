@@ -267,7 +267,7 @@ function(set_image_base MODULE IMAGE_BASE)
 endfunction()
 
 function(set_module_type_toolchain MODULE TYPE)
-    # Set the PE image version numbers from the NT OS version ReactOS is based on
+    # Set the PE image version numbers from the NT OS version Windivs is based on
     target_link_options(${MODULE} PRIVATE "/VERSION:5.01")
 
     if((TYPE STREQUAL win32dll) OR (TYPE STREQUAL win32ocx) OR (TYPE STREQUAL cpl))
@@ -364,7 +364,7 @@ if(ARCH STREQUAL "amd64")
 elseif(ARCH STREQUAL "arm")
     set(SPEC2DEF_ARCH arm)
 elseif(ARCH STREQUAL "arm64")
-    add_definitions(/D__arm64__) 
+    add_definitions(/D__arm64__)
     set(SPEC2DEF_ARCH arm64)
 else()
     set(SPEC2DEF_ARCH i386)

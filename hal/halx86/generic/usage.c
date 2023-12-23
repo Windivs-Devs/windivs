@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         GPL - See COPYING in the top level directory
  * PURPOSE:         HAL Resource Report Routines
  * PROGRAMMERS:     Stefan Ginsberg (stefan.ginsberg@reactos.org)

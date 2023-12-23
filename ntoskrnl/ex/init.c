@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/ex/init.c
  * PURPOSE:         Executive Initialization Code
@@ -268,7 +268,7 @@ ExpInitNls(IN PLOADER_PARAMETER_BLOCK LoaderBlock)
         else
         {
             /*
-            * In NT, the memory blocks are contiguous, but in ReactOS they aren't,
+            * In NT, the memory blocks are contiguous, but in Windivs they aren't,
             * so unless someone fixes FreeLdr, we'll have to use this icky hack.
             */
             RtlCopyMemory(ExpNlsTableBase,
@@ -1477,7 +1477,7 @@ Phase1InitializationDiscard(IN PVOID Context)
     if (NT_SUCCESS(MsgStatus))
     {
         /* Create the banner message */
-        /* ReactOS specific: Report ReactOS version, NtBuildLab information and reported NT kernel version */
+        /* Windivs specific: Report Windivs version, NtBuildLab information and reported NT kernel version */
         Status = RtlStringCbPrintfA(EndBuffer,
                                     Remaining,
                                     (PCHAR)MsgEntry->Text,

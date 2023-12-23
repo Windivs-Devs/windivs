@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Applications
+ * PROJECT:     Windivs Applications
  * LICENSE:     LGPL - See COPYING in the top level directory
  * FILE:        base/applications/msconfig/startuppage.c
  * PURPOSE:     Startup page message handler

@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS RTL
+ * PROJECT:     Windivs RTL
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Dynamic function table support routines
  * COPYRIGHT:   Copyright 2022 Timo Kreuzer (timo.kreuzer@reactos.org)
@@ -92,7 +92,7 @@ ReleaseDynamicFunctionTableLockShared()
 }
 
 /*
- * https://docs.microsoft.com/en-us/windows/win32/devnotes/rtlgetfunctiontablelisthead 
+ * https://docs.microsoft.com/en-us/windows/win32/devnotes/rtlgetfunctiontablelisthead
  */
 PLIST_ENTRY
 NTAPI

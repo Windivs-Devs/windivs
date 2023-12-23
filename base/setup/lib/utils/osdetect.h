@@ -1,7 +1,7 @@
 /*
- * PROJECT:     ReactOS Setup Library
+ * PROJECT:     Windivs Setup Library
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     NT 5.x family (MS Windows <= 2003, and ReactOS)
+ * PURPOSE:     NT 5.x family (MS Windows <= 2003, and Windivs)
  *              operating systems detection code.
  * COPYRIGHT:   Copyright 2017-2018 Hermes Belusca-Maito
  */
@@ -9,7 +9,7 @@
 #pragma once
 
 /* Language-independent Vendor strings */
-#define VENDOR_REACTOS      L"ReactOS"
+#define VENDOR_REACTOS      L"Windivs"
 #define VENDOR_MICROSOFT    L"Microsoft"
 
 typedef struct _NTOS_INSTALLATION

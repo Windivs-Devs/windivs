@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS HTTP Daemon
+ * PROJECT:     Windivs HTTP Daemon
  * FILE:        include/list.h
  */
 #ifndef __LIST_H

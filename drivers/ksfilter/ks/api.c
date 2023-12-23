@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel Streaming
+ * PROJECT:         Windivs Kernel Streaming
  * FILE:            drivers/ksfilter/ks/api.c
  * PURPOSE:         KS API functions
  * PROGRAMMER:      Johannes Anderwald

@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Runtime Library
+ * PROJECT:         Windivs Runtime Library
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            lib/rtl/rtlavl.h
  * PURPOSE:         RTL AVL Glue
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES ******************************************************************/

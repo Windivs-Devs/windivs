@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Command shell
+ * PROJECT:         Windivs Command shell
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/shell/cmd/replace.c
  * PURPOSE:         Implements 'replace' cmd command

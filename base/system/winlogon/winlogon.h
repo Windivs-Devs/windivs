@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2003 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2003 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 /* COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS winlogon
+ * PROJECT:         Windivs winlogon
  * FILE:            base/system/winlogon/winlogon.h
  * PURPOSE:         Winlogon
  * PROGRAMMER:

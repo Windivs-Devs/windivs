@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS Kernel
+ * PROJECT:         Windivs Kernel
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/ke/amd64/except.c
  * PURPOSE:         Exception Dispatching for amd64
@@ -715,6 +715,6 @@ KiXmmExceptionHandler(
         /* Should not happen */
         ASSERT(FALSE);
     }
-    
+
     return ExceptionCode;
 }

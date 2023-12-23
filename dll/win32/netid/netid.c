@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS System Control Panel Applet
+ * PROJECT:     Windivs System Control Panel Applet
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/win32/netid/netid.c
  * PURPOSE:     Network ID Page

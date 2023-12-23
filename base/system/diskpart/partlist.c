@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS DiskPart
+ * PROJECT:         Windivs DiskPart
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            base/system/diskpart/partlist.c
  * PURPOSE:         Manages all the partitions of the OS in an interactive way.
@@ -1328,7 +1328,7 @@ AddVolumeToList(
 
     pszVolumeName[Index] = L'\0';
 
-    CharCount = QueryDosDeviceW(&pszVolumeName[4], VolumeEntry->DeviceName, ARRAYSIZE(VolumeEntry->DeviceName)); 
+    CharCount = QueryDosDeviceW(&pszVolumeName[4], VolumeEntry->DeviceName, ARRAYSIZE(VolumeEntry->DeviceName));
 
     pszVolumeName[Index] = L'\\';
 

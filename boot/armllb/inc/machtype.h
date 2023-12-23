@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS Boot Loader
+ * PROJECT:         Windivs Boot Loader
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            boot/armllb/inc/machtype.h
  * PURPOSE:         Standard machine type definitions defined by Linux/U-boot
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 //
