@@ -24,7 +24,7 @@ END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs Setup"
+CAPTION "ReactOS Setup"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
@@ -153,7 +153,7 @@ BEGIN
     IDS_RESTARTSUBTITLE "Первый этап закончен, для продолжения требуется перезагрузка"
     IDS_SUMMARYTITLE "Сводка"
     IDS_SUMMARYSUBTITLE "Проверьте список параметров перед началом установки"
-    IDS_ABORTSETUP "Windivs установлен на компьютер не полностью. Если вы закроете программу установки сейчас, в дальнейшем вам придется повторить установку ReactOS. Вы уверены, что необходимо прервать установку?"
+    IDS_ABORTSETUP "ReactOS установлен на компьютер не полностью. Если вы закроете программу установки сейчас, в дальнейшем вам придется повторить установку ReactOS. Вы уверены, что необходимо прервать установку?"
     IDS_ABORTSETUP2 "Прервать установку?"
     IDS_NO_TXTSETUP_SIF "Не удалось найти файл 'txtsetup.sif'.\nПродолжение установки невозможно."
     IDS_CAPTION "Установка ReactOS"

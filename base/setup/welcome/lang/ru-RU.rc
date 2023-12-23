@@ -5,8 +5,8 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Windivs - Добро пожаловать!"
-    IDS_DEFAULT_TOPIC_TITLE "Windivs"
+    IDS_APPTITLE "ReactOS - Добро пожаловать!"
+    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
     IDS_DEFAULT_TOPIC_DESC "Добро пожаловать в ReactOS.\n\nВыберите пункт слева."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Показывать это окно снова"

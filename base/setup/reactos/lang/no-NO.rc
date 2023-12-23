@@ -2,7 +2,7 @@ LANGUAGE LANG_NORWEGIAN, SUBLANG_NEUTRAL
 
 IDD_STARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Velkommen til ReactOS installering veiviseren", IDC_STARTTITLE, 115, 8, 220, 24
@@ -12,7 +12,7 @@ END
 
 IDD_TYPEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTORADIOBUTTON "Installere ReactOS", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
@@ -24,7 +24,7 @@ END
 
 IDD_UPDATEREPAIRPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
@@ -35,7 +35,7 @@ END
 
 IDD_DEVICEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Datamaskin:", IDC_STATIC, 20, 15, 80, 10
@@ -49,7 +49,7 @@ END
 
 IDD_DRIVEPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_PARTITION, "SysTreeList32", WS_BORDER | WS_VISIBLE | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL, 7, 7, 303, 112
@@ -93,7 +93,7 @@ END
 
 IDD_SUMMARYPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Installation type:", IDC_STATIC, 18, 5, 74, 11
@@ -119,7 +119,7 @@ END
 
 IDD_PROCESSPAGE DIALOGEX 0, 0, 317, 143
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Installer filer...", IDC_ACTIVITY, 20, 50, 277, 10
@@ -129,7 +129,7 @@ END
 
 IDD_RESTARTPAGE DIALOGEX 0, 0, 317, 193
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "Windivs installering"
+CAPTION "ReactOS installering"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Completing the ReactOS Setup Wizard", IDC_FINISHTITLE, 115, 8, 195, 24
@@ -153,10 +153,10 @@ BEGIN
     IDS_RESTARTSUBTITLE "Første steget av installering har blitt fullført, start på nytt for å fortsette til andre steget"
     IDS_SUMMARYTITLE "Installasjon oppsumering"
     IDS_SUMMARYSUBTITLE "Sjekk listen av installasjon egenskapene før du fortsetter installasjon av enhetene"
-    IDS_ABORTSETUP "Windivs er ikke fullstendig installert på datamaskinen. Hvis du avslutter nå, trenger du å kjøre installeringen på nytt for å installere ReactOS. Vil du virkelig avslutte?"
+    IDS_ABORTSETUP "ReactOS er ikke fullstendig installert på datamaskinen. Hvis du avslutter nå, trenger du å kjøre installeringen på nytt for å installere ReactOS. Vil du virkelig avslutte?"
     IDS_ABORTSETUP2 "Avbryt installasjonen?"
     IDS_NO_TXTSETUP_SIF "Unable to find 'txtsetup.sif'.\nSetup is unable to continue."
-    IDS_CAPTION "Windivs installering"
+    IDS_CAPTION "ReactOS installering"
 END
 
 STRINGTABLE

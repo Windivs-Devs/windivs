@@ -7,8 +7,8 @@ LANGUAGE LANG_SWEDISH, SUBLANG_NEUTRAL
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Windivs - Välkommen"
-    IDS_DEFAULT_TOPIC_TITLE "Windivs"
+    IDS_APPTITLE "ReactOS - Välkommen"
+    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
     IDS_DEFAULT_TOPIC_DESC "Välkommen till ReactOS Operating System.\n\nKlicka på ett avsnitt till vänster."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Show this dialog again"

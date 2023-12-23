@@ -4,5 +4,5 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_DESCRIPTION "Cylinders Fractal"
     IDS_TITLE       "Über"
-    IDS_TEXT        "Cylinders Fractal von unC0Rr.\nSpeziell für Windivs."
+    IDS_TEXT        "Cylinders Fractal von unC0Rr.\nSpeziell für ReactOS."
 END

@@ -12,8 +12,8 @@ LANGUAGE LANG_THAI, SUBLANG_DEFAULT
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Windivs - ยินดีต้อนรับ"
-    IDS_DEFAULT_TOPIC_TITLE "Windivs"
+    IDS_APPTITLE "ReactOS - ยินดีต้อนรับ"
+    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
     IDS_DEFAULT_TOPIC_DESC "ยินดีต้อนรับสู่ระบบปฏิบัติการ ReactOS\n\nกดเลือกเนื้อหาบนแถบซ้ายมือ"
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "แสดงคำแนะนำอีกครั้ง"

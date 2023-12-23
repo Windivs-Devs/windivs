@@ -5,8 +5,8 @@ LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
 /* Default settings */
 STRINGTABLE
 BEGIN
-    IDS_APPTITLE "Windivs - Bem vindo"
-    IDS_DEFAULT_TOPIC_TITLE "Windivs"
+    IDS_APPTITLE "ReactOS - Bem vindo"
+    IDS_DEFAULT_TOPIC_TITLE "ReactOS"
     IDS_DEFAULT_TOPIC_DESC "Bem vindo ao Sistema Operacional ReactOS.\n\nClique em um tópico à esquerda."
     IDS_FONTNAME "Tahoma"
     IDS_CHECKTEXT "&Exibir este diálogo novamente"
