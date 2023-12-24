@@ -142,24 +142,15 @@ typedef struct INPUTCONTEXTDX
 {
     INPUTCONTEXT;
 #endif
-    UINT nVKey;
-    BOOL bNeedsTrans;
+    UINT nVKey;                 // +0x140
+    BOOL bNeedsTrans;           // +0x144
     DWORD dwUnknown1;
-    DWORD dwUIFlags;
+    DWORD dwUIFlags;            // +0x14c
     DWORD dwUnknown2;
-    struct IME_STATE *pState;
-    DWORD dwChange;
-    DWORD dwUnknown5;
+    struct IME_STATE *pState;   // +0x154
+    DWORD dwChange;             // +0x158
+    HIMCC hCtfImeContext;
 } INPUTCONTEXTDX, *PINPUTCONTEXTDX, *LPINPUTCONTEXTDX;
-
-#ifndef _WIN64
-C_ASSERT(offsetof(INPUTCONTEXTDX, nVKey) == 0x140);
-C_ASSERT(offsetof(INPUTCONTEXTDX, bNeedsTrans) == 0x144);
-C_ASSERT(offsetof(INPUTCONTEXTDX, dwUIFlags) == 0x14c);
-C_ASSERT(offsetof(INPUTCONTEXTDX, pState) == 0x154);
-C_ASSERT(offsetof(INPUTCONTEXTDX, dwChange) == 0x158);
-C_ASSERT(sizeof(INPUTCONTEXTDX) == 0x160);
-#endif
 
 // bits of fdwInit of INPUTCONTEXT
 #define INIT_STATUSWNDPOS               0x00000001
@@ -168,6 +159,7 @@ C_ASSERT(sizeof(INPUTCONTEXTDX) == 0x160);
 #define INIT_LOGFONT                    0x00000008
 #define INIT_COMPFORM                   0x00000010
 #define INIT_SOFTKBDPOS                 0x00000020
+#define INIT_GUIDMAP                    0x00000040
 
 // bits for INPUTCONTEXTDX.dwChange
 #define INPUTCONTEXTDX_CHANGE_OPEN          0x1
@@ -340,6 +332,115 @@ C_ASSERT(sizeof(CLIENTIMC) == 0x34);
 #define CLIENTIMC_DESTROY 0x40
 #define CLIENTIMC_DISABLEIME 0x80
 #define CLIENTIMC_UNKNOWN2 0x100
+
+/* IME file interface */
+
+BOOL WINAPI
+ImeInquire(
+    _Out_ LPIMEINFO lpIMEInfo,
+    _Out_ LPWSTR lpszWndClass,
+    _In_ DWORD dwSystemInfoFlags);
+
+DWORD WINAPI
+ImeConversionList(
+    _In_ HIMC hIMC,
+    _In_ LPCWSTR lpSrc,
+    _Out_ LPCANDIDATELIST lpDst,
+    _In_ DWORD dwBufLen,
+    _In_ UINT uFlag);
+
+BOOL WINAPI
+ImeRegisterWord(
+    _In_ LPCWSTR lpszReading,
+    _In_ DWORD dwStyle,
+    _In_ LPCWSTR lpszString);
+
+BOOL WINAPI
+ImeUnregisterWord(
+    _In_ LPCWSTR lpszReading,
+    _In_ DWORD dwStyle,
+    _In_ LPCWSTR lpszString);
+
+UINT WINAPI
+ImeGetRegisterWordStyle(
+    _In_ UINT nItem,
+    _Out_ LPSTYLEBUFW lpStyleBuf);
+
+UINT WINAPI
+ImeEnumRegisterWord(
+    _In_ REGISTERWORDENUMPROCW lpfnEnumProc,
+    _In_opt_ LPCWSTR lpszReading,
+    _In_ DWORD dwStyle,
+    _In_opt_ LPCWSTR lpszString,
+    _In_opt_ LPVOID lpData);
+
+BOOL WINAPI
+ImeConfigure(
+    _In_ HKL hKL,
+    _In_ HWND hWnd,
+    _In_ DWORD dwMode,
+    _Inout_opt_ LPVOID lpData);
+
+BOOL WINAPI
+ImeDestroy(
+    _In_ UINT uReserved);
+
+LRESULT WINAPI
+ImeEscape(
+    _In_ HIMC hIMC,
+    _In_ UINT uEscape,
+    _Inout_opt_ LPVOID lpData);
+
+BOOL WINAPI
+ImeProcessKey(
+    _In_ HIMC hIMC,
+    _In_ UINT uVirKey,
+    _In_ LPARAM lParam,
+    _In_ CONST LPBYTE lpbKeyState);
+
+BOOL WINAPI
+ImeSelect(
+    _In_ HIMC hIMC,
+    _In_ BOOL fSelect);
+
+BOOL WINAPI
+ImeSetActiveContext(
+    _In_ HIMC hIMC,
+    _In_ BOOL fFlag);
+
+UINT WINAPI
+ImeToAsciiEx(
+    _In_ UINT uVirKey,
+    _In_ UINT uScanCode,
+    _In_ CONST LPBYTE lpbKeyState,
+    _Out_ LPTRANSMSGLIST lpTransMsgList,
+    _In_ UINT fuState,
+    _In_ HIMC hIMC);
+
+BOOL WINAPI
+NotifyIME(
+    _In_ HIMC hIMC,
+    _In_ DWORD dwAction,
+    _In_ DWORD dwIndex,
+    _In_ DWORD_PTR dwValue);
+
+BOOL WINAPI
+ImeSetCompositionString(
+    _In_ HIMC hIMC,
+    _In_ DWORD dwIndex,
+    _In_opt_ LPCVOID lpComp,
+    _In_ DWORD dwCompLen,
+    _In_opt_ LPCVOID lpRead,
+    _In_ DWORD dwReadLen);
+
+DWORD WINAPI
+ImeGetImeMenuItems(
+    _In_ HIMC hIMC,
+    _In_ DWORD dwFlags,
+    _In_ DWORD dwType,
+    _Inout_opt_ LPIMEMENUITEMINFOW lpImeParentMenu,
+    _Inout_opt_ LPIMEMENUITEMINFOW lpImeMenu,
+    _In_ DWORD dwSize);
 
 #ifdef __cplusplus
 } // extern "C"
