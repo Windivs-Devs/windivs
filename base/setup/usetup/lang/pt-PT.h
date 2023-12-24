@@ -3,6 +3,149 @@
 // To revert conversion, please execute "code7bit -r <file>".
 #pragma once
 
+static MUI_ENTRY ptPTChangelogPageEntries[] =
+    {
+        {
+            4,
+            3,
+            " Windivs7 RC (build 7268) Setup ",
+            TEXT_STYLE_UNDERLINE,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            6,
+            "Changelog:",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            8,
+            "Windivs7 Release Candidate 2, build 7268",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            9,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            10,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            11,
+            "What's New:",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            12,
+            "• Various bugfixes",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            13,
+            "• Introduction of the in-Setup changelog UI",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            15,
+            "• Several changes to the bootscreen",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            16,
+            "• New built-in wallpaper",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            17,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            18,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            19,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            20,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            22,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            24,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            25,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            26,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            "ENTER = Return",
+            TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            NULL,
+            0
+        }
+};
+
 static MUI_ENTRY ptPTSetupInitPageEntries[] =
 {
     {

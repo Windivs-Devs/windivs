@@ -3,6 +3,8 @@
 // To revert conversion, please execute "code7bit -r <file>".
 #pragma once
 
+
+
 static MUI_ENTRY hrHRSetupInitPageEntries[] =
 {
     {
