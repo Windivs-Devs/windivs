@@ -263,7 +263,7 @@ BEGIN
     IDS_PRODUCTTITLE "選擇軟件版本"
     IDS_PRODUCTSUBTITLE "您可以選擇要安裝的軟件版本。這會對系統的一些功能造成影響。"
     IDS_PRODUCTSERVERNAME "Windivs Server"
-    IDS_PRODUCTWORKSTATIONNAME "Windivs Workstation"
+    IDS_PRODUCTWORKSTATIONNAME "Windivs Professional"
     IDS_PRODUCTSERVERINFO "系統將識別為一個伺服器。私人資料夾「我的圖片」、「我的影片」和「我的音樂」會獨立於「我的文件」。"
     IDS_PRODUCTWORKSTATIONINFO "系統將識別為一個工作站。私人資料夾「我的圖片」、「我的影片」和「我的音樂」會在「我的文件」資料夾內。"
     IDS_DEFAULT "（預設）"

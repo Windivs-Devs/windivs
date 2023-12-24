@@ -258,7 +258,7 @@ BEGIN
     IDS_PRODUCTTITLE "Opcije proizvoda"
     IDS_PRODUCTSUBTITLE "Možete odabrati opciju proizvoda koja utječe na ponašanje sustava."
     IDS_PRODUCTSERVERNAME "Windivs Server"
-    IDS_PRODUCTWORKSTATIONNAME "Windivs Workstation"
+    IDS_PRODUCTWORKSTATIONNAME "Windivs Professional"
     IDS_PRODUCTSERVERINFO "Sustav će biti prepoznat kao server. Privatne mape su: ""My Pictures"", ""My Videos"" i ""My Music"" koji su neovisni od mape ""My Documents""."
     IDS_PRODUCTWORKSTATIONINFO "Sustav će biti prepoznat kao radna stanica - workstation. Privatne mape su: ""My Pictures"", ""My Videos"" i ""My Music"" koji su u mapi ""My Documents""."
     IDS_DEFAULT "Zadano (Default)"

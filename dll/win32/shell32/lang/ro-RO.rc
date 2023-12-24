@@ -1,5 +1,10 @@
-/* Translators: Ștefan Fulea (stefan dot fulea at mail dot com)
- *              Andrei Miloiu (miloiuandrei@gmail.com) */
+/*
+ * PROJECT:     ReactOS Shell
+ * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
+ * PURPOSE:     Romanian resource file
+ * TRANSLATORS: Copyright 2011-2019 Ștefan Fulea <stefan.fulea@mail.com>
+ *              Copyright 2022-2023 Andrei Miloiu <miloiuandrei@gmail.com>
+ */
 
 LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
 
@@ -140,7 +145,7 @@ BEGIN
     LTEXT "", IDC_ABOUT_VERSION, 35, 65, 250, 10, SS_NOPREFIX
     LTEXT "Drept de autor 1996-", IDC_STATIC, 35, 75, 68, 10
     LTEXT COPYRIGHT_YEAR, IDC_STATIC, 103, 75, 17, 10
-    LTEXT " Echipa Windivs\0", IDC_STATIC, 120, 75, 53, 10
+    LTEXT " Echipa ReactOS\0", IDC_STATIC, 120, 75, 53, 10
     LTEXT "", IDC_ABOUT_OTHERSTUFF, 35, 90, 180, 20, SS_NOPREFIX
     LTEXT "Versiune înregistrată pentru:", IDC_ABOUT_REG_TO, 35, 115, 180, 10
     LTEXT "", IDC_ABOUT_REG_USERNAME, 45, 125, 180, 10, SS_NOPREFIX
@@ -156,7 +161,7 @@ IDD_ABOUT_AUTHORS DIALOGEX 35, 90, 235, 85
 STYLE DS_SHELLFONT | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Windivs vă este oferit de:", IDC_STATIC, 0, 0, 180, 10
+    LTEXT "ReactOS vă este oferit de:", IDC_STATIC, 0, 0, 180, 10
     LISTBOX IDC_ABOUT_AUTHORS_LISTBOX, 0, 10, 165, 75
 END
 
@@ -166,7 +171,7 @@ CAPTION "Executare"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_RUNDLG_ICON, 7, 11, 18, 20, WS_VISIBLE
-    LTEXT "Tastați numele unui program, dosar, document, sau a unei resurse de Internet, în vederea deschiderii în Windivs.", 12289, 36, 4, 185, 26
+    LTEXT "Tastați numele unui program, dosar, document, sau a unei resurse de Internet, în vederea deschiderii în ReactOS.", 12289, 36, 4, 185, 26
     LTEXT "&Deschide:", 12305, 7, 39, 33, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 41, 37, 179, 100
     DEFPUSHBUTTON "Con&firmă", IDOK, 36, 70, 59, 14, WS_TABSTOP
@@ -359,22 +364,23 @@ BEGIN
 END
 
 IDD_RUN_AS DIALOGEX 0, 0, 240, 190
-STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Executare ca"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "Ce cont de utilizator este folosit pentru a executa?", -1, 10, 20, 220, 20
-    AUTORADIOBUTTON "Utilizator curent: %s", IDC_RUNAS_THIS, 10, 45, 150, 10, WS_GROUP
+    CHECKBOX "Utilizator curent: %s", 14000, 10, 45, 150, 10
     LTEXT "Protejare calculator de activiăți neautorizate", -1, 25, 57, 200, 10, WS_DISABLED
     CHECKBOX "Această opțiune vă poate proteja calculatorul de activități care pot fi dăunătoare dar poate de asemenea duce la funcționarea incorectă a programului.", 14001, 25, 68, 200, 30, WS_DISABLED | BS_MULTILINE
-    AUTORADIOBUTTON "Următorul utilizator:", IDC_RUNAS_OTHER, 10, 100, 90, 10
+    CHECKBOX "Următorul utilizator:", 14002, 10, 100, 90, 10
     LTEXT "Nume utilizator:", -1, 20, 118, 54, 10
-    COMBOBOX IDC_RUNAS_NAME, 75, 115, 100, 15, CBS_DROPDOWN | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
+    COMBOBOX 14003, 75, 115, 100, 15, CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     PUSHBUTTON "…", 14004, 180, 115, 30, 14, WS_TABSTOP
     LTEXT "Parolă:", -1, 20, 143, 53, 10
-    EDITTEXT IDC_RUNAS_PASS, 74, 140, 100, 14, ES_LEFT | WS_BORDER | WS_GROUP
-    PUSHBUTTON "Con&firmă", IDOK, 57, 170, 60, 14, WS_TABSTOP
-    PUSHBUTTON "A&nulează", IDCANCEL, 122, 170, 60, 14, WS_TABSTOP
+    EDITTEXT 14005, 74, 140, 100, 14, ES_LEFT | WS_BORDER | WS_GROUP
+    PUSHBUTTON "…", 14006, 180, 140, 30, 14, WS_TABSTOP
+    PUSHBUTTON "Con&firmă", 14007, 57, 170, 60, 14, WS_TABSTOP
+    PUSHBUTTON "A&nulează", 14008, 122, 170, 60, 14, WS_TABSTOP
 END
 
 IDD_RECYCLE_BIN_PROPERTIES DIALOGEX 0, 0, 240, 190
@@ -578,7 +584,7 @@ END
 
 IDD_SHUTDOWN DIALOGEX 0, 0, 211, 103
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Închidere Windivs"
+CAPTION "Închidere ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 8240, -1, 6, 6, 21, 20, SS_REALSIZECONTROL | WS_GROUP
@@ -654,7 +660,7 @@ Sigur doriți să deschideți acest fișier?", IDC_STATIC, 35, 5, 230, 60
 END
 
 IDD_NEWEXTENSION DIALOGEX 0, 0, 260, 75
-CAPTION "Ceare nouă extensie"
+CAPTION "Crează o nouă extensie"
 STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 FONT 8, "MS Shell Dlg"
 BEGIN
@@ -847,7 +853,7 @@ BEGIN
 
     /* Warning format system drive dialog strings */
     IDS_NO_FORMAT_TITLE "Nu a putut fi formatat volumul"
-    IDS_NO_FORMAT "Nu a putut fi formatat acest volum! Conține fișiere de sistem importante care să facă Windivs să meargă."
+    IDS_NO_FORMAT "Nu a putut fi formatat acest volum! Conține fișiere de sistem importante care să facă ReactOS să meargă."
 
     /* Run File dialog */
     IDS_RUNDLG_ERROR "„Executare fișier” nu a putut fi deschis (eroare internă)"
@@ -928,14 +934,14 @@ BEGIN
 
     /* Friendly File Type Names */
     IDS_DIRECTORY "Dosar"
-    IDS_BAT_FILE "Fișier de comenzi Windivs"
-    IDS_CMD_FILE "Script de comenzi Windivs"
+    IDS_BAT_FILE "Fișier de comenzi ReactOS"
+    IDS_CMD_FILE "Script de comenzi ReactOS"
     IDS_COM_FILE "Executabil DOS"
     IDS_CPL_FILE "Element din Panoul de control"
     IDS_CUR_FILE "Indicator"
     IDS_DB__FILE "Fișier bază-de-date"
     IDS_DLL_FILE "Bibliotecă aplicație"
-    IDS_DRV_FILE "Modul-pilot de dispozitiv"
+    IDS_DRV_FILE "Driver de dispozitiv"
     IDS_EFI_FILE "Executabil interfață firmware extensibilă"
     IDS_EXE_FILE "Executabil"
     IDS_NLS_FILE "Fișier suport de limbă națională"
@@ -989,10 +995,6 @@ BEGIN
     IDS_MENU_EMPTY "(Gol)"
     IDS_OBJECTS "%d Obiecte"
     IDS_OBJECTS_SELECTED "%d Obiecte selectate"
-
-    IDS_RECYCLE_CLEANER_DISPLAYNAME "Recycle Bin"
-    IDS_RECYCLE_CLEANER_DESCRIPTION "The Recycle Bin contains files you have deleted from your computer. These files are not permanently removed until you empty the Recycle Bin."
-    IDS_RECYCLE_CLEANER_BUTTON_TEXT "&View Files"
 
     IDS_TITLE_MYCOMP "Calculatorul meu"
     IDS_TITLE_MYNET "Locații în rețea"
@@ -1048,7 +1050,7 @@ BEGIN
     IDS_SYSTEMFOLDER "Dosar de sistem"
 
     /* For IDD_LOG_OFF_FANCY */
-    IDS_LOG_OFF_DESC "Vă închide programele și vă încheie sesiunea Windivs."
+    IDS_LOG_OFF_DESC "Vă închide programele și vă încheie sesiunea ReactOS."
     IDS_SWITCH_USER_DESC "Permite altui utilizator să fie logat, în timp ce programele dumneavoastră rămân deschise.\r\n\r\n(Puteți de asemenea, să schimbați utilizatorii apăsând tasta cu sigla Windows + L.)"
     IDS_LOG_OFF_TITLE "Deautentifică"
     IDS_SWITCH_USER_TITLE "Schimbă utilizatorul"
