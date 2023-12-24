@@ -19,7 +19,7 @@ static inline bool RegValueExists(HKEY hKey, LPCWSTR Name)
 static BOOL InsertMenuItemAt(HMENU hMenu, UINT Pos, UINT Flags)
 {
     MENUITEMINFOW mii;
-    mii.cbSize = FIELD_OFFSET(MENUITEMINFOW, hbmpItem);
+    mii.cbSize = FIELD_OFFSET(MENUITEMINFOW, hbmpItem); // USER32 version agnostic
     mii.fMask = MIIM_TYPE;
     mii.fType = Flags;
     return InsertMenuItemW(hMenu, Pos, TRUE, &mii);
@@ -540,7 +540,7 @@ CDefaultContextMenu::AddStaticContextMenusToMenu(
         }
 
         UINT cmdFlags = 0;
-        BOOL hide = FALSE;
+        bool hide = false;
         HKEY hkVerb;
         if (idResource > 0)
         {
@@ -585,12 +585,13 @@ CDefaultContextMenu::AddStaticContextMenusToMenu(
             // FIXME: GetAsyncKeyState should not be called here, clients
             // need to be updated to set the CMF_EXTENDEDVERBS flag.
             if (!(uFlags & CMF_EXTENDEDVERBS) && GetAsyncKeyState(VK_SHIFT) >= 0)
-                hide |= RegValueExists(hkVerb, L"Extended");
+                hide = RegValueExists(hkVerb, L"Extended");
 
-            hide |= RegValueExists(hkVerb, L"ProgrammaticAccessOnly");
+            if (!hide)
+                hide = RegValueExists(hkVerb, L"ProgrammaticAccessOnly");
 
-            if (!(uFlags & CMF_DISABLEDVERBS))
-                hide |= RegValueExists(hkVerb, L"LegacyDisable");
+            if (!hide && !(uFlags & CMF_DISABLEDVERBS))
+                hide = RegValueExists(hkVerb, L"LegacyDisable");
 
             if (RegValueExists(hkVerb, L"NeverDefault"))
                 fState &= ~MFS_DEFAULT;
@@ -692,13 +693,13 @@ CDefaultContextMenu::TryPickDefault(HMENU hMenu, UINT idCmdFirst, UINT DfltOffse
         return;
 
     // Does the view want to pick one?
-    SIZE_T forceDfm = 0;
+    INT_PTR forceDfm = 0;
     if (_DoCallback(DFM_GETDEFSTATICID, 0, &forceDfm) == S_OK && forceDfm)
     {
         for (UINT i = 0; i < _countof(g_StaticInvokeCmdMap); ++i)
         {
             UINT menuItemId = g_StaticInvokeCmdMap[i].IntVerb + DfltOffset - DCM_FCIDM_SHVIEW_OFFSET;
-            if ((int)g_StaticInvokeCmdMap[i].DfmCmd == (int)(UINT)forceDfm &&
+            if (g_StaticInvokeCmdMap[i].DfmCmd == forceDfm &&
                 SetMenuDefaultItem(hMenu, menuItemId, MF_BYCOMMAND))
             {
                 return;

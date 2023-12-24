@@ -50,9 +50,6 @@ extern "C" {
 
 #define PATHCCH_MAX_CCH     0x8000
 
-// SIZE_T
-// DWORD
-
 WINPATHCCHAPI
 HRESULT
 APIENTRY
@@ -327,8 +324,9 @@ PathIsUNCEx(
 
 #endif // PATHCCH_NO_DEPRECATE
 
-
-#endif // __cplusplus
+#ifdef __cplusplus
+}
+#endif
 
 
 /* C++ non-const overloads */

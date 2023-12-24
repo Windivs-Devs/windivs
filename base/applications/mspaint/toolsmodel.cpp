@@ -18,7 +18,7 @@ ToolsModel::ToolsModel()
     m_shapeStyle = 0;
     m_brushStyle = BrushStyleRound;
     m_oldActiveTool = m_activeTool = TOOL_PEN;
-    m_airBrushWidth = 5;
+    m_airBrushRadius = 5;
     m_rubberRadius = 4;
     m_transpBg = FALSE;
     m_zoom = 1000;
@@ -99,8 +99,8 @@ void ToolsModel::MakeBrushThickerOrThinner(BOOL bThinner)
 
 void ToolsModel::MakeAirBrushThickerOrThinner(BOOL bThinner)
 {
-    INT thickness = GetAirBrushWidth();
-    SetAirBrushWidth(bThinner ? max(1, thickness - 1) : (thickness + 1));
+    INT thickness = GetAirBrushRadius();
+    SetAirBrushRadius(bThinner ? max(1, thickness - 1) : (thickness + 1));
 }
 
 void ToolsModel::MakeRubberThickerOrThinner(BOOL bThinner)
@@ -180,14 +180,14 @@ void ToolsModel::SetActiveTool(TOOLTYPE nActiveTool)
     NotifyToolChanged();
 }
 
-int ToolsModel::GetAirBrushWidth() const
+INT ToolsModel::GetAirBrushRadius() const
 {
-    return m_airBrushWidth;
+    return m_airBrushRadius;
 }
 
-void ToolsModel::SetAirBrushWidth(int nAirBrushWidth)
+void ToolsModel::SetAirBrushRadius(INT nAirBrushRadius)
 {
-    m_airBrushWidth = nAirBrushWidth;
+    m_airBrushRadius = nAirBrushRadius;
     NotifyToolSettingsChanged();
 }
 
@@ -200,6 +200,50 @@ void ToolsModel::SetRubberRadius(int nRubberRadius)
 {
     m_rubberRadius = nRubberRadius;
     NotifyToolSettingsChanged();
+}
+
+SIZE ToolsModel::GetToolSize() const
+{
+    SIZE size;
+    switch (m_activeTool)
+    {
+        case TOOL_FREESEL:
+        case TOOL_RECTSEL:
+            size.cx = selectionModel.m_rc.Width();
+            size.cy = selectionModel.m_rc.Height();
+            break;
+        case TOOL_COLOR:
+        case TOOL_ZOOM:
+        case TOOL_TEXT:
+        case TOOL_FILL:
+            size.cx = size.cy = 1;
+            break;
+        case TOOL_LINE:
+        case TOOL_BEZIER:
+        case TOOL_RECT:
+        case TOOL_RRECT:
+        case TOOL_SHAPE:
+        case TOOL_ELLIPSE:
+            size.cx = size.cy = GetLineWidth();
+            break;
+        case TOOL_AIRBRUSH:
+            size.cx = size.cy = GetAirBrushRadius() * 2;
+            break;
+        case TOOL_RUBBER:
+            size.cx = size.cy = GetRubberRadius() * 2;
+            break;
+        case TOOL_BRUSH:
+            size.cx = size.cy = GetBrushWidth();
+            break;
+        case TOOL_PEN:
+            size.cx = size.cy = GetPenWidth();
+            break;
+    }
+    if (size.cx < 1)
+        size.cx = 1;
+    if (size.cy < 1)
+        size.cy = 1;
+    return size;
 }
 
 BOOL ToolsModel::IsBackgroundTransparent() const

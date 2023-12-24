@@ -9,6 +9,8 @@
  */
 
 #include <win32k.h>
+
+// #define NDEBUG
 #include <debug.h>
 
 /************************************************************************/
@@ -33,7 +35,7 @@ NtGdiDdCreateSurface(HANDLE hDirectDrawLocal,
         return DDHAL_DRIVER_NOTHANDLED;
     }
 
-    DPRINT1("Calling dxg.sys pfnDdCreateSurface\n");
+    DPRINT("Calling dxg.sys pfnDdCreateSurface\n");
     return pfnDdCreateSurface(hDirectDrawLocal,hSurface,puSurfaceDescription,puSurfaceGlobalData,
                               puSurfaceLocalData,puSurfaceMoreData,puCreateSurfaceData,puhSurface);
 }
@@ -54,7 +56,7 @@ NtGdiDdWaitForVerticalBlank(HANDLE hDirectDraw,
         return DDHAL_DRIVER_NOTHANDLED;
     }
 
-    DPRINT1("Calling dxg.sys pfnDdWaitForVerticalBlank\n");
+    DPRINT("Calling dxg.sys pfnDdWaitForVerticalBlank\n");
     return pfnDdWaitForVerticalBlank(hDirectDraw, puWaitForVerticalBlankData);
 }
 
@@ -74,7 +76,7 @@ NtGdiDdCanCreateSurface(HANDLE hDirectDrawLocal,
         return DDHAL_DRIVER_NOTHANDLED;
     }
 
-    DPRINT1("Calling dxg.sys DdCanCreateSurface\n");
+    DPRINT("Calling dxg.sys pfnDdCanCreateSurface\n");
 
     return pfnDdCanCreateSurface(hDirectDrawLocal,puCanCreateSurfaceData);
 }
@@ -95,7 +97,7 @@ NtGdiDdGetScanLine(HANDLE hDirectDrawLocal,
         return DDHAL_DRIVER_NOTHANDLED;
     }
 
-    DPRINT1("Calling dxg.sys pfnDdGetScanLine\n");
+    DPRINT("Calling dxg.sys pfnDdGetScanLine\n");
 
     return pfnDdGetScanLine(hDirectDrawLocal,puGetScanLineData);
 }
@@ -123,8 +125,6 @@ NtGdiDdCreateSurfaceEx(HANDLE hDirectDraw,
         return DDHAL_DRIVER_NOTHANDLED;
     }
 
-    DPRINT1("Calling dxg.sys pfnDdCreateSurfaceEx\n");
+    DPRINT("Calling dxg.sys pfnDdCreateSurfaceEx\n");
     return pfnDdCreateSurfaceEx(hDirectDraw,hSurface,dwSurfaceHandle);
-
 }
-

@@ -47,6 +47,7 @@ list(APPEND SOURCE
     NtQueryVolumeInformationFile.c
     NtReadFile.c
     NtSaveKey.c
+    NtSetDefaultLocale.c
     NtSetInformationFile.c
     NtSetInformationProcess.c
     NtSetInformationThread.c
@@ -78,6 +79,7 @@ list(APPEND SOURCE
     RtlGetLengthWithoutTrailingPathSeperators.c
     RtlGetLongestNtPathLength.c
     RtlGetNtProductType.c
+    RtlGetProcessHeaps.c
     RtlGetUnloadEventTrace.c
     RtlHandle.c
     RtlImageDirectoryEntryToData.c

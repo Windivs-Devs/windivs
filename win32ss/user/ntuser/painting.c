@@ -1608,19 +1608,19 @@ IntFillWindow(PWND pWndParent,
 HDC APIENTRY
 NtUserBeginPaint(HWND hWnd, PAINTSTRUCT* UnsafePs)
 {
-   PWND Window = NULL;
+   PWND Window;
    PAINTSTRUCT Ps;
    NTSTATUS Status;
    HDC hDC;
    USER_REFERENCE_ENTRY Ref;
-   DECLARE_RETURN(HDC);
+   HDC Ret = NULL;
 
    TRACE("Enter NtUserBeginPaint\n");
    UserEnterExclusive();
 
    if (!(Window = UserGetWindowObject(hWnd)))
    {
-      RETURN( NULL);
+      goto Cleanup; // Return NULL
    }
 
    UserRefObjectCo(Window, &Ref);
@@ -1631,18 +1631,17 @@ NtUserBeginPaint(HWND hWnd, PAINTSTRUCT* UnsafePs)
    if (! NT_SUCCESS(Status))
    {
       SetLastNtError(Status);
-      RETURN(NULL);
+      goto Cleanup; // Return NULL
    }
 
-   RETURN(hDC);
+   Ret = hDC;
 
-CLEANUP:
+Cleanup:
    if (Window) UserDerefObjectCo(Window);
 
-   TRACE("Leave NtUserBeginPaint, ret=%p\n",_ret_);
+   TRACE("Leave NtUserBeginPaint, ret=%p\n", Ret);
    UserLeave();
-   END_CLEANUP;
-
+   return Ret;
 }
 
 /*
@@ -1656,17 +1655,17 @@ BOOL APIENTRY
 NtUserEndPaint(HWND hWnd, CONST PAINTSTRUCT* pUnsafePs)
 {
    NTSTATUS Status = STATUS_SUCCESS;
-   PWND Window = NULL;
+   PWND Window;
    PAINTSTRUCT Ps;
    USER_REFERENCE_ENTRY Ref;
-   DECLARE_RETURN(BOOL);
+   BOOL Ret = FALSE;
 
    TRACE("Enter NtUserEndPaint\n");
    UserEnterExclusive();
 
    if (!(Window = UserGetWindowObject(hWnd)))
    {
-      RETURN(FALSE);
+      goto Cleanup; // Return FALSE
    }
 
    UserRefObjectCo(Window, &Ref); // Here for the exception.
@@ -1683,17 +1682,17 @@ NtUserEndPaint(HWND hWnd, CONST PAINTSTRUCT* pUnsafePs)
    _SEH2_END
    if (!NT_SUCCESS(Status))
    {
-      RETURN(FALSE);
+      goto Cleanup; // Return FALSE
    }
 
-   RETURN(IntEndPaint(Window, &Ps));
+   Ret = IntEndPaint(Window, &Ps);
 
-CLEANUP:
+Cleanup:
    if (Window) UserDerefObjectCo(Window);
 
-   TRACE("Leave NtUserEndPaint, ret=%i\n",_ret_);
+   TRACE("Leave NtUserEndPaint, ret=%i\n", Ret);
    UserLeave();
-   END_CLEANUP;
+   return Ret;
 }
 
 /*
@@ -1929,26 +1928,21 @@ co_UserGetUpdateRect(PWND Window, PRECT pRect, BOOL bErase)
 INT APIENTRY
 NtUserGetUpdateRgn(HWND hWnd, HRGN hRgn, BOOL bErase)
 {
-   DECLARE_RETURN(INT);
    PWND Window;
-   INT ret;
+   INT ret = ERROR;
 
    TRACE("Enter NtUserGetUpdateRgn\n");
    UserEnterExclusive();
 
-   if (!(Window = UserGetWindowObject(hWnd)))
+   Window = UserGetWindowObject(hWnd);
+   if (Window)
    {
-      RETURN(ERROR);
+      ret = co_UserGetUpdateRgn(Window, hRgn, bErase);
    }
 
-   ret = co_UserGetUpdateRgn(Window, hRgn, bErase);
-
-   RETURN(ret);
-
-CLEANUP:
-   TRACE("Leave NtUserGetUpdateRgn, ret=%i\n",_ret_);
+   TRACE("Leave NtUserGetUpdateRgn, ret=%i\n", ret);
    UserLeave();
-   END_CLEANUP;
+   return ret;
 }
 
 /*
@@ -1964,15 +1958,14 @@ NtUserGetUpdateRect(HWND hWnd, LPRECT UnsafeRect, BOOL bErase)
    PWND Window;
    RECTL Rect;
    NTSTATUS Status;
-   BOOL Ret;
-   DECLARE_RETURN(BOOL);
+   BOOL Ret = FALSE;
 
    TRACE("Enter NtUserGetUpdateRect\n");
    UserEnterExclusive();
 
    if (!(Window = UserGetWindowObject(hWnd)))
    {
-      RETURN(FALSE);
+      goto Exit; // Return FALSE
    }
 
    Ret = co_UserGetUpdateRect(Window, &Rect, bErase);
@@ -1983,16 +1976,14 @@ NtUserGetUpdateRect(HWND hWnd, LPRECT UnsafeRect, BOOL bErase)
       if (!NT_SUCCESS(Status))
       {
          EngSetLastError(ERROR_INVALID_PARAMETER);
-         RETURN(FALSE);
+         Ret = FALSE;
       }
    }
 
-   RETURN(Ret);
-
-CLEANUP:
-   TRACE("Leave NtUserGetUpdateRect, ret=%i\n",_ret_);
+Exit:
+   TRACE("Leave NtUserGetUpdateRect, ret=%i\n", Ret);
    UserLeave();
-   END_CLEANUP;
+   return Ret;
 }
 
 /*
@@ -2011,18 +2002,17 @@ NtUserRedrawWindow(
 {
    RECTL SafeUpdateRect;
    PWND Wnd;
-   BOOL Ret;
+   BOOL Ret = FALSE;
    USER_REFERENCE_ENTRY Ref;
    NTSTATUS Status = STATUS_SUCCESS;
    PREGION RgnUpdate = NULL;
-   DECLARE_RETURN(BOOL);
 
    TRACE("Enter NtUserRedrawWindow\n");
    UserEnterExclusive();
 
    if (!(Wnd = UserGetWindowObject(hWnd ? hWnd : IntGetDesktopWindow())))
    {
-      RETURN( FALSE);
+      goto Exit; // Return FALSE
    }
 
    if (lprcUpdate)
@@ -2040,7 +2030,7 @@ NtUserRedrawWindow(
       if (!NT_SUCCESS(Status))
       {
          EngSetLastError(RtlNtStatusToDosError(Status));
-         RETURN( FALSE);
+         goto Exit; // Return FALSE
       }
    }
 
@@ -2050,7 +2040,7 @@ NtUserRedrawWindow(
    {
       /* RedrawWindow fails only in case that flags are invalid */
       EngSetLastError(ERROR_INVALID_FLAGS);
-      RETURN( FALSE);
+      goto Exit; // Return FALSE
    }
 
    /* We can't hold lock on GDI objects while doing roundtrips to user mode,
@@ -2062,7 +2052,7 @@ NtUserRedrawWindow(
        if (!RgnUpdate)
        {
            EngSetLastError(ERROR_NOT_ENOUGH_MEMORY);
-           RETURN(FALSE);
+           goto Exit; // Return FALSE
        }
        REGION_UnlockRgn(RgnUpdate);
    }
@@ -2080,12 +2070,10 @@ NtUserRedrawWindow(
 
    UserDerefObjectCo(Wnd);
 
-   RETURN( Ret);
-
-CLEANUP:
-   TRACE("Leave NtUserRedrawWindow, ret=%i\n",_ret_);
+Exit:
+   TRACE("Leave NtUserRedrawWindow, ret=%i\n", Ret);
    UserLeave();
-   END_CLEANUP;
+   return Ret;
 }
 
 BOOL

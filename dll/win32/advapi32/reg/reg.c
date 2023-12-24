@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         Windivs system libraries
+ * PROJECT:         ReactOS system libraries
  * FILE:            lib/advapi32/reg/reg.c
  * PURPOSE:         Registry functions
  * PROGRAMMER:      Ariadne ( ariadne@xs4all.nl)
@@ -3722,6 +3722,16 @@ RegQueryInfoKeyW(HKEY hKey,
         return RtlNtStatusToDosError(Status);
     }
 
+    if (IsHKCRKey(KeyHandle))
+    {
+        ErrorCode = QueryInfoHKCRKey(KeyHandle, lpClass, lpcClass, lpReserved,
+                                     lpcSubKeys, lpcMaxSubKeyLen, lpcMaxClassLen,
+                                     lpcValues, lpcMaxValueNameLen, lpcMaxValueLen,
+                                     lpcbSecurityDescriptor, lpftLastWriteTime);
+        ClosePredefKey(KeyHandle);
+        return ErrorCode;
+    }
+
     if (lpClass != NULL)
     {
         if (*lpcClass > 0)
@@ -5184,7 +5194,8 @@ static int load_string(HINSTANCE hModule, UINT resId, LPWSTR pwszBuffer, INT cMa
  * @implemented
  */
 LONG WINAPI
-RegLoadMUIStringW(IN HKEY hKey,
+RegLoadMUIStringW(
+    IN HKEY hKey,
     IN LPCWSTR pszValue  OPTIONAL,
     OUT LPWSTR pszOutBuf,
     IN DWORD cbOutBuf,
@@ -5283,7 +5294,8 @@ cleanup:
  * @implemented
  */
 LONG WINAPI
-RegLoadMUIStringA(IN HKEY hKey,
+RegLoadMUIStringA(
+    IN HKEY hKey,
     IN LPCSTR pszValue  OPTIONAL,
     OUT LPSTR pszOutBuf,
     IN DWORD cbOutBuf,

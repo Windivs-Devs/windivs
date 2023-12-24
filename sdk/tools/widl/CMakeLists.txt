@@ -24,7 +24,6 @@ list(APPEND SOURCE
     ../port/getopt1.c
     ../port/mkstemps.c)
 
-# Taken from widl.rbuild
 add_definitions(-DINT16=SHORT)
 add_host_tool(widl ${SOURCE})
 target_link_libraries(widl PRIVATE host_includes wpphost)

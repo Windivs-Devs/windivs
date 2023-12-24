@@ -200,9 +200,9 @@
 @ stub -version=0x600+ _CrtCheckMemory
 @ stub -version=0x600+ _CrtDbgBreak
 @ cdecl -version=0x600+ _CrtDbgReport(long str long str str)
-@ stub -version=0x600+ _CrtDbgReportV
+@ cdecl -version=0x600+ _CrtDbgReportV(long str long str str ptr)
 @ cdecl -version=0x600+ _CrtDbgReportW(long wstr long wstr wstr)
-@ stub -version=0x600+ _CrtDbgReportWV
+@ cdecl -version=0x600+ _CrtDbgReportWV(long wstr long wstr wstr ptr)
 @ stub -version=0x600+ _CrtDoForAllClientObjects
 @ stub -version=0x600+ _CrtDumpMemoryLeaks
 @ stub -version=0x600+ _CrtIsMemoryBlock
@@ -934,7 +934,7 @@
 @ stub -version=0x600+ _scwprintf_p_l
 @ cdecl _searchenv(str str ptr)
 @ cdecl -version=0x600+ _searchenv_s(str str ptr long)
-@ stub -version=0x600+ -arch=i386 _seh_longjmp_unwind4
+@ stdcall -version=0x600+ -arch=i386 _seh_longjmp_unwind4(ptr)
 @ stdcall -arch=i386 _seh_longjmp_unwind(ptr)
 @ stub -arch=i386 _set_SSE2_enable
 @ stub -version=0x600+ _set_controlfp

@@ -16,9 +16,9 @@ CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
     AUTORADIOBUTTON "Слагане на РеактОС", IDC_INSTALL, 7, 7, 277, 10, WS_GROUP | WS_TABSTOP
-    LTEXT "Install a new copy of Windivs. This option does not keep your files, settings and programs. You can make changes to disks and partitions.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
+    LTEXT "Install a new copy of ReactOS. This option does not keep your files, settings and programs. You can make changes to disks and partitions.", IDC_INSTALLTEXT, 18, 18, 269, 25, NOT WS_GROUP
     AUTORADIOBUTTON "Поправка или осъвременяване на сложен РеактОС", IDC_UPDATE, 7, 50, 277, 10
-    LTEXT "Update or repair an installed copy of Windivs. This option keeps your files, settings and programs. This option is only available if Windivs is already installed on this computer.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
+    LTEXT "Update or repair an installed copy of ReactOS. This option keeps your files, settings and programs. This option is only available if ReactOS is already installed on this computer.", IDC_UPDATETEXT, 18, 61, 269, 30, NOT WS_GROUP
     LTEXT "Натиснете „Напред“ за настройка на устройствата.", IDC_STATIC, 7, 128, 297, 8
 END
 
@@ -27,7 +27,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT       "The Windivs Setup can upgrade one of the available Windivs installations listed below, or, if a Windivs installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
+    LTEXT       "The ReactOS Setup can upgrade one of the available ReactOS installations listed below, or, if a ReactOS installation is damaged, the Setup program can attempt to repair it.", IDC_STATIC, 6, 6, 300, 18
     CONTROL     "", IDC_NTOSLIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 6, 30, 303, 90
     PUSHBUTTON  "&Do not upgrade", IDC_SKIPUPGRADE, 230, 128, 80, 14
     LTEXT       "Click Next to upgrade the selected OS installation, or on 'Do not upgrade' to continue a new installation without upgrading.", IDC_STATIC, 7, 124, 222, 16
@@ -39,11 +39,11 @@ CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT "Компютър:", IDC_STATIC, 20, 15, 80, 10
-    CONTROL "", IDC_COMPUTER, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 15, 150, 80
+    COMBOBOX IDC_COMPUTER, 100, 15, 150, 80, WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST
     LTEXT "  Екран:", IDC_STATIC, 20, 35, 80, 10
-    CONTROL "", IDC_DISPLAY, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 35, 150, 80
+    COMBOBOX IDC_DISPLAY, 100, 35, 150, 80, WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST
     LTEXT "Клавиатура", IDC_STATIC, 20, 55, 80, 10
-    CONTROL "", IDC_KEYBOARD, "ComboBox", WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST, 100, 55, 150, 80
+    COMBOBOX IDC_KEYBOARD, 100, 55, 150, 80, WS_VSCROLL | WS_TABSTOP | CBS_DROPDOWNLIST
     LTEXT "Натиснете „Напред“ за избор на устройство за слагане.", IDC_STATIC, 7, 128, 297, 8
 END
 
@@ -70,7 +70,7 @@ BEGIN
     LTEXT "Размер:", IDC_STATIC, 13, 24, 27, 9
     EDITTEXT IDC_PARTSIZE, 58, 22, 47, 13, WS_VISIBLE | WS_TABSTOP
     LTEXT "ГБ", IDC_UNIT, 117, 24, 14, 9
-    LTEXT "Файлова уредба:", IDC_STATIC, 13, 46, 42, 9
+    LTEXT "Файлова система:", IDC_STATIC, 13, 46, 42, 9
     CONTROL "", IDC_FSTYPE, "ComboBox", WS_VISIBLE | WS_TABSTOP | CBS_DROPDOWNLIST, 58, 42, 73, 50
     PUSHBUTTON "&Добре", IDOK, 35, 68, 47, 15, WS_VISIBLE | WS_TABSTOP
     PUSHBUTTON "&Отказ", IDCANCEL, 87, 68, 47, 15, WS_VISIBLE | WS_TABSTOP
@@ -112,7 +112,7 @@ BEGIN
     EDITTEXT IDC_DESTDRIVE, 95, 76, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
     LTEXT "Destination directory:", IDC_STATIC, 18, 89, 74, 11
     EDITTEXT IDC_PATH, 95, 88, 210, 13, ES_READONLY | ES_AUTOHSCROLL | WS_VISIBLE | NOT WS_BORDER | NOT WS_TABSTOP
-    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nWindivs is alpha-quality software and may break on my computer or corrupt my data.",
+    AUTOCHECKBOX "I confirm that all the installation settings are correct. I also acknowledge that\nReactOS is alpha-quality software and may break on my computer or corrupt my data.",
         IDC_CONFIRM_INSTALL, 7, 104, 303, 18, BS_MULTILINE
     LTEXT "Please confirm that all the installation settings are correct,\nthen click on Install to start the installation process.", IDC_STATIC, 7, 124, 303, 18
 END
@@ -132,11 +132,11 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Настройка на РеактОС"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Completing the Windivs Setup Wizard", IDC_FINISHTITLE, 115, 8, 195, 24
-    LTEXT "Първата степен от настройването на РеактОС приключи успешно.", IDC_STATIC, 20, 50, 277, 10
-    LTEXT "Когато натиснете „Край”, компютърът ви ще се презапусне.", IDC_STATIC, 20, 80, 277, 10
-    CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 20, 120, 277, 8
-    LTEXT "Ако в устройството има КД, го извадете. След това натиснете „Приключване“, за да презапуснете компютъра.", IDC_STATIC, 10, 180, 297, 20
+    LTEXT "Completing the ReactOS Setup Wizard", IDC_FINISHTITLE, 115, 8, 195, 24
+    LTEXT "Първата степен от настройването на РеактОС приключи успешно.", IDC_STATIC, 115, 50, 195, 17
+    LTEXT "Когато натиснете „Край”, компютърът ви ще се презапусне.", IDC_STATIC, 115, 80, 195, 17
+    CONTROL "", IDC_RESTART_PROGRESS, "msctls_progress32", PBS_SMOOTH | WS_CHILD | WS_VISIBLE | WS_BORDER, 115, 110, 195, 8
+    LTEXT "Ако в устройството има КД, го извадете. След това натиснете „Приключване“, за да презапуснете компютъра.", IDC_STATIC, 115, 169, 195, 17
 END
 
 STRINGTABLE
@@ -147,7 +147,7 @@ BEGIN
     IDS_DEVICESUBTITLE "Настройка на екрана и клавиатурата."
     IDS_DRIVETITLE "Приготвяне на дял за слагане и системна папка"
     IDS_DRIVESUBTITLE "Приготвяне на дял за слагане, системна папка и зареждач."
-    IDS_PROCESSTITLE "Подготвяне на дял, презапис на файлове и настройване на уредбата"
+    IDS_PROCESSTITLE "Подготвяне на дял, презапис на файлове и настройване на системата"
     IDS_PROCESSSUBTITLE "Създаване и оразмеряване на дял, презапис на файлове, слагане и настройка на зареждач"
     IDS_RESTARTTITLE "Първата степен на настройването приключи"
     IDS_RESTARTSUBTITLE "Първата степен приключи, презапуснете, за да продължите към втора степен"

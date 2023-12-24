@@ -7,9 +7,6 @@ spec2def(advapi32_vista.dll advapi32_vista.spec ADD_IMPORTLIB)
 
 include_directories(
     ../advapi32
-    ${REACTOS_SOURCE_DIR}/sdk/include/reactos/idl
-    ${REACTOS_SOURCE_DIR}/sdk/include/reactos/drivers/ksecdd
-    ${REACTOS_SOURCE_DIR}/sdk/lib/cryptlib
     ${CMAKE_CURRENT_BINARY_DIR}/../advapi32
 )
 

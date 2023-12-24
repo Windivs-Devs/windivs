@@ -98,16 +98,16 @@ int WINAPI WinMain (HINSTANCE hInst, HINSTANCE hPrevInst,
     DdAttachSurface          = (BOOL (APIENTRY*)(LPDDRAWI_DDRAWSURFACE_LCL, LPDDRAWI_DDRAWSURFACE_LCL))GetProcAddress(lib, "GdiEntry11");
     DdResetVisrgn            = (BOOL (APIENTRY*)(LPDDRAWI_DDRAWSURFACE_LCL, HWND))GetProcAddress(lib, "GdiEntry6");
 
-	printf("This app shows how to start up directx draw/d3d interface and some others.\n");
-	printf("This code has been released to some close applications with my permission, if any company\n");
-    printf("want use part or whole code, you need contact the original author to ask for permission\n");
-    printf("This code is released under a lot of different licenses\n");
+	printf("This app shows how to start up a DirectDraw/Direct3D interface and some others.\n");
+	printf("This code has been released to some closed applications with my permission. If any company\n");
+    printf("wants to use this code, you must contact the original author to ask for permission.\n");
+    printf("This code is released under many different licenses.\n");
     printf("All GPL and LGPL projects have the right to use and study this code.\n");
-    printf("This code maybe need more comments to know how stuff works.\n");
-	printf("Best regards Magnus Olsen magnus@greatlord.com or greatlord@reactos.org\n");
+    printf("This code may require more comments to know how stuff works.\n");
+	printf("Best regards, Magnus Olsen magnus@greatlord.com or greatlord@reactos.org\n");
     printf("Copyright 2006 by Magnus Olsen\n\n");
-    printf("This demo showing how to start dx draw hal and create a primary surface,\n");
-	printf("and an overlay surface and blt to the primary surface\n");
+    printf("This demo shows how to start DirectDraw, creating a primary surface\n");
+	printf("and an overlay surface, and a blt to the primary surface.\n");
 
 
     /*
@@ -208,11 +208,11 @@ int WINAPI WinMain (HINSTANCE hInst, HINSTANCE hPrevInst,
 
 	mDDrawGlobal.dwRefCnt = 1; //addref / remove ref
 
-    // Do not release HDC it has been map in kernel mode
+    // Do not release HDC, it has been mapped in kernel mode
     // DeleteDC(hdc);
 
-    /* we need reenable it if screen res has changes, and some bad drv need be reenable very few
-	   to contiune */
+    /* we need to reenable it if the screen resolution has changed, and some
+       bad driver needs to be reenabled infrequently to continue */
 	/*
     if (!DdReenableDirectDrawObject(&mDDrawGlobal, &newmode))
     {
@@ -328,7 +328,7 @@ int WINAPI WinMain (HINSTANCE hInst, HINSTANCE hPrevInst,
       Copy over from HalInfo to DirectDrawGlobal
    */
 
-  // this is wrong, cDriverName need be in ASCII code not UNICODE
+  // this is wrong, cDriverName needs to be in ASCII not UNICODE
   //memcpy(mDDrawGlobal.cDriverName, mDisplayAdapter, sizeof(wchar)*MAX_DRIVER_NAME);
 
   memcpy(&mDDrawGlobal.vmiData, &mHALInfo.vmiData,sizeof(VIDMEMINFO));

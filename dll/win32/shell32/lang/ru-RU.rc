@@ -1,9 +1,11 @@
 /*
-    Translators:
-    Kudratov Olimjon (olim98@bk.ru)
-    Abdulganiev Rafael (abdulganiev.rafael[at]gmail.com)
-    Stanislav Motylkov (binarymaster@mail.ru)
-*/
+ * PROJECT:     ReactOS Shell32
+ * LICENSE:     LGPL-2.1-or-later (https://spdx.org/licenses/LGPL-2.1-or-later)
+ * PURPOSE:     Russian resource file
+ * TRANSLATORS: Copyright 2014-2016 Kudratov Olimjon <olim98@bk.ru>
+ *              Copyright 2018 Abdulganiev Rafael <abdulganiev.rafael@gmail.com>
+ *              Copyright 2018-2020 Stanislav Motylkov <binarymaster@mail.ru>
+ */
 
 LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 
@@ -144,9 +146,9 @@ BEGIN
     LTEXT "", IDC_ABOUT_VERSION, 35, 65, 250, 10, SS_NOPREFIX
     LTEXT "Copyright 1996-", IDC_STATIC, 35, 75, 53, 10
     LTEXT COPYRIGHT_YEAR, IDC_STATIC, 88, 75, 17, 10
-    LTEXT " Команда Windivs\0", IDC_STATIC, 105, 75, 65, 10
+    LTEXT " Команда ReactOS\0", IDC_STATIC, 105, 75, 65, 10
     LTEXT "", IDC_ABOUT_OTHERSTUFF, 35, 90, 180, 20, SS_NOPREFIX
-    LTEXT "Данная версия Windivs зарегистрирована на:", IDC_ABOUT_REG_TO, 35, 115, 180, 10
+    LTEXT "Данная версия ReactOS зарегистрирована на:", IDC_ABOUT_REG_TO, 35, 115, 180, 10
     LTEXT "", IDC_ABOUT_REG_USERNAME, 45, 125, 180, 10, SS_NOPREFIX
     LTEXT "", IDC_ABOUT_REG_ORGNAME, 45, 135, 180, 10, SS_NOPREFIX
     LTEXT "", IDC_STATIC, 35, 147, 235, 1, SS_ETCHEDHORZ
@@ -160,7 +162,7 @@ IDD_ABOUT_AUTHORS DIALOGEX 35, 90, 235, 85
 STYLE DS_SHELLFONT | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Разработчики Windivs:", IDC_STATIC, 0, 0, 180, 10
+    LTEXT "Разработчики ReactOS:", IDC_STATIC, 0, 0, 180, 10
     LISTBOX IDC_ABOUT_AUTHORS_LISTBOX, 0, 10, 165, 75
 END
 
@@ -170,7 +172,7 @@ CAPTION "Выполнить"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_RUNDLG_ICON, 7, 11, 18, 20, WS_VISIBLE
-    LTEXT "Введите имя программы, папки, документа или ресурс Интернета, и Windivs откроет их.", 12289, 36, 11, 185, 18
+    LTEXT "Введите имя программы, папки, документа или ресурс Интернета, и ReactOS откроет их.", 12289, 36, 11, 185, 18
     LTEXT "&Открыть:", 12305, 7, 39, 34, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 43, 37, 177, 100
     DEFPUSHBUTTON "OK", IDOK, 36, 70, 59, 14, WS_TABSTOP
@@ -303,7 +305,7 @@ BEGIN
     EDITTEXT 14010, 112, 93, 109, 83, ES_LEFT | WS_BORDER | WS_VSCROLL | WS_GROUP | ES_MULTILINE | ES_READONLY
 END
 
-IDD_DRIVE_PROPERTIES DIALOGEX 0, 0, 240, 230
+IDD_DRIVE_PROPERTIES DIALOGEX 0, 0, 240, 220
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Общие"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
@@ -332,11 +334,11 @@ BEGIN
     CTEXT "Диск %c", 14009, 95, 162, 50, 10
     PUSHBUTTON "Очистка &диска", 14010, 160, 159, 70, 15, WS_TABSTOP
     LTEXT "", -1, 8, 176, 223, 1, SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE
-    CHECKBOX "&Сжимать для экономии места", 14011, 8, 200, 222, 10, WS_DISABLED
-    CHECKBOX "Разрешить &индексирование диска для быстрого поиска", 14012, 8, 214, 222, 10, WS_DISABLED
+    CHECKBOX "&Сжимать для экономии места", 14011, 8, 190, 222, 10, WS_DISABLED
+    CHECKBOX "Разрешить &индексирование диска для быстрого поиска", 14012, 8, 204, 222, 10, WS_DISABLED
 END
 
-IDD_DRIVE_TOOLS DIALOGEX 0, 0, 240, 230
+IDD_DRIVE_TOOLS DIALOGEX 0, 0, 240, 220
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Сервис"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
@@ -355,7 +357,7 @@ BEGIN
     PUSHBUTTON "Выполнить &архивацию...", 14002, 110, 170, 120, 15, WS_TABSTOP
 END
 
-IDD_DRIVE_HARDWARE DIALOGEX 0, 0, 240, 230
+IDD_DRIVE_HARDWARE DIALOGEX 0, 0, 240, 220
 STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Оборудование"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
@@ -363,22 +365,23 @@ BEGIN
 END
 
 IDD_RUN_AS DIALOGEX 0, 0, 240, 190
-STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Запустить от другого пользователя"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "От имени какого пользователя вы хотите запустить программу?", -1, 10, 20, 220, 20
-    AUTORADIOBUTTON "Текущий пользователь %s", IDC_RUNAS_THIS, 10, 45, 150, 10, WS_GROUP
+    CHECKBOX "Текущий пользователь %s", 14000, 10, 45, 150, 10
     LTEXT "Защитить мой компьютер и данные от несанкционированной деятельности программ.", -1, 25, 57, 210, 10, WS_DISABLED /* FIXME Не влезает в рамки */
     CHECKBOX "Данная опция может защитить ваш компьютер и данные от вирусов, но программа может работать неправильно", 14001, 25, 68, 200, 30, WS_DISABLED | BS_MULTILINE
-    AUTORADIOBUTTON "Запустить от указанного пользователя:", IDC_RUNAS_OTHER, 10, 100, 175, 10
+    CHECKBOX "Запустить от указанного пользователя:", 14002, 10, 100, 175, 10
     LTEXT "Пользователь:", -1, 20, 118, 54, 10
-    COMBOBOX IDC_RUNAS_NAME, 75, 115, 100, 15, CBS_DROPDOWN | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
+    COMBOBOX 14003, 75, 115, 100, 15, CBS_DROPDOWNLIST | WS_VSCROLL | WS_VISIBLE | WS_TABSTOP
     PUSHBUTTON "...", 14004, 180, 115, 30, 14, WS_TABSTOP
     LTEXT "Пароль:", -1, 20, 143, 53, 10
-    EDITTEXT IDC_RUNAS_PASS, 74, 140, 100, 14, ES_LEFT | WS_BORDER | WS_GROUP
-    PUSHBUTTON "OK", IDOK, 57, 170, 60, 14, WS_TABSTOP
-    PUSHBUTTON "Отмена", IDCANCEL, 122, 170, 60, 14, WS_TABSTOP
+    EDITTEXT 14005, 74, 140, 100, 14, ES_LEFT | WS_BORDER | WS_GROUP
+    PUSHBUTTON "...", 14006, 180, 140, 30, 14, WS_TABSTOP
+    PUSHBUTTON "OK", 14007, 57, 170, 60, 14, WS_TABSTOP
+    PUSHBUTTON "Отмена", 14008, 122, 170, 60, 14, WS_TABSTOP
 END
 
 IDD_RECYCLE_BIN_PROPERTIES DIALOGEX 0, 0, 240, 190
@@ -411,59 +414,59 @@ BEGIN
     PUSHBUTTON "Отмена", IDCANCEL, 206, 236, 50, 14
 END
 
-IDD_FOLDER_OPTIONS_GENERAL DIALOGEX 0, 0, 264, 256
+IDD_FOLDER_OPTIONS_GENERAL DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Общие"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    GROUPBOX "Задачи", -1, 7, 10, 249, 45
-    CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 25, 21, 20
-    AUTORADIOBUTTON "Отобра&жение списка типичных задач в папках", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 25, 170, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Использовать обы&чные папки Windivs", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 37, 145, 10
-    GROUPBOX "Обзор папок", -1, 7, 60, 249, 45, WS_TABSTOP
+    GROUPBOX "Задачи", -1, 7, 10, 249, 40
+    CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 20, 21, 20
+    AUTORADIOBUTTON "Отобра&жение списка типичных задач в папках", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 20, 210, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Использовать обы&чные папки ReactOS", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 32, 210, 10
+    GROUPBOX "Обзор папок", -1, 7, 60, 249, 40, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
-    AUTORADIOBUTTON "&Открывать папки в одном и том же окне", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 150, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "О&ткрывать каждую папку в отдельном окне", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 165, 10
-    GROUPBOX "Щелчки мышью", -1, 7, 110, 249, 60
+    AUTORADIOBUTTON "&Открывать папки в одном и том же окне", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 210, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "О&ткрывать каждую папку в отдельном окне", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 210, 10
+    GROUPBOX "Щелчки мышью", -1, 7, 110, 249, 64
     CONTROL "", IDC_FOLDER_OPTIONS_CLICKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 120, 21, 20
-    AUTORADIOBUTTON "От&крывать одним щелчком, выделять указателем", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 185, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Откр&ывать двойным, а выделять одним щелчком", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 180, 10
-    AUTORADIOBUTTON "Подчеркив&ать подписи значков", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 170, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Подчеркивать подписи з&начков при наведении", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 175, 10
-    PUSHBUTTON "&Восстановить умолчания", IDC_FOLDER_OPTIONS_RESTORE, 167, 175, 90, 14, WS_TABSTOP
+    AUTORADIOBUTTON "От&крывать одним щелчком, выделять указателем", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 210, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Откр&ывать двойным, а выделять одним щелчком", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 210, 10
+    AUTORADIOBUTTON "Подчеркив&ать подписи значков", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 200, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Подчеркивать подписи з&начков при наведении", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 200, 10
+    PUSHBUTTON "&Восстановить умолчания", IDC_FOLDER_OPTIONS_RESTORE, 158, 178, 99, 14, WS_TABSTOP
 END
 
-IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 264, 256
+IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Вид"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX "Представление папок", -1, 7, 10, 249, 60
-    ICON IDI_SHELL_PROGRAMS_FOLDER2, IDC_STATIC, 20, 20, 21, 20
-    LTEXT "Можно применить вид, выбранный для этой папки, например, ""Таблица"" или ""Плитка"", ко всем папкам.", -1, 60, 20, 180, 20
-    PUSHBUTTON "&Применить к папкам", IDC_VIEW_APPLY_TO_ALL, 60, 50, 80, 14, WS_TABSTOP
-    PUSHBUTTON "&Сброс вида папок", IDC_VIEW_RESET_ALL, 150, 50, 80, 14, WS_TABSTOP
+    ICON IDI_SHELL_PROGRAMS_FOLDER2, IDC_STATIC, 14, 20, 21, 20
+    LTEXT "Можно применить вид, выбранный для этой папки, например, ""Таблица"" или ""Плитка"", ко всем папкам.", -1, 40, 20, 213, 20
+    PUSHBUTTON "&Применить к папкам", IDC_VIEW_APPLY_TO_ALL, 15, 50, 115, 14, WS_TABSTOP
+    PUSHBUTTON "&Сброс вида папок", IDC_VIEW_RESET_ALL, 135, 50, 115, 14, WS_TABSTOP
     LTEXT "Дополнительные параметры:", -1, 7, 80, 105, 10
-    CONTROL "", IDC_VIEW_TREEVIEW, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 249, 120
-    PUSHBUTTON "&Восстановить умолчания", IDC_VIEW_RESTORE_DEFAULTS, 160, 210, 100, 14, WS_TABSTOP
+    CONTROL "", IDC_VIEW_TREEVIEW, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 249, 111
+    PUSHBUTTON "&Восстановить умолчания", IDC_VIEW_RESTORE_DEFAULTS, 158, 204, 99, 14, WS_TABSTOP
 END
 
-IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 264, 256
+IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Типы файлов"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "&Зарегистрированные типы файлов:", -1, 7, 10, 180, 10
-    CONTROL "", IDC_FILETYPES_LISTVIEW, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 20, 249, 115
-    PUSHBUTTON "&Создать", IDC_FILETYPES_NEW, 125, 140, 55, 14, WS_TABSTOP
-    PUSHBUTTON "&Удалить", IDC_FILETYPES_DELETE, 185, 140, 70, 14, WS_TABSTOP
-    GROUPBOX "Описание расширения '%s'", IDC_FILETYPES_DETAILS_GROUPBOX, 7, 170, 249, 70
-    LTEXT "Открывать с:", -1, 12, 180, 40, 10
-    CONTROL "", IDC_FILETYPES_ICON, "STATIC", SS_BITMAP | SS_REALSIZEIMAGE, 85, 180, 10, 10
-    LTEXT "Приложение", IDC_FILETYPES_APPNAME, 100, 180, 80, 10
-    PUSHBUTTON "&Изменить...", IDC_FILETYPES_CHANGE, 185, 180, 65, 14, WS_TABSTOP
-    LTEXT "", IDC_FILETYPES_DESCRIPTION, 12, 195, 160, 40
-    PUSHBUTTON "До&полнительно", IDC_FILETYPES_ADVANCED, 185, 215, 65, 14, WS_TABSTOP
+    CONTROL "", IDC_FILETYPES_LISTVIEW, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 20, 249, 99
+    PUSHBUTTON "&Создать", IDC_FILETYPES_NEW, 140, 123, 55, 14, WS_TABSTOP
+    PUSHBUTTON "&Удалить", IDC_FILETYPES_DELETE, 200, 123, 55, 14, WS_TABSTOP
+    GROUPBOX "Описание расширения '%s'", IDC_FILETYPES_DETAILS_GROUPBOX, 7, 143, 249, 70
+    LTEXT "Открывать с:", -1, 12, 153, 48, 10
+    CONTROL "", IDC_FILETYPES_ICON, "STATIC", SS_BITMAP | SS_REALSIZEIMAGE, 85, 153, 10, 10
+    LTEXT "", IDC_FILETYPES_APPNAME, 100, 153, 80, 10
+    PUSHBUTTON "&Изменить...", IDC_FILETYPES_CHANGE, 185, 153, 65, 14, WS_TABSTOP
+    LTEXT "", IDC_FILETYPES_DESCRIPTION, 12, 168, 160, 40
+    PUSHBUTTON "До&полнительно", IDC_FILETYPES_ADVANCED, 185, 188, 65, 14, WS_TABSTOP
 END
 
 IDD_CONFIRM_FILE_REPLACE DIALOGEX 0, 0, 282, 143
@@ -489,7 +492,7 @@ END
 
 IDD_LOG_OFF DIALOGEX 0, 0, 212, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Выход из Windivs"
+CAPTION "Выход из ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
@@ -507,14 +510,14 @@ BEGIN
     PUSHBUTTON "&Switch User", IDC_SWITCH_USER_BUTTON, 55, 46, 22, 20, BS_OWNERDRAW | WS_DISABLED | WS_GROUP
     PUSHBUTTON "В&ыход", IDC_LOG_OFF_BUTTON, 132, 46, 22, 20, BS_OWNERDRAW
     PUSHBUTTON "Отмена", IDCANCEL, 162, 103, 40, 12, WS_GROUP | BS_FLAT
-    LTEXT "Выход из Windivs", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 130, 19
+    LTEXT "Выход из ReactOS", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 130, 19
     CTEXT "Switch User", IDC_SWITCH_USER_STATIC, 41, 70, 51, 11
     CTEXT "Выход", IDC_LOG_OFF_STATIC, 118, 70, 51, 11
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Отключить Windivs"
+CAPTION "Отключить ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_DISCONN, IDC_STATIC, 8, 6, 21, 20
@@ -544,7 +547,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
     LTEXT "На этом диске или устройстве хранится содержимое различных типов.", 1001, 32, 7, 191, 20
-    LTEXT "Какое действие следует выполнять Windivs?", 1002, 32, 31, 188, 8
+    LTEXT "Какое действие следует выполнять ReactOS?", 1002, 32, 31, 188, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 188, 139
     DEFPUSHBUTTON "OK", IDOK, 96, 186, 60, 14
     PUSHBUTTON "Отмена", IDCANCEL, 160, 186, 60, 14
@@ -556,10 +559,10 @@ CAPTION "Смешанное содержимое"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "Windivs может всегда выполнять одно и то же действие, когда вы вставляете диск или подключаете устройство с файлами следующего типа:", 1001, 30, 7, 193, 20 /* FIXME Не влазит в рамки */
+    LTEXT "ReactOS может всегда выполнять одно и то же действие, когда вы вставляете диск или подключаете устройство с файлами следующего типа:", 1001, 30, 7, 193, 20 /* FIXME Не влазит в рамки */
     ICON "", 1005, 32, 27, 11, 10, SS_REALSIZECONTROL
     EDITTEXT 1006, 49, 28, 177, 14, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "Какое действие следует выполнять Windivs?", 1002, 32, 41, 190, 8
+    LTEXT "Какое действие следует выполнять ReactOS?", 1002, 32, 41, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 55, 188, 112
     AUTOCHECKBOX "Всегда выполнять выбранное действие", 1004, 32, 171, 190, 10
     DEFPUSHBUTTON "OK", IDOK, 96, 185, 60, 14
@@ -572,8 +575,8 @@ CAPTION "Автозапуск"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "Windivs может выполнять одно и то же действие при каждом подключении этого устройства.", 1001, 32, 7, 190, 22
-    LTEXT "&Какое действие следует выполнять Windivs?", 1002, 32, 31, 190, 8
+    LTEXT "ReactOS может выполнять одно и то же действие при каждом подключении этого устройства.", 1001, 32, 7, 190, 22
+    LTEXT "&Какое действие следует выполнять ReactOS?", 1002, 32, 31, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 187, 96
     AUTOCHECKBOX "&Всегда выполнять выбранное действие", 1004, 32, 143, 190, 8
     DEFPUSHBUTTON "OK", IDOK, 94, 160, 60, 14
@@ -582,7 +585,7 @@ END
 
 IDD_SHUTDOWN DIALOGEX 0, 0, 211, 103
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Завершение работы Windivs"
+CAPTION "Завершение работы ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 8240, -1, 6, 6, 21, 20, SS_REALSIZECONTROL | WS_GROUP
@@ -707,7 +710,7 @@ BEGIN
     PUSHBUTTON "Отмена", IDCANCEL, 160, 40, 60, 14
 END
 
-IDD_FOLDER_CUSTOMIZE DIALOGEX 0, 0, 240, 250
+IDD_FOLDER_CUSTOMIZE DIALOGEX 0, 0, 240, 220
 CAPTION "Настройка"
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
 FONT 8, "MS Shell Dlg"
@@ -716,16 +719,16 @@ BEGIN
     LTEXT "Использовать этот тип в качестве &шаблона:", IDC_STATIC, 15, 20, 210, 12
     COMBOBOX IDC_FOLDERCUST_COMBOBOX, 15, 35, 210, 300, CBS_HASSTRINGS | CBS_AUTOHSCROLL | CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     AUTOCHECKBOX "Также применять его ко всем &подпапкам", IDC_FOLDERCUST_CHECKBOX, 15, 50, 210, 15
-    GROUPBOX "Картинка для папки", IDC_STATIC, 5, 75, 230, 90, WS_TABSTOP
+    GROUPBOX "Картинка для папки", IDC_STATIC, 5, 75, 230, 85, WS_TABSTOP
     LTEXT "В режиме просмотра эскизов можно разместить картинку для этой папки, которая напомнит о её содержимом.", IDC_STATIC, 15, 87, 115, 33
-    PUSHBUTTON "Выбрать &картинку...", IDC_FOLDERCUST_CHOOSE_PIC, 15, 125, 115, 15
-    PUSHBUTTON "&Восстановить по умолчанию", IDC_FOLDERCUST_RESTORE_DEFAULTS, 15, 144, 115, 15
+    PUSHBUTTON "Выбрать &картинку...", IDC_FOLDERCUST_CHOOSE_PIC, 15, 120, 115, 15
+    PUSHBUTTON "&Восстановить по умолчанию", IDC_FOLDERCUST_RESTORE_DEFAULTS, 15, 139, 115, 15
     LTEXT "Просмотр:", IDC_STATIC, 139, 85, 81, 11
     CONTROL "", IDC_FOLDERCUST_PREVIEW_BITMAP, "STATIC", SS_BITMAP | WS_GROUP, 150, 100, 60, 60
-    GROUPBOX "Значок для папки", IDC_STATIC, 5, 170, 230, 65, WS_TABSTOP
-    LTEXT "Для всех режимов просмотра, кроме эскизов, можно заменить стандартный значок папки на другой.", IDC_STATIC, 15, 180, 210, 25
-    ICON 0, IDC_FOLDERCUST_ICON, 175, 209, 32, 30
-    PUSHBUTTON "Сменить &значок...", IDC_FOLDERCUST_CHANGE_ICON, 15, 210, 75, 15
+    GROUPBOX "Значок для папки", IDC_STATIC, 5, 165, 230, 50, WS_TABSTOP
+    LTEXT "Для всех режимов просмотра, кроме эскизов, можно заменить стандартный значок папки на другой.", IDC_STATIC, 15, 175, 210, 25
+    ICON 0, IDC_FOLDERCUST_ICON, 175, 194, 32, 30
+    PUSHBUTTON "Сменить &значок...", IDC_FOLDERCUST_CHANGE_ICON, 15, 195, 75, 15
 END
 
 IDD_LINK_PROBLEM DIALOGEX 0, 0, 250, 140
@@ -840,9 +843,9 @@ BEGIN
 
     /* message box strings */
     IDS_RESTART_TITLE "Перезагрузка"
-    IDS_RESTART_PROMPT "Вы действительно хотите перезагрузить Windivs?"
+    IDS_RESTART_PROMPT "Вы действительно хотите перезагрузить ReactOS?"
     IDS_SHUTDOWN_TITLE "Завершение работы"
-    IDS_SHUTDOWN_PROMPT "Вы действительно хотите завершить работу Windivs?"
+    IDS_SHUTDOWN_PROMPT "Вы действительно хотите завершить работу ReactOS?"
 
     /* Format Dialog Strings */
     IDS_FORMAT_TITLE "Форматирование локального диска"
@@ -851,7 +854,7 @@ BEGIN
 
     /* Warning format system drive dialog strings */
     IDS_NO_FORMAT_TITLE "Невозможно отформатировать этот том"
-    IDS_NO_FORMAT "Этот том не может быть отформатирован! На нём находятся важные системные файлы, необходимые для работы Windivs."
+    IDS_NO_FORMAT "Этот том не может быть отформатирован! На нём находятся важные системные файлы, необходимые для работы ReactOS."
 
     /* Run File dialog */
     IDS_RUNDLG_ERROR "Невозможно отобразить диалоговое окно Выполнить (внутренняя ошибка)"
@@ -932,8 +935,8 @@ BEGIN
 
     /* Friendly File Type Names */
     IDS_DIRECTORY "Папка с файлами"
-    IDS_BAT_FILE "Пакетный файл Windivs"
-    IDS_CMD_FILE "Командный скрипт Windivs"
+    IDS_BAT_FILE "Пакетный файл ReactOS"
+    IDS_CMD_FILE "Командный скрипт ReactOS"
     IDS_COM_FILE "Приложение DOS"
     IDS_CPL_FILE "Элемент панели управления"
     IDS_CUR_FILE "Курсор"
@@ -994,10 +997,6 @@ BEGIN
     IDS_OBJECTS "Объектов: %d"
     IDS_OBJECTS_SELECTED "Выделено объектов: %d"
 
-    IDS_RECYCLE_CLEANER_DISPLAYNAME "Recycle Bin"
-    IDS_RECYCLE_CLEANER_DESCRIPTION "The Recycle Bin contains files you have deleted from your computer. These files are not permanently removed until you empty the Recycle Bin."
-    IDS_RECYCLE_CLEANER_BUTTON_TEXT "&View Files"
-
     IDS_TITLE_MYCOMP "Мой компьютер"
     IDS_TITLE_MYNET "Сетевое окружение"
     IDS_TITLE_BIN_1 "Корзина (полная)"
@@ -1052,7 +1051,7 @@ BEGIN
     IDS_SYSTEMFOLDER "Системная папка"
 
     /* For IDD_LOG_OFF_FANCY */
-    IDS_LOG_OFF_DESC "Закрывает программы и завершает ваш сеанс Windivs."
+    IDS_LOG_OFF_DESC "Закрывает программы и завершает ваш сеанс ReactOS."
     IDS_SWITCH_USER_DESC "Позволяет другому пользователю войти в систему, оставляя открытыми ваши приложения и файлы.\r\n\r\n(Можно также выполнить переключение пользователей, нажав сочетание клавиш Windows + L.)"
     IDS_LOG_OFF_TITLE "Выход"
     IDS_SWITCH_USER_TITLE "Сменить пользователя"

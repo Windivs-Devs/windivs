@@ -4554,7 +4554,7 @@ MmMapViewInSystemSpaceEx (
     return Status;
 }
 
-/* This function must be called with adress space lock held */
+/* This function must be called with address space lock held */
 NTSTATUS
 NTAPI
 MiRosUnmapViewInSystemSpace(IN PVOID MappedBase)
