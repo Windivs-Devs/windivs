@@ -8,7 +8,7 @@ static MUI_ENTRY frFRSetupInitPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY frFRLanguagePageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY frFRWelcomePageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -185,7 +185,7 @@ static MUI_ENTRY frFRIntroPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY frFRLicensePageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -422,7 +422,7 @@ static MUI_ENTRY frFRDevicePageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -529,7 +529,7 @@ static MUI_ENTRY frFRRepairPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -609,7 +609,7 @@ static MUI_ENTRY frFRUpgradePageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -689,7 +689,7 @@ static MUI_ENTRY frFRComputerPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -748,7 +748,7 @@ static MUI_ENTRY frFRFlushPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -793,7 +793,7 @@ static MUI_ENTRY frFRQuitPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -845,7 +845,7 @@ static MUI_ENTRY frFRDisplayPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -904,7 +904,7 @@ static MUI_ENTRY frFRSuccessPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -956,7 +956,7 @@ static MUI_ENTRY frFRSelectPartitionEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1029,7 +1029,7 @@ static MUI_ENTRY frFRChangeSystemPartition[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1151,7 +1151,7 @@ static MUI_ENTRY frFRConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1273,7 +1273,7 @@ static MUI_ENTRY frFRFormatPartitionEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1311,7 +1311,7 @@ static MUI_ENTRY frFRCheckFSEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1342,7 +1342,7 @@ static MUI_ENTRY frFRInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1401,7 +1401,7 @@ static MUI_ENTRY frFRFileCopyEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1446,7 +1446,7 @@ static MUI_ENTRY frFRBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1505,7 +1505,7 @@ static MUI_ENTRY frFRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7268) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1536,7 +1536,7 @@ static MUI_ENTRY frFRBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1582,7 +1582,7 @@ static MUI_ENTRY frFRKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1641,7 +1641,7 @@ static MUI_ENTRY frFRLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1701,7 +1701,7 @@ static MUI_ENTRY frFRPrepareCopyEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1733,7 +1733,7 @@ static MUI_ENTRY frFRSelectFSEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1781,7 +1781,7 @@ static MUI_ENTRY frFRDeletePartitionEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1833,7 +1833,7 @@ static MUI_ENTRY frFRRegistryEntries[] =
     {
         4,
         3,
-        " Installation de Windivs7 RC (build 7260) ",
+        " Installation de Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

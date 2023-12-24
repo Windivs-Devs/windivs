@@ -8,7 +8,7 @@ static MUI_ENTRY etEESetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY etEELanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY etEEWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -185,7 +185,7 @@ static MUI_ENTRY etEEIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY etEELicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY etEEDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -515,7 +515,7 @@ static MUI_ENTRY etEERepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -588,7 +588,7 @@ static MUI_ENTRY etEEUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -668,7 +668,7 @@ static MUI_ENTRY etEEComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -727,7 +727,7 @@ static MUI_ENTRY etEEFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -772,7 +772,7 @@ static MUI_ENTRY etEEQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -824,7 +824,7 @@ static MUI_ENTRY etEEDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -883,7 +883,7 @@ static MUI_ENTRY etEESuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -935,7 +935,7 @@ static MUI_ENTRY etEESelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1009,7 +1009,7 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7268) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1131,7 +1131,7 @@ static MUI_ENTRY etEEConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1239,7 +1239,7 @@ static MUI_ENTRY etEEFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1277,7 +1277,7 @@ static MUI_ENTRY etEECheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1308,7 +1308,7 @@ static MUI_ENTRY etEEInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1367,7 +1367,7 @@ static MUI_ENTRY etEEFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1412,7 +1412,7 @@ static MUI_ENTRY etEEBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1471,7 +1471,7 @@ static MUI_ENTRY etEEBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7268) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1502,7 +1502,7 @@ static MUI_ENTRY etEEBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1548,7 +1548,7 @@ static MUI_ENTRY etEEKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1607,7 +1607,7 @@ static MUI_ENTRY etEELayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1667,7 +1667,7 @@ static MUI_ENTRY etEEPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1699,7 +1699,7 @@ static MUI_ENTRY etEESelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1747,7 +1747,7 @@ static MUI_ENTRY etEEDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1799,7 +1799,7 @@ static MUI_ENTRY etEERegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) paigaldus ",
+        " Windivs7 RC (build 7268) paigaldus ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

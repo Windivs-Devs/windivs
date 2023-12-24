@@ -6,7 +6,7 @@ static MUI_ENTRY euESSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -44,7 +44,7 @@ static MUI_ENTRY euESLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -96,7 +96,7 @@ static MUI_ENTRY euESWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -184,7 +184,7 @@ static MUI_ENTRY euESIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -264,7 +264,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -407,7 +407,7 @@ static MUI_ENTRY euESDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -514,7 +514,7 @@ static MUI_ENTRY euESRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -587,7 +587,7 @@ static MUI_ENTRY euESUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -667,7 +667,7 @@ static MUI_ENTRY euESComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -726,7 +726,7 @@ static MUI_ENTRY euESFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -771,7 +771,7 @@ static MUI_ENTRY euESQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -823,7 +823,7 @@ static MUI_ENTRY euESDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -882,7 +882,7 @@ static MUI_ENTRY euESSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -934,7 +934,7 @@ static MUI_ENTRY euESSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1007,7 +1007,7 @@ static MUI_ENTRY euESChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1129,7 +1129,7 @@ static MUI_ENTRY euESConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1237,7 +1237,7 @@ static MUI_ENTRY euESFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1275,7 +1275,7 @@ static MUI_ENTRY euESCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1306,7 +1306,7 @@ static MUI_ENTRY euESInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1365,7 +1365,7 @@ static MUI_ENTRY euESFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1410,7 +1410,7 @@ static MUI_ENTRY euESBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1469,7 +1469,7 @@ static MUI_ENTRY euESBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1500,7 +1500,7 @@ static MUI_ENTRY euESBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1553,7 +1553,7 @@ static MUI_ENTRY euESKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1612,7 +1612,7 @@ static MUI_ENTRY euESLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1672,7 +1672,7 @@ static MUI_ENTRY euESPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1704,7 +1704,7 @@ static MUI_ENTRY euESSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1752,7 +1752,7 @@ static MUI_ENTRY euESDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1804,7 +1804,7 @@ static MUI_ENTRY euESRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Instalazioa ",
+        " Windivs7 RC (build 7268) Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

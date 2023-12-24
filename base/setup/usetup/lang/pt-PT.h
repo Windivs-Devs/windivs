@@ -8,7 +8,7 @@ static MUI_ENTRY ptPTSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -46,7 +46,7 @@ static MUI_ENTRY ptPTLanguagePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -98,7 +98,7 @@ static MUI_ENTRY ptPTWelcomePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -185,7 +185,7 @@ static MUI_ENTRY ptPTIntroPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -265,7 +265,7 @@ static MUI_ENTRY ptPTLicensePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY ptPTDevicePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -508,7 +508,7 @@ static MUI_ENTRY ptPTRepairPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -581,7 +581,7 @@ static MUI_ENTRY ptPTUpgradePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -661,7 +661,7 @@ static MUI_ENTRY ptPTComputerPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -727,7 +727,7 @@ static MUI_ENTRY ptPTFlushPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -779,7 +779,7 @@ static MUI_ENTRY ptPTQuitPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -831,7 +831,7 @@ static MUI_ENTRY ptPTDisplayPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -890,7 +890,7 @@ static MUI_ENTRY ptPTSuccessPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -942,7 +942,7 @@ static MUI_ENTRY ptPTSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1022,7 +1022,7 @@ static MUI_ENTRY ptPTChangeSystemPartition[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1144,7 +1144,7 @@ static MUI_ENTRY ptPTConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1252,7 +1252,7 @@ static MUI_ENTRY ptPTFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1290,7 +1290,7 @@ static MUI_ENTRY ptPTCheckFSEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1321,7 +1321,7 @@ static MUI_ENTRY ptPTInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1380,7 +1380,7 @@ static MUI_ENTRY ptPTFileCopyEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1425,7 +1425,7 @@ static MUI_ENTRY ptPTBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1484,7 +1484,7 @@ static MUI_ENTRY ptPTBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1515,7 +1515,7 @@ static MUI_ENTRY ptPTBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1568,7 +1568,7 @@ static MUI_ENTRY ptPTKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1627,7 +1627,7 @@ static MUI_ENTRY ptPTLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1694,7 +1694,7 @@ static MUI_ENTRY ptPTPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1733,7 +1733,7 @@ static MUI_ENTRY ptPTSelectFSEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1781,7 +1781,7 @@ static MUI_ENTRY ptPTDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1840,7 +1840,7 @@ static MUI_ENTRY ptPTRegistryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 RC (build 7260) ",
+        " Instala\207\306o do Windivs7 RC (build 7268) ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
