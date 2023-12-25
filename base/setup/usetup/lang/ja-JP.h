@@ -8,7 +8,7 @@ static MUI_ENTRY jaJPChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 RC (build 7600) Setup ",
+            " Windivs7 RTM (build 7600) Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -151,7 +151,7 @@ static MUI_ENTRY jaJPSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -189,7 +189,7 @@ static MUI_ENTRY jaJPLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -241,7 +241,7 @@ static MUI_ENTRY jaJPWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -328,7 +328,7 @@ static MUI_ENTRY jaJPIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY jaJPLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -551,7 +551,7 @@ static MUI_ENTRY jaJPDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -658,7 +658,7 @@ static MUI_ENTRY jaJPRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -731,7 +731,7 @@ static MUI_ENTRY jaJPUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -811,7 +811,7 @@ static MUI_ENTRY jaJPComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -870,7 +870,7 @@ static MUI_ENTRY jaJPFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -915,7 +915,7 @@ static MUI_ENTRY jaJPQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -967,7 +967,7 @@ static MUI_ENTRY jaJPDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1026,7 +1026,7 @@ static MUI_ENTRY jaJPSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1078,7 +1078,7 @@ static MUI_ENTRY jaJPSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1152,7 +1152,7 @@ static MUI_ENTRY jaJPChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1274,7 +1274,7 @@ static MUI_ENTRY jaJPConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1382,7 +1382,7 @@ static MUI_ENTRY jaJPFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1420,7 +1420,7 @@ static MUI_ENTRY jaJPCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1451,7 +1451,7 @@ static MUI_ENTRY jaJPInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1510,7 +1510,7 @@ static MUI_ENTRY jaJPFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1555,7 +1555,7 @@ static MUI_ENTRY jaJPBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1614,7 +1614,7 @@ static MUI_ENTRY jaJPBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1645,7 +1645,7 @@ static MUI_ENTRY jaJPBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1698,7 +1698,7 @@ static MUI_ENTRY jaJPKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1757,7 +1757,7 @@ static MUI_ENTRY jaJPLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1817,7 +1817,7 @@ static MUI_ENTRY jaJPPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1849,7 +1849,7 @@ static MUI_ENTRY jaJPSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1897,7 +1897,7 @@ static MUI_ENTRY jaJPDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1949,7 +1949,7 @@ static MUI_ENTRY jaJPRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) \276\257\304\261\257\314\337 ",
+        " Windivs7 RTM (build 7600) \276\257\304\261\257\314\337 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

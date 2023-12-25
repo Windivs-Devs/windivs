@@ -8,7 +8,7 @@ static MUI_ENTRY ruRUChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 RC (build 7600) Setup ",
+            " Windivs7 RTM (build 7600) Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -1172,7 +1172,7 @@ static MUI_ENTRY ruRUChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7600) Setup ",
+        " Windivs7 RTM (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
