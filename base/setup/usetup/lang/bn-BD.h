@@ -5,7 +5,7 @@ static MUI_ENTRY bnBDChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 RC (build 7268) Setup ",
+            " Windivs7 RC (build 7600) Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -19,7 +19,7 @@ static MUI_ENTRY bnBDChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7 Release Candidate 2, build 7268",
+            "Windivs7 RTM, build 7600.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -148,7 +148,7 @@ static MUI_ENTRY bnBDSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -186,7 +186,7 @@ static MUI_ENTRY bnBDLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -238,7 +238,7 @@ static MUI_ENTRY bnBDWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -326,7 +326,7 @@ static MUI_ENTRY bnBDIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -406,7 +406,7 @@ static MUI_ENTRY bnBDLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -549,7 +549,7 @@ static MUI_ENTRY bnBDDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -656,7 +656,7 @@ static MUI_ENTRY bnBDRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -729,7 +729,7 @@ static MUI_ENTRY bnBDUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -809,7 +809,7 @@ static MUI_ENTRY bnBDComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -868,7 +868,7 @@ static MUI_ENTRY bnBDFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -913,7 +913,7 @@ static MUI_ENTRY bnBDQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -965,7 +965,7 @@ static MUI_ENTRY bnBDDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1024,7 +1024,7 @@ static MUI_ENTRY bnBDSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1076,7 +1076,7 @@ static MUI_ENTRY bnBDSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1149,7 +1149,7 @@ static MUI_ENTRY bnBDChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1271,7 +1271,7 @@ static MUI_ENTRY bnBDConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1379,7 +1379,7 @@ static MUI_ENTRY bnBDFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1417,7 +1417,7 @@ static MUI_ENTRY bnBDCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1448,7 +1448,7 @@ static MUI_ENTRY bnBDInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1507,7 +1507,7 @@ static MUI_ENTRY bnBDFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1552,7 +1552,7 @@ static MUI_ENTRY bnBDBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1611,7 +1611,7 @@ static MUI_ENTRY bnBDBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1642,7 +1642,7 @@ static MUI_ENTRY bnBDBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1688,7 +1688,7 @@ static MUI_ENTRY bnBDKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1747,7 +1747,7 @@ static MUI_ENTRY bnBDLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1807,7 +1807,7 @@ static MUI_ENTRY bnBDPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1839,7 +1839,7 @@ static MUI_ENTRY bnBDSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1887,7 +1887,7 @@ static MUI_ENTRY bnBDDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1939,7 +1939,7 @@ static MUI_ENTRY bnBDRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7260) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
