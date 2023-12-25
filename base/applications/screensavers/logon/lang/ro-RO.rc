@@ -4,6 +4,6 @@ LANGUAGE LANG_ROMANIAN, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_DESCRIPTION "Sigla ReactOS"
+    IDS_DESCRIPTION "Sigla Windivs"
     IDS_TEXT "Această animație de ecran inactiv nu are opțiuni."
 END

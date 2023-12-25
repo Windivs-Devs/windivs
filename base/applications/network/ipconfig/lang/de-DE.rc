@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS ipconfig utility
+ * PROJECT:     Windivs ipconfig utility
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     German resource file
  * TRANSLATORS: Copyright 2007 Daniel Reimer <reimer.daniel@freenet.de>
@@ -11,7 +11,7 @@ LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_HEADER "\nReactOS-IP-Konfiguration\n\n"
+    IDS_HEADER "\nWindivs-IP-Konfiguration\n\n"
     IDS_HOSTNAME            "\tHostname. . . . . . . . . . . . . : %hs\n"
     IDS_PRIMARYDNSSUFFIX    "\tPrimäres DNS-Suffix . . . . . . . : %hs\n"
     IDS_NODETYPEBCAST       "\tKnotentyp . . . . . . . . . . . . : Broadcast\n"

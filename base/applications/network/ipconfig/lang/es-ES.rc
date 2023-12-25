@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS ipconfig utility
+ * PROJECT:     Windivs ipconfig utility
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Spanish (Spain) resource file
  * TRANSLATORS: Copyright 2011 Jeisson Toscano aka JanusMagnus <jasongenie@gmail.com>
@@ -11,7 +11,7 @@ LANGUAGE LANG_SPANISH, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_HEADER "\nReactOS IP Configuration\n\n"
+    IDS_HEADER "\nWindivs IP Configuration\n\n"
     IDS_HOSTNAME            "\tHost Name . . . . . . . . . . . . : %hs\n"
     IDS_PRIMARYDNSSUFFIX    "\tPrimary DNS Suffix. . . . . . . . : %hs\n"
     IDS_NODETYPEBCAST       "\tNode Type . . . . . . . . . . . . : Difusión\n"
