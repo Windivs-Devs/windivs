@@ -48,7 +48,7 @@ CHOICE [/C[:]opções][/N][/S][/T[:]c,nn][texto]\n\n\
     STRING_CMD_HELP5 "[conclusão do nome do ficheiro Bash]"
     STRING_CMD_HELP6 "[pilha de directórios]"
     STRING_CMD_HELP7 "[redirecionamentos e tubulação]"
-    STRING_CMD_HELP8 "Inicia uma nova instância do interpretador da linha de comando ReactOS.\n\n\
+    STRING_CMD_HELP8 "Inicia uma nova instância do interpretador da linha de comando Windivs.\n\n\
 CMD [/[C|K] comando] [/P][/Q][/T:bf]\n\n\
   /C comando   Executa o comando especificado e termina.\n\
   Comando /K   Executa o comando especificado e permanece.\n\
@@ -463,7 +463,7 @@ lista de créditos. "
     STRING_VERSION_HELP5 "\nEnvie relatórios de bug para <ros-dev@reactos.org>.\n\
 As actualizações estão disponíveis em: https://reactos.org"
     STRING_VERSION_HELP6 "\nVersão do FreeDOS escrita por:\n"
-    STRING_VERSION_HELP7 "\nReactOS versão escrita por:\n"
+    STRING_VERSION_HELP7 "\nWindivs versão escrita por:\n"
     STRING_VOL_HELP1 "O volume na unidade %c é %s\n"
     STRING_VOL_HELP2 "Volume na unidade %c não tem nome.\n"
     STRING_VOL_HELP3 "Número de série do volume é %04X-%04X\n"
@@ -547,9 +547,9 @@ título      Novo título\n"
     STRING_REPLACE_ERROR5 "Acesso negado - %s\n"
     STRING_REPLACE_ERROR6 "Nenhum ficheiro encontrado - %s\n"
     STRING_REPLACE_ERROR7 "Erro estendido 32\n"
-    STRING_CMD_INFOLINE "Tipo de prompt de comando do ReactOS HELP = Ajuda"
-    STRING_REACTOS_VERSION "ReactOS [Versão %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Intérprete de linha de comando\nVersão %s %s"
+    STRING_CMD_INFOLINE "Tipo de prompt de comando do Windivs HELP = Ajuda"
+    STRING_REACTOS_VERSION "Windivs [Versão %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Intérprete de linha de comando\nVersão %s %s"
     STRING_VERSION_RUNNING_ON "Em execução em:"
     STRING_VERSION_RUNVER "%s [Versão %d.%d.%d] %s"
     STRING_COPY_FILE "%d ficheiro(s) copiado(s)\n"

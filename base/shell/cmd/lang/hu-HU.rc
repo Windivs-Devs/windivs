@@ -53,7 +53,7 @@ Az ERRORLEVEL a válasz sorszámára lesz beállítva.\n"
     STRING_CMD_HELP5 "  [Bash típusú állománynév kiegészítés]"
     STRING_CMD_HELP6 "  [mappa tár]"
     STRING_CMD_HELP7 "  [átirányítások és csővezetékek]"
-    STRING_CMD_HELP8 "Elindít egy új ReactOS parancssor értelmezőt.\n\n\
+    STRING_CMD_HELP8 "Elindít egy új Windivs parancssor értelmezőt.\n\n\
 CMD [/[C|K] parancs][/P][/Q][/T:eh]\n\n\
   /C parancs  Végrehajtja a parancsot, majd kilép.\n\
   /K parancs  Végrehajtja a parancsot és tovább fut az értelmező.\n\
@@ -434,7 +434,7 @@ Gépelje be a `ver /c'-t a készítők listájáért."
     STRING_VERSION_HELP5 "\nHibákról e-maileket ide küldhet: <ros-dev@reactos.org>.\n\
 Frissítések és egyéb információk: https://reactos.org"
     STRING_VERSION_HELP6 "\nA FreeDOS verzió készítői:\n"
-    STRING_VERSION_HELP7 "\nA ReactOS verzió készítői:\n"
+    STRING_VERSION_HELP7 "\nA Windivs verzió készítői:\n"
     STRING_VOL_HELP1 " A %c meghajtóban lévő kötet: %s\n"
     STRING_VOL_HELP2 " A %c meghajtóban lévő kötetnek nincs címkéje.\n"
     STRING_VOL_HELP3 " A kötet sorozatszáma: %04X-%04X\n"
@@ -518,9 +518,9 @@ title         új cím\n"
     STRING_REPLACE_ERROR5 "Hozzáférés megtagadva - %s\n"
     STRING_REPLACE_ERROR6 "Nem találhatóak fájlok - %s\n"
     STRING_REPLACE_ERROR7 "Kiterjesztett hiba 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Parancssor                                       HELP parancs = Súgó  "
-    STRING_REACTOS_VERSION "ReactOS [Version %s %s]\n"
-    STRING_CMD_SHELLINFO "\nReactOS Parancssor értelmező\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Windivs Parancssor                                       HELP parancs = Súgó  "
+    STRING_REACTOS_VERSION "Windivs [Version %s %s]\n"
+    STRING_CMD_SHELLINFO "\nWindivs Parancssor értelmező\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Ezen fut: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d állomány másolva\n"

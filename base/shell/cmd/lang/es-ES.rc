@@ -52,7 +52,7 @@ ERRORLEVEL se configura al offset de la tecla que presione el usuario.\n"
     STRING_CMD_HELP5 "  [Completador de nombres de archivos Bash]"
     STRING_CMD_HELP6 "  [Pila de directorios]"
     STRING_CMD_HELP7 "  [Redirecciones y túneles]"
-    STRING_CMD_HELP8 "Comienza una nueva sesion del interprete de comandos de ReactOS.\n\n\
+    STRING_CMD_HELP8 "Comienza una nueva sesion del interprete de comandos de Windivs.\n\n\
 CMD [/[C|K] command][/P][/Q][/T:bf]\n\n\
   /C command  Ejecuta el comando especificado y cierra.\n\
   /K command  Ejecuta eñ comando especificado y permanece.\n\
@@ -450,7 +450,7 @@ lista de los créditos."
     STRING_VERSION_HELP5 "\nManda los informes de bugs a <ros-dev@reactos.org>.\n\
 Actualizaciones disponibles en: https://reactos.org"
     STRING_VERSION_HELP6 "\nVersión de FreeDOS escrita por:\n"
-    STRING_VERSION_HELP7 "\nVersión de ReactOS escrita por:\n"
+    STRING_VERSION_HELP7 "\nVersión de Windivs escrita por:\n"
     STRING_VOL_HELP1 " El volumen en la unidad %c es %s\n"
     STRING_VOL_HELP2 " El volumen en la unidad %c no tiene etiqueta.\n"
     STRING_VOL_HELP3 " El número de serie del volumen es %04X-%04X\n"
@@ -534,9 +534,9 @@ title         Nuevo título\n"
     STRING_REPLACE_ERROR5 "Acceso denegado - %s\n"
     STRING_REPLACE_ERROR6 "No se han encontrado archivos - %s\n"
     STRING_REPLACE_ERROR7 "Error extendido 32\n"
-    STRING_CMD_INFOLINE "  Consola de comandos de ReactOS                Escribe HELP para ver la ayuda  "
-    STRING_REACTOS_VERSION "ReactOS [Versión %s %s]\n"
-    STRING_CMD_SHELLINFO "\nIntérprete de comandos de ReactOS\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Consola de comandos de Windivs                Escribe HELP para ver la ayuda  "
+    STRING_REACTOS_VERSION "Windivs [Versión %s %s]\n"
+    STRING_CMD_SHELLINFO "\nIntérprete de comandos de Windivs\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Funcionando en: "
     STRING_VERSION_RUNVER "%s [Versión %d.%d.%d] %s"
     STRING_COPY_FILE "        %d archivo(s) copiado(s)\n"
