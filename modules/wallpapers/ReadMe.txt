@@ -20,6 +20,7 @@ ReactOS_Mizu_4x3.png                | See above                                 
 ReactOS_Mizu_16x9_A.png             | See above                                      | See above
 ReactOS_Mizu_16x9_B.png             | See above                                      | See above
 Silhouette collection               | Jake Collins (polar@ever3st.com)               | https://ever3st.com/Graphics/Loot/
+windivs_gradient.png                | jpb/ErrorTek/jpbandroid                        | Made with paint.net, see Windivs source code for the image
 
 To include the module in your build folder, run the configure script with the flags -DENABLE_WALLPAPERS=1
 
