@@ -2250,6 +2250,10 @@ MUI_PAGE jaJPPages[] =
         LICENSE_PAGE,
         jaJPLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            jaJPChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         jaJPDevicePageEntries

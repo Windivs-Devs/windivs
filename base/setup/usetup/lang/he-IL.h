@@ -2242,6 +2242,10 @@ MUI_PAGE heILPages[] =
         LICENSE_PAGE,
         heILLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            heILChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         heILDevicePageEntries

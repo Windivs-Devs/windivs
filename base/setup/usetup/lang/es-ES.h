@@ -2253,6 +2253,10 @@ MUI_PAGE esESPages[] =
         LICENSE_PAGE,
         esESLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            esESChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         esESDevicePageEntries

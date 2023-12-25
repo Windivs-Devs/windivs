@@ -2224,6 +2224,10 @@ MUI_PAGE trTRPages[] =
         LICENSE_PAGE,
         trTRLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            trTRChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         trTRDevicePageEntries

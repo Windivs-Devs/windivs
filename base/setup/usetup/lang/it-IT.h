@@ -2254,6 +2254,10 @@ MUI_PAGE itITPages[] =
         LICENSE_PAGE,
         itITLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            itITChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         itITDevicePageEntries

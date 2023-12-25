@@ -2262,6 +2262,10 @@ MUI_PAGE elGRPages[] =
         LICENSE_PAGE,
         elGRLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            elGRChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         elGRDevicePageEntries

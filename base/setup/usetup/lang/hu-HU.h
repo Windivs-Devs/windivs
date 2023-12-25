@@ -2142,6 +2142,10 @@ MUI_PAGE huHUPages[] =
         LICENSE_PAGE,
         huHULicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            huHUChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         huHUDevicePageEntries

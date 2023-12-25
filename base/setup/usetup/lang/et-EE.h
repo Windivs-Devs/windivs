@@ -2241,6 +2241,10 @@ MUI_PAGE etEEPages[] =
         LICENSE_PAGE,
         etEELicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            etEEChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         etEEDevicePageEntries

@@ -2247,6 +2247,10 @@ MUI_PAGE idIDPages[] =
         LICENSE_PAGE,
         idIDLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            idIDChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         idIDDevicePageEntries

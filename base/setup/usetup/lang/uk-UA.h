@@ -2256,6 +2256,10 @@ MUI_PAGE ukUAPages[] =
         LICENSE_PAGE,
         ukUALicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            ukUAChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         ukUADevicePageEntries

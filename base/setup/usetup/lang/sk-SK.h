@@ -2259,6 +2259,10 @@ MUI_PAGE skSKPages[] =
         LICENSE_PAGE,
         skSKLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            skSKChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         skSKDevicePageEntries

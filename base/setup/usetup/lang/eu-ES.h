@@ -2248,6 +2248,10 @@ MUI_PAGE euESPages[] =
         LICENSE_PAGE,
         euESLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            euESChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         euESDevicePageEntries

@@ -2250,6 +2250,10 @@ MUI_PAGE daDKPages[] =
         LICENSE_PAGE,
         daDKLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            daDKChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         daDKDevicePageEntries

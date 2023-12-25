@@ -2270,6 +2270,10 @@ MUI_PAGE ruRUPages[] =
         LICENSE_PAGE,
         ruRULicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            ruRUChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         ruRUDevicePageEntries

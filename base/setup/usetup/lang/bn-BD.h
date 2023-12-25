@@ -2240,6 +2240,10 @@ MUI_PAGE bnBDPages[] =
         LICENSE_PAGE,
         bnBDLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            bnBDChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         bnBDDevicePageEntries

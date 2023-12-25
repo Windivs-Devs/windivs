@@ -2252,6 +2252,10 @@ MUI_PAGE deDEPages[] =
         LICENSE_PAGE,
         deDELicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            deDEChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         deDEDevicePageEntries
