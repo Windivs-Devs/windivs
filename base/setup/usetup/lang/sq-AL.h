@@ -2259,6 +2259,10 @@ MUI_PAGE sqALPages[] =
         LICENSE_PAGE,
         sqALLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            sqALChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         sqALDevicePageEntries

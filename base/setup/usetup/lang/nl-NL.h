@@ -2272,6 +2272,10 @@ MUI_PAGE nlNLPages[] =
         LICENSE_PAGE,
         nlNLLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            nlNLChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         nlNLDevicePageEntries

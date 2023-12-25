@@ -2277,6 +2277,10 @@ MUI_PAGE frFRPages[] =
         LICENSE_PAGE,
         frFRLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            frFRChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         frFRDevicePageEntries

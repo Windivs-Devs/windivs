@@ -2130,6 +2130,10 @@ MUI_PAGE hrHRPages[] =
         LICENSE_PAGE,
         hrHRLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            hrHRChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         hrHRDevicePageEntries

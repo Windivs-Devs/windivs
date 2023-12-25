@@ -2284,6 +2284,10 @@ MUI_PAGE ptPTPages[] =
         LICENSE_PAGE,
         ptPTLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            ptPTChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         ptPTDevicePageEntries

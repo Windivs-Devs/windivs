@@ -2239,6 +2239,10 @@ MUI_PAGE msMYPages[] =
         LICENSE_PAGE,
         msMYLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            msMYChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         msMYDevicePageEntries

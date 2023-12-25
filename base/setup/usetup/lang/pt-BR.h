@@ -2284,6 +2284,10 @@ MUI_PAGE ptBRPages[] =
         LICENSE_PAGE,
         ptBRLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            ptBRChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         ptBRDevicePageEntries

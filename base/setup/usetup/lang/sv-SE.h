@@ -2249,6 +2249,10 @@ MUI_PAGE svSEPages[] =
         LICENSE_PAGE,
         svSELicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            svSEChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         svSEDevicePageEntries

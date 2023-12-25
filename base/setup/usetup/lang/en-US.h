@@ -166,7 +166,7 @@ static MUI_ENTRY enUSWelcomePageEntries[] =
     {
         0,
         0,
-        "ENTER = Continue  R = Repair  L = License  F3 = Quit",
+        "ENTER = Continue  R = Repair  L = License  C = Changelog  F3 = Quit",
         TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
         TEXT_ID_STATIC
     },
@@ -2240,6 +2240,10 @@ MUI_PAGE enUSPages[] =
         LICENSE_PAGE,
         enUSLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            enUSChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         enUSDevicePageEntries

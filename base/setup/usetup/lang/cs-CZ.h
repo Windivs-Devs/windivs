@@ -2248,6 +2248,10 @@ MUI_PAGE csCZPages[] =
         LICENSE_PAGE,
         csCZLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            csCZChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         csCZDevicePageEntries

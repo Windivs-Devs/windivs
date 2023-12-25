@@ -2265,6 +2265,10 @@ MUI_PAGE bgBGPages[] =
         LICENSE_PAGE,
         bgBGLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            bgBGChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         bgBGDevicePageEntries

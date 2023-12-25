@@ -2307,6 +2307,10 @@ MUI_PAGE roROPages[] =
         LICENSE_PAGE,
         roROLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            roROChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         roRODevicePageEntries
