@@ -8,7 +8,7 @@ static MUI_ENTRY daDKChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 RC (build 7268) Setup ",
+            " Windivs7 RC (build 7600) Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -22,7 +22,7 @@ static MUI_ENTRY daDKChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7 Release Candidate 2, build 7268",
+            "Windivs7 RTM, build 7600.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -151,7 +151,7 @@ static MUI_ENTRY daDKSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -189,7 +189,7 @@ static MUI_ENTRY daDKLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -241,7 +241,7 @@ static MUI_ENTRY daDKWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -328,7 +328,7 @@ static MUI_ENTRY daDKIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY daDKLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -551,7 +551,7 @@ static MUI_ENTRY daDKDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -658,7 +658,7 @@ static MUI_ENTRY daDKRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -738,7 +738,7 @@ static MUI_ENTRY daDKUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -818,7 +818,7 @@ static MUI_ENTRY daDKComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -877,7 +877,7 @@ static MUI_ENTRY daDKFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -922,7 +922,7 @@ static MUI_ENTRY daDKQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -974,7 +974,7 @@ static MUI_ENTRY daDKDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1033,7 +1033,7 @@ static MUI_ENTRY daDKSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1085,7 +1085,7 @@ static MUI_ENTRY daDKSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1158,7 +1158,7 @@ static MUI_ENTRY daDKChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1280,7 +1280,7 @@ static MUI_ENTRY daDKConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1381,7 +1381,7 @@ static MUI_ENTRY daDKFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1419,7 +1419,7 @@ static MUI_ENTRY daDKCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1450,7 +1450,7 @@ static MUI_ENTRY daDKInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1509,7 +1509,7 @@ static MUI_ENTRY daDKFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1554,7 +1554,7 @@ static MUI_ENTRY daDKBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1613,7 +1613,7 @@ static MUI_ENTRY daDKBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) Setup ",
+        " Windivs7 RC (build 7600) Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1644,7 +1644,7 @@ static MUI_ENTRY daDKBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1697,7 +1697,7 @@ static MUI_ENTRY daDKKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1756,7 +1756,7 @@ static MUI_ENTRY daDKLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1816,7 +1816,7 @@ static MUI_ENTRY daDKPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1848,7 +1848,7 @@ static MUI_ENTRY daDKSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1896,7 +1896,7 @@ static MUI_ENTRY daDKDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1948,7 +1948,7 @@ static MUI_ENTRY daDKRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RC (build 7268) installationen ",
+        " Windivs7 RC (build 7600) installationen ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
