@@ -50,42 +50,42 @@ static MUI_ENTRY daDKChangelogPageEntries[] =
         {
             8,
             12,
-            "• Various bugfixes",
+            "- Various localisation updates",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             13,
-            "• Introduction of the in-Setup changelog UI",
+            "- Introduction of the in-Setup changelog UI",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             15,
-            "• Several changes to the bootscreen",
+            "- An updated Slate+ theme",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             16,
-            "• New built-in wallpaper",
+            "- Many stability improvements and minor new features",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             17,
-            "",
+            "- Overhaul of the registry and Setup",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             18,
-            "",
+            "- Some minor improvements relating to the boot sequence of the OS",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
