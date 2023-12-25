@@ -227,7 +227,7 @@ BEGIN
     IDS_DHCPACTIVE "DHCP activat"
     IDS_AUTOMATIC "automată"
     IDS_NOITEMSEL "Nu ați selectat nimic. Acțiunea cere o selecție."
-    IDS_TCPIP "ReactOS-TCP/IP"
+    IDS_TCPIP "Windivs-TCP/IP"
     IDS_ADD "&Adaugă"
     IDS_MOD "Con&firmă"
     IDS_TCP_PORTS "Port TCP"

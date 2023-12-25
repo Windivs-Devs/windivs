@@ -1,11 +1,11 @@
 /*
- * PROJECT:     ReactOS Advanced display adapter properties
+ * PROJECT:     Windivs Advanced display adapter properties
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Chinese (Traditional) resource file
  * TRANSLATORS: Copyright 2016 Henry Tang Ih <henrytang2@hotmail.com>
  *              Copyright 2021 Chan Chilung <eason066@gmail.com>
  */
- 
+
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
 
 IDD_DISPLAYADAPTER DIALOGEX 0, 0, 252, 226
