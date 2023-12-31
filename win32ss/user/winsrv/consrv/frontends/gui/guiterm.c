@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Console Server DLL
+ * PROJECT:         Windivs Console Server DLL
  * FILE:            win32ss/user/winsrv/consrv/frontends/gui/guiterm.c
  * PURPOSE:         GUI Terminal Front-End
  * PROGRAMMERS:     Gé van Geldorp

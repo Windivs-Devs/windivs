@@ -407,7 +407,7 @@ AckPageDlgProc(HWND hwndDlg,
 }
 
 static const WCHAR s_szProductOptions[] = L"SYSTEM\\CurrentControlSet\\Control\\ProductOptions";
-static const WCHAR s_szRosVersion[] = L"SYSTEM\\CurrentControlSet\\Control\\ReactOS\\Settings\\Version";
+static const WCHAR s_szRosVersion[] = L"SYSTEM\\CurrentControlSet\\Control\\Windivs\\Settings\\Version";
 static const WCHAR s_szControlWindows[] = L"SYSTEM\\CurrentControlSet\\Control\\Windows";
 static const WCHAR s_szWinlogon[] = L"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon";
 static const WCHAR s_szDefaultSoundEvents[] = L"AppEvents\\Schemes\\Apps\\.Default";
@@ -587,7 +587,7 @@ DoWriteProductOption(PRODUCT_OPTION nOption)
 
     RegCloseKey(hKey);
 
-    /* open ReactOS version key */
+    /* open Windivs version key */
     error = RegOpenKeyExW(HKEY_LOCAL_MACHINE, s_szRosVersion, 0, KEY_WRITE, &hKey);
     if (error)
     {
@@ -2546,7 +2546,7 @@ FinishDlgProc(HWND hwndDlg,
 
 
 /*
- * GetInstallSourceWin32 retrieves the path to the ReactOS installation medium
+ * GetInstallSourceWin32 retrieves the path to the Windivs installation medium
  * in Win32 format, for later use by syssetup and storage in the registry.
  */
 static BOOL

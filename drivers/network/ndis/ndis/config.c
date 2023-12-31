@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS NDIS library
+ * PROJECT:     Windivs NDIS library
  * FILE:        ndis/config.c
  * PURPOSE:     NDIS Configuration Services
  * PROGRAMMERS: Vizzini (vizzini@plasmic.com)

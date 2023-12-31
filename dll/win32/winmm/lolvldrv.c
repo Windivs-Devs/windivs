@@ -4,7 +4,7 @@
  * MMSYSTEM low level drivers handling functions
  *
  * Copyright 1999 Eric Pouech
- * Modified for use with ReactOS by Andrew Greenwood, 2007
+ * Modified for use with Windivs by Andrew Greenwood, 2007
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -380,7 +380,7 @@ static  BOOL	MMDRV_InitPerType(LPWINE_MM_DRIVER lpDrv, UINT type, UINT wMsg)
     else return FALSE;
 
     TRACE("Got %u dev for (%s:%s)\n", count, lpDrv->drvname, llTypes[type].typestr);
-    
+
     if (HIWORD(count))
         return FALSE;
 

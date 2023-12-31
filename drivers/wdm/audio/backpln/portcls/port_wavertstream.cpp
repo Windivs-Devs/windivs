@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Kernel Streaming
+ * PROJECT:         Windivs Kernel Streaming
  * FILE:            drivers/wdm/audio/backpln/portcls/port_wavertstream.cpp
  * PURPOSE:         WaveRTStream helper object
  * PROGRAMMER:      Johannes Anderwald

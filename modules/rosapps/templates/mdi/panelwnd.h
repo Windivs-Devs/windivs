@@ -1,5 +1,5 @@
 /*
- *  ReactOS Application MDI Child Panel Window
+ *  Windivs Application MDI Child Panel Window
  *
  *  panelwnd.h
  *

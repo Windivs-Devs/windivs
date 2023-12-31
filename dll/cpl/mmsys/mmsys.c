@@ -1,8 +1,8 @@
 /*
  *
- * PROJECT:         ReactOS Multimedia Control Panel
+ * PROJECT:         Windivs Multimedia Control Panel
  * FILE:            dll/cpl/mmsys/mmsys.c
- * PURPOSE:         ReactOS Multimedia Control Panel
+ * PURPOSE:         Windivs Multimedia Control Panel
  * PROGRAMMER:      Thomas Weidenmueller <w3seek@reactos.com>
  *                  Dmitry Chapyshev <dmitry@reactos.org>
  * UPDATE HISTORY:

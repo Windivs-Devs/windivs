@@ -1,5 +1,5 @@
 /*
- *  ReactOS About Dialog Box
+ *  Windivs About Dialog Box
  *
  *  about.h
  *

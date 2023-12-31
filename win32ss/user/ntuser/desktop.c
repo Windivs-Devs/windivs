@@ -1,6 +1,6 @@
 /*
  *  COPYRIGHT:        See COPYING in the top level directory
- *  PROJECT:          ReactOS Win32k subsystem
+ *  PROJECT:          Windivs Win32k subsystem
  *  PURPOSE:          Desktops
  *  FILE:             subsystems/win32/win32k/ntuser/desktop.c
  *  PROGRAMMER:       Casper S. Hornstrup (chorns@users.sourceforge.net)
@@ -379,7 +379,7 @@ GetSystemVersionString(OUT PWSTR pwszzVersion,
         /* String for Safe Mode */
         Status = RtlStringCchPrintfW(pwszzVersion,
                                      cchDest,
-                                     L"ReactOS Version %S %wZ (NT %u.%u Build %u%s)\n",
+                                     L"Windivs Version %S %wZ (NT %u.%u Build %u%s)\n",
                                      KERNEL_VERSION_STR,
                                      &BuildLabString,
                                      SharedUserData->NtMajorVersion,
@@ -419,7 +419,7 @@ GetSystemVersionString(OUT PWSTR pwszzVersion,
         /* Multi-string for Normal Mode */
         Status = RtlStringCchPrintfW(pwszzVersion,
                                      cchDest,
-                                     L"ReactOS Version %S\n"
+                                     L"Windivs Version %S\n"
                                      L"Build %wZ\n"
                                      L"Reporting NT %u.%u (Build %u%s)\n",
                                      KERNEL_VERSION_STR,
@@ -452,7 +452,7 @@ GetSystemVersionString(OUT PWSTR pwszzVersion,
         /* Fall-back string */
         Status = RtlStringCchPrintfW(pwszzVersion,
                                      cchDest,
-                                     L"ReactOS Version %S %wZ\n",
+                                     L"Windivs Version %S %wZ\n",
                                      KERNEL_VERSION_STR,
                                      &BuildLabString);
         if (!NT_SUCCESS(Status))
@@ -1351,7 +1351,7 @@ IntSetFocusMessageQueue(PUSER_MESSAGE_QUEUE NewQueue)
     {
         gpqForeground = NULL;
         ERR("ptiLastInput is CLEARED!!\n");
-        ptiLastInput = NULL; // ReactOS hacks... should check for process death.
+        ptiLastInput = NULL; // Windivs hacks... should check for process death.
     }
 }
 

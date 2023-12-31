@@ -1,5 +1,5 @@
 /*
- * ReactOS log2lines
+ * Windivs log2lines
  * Written by Jan Roeloffzen
  *
  * - Custom match routines

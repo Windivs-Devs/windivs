@@ -7,8 +7,8 @@
 ;    INF file for installing AC97 WDM Driver
 ;
 ;
-; During upgrade from Win98SE or Win ME, the default upgrade behavior won't upgrade the drivers 
-; to Win2k or Windows XP. The inf has implemented what's mentioned in 
+; During upgrade from Win98SE or Win ME, the default upgrade behavior won't upgrade the drivers
+; to Win2k or Windows XP. The inf has implemented what's mentioned in
 ; WINDDK\..\src\setup\devupgrd\devupgrd.doc.
 ; If your driver would never be installed under Win98SE or Win ME, you don't need this new migrate.dll
 ; stuff.
@@ -133,7 +133,7 @@ ac97.sys
 
 [DevUpgrd_Files]
 ;;This migrate.dll can be found in the DDK (beta2 or after) under src\setup\devupgrd
-;Migrate.dll      
+;Migrate.dll
 
 [WDMDriver_Files]
 ac97.inf    ; Name of your INF goes here

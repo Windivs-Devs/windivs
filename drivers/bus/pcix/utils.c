@@ -1,9 +1,9 @@
 /*
- * PROJECT:         ReactOS PCI Bus Driver
+ * PROJECT:         Windivs PCI Bus Driver
  * LICENSE:         BSD - See COPYING.ARM in the top level directory
  * FILE:            drivers/bus/pci/utils.c
  * PURPOSE:         Utility/Helper Support Code
- * PROGRAMMERS:     ReactOS Portable Systems Group
+ * PROGRAMMERS:     Windivs Portable Systems Group
  */
 
 /* INCLUDES *******************************************************************/
@@ -612,7 +612,7 @@ PciGetHackFlags(IN USHORT VendorId,
     ULONG LastWeight, MatchWeight;
     ULONG EntryFlags;
 
-    /* ReactOS SetupLDR Hack */
+    /* Windivs SetupLDR Hack */
     if (!PciHackTable) return 0;
 
     /* Initialize the variables before looping */

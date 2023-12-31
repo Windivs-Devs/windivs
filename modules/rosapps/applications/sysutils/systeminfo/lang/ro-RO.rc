@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS System Information
+ * PROJECT:     Windivs System Information
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        rosapps/applications/sysutils/systeminfo/lang/ro-RO.rc
  * PURPOSE:     Romanian Language File for System Information
@@ -55,7 +55,7 @@ IDS_PROCESSORS,              "Proceso(a)r(e)"
 IDS_PROCESSORS_FORMAT,       "%u proceso(a)r(e) instalate."
 IDS_BIOS_DATE,               "Dată BIOS"
 IDS_BIOS_VERSION,            "Versiune BIOS"
-IDS_ROS_DIR,                 "Director ReactOS"
+IDS_ROS_DIR,                 "Director Windivs"
 IDS_SYS_DIR,                 "Director System"
 IDS_BOOT_DEV,                "Dispozitiv de inițializare"
 IDS_SYS_LOCALE,              "Localizare sistem"

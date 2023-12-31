@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS System Control Panel Applet
+ * PROJECT:     Windivs System Control Panel Applet
  * LICENSE:     GPL - See COPYING in the top level directory
  * FILE:        dll/cpl/sysdm/licence.c
  * PURPOSE:     Licence dialog box message handler
@@ -96,7 +96,7 @@ LicenceDlgProc(HWND hDlg,
 
                 if (pLicInfo->hIcon)
                     DestroyIcon(pLicInfo->hIcon);
-                    
+
                 HeapFree(GetProcessHeap(), 0, pLicInfo);
             }
             break;

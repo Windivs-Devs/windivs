@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS user32.dll
+ * PROJECT:         Windivs user32.dll
  * FILE:            win32ss/user/user32/misc/misc.c
  * PURPOSE:         Misc
  * PROGRAMMER:      Thomas Weidenmueller (w3seek@users.sourceforge.net)
@@ -180,8 +180,8 @@ TestState(PWND pWnd, UINT Flag)
     bit = 1 << LOWORD(Flag);
     switch(HIWORD(Flag))
     {
-       case 0: 
-          return (pWnd->state & bit); 
+       case 0:
+          return (pWnd->state & bit);
        case 1:
           return (pWnd->state2 & bit);
        case 2:

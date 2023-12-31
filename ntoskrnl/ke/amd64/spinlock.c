@@ -1,5 +1,5 @@
 /*
- * PROJECT:         ReactOS HAL
+ * PROJECT:         Windivs HAL
  * LICENSE:         GPL - See COPYING in the top level directory
  * FILE:            ntoskrnl/ke/amd64/spinlock.c
  * PURPOSE:         Spinlock and Queued Spinlock Support

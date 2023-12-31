@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:         See COPYING in the top level directory
- * PROJECT:           ReactOS kernel
+ * PROJECT:           Windivs kernel
  * PURPOSE:           GDI Clipping Functions
  * FILE:              win32ss/gdi/eng/clip.c
  * PROGRAMER:         Jason Filby

@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT:   See COPYING in the top level directory
- * PROJECT:     ReactOS DNS Resolver
+ * PROJECT:     Windivs DNS Resolver
  * FILE:        base/services/dnsrslvr/dnsrslvr.c
  * PURPOSE:     DNS Resolver Service
  * PROGRAMMER:  Christoph von Wittich
