@@ -17,6 +17,7 @@
 #include <imm.h>
 #include <ddk/immdev.h>
 #include <cguid.h>
+#include <tchar.h>
 #include <msctf.h>
 #include <ctffunc.h>
 #include <shlwapi.h>
@@ -25,14 +26,7 @@
 #include <cicero/cicbase.h>
 #include <cicero/cicarray.h>
 #include <cicero/cicimc.h>
-
-class CicInputContext;
-
-typedef struct tagCTFIMECONTEXT
-{
-    CicInputContext *m_pCicIC;
-    DWORD m_dwCicFlags;
-} CTFIMECONTEXT, *PCTFIMECONTEXT;
+#include <cicero/cictf.h>
 
 #include <wine/debug.h>
 

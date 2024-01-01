@@ -421,6 +421,9 @@ static int CC_CheckDigitsInEdit( HWND hwnd, int maxval )
  value = atoi(buffer);
  if (value > maxval)       /* build a new string */
  {
+#ifdef __REACTOS__
+  value = maxval;
+#endif
   sprintf(buffer, "%d", maxval);
   result = 2;
  }
@@ -520,10 +523,15 @@ static void CC_PaintCross(CCPRIV *infoPtr)
  if (IsWindowVisible(hwnd))   /* if full size */
  {
    HDC hDC;
+#ifdef __REACTOS__
+   int w = 8, wc = 6;
+#else
    int w = GetDialogBaseUnits() - 1;
    int wc = GetDialogBaseUnits() * 3 / 4;
+#endif
    RECT rect;
    POINT point, p;
+   HRGN region;
    HPEN hPen;
    int x, y;
 
@@ -532,7 +540,9 @@ static void CC_PaintCross(CCPRIV *infoPtr)
 
    GetClientRect(hwnd, &rect);
    hDC = GetDC(hwnd);
-   SelectClipRgn( hDC, CreateRectRgnIndirect(&rect));
+   region = CreateRectRgnIndirect(&rect);
+   SelectClipRgn(hDC, region);
+   DeleteObject(region);
 
    point.x = ((long)rect.right * (long)x) / (long)MAXHORI;
    point.y = rect.bottom - ((long)rect.bottom * (long)y) / (long)MAXVERT;
@@ -541,10 +551,17 @@ static void CC_PaintCross(CCPRIV *infoPtr)
               infoPtr->oldcross.right - infoPtr->oldcross.left,
               infoPtr->oldcross.bottom - infoPtr->oldcross.top,
               infoPtr->hdcMem, infoPtr->oldcross.left, infoPtr->oldcross.top, SRCCOPY);
+#ifdef __REACTOS__
+   infoPtr->oldcross.left   = point.x - w - 3;
+   infoPtr->oldcross.right  = point.x + w + 3;
+   infoPtr->oldcross.top    = point.y - w - 3;
+   infoPtr->oldcross.bottom = point.y + w + 3;
+#else
    infoPtr->oldcross.left   = point.x - w - 1;
    infoPtr->oldcross.right  = point.x + w + 1;
    infoPtr->oldcross.top    = point.y - w - 1;
    infoPtr->oldcross.bottom = point.y + w + 1;
+#endif
 
    hPen = CreatePen(PS_SOLID, 3, RGB(0, 0, 0)); /* -black- color */
    hPen = SelectObject(hDC, hPen);

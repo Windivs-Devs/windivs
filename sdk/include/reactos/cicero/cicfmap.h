@@ -15,7 +15,7 @@
 class CicFileMappingStatic
 {
 protected:
-    LPCWSTR m_pszName;
+    LPCTSTR m_pszName;
     LPVOID m_pView;
     HANDLE m_hMapping;
     BOOL m_bCreated;
@@ -28,7 +28,7 @@ public:
     CicFileMappingStatic() { }
     ~CicFileMappingStatic() { }
 
-    void Init(LPCWSTR pszName, CicMutex *pMutex);
+    void Init(LPCTSTR pszName, CicMutex *pMutex);
 
     LPVOID Create(LPSECURITY_ATTRIBUTES pSA, DWORD dwMaximumSizeLow, LPBOOL pbAlreadyExists);
     LPVOID Open();
@@ -40,24 +40,24 @@ public:
     void Finalize();
 };
 
-class CicFileMapping : public CCicFileMappingStatic
+class CicFileMapping : public CicFileMappingStatic
 {
 public:
-    CicFileMapping(LPCWSTR pszName, CicMutex *pMutex);
+    CicFileMapping(LPCTSTR pszName, CicMutex *pMutex);
     virtual ~CicFileMapping() { Finalize(); }
 };
 
 /******************************************************************************/
 
 inline
-CicFileMapping::CicFileMapping(LPCWSTR pszName, CicMutex *pMutex)
-    : m_pszName(NULL)
-    , m_pView(NULL)
-    , m_hMapping(NULL)
-    , m_bCreated(FALSE)
-    , m_bHasMutex(FALSE)
-    , m_pMutex(NULL)
+CicFileMapping::CicFileMapping(LPCTSTR pszName, CicMutex *pMutex)
 {
+    m_pszName = NULL;
+    m_pView = NULL;
+    m_hMapping = NULL;
+    m_bCreated = FALSE;
+    m_bHasMutex = FALSE;
+    m_pMutex = NULL;
     Init(pszName, pMutex);
 }
 
@@ -78,7 +78,7 @@ inline void CicFileMappingStatic::Close()
     m_bCreated = FALSE;
 }
 
-inline void CicFileMappingStatic::Init(LPCWSTR pszName, CicMutex *pMutex)
+inline void CicFileMappingStatic::Init(LPCTSTR pszName, CicMutex *pMutex)
 {
     if (pMutex)
         m_pMutex = pMutex;
@@ -97,12 +97,12 @@ CicFileMappingStatic::Create(
     if (!m_pszName)
         return NULL;
 
-    m_hMapping = ::CreateFileMappingW(INVALID_HANDLE_VALUE,
-                                      pSA,
-                                      PAGE_READWRITE,
-                                      0,
-                                      dwMaximumSizeLow,
-                                      m_pszName);
+    m_hMapping = ::CreateFileMapping(INVALID_HANDLE_VALUE,
+                                     pSA,
+                                     PAGE_READWRITE,
+                                     0,
+                                     dwMaximumSizeLow,
+                                     m_pszName);
     if (pbAlreadyExists)
         *pbAlreadyExists = (::GetLastError() == ERROR_ALREADY_EXISTS);
     if (!m_hMapping)
@@ -116,7 +116,7 @@ inline LPVOID CicFileMappingStatic::Open()
 {
     if (!m_pszName)
         return NULL;
-    m_hMapping = ::OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, m_pszName);
+    m_hMapping = ::OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, m_pszName);
     if (!m_hMapping)
         return NULL;
 
@@ -148,7 +148,7 @@ inline void CicFileMappingStatic::Leave()
     m_pMutex->Leave();
 }
 
-inline BOOL CCicFileMappingStatic::Flush(SIZE_T dwNumberOfBytesToFlush)
+inline BOOL CicFileMappingStatic::Flush(SIZE_T dwNumberOfBytesToFlush)
 {
     if (!m_pView)
         return FALSE;
