@@ -1,6 +1,6 @@
 /*
  * FILE:       dll/cpl/liccpa/lang/ro-RO.rc
- *             ReactOS Project (https://reactos.org)
+ *             Windivs Project (https://reactos.org)
  * TRANSLATOR: Ștefan Fulea (stefan dot fulea at mail dot com)
  */
 
@@ -29,5 +29,5 @@ STRINGTABLE
 BEGIN
     IDS_CPLNAME_1 "Gestionar de licențe"
     IDS_CPLDESCRIPTION_1 "Gestionar de licențe"
-    IDS_REACTOS "ReactOS - S.O. Public"
+    IDS_REACTOS "Windivs - S.O. Public"
 END

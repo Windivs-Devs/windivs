@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS International Control Panel
+ * PROJECT:     Windivs International Control Panel
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2011-2018 Ștefan Fulea <stefan.fulea@mail.com>
@@ -43,7 +43,7 @@ BEGIN
     LTEXT "Pentru a vedea/modifica limbile de introducere și serviciile de text, apăsați „Detalii”", -1, 12, 15, 220, 18
     PUSHBUTTON "&Detalii…", IDC_DETAIL_BUTTON, 177, 34, 54, 14
     GROUPBOX "Compatibilitate lingvistică suplimentară", -1, 5, 62, 234, 82
-    LTEXT "ReactOS posedă în mod implicit compatibilitate pentru majoritatea limbilor. În caz de necesitate, această compatibilitate poate fi extinsă prin instalarea de fișiere suplimentare.", -1, 12, 72, 220, 25
+    LTEXT "Windivs posedă în mod implicit compatibilitate pentru majoritatea limbilor. În caz de necesitate, această compatibilitate poate fi extinsă prin instalarea de fișiere suplimentare.", -1, 12, 72, 220, 25
     CHECKBOX "Instalează fișierele pentru script-uri comple&xe și pentru limbile cu scriere inversă", IDC_INST_FILES_FOR_RTOL_LANG, 12, 100, 215, 22, BS_MULTILINE | BS_TOP
     CHECKBOX "Instalează fișierele pentru limbile din &estul Asiei", IDC_INST_FILES_FOR_ASIAN, 12, 119, 180, 22, BS_MULTILINE | BS_TOP
 END

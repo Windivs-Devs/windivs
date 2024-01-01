@@ -54,7 +54,7 @@ ERRORLEVEL est modifié à l'offset de la touche enfoncée parmi les choix."
     STRING_CMD_HELP5 "  [complétion des noms de fichiers façon Bash]"
     STRING_CMD_HELP6 "  [pile de répertoires]"
     STRING_CMD_HELP7 "  [redirections et canaux]"
-    STRING_CMD_HELP8 "Démarre une nouvelle instance de l'interpréteur de commandes de ReactOS.\n\n\
+    STRING_CMD_HELP8 "Démarre une nouvelle instance de l'interpréteur de commandes de Windivs.\n\n\
 CMD [/[C|K] commande][/P][/Q][/T:ap]\n\n\
   /C commande  Lance la commande spécifiée et se termine.\n\
   /K commande  Lance la commande spécifiée et reste en mémoire.\n\
@@ -327,7 +327,7 @@ des caractères spéciaux suivants:\n\n\
   $Q   = (signe égale)\n\
   $S   (espace)\n\
   $T   Heure courante\n\
-  $V   Numéro de version de ReactOS\n\
+  $V   Numéro de version de Windivs\n\
   $_   Retour chariot/saut de ligne\n\
   $$   $ (signe dollar)"
     STRING_PROMPT_HELP2 "  $+   Affiche la hauteur de la pile de répertoires"
@@ -458,7 +458,7 @@ listing of credits."
     STRING_VERSION_HELP5 "\nEnvoyer les rapports d'erreur à <ros-dev@reactos.org>.\n\
 Les mises à jour sont disponibles à : https://reactos.org"
     STRING_VERSION_HELP6 "\nVersion FreeDOS écrite par:\n"
-    STRING_VERSION_HELP7 "\nVersion ReactOS écrite par:\n"
+    STRING_VERSION_HELP7 "\nVersion Windivs écrite par:\n"
     STRING_VOL_HELP1 " Le nom de volume du lecteur %c est %s\n"
     STRING_VOL_HELP2 " Le volume dans le lecteur %c n'a pas de nom\n"
     STRING_VOL_HELP3 " Le numéro de série du volume est %04X-%04X\n"
@@ -542,9 +542,9 @@ titre         titre de la fenêtre"
     STRING_REPLACE_ERROR5 "Accès refusé - %s\n"
     STRING_REPLACE_ERROR6 "Aucun fichier trouvé - %s\n"
     STRING_REPLACE_ERROR7 "Erreur étendue 32\n"
-    STRING_CMD_INFOLINE "  ReactOS Command Prompt                                      Type HELP = Help  "
-    STRING_REACTOS_VERSION "ReactOS [Version %s %s]\n"
-    STRING_CMD_SHELLINFO "\nInterpréteur de ligne de commandes ReactOS\nVersion %s %s"
+    STRING_CMD_INFOLINE "  Windivs Command Prompt                                      Type HELP = Help  "
+    STRING_REACTOS_VERSION "Windivs [Version %s %s]\n"
+    STRING_CMD_SHELLINFO "\nInterpréteur de ligne de commandes Windivs\nVersion %s %s"
     STRING_VERSION_RUNNING_ON "Fonctionnant sous: "
     STRING_VERSION_RUNVER "%s [Version %d.%d.%d] %s"
     STRING_COPY_FILE "        %d fichier(s) copié(s)\n"

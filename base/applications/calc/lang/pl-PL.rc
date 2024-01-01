@@ -1,6 +1,6 @@
 /*
  *    Translated by Caemyr - Olaf Siejka (Feb, Jun 2008)
- *    Use ReactOS forum PM or IRC to contact me
+ *    Use Windivs forum PM or IRC to contact me
  *    https://reactos.org
  *    IRC: irc.freenode.net #reactos-pl;
  *    Updated by Saibamen - Adam Stachowicz (saibamenppl@gmail.com) (Apr, 2011)
@@ -398,7 +398,7 @@ BEGIN
     BEGIN
         MENUITEM "Tematy pomocy", IDM_HELP_HELP
         MENUITEM SEPARATOR
-        MENUITEM "O Kalkulatorze ReactOS", IDM_HELP_ABOUT
+        MENUITEM "O Kalkulatorze Windivs", IDM_HELP_ABOUT
     END
 END
 
@@ -413,7 +413,7 @@ END
 /* About */
 STRINGTABLE
 BEGIN
-    IDS_CALC_NAME "Kalkulator ReactOS"
+    IDS_CALC_NAME "Kalkulator Windivs"
     IDS_AUTHOR "Autorstwa: Carlo Bramini"
 END
 

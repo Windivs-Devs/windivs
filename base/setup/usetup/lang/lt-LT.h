@@ -17,7 +17,7 @@ static MUI_ENTRY ltLTChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 RTM (build 7600) Setup ",
+            " Windivs7 build 7746 Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -160,7 +160,7 @@ static MUI_ENTRY ltLTSetupInitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -198,7 +198,7 @@ static MUI_ENTRY ltLTLanguagePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -250,7 +250,7 @@ static MUI_ENTRY ltLTWelcomePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -337,7 +337,7 @@ static MUI_ENTRY ltLTIntroPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -417,7 +417,7 @@ static MUI_ENTRY ltLTLicensePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -560,7 +560,7 @@ static MUI_ENTRY ltLTDevicePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -667,7 +667,7 @@ static MUI_ENTRY ltLTRepairPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -740,7 +740,7 @@ static MUI_ENTRY ltLTUpgradePageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -820,7 +820,7 @@ static MUI_ENTRY ltLTComputerPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -879,7 +879,7 @@ static MUI_ENTRY ltLTFlushPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -924,7 +924,7 @@ static MUI_ENTRY ltLTQuitPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -976,7 +976,7 @@ static MUI_ENTRY ltLTDisplayPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1035,7 +1035,7 @@ static MUI_ENTRY ltLTSuccessPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1087,7 +1087,7 @@ static MUI_ENTRY ltLTSelectPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1160,7 +1160,7 @@ static MUI_ENTRY ltLTChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1282,7 +1282,7 @@ static MUI_ENTRY ltLTConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1390,7 +1390,7 @@ static MUI_ENTRY ltLTFormatPartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1428,7 +1428,7 @@ static MUI_ENTRY ltLTCheckFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1459,7 +1459,7 @@ static MUI_ENTRY ltLTInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1518,7 +1518,7 @@ static MUI_ENTRY ltLTFileCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1563,7 +1563,7 @@ static MUI_ENTRY ltLTBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1622,7 +1622,7 @@ static MUI_ENTRY ltLTBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1653,7 +1653,7 @@ static MUI_ENTRY ltLTBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1699,7 +1699,7 @@ static MUI_ENTRY ltLTKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1758,7 +1758,7 @@ static MUI_ENTRY ltLTLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1818,7 +1818,7 @@ static MUI_ENTRY ltLTPrepareCopyEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1850,7 +1850,7 @@ static MUI_ENTRY ltLTSelectFSEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1898,7 +1898,7 @@ static MUI_ENTRY ltLTDeletePartitionEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1950,7 +1950,7 @@ static MUI_ENTRY ltLTRegistryEntries[] =
     {
         4,
         3,
-        " Windivs7 RTM (build 7600) diegimo programa ",
+        " Windivs7 build 7746 diegimo programa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
