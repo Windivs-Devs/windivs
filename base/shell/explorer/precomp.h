@@ -360,6 +360,7 @@ HRESULT CTrayClockWnd_CreateInstance(HWND hwndParent, REFIID riid, void **ppv);
 /* TrayNotifyWnd */
 #define TNWM_GETMINIMUMSIZE (WM_USER + 0x100)
 #define TNWM_CHANGETRAYPOS  (WM_USER + 0x104)
+#define TNWM_GETSHOWDESKTOPBUTTON (WM_USER + 0x7601)
 
 #define NTNWM_REALIGN   (0x1)
 
@@ -367,6 +368,8 @@ HRESULT CTrayNotifyWnd_CreateInstance(HWND hwndParent, REFIID riid, void **ppv);
 
 /* SysPagerWnd */
 HRESULT CSysPagerWnd_CreateInstance(HWND hwndParent, REFIID riid, void **ppv);
+
+#include "CTrayShowDesktopButton.h"
 
 /*
  * taskswnd.c
