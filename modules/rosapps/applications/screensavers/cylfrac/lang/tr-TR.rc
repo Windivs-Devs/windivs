@@ -11,5 +11,5 @@ STRINGTABLE DISCARDABLE
 BEGIN
     IDS_DESCRIPTION "Silindirik Fractaller"
     IDS_TITLE       "Hakkında"
-    IDS_TEXT        "Cylinders fractal unC0Rr tarafından yapılmıştır.\nReactOS'a özeldir."
+    IDS_TEXT        "Cylinders fractal unC0Rr tarafından yapılmıştır.\nWindivs'a özeldir."
 END
