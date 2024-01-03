@@ -2,7 +2,7 @@
 // code7bit: https://github.com/katahiromz/code7bit
 // To revert conversion, please execute "code7bit -r <file>".
 /*
- * PROJECT:     ReactOS Setup
+ * PROJECT:     Windivs Setup
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2011-2019 Ștefan Fulea <stefan.fulea@mail.com>
@@ -12,12 +12,155 @@
 
 #pragma once
 
+static MUI_ENTRY roROChangelogPageEntries[] =
+    {
+        {
+            4,
+            3,
+            " Windivs7 build 7746 Setup ",
+            TEXT_STYLE_UNDERLINE,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            6,
+            "Changelog:",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            8,
+            "Windivs7 RTM, build 7600.1",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            9,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            10,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            11,
+            "What's New:",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            12,
+            "- Various localisation updates",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            13,
+            "- Introduction of the in-Setup changelog UI",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            15,
+            "- An updated Slate+ theme",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            16,
+            "- Many stability improvements and minor new features",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            17,
+            "- Overhaul of the registry and Setup",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            18,
+            "- Some minor improvements relating to the boot sequence of the OS",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            19,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            20,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            22,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            24,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            25,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            26,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            "ENTER = Return",
+            TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            NULL,
+            0
+        }
+};
+
 static MUI_ENTRY roROSetupInitPageEntries[] =
 {
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR,
+        " Instalare Windivs " KERNEL_VERSION_STR,
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -55,7 +198,7 @@ static MUI_ENTRY roROLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR,
+        " Instalare Windivs " KERNEL_VERSION_STR,
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -107,21 +250,21 @@ static MUI_ENTRY roROWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Bun venit la instalarea ReactOS",
+        "Bun venit la instalarea Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Aceast\343 prim\343 etap\343 din instalarea ReactOS va copia fi\272ierele",
+        "Aceast\343 prim\343 etap\343 din instalarea Windivs va copia fi\272ierele",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -142,7 +285,7 @@ static MUI_ENTRY roROWelcomePageEntries[] =
     {
         8,
         16,
-        "\x07  Tasta\376i ENTER pentru a instala sau actualiza ReactOS.",
+        "\x07  Tasta\376i ENTER pentru a instala sau actualiza Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -163,14 +306,14 @@ static MUI_ENTRY roROWelcomePageEntries[] =
     {
         8,
         23,
-        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala ReactOS.",
+        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         26,
-        "Pentru mai multe informa\376ii despre ReactOS, vizita\376i:",
+        "Pentru mai multe informa\376ii despre Windivs, vizita\376i:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -201,21 +344,21 @@ static MUI_ENTRY roROIntroPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Starea versiunii curente a ReactOS",
+        "Starea versiunii curente a Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS este \356n stadiu alfa de dezvoltare, adic\343 nu are prezint\343",
+        "Windivs este \356n stadiu alfa de dezvoltare, adic\343 nu are prezint\343",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -236,7 +379,7 @@ static MUI_ENTRY roROIntroPageEntries[] =
     {
         6,
         15,
-        "\356n cazul \356n care \356ncerca\376i ReactOS \356n mod neemulat.",
+        "\356n cazul \356n care \356ncerca\376i Windivs \356n mod neemulat.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -250,14 +393,14 @@ static MUI_ENTRY roROIntroPageEntries[] =
     {
         8,
         19,
-        "\x07  Tasta\376i ENTER pentru a instala ReactOS.",
+        "\x07  Tasta\376i ENTER pentru a instala Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala ReactOS.",
+        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -281,7 +424,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -295,7 +438,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         8,
         8,
-        "Sistemul de operare ReactOS este oferit \356n termenii Licen\376ei",
+        "Sistemul de operare Windivs este oferit \356n termenii Licen\376ei",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -316,7 +459,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         8,
         12,
-        "Toate componentele care fac parte din sistemul ReactOS sunt",
+        "Toate componentele care fac parte din sistemul Windivs sunt",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -358,7 +501,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         8,
         19,
-        "buirea sistemului ReactOS c\343tre p\343r\376i ter\376e.",
+        "buirea sistemului Windivs c\343tre p\343r\376i ter\376e.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -372,7 +515,7 @@ static MUI_ENTRY roROLicensePageEntries[] =
     {
         8,
         22,
-        "GPL \356mpreun\343 cu ReactOS, o pute\376i consulta (\356n englez\343)",
+        "GPL \356mpreun\343 cu Windivs, o pute\376i consulta (\356n englez\343)",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -445,7 +588,7 @@ static MUI_ENTRY roRODevicePageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -560,14 +703,14 @@ static MUI_ENTRY roRORepairPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Programul de instalare ReactOS este \356nc\343 \356ntr-o faz\343 incipient\343 de",
+        "Programul de instalare Windivs este \356nc\343 \356ntr-o faz\343 incipient\343 de",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -633,14 +776,14 @@ static MUI_ENTRY roROUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR,
+        " Instalare Windivs " KERNEL_VERSION_STR,
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Programul de Instalare ReactOS ofer\343 actualizarea urm\343toarelor instal\343ri",
+        "Programul de Instalare Windivs ofer\343 actualizarea urm\343toarelor instal\343ri",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -689,7 +832,7 @@ static MUI_ENTRY roROUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala ReactOS.",
+        "\x07  Tasta\376i F3 pentru a ie\272i f\343r\343 a instala Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -713,7 +856,7 @@ static MUI_ENTRY roROComputerPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -772,7 +915,7 @@ static MUI_ENTRY roROFlushPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -817,14 +960,14 @@ static MUI_ENTRY roROQuitPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS nu a fost instalat \356n \356ntregime.",
+        "Windivs nu a fost instalat \356n \356ntregime.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -869,7 +1012,7 @@ static MUI_ENTRY roRODisplayPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -928,14 +1071,14 @@ static MUI_ENTRY roROSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Componentele de baz\343 ale ReactOS au fost instalate cu succes.",
+        "Componentele de baz\343 ale Windivs au fost instalate cu succes.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -980,7 +1123,7 @@ static MUI_ENTRY roROSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1053,7 +1196,7 @@ static MUI_ENTRY roROChangeSystemPartition[] =
     {
         4,
         3,
-        " Instalare " KERNEL_VERSION_STR " ReactOS ",
+        " Instalare " KERNEL_VERSION_STR " Windivs ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1074,14 +1217,14 @@ static MUI_ENTRY roROChangeSystemPartition[] =
     {
         6,
         16,
-        "folose\272te un format ce nu este suportat de ReactOS.",
+        "folose\272te un format ce nu este suportat de Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "Pentru a instala cu succes ReactOS, programul de instalare trebuie s\343 schimbe",
+        "Pentru a instala cu succes Windivs, programul de instalare trebuie s\343 schimbe",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1151,7 +1294,7 @@ static MUI_ENTRY roROChangeSystemPartition[] =
     {
         6,
         35,
-        "la cea original\343, dup\343 terminarea instal\343rii ReactOS.",
+        "la cea original\343, dup\343 terminarea instal\343rii Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1175,7 +1318,7 @@ static MUI_ENTRY roROConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR,
+        " Instalare Windivs " KERNEL_VERSION_STR,
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1203,7 +1346,7 @@ static MUI_ENTRY roROConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         12,
-        "(ca ReactOS) \272i alte programe furnizate de produc\343torii calculorului.",
+        "(ca Windivs) \272i alte programe furnizate de produc\343torii calculorului.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1231,7 +1374,7 @@ static MUI_ENTRY roROConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "pe discul local dec\342t dup\343 finalizarea instal\343rii ReactOS.",
+        "pe discul local dec\342t dup\343 finalizarea instal\343rii Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1283,7 +1426,7 @@ static MUI_ENTRY roROFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1321,7 +1464,7 @@ static MUI_ENTRY roROCheckFSEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1352,7 +1495,7 @@ static MUI_ENTRY roROInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1366,7 +1509,7 @@ static MUI_ENTRY roROInstallDirectoryEntries[] =
     {
         6,
         9,
-        "Aici vor fi amplasate fi\272ierele sistemului ReactOS:",
+        "Aici vor fi amplasate fi\272ierele sistemului Windivs:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1387,7 +1530,7 @@ static MUI_ENTRY roROInstallDirectoryEntries[] =
     {
         6,
         16,
-        "dori\376i s\343 instala\376i ReactOS.",
+        "dori\376i s\343 instala\376i Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1411,14 +1554,14 @@ static MUI_ENTRY roROFileCopyEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Are loc copierea de fi\272iere \356n directorul ReactOS specificat.",
+        "Are loc copierea de fi\272iere \356n directorul Windivs specificat.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1449,7 +1592,7 @@ static MUI_ENTRY roROBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1508,7 +1651,7 @@ static MUI_ENTRY roROBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1539,7 +1682,7 @@ static MUI_ENTRY roROBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1592,7 +1735,7 @@ static MUI_ENTRY roROKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC,
     },
@@ -1651,7 +1794,7 @@ static MUI_ENTRY roROLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1711,7 +1854,7 @@ static MUI_ENTRY roROPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1743,7 +1886,7 @@ static MUI_ENTRY roROSelectFSEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1797,7 +1940,7 @@ static MUI_ENTRY roRODeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1849,7 +1992,7 @@ static MUI_ENTRY roRORegistryEntries[] =
     {
         4,
         3,
-        " Instalare ReactOS " KERNEL_VERSION_STR " ",
+        " Instalare Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1884,9 +2027,9 @@ MUI_ERROR roROErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS nu a fost instalat \356n totalitate \356n calculator.\n"
+        "Windivs nu a fost instalat \356n totalitate \356n calculator.\n"
         "Dac\343 abandona\376i instalarea acum, alt\343 dat\343, pentru a\n"
-        "instala ReactOS, va fi nevoie s\343 repeta\376i to\376i pa\272ii.\n"
+        "instala Windivs, va fi nevoie s\343 repeta\376i to\376i pa\272ii.\n"
         "\n"
         "  \x07  Tasta\376i ENTER pentru a continua instalarea.\n"
         "  \x07  Tasta\376i F3 pentru a abandona instalarea.",
@@ -1894,7 +2037,7 @@ MUI_ERROR roROErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "E\272ec \356n construirea c\343ilor de instalare pentru directorul de instalare ReactOS!\n"
+        "E\272ec \356n construirea c\343ilor de instalare pentru directorul de instalare Windivs!\n"
         "ENTER = Repornire calculator"
     },
     {
@@ -1904,7 +2047,7 @@ MUI_ERROR roROErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "Nu pute\376i instala ReactOS \356n directorul surs\343 de instalare!\n"
+        "Nu pute\376i instala Windivs \356n directorul surs\343 de instalare!\n"
         "ENTER = Repornire calculator"
     },
     {
@@ -2110,7 +2253,7 @@ MUI_ERROR roROErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Parti\376ia selectat\343 este prea mic\343 pentru a instala ReactOS.\n"
+        "Parti\376ia selectat\343 este prea mic\343 pentru a instala Windivs.\n"
         "Parti\376ia de instalare trebuie s\343 aib\343 cel pu\376in %lu Mocte\376i.\n"
         "\n"
         "  * Tasta\376i pentru a continua.",
@@ -2164,6 +2307,10 @@ MUI_PAGE roROPages[] =
         LICENSE_PAGE,
         roROLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            roROChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         roRODevicePageEntries
@@ -2295,13 +2442,13 @@ MUI_STRING roROStrings[] =
     {STRING_PARTFORMAT,
     "Aceast\343 parti\376ie urmeaz\343 s\343 fie formatat\343."},
     {STRING_NONFORMATTEDPART,
-    "Alege\376i s\343 instala\376i ReactOS pe parti\376ie nou\343 sau neformatat\343."},
+    "Alege\376i s\343 instala\376i Windivs pe parti\376ie nou\343 sau neformatat\343."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "Parti\376ia de sistem \356nc\343 nu a fost formatat\343."},
     {STRING_NONFORMATTEDOTHERPART,
     "Noua parti\376ie \356nc\343 nu a fost formatat\343."},
     {STRING_INSTALLONPART,
-    "ReactOS va fi instalat pe parti\376ia"},
+    "Windivs va fi instalat pe parti\376ia"},
     {STRING_CONTINUE,
     "ENTER = Continuare"},
     {STRING_QUITCONTINUE,

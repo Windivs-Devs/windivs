@@ -796,6 +796,7 @@ SetupStartPage(PINPUT_RECORD Ir)
  *  RepairIntroPage
  *  RecoveryPage
  *  LicensePage
+ *  ChangelogPage
  *  QuitPage
  *
  * RETURNS
@@ -830,6 +831,10 @@ WelcomePage(PINPUT_RECORD Ir)
         {
             return LICENSE_PAGE;
         }
+        else if (toupper(Ir->Event.KeyEvent.uChar.AsciiChar) == 'C') /* C */
+        {
+            return CHANGELOG_PAGE;
+        }
     }
 
     return WELCOME_PAGE;
@@ -861,6 +866,33 @@ LicensePage(PINPUT_RECORD Ir)
     }
 
     return LICENSE_PAGE;
+}
+
+/*
+ * Displays the Changelog page.
+ *
+ * Next page:
+ *  WelcomePage (default)
+ *
+ * RETURNS
+ *   Number of the next page.
+ */
+static PAGE_NUMBER
+ChangelogPage(PINPUT_RECORD Ir)
+{
+    MUIDisplayPage(CHANGELOG_PAGE);
+
+    while (TRUE)
+    {
+        CONSOLE_ConInKey(Ir);
+
+        if (Ir->Event.KeyEvent.uChar.AsciiChar == 0x0D)  /* ENTER */
+        {
+            return WELCOME_PAGE;
+        }
+    }
+
+    return CHANGELOG_PAGE;
 }
 
 
@@ -4254,6 +4286,11 @@ RunUSetup(VOID)
             /* License page */
             case LICENSE_PAGE:
                 Page = LicensePage(&Ir);
+                break;
+
+                /* License page */
+            case CHANGELOG_PAGE:
+                Page = ChangelogPage(&Ir);
                 break;
 
             /* Install pages */

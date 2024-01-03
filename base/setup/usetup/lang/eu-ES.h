@@ -1,19 +1,162 @@
 // uSetup in Basque-Euskara Translated by Julen Urizar Compains (04-26-2020)
 #pragma once
 
+static MUI_ENTRY euESChangelogPageEntries[] =
+    {
+        {
+            4,
+            3,
+            " Windivs7 build 7746 Setup ",
+            TEXT_STYLE_UNDERLINE,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            6,
+            "Changelog:",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            8,
+            "Windivs7 RTM, build 7600.1",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            9,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            10,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            11,
+            "What's New:",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            12,
+            "- Various localisation updates",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            13,
+            "- Introduction of the in-Setup changelog UI",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            15,
+            "- An updated Slate+ theme",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            16,
+            "- Many stability improvements and minor new features",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            17,
+            "- Overhaul of the registry and Setup",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            18,
+            "- Some minor improvements relating to the boot sequence of the OS",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            19,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            20,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            22,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            24,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            25,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            26,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            "ENTER = Return",
+            TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            NULL,
+            0
+        }
+};
+
 static MUI_ENTRY euESSetupInitPageEntries[] =
 {
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Itxaron mesedez ReactOS Instalazioa hasten ari dela",
+        "Itxaron mesedez Windivs Instalazioa hasten ari dela",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -44,7 +187,7 @@ static MUI_ENTRY euESLanguagePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -96,21 +239,21 @@ static MUI_ENTRY euESWelcomePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Ongi etorri ReactOS Insalazioa",
+        "Ongi etorri Windivs Insalazioa",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Parte honetan Instalazioak kapiatu du ReactOS Sistema Eragilea zure",
+        "Parte honetan Instalazioak kapiatu du Windivs Sistema Eragilea zure",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -124,36 +267,36 @@ static MUI_ENTRY euESWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Sakatu SARTU ReactOS instalatzeko edo hobetzeko.",
+        "\x07  Sakatu SARTU Windivs instalatzeko edo hobetzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-     // "\x07  Sakatu R ReactOS instalazioa kompontzeko berreskuragailu erabiltzen.",
-        "\x07  Sakatu R ReactOS instalazioa kompontzeko.",
+     // "\x07  Sakatu R Windivs instalazioa kompontzeko berreskuragailu erabiltzen.",
+        "\x07  Sakatu R Windivs instalazioa kompontzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Sakatu L ReactOS Lizentziako terminoak eta baldintzak irakurtzea.",
+        "\x07  Sakatu L Windivs Lizentziako terminoak eta baldintzak irakurtzea.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Sakatu F3 irteteko ReactOS-rik instalatu gabe.",
+        "\x07  Sakatu F3 irteteko Windivs-rik instalatu gabe.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "ReactOS agirbide gehiago nahi baduzun, webgune hau ikusi:",
+        "Windivs agirbide gehiago nahi baduzun, webgune hau ikusi:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -184,21 +327,21 @@ static MUI_ENTRY euESIntroPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS bertsio egoera",
+        "Windivs bertsio egoera",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS Alpha mailan dago, honek esan nahi du ReactOS ez da",
+        "Windivs Alpha mailan dago, honek esan nahi du Windivs ez da",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -233,14 +376,14 @@ static MUI_ENTRY euESIntroPageEntries[] =
     {
         8,
         19,
-        "\x07  Sakatu SARTU ReactOS instalazio jarraitzeko.",
+        "\x07  Sakatu SARTU Windivs instalazio jarraitzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Sakatu F3 irteteko ReactOS-rik instalatu gabe.",
+        "\x07  Sakatu F3 irteteko Windivs-rik instalatu gabe.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -264,7 +407,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -278,7 +421,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         8,
         8,
-        "ReactOS Sistema lizentziatuta dago GNU GLP-aren lizentzia",
+        "Windivs Sistema lizentziatuta dago GNU GLP-aren lizentzia",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -299,7 +442,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         8,
         11,
-        "Software denak dagoen ReactOS sisteman partez atera dira",
+        "Software denak dagoen Windivs sisteman partez atera dira",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -327,7 +470,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         8,
         16,
-        "lokala edo internazional legeak izan ezik. ReactOS lizentzia",
+        "lokala edo internazional legeak izan ezik. Windivs lizentzia",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -348,7 +491,7 @@ static MUI_ENTRY euESLicensePageEntries[] =
     {
         8,
         19,
-        "zure ReactOS-ekin mesedez bisitatu",
+        "zure Windivs-ekin mesedez bisitatu",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -407,7 +550,7 @@ static MUI_ENTRY euESDevicePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -514,14 +657,14 @@ static MUI_ENTRY euESRepairPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Instalazioa hasierako garapen zatian dago. Oraindik ez du",
+        "Windivs Instalazioa hasierako garapen zatian dago. Oraindik ez du",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -587,21 +730,21 @@ static MUI_ENTRY euESUpgradePageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Instalazioak hurrengo zerrendaren ReactOS sistema bakoitz",
+        "Windivs Instalazioak hurrengo zerrendaren Windivs sistema bakoitz",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "hobetu ahal du edo, ReactOS sistema apurtuta badago, Instalazioak",
+        "hobetu ahal du edo, Windivs sistema apurtuta badago, Instalazioak",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -643,7 +786,7 @@ static MUI_ENTRY euESUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Sakatu F3 irteteko ReactOS-rik instalatu gabe.",
+        "\x07  Sakatu F3 irteteko Windivs-rik instalatu gabe.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -667,7 +810,7 @@ static MUI_ENTRY euESComputerPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -726,7 +869,7 @@ static MUI_ENTRY euESFlushPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -771,14 +914,14 @@ static MUI_ENTRY euESQuitPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS ez dago zeharo instalatuta.",
+        "Windivs ez dago zeharo instalatuta.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -823,7 +966,7 @@ static MUI_ENTRY euESDisplayPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -882,14 +1025,14 @@ static MUI_ENTRY euESSuccessPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS oinarrizko zatiak arrakaztaz instalatuta da.",
+        "Windivs oinarrizko zatiak arrakaztaz instalatuta da.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -934,7 +1077,7 @@ static MUI_ENTRY euESSelectPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -962,7 +1105,7 @@ static MUI_ENTRY euESSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Sakatu SARTU ReactOS instalatzeko partizio aukeratuta barruan.",
+        "\x07  Sakatu SARTU Windivs instalatzeko partizio aukeratuta barruan.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1007,7 +1150,7 @@ static MUI_ENTRY euESChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1028,14 +1171,14 @@ static MUI_ENTRY euESChangeSystemPartition[] =
     {
         6,
         16,
-        "formatok ReactOS-k ez da euskarri erabiltzen.",
+        "formatok Windivs-k ez da euskarri erabiltzen.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "ReactOS arrakastaz instalatzeko, Instalazio programa aldatu behar du",
+        "Windivs arrakastaz instalatzeko, Instalazio programa aldatu behar du",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1105,7 +1248,7 @@ static MUI_ENTRY euESChangeSystemPartition[] =
     {
         6,
         35,
-        "ReactOS instalazioa bukatuz gero.",
+        "Windivs instalazioa bukatuz gero.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1129,7 +1272,7 @@ static MUI_ENTRY euESConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1150,7 +1293,7 @@ static MUI_ENTRY euESConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programak sistema operatibo hasten direna (ReactOS bezala) edo beste",
+        "programak sistema operatibo hasten direna (Windivs bezala) edo beste",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1185,7 +1328,7 @@ static MUI_ENTRY euESConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "diskogogorretik ReactOS Instalazioa amaitu arte.",
+        "diskogogorretik Windivs Instalazioa amaitu arte.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1237,7 +1380,7 @@ static MUI_ENTRY euESFormatPartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1275,7 +1418,7 @@ static MUI_ENTRY euESCheckFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1306,7 +1449,7 @@ static MUI_ENTRY euESInstallDirectoryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1334,7 +1477,7 @@ static MUI_ENTRY euESInstallDirectoryEntries[] =
     {
         6,
         15,
-        "ezabatzeko eta idatzi direktorioa zu ReactOS nahi duzun",
+        "ezabatzeko eta idatzi direktorioa zu Windivs nahi duzun",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1365,21 +1508,21 @@ static MUI_ENTRY euESFileCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Itxaron mesedez ReactOS Instalazioa fitxategiak kopiatuen",
+        "Itxaron mesedez Windivs Instalazioa fitxategiak kopiatuen",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
     {
         0,
         13,
-        "bitartean ReactOS-n karpeta.",
+        "bitartean Windivs-n karpeta.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1410,7 +1553,7 @@ static MUI_ENTRY euESBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1469,7 +1612,7 @@ static MUI_ENTRY euESBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1500,7 +1643,7 @@ static MUI_ENTRY euESBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1553,7 +1696,7 @@ static MUI_ENTRY euESKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1612,7 +1755,7 @@ static MUI_ENTRY euESLayoutSettingsEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1672,14 +1815,14 @@ static MUI_ENTRY euESPrepareCopyEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalazioak zure ordenagailua antolatu du ReactOS fitxategiak kopiatzeko.",
+        "Instalazioak zure ordenagailua antolatu du Windivs fitxategiak kopiatzeko.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1704,7 +1847,7 @@ static MUI_ENTRY euESSelectFSEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1752,7 +1895,7 @@ static MUI_ENTRY euESDeletePartitionEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1804,7 +1947,7 @@ static MUI_ENTRY euESRegistryEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Instalazioa ",
+        " Windivs7 build 7746 Instalazioa ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1839,9 +1982,9 @@ MUI_ERROR euESErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS ez dago instalatuta guztiz zure\n"
+        "Windivs ez dago instalatuta guztiz zure\n"
         "ordenagailuan. Orain instalazioa utzi baduzu, zuk nahiago\n"
-        "duzu Instalazioa berriro hasi ReactOS instalatzeko.\n"
+        "duzu Instalazioa berriro hasi Windivs instalatzeko.\n"
         "\n"
         "  \x07  Sakatu SARTU Instalazioa jarraitzeko.\n"
         "  \x07  Sakatu F3 Instalazioa utzi.",
@@ -1849,7 +1992,7 @@ MUI_ERROR euESErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "ReactOS instalazio direktorio bide eraikitzea huts egin da!\n"
+        "Windivs instalazio direktorio bide eraikitzea huts egin da!\n"
         "SARTU = Berrabiarazi"
     },
     {
@@ -1859,7 +2002,7 @@ MUI_ERROR euESErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "Ez ahal duzu ReactOS instalatzeko instalazio direktorion barruan!\n"
+        "Ez ahal duzu Windivs instalatzeko instalazio direktorion barruan!\n"
         "SARTU = Berrabiarazi"
     },
     {
@@ -2051,7 +2194,7 @@ MUI_ERROR euESErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "Partizio aukeratuta ez da nahiko haundia ReactOS instalatzeko.\n"
+        "Partizio aukeratuta ez da nahiko haundia Windivs instalatzeko.\n"
         "Instalatzeko partizioa %lu MB handi gutzienez behar dauka.\n"
         "\n"
         "  * Sakatu tekla batzuk jarraitzeko.",
@@ -2105,6 +2248,10 @@ MUI_PAGE euESPages[] =
         LICENSE_PAGE,
         euESLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            euESChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         euESDevicePageEntries
@@ -2236,13 +2383,13 @@ MUI_STRING euESStrings[] =
     {STRING_PARTFORMAT,
     "Partizio hau izango da formatuta gero."},
     {STRING_NONFORMATTEDPART,
-    "Zu aukeratu duzu ReactOS instalatzeko partizio berri edo garbi barruan."},
+    "Zu aukeratu duzu Windivs instalatzeko partizio berri edo garbi barruan."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "Oraindik sistema partizioa ez dago formatuta."},
     {STRING_NONFORMATTEDOTHERPART,
     "Oraindik partizio berria ez dago formatuta."},
     {STRING_INSTALLONPART,
-    "Instalazioa ReactOS instalatu du partizio barruan"},
+    "Instalazioa Windivs instalatu du partizio barruan"},
     {STRING_CONTINUE,
     "SARTU = Jarraitu"},
     {STRING_QUITCONTINUE,

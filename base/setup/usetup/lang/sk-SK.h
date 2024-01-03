@@ -9,19 +9,162 @@
 
 #pragma once
 
+static MUI_ENTRY skSKChangelogPageEntries[] =
+    {
+        {
+            4,
+            3,
+            " Windivs7 build 7746 Setup ",
+            TEXT_STYLE_UNDERLINE,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            6,
+            "Changelog:",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            8,
+            "Windivs7 RTM, build 7600.1",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            9,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            10,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            11,
+            "What's New:",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            12,
+            "- Various localisation updates",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            13,
+            "- Introduction of the in-Setup changelog UI",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            15,
+            "- An updated Slate+ theme",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            16,
+            "- Many stability improvements and minor new features",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            17,
+            "- Overhaul of the registry and Setup",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            18,
+            "- Some minor improvements relating to the boot sequence of the OS",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            19,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            20,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            22,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            24,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            25,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            26,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            "ENTER = Return",
+            TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            NULL,
+            0
+        }
+};
+
 static MUI_ENTRY skSKSetupInitPageEntries[] =
 {
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -52,7 +195,7 @@ static MUI_ENTRY skSKLanguagePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -104,21 +247,21 @@ static MUI_ENTRY skSKWelcomePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "V\241ta V\240s In\347tal\240tor syst\202mu ReactOS",
+        "V\241ta V\240s In\347tal\240tor syst\202mu Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Tento stupe\345 In\347tal\240tora skop\241ruje opera\237n\354 syst\202m ReactOS na V\240\347",
+        "Tento stupe\345 In\347tal\240tora skop\241ruje opera\237n\354 syst\202m Windivs na V\240\347",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -132,35 +275,35 @@ static MUI_ENTRY skSKWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Stla\237te R pre opravu ciu syst\202mu ReactOS.",
+        "\x07  Stla\237te R pre opravu ciu syst\202mu Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Stla\237te L, ak chcete zobrazi\234 licen\237n\202 podmienky syst\202mu ReactOS.",
+        "\x07  Stla\237te L, ak chcete zobrazi\234 licen\237n\202 podmienky syst\202mu Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Stla\237te F3 pre skon\237enie in\347tal\240cie, syst\202m ReactOS sa nenain\347taluje.",
+        "\x07  Stla\237te F3 pre skon\237enie in\347tal\240cie, syst\202m Windivs sa nenain\347taluje.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "Pre viac inform\240ci\241 o syst\202me ReactOS, nav\347t\241vte pros\241m:",
+        "Pre viac inform\240ci\241 o syst\202me Windivs, nav\347t\241vte pros\241m:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -191,21 +334,21 @@ static MUI_ENTRY skSKIntroPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Version Status",
+        "Windivs Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS is in Alpha stage, meaning it is not feature-complete",
+        "Windivs is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -233,21 +376,21 @@ static MUI_ENTRY skSKIntroPageEntries[] =
     {
         6,
         16,
-        "to run ReactOS on real hardware.",
+        "to run Windivs on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue ReactOS Setup.",
+        "\x07  Press ENTER to continue Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -271,7 +414,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -285,7 +428,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         8,
         8,
-        "Syst\202m ReactOS je vydan\354 za podmienok licencie",
+        "Syst\202m Windivs je vydan\354 za podmienok licencie",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -306,7 +449,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         8,
         11,
-        "Preto v\347etok softv\202r, ktor\354 je s\243\237as\234ou syst\202mu ReactOS,",
+        "Preto v\347etok softv\202r, ktor\354 je s\243\237as\234ou syst\202mu Windivs,",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -341,7 +484,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         8,
         17,
-        "syst\202mu ReactOS pokr\354va iba distrib\243ciu k tren\241m stran\240m.",
+        "syst\202mu Windivs pokr\354va iba distrib\243ciu k tren\241m stran\240m.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -355,7 +498,7 @@ static MUI_ENTRY skSKLicensePageEntries[] =
     {
         8,
         19,
-        "spolu so syst\202mom ReactOS, nav\347t\241vte, pros\241m, str\240nku:",
+        "spolu so syst\202mom Windivs, nav\347t\241vte, pros\241m, str\240nku:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -414,7 +557,7 @@ static MUI_ENTRY skSKDevicePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -521,14 +664,14 @@ static MUI_ENTRY skSKRepairPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "In\347tal\240tor syst\202mu ReactOS je v za\237iato\237nom \347t\240diu v\354voja. Zatia\226",
+        "In\347tal\240tor syst\202mu Windivs je v za\237iato\237nom \347t\240diu v\354voja. Zatia\226",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -594,21 +737,21 @@ static MUI_ENTRY skSKUpgradePageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs Setup can upgrade one of the available Windivs installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -650,7 +793,7 @@ static MUI_ENTRY skSKUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -674,7 +817,7 @@ static MUI_ENTRY skSKComputerPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -733,7 +876,7 @@ static MUI_ENTRY skSKFlushPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -778,14 +921,14 @@ static MUI_ENTRY skSKQuitPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Syst\202m ReactOS nie je nain\347talovan\354 kompletne.",
+        "Syst\202m Windivs nie je nain\347talovan\354 kompletne.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -830,7 +973,7 @@ static MUI_ENTRY skSKDisplayPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -889,14 +1032,14 @@ static MUI_ENTRY skSKSuccessPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Z\240kladn\202 s\243\237ast\241 syst\202mu ReactOS boli \243spe\347ne nain\347talovan\202.",
+        "Z\240kladn\202 s\243\237ast\241 syst\202mu Windivs boli \243spe\347ne nain\347talovan\202.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -941,7 +1084,7 @@ static MUI_ENTRY skSKSelectPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -969,7 +1112,7 @@ static MUI_ENTRY skSKSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Stla\237te ENTER pre in\347tal\240ciu syst\202mu ReactOS na vybran\243 oblas\234.",
+        "\x07  Stla\237te ENTER pre in\347tal\240ciu syst\202mu Windivs na vybran\243 oblas\234.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1015,7 +1158,7 @@ static MUI_ENTRY skSKChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1036,14 +1179,14 @@ static MUI_ENTRY skSKChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1113,7 +1256,7 @@ static MUI_ENTRY skSKChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1137,7 +1280,7 @@ static MUI_ENTRY skSKConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1158,7 +1301,7 @@ static MUI_ENTRY skSKConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programs, programs to start an operating system (like ReactOS) or other",
+        "programs, programs to start an operating system (like Windivs) or other",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1193,7 +1336,7 @@ static MUI_ENTRY skSKConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computer from the harddisk until you finished the ReactOS Setup.",
+        "computer from the harddisk until you finished the Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1245,7 +1388,7 @@ static MUI_ENTRY skSKFormatPartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1283,7 +1426,7 @@ static MUI_ENTRY skSKCheckFSEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1314,21 +1457,21 @@ static MUI_ENTRY skSKInstallDirectoryEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "In\347tal\240tor nain\347taluje s\243bory syst\202mu ReactOS na zvolen\243 oblas\234.",
+        "In\347tal\240tor nain\347taluje s\243bory syst\202mu Windivs na zvolen\243 oblas\234.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "Vyberte adres\240r kam chcete nain\347talova\234 syst\202m ReactOS:",
+        "Vyberte adres\240r kam chcete nain\347talova\234 syst\202m Windivs:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1349,7 +1492,7 @@ static MUI_ENTRY skSKInstallDirectoryEntries[] =
     {
         6,
         16,
-        "syst\202m ReactOS nain\347talovan\354.",
+        "syst\202m Windivs nain\347talovan\354.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1373,7 +1516,7 @@ static MUI_ENTRY skSKFileCopyEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1387,7 +1530,7 @@ static MUI_ENTRY skSKFileCopyEntries[] =
     {
         30,
         13,
-        "prie\237inka pre ReactOS.",
+        "prie\237inka pre Windivs.",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1418,7 +1561,7 @@ static MUI_ENTRY skSKBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1477,7 +1620,7 @@ static MUI_ENTRY skSKBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1508,14 +1651,14 @@ static MUI_ENTRY skSKBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "In\347tal\240tor nem\223\247e nain\347talova\234 zav\240dza\237 syst\202mu na pevn\354 disk V\240\347ho", //bootloader = zav dza\237 syst‚mu
+        "In\347tal\240tor nem\223\247e nain\347talova\234 zav\240dza\237 syst\202mu na pevn\354 disk V\240\347ho", //bootloader = zavï¿½dza\237 systï¿½mu
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1561,7 +1704,7 @@ static MUI_ENTRY skSKKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1620,7 +1763,7 @@ static MUI_ENTRY skSKLayoutSettingsEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1680,14 +1823,14 @@ static MUI_ENTRY skSKPrepareCopyEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Pripravuje sa kop\241rovanie s\243borov syst\202mu ReactOS.",
+        "Pripravuje sa kop\241rovanie s\243borov syst\202mu Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1712,7 +1855,7 @@ static MUI_ENTRY skSKSelectFSEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1760,7 +1903,7 @@ static MUI_ENTRY skSKDeletePartitionEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1812,7 +1955,7 @@ static MUI_ENTRY skSKRegistryEntries[] =
     {
         4,
         3,
-        " In\347tal\240tor syst\202mu ReactOS " KERNEL_VERSION_STR " ",
+        " In\347tal\240tor syst\202mu Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1847,9 +1990,9 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "Syst\202m ReactOS nie je kompletne nain\347talovan\354 na Va\347om\n"
+        "Syst\202m Windivs nie je kompletne nain\347talovan\354 na Va\347om\n"
         "po\237\241ta\237i. Ak teraz preru\347\241te in\347tal\240ciu, budete musie\234\n"
-        "spusti\234 In\347tal\240tor znova, aby sa syst\202m ReactOS nain\347taloval.\n"
+        "spusti\234 In\347tal\240tor znova, aby sa syst\202m Windivs nain\347taloval.\n"
         "\n"
         "  \x07  Stla\237te ENTER pre pokra\237ovanie v in\347tal\240cii.\n"
         "  \x07  Stla\237te F3 pre skon\237enie in\347tal\240cie.",
@@ -1857,7 +2000,7 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1867,7 +2010,7 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1892,7 +2035,7 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_SIGNATURE_TXTSETUPSIF,
-        "Setup found an invalid signature in TXTSETUP.SIF.\n", //chybnì (neplatnì) podpis (znak, zna\237ka, \347ifra)
+        "Setup found an invalid signature in TXTSETUP.SIF.\n", //chybnï¿½ (neplatnï¿½) podpis (znak, zna\237ka, \347ifra)
         "ENTER = Re\347tart po\237\241ta\237a"
     },
     {
@@ -1928,7 +2071,7 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_WARN_PARTITION,
-//          "In\347tal tor zistil, §e najmenej jeden pevnì disk obsahuje nekompatibiln£\n"
+//          "In\347talï¿½tor zistil, ï¿½e najmenej jeden pevnï¿½ disk obsahuje nekompatibilnï¿½\n"
           "In\347tal\240tor na\347iel najmenej na jednom pevnom disku nekompatibiln\243\n"
           "tabu\226ku oblast\241, s ktorou sa ned\240 spr\240vne zaobch\240dza\234!\n"
           "\n"
@@ -2062,7 +2205,7 @@ MUI_ERROR skSKErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "The selected partition is not large enough to install ReactOS.\n"
+        "The selected partition is not large enough to install Windivs.\n"
         "The install partition must have a size of at least %lu MB.\n"
         "\n"
         "  * Pokra\237ujte stla\237en\241m \226ubovo\226n\202ho kl\240vesu.",
@@ -2116,6 +2259,10 @@ MUI_PAGE skSKPages[] =
         LICENSE_PAGE,
         skSKLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            skSKChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         skSKDevicePageEntries
@@ -2249,13 +2396,13 @@ MUI_STRING skSKStrings[] =
     {STRING_PARTFORMAT,
     "T\240to oblas\234 sa bude form\240tova\234 ako \324al\347ia."},
     {STRING_NONFORMATTEDPART,
-    "Zvolili ste in\347tal\240ciu syst\202mu ReactOS na nov\243 alebo nenaform\240tovan\243 oblas\234."},
+    "Zvolili ste in\347tal\240ciu syst\202mu Windivs na nov\243 alebo nenaform\240tovan\243 oblas\234."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "The system partition is not formatted yet."},
     {STRING_NONFORMATTEDOTHERPART,
     "The new partition is not formatted yet."},
     {STRING_INSTALLONPART,
-    "In\347tal\240tor nain\347taluje syst\202m ReactOS na oblas\234"},
+    "In\347tal\240tor nain\347taluje syst\202m Windivs na oblas\234"},
     {STRING_CONTINUE,
     "ENTER = Pokra\237ova\234"},
     {STRING_QUITCONTINUE,

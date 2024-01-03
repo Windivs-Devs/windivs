@@ -7,19 +7,162 @@
 
 #pragma once
 
+static MUI_ENTRY sqALChangelogPageEntries[] =
+    {
+        {
+            4,
+            3,
+            " Windivs7 build 7746 Setup ",
+            TEXT_STYLE_UNDERLINE,
+            TEXT_ID_STATIC
+        },
+        {
+            6,
+            6,
+            "Changelog:",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            8,
+            "Windivs7 RTM, build 7600.1",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            9,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            10,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            11,
+            "What's New:",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            12,
+            "- Various localisation updates",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            13,
+            "- Introduction of the in-Setup changelog UI",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            15,
+            "- An updated Slate+ theme",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            16,
+            "- Many stability improvements and minor new features",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            17,
+            "- Overhaul of the registry and Setup",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            18,
+            "- Some minor improvements relating to the boot sequence of the OS",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            19,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            20,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            22,
+            "",
+            TEXT_STYLE_HIGHLIGHT,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            24,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            25,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            8,
+            26,
+            "",
+            TEXT_STYLE_NORMAL,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            "ENTER = Return",
+            TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
+            TEXT_ID_STATIC
+        },
+        {
+            0,
+            0,
+            NULL,
+            0
+        }
+};
+
 static MUI_ENTRY sqALSetupInitPageEntries[] =
 {
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         20,
-        "Please wait while the ReactOS Setup initializes itself",
+        "Please wait while the Windivs Setup initializes itself",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -50,7 +193,7 @@ static MUI_ENTRY sqALLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -102,21 +245,21 @@ static MUI_ENTRY sqALWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Mir\211 se vini n\211 instalimin e ReactOS",
+        "Mir\211 se vini n\211 instalimin e Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Kjo pjese e instalimit kopjon Sistemin Opererativ t\211 ReactOS",
+        "Kjo pjese e instalimit kopjon Sistemin Opererativ t\211 Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -130,35 +273,35 @@ static MUI_ENTRY sqALWelcomePageEntries[] =
     {
         8,
         15,
-        "\x07  Press ENTER to install or upgrade ReactOS.",
+        "\x07  Press ENTER to install or upgrade Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         17,
-        "\x07  Kliko R p\211r t\211 riparuar ose apdejtuar ReactOS.",
+        "\x07  Kliko R p\211r t\211 riparuar ose apdejtuar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Kliko L p\211r t\211 v\211zhguar Termat e Li\211enses dhe kushtet e ReactOS.",
+        "\x07  Kliko L p\211r t\211 v\211zhguar Termat e Li\211enses dhe kushtet e Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Kliko F3 t\211 dilni pa instaluar ReactOS.",
+        "\x07  Kliko F3 t\211 dilni pa instaluar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         23,
-        "P\211r m\211 shum\211 informacione mbi ReactOS, ju lutem vizitoni:",
+        "P\211r m\211 shum\211 informacione mbi Windivs, ju lutem vizitoni:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -189,21 +332,21 @@ static MUI_ENTRY sqALIntroPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "ReactOS Version Status",
+        "Windivs Version Status",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "ReactOS is in Alpha stage, meaning it is not feature-complete",
+        "Windivs is in Alpha stage, meaning it is not feature-complete",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -231,21 +374,21 @@ static MUI_ENTRY sqALIntroPageEntries[] =
     {
         6,
         16,
-        "to run ReactOS on real hardware.",
+        "to run Windivs on real hardware.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         19,
-        "\x07  Press ENTER to continue ReactOS Setup.",
+        "\x07  Press ENTER to continue Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -269,7 +412,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -283,7 +426,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         8,
         8,
-        "Sistemi ReactOS \211sht\211 i li\211ensuar nd\211r termat e",
+        "Sistemi Windivs \211sht\211 i li\211ensuar nd\211r termat e",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -304,7 +447,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         8,
         11,
-        "T\211 gjitha programet q\211 jan\211 pjes\211 e sistemit ReactOS jan\211",
+        "T\211 gjitha programet q\211 jan\211 pjes\211 e sistemit Windivs jan\211",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -339,7 +482,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         8,
         17,
-        "ReactOS vet\211m mbulon shp\211rndarjen e pal\211ve t\211 treta.",
+        "Windivs vet\211m mbulon shp\211rndarjen e pal\211ve t\211 treta.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -353,7 +496,7 @@ static MUI_ENTRY sqALLicensePageEntries[] =
     {
         8,
         19,
-        "GNU General Public Li\211ense me ReactOS ju lutem vizitoni",
+        "GNU General Public Li\211ense me Windivs ju lutem vizitoni",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -412,7 +555,7 @@ static MUI_ENTRY sqALDevicePageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -519,14 +662,14 @@ static MUI_ENTRY sqALRepairPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalimi i ReactOS \211sht\211 n\211 fazat e zhvillimit. Ajo ende nuk i",
+        "Instalimi i Windivs \211sht\211 n\211 fazat e zhvillimit. Ajo ende nuk i",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -592,21 +735,21 @@ static MUI_ENTRY sqALUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "The ReactOS Setup can upgrade one of the available ReactOS installations",
+        "The Windivs Setup can upgrade one of the available Windivs installations",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "listed below, or, if a ReactOS installation is damaged, the Setup program",
+        "listed below, or, if a Windivs installation is damaged, the Setup program",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -648,7 +791,7 @@ static MUI_ENTRY sqALUpgradePageEntries[] =
     {
         8,
         21,
-        "\x07  Press F3 to quit without installing ReactOS.",
+        "\x07  Press F3 to quit without installing Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -672,7 +815,7 @@ static MUI_ENTRY sqALComputerPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -731,7 +874,7 @@ static MUI_ENTRY sqALFlushPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -776,14 +919,14 @@ static MUI_ENTRY sqALQuitPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "ReactOS nuk \211sht\211 instaluar plot\211sisht.",
+        "Windivs nuk \211sht\211 instaluar plot\211sisht.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -828,7 +971,7 @@ static MUI_ENTRY sqALDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -887,14 +1030,14 @@ static MUI_ENTRY sqALSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         10,
         6,
-        "Komponent\211t themelore t\211 ReactOS jan\211 instaluar me sukses.",
+        "Komponent\211t themelore t\211 Windivs jan\211 instaluar me sukses.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -939,7 +1082,7 @@ static MUI_ENTRY sqALSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -967,7 +1110,7 @@ static MUI_ENTRY sqALSelectPartitionEntries[] =
     {
         8,
         13,
-        "\x07  Kliko ENTER p\211r t\211 instaluar ReactOS n\211 particionin e p\211rzgjedhur.",
+        "\x07  Kliko ENTER p\211r t\211 instaluar Windivs n\211 particionin e p\211rzgjedhur.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1012,7 +1155,7 @@ static MUI_ENTRY sqALChangeSystemPartition[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1033,14 +1176,14 @@ static MUI_ENTRY sqALChangeSystemPartition[] =
     {
         6,
         16,
-        "uses a format not supported by ReactOS.",
+        "uses a format not supported by Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         18,
-        "In order to successfully install ReactOS, the Setup program must change",
+        "In order to successfully install Windivs, the Setup program must change",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1110,7 +1253,7 @@ static MUI_ENTRY sqALChangeSystemPartition[] =
     {
         6,
         35,
-        "to the original one after finishing the installation of ReactOS.",
+        "to the original one after finishing the installation of Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1134,7 +1277,7 @@ static MUI_ENTRY sqALConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1155,7 +1298,7 @@ static MUI_ENTRY sqALConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         11,
-        "programs, programs to start an operating system (like ReactOS) or other",
+        "programs, programs to start an operating system (like Windivs) or other",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1190,7 +1333,7 @@ static MUI_ENTRY sqALConfirmDeleteSystemPartitionEntries[] =
     {
         6,
         17,
-        "computer from the harddisk until you finished the ReactOS Setup.",
+        "computer from the harddisk until you finished the Windivs Setup.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1242,7 +1385,7 @@ static MUI_ENTRY sqALFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1280,7 +1423,7 @@ static MUI_ENTRY sqALCheckFSEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1311,21 +1454,21 @@ static MUI_ENTRY sqALInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalimi i ReactOS n\211 particionet e p\211rzgjedhura. Zgjidh nj\211",
+        "Instalimi i Windivs n\211 particionet e p\211rzgjedhura. Zgjidh nj\211",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         9,
-        "skede ku deshironi t\211 instaloni ReactOS:",
+        "skede ku deshironi t\211 instaloni Windivs:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1339,7 +1482,7 @@ static MUI_ENTRY sqALInstallDirectoryEntries[] =
     {
         6,
         15,
-        "karakteret dhe pastaj shkruani skeden q\211 d\211shironi q\211 ReactOS",
+        "karakteret dhe pastaj shkruani skeden q\211 d\211shironi q\211 Windivs",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1370,14 +1513,14 @@ static MUI_ENTRY sqALFileCopyEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         0,
         12,
-        "Ju lutem prisni nderkohe q\211 instaluesi i ReactOS kopjon dokumentat tuaj",
+        "Ju lutem prisni nderkohe q\211 instaluesi i Windivs kopjon dokumentat tuaj",
         TEXT_STYLE_NORMAL | TEXT_ALIGN_CENTER,
         TEXT_ID_STATIC
     },
@@ -1415,7 +1558,7 @@ static MUI_ENTRY sqALBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1474,7 +1617,7 @@ static MUI_ENTRY sqALBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " ReactOS " KERNEL_VERSION_STR " Setup ",
+        " Windivs7 build 7746 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1505,7 +1648,7 @@ static MUI_ENTRY sqALBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1558,7 +1701,7 @@ static MUI_ENTRY sqALKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1617,7 +1760,7 @@ static MUI_ENTRY sqALLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1677,14 +1820,14 @@ static MUI_ENTRY sqALPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
     {
         6,
         8,
-        "Instalimi pergatit kompjuterin tuaj p\211r kopjimin e dokumentave t\211 ReactOS.",
+        "Instalimi pergatit kompjuterin tuaj p\211r kopjimin e dokumentave t\211 Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1709,7 +1852,7 @@ static MUI_ENTRY sqALSelectFSEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1757,7 +1900,7 @@ static MUI_ENTRY sqALDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1809,7 +1952,7 @@ static MUI_ENTRY sqALRegistryEntries[] =
     {
         4,
         3,
-        " Instalimi i ReactOS " KERNEL_VERSION_STR " ",
+        " Instalimi i Windivs7 build 7746 ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1844,9 +1987,9 @@ MUI_ERROR sqALErrorEntries[] =
     },
     {
         // ERROR_NOT_INSTALLED
-        "ReactOS nuk \211shte instaluar plotesisht ne kompjuterin\n"
+        "Windivs nuk \211shte instaluar plotesisht ne kompjuterin\n"
         "tuaj. N\211se dilni nga instalimi tani, ju do t\211 duhet t\211\n"
-        "rifilloni instalimin e ReactOS p\211rs\211ri.\n"
+        "rifilloni instalimin e Windivs p\211rs\211ri.\n"
         "\n"
         "  \x07  Kliko ENTER p\211r t\211 vazhduar instalimin.\n"
         "  \x07  Kliko F3 t\211 dal\211sh nga instalimi.",
@@ -1854,7 +1997,7 @@ MUI_ERROR sqALErrorEntries[] =
     },
     {
         // ERROR_NO_BUILD_PATH
-        "Failed to build the installation paths for the ReactOS installation directory!\n"
+        "Failed to build the installation paths for the Windivs installation directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -1864,7 +2007,7 @@ MUI_ERROR sqALErrorEntries[] =
     },
     {
         // ERROR_SOURCE_DIR
-        "You cannot install ReactOS within the installation source directory!\n"
+        "You cannot install Windivs within the installation source directory!\n"
         "ENTER = Reboot computer"
     },
     {
@@ -2024,7 +2167,7 @@ MUI_ERROR sqALErrorEntries[] =
         "\211NT\211R = Ristarto kompjuterin"
     },
     {
-        //‰RROR_FIND_S‰TUPDATA,
+        //ï¿½RROR_FIND_Sï¿½TUPDATA,
         "Instalimi d\211shtoi p\211r t\211 gjetur seksionin e 'SetupData'\n"
         "ne TXTSETUP.SIF.\n",
         "ENTER = Ristarto kompjuterin"
@@ -2062,7 +2205,7 @@ MUI_ERROR sqALErrorEntries[] =
     },
     {
         // ERROR_INSUFFICIENT_PARTITION_SIZE,
-        "The selected partition is not large enough to install ReactOS.\n"
+        "The selected partition is not large enough to install Windivs.\n"
         "The install partition must have a size of at least %lu MB.\n"
         "\n"
         "  * Shtypni nj\211 tast cfar\211do p\211r t\211 vazhduar.",
@@ -2116,6 +2259,10 @@ MUI_PAGE sqALPages[] =
         LICENSE_PAGE,
         sqALLicensePageEntries
     },
+        {
+            CHANGELOG_PAGE,
+            sqALChangelogPageEntries
+        },
     {
         DEVICE_SETTINGS_PAGE,
         sqALDevicePageEntries
@@ -2249,13 +2396,13 @@ MUI_STRING sqALStrings[] =
     {STRING_PARTFORMAT,
     "Ky particion do t\211 formatohet tani."},
     {STRING_NONFORMATTEDPART,
-    "Ju zgjodh\211t ReactOS p\211r tu instaluar n\211 nj\211 particion t'ri t\211 paformatuar."},
+    "Ju zgjodh\211t Windivs p\211r tu instaluar n\211 nj\211 particion t'ri t\211 paformatuar."},
     {STRING_NONFORMATTEDSYSTEMPART,
     "The system partition is not formatted yet."},
     {STRING_NONFORMATTEDOTHERPART,
     "The new partition is not formatted yet."},
     {STRING_INSTALLONPART,
-    "Instalimi i ReactOS ne Particion"},
+    "Instalimi i Windivs ne Particion"},
     {STRING_CONTINUE,
     "ENTER = Vazhdo"},
     {STRING_QUITCONTINUE,
