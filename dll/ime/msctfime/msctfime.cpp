@@ -597,8 +597,214 @@ HRESULT CCompartmentEventSink::_Unadvise()
 }
 
 class CInputContextOwnerCallBack;
-class CTextEventSink;
 class CInputContextOwner;
+
+typedef INT (CALLBACK *FN_ENDEDIT)(INT, LPVOID, LPVOID);
+typedef INT (CALLBACK *FN_LAYOUTCHANGE)(UINT nType, FN_ENDEDIT fnEndEdit, ITfContextView *pView);
+
+class CTextEventSink : public ITfTextEditSink, ITfTextLayoutSink
+{
+protected:
+    LONG m_cRefs;
+    IUnknown *m_pUnknown;
+    DWORD m_dwEditSinkCookie;
+    DWORD m_dwLayoutSinkCookie;
+    union
+    {
+        UINT m_uFlags;
+        FN_LAYOUTCHANGE m_fnLayoutChange;
+    };
+    FN_ENDEDIT m_fnEndEdit;
+    LPVOID m_pCallbackPV;
+
+public:
+    CTextEventSink(FN_ENDEDIT fnEndEdit, LPVOID pCallbackPV);
+    virtual ~CTextEventSink();
+
+    HRESULT _Advise(IUnknown *pUnknown, UINT uFlags);
+    HRESULT _Unadvise();
+
+    // IUnknown interface
+    STDMETHODIMP QueryInterface(REFIID riid, LPVOID* ppvObj) override;
+    STDMETHODIMP_(ULONG) AddRef() override;
+    STDMETHODIMP_(ULONG) Release() override;
+
+    // ITfTextEditSink interface
+    STDMETHODIMP OnEndEdit(
+        ITfContext *pic,
+        TfEditCookie ecReadOnly,
+        ITfEditRecord *pEditRecord) override;
+
+    // ITfTextLayoutSink interface
+    STDMETHODIMP
+    OnLayoutChange(
+        ITfContext *pContext,
+        TfLayoutCode lcode,
+        ITfContextView *pContextView) override;
+};
+
+/**
+ * @implemented
+ */
+CTextEventSink::CTextEventSink(FN_ENDEDIT fnEndEdit, LPVOID pCallbackPV)
+{
+    m_cRefs = 1;
+    m_pUnknown = NULL;
+    m_dwEditSinkCookie = (DWORD)-1;
+    m_dwLayoutSinkCookie = (DWORD)-1;
+    m_fnLayoutChange = NULL;
+    m_fnEndEdit = fnEndEdit;
+    m_pCallbackPV = pCallbackPV;
+}
+
+/**
+ * @implemented
+ */
+CTextEventSink::~CTextEventSink()
+{
+}
+
+/**
+ * @implemented
+ */
+STDMETHODIMP CTextEventSink::QueryInterface(REFIID riid, LPVOID* ppvObj)
+{
+    if (IsEqualIID(riid, IID_IUnknown) || IsEqualIID(riid, IID_ITfTextEditSink))
+    {
+        *ppvObj = this;
+        AddRef();
+        return S_OK;
+    }
+    if (IsEqualIID(riid, IID_ITfTextLayoutSink))
+    {
+        *ppvObj = static_cast<ITfTextLayoutSink*>(this);
+        AddRef();
+        return S_OK;
+    }
+    return E_NOINTERFACE;
+}
+
+/**
+ * @implemented
+ */
+STDMETHODIMP_(ULONG) CTextEventSink::AddRef()
+{
+    return ::InterlockedIncrement(&m_cRefs);
+}
+
+/**
+ * @implemented
+ */
+STDMETHODIMP_(ULONG) CTextEventSink::Release()
+{
+    if (::InterlockedDecrement(&m_cRefs) == 0)
+    {
+        delete this;
+        return 0;
+    }
+    return m_cRefs;
+}
+
+struct TEXT_EVENT_SINK_END_EDIT
+{
+    TfEditCookie m_ecReadOnly;
+    ITfEditRecord *m_pEditRecord;
+    ITfContext *m_pContext;
+};
+
+/**
+ * @implemented
+ */
+STDMETHODIMP CTextEventSink::OnEndEdit(
+    ITfContext *pic,
+    TfEditCookie ecReadOnly,
+    ITfEditRecord *pEditRecord)
+{
+    TEXT_EVENT_SINK_END_EDIT Data = { ecReadOnly, pEditRecord, pic };
+    return m_fnEndEdit(1, m_pCallbackPV, (LPVOID)&Data);
+}
+
+/**
+ * @implemented
+ */
+STDMETHODIMP CTextEventSink::OnLayoutChange(
+    ITfContext *pContext,
+    TfLayoutCode lcode,
+    ITfContextView *pContextView)
+{
+    switch (lcode)
+    {
+        case TF_LC_CREATE:
+            return m_fnLayoutChange(3, m_fnEndEdit, pContextView);
+        case TF_LC_CHANGE:
+            return m_fnLayoutChange(2, m_fnEndEdit, pContextView);
+        case TF_LC_DESTROY:
+            return m_fnLayoutChange(4, m_fnEndEdit, pContextView);
+        default:
+            return E_INVALIDARG;
+    }
+}
+
+/**
+ * @implemented
+ */
+HRESULT CTextEventSink::_Advise(IUnknown *pUnknown, UINT uFlags)
+{
+    m_pUnknown = NULL;
+    m_uFlags = uFlags;
+
+    ITfSource *pSource = NULL;
+    HRESULT hr = pUnknown->QueryInterface(IID_ITfSource, (void**)&pSource);
+    if (SUCCEEDED(hr))
+    {
+        ITfTextEditSink *pSink = static_cast<ITfTextEditSink*>(this);
+        if (uFlags & 1)
+            hr = pSource->AdviseSink(IID_ITfTextEditSink, pSink, &m_dwEditSinkCookie);
+        if (SUCCEEDED(hr) && (uFlags & 2))
+            hr = pSource->AdviseSink(IID_ITfTextLayoutSink, pSink, &m_dwLayoutSinkCookie);
+
+        if (SUCCEEDED(hr))
+        {
+            m_pUnknown = pUnknown;
+            pUnknown->AddRef();
+        }
+        else
+        {
+            pSource->UnadviseSink(m_dwEditSinkCookie);
+        }
+    }
+
+    if (pSource)
+        pSource->Release();
+
+    return hr;
+}
+
+/**
+ * @implemented
+ */
+HRESULT CTextEventSink::_Unadvise()
+{
+    if (!m_pUnknown)
+        return E_FAIL;
+
+    ITfSource *pSource = NULL;
+    HRESULT hr = m_pUnknown->QueryInterface(IID_ITfSource, (void**)&pSource);
+    if (SUCCEEDED(hr))
+    {
+        if (m_uFlags & 1)
+            hr = pSource->UnadviseSink(m_dwEditSinkCookie);
+        if (m_uFlags & 2)
+            hr = pSource->UnadviseSink(m_dwLayoutSinkCookie);
+
+        pSource->Release();
+    }
+
+    m_pUnknown->Release();
+    m_pUnknown = NULL;
+
+    return E_NOTIMPL;
+}
 
 /***********************************************************************
  *      CicInputContext
@@ -615,7 +821,7 @@ public:
     HIMC m_hIMC;
     ITfDocumentMgr *m_pDocumentMgr;
     ITfContext *m_pContext;
-    IUnknown *m_pUnknown1;
+    ITfContextOwnerServices *m_pContextOwnerServices;
     CInputContextOwnerCallBack *m_pICOwnerCallback;
     CTextEventSink *m_pTextEventSink;
     CCompartmentEventSink *m_pCompEventSink1;
@@ -821,18 +1027,24 @@ CicInputContext::DestroyInputContext()
         pSource->UnadviseSingleSink(m_clientId, IID_ITfCleanupContextSink);
 
     //FIXME: m_dwUnknown5
-    //FIXME: m_pTextEventSink
+
+    if (m_pTextEventSink)
+    {
+        m_pTextEventSink->_Unadvise();
+        m_pTextEventSink->Release();
+        m_pTextEventSink = NULL;
+    }
 
     if (m_pCompEventSink2)
     {
-        //FIXME: m_pCompEventSink2->_Unadvise();
+        m_pCompEventSink2->_Unadvise();
         m_pCompEventSink2->Release();
         m_pCompEventSink2 = NULL;
     }
 
     if (m_pCompEventSink1)
     {
-        //FIXME: m_pCompEventSink1->_Unadvise();
+        m_pCompEventSink1->_Unadvise();
         m_pCompEventSink1->Release();
         m_pCompEventSink1 = NULL;
     }
@@ -849,10 +1061,10 @@ CicInputContext::DestroyInputContext()
         m_pContext = NULL;
     }
 
-    if (m_pUnknown1)
+    if (m_pContextOwnerServices)
     {
-        m_pUnknown1->Release();
-        m_pUnknown1 = NULL;
+        m_pContextOwnerServices->Release();
+        m_pContextOwnerServices = NULL;
     }
 
     // FIXME: m_pICOwnerCallback
@@ -1386,7 +1598,7 @@ CFunctionProvider::GetFunction(
     if (IsEqualGUID(guid, GUID_NULL) &&
         IsEqualIID(riid, IID_IAImmFnDocFeed))
     {
-        *func = new CFnDocFeed();
+        *func = new(cicNoThrow) CFnDocFeed();
         if (*func)
             return S_OK;
     }
@@ -1935,7 +2147,7 @@ CicProfile::InitProfileInstance(_Inout_ TLS *pTLS)
     if (!m_pActiveLanguageProfileNotifySink)
     {
         CActiveLanguageProfileNotifySink *pSink =
-            new CActiveLanguageProfileNotifySink(
+            new(cicNoThrow) CActiveLanguageProfileNotifySink(
                 CicProfile::ActiveLanguageProfileNotifySinkCallback, this);
         if (!pSink)
         {
@@ -2114,7 +2326,7 @@ CicBridge::CreateInputContext(
     CicInputContext *pCicIC = imeContext.get().m_pCicIC;
     if (!pCicIC)
     {
-        pCicIC = new CicInputContext(m_cliendId, &m_LibThread, hIMC);
+        pCicIC = new(cicNoThrow) CicInputContext(m_cliendId, &m_LibThread, hIMC);
         if (!pCicIC)
         {
             imeContext.unlock();
@@ -2319,7 +2531,7 @@ CicBridge::ActivateIMMX(
         return hr;
     }
 
-    CFunctionProvider *pProvider = new CFunctionProvider(m_cliendId);
+    CFunctionProvider *pProvider = new(cicNoThrow) CFunctionProvider(m_cliendId);
     if (!pProvider)
     {
         hr = E_FAIL;
@@ -2433,7 +2645,7 @@ CicBridge::InitIMMX(_Inout_ TLS *pTLS)
     if (!m_pThreadMgrEventSink)
     {
         m_pThreadMgrEventSink =
-            new CThreadMgrEventSink(CThreadMgrEventSink::DIMCallback, NULL, NULL);
+            new(cicNoThrow) CThreadMgrEventSink(CThreadMgrEventSink::DIMCallback, NULL, NULL);
         if (!m_pThreadMgrEventSink)
         {
             UnInitIMMX(pTLS);
@@ -2446,7 +2658,7 @@ CicBridge::InitIMMX(_Inout_ TLS *pTLS)
 
     if (!pTLS->m_pProfile)
     {
-        pTLS->m_pProfile = new CicProfile();
+        pTLS->m_pProfile = new(cicNoThrow) CicProfile();
         if (!pTLS->m_pProfile)
             return E_OUTOFMEMORY;
 
@@ -3085,7 +3297,7 @@ CtfImeCreateThreadMgr(VOID)
 
     if (!pTLS->m_pBridge)
     {
-        pTLS->m_pBridge = new CicBridge();
+        pTLS->m_pBridge = new(cicNoThrow) CicBridge();
         if (!pTLS->m_pBridge)
             return E_OUTOFMEMORY;
     }
@@ -3125,7 +3337,7 @@ CtfImeDestroyThreadMgr(VOID)
 
     if (pTLS->m_pBridge)
     {
-        pTLS->m_pBridge = new CicBridge();
+        pTLS->m_pBridge = new(cicNoThrow) CicBridge();
         if (!pTLS->m_pBridge)
             return E_OUTOFMEMORY;
     }
@@ -3274,8 +3486,340 @@ CtfImeThreadDetach(VOID)
     return S_OK;
 }
 
+/***********************************************************************
+ *      UIComposition
+ */
+struct UIComposition
+{
+    void OnImeStartComposition(CicIMCLock& imcLock, HWND hUIWnd);
+    void OnImeCompositionUpdate(CicIMCLock& imcLock);
+    void OnImeEndComposition();
+    void OnImeSetContext(CicIMCLock& imcLock, HWND hUIWnd, WPARAM wParam, LPARAM lParam);
+    void OnPaintTheme(WPARAM wParam);
+    void OnDestroy();
+
+    static LRESULT CALLBACK CompWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+};
+
 /**
  * @unimplemented
+ */
+void UIComposition::OnImeStartComposition(CicIMCLock& imcLock, HWND hUIWnd)
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+void UIComposition::OnImeCompositionUpdate(CicIMCLock& imcLock)
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+void UIComposition::OnImeEndComposition()
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+void UIComposition::OnImeSetContext(CicIMCLock& imcLock, HWND hUIWnd, WPARAM wParam, LPARAM lParam)
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+void UIComposition::OnPaintTheme(WPARAM wParam)
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+void UIComposition::OnDestroy()
+{
+    //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+LRESULT CALLBACK
+UIComposition::CompWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    if (uMsg == WM_CREATE)
+        return -1; // FIXME
+    return 0;
+}
+
+/***********************************************************************
+ *      UI
+ */
+struct UI
+{
+    HWND m_hWnd;
+    UIComposition *m_pComp;
+
+    UI(HWND hWnd);
+    virtual ~UI();
+
+    HRESULT _Create();
+    void _Destroy();
+
+    static void OnCreate(HWND hWnd);
+    static void OnDestroy(HWND hWnd);
+    void OnImeSetContext(CicIMCLock& imcLock, WPARAM wParam, LPARAM lParam);
+};
+
+// For GetWindowLongPtr/SetWindowLongPtr
+#define UIGWLP_HIMC 0
+#define UIGWLP_UI   sizeof(HIMC)
+#define UIGWLP_SIZE (UIGWLP_UI + sizeof(UI*))
+
+/**
+ * @implemented
+ */
+UI::UI(HWND hWnd) : m_hWnd(hWnd)
+{
+}
+
+/**
+ * @implemented
+ */
+UI::~UI()
+{
+    delete m_pComp;
+}
+
+/**
+ * @unimplemented
+ */
+HRESULT UI::_Create()
+{
+    m_pComp = new(cicNoThrow) UIComposition();
+    if (!m_pComp)
+        return E_OUTOFMEMORY;
+
+    SetWindowLongPtrW(m_hWnd, UIGWLP_UI, (LONG_PTR)this);
+    //FIXME
+    return S_OK;
+}
+
+/**
+ * @implemented
+ */
+void UI::_Destroy()
+{
+    m_pComp->OnDestroy();
+    SetWindowLongPtrW(m_hWnd, UIGWLP_UI, 0);
+}
+
+/**
+ * @implemented
+ */
+void UI::OnCreate(HWND hWnd)
+{
+    UI *pUI = (UI*)GetWindowLongPtrW(hWnd, UIGWLP_UI);
+    if (pUI)
+        return;
+    pUI = new(cicNoThrow) UI(hWnd);
+    if (pUI)
+        pUI->_Create();
+}
+
+/**
+ * @implemented
+ */
+void UI::OnDestroy(HWND hWnd)
+{
+    UI *pUI = (UI*)GetWindowLongPtrW(hWnd, UIGWLP_UI);
+    if (!pUI)
+        return;
+
+    pUI->_Destroy();
+    delete pUI;
+}
+
+/**
+ * @implemented
+ */
+void UI::OnImeSetContext(CicIMCLock& imcLock, WPARAM wParam, LPARAM lParam)
+{
+    m_pComp->OnImeSetContext(imcLock, m_hWnd, wParam, lParam);
+}
+
+/***********************************************************************
+ *      CIMEUIWindowHandler
+ */
+
+struct CIMEUIWindowHandler
+{
+    static LRESULT CALLBACK ImeUIMsImeHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    static LRESULT CALLBACK ImeUIMsImeMouseHandler(HWND hWnd, WPARAM wParam, LPARAM lParam);
+    static LRESULT CALLBACK ImeUIMsImeModeBiasHandler(HWND hWnd, WPARAM wParam, LPARAM lParam);
+    static LRESULT CALLBACK ImeUIMsImeReconvertRequest(HWND hWnd, WPARAM wParam, LPARAM lParam);
+    static LRESULT CALLBACK ImeUIWndProcWorker(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+};
+
+/**
+ * @unimplemented
+ */
+LRESULT CALLBACK
+CIMEUIWindowHandler::ImeUIMsImeMouseHandler(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+    return 0; //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+LRESULT CALLBACK
+CIMEUIWindowHandler::ImeUIMsImeModeBiasHandler(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+    return 0; //FIXME
+}
+
+/**
+ * @unimplemented
+ */
+LRESULT CALLBACK
+CIMEUIWindowHandler::ImeUIMsImeReconvertRequest(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+    return 0; //FIXME
+}
+
+/**
+ * @implemented
+ */
+LRESULT CALLBACK
+CIMEUIWindowHandler::ImeUIMsImeHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    if (uMsg == WM_MSIME_MOUSE)
+        return ImeUIMsImeMouseHandler(hWnd, wParam, lParam);
+    if (uMsg == WM_MSIME_MODEBIAS)
+        return ImeUIMsImeModeBiasHandler(hWnd, wParam, lParam);
+    if (uMsg == WM_MSIME_RECONVERTREQUEST)
+        return ImeUIMsImeReconvertRequest(hWnd, wParam, lParam);
+    if (uMsg == WM_MSIME_SERVICE)
+    {
+        TLS *pTLS = TLS::GetTLS();
+        if (pTLS && pTLS->m_pProfile)
+        {
+            LANGID LangID;
+            pTLS->m_pProfile->GetLangId(&LangID);
+            if (PRIMARYLANGID(LangID) == LANG_KOREAN)
+                return FALSE;
+        }
+        return TRUE;
+    }
+    return 0;
+}
+
+/**
+ * @unimplemented
+ */
+LRESULT CALLBACK
+CIMEUIWindowHandler::ImeUIWndProcWorker(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    TLS *pTLS = TLS::GetTLS();
+    if (pTLS && (pTLS->m_dwSystemInfoFlags & IME_SYSINFO_WINLOGON))
+    {
+        if (uMsg == WM_CREATE)
+            return -1;
+        return DefWindowProcW(hWnd, uMsg, wParam, lParam);
+    }
+
+    switch (uMsg)
+    {
+        case WM_CREATE:
+        {
+            UI::OnCreate(hWnd);
+            break;
+        }
+        case WM_DESTROY:
+        case WM_ENDSESSION:
+        {
+            UI::OnDestroy(hWnd);
+            break;
+        }
+        case WM_IME_STARTCOMPOSITION:
+        case WM_IME_COMPOSITION:
+        case WM_IME_ENDCOMPOSITION:
+        case WM_IME_SETCONTEXT:
+        case WM_IME_NOTIFY:
+        case WM_IME_SELECT:
+        case WM_TIMER:
+        {
+            HIMC hIMC = (HIMC)GetWindowLongPtrW(hWnd, UIGWLP_HIMC);
+            UI* pUI = (UI*)GetWindowLongPtrW(hWnd, UIGWLP_UI);
+            CicIMCLock imcLock(hIMC);
+            switch (uMsg)
+            {
+                case WM_IME_STARTCOMPOSITION:
+                {
+                    pUI->m_pComp->OnImeStartComposition(imcLock, pUI->m_hWnd);
+                    break;
+                }
+                case WM_IME_COMPOSITION:
+                {
+                    if (lParam & GCS_COMPSTR)
+                    {
+                        pUI->m_pComp->OnImeCompositionUpdate(imcLock);
+                        ::SetTimer(hWnd, 0, 10, NULL);
+                        //FIXME
+                    }
+                    break;
+                }
+                case WM_IME_ENDCOMPOSITION:
+                {
+                    ::KillTimer(hWnd, 0);
+                    pUI->m_pComp->OnImeEndComposition();
+                    break;
+                }
+                case WM_IME_SETCONTEXT:
+                {
+                    pUI->OnImeSetContext(imcLock, wParam, lParam);
+                    ::KillTimer(hWnd, 1);
+                    ::SetTimer(hWnd, 1, 300, NULL);
+                    break;
+                }
+                case WM_TIMER:
+                {
+                    //FIXME
+                    ::KillTimer(hWnd, wParam);
+                    break;
+                }
+                case WM_IME_NOTIFY:
+                case WM_IME_SELECT:
+                default:
+                {
+                    pUI->m_pComp->OnPaintTheme(wParam);
+                    break;
+                }
+            }
+            break;
+        }
+        default:
+        {
+            if (IsMsImeMessage(uMsg))
+                return CIMEUIWindowHandler::ImeUIMsImeHandler(hWnd, uMsg, wParam, lParam);
+            return DefWindowProcW(hWnd, uMsg, wParam, lParam);
+        }
+    }
+
+    return 0;
+}
+
+/**
+ * @implemented
  */
 EXTERN_C LRESULT CALLBACK
 UIWndProc(
@@ -3284,12 +3828,7 @@ UIWndProc(
     _In_ WPARAM wParam,
     _In_ LPARAM lParam)
 {
-    if (uMsg == WM_CREATE)
-    {
-        FIXME("stub\n");
-        return -1;
-    }
-    return 0;
+    return CIMEUIWindowHandler::ImeUIWndProcWorker(hWnd, uMsg, wParam, lParam);
 }
 
 /**
@@ -3303,7 +3842,7 @@ BOOL RegisterImeClass(VOID)
     {
         ZeroMemory(&wcx, sizeof(wcx));
         wcx.cbSize          = sizeof(WNDCLASSEXW);
-        wcx.cbWndExtra      = sizeof(DWORD) * 2;
+        wcx.cbWndExtra      = UIGWLP_SIZE;
         wcx.hIcon           = LoadIconW(0, (LPCWSTR)IDC_ARROW);
         wcx.hInstance       = g_hInst;
         wcx.hCursor         = LoadCursorW(NULL, (LPCWSTR)IDC_ARROW);
@@ -3325,7 +3864,7 @@ BOOL RegisterImeClass(VOID)
         wcx.hCursor         = LoadCursorW(NULL, (LPCWSTR)IDC_IBEAM);
         wcx.hbrBackground   = (HBRUSH)GetStockObject(NULL_BRUSH);
         wcx.style           = CS_IME | CS_HREDRAW | CS_VREDRAW;
-        //wcx.lpfnWndProc     = UIComposition::CompWndProc; // FIXME
+        wcx.lpfnWndProc     = UIComposition::CompWndProc;
         wcx.lpszClassName   = L"MSCTFIME Composition";
         if (!RegisterClassExW(&wcx))
             return FALSE;
