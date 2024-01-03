@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Font Viewer
+ * PROJECT:     Windivs Font Viewer
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Romanian resource file
  * TRANSLATORS: Copyright 2009 Petru Dimitriu <petrimetri@gmail.com>
@@ -19,7 +19,7 @@ BEGIN
     IDS_ERROR_NOMEM "Nu e destulă memorie pentru a încheia operația."
     IDS_ERROR_NOFONT "Fișierul «%1» este un fișier font deteriorat."
     IDS_ERROR_NOCLASS "Clasa de ferestre nu a putut fi inițializată."
-    IDS_ERROR_ISINSTALLED "Acest font este deja instalat!" 
+    IDS_ERROR_ISINSTALLED "Acest font este deja instalat!"
     IDS_ERROR_FONTCPY "Nu a putut fi copiat acest fișier de font!"
     IDS_ERROR_OPENKEY "Nu a putut fi deschisă această cheie de regiștrii a fonturilor!"
     IDS_ERROR_REGISTER "Nu a putut fi înregistrat noul font!"
