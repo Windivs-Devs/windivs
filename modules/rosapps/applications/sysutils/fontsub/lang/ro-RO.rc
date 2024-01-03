@@ -60,7 +60,7 @@ BEGIN
     IDS_QUERYDELETE,    "Confirmați ștergerea acestui element?"
     IDS_CANTOPENKEY,    "Eșec la deschiderea cheii de registru."
     IDS_REBOOTNOW,      "Registrul a fost actualizat. Reporniți sistemul?"
-    IDS_ABOUT,          "FontSub (Editor de substituție font) Versiune 0.5\r\nde Katayama Hirofumi MZ și Echipa Windivs\r\n\r\nAcost program a fost publicat sub licența CC0 1.0."
+    IDS_ABOUT,          "FontSub (Editor de substituție font) Versiune 0.5\r\nde Katayama Hirofumi MZ și Echipa ReactOS\r\n\r\nAcost program a fost publicat sub licența CC0 1.0."
 END
 
 IDD_ADD DIALOGEX 0, 0, 315, 65
