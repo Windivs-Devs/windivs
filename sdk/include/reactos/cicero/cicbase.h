@@ -162,6 +162,20 @@ cicLoadSystemLibrary(
     return ::LoadLibrary(ModPath.m_szPath);
 }
 
+template <typename T_FN>
+static inline BOOL
+cicGetFN(HINSTANCE& hinstDLL, T_FN& fn, LPCTSTR pszDllName, LPCSTR pszFuncName)
+{
+    if (fn)
+        return TRUE;
+    if (!hinstDLL)
+        hinstDLL = cicLoadSystemLibrary(pszDllName, FALSE);
+    if (!hinstDLL)
+        return FALSE;
+    fn = reinterpret_cast<T_FN>(GetProcAddress(hinstDLL, pszFuncName));
+    return !!fn;
+}
+
 #include <ndk/pstypes.h> /* for PROCESSINFOCLASS */
 
 /* ntdll!NtQueryInformationProcess */
