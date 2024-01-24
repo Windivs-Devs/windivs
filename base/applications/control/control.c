@@ -1,17 +1,17 @@
 /*
- * PROJECT:     Windivs System Control Panel
+ * PROJECT:     ReactOS System Control Panel
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
- * PURPOSE:     Windivs System Control Panel
+ * PURPOSE:     ReactOS System Control Panel
  * COPYRIGHT:   Copyright 2004 Gero Kuehn (reactos.filter@gkware.com)
  *              Copyright 2008 Colin Finck (colin@reactos.org)
- *              Copyright 2014 Herm�s B�lusca-Ma�to (hermes.belusca-maito@reactos.org)
+ *              Copyright 2014 Hermès Bélusca-Maïto (hermes.belusca-maito@reactos.org)
  */
-
-#define COBJMACROS
 
 #include <stdio.h>
 
 #define WIN32_NO_STATUS
+#define COBJMACROS
+
 
 #include <windef.h>
 #include <winbase.h>
