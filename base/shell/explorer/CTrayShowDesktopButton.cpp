@@ -6,6 +6,7 @@
  * COPYRIGHT:   Copyright 2018-2022 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
  */
 #include "CTrayShowDesktopButton.h"
+#include <limits.h>
 
 CTrayShowDesktopButton::CTrayShowDesktopButton() :
     m_nClickedTime(0),
@@ -67,6 +68,9 @@ INT CTrayShowDesktopButton::WidthOrHeight() const
     }
 }
 
+#define IDI_SHELL32_DESKTOP 35
+#define IDI_IMAGERES_DESKTOP 110
+
 HRESULT CTrayShowDesktopButton::DoCreate(HWND hwndParent)
 {
     DWORD style = WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | BS_DEFPUSHBUTTON;
@@ -75,11 +79,10 @@ HRESULT CTrayShowDesktopButton::DoCreate(HWND hwndParent)
     if (!m_hWnd)
         return E_FAIL;
 
-    ExtractIconExW(
-        L"imageres.dll", -110
-        //L"explorer.exe", -IDI_DESKTOP
-        //L"shell32.dll", -IDI_SHELL_DESKTOP
-        , NULL, &m_icon, 1);
+    bool bIconRetrievalFailed = ExtractIconExW(L"imageres.dll", -IDI_IMAGERES_DESKTOP, NULL, &m_icon, 1) == UINT_MAX;
+    if (bIconRetrievalFailed || !m_icon)
+        ExtractIconExW(L"shell32.dll", -IDI_SHELL32_DESKTOP, NULL, &m_icon, 1);
+
     EnsureWindowTheme(TRUE);
     
     return S_OK;
@@ -115,7 +118,7 @@ LRESULT CTrayShowDesktopButton::OnLButtonUp(UINT uMsg, WPARAM wParam, LPARAM lPa
     Invalidate(TRUE);
     POINT pt;
     ::GetCursorPos(&pt);
-    if (PtInButton(pt))
+    if (PtInButton(&pt))
         Click(); // Left-click
     
     return 0;
@@ -215,8 +218,10 @@ LRESULT CTrayShowDesktopButton::OnPaint(UINT uMsg, WPARAM wParam, LPARAM lParam,
     return 0;
 }
 
-BOOL CTrayShowDesktopButton::PtInButton(POINT pt)
+BOOL CTrayShowDesktopButton::PtInButton(LPPOINT ppt)
 {
+    if (!ppt)
+        return FALSE;
     if (!IsWindow())
         return FALSE;
     RECT rc;
@@ -224,8 +229,8 @@ BOOL CTrayShowDesktopButton::PtInButton(POINT pt)
     INT cxEdge = ::GetSystemMetrics(SM_CXEDGE), cyEdge = ::GetSystemMetrics(SM_CYEDGE);
     ::InflateRect(&rc, max(cxEdge, 1), max(cyEdge, 1));
     return IsHorizontal
-        ? (pt.x > rc.left)
-        : (pt.y > rc.top)
+        ? (ppt->x > rc.left)
+        : (ppt->y > rc.top)
     ;
 }
 
@@ -260,7 +265,7 @@ LRESULT CTrayShowDesktopButton::OnTimer(UINT uMsg, WPARAM wParam, LPARAM lParam,
 
     POINT pt;
     ::GetCursorPos(&pt);
-    if (!PtInButton(pt)) // The end of hovering?
+    if (!PtInButton(&pt)) // The end of hovering?
     {
         m_bHovering = FALSE;
         KillTimer(SHOW_DESKTOP_TIMER_ID);

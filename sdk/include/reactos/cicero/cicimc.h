@@ -7,10 +7,19 @@
 
 #pragma once
 
+// struct CTFIMECONTEXT;
 // class CIC_IMCC_LOCK<T_DATA>;
 // class CicIMCCLock<T_DATA>;
 // class CIC_IMC_LOCK;
 // class CicIMCLock;
+
+class CicInputContext;
+
+typedef struct tagCTFIMECONTEXT
+{
+    CicInputContext *m_pCicIC;
+    DWORD m_dwCicFlags;
+} CTFIMECONTEXT, *PCTFIMECONTEXT;
 
 template <typename T_DATA>
 class CIC_IMCC_LOCK
@@ -143,6 +152,8 @@ public:
         return imccLock.get().dwCompStrLen > 0;
     }
 
+    BOOL ClearCand();
+
     BOOL UseVerticalCompWindow() const
     {
         return m_pIC->cfCompForm.dwStyle && ((m_pIC->lfFont.A.lfEscapement / 900) % 4 == 3);
@@ -172,3 +183,44 @@ protected:
         return ::ImmUnlockIMC(hIMC) ? S_OK : E_FAIL;
     }
 };
+
+#define CUSTOM_CAND_INFO_SIZE 1964
+
+inline BOOL CicIMCLock::ClearCand()
+{
+    HIMCC hNewCandInfo, hCandInfo = m_pIC->hCandInfo;
+    if (hCandInfo)
+    {
+        hNewCandInfo = ImmReSizeIMCC(hCandInfo, CUSTOM_CAND_INFO_SIZE);
+        if (!hNewCandInfo)
+        {
+            ImmDestroyIMCC(m_pIC->hCandInfo);
+            m_pIC->hCandInfo = ImmCreateIMCC(CUSTOM_CAND_INFO_SIZE);
+            return FALSE;
+        }
+    }
+    else
+    {
+        hNewCandInfo = ImmCreateIMCC(CUSTOM_CAND_INFO_SIZE);
+    }
+
+    m_pIC->hCandInfo = hNewCandInfo;
+    if (!m_pIC->hCandInfo)
+        return FALSE;
+
+    CicIMCCLock<CANDIDATEINFO> candInfo(m_pIC->hCandInfo);
+    if (!candInfo)
+    {
+        ImmDestroyIMCC(m_pIC->hCandInfo);
+        m_pIC->hCandInfo = ImmCreateIMCC(CUSTOM_CAND_INFO_SIZE);
+        return FALSE;
+    }
+
+    candInfo.get().dwSize = CUSTOM_CAND_INFO_SIZE;
+    candInfo.get().dwCount = 0;
+    candInfo.get().dwOffset[0] = sizeof(CANDIDATEINFO);
+
+    // FIXME: Something is trailing after CANDIDATEINFO...
+
+    return TRUE;
+}

@@ -295,7 +295,7 @@ IntWinListChildren(PWND Window)
     Index = 0;
     for (Child = Window->spwndChild; Child; Child = Child->spwndNext)
     {
-        List[Index++] = Child->head.h;
+        List[Index++] = UserHMGetHandle(Child);
     }
     List[Index] = NULL;
 
@@ -340,7 +340,7 @@ IntWinListOwnedPopups(PWND Window)
     for (Child = Desktop->spwndChild; Child; Child = Child->spwndNext)
     {
         if (Child->spwndOwner == Window && !IntWndIsDefaultIme(Child))
-            List[Index++] = Child->head.h;
+            List[Index++] = UserHMGetHandle(Child);
     }
     List[Index] = NULL;
 
@@ -658,10 +658,10 @@ LRESULT co_UserFreeWindow(PWND Window,
    /* reset shell window handles */
    if (ThreadData->rpdesk)
    {
-      if (Window->head.h == ThreadData->rpdesk->rpwinstaParent->ShellWindow)
+      if (UserHMGetHandle(Window) == ThreadData->rpdesk->rpwinstaParent->ShellWindow)
          ThreadData->rpdesk->rpwinstaParent->ShellWindow = NULL;
 
-      if (Window->head.h == ThreadData->rpdesk->rpwinstaParent->ShellListView)
+      if (UserHMGetHandle(Window) == ThreadData->rpdesk->rpwinstaParent->ShellListView)
          ThreadData->rpdesk->rpwinstaParent->ShellListView = NULL;
    }
 
@@ -1343,7 +1343,7 @@ co_UserSetParent(HWND hWndChild, HWND hWndNewParent)
 
    if (WndOldParent)
    {
-      hWndOldParent = WndOldParent->head.h;
+      hWndOldParent = UserHMGetHandle(WndOldParent);
       UserDereferenceObject(WndOldParent);
    }
 
@@ -1580,7 +1580,7 @@ NtUserBuildHwndList(
                   _SEH2_TRY
                   {
                      ProbeForWrite(phwndList, sizeof(HWND), 1);
-                     *phwndList = Window->head.h;
+                     *phwndList = UserHMGetHandle(Window);
                      phwndList++;
                   }
                   _SEH2_EXCEPT(EXCEPTION_EXECUTE_HANDLER)
@@ -1658,7 +1658,7 @@ NtUserBuildHwndList(
                   _SEH2_TRY
                   {
                      ProbeForWrite(phwndList, sizeof(HWND), 1);
-                     *phwndList = Window->head.h;
+                     *phwndList = UserHMGetHandle(Window);
                      phwndList++;
                   }
                   _SEH2_EXCEPT(EXCEPTION_EXECUTE_HANDLER)
@@ -1699,10 +1699,10 @@ static void IntSendParentNotify( PWND pWindow, UINT msg )
         {
             USER_REFERENCE_ENTRY Ref;
             UserRefObjectCo(pWindow->spwndParent, &Ref);
-            co_IntSendMessage( pWindow->spwndParent->head.h,
+            co_IntSendMessage( UserHMGetHandle(pWindow->spwndParent),
                                WM_PARENTNOTIFY,
                                MAKEWPARAM( msg, pWindow->IDMenu),
-                               (LPARAM)pWindow->head.h );
+                               (LPARAM)UserHMGetHandle(pWindow) );
             UserDerefObjectCo(pWindow->spwndParent);
         }
     }
@@ -2216,12 +2216,12 @@ co_UserCreateWindowEx(CREATESTRUCTW* Cs,
    }
 
    /* Now find the parent and the owner window */
-   hWndParent = pti->rpdesk->pDeskInfo->spwnd->head.h;
+   hWndParent = UserHMGetHandle(pti->rpdesk->pDeskInfo->spwnd);
    hWndOwner = NULL;
 
     if (Cs->hwndParent == HWND_MESSAGE)
     {
-        Cs->hwndParent = hWndParent = pti->rpdesk->spwndMessage->head.h;
+        Cs->hwndParent = hWndParent = UserHMGetHandle(pti->rpdesk->spwndMessage);
     }
     else if (Cs->hwndParent)
     {
@@ -2471,7 +2471,7 @@ co_UserCreateWindowEx(CREATESTRUCTW* Cs,
 
    Result = co_WinPosGetNonClientSize(Window, &Window->rcWindow, &Window->rcClient);
    //rc = Window->rcWindow;
-   //Result = co_IntSendMessageNoWait(Window->head.h, WM_NCCALCSIZE, FALSE, (LPARAM)&rc);
+   //Result = co_IntSendMessageNoWait(UserHMGetHandle(Window), WM_NCCALCSIZE, FALSE, (LPARAM)&rc);
    //Window->rcClient = rc;
 
    RECTL_vOffsetRect(&Window->rcWindow, MaxPos.x - Window->rcWindow.left,
@@ -2870,7 +2870,7 @@ BOOLEAN co_UserDestroyWindow(PVOID Object)
       return TRUE;
    }
 
-   hWnd = Window->head.h;
+   hWnd = UserHMGetHandle(Window);
    ti = PsGetCurrentThreadWin32Thread();
 
    TRACE("co_UserDestroyWindow(Window = 0x%p, hWnd = 0x%p)\n", Window, hWnd);
@@ -3079,7 +3079,7 @@ IntFindWindow(PWND Parent,
       if(ChildAfter)
       {
          /* skip handles before and including ChildAfter */
-         while(*phWnd && (*(phWnd++) != ChildAfter->head.h))
+         while(*phWnd && (*(phWnd++) != UserHMGetHandle(ChildAfter)))
             ;
       }
 
@@ -3105,7 +3105,7 @@ IntFindWindow(PWND Parent,
                 (Child->strName.Length < 0xFFFF &&
                  !RtlCompareUnicodeString(WindowName, &CurrentWindowName, TRUE)))
              {
-                Ret = Child->head.h;
+                Ret = UserHMGetHandle(Child);
                 break;
              }
          }
@@ -3242,7 +3242,7 @@ NtUserFindWindowEx(HWND hwndParent,
 
    _SEH2_TRY
    {
-       if(Parent->head.h == Desktop)
+       if(UserHMGetHandle(Parent) == Desktop)
        {
           HWND *List, *phWnd;
           PWND TopLevelWindow;
@@ -3260,7 +3260,7 @@ NtUserFindWindowEx(HWND hwndParent,
              if(ChildAfter)
              {
                 /* skip handles before and including ChildAfter */
-                while(*phWnd && (*(phWnd++) != ChildAfter->head.h))
+                while(*phWnd && (*(phWnd++) != UserHMGetHandle(ChildAfter)))
                    ;
              }
 
@@ -3290,7 +3290,7 @@ NtUserFindWindowEx(HWND hwndParent,
 
                 if (WindowMatches && ClassMatches)
                 {
-                   Ret = TopLevelWindow->head.h;
+                   Ret = UserHMGetHandle(TopLevelWindow);
                    break;
                 }
 
@@ -3298,7 +3298,7 @@ NtUserFindWindowEx(HWND hwndParent,
                 {
                    /* window returns the handle of the top-level window, in case it found
                       the child window */
-                   Ret = TopLevelWindow->head.h;
+                   Ret = UserHMGetHandle(TopLevelWindow);
                    break;
                 }
 
@@ -3343,7 +3343,7 @@ PWND FASTCALL UserGetAncestor(PWND Wnd, UINT Type)
 {
    PWND WndAncestor, Parent;
 
-   if (Wnd->head.h == IntGetDesktopWindow())
+   if (UserHMGetHandle(Wnd) == IntGetDesktopWindow())
    {
       return NULL;
    }
@@ -3990,10 +3990,10 @@ co_IntSetWindowLongPtr(HWND hWnd, DWORD Index, LONG_PTR NewValue, BOOL Ansi, ULO
 
          case GWLP_HWNDPARENT: // LONG_PTR
             Parent = Window->spwndParent;
-            if (Parent && (Parent->head.h == IntGetDesktopWindow()))
-               OldValue = (LONG_PTR) IntSetOwner(Window->head.h, (HWND) NewValue);
+            if (Parent && (UserHMGetHandle(Parent) == IntGetDesktopWindow()))
+               OldValue = (LONG_PTR)IntSetOwner(UserHMGetHandle(Window), (HWND)NewValue);
             else
-               OldValue = (LONG_PTR) co_UserSetParent(Window->head.h, (HWND) NewValue);
+               OldValue = (LONG_PTR)co_UserSetParent(UserHMGetHandle(Window), (HWND)NewValue);
             break;
 
          case GWLP_ID: // LONG

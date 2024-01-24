@@ -1,6 +1,6 @@
 /*
  *  COPYRIGHT:        See COPYING in the top level directory
- *  PROJECT:          Windivs Win32k subsystem
+ *  PROJECT:          ReactOS Win32k subsystem
  *  PURPOSE:          Window painting function
  *  FILE:             win32ss/user/ntuser/painting.c
  *  PROGRAMER:        Filip Navara (xnavara@volny.cz)
@@ -403,7 +403,7 @@ VOID FASTCALL
 co_IntPaintWindows(PWND Wnd, ULONG Flags, BOOL Recurse)
 {
    HDC hDC;
-   HWND hWnd = Wnd->head.h;
+   HWND hWnd = UserHMGetHandle(Wnd);
    HRGN TempRegion = NULL;
 
    Wnd->state &= ~WNDS_PAINTNOTPROCESSED;
@@ -518,8 +518,7 @@ co_IntPaintWindows(PWND Wnd, ULONG Flags, BOOL Recurse)
 VOID FASTCALL
 co_IntUpdateWindows(PWND Wnd, ULONG Flags, BOOL Recurse)
 {
-   HWND hWnd = Wnd->head.h;
-   USER_REFERENCE_ENTRY Ref;
+   HWND hWnd = UserHMGetHandle(Wnd);
 
    if ( Wnd->hrgnUpdate != NULL || Wnd->state & WNDS_INTERNALPAINT )
    {
@@ -543,15 +542,15 @@ co_IntUpdateWindows(PWND Wnd, ULONG Flags, BOOL Recurse)
       Wnd->state &= ~WNDS_UPDATEDIRTY;
 
       Wnd->state2 |= WNDS2_WMPAINTSENT;
-
-      UserRefObjectCo(Wnd, &Ref);
       co_IntSendMessage(hWnd, WM_PAINT, 0, 0);
 
       if (Wnd->state & WNDS_PAINTNOTPROCESSED)
       {
+         USER_REFERENCE_ENTRY Ref;
+         UserRefObjectCo(Wnd, &Ref);
          co_IntPaintWindows(Wnd, RDW_NOCHILDREN, FALSE);
+         UserDerefObjectCo(Wnd);
       }
-      UserDerefObjectCo(Wnd);
    }
 
    // Force flags as a toggle. Fixes msg:test_paint_messages:WmChildPaintNc.

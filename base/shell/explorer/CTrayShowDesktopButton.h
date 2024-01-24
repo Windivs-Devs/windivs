@@ -5,12 +5,11 @@
  * COPYRIGHT:   Copyright 2006-2007 Thomas Weidenmueller <w3seek@reactos.org>
  * COPYRIGHT:   Copyright 2018-2022 Katayama Hirofumi MZ <katayama.hirofumi.mz@gmail.com>
  */
+#pragma once
+
 #include "precomp.h"
 #include <commoncontrols.h>
 #include <uxtheme.h>
-
-#ifndef CTRAYSHOWDESKTOPBUTTON_H
-#define CTRAYSHOWDESKTOPBUTTON_H
 
 
 // This window class name is CONFIRMED on Win10 by WinHier.
@@ -30,9 +29,9 @@ class CTrayShowDesktopButton :
     BOOL m_highContrastMode;
     BOOL m_drawWithDedicatedBackground;
     BOOL m_bHovering;
-    BOOL m_bPressed;
 
 public:
+    BOOL m_bPressed;
     BOOL IsHorizontal;
 
     DECLARE_WND_CLASS_EX(szTrayShowDesktopButton, CS_HREDRAW | CS_VREDRAW, COLOR_3DFACE)
@@ -69,11 +68,9 @@ public:
     LRESULT OnWindowPosChanged(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
     VOID EnsureWindowTheme(BOOL setTheme);
     LRESULT OnPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
-    BOOL PtInButton(POINT pt);
+    BOOL PtInButton(LPPOINT pt);
     VOID StartHovering();
     LRESULT OnMouseMove(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
     LRESULT OnTimer(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
     LRESULT OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 };
-
-#endif

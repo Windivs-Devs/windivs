@@ -1699,7 +1699,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Windivs Text">
+     inkscape:label="ReactOS Text">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1710,7 +1710,7 @@
          id="tspan183"
          x="17.330208"
          y="14.618228"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'AvantGarde Bk BT';-inkscape-font-specification:'AvantGarde Bk BT';fill:#ffffff;stroke-width:0.264583">Windivs</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'AvantGarde Bk BT';-inkscape-font-specification:'AvantGarde Bk BT';fill:#ffffff;stroke-width:0.264583">ReactOS</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1727,7 +1727,7 @@
          id="tspan196"
          x="48.681915"
          y="18.210854"
-         style="font-size:2.11667px;fill:#ffffff;stroke-width:0.264583">Copyright © 1996 - 2023 Windivs Team &amp; Contributors</tspan></text>
+         style="font-size:2.11667px;fill:#ffffff;stroke-width:0.264583">Copyright © 1996 - 2024 ReactOS Team &amp; Contributors</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
