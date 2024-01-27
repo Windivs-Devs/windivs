@@ -34,6 +34,7 @@ class CUIFTheme;
         class CUIFWndFrame;
         class CUIFGripper;
         class CUIFMenuItem;
+            class CUIFMenuItemSeparator;
 class CUIFObjectArray;
 class CUIFColorTable;
     class CUIFColorTableSys;
@@ -806,9 +807,21 @@ public:
     STDMETHOD_(void, OnTimer)() override;
 
     STDMETHOD_(void, InitMenuExtent)();
-    STDMETHOD_(void, OnPaintO10)(HDC hDC);
     STDMETHOD_(void, OnPaintDef)(HDC hDC);
+    STDMETHOD_(void, OnPaintO10)(HDC hDC);
     STDMETHOD_(void, OnUnknownMethod)() { } // FIXME: method name
+};
+
+/////////////////////////////////////////////////////////////////////////////
+
+class CUIFMenuItemSeparator : public CUIFMenuItem
+{
+public:
+    CUIFMenuItemSeparator(CUIFMenu *pMenu);
+
+    STDMETHOD_(void, InitMenuExtent)() override;
+    STDMETHOD_(void, OnPaintDef)(HDC hDC) override;
+    STDMETHOD_(void, OnPaintO10)(HDC hDC) override;
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -5733,20 +5746,27 @@ CUIFMenu::InitShow(CUIFWindow *pWindow, LPCRECT prc, BOOL bFlag, BOOL bDoAnimati
 
 inline BOOL CUIFMenu::InsertItem(CUIFMenuItem *pItem)
 {
-    CUIFMenuItem **ppAdded = m_MenuItems.Append(1);
-    if (!ppAdded)
+    if (!m_MenuItems.Add(pItem))
         return FALSE;
 
-    *ppAdded = pItem;
     pItem->SetFont(m_hFont);
     return TRUE;
 }
 
-/// @unimplemented
 inline BOOL CUIFMenu::InsertSeparator()
 {
-    //FIXME
-    return FALSE;
+    CUIFMenuItemSeparator *pSep = new(cicNoThrow) CUIFMenuItemSeparator(this);
+    if (!pSep)
+        return FALSE;
+
+    if (!m_MenuItems.Add(pSep))
+    {
+        delete pSep;
+        return FALSE;
+    }
+
+    pSep->Initialize();
+    return TRUE;
 }
 
 inline STDMETHODIMP_(void)
@@ -6210,18 +6230,143 @@ CUIFMenuItem::OnPaint(HDC hDC)
         OnPaintDef(hDC);
 }
 
-/// unimplemented
 inline STDMETHODIMP_(void)
 CUIFMenuItem::OnPaintO10(HDC hDC)
 {
-    //FIXME
+    if (!m_pScheme)
+        return;
+
+    HGDIOBJ hFontOld = ::SelectObject(hDC, m_hFont);
+
+    SIZE textSize;
+    ::GetTextExtentPoint32W(hDC, m_pszMenuItemLeft, m_cchMenuItemLeft, &textSize);
+
+    LONG cySpace = m_rc.bottom - m_rc.top - textSize.cy;
+    LONG xCheck = m_rc.left, yCheck = m_rc.top + cySpace / 2;
+    LONG cxyMargin = (m_pMenu->m_bHasMargin ? m_pMenu->m_cxyMargin : 0);
+
+    LONG xBitmap = m_rc.left + cxyMargin, yBitmap = m_rc.top;
+    LONG xText = m_rc.left + m_pMenu->m_cxyMargin + cxyMargin + 8;
+    LONG yText = m_rc.top + cySpace / 2;
+    LONG xArrow = m_rc.left - textSize.cy + m_rc.right - 2;
+    LONG xRightText = m_rc.right - m_pMenu->m_cxMenuExtent - 8;
+
+    RECT rc;
+    GetRect(&rc);
+
+    if (m_bMenuItemDisabled || m_pMenu->m_pSelectedItem != this)
+    {
+        rc.right = m_pMenu->m_cxyMargin + rc.left + 2;
+        if (m_pMenu->m_bHasMargin)
+            rc.right += m_pMenu->m_cxyMargin;
+
+        ::FillRect(hDC, &rc, m_pScheme->GetBrush(9));
+    }
+    else
+    {
+        m_pScheme->DrawCtrlBkgd(hDC, &rc, 0, UIF_DRAW_PRESSED);
+        m_pScheme->DrawCtrlEdge(hDC, &rc, 0, UIF_DRAW_PRESSED);
+    }
+
+    ::SetBkMode(hDC, TRANSPARENT);
+
+    if (m_bMenuItemGrayed)
+    {
+        ::SetTextColor(hDC, m_pScheme->GetColor(11));
+        ::ExtTextOutW(hDC, xText, yText, ETO_CLIPPED, &m_rc, m_pszMenuItemLeft,
+                      m_cchMenuItemLeft, NULL);
+    }
+    else if (m_bMenuItemDisabled || m_pMenu->m_pSelectedItem != this)
+    {
+        ::SetTextColor(hDC, m_pScheme->GetColor(10));
+        ::ExtTextOutW(hDC, xText, yText, ETO_CLIPPED, &m_rc, m_pszMenuItemLeft,
+                      m_cchMenuItemLeft, NULL);
+    }
+    else
+    {
+        ::SetTextColor(hDC, m_pScheme->GetColor(5));
+        ::ExtTextOutW(hDC, xText, yText, ETO_CLIPPED, &m_rc, m_pszMenuItemLeft,
+                      m_cchMenuItemLeft, NULL);
+    }
+
+    DrawUnderline(hDC, xText, yText, m_pScheme->GetBrush(5));
+
+    if (m_pszMenuItemRight)
+    {
+        ::ExtTextOutW(hDC, xRightText, yText, ETO_CLIPPED, &m_rc, m_pszMenuItemRight,
+                      m_cchMenuItemRight, NULL);
+    }
+
+    DrawCheck(hDC, xCheck, yCheck);
+    DrawBitmapProc(hDC, xBitmap, yBitmap);
+    DrawArrow(hDC, xArrow, yText);
+
+    ::SelectObject(hDC, hFontOld);
 }
 
-/// unimplemented
 inline STDMETHODIMP_(void)
 CUIFMenuItem::OnPaintDef(HDC hDC)
 {
-    //FIXME
+    HGDIOBJ hFontOld = ::SelectObject(hDC, m_hFont);
+
+    SIZE textSize;
+    ::GetTextExtentPoint32W(hDC, m_pszMenuItemLeft, m_cchMenuItemLeft, &textSize);
+
+    LONG cxyMargin = (m_pMenu->m_bHasMargin ? m_pMenu->m_cxyMargin : 0);
+
+    LONG cySpace = m_rc.bottom - m_rc.top - textSize.cy;
+    LONG xCheck = m_rc.left, yCheck = m_rc.top + cySpace / 2;
+    LONG xBitmap = m_rc.left + cxyMargin, yBitmap = m_rc.top;
+    LONG xText = m_rc.left + cxyMargin + m_pMenu->m_cxyMargin + 2;
+    LONG yText = m_rc.top + cySpace / 2;
+
+    LONG xArrow = m_rc.right + m_rc.left - 10;
+
+    ::SetBkMode(hDC, TRANSPARENT);
+
+    if (m_bMenuItemGrayed)
+    {
+        UINT uOptions = ETO_CLIPPED;
+        if (m_bMenuItemDisabled || m_pMenu->m_pSelectedItem != this)
+        {
+            ::SetTextColor(hDC, ::GetSysColor(COLOR_BTNHIGHLIGHT));
+            ::ExtTextOutW(hDC, xText + 1, yText + 1, ETO_CLIPPED, &m_rc, m_pszMenuItemLeft,
+                          m_cchMenuItemLeft, NULL);
+            DrawCheck(hDC, xCheck + 1, yCheck + 1);
+            DrawBitmapProc(hDC, xBitmap + 1, yBitmap + 1);
+            DrawArrow(hDC, xArrow + 1, yText + 1);
+        }
+        else
+        {
+            ::SetBkColor(hDC, ::GetSysColor(COLOR_HIGHLIGHT));
+            uOptions = ETO_CLIPPED | ETO_OPAQUE;
+        }
+        ::SetTextColor(hDC, ::GetSysColor(COLOR_BTNSHADOW));
+        ::ExtTextOutW(hDC, xText, yText, uOptions, &m_rc, m_pszMenuItemLeft,
+                      m_cchMenuItemLeft, NULL);
+        DrawUnderline(hDC, xText, yText, (HBRUSH)UlongToHandle(COLOR_BTNSHADOW + 1));
+    }
+    else if (m_bMenuItemDisabled || m_pMenu->m_pSelectedItem != this)
+    {
+        ::SetTextColor(hDC, ::GetSysColor(COLOR_MENUTEXT));
+        ::ExtTextOutW(hDC, xText, yText, ETO_CLIPPED, &m_rc, m_pszMenuItemLeft,
+                      m_cchMenuItemLeft, NULL);
+        DrawUnderline(hDC, xText, yText, (HBRUSH)UlongToHandle(COLOR_MENUTEXT + 1));
+    }
+    else
+    {
+        ::SetTextColor(hDC, ::GetSysColor(COLOR_HIGHLIGHTTEXT));
+        ::SetBkColor(hDC, ::GetSysColor(COLOR_HIGHLIGHT));
+        ::ExtTextOutW(hDC, xText, yText, ETO_CLIPPED | ETO_OPAQUE, &m_rc,
+                      m_pszMenuItemLeft, m_cchMenuItemLeft, NULL);
+        DrawUnderline(hDC, xText, yText, (HBRUSH)UlongToHandle(COLOR_HIGHLIGHTTEXT + 1));
+    }
+
+    DrawCheck(hDC, xCheck, yCheck);
+    DrawBitmapProc(hDC, xBitmap, yBitmap);
+    DrawArrow(hDC, xArrow, yText);
+
+    ::SelectObject(hDC, hFontOld);
 }
 
 inline STDMETHODIMP_(void)
@@ -6244,4 +6389,40 @@ inline void CUIFMenuItem::ShowSubPopup()
     ::ClientToScreen(*m_pWindow, (LPPOINT)&rc);
     ::ClientToScreen(*m_pWindow, (LPPOINT)&rc.right);
     m_pSubMenu->ShowSubPopup(m_pMenu, &rc, FALSE);
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+inline
+CUIFMenuItemSeparator::CUIFMenuItemSeparator(CUIFMenu *pMenu) : CUIFMenuItem(pMenu, TRUE)
+{
+    m_nMenuItemID = -1;
+}
+
+inline STDMETHODIMP_(void)
+CUIFMenuItemSeparator::InitMenuExtent()
+{
+    m_MenuLeftExtent.cx = 0;
+    m_MenuLeftExtent.cy = 6;
+}
+
+inline STDMETHODIMP_(void)
+CUIFMenuItemSeparator::OnPaintDef(HDC hDC)
+{
+    if (!m_pScheme)
+        return;
+
+    RECT rc;
+    rc.left   = m_rc.left + 2;
+    rc.top    = m_rc.top + (m_rc.bottom - m_rc.top - 2) / 2;
+    rc.right  = m_rc.right - 2;
+    rc.bottom = rc.top + 2;
+    m_pScheme->DrawMenuSeparator(hDC, &rc);
+}
+
+/// @unimplemented
+inline STDMETHODIMP_(void)
+CUIFMenuItemSeparator::OnPaintO10(HDC hDC)
+{
+    //FIXME
 }
