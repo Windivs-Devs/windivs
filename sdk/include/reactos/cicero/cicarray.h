@@ -33,6 +33,12 @@ public:
     T_ITEM* data() const { return (T_ITEM*)m_pb; }
     size_t size() const  { return m_cItems;      }
     bool empty() const   { return !size();       }
+    void clear()
+    {
+        cicMemFree(m_pb);
+        m_pb = NULL;
+        m_cItems = m_cCapacity = 0;
+    }
 
     T_ITEM& operator[](size_t iItem)
     {
@@ -50,6 +56,15 @@ public:
 
     using CicArrayBase::Insert;
     using CicArrayBase::Remove;
+
+    BOOL Add(const T_ITEM& item)
+    {
+        T_ITEM *pItem = Append(1);
+        if (!pItem)
+            return FALSE;
+        CopyMemory(pItem, &item, sizeof(T_ITEM));
+        return TRUE;
+    }
 
     ssize_t Find(const T_ITEM& item) const
     {
