@@ -306,18 +306,6 @@ SafeRemovalDlgProc(
 
                     break;
                 }
-
-                case IDC_SAFE_REMOVE_STOP:
-                case IDM_STOP:
-                {
-                    HWND hwndDevTree = GetDlgItem(hwndDlg, IDC_SAFE_REMOVE_DEVICE_TREE);
-                    DialogBoxParamW(hApplet,
-                                    MAKEINTRESOURCEW(IDD_CONFIRM_STOP_HARDWARE_DIALOG),
-                                    hwndDlg,
-                                    ConfirmRemovalDlgProc,
-                                    (LPARAM)GetSelectedDeviceInst(hwndDevTree));
-                    break;
-                }
             }
             break;
 
