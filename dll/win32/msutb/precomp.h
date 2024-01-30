@@ -14,6 +14,7 @@
 #define INITGUID
 
 #include <windows.h>
+#include <oleacc.h>
 #include <imm.h>
 #include <ddk/immdev.h>
 #include <cguid.h>
@@ -24,8 +25,9 @@
 #include <atlcom.h>
 #include <strsafe.h>
 #undef STATUS_NO_MEMORY
+
+#include "resource.h"
+#include <cicero/cicreg.h>
 #include <cicero/cicuif.h>
 
 #include <wine/debug.h>
-
-#include "resource.h"
