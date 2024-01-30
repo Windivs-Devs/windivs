@@ -8,7 +8,7 @@ static MUI_ENTRY ptBRChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 build 7814 Setup ",
+            "Windivs7+ Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -22,7 +22,7 @@ static MUI_ENTRY ptBRChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7 RTM, build 7600.1",
+            "Windivs7+ RTM, build 7850.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -50,42 +50,42 @@ static MUI_ENTRY ptBRChangelogPageEntries[] =
         {
             8,
             12,
-            "- Various localisation updates",
+            "- Updated Show Desktop button style",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             13,
-            "- Introduction of the in-Setup changelog UI",
+            "- Introduction of a new version string format",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             15,
-            "- An updated Slate+ theme",
+            "- Implemented many new features across the OS",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             16,
-            "- Many stability improvements and minor new features",
+            "- Introduction of the Language Bar",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             17,
-            "- Overhaul of the registry and Setup",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             18,
-            "- Some minor improvements relating to the boot sequence of the OS",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -151,7 +151,7 @@ static MUI_ENTRY ptBRSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -189,7 +189,7 @@ static MUI_ENTRY ptBRLanguagePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -241,7 +241,7 @@ static MUI_ENTRY ptBRWelcomePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -328,7 +328,7 @@ static MUI_ENTRY ptBRIntroPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY ptBRLicensePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -551,7 +551,7 @@ static MUI_ENTRY ptBRDevicePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -651,7 +651,7 @@ static MUI_ENTRY ptBRRepairPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -724,7 +724,7 @@ static MUI_ENTRY ptBRUpgradePageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -804,7 +804,7 @@ static MUI_ENTRY ptBRComputerPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -870,7 +870,7 @@ static MUI_ENTRY ptBRFlushPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -922,7 +922,7 @@ static MUI_ENTRY ptBRQuitPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -974,7 +974,7 @@ static MUI_ENTRY ptBRDisplayPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1033,7 +1033,7 @@ static MUI_ENTRY ptBRSuccessPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1085,7 +1085,7 @@ static MUI_ENTRY ptBRSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1165,7 +1165,7 @@ static MUI_ENTRY ptBRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1287,7 +1287,7 @@ static MUI_ENTRY ptBRConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1395,7 +1395,7 @@ static MUI_ENTRY ptBRFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1433,7 +1433,7 @@ static MUI_ENTRY ptBRCheckFSEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1464,7 +1464,7 @@ static MUI_ENTRY ptBRInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1523,7 +1523,7 @@ static MUI_ENTRY ptBRFileCopyEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1568,7 +1568,7 @@ static MUI_ENTRY ptBRBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1627,7 +1627,7 @@ static MUI_ENTRY ptBRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1658,7 +1658,7 @@ static MUI_ENTRY ptBRBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1711,7 +1711,7 @@ static MUI_ENTRY ptBRKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1770,7 +1770,7 @@ static MUI_ENTRY ptBRLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1837,7 +1837,7 @@ static MUI_ENTRY ptBRPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1876,7 +1876,7 @@ static MUI_ENTRY ptBRSelectFSEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1924,7 +1924,7 @@ static MUI_ENTRY ptBRDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1983,7 +1983,7 @@ static MUI_ENTRY ptBRRegistryEntries[] =
     {
         4,
         3,
-        " Instala\207\306o do Windivs7 build 7814 ",
+        " Instala\207\306o do Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

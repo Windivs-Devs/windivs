@@ -14,7 +14,7 @@ static MUI_ENTRY csCZChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 build 7814 Setup ",
+            "Windivs7+ Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -28,7 +28,7 @@ static MUI_ENTRY csCZChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7 RTM, build 7600.1",
+            "Windivs7+ RTM, build 7850.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -56,42 +56,42 @@ static MUI_ENTRY csCZChangelogPageEntries[] =
         {
             8,
             12,
-            "- Various localisation updates",
+            "- Updated Show Desktop button style",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             13,
-            "- Introduction of the in-Setup changelog UI",
+            "- Introduction of a new version string format",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             15,
-            "- An updated Slate+ theme",
+            "- Implemented many new features across the OS",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             16,
-            "- Many stability improvements and minor new features",
+            "- Introduction of the Language Bar",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             17,
-            "- Overhaul of the registry and Setup",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             18,
-            "- Some minor improvements relating to the boot sequence of the OS",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -157,7 +157,7 @@ static MUI_ENTRY csCZSetupInitPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -195,7 +195,7 @@ static MUI_ENTRY csCZLanguagePageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -247,7 +247,7 @@ static MUI_ENTRY csCZWelcomePageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -334,7 +334,7 @@ static MUI_ENTRY csCZIntroPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -414,7 +414,7 @@ static MUI_ENTRY csCZLicensePageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -557,7 +557,7 @@ static MUI_ENTRY csCZDevicePageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -664,7 +664,7 @@ static MUI_ENTRY csCZRepairPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -737,7 +737,7 @@ static MUI_ENTRY csCZUpgradePageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -817,7 +817,7 @@ static MUI_ENTRY csCZComputerPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -876,7 +876,7 @@ static MUI_ENTRY csCZFlushPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -921,7 +921,7 @@ static MUI_ENTRY csCZQuitPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -973,7 +973,7 @@ static MUI_ENTRY csCZDisplayPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1032,7 +1032,7 @@ static MUI_ENTRY csCZSuccessPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1084,7 +1084,7 @@ static MUI_ENTRY csCZSelectPartitionEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1157,7 +1157,7 @@ static MUI_ENTRY csCZChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1279,7 +1279,7 @@ static MUI_ENTRY csCZConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1387,7 +1387,7 @@ static MUI_ENTRY csCZFormatPartitionEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1425,7 +1425,7 @@ static MUI_ENTRY csCZCheckFSEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1456,7 +1456,7 @@ static MUI_ENTRY csCZInstallDirectoryEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1515,7 +1515,7 @@ static MUI_ENTRY csCZFileCopyEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1560,7 +1560,7 @@ static MUI_ENTRY csCZBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1619,7 +1619,7 @@ static MUI_ENTRY csCZBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1650,7 +1650,7 @@ static MUI_ENTRY csCZBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1696,7 +1696,7 @@ static MUI_ENTRY csCZKeyboardSettingsEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1755,7 +1755,7 @@ static MUI_ENTRY csCZLayoutSettingsEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1815,7 +1815,7 @@ static MUI_ENTRY csCZPrepareCopyEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1847,7 +1847,7 @@ static MUI_ENTRY csCZSelectFSEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1895,7 +1895,7 @@ static MUI_ENTRY csCZDeletePartitionEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1947,7 +1947,7 @@ static MUI_ENTRY csCZRegistryEntries[] =
     {
         4,
         3,
-        " Instalace Windivs7 build 7814 ",
+        " Instalace Windivs7+ ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

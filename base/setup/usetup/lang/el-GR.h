@@ -8,7 +8,7 @@ static MUI_ENTRY elGRChangelogPageEntries[] =
         {
             4,
             3,
-            " Windivs7 build 7814 Setup ",
+            "Windivs7+ Setup ",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -22,7 +22,7 @@ static MUI_ENTRY elGRChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7 RTM, build 7600.1",
+            "Windivs7+ RTM, build 7850.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -50,42 +50,42 @@ static MUI_ENTRY elGRChangelogPageEntries[] =
         {
             8,
             12,
-            "- Various localisation updates",
+            "- Updated Show Desktop button style",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             13,
-            "- Introduction of the in-Setup changelog UI",
+            "- Introduction of a new version string format",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             15,
-            "- An updated Slate+ theme",
+            "- Implemented many new features across the OS",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             16,
-            "- Many stability improvements and minor new features",
+            "- Introduction of the Language Bar",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             17,
-            "- Overhaul of the registry and Setup",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
         {
             8,
             18,
-            "- Some minor improvements relating to the boot sequence of the OS",
+            "",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -1165,7 +1165,7 @@ static MUI_ENTRY elGRChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1627,7 +1627,7 @@ static MUI_ENTRY elGRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        " Windivs7 build 7814 Setup ",
+        "Windivs7+ Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
