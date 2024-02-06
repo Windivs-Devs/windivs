@@ -7,6 +7,13 @@
 #define IDS_IGNORE          104
 #define IDS_YES             105
 #define IDS_NO              106
+
+#define IDI_MAINICON        100
+
+#define IDS_RESTORELANGBAR  308
+#define IDS_LANGUAGE        309
+#define IDS_LANGUAGEBUTTON  310
+#define IDS_RESTORELANGBAR2 321
 #define IDS_MENUWND         322
 #define IDS_LEFTCLICK       323
 
