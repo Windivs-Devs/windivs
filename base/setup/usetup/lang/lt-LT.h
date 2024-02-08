@@ -31,7 +31,7 @@ static MUI_ENTRY ltLTChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7+ RTM, build 7850.1",
+            "Windivs7+ RTM, build 7875.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
