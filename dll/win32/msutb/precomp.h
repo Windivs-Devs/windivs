@@ -20,6 +20,7 @@
 #include <cguid.h>
 #include <msctf.h>
 #include <ctffunc.h>
+#include <ctfutb.h>
 #include <shlwapi.h>
 #include <atlbase.h>
 #include <atlcom.h>
@@ -28,6 +29,7 @@
 
 #include "resource.h"
 #include <cicero/cicreg.h>
+#include <cicero/cicutb.h>
 #include <cicero/cicuif.h>
 
 #include <wine/debug.h>
