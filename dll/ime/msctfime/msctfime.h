@@ -15,7 +15,8 @@
 
 #include <windows.h>
 #include <imm.h>
-#include <ddk/immdev.h>
+#include <immdev.h>
+#include <imm32_undoc.h>
 #include <cguid.h>
 #include <tchar.h>
 #include <msctf.h>
@@ -23,17 +24,16 @@
 #include <shlwapi.h>
 #include <strsafe.h>
 
-#include <cicero/cicbase.h>
-#include <cicero/cicarray.h>
-#include <cicero/cicimc.h>
-#include <cicero/cictf.h>
-#include <cicero/ciccaret.h>
-#include <cicero/cicuif.h>
+#include <cicbase.h>
+#include <cicarray.h>
+#include <cicimc.h>
+#include <cictf.h>
+#include <ciccaret.h>
+#include <cicuif.h>
+#include <cicutb.h>
 
 #include <wine/debug.h>
 
 #include "resource.h"
-
-#define IS_IME_HKL(hKL) ((((ULONG_PTR)(hKL)) & 0xF0000000) == 0xE0000000)
 
 extern HINSTANCE g_hInst;
