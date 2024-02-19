@@ -10,7 +10,7 @@ static MUI_ENTRY esESChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7+ Setup ",
+            "Windivs7 build 7875 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },

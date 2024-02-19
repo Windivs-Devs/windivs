@@ -9,7 +9,7 @@ static MUI_ENTRY heILChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7+ Setup ",
+            "Windivs7 build 7875 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -1153,7 +1153,7 @@ static MUI_ENTRY heILChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1615,7 +1615,7 @@ static MUI_ENTRY heILBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

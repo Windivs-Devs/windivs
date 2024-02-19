@@ -8,7 +8,7 @@ static MUI_ENTRY etEEChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7+ Setup ",
+            "Windivs7 build 7875 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -1152,7 +1152,7 @@ static MUI_ENTRY etEEChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1614,7 +1614,7 @@ static MUI_ENTRY etEEBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

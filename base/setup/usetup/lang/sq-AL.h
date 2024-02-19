@@ -12,7 +12,7 @@ static MUI_ENTRY sqALChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7+ Setup ",
+            "Windivs7 build 7875 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -1155,7 +1155,7 @@ static MUI_ENTRY sqALChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1617,7 +1617,7 @@ static MUI_ENTRY sqALBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7+ Setup ",
+        "Windivs7 build 7875 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
