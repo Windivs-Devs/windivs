@@ -14,7 +14,7 @@ static MUI_ENTRY svSEChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7875 Setup",
+            "Windivs7 build 7878 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -28,7 +28,7 @@ static MUI_ENTRY svSEChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7+ RTM, build 7875.1",
+            "Windivs7+ RTM, build 7878.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -157,7 +157,7 @@ static MUI_ENTRY svSESetupInitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -195,7 +195,7 @@ static MUI_ENTRY svSELanguagePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -247,7 +247,7 @@ static MUI_ENTRY svSEWelcomePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -334,7 +334,7 @@ static MUI_ENTRY svSEIntroPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -414,7 +414,7 @@ static MUI_ENTRY svSELicensePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -557,7 +557,7 @@ static MUI_ENTRY svSEDevicePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -664,7 +664,7 @@ static MUI_ENTRY svSERepairPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -737,7 +737,7 @@ static MUI_ENTRY svSEUpgradePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -817,7 +817,7 @@ static MUI_ENTRY svSEComputerPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -876,7 +876,7 @@ static MUI_ENTRY svSEFlushPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -921,7 +921,7 @@ static MUI_ENTRY svSEQuitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -973,7 +973,7 @@ static MUI_ENTRY svSEDisplayPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1032,7 +1032,7 @@ static MUI_ENTRY svSESuccessPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1084,7 +1084,7 @@ static MUI_ENTRY svSESelectPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1158,7 +1158,7 @@ static MUI_ENTRY svSEChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1280,7 +1280,7 @@ static MUI_ENTRY svSEConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1388,7 +1388,7 @@ static MUI_ENTRY svSEFormatPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1426,7 +1426,7 @@ static MUI_ENTRY svSECheckFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1457,7 +1457,7 @@ static MUI_ENTRY svSEInstallDirectoryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1516,7 +1516,7 @@ static MUI_ENTRY svSEFileCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1561,7 +1561,7 @@ static MUI_ENTRY svSEBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1620,7 +1620,7 @@ static MUI_ENTRY svSEBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1651,7 +1651,7 @@ static MUI_ENTRY svSEBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1697,7 +1697,7 @@ static MUI_ENTRY svSEKeyboardSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1756,7 +1756,7 @@ static MUI_ENTRY svSELayoutSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1816,7 +1816,7 @@ static MUI_ENTRY svSEPrepareCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1848,7 +1848,7 @@ static MUI_ENTRY svSESelectFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1896,7 +1896,7 @@ static MUI_ENTRY svSEDeletePartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1948,7 +1948,7 @@ static MUI_ENTRY svSERegistryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7875 Setup",
+        "Windivs7 build 7878 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
