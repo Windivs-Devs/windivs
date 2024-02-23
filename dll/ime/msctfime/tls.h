@@ -25,7 +25,7 @@ public:
     DWORD m_dwFlags2;
     DWORD m_dwUnknown2;
     BOOL m_bDestroyed;
-    DWORD m_dwNowOpening;
+    BOOL m_bNowOpening;
     DWORD m_NonEAComposition;
     DWORD m_cWnds;
 
@@ -71,4 +71,6 @@ public:
 
     static TLS* InternalAllocateTLS();
     static BOOL InternalDestroyTLS();
+
+    BOOL NonEACompositionEnabled();
 };
