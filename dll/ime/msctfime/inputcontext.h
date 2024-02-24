@@ -8,16 +8,10 @@
 #pragma once
 
 #include "sinks.h"
+#include "misc.h"
 
 class CInputContextOwnerCallBack;
 class CInputContextOwner;
-
-HRESULT
-Inquire(
-    _Out_ LPIMEINFO lpIMEInfo,
-    _Out_ LPWSTR lpszWndClass,
-    _In_ DWORD dwSystemInfoFlags,
-    _In_ HKL hKL);
 
 /***********************************************************************
  *      CicInputContext
@@ -44,8 +38,10 @@ public:
     DWORD m_dwUnknown4[2];
     DWORD m_dwQueryPos;
     DWORD m_dwUnknown5;
-    GUID m_guid;
-    DWORD m_dwUnknown6[11];
+    CModeBias m_ModeBias;
+    DWORD m_dwUnknown6;
+    BOOL m_bCandidateOpen;
+    DWORD m_dwUnknown6_5[9];
     BOOL m_bSelecting;
     BOOL m_bReconverting;
     LONG m_cCompLocks;
@@ -53,7 +49,10 @@ public:
     WORD m_cGuidAtoms;
     WORD m_padding;
     DWORD m_adwGuidAtoms[256];
-    DWORD m_dwUnknown8[17];
+    DWORD m_dwUnknown8;
+    RECT m_rcCandidate1;
+    CANDIDATEFORM m_CandForm;
+    RECT m_rcCandidate2;
     TfClientId m_clientId;
     DWORD m_dwUnknown9;
 
@@ -91,11 +90,20 @@ public:
 
     HRESULT SetupDocFeedString(CicIMCLock& imcLock, UINT uCodePage);
     HRESULT EscbClearDocFeedBuffer(CicIMCLock& imcLock, BOOL bFlag);
+    HRESULT EscbCompComplete(CicIMCLock& imcLock);
     HRESULT SetupReconvertString(
         CicIMCLock& imcLock,
         ITfThreadMgr_P *pThreadMgr,
         UINT uCodePage,
-        DWORD dwUnknown61,
+        UINT uMsg,
         BOOL bUndo);
+    HRESULT MsImeMouseHandler(
+        DWORD dwUnknown58,
+        DWORD dwUnknown59,
+        UINT keys,
+        CicIMCLock& imcLock);
+
     HRESULT EndReconvertString(CicIMCLock& imcLock);
+    HRESULT DelayedReconvertFuncCall(CicIMCLock& imcLock);
+    void ClearPrevCandidatePos();
 };
