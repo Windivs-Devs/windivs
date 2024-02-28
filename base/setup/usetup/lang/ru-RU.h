@@ -1096,7 +1096,7 @@ static MUI_ENTRY ruRUChangeSystemPartition[] =
     {
         4,
         3,
-        " Windivs 2k8 Setup ",
+        " Windivs 2k8 Service Pack 1 Setup ",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
