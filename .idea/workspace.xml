@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="Version update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/include/reactos/version.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/include/reactos/version.cmake" afterDir="false" />
-    </list>
+    <list default="true" id="71430ecb-839f-4367-bf78-0a8849998590" name="Changes" comment="Update version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2b6Gz4ik5SbkrgSxgQ6KWDhPySR" />
+  <component name="ProjectId" id="2bgyrpmj7PRNUQLc6JpGCs8BecK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,37 +33,96 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "windivs-astiv+",
-    "ignore.virus.scanning.warn.message": "true"
+    "git-widget-placeholder": "windivs6-dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="82fe62b7-f874-47a4-8685-ae5d532fceb8" name="Changes" comment="Version update" />
-      <created>1705528376904</created>
+      <changelist id="71430ecb-839f-4367-bf78-0a8849998590" name="Changes" comment="Hotplug fixes" />
+      <created>1706651220200</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1705528376904</updated>
+      <updated>1706651220200</updated>
     </task>
+    <task id="LOCAL-00001" summary="ROS Merge">
+      <option name="closed" value="true" />
+      <created>1707241077810</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707241077810</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Version update">
+      <option name="closed" value="true" />
+      <created>1708361567900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708361567900</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ROS Merge">
+      <option name="closed" value="true" />
+      <created>1708363788960</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708363788960</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update version">
+      <option name="closed" value="true" />
+      <created>1708763235104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708763235104</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add gitignore">
+      <option name="closed" value="true" />
+      <created>1709154042061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709154042061</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add gitignore">
+      <option name="closed" value="true" />
+      <created>1709154067013</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709154067013</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update version">
+      <option name="closed" value="true" />
+      <created>1709154249669</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709154249669</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update version">
+      <option name="closed" value="true" />
+      <created>1709160533461</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709160533461</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update gitignore">
+      <option name="closed" value="true" />
+      <created>1709160584071</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709160584071</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -72,7 +133,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="windivs6-dev" />
                       </list>
                     </value>
                   </entry>
@@ -85,7 +146,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Version update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version update" />
+    <MESSAGE value="ROS Merge" />
+    <MESSAGE value="add gitignore" />
+    <MESSAGE value="Update version" />
+    <MESSAGE value="Update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore" />
   </component>
 </project>
