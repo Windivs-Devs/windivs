@@ -14,3 +14,7 @@ modules/[Aa][Hh][Kk]_[Tt]ests
 .vscode
 sdk/tools/winesync/winesync.cfg
 /.vs
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
