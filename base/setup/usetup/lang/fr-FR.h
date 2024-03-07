@@ -8,7 +8,7 @@ static MUI_ENTRY frFRChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7880 Setup",
+            "Windivs7 build 7899 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -22,7 +22,7 @@ static MUI_ENTRY frFRChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7+ RTM, build 7880.1",
+            "Windivs7+ RTM, build 7899.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -1648,7 +1648,7 @@ static MUI_ENTRY frFRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7880 Setup",
+        "Windivs7 build 7899 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
