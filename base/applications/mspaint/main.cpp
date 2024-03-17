@@ -312,6 +312,283 @@ HWND CMainWindow::DoCreate()
 INT WINAPI
 wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, INT nCmdShow)
 {
+#ifdef _DEBUG
+    // Report any memory leaks on exit
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+#endif
+            SystemParametersInfoW(SPI_GETWHEELSCROLLCHARS, 0, &nCount, 0);
+            for (UINT i = 0; i < nCount; ++i)
+            {
+                if (zDelta < 0)
+                    ::PostMessageW(canvasWindow, WM_HSCROLL, MAKEWPARAM(SB_LINEDOWN, 0), 0);
+                else if (zDelta > 0)
+                    ::PostMessageW(canvasWindow, WM_HSCROLL, MAKEWPARAM(SB_LINEUP, 0), 0);
+            }
+        }
+        else
+        {
+            SystemParametersInfoW(SPI_GETWHEELSCROLLLINES, 0, &nCount, 0);
+            for (UINT i = 0; i < nCount; ++i)
+            {
+                if (zDelta < 0)
+                    ::PostMessageW(canvasWindow, WM_VSCROLL, MAKEWPARAM(SB_LINEDOWN, 0), 0);
+                else if (zDelta > 0)
+                    ::PostMessageW(canvasWindow, WM_VSCROLL, MAKEWPARAM(SB_LINEUP, 0), 0);
+            }
+        }
+    }
+
+    return 0;
+}
+
+LRESULT CMainWindow::OnDropFiles(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    WCHAR droppedfile[MAX_PATH];
+
+    HDROP hDrop = (HDROP)wParam;
+    DragQueryFile(hDrop, 0, droppedfile, _countof(droppedfile));
+    DragFinish(hDrop);
+
+    ConfirmSave() && DoLoadImageFile(m_hWnd, droppedfile, TRUE);
+
+    return 0;
+}
+
+LRESULT CMainWindow::OnCreate(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    // Loading and setting the window menu from resource
+    m_hMenu = ::LoadMenuW(g_hinstExe, MAKEINTRESOURCEW(ID_MENU));
+    SetMenu(m_hMenu);
+
+    // Create the status bar
+    DWORD style = SBARS_SIZEGRIP | WS_CHILD | (registrySettings.ShowStatusBar ? WS_VISIBLE : 0);
+    g_hStatusBar = ::CreateWindowExW(0, STATUSCLASSNAME, NULL, style, 0, 0, 0, 0, m_hWnd,
+                                     NULL, g_hinstExe, NULL);
+    ::SendMessageW(g_hStatusBar, SB_SETMINHEIGHT, 21, 0);
+
+    // Create the tool box
+    toolBoxContainer.DoCreate(m_hWnd);
+
+    // Create the palette window
+    RECT rcEmpty = { 0, 0, 0, 0 }; // Rely on WM_SIZE
+    style = WS_CHILD | (registrySettings.ShowPalette ? WS_VISIBLE : 0);
+    paletteWindow.Create(m_hWnd, rcEmpty, NULL, style, WS_EX_STATICEDGE);
+
+    // Create the canvas
+    style = WS_CHILD | WS_GROUP | WS_HSCROLL | WS_VSCROLL | WS_VISIBLE;
+    canvasWindow.Create(m_hWnd, rcEmpty, NULL, style, WS_EX_CLIENTEDGE);
+
+    // Create and show the miniature if necessary
+    if (registrySettings.ShowThumbnail)
+    {
+        miniature.DoCreate(m_hWnd);
+        miniature.ShowWindow(SW_SHOWNOACTIVATE);
+    }
+
+    // Set icon
+    SendMessage(WM_SETICON, ICON_BIG, (LPARAM)::LoadIconW(g_hinstExe, MAKEINTRESOURCEW(IDI_APPICON)));
+    SendMessage(WM_SETICON, ICON_SMALL, (LPARAM)::LoadIconW(g_hinstExe, MAKEINTRESOURCEW(IDI_APPICON)));
+
+    return 0;
+}
+
+LRESULT CMainWindow::OnDestroy(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    registrySettings.WindowPlacement.length = sizeof(WINDOWPLACEMENT);
+    GetWindowPlacement(&(registrySettings.WindowPlacement));
+
+    DoHtmlHelpW(NULL, NULL, HH_CLOSE_ALL, 0);
+
+    if (s_hHHCTRL_OCX)
+    {
+        FreeLibrary(s_hHHCTRL_OCX);
+        s_hHHCTRL_OCX = NULL;
+        s_pHtmlHelpW = NULL;
+    }
+
+    SetMenu(NULL);
+    if (m_hMenu)
+    {
+        ::DestroyMenu(m_hMenu);
+        m_hMenu = NULL;
+    }
+
+    PostQuitMessage(0); /* send a WM_QUIT to the message queue */
+    return 0;
+}
+
+BOOL CMainWindow::ConfirmSave()
+{
+    canvasWindow.OnEndDraw(FALSE);
+
+    if (imageModel.IsImageSaved())
+        return TRUE;
+
+    CStringW strProgramName;
+    strProgramName.LoadString(IDS_PROGRAMNAME);
+
+    CStringW strSavePromptText;
+    strSavePromptText.Format(IDS_SAVEPROMPTTEXT, PathFindFileName(g_szFileName));
+
+    switch (MessageBox(strSavePromptText, strProgramName, MB_YESNOCANCEL | MB_ICONQUESTION))
+    {
+        case IDYES:
+            saveImage(TRUE);
+            return imageModel.IsImageSaved();
+        case IDNO:
+            return TRUE;
+        case IDCANCEL:
+            return FALSE;
+    }
+
+    return TRUE;
+}
+
+LRESULT CMainWindow::OnClose(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    if (ConfirmSave())
+    {
+        DestroyWindow();
+    }
+    return 0;
+}
+
+void CMainWindow::ProcessFileMenu(HMENU hPopupMenu)
+{
+    for (INT iItem = 0; iItem < MAX_RECENT_FILES; ++iItem)
+        RemoveMenu(hPopupMenu, IDM_FILE1 + iItem, MF_BYCOMMAND);
+
+    if (registrySettings.strFiles[0].IsEmpty())
+        return;
+
+    RemoveMenu(hPopupMenu, IDM_FILEMOSTRECENTLYUSEDFILE, MF_BYCOMMAND);
+
+    INT cMenuItems = GetMenuItemCount(hPopupMenu);
+
+    for (INT iItem = 0; iItem < MAX_RECENT_FILES; ++iItem)
+    {
+        CStringW& strFile = registrySettings.strFiles[iItem];
+        if (strFile.IsEmpty())
+            break;
+
+        // Condense the lengthy pathname by using '...'
+#define MAX_RECENT_PATHNAME_DISPLAY 30
+        CPath pathFile(strFile);
+        pathFile.CompactPathEx(MAX_RECENT_PATHNAME_DISPLAY);
+        assert(wcslen((LPCWSTR)pathFile) <= MAX_RECENT_PATHNAME_DISPLAY);
+
+        // Add an accelerator (by '&') to the item number for quick access
+        WCHAR szText[4 + MAX_RECENT_PATHNAME_DISPLAY + 1];
+        StringCchPrintfW(szText, _countof(szText), L"&%u %s", iItem + 1, (LPCWSTR)pathFile);
+
+        INT iMenuItem = (cMenuItems - 2) + iItem;
+        InsertMenu(hPopupMenu, iMenuItem, MF_BYPOSITION | MF_STRING, IDM_FILE1 + iItem, szText);
+    }
+}
+
+BOOL CMainWindow::CanUndo() const
+{
+    if (toolsModel.GetActiveTool() == TOOL_TEXT && ::IsWindowVisible(textEditWindow))
+        return (BOOL)textEditWindow.SendMessage(EM_CANUNDO);
+    if (selectionModel.m_bShow && toolsModel.IsSelection())
+        return TRUE;
+    return imageModel.CanUndo();
+}
+
+BOOL CMainWindow::CanRedo() const
+{
+    if (toolsModel.GetActiveTool() == TOOL_TEXT && ::IsWindowVisible(textEditWindow))
+        return FALSE; // There is no "WM_REDO" in EDIT control
+    return imageModel.CanRedo();
+}
+
+BOOL CMainWindow::CanPaste() const
+{
+    if (toolsModel.GetActiveTool() == TOOL_TEXT && ::IsWindowVisible(textEditWindow))
+        return ::IsClipboardFormatAvailable(CF_UNICODETEXT);
+
+    return (::IsClipboardFormatAvailable(CF_ENHMETAFILE) ||
+            ::IsClipboardFormatAvailable(CF_DIB) ||
+            ::IsClipboardFormatAvailable(CF_BITMAP));
+}
+
+LRESULT CMainWindow::OnInitMenuPopup(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    HMENU menu = (HMENU)wParam;
+    BOOL trueSelection = (selectionModel.m_bShow && toolsModel.IsSelection());
+    BOOL textShown = (toolsModel.GetActiveTool() == TOOL_TEXT && ::IsWindowVisible(textEditWindow));
+    DWORD dwStart = 0, dwEnd = 0;
+    if (textShown)
+        textEditWindow.SendMessage(EM_GETSEL, (WPARAM)&dwStart, (LPARAM)&dwEnd);
+    BOOL hasTextSel = (dwStart < dwEnd);
+
+    //
+    // File menu
+    //
+    if (::GetSubMenu(GetMenu(), 0) == menu)
+    {
+        ProcessFileMenu(menu);
+    }
+
+    //
+    // Edit menu
+    //
+    EnableMenuItem(menu, IDM_EDITUNDO, ENABLED_IF(CanUndo()));
+    EnableMenuItem(menu, IDM_EDITREDO, ENABLED_IF(CanRedo()));
+    EnableMenuItem(menu, IDM_EDITCUT, ENABLED_IF(textShown ? hasTextSel : trueSelection));
+    EnableMenuItem(menu, IDM_EDITCOPY, ENABLED_IF(textShown ? hasTextSel : trueSelection));
+    EnableMenuItem(menu, IDM_EDITDELETESELECTION,
+                   ENABLED_IF(textShown ? hasTextSel : trueSelection));
+    EnableMenuItem(menu, IDM_EDITINVERTSELECTION, ENABLED_IF(trueSelection));
+    EnableMenuItem(menu, IDM_EDITCOPYTO, ENABLED_IF(trueSelection));
+    EnableMenuItem(menu, IDM_EDITPASTE, ENABLED_IF(CanPaste()));
+    EnableMenuItem(menu, IDM_CROPSELECTION, ENABLED_IF(trueSelection));
+
+    //
+    // View menu
+    //
+    CheckMenuItem(menu, IDM_VIEWTOOLBOX, CHECKED_IF(::IsWindowVisible(toolBoxContainer)));
+    CheckMenuItem(menu, IDM_VIEWCOLORPALETTE, CHECKED_IF(::IsWindowVisible(paletteWindow)));
+    CheckMenuItem(menu, IDM_VIEWSTATUSBAR,    CHECKED_IF(::IsWindowVisible(g_hStatusBar)));
+    CheckMenuItem(menu, IDM_FORMATICONBAR, CHECKED_IF(::IsWindowVisible(fontsDialog)));
+    EnableMenuItem(menu, IDM_FORMATICONBAR, ENABLED_IF(toolsModel.GetActiveTool() == TOOL_TEXT));
+    CheckMenuItem(menu, IDM_VIEWZOOM125, CHECKED_IF(toolsModel.GetZoom() == 125));
+    CheckMenuItem(menu, IDM_VIEWZOOM25,  CHECKED_IF(toolsModel.GetZoom() == 250));
+    CheckMenuItem(menu, IDM_VIEWZOOM50,  CHECKED_IF(toolsModel.GetZoom() == 500));
+    CheckMenuItem(menu, IDM_VIEWZOOM100, CHECKED_IF(toolsModel.GetZoom() == 1000));
+    CheckMenuItem(menu, IDM_VIEWZOOM200, CHECKED_IF(toolsModel.GetZoom() == 2000));
+    CheckMenuItem(menu, IDM_VIEWZOOM400, CHECKED_IF(toolsModel.GetZoom() == 4000));
+    CheckMenuItem(menu, IDM_VIEWZOOM800, CHECKED_IF(toolsModel.GetZoom() == 8000));
+    CheckMenuItem(menu, IDM_VIEWSHOWGRID,      CHECKED_IF(g_showGrid));
+    CheckMenuItem(menu, IDM_VIEWSHOWMINIATURE, CHECKED_IF(registrySettings.ShowThumbnail));
+
+    //
+    // Image menu
+    //
+    EnableMenuItem(menu, IDM_IMAGECROP, ENABLED_IF(selectionModel.m_bShow));
+    EnableMenuItem(menu, IDM_IMAGEDELETEIMAGE, ENABLED_IF(!selectionModel.m_bShow));
+    CheckMenuItem(menu, IDM_IMAGEDRAWOPAQUE, CHECKED_IF(!toolsModel.IsBackgroundTransparent()));
+
+    //
+    // Palette menu
+    //
+    CheckMenuItem(menu, IDM_COLORSMODERNPALETTE, CHECKED_IF(paletteModel.SelectedPalette() == PAL_MODERN));
+    CheckMenuItem(menu, IDM_COLORSOLDPALETTE,    CHECKED_IF(paletteModel.SelectedPalette() == PAL_OLDTYPE));
+    return 0;
+}
+
+LRESULT CMainWindow::OnSize(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    int test[] = { LOWORD(lParam) - 260, LOWORD(lParam) - 140, LOWORD(lParam) - 20 };
+    if (::IsWindow(g_hStatusBar))
+    {
+        ::SendMessageW(g_hStatusBar, WM_SIZE, 0, 0);
+        ::SendMessageW(g_hStatusBar, SB_SETPARTS, 3, (LPARAM)&test);
+    }
+    alignChildrenToMainWindow();
+    return 0;
+}
+
     g_hinstExe = hInstance;
 
     // Initialize common controls library
