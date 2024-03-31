@@ -17,14 +17,6 @@ WINE_DEFAULT_DEBUG_CHANNEL(shell);
 /*
  * Unimplemented
  */
-EXTERN_C BOOL
-WINAPI
-PathIsEqualOrSubFolder(LPWSTR lpFolder, LPWSTR lpSubFolder)
-{
-    FIXME("PathIsEqualOrSubFolder() stub\n");
-    return FALSE;
-}
-
 EXTERN_C HRESULT
 WINAPI
 SHGetUnreadMailCountW(HKEY hKeyUser,
@@ -498,106 +490,6 @@ SHCreateProcessAsUserW(PSHCREATEPROCESSINFOW pscpi)
 {
     FIXME("SHCreateProcessAsUserW() stub\n");
     return FALSE;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C HINSTANCE
-WINAPI
-RealShellExecuteExA(HWND hwnd,
-                    LPCSTR lpOperation,
-                    LPCSTR lpFile,
-                    LPCSTR lpParameters,
-                    LPCSTR lpDirectory,
-                    LPSTR lpReturn,
-                    LPCSTR lpTitle,
-                    LPSTR lpReserved,
-                    WORD nShowCmd,
-                    HANDLE *lpProcess,
-                    DWORD dwFlags)
-{
-    FIXME("RealShellExecuteExA() stub\n");
-    return NULL;
-}
-
-/*
- * Unimplemented
- */
-EXTERN_C HINSTANCE
-WINAPI
-RealShellExecuteExW(HWND hwnd,
-                    LPCWSTR lpOperation,
-                    LPCWSTR lpFile,
-                    LPCWSTR lpParameters,
-                    LPCWSTR lpDirectory,
-                    LPWSTR lpReturn,
-                    LPCWSTR lpTitle,
-                    LPWSTR lpReserved,
-                    WORD nShowCmd,
-                    HANDLE *lpProcess,
-                    DWORD dwFlags)
-{
-    FIXME("RealShellExecuteExW() stub\n");
-    return NULL;
-}
-
-/*
- * Implemented
- */
-EXTERN_C HINSTANCE
-WINAPI
-RealShellExecuteA(HWND hwnd,
-                  LPCSTR lpOperation,
-                  LPCSTR lpFile,
-                  LPCSTR lpParameters,
-                  LPCSTR lpDirectory,
-                  LPSTR lpReturn,
-                  LPCSTR lpTitle,
-                  LPSTR lpReserved,
-                  WORD nShowCmd,
-                  HANDLE *lpProcess)
-{
-    return RealShellExecuteExA(hwnd,
-                               lpOperation,
-                               lpFile,
-                               lpParameters,
-                               lpDirectory,
-                               lpReturn,
-                               lpTitle,
-                               lpReserved,
-                               nShowCmd,
-                               lpProcess,
-                               0);
-}
-
-/*
- * Implemented
- */
-EXTERN_C HINSTANCE
-WINAPI
-RealShellExecuteW(HWND hwnd,
-                  LPCWSTR lpOperation,
-                  LPCWSTR lpFile,
-                  LPCWSTR lpParameters,
-                  LPCWSTR lpDirectory,
-                  LPWSTR lpReturn,
-                  LPCWSTR lpTitle,
-                  LPWSTR lpReserved,
-                  WORD nShowCmd,
-                  HANDLE *lpProcess)
-{
-    return RealShellExecuteExW(hwnd,
-                               lpOperation,
-                               lpFile,
-                               lpParameters,
-                               lpDirectory,
-                               lpReturn,
-                               lpTitle,
-                               lpReserved,
-                               nShowCmd,
-                               lpProcess,
-                               0);
 }
 
 /*

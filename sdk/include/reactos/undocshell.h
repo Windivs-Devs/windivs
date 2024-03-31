@@ -23,7 +23,6 @@
 extern "C" {
 #endif /* defined(__cplusplus) */
 
-
 #if (NTDDI_VERSION < NTDDI_LONGHORN)
 #define DBIMF_NOGRIPPER         0x0800
 #define DBIMF_ALWAYSGRIPPER     0x1000
@@ -49,13 +48,11 @@ typedef struct _TRAYNOTIFYDATAW
 
 #endif /* defined (_SHELLAPI_H) || defined (_INC_SHELLAPI) */
 
-
 /****************************************************************************
  * Taskbar WM_COMMAND identifiers
  */
 #define TWM_DOEXITWINDOWS (WM_USER + 342)
 #define TWM_CYCLEFOCUS (WM_USER + 348)
-
 
 /****************************************************************************
  *  IDList Functions
@@ -95,7 +92,6 @@ HRESULT WINAPI SHILCreateFromPathW (
 */
 BOOL WINAPI StrRetToStrNA(LPSTR,DWORD,LPSTRRET,const ITEMIDLIST*);
 BOOL WINAPI StrRetToStrNW(LPWSTR,DWORD,LPSTRRET,const ITEMIDLIST*);
-
 
 /****************************************************************************
  * SHChangeNotifyRegister API
@@ -258,6 +254,7 @@ ExtractIconResInfoW(
 /****************************************************************************
  * File Menu Routines
  */
+
 /* FileMenu_Create nSelHeight constants */
 #define FM_DEFAULT_SELHEIGHT  -1
 #define FM_FULL_SELHEIGHT     0
@@ -498,6 +495,11 @@ BOOL WINAPI PathIsSameRootAW(LPCVOID lpszPath1, LPCVOID lpszPath2);
 
 BOOL WINAPI PathFindOnPathAW(LPVOID sFile, LPCVOID *sOtherDirs);
 
+BOOL WINAPI PathIsEqualOrSubFolder(_In_ LPCWSTR pszFile1OrCSIDL, _In_ LPCWSTR pszFile2);
+
+BOOL WINAPI PathIsTemporaryA(_In_ LPCSTR Str);
+BOOL WINAPI PathIsTemporaryW(_In_ LPCWSTR Str);
+
 /****************************************************************************
  * Shell File Operations error codes - SHFileOperationA/W
  */
@@ -611,6 +613,60 @@ HRESULT WINAPI ShellExecCmdLine(
     int nShow,
     LPVOID pUnused,
     DWORD dwSeclFlags);
+
+HINSTANCE WINAPI
+RealShellExecuteA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPSTR lpReturn,
+    _In_opt_ LPCSTR lpTitle,
+    _In_opt_ LPVOID lpReserved,
+    _In_ INT nCmdShow,
+    _Out_opt_ PHANDLE lphProcess);
+
+HINSTANCE WINAPI
+RealShellExecuteW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPWSTR lpReturn,
+    _In_opt_ LPCWSTR lpTitle,
+    _In_opt_ LPVOID lpReserved,
+    _In_ INT nCmdShow,
+    _Out_opt_ PHANDLE lphProcess);
+
+HINSTANCE WINAPI
+RealShellExecuteExA(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCSTR lpOperation,
+    _In_opt_ LPCSTR lpFile,
+    _In_opt_ LPCSTR lpParameters,
+    _In_opt_ LPCSTR lpDirectory,
+    _In_opt_ LPSTR lpReturn,
+    _In_opt_ LPCSTR lpTitle,
+    _In_opt_ LPVOID lpReserved,
+    _In_ INT nCmdShow,
+    _Out_opt_ PHANDLE lphProcess,
+    _In_ DWORD dwFlags);
+
+HINSTANCE WINAPI
+RealShellExecuteExW(
+    _In_opt_ HWND hwnd,
+    _In_opt_ LPCWSTR lpOperation,
+    _In_opt_ LPCWSTR lpFile,
+    _In_opt_ LPCWSTR lpParameters,
+    _In_opt_ LPCWSTR lpDirectory,
+    _In_opt_ LPWSTR lpReturn,
+    _In_opt_ LPCWSTR lpTitle,
+    _In_opt_ LPVOID lpReserved,
+    _In_ INT nCmdShow,
+    _Out_opt_ PHANDLE lphProcess,
+    _In_ DWORD dwFlags);
 
 /* RegisterShellHook types */
 #define RSH_DEREGISTER        0
@@ -727,6 +783,8 @@ Activate_RunDLL(
     _In_ LPCWSTR cmdline,
     _In_ INT cmdshow);
 
+BOOL WINAPI SHSettingsChanged(LPCVOID unused, LPCWSTR pszKey);
+
 /*****************************************************************************
  * Shell32 resources
  */
@@ -795,7 +853,7 @@ DWORD WINAPI WinList_Init(void);
 
 IStream* WINAPI SHGetViewStream(LPCITEMIDLIST, DWORD, LPCTSTR, LPCTSTR, LPCTSTR);
 
-EXTERN_C HRESULT WINAPI SHCreateSessionKey(REGSAM samDesired, PHKEY phKey);
+HRESULT WINAPI SHCreateSessionKey(REGSAM samDesired, PHKEY phKey);
 
 LONG WINAPI SHRegQueryValueExA(
     HKEY hkey,
@@ -817,7 +875,6 @@ LONG WINAPI SHRegQueryValueExW(
     #define SHRegQueryValueEx SHRegQueryValueExA
 #endif
 
-EXTERN_C
 HRESULT WINAPI
 CopyStreamUI(
     _In_ IStream *pSrc,

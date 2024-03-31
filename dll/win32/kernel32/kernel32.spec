@@ -24,7 +24,7 @@
 @ stdcall BackupRead(ptr ptr long ptr long long ptr)
 @ stdcall BackupSeek(ptr long long ptr ptr ptr)
 @ stdcall BackupWrite(ptr ptr long ptr long long ptr)
-@ stdcall BaseCheckAppcompatCache(long long long ptr)
+@ stdcall BaseCheckAppcompatCache(wstr ptr wstr ptr)
 @ stdcall BaseCheckRunApp(long ptr long long long long long long long long)
 @ stdcall BaseCleanupAppcompatCacheSupport(ptr)
 @ stdcall BaseDumpAppcompatCache()
@@ -483,7 +483,10 @@
 @ stdcall -version=0x600+ GetFinalPathNameByHandleA(ptr str long long)
 @ stdcall -version=0x600+ GetFinalPathNameByHandleW(ptr wstr long long)
 @ stdcall GetFirmwareEnvironmentVariableA(str str ptr long)
+@ stdcall -version=0x602+ GetFirmwareEnvironmentVariableExA(str str ptr long long)
+@ stdcall -version=0x602+ GetFirmwareEnvironmentVariableExW(wstr wstr ptr long long)
 @ stdcall GetFirmwareEnvironmentVariableW(wstr wstr ptr long)
+@ stdcall -version=0x602+ GetFirmwareType(ptr)
 @ stdcall GetFullPathNameA(str long ptr ptr)
 @ stub -version=0x600+ GetFullPathNameTransactedA
 @ stub -version=0x600+ GetFullPathNameTransactedW
@@ -711,7 +714,7 @@
 @ stdcall -version=0x600+ InitOnceBeginInitialize(ptr long ptr ptr)
 @ stdcall -version=0x600+ InitOnceComplete(ptr long ptr)
 @ stdcall -version=0x600+ InitOnceExecuteOnce(ptr ptr ptr ptr)
-@ stdcall -version=0x600+ InitOnceInitialize(ptr) NTDLL.RtlRunOnceInitialize
+@ stdcall -version=0x600+ InitOnceInitialize(ptr) ntdll.RtlRunOnceInitialize
 @ stdcall -version=0x600+ InitializeConditionVariable(ptr) ntdll.RtlInitializeConditionVariable
 @ stdcall InitializeCriticalSection(ptr)
 @ stdcall InitializeCriticalSectionAndSpinCount(ptr long)
@@ -1037,6 +1040,8 @@
 @ stdcall SetFileTime(long ptr ptr ptr)
 @ stdcall SetFileValidData(long double)
 @ stdcall SetFirmwareEnvironmentVariableA(str str ptr long)
+@ stdcall -version=0x602+ SetFirmwareEnvironmentVariableExA(str str ptr long long)
+@ stdcall -version=0x602+ SetFirmwareEnvironmentVariableExW(str str ptr long long)
 @ stdcall SetFirmwareEnvironmentVariableW(wstr wstr ptr long)
 @ stdcall -i386 SetHandleContext(long long)
 @ stdcall SetHandleCount(long)

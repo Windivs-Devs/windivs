@@ -136,10 +136,13 @@ HRESULT GetCLSIDForFileType(PCUIDLIST_RELATIVE pidl, LPCWSTR KeyName, CLSID* pcl
 static HRESULT
 getDefaultIconLocation(LPWSTR szIconFile, UINT cchMax, int *piIndex, UINT uFlags)
 {
-    if (!HCR_GetIconW(L"Folder", szIconFile, NULL, cchMax, piIndex))
+    if (!HLM_GetIconW(IDI_SHELL_FOLDER - 1, szIconFile, cchMax, piIndex))
     {
-        lstrcpynW(szIconFile, swShell32Name, cchMax);
-        *piIndex = -IDI_SHELL_FOLDER;
+        if (!HCR_GetIconW(L"Folder", szIconFile, NULL, cchMax, piIndex))
+        {
+            StringCchCopyW(szIconFile, cchMax, swShell32Name);
+            *piIndex = -IDI_SHELL_FOLDER;
+        }
     }
 
     if (uFlags & GIL_OPENICON)
@@ -1204,7 +1207,7 @@ HRESULT WINAPI CFSFolder::GetUIObjectOf(HWND hwndOwner,
         {
             HKEY hKeys[16];
             UINT cKeys = 0;
-            AddFSClassKeysToArray(apidl[0], hKeys, &cKeys);
+            AddFSClassKeysToArray(cidl, apidl, hKeys, &cKeys);
 
             DEFCONTEXTMENU dcm;
             dcm.hwnd = hwndOwner;
