@@ -247,43 +247,10 @@ private:
                 if (FAILED_UNEXPECTEDLY(hr))
                     return hr;
 
-        hr = E_FAIL;
-        switch (psmd->uId)
-        {
-            case IDM_PROGRAMS:
-            {
-                hr = AddStartMenuItems(pShellMenu, CSIDL_PROGRAMS, SMSET_TOP, m_psfPrograms);
-                break;
-            }
-            case IDM_FAVORITES:
-            case IDM_MYDOCUMENTS:
-            case IDM_MYPICTURES:
-            case IDM_CONTROLPANEL:
-            case IDM_NETWORKCONNECTIONS:
-            case IDM_PRINTERSANDFAXES:
-            {
-                hr = AddStartMenuItems(pShellMenu, CSIDLFromID(psmd->uId), SMSET_TOP);
-                break;
-            }
-            case IDM_DOCUMENTS:
-            {
-                HMENU hMenu = CreateRecentMenu();
-                if (hMenu == NULL)
-                    ERR("CreateRecentMenu failed\n");
-
-                hr = pShellMenu->SetMenu(hMenu, NULL, SMSET_BOTTOM);
+                hr = psfDestop->BindToObject(pidlStartMenu, NULL, IID_PPV_ARG(IShellFolder, &psfStartMenu));
                 if (FAILED_UNEXPECTEDLY(hr))
                     return hr;
-
-                hr = AddStartMenuItems(pShellMenu, CSIDL_RECENT, SMSET_BOTTOM);
-                break;
             }
-            case IDM_SETTINGS:
-            {
-                MENUITEMINFOW mii = { sizeof(mii), MIIM_SUBMENU };
-                if (GetMenuItemInfoW(psmd->hmenu, psmd->uId, FALSE, &mii))
-                {
-                    UpdateSettingsMenu(mii.hSubMenu);
 
             hr = pShellMenu->SetShellFolder(psfStartMenu, NULL, NULL, dwFlags);
             if (FAILED_UNEXPECTEDLY(hr))
@@ -304,43 +271,17 @@ private:
         return pShellMenu->QueryInterface(iid, pv);
     }
 
-    INT CSIDLFromID(UINT uId) const
-    {
-        switch (uId)
-        {
-            case IDM_PROGRAMS: return CSIDL_PROGRAMS;
-            case IDM_FAVORITES: return CSIDL_FAVORITES;
-            case IDM_DOCUMENTS: return CSIDL_RECENT;
-            case IDM_MYDOCUMENTS: return CSIDL_MYDOCUMENTS;
-            case IDM_MYPICTURES: return CSIDL_MYPICTURES;
-            case IDM_CONTROLPANEL: return CSIDL_CONTROLS;
-            case IDM_NETWORKCONNECTIONS: return CSIDL_NETWORK;
-            case IDM_PRINTERSANDFAXES: return CSIDL_PRINTERS;
-            default: return 0;
-        }
-    }
-
     HRESULT OnGetContextMenu(LPSMDATA psmd, REFIID iid, void ** pv)
     {
-        INT csidl = CSIDLFromID(psmd->uId);
-        if (!csidl)
-            return S_FALSE;
+        if (psmd->uId == IDM_PROGRAMS ||
+            psmd->uId == IDM_CONTROLPANEL ||
+            psmd->uId == IDM_NETWORKCONNECTIONS ||
+            psmd->uId == IDM_PRINTERSANDFAXES)
+        {
+            //UNIMPLEMENTED
+        }
 
-        TRACE("csidl: 0x%X\n", csidl);
-
-        if (csidl == CSIDL_CONTROLS || csidl == CSIDL_NETWORK || csidl == CSIDL_PRINTERS)
-            FIXME("This CSIDL %d wrongly opens My Computer. CORE-19477\n", csidl);
-
-        CComHeapPtr<ITEMIDLIST> pidl;
-        SHGetSpecialFolderLocation(NULL, csidl, &pidl);
-
-        CComPtr<IShellFolder> pSF;
-        LPCITEMIDLIST pidlChild = NULL;
-        HRESULT hr = SHBindToParent(pidl, IID_IShellFolder, (void**)&pSF, &pidlChild);
-        if (FAILED(hr))
-            return hr;
-
-        return pSF->GetUIObjectOf(NULL, 1, &pidlChild, IID_IContextMenu, NULL, pv);
+        return S_FALSE;
     }
 
     HRESULT OnGetObject(LPSMDATA psmd, REFIID iid, void ** pv)
