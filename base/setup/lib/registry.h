@@ -1,6 +1,6 @@
 /*
- *  ReactOS kernel
- *  Copyright (C) 2003 ReactOS Team
+ *  Windivs kernel
+ *  Copyright (C) 2003 Windivs Team
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  */
 /*
  * COPYRIGHT:       See COPYING in the top level directory
- * PROJECT:         ReactOS Setup Library
+ * PROJECT:         Windivs Setup Library
  * FILE:            base/setup/lib/registry.h
  * PURPOSE:         Registry creation functions
  * PROGRAMMERS:     ...
