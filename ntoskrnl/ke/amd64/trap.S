@@ -416,7 +416,7 @@ FUNC KiPageFault
     /* Save page fault address */
     mov rdx, cr2
     mov [rbp  + KTRAP_FRAME_FaultAddress], rdx
-    
+
     /* If interrupts are off, do not enable them */
     test dword ptr [rbp + KTRAP_FRAME_EFlags], EFLAGS_IF_MASK
     jz IntsDisabled
@@ -817,6 +817,15 @@ PUBLIC KiSystemCallEntry64
     stmxcsr [rsp + MAX_SYSCALL_PARAM_SIZE + KTRAP_FRAME_MxCsr]
     ldmxcsr gs:[PcMxCsr]
 
+    /* Get the current thread and the trap frame */
+    mov rax, gs:[PcCurrentThread]
+    mov rcx, [rax + ThTrapFrame]
+
+    /* Save the old trap frame */
+    lea rdx, [rsp + MAX_SYSCALL_PARAM_SIZE]
+    mov [rsp + MAX_SYSCALL_PARAM_SIZE + KTRAP_FRAME_TrapFrame], rcx
+    mov [rax + ThTrapFrame], rdx
+
 #if DBG
     /* Check IRQL */
     mov rax, cr8
@@ -891,7 +900,6 @@ no_user_apc_pending:
     xor r10, r10
 
     /* return to user mode */
-    .byte HEX(48) // REX prefix to return to long mode
     sysretq
 
 .ENDP
@@ -1078,12 +1086,6 @@ AlreadyLargeStack:
     /* Disable interrupts for return */
     cli
 
-    // FIXME: should just do the trap frame switch in KiSystemCallHandler64
-    /* Restore old trap frame */
-    mov rcx, gs:[PcCurrentThread]
-    mov rdx, [rsp + 48 + MAX_SYSCALL_PARAM_SIZE + KTRAP_FRAME_TrapFrame]
-    mov [rcx + KTHREAD_TrapFrame], rdx
-
     // Restore register parameters
     mov rcx, [rsp + 48 + MAX_SYSCALL_PARAM_SIZE + KTRAP_FRAME_Rip]
     mov rdx, [rsp + 48 + MAX_SYSCALL_PARAM_SIZE + KTRAP_FRAME_Rdx]
@@ -1150,20 +1152,26 @@ PUBLIC KiInitiateUserApc
     mov rax, APC_LEVEL
     mov cr8, rax
 
+    /* Get the current thread */
+    mov rbp, gs:[PcCurrentThread]
+
+deliver_apcs:
+
     /* Enable interrupts */
     sti
-
-    /* Get the current trap frame */
-    mov rax, gs:[PcCurrentThread]
-    mov r8, [rax + KTHREAD_TrapFrame]
 
     /* Call the C function */
     mov ecx, 1
     mov rdx, rsp
+    mov r8, [rbp + ThTrapFrame]
     call KiDeliverApc
 
     /* Disable interrupts again */
     cli
+
+    /* Check if there are more APCs to deliver */
+    cmp byte ptr [rbp + ThApcState + AsUserApcPending], 0
+    jne deliver_apcs
 
     /* Go back to PASSIVE_LEVEL */
     mov rax, PASSIVE_LEVEL
