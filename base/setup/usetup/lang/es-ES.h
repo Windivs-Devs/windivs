@@ -1,7 +1,15 @@
 // This file is converted by code7bit.
 // code7bit: https://github.com/katahiromz/code7bit
 // To revert conversion, please execute "code7bit -r <file>".
-/* Translated by ??? and Ismael Ferreras Morezuelas (Swyter) revised in 2020 by Julen Urizar Compains*/
+/*
+ * PROJECT:     ReactOS Setup
+ * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
+ * PURPOSE:     Spanish resource file
+ * TRANSLATORS: Copyright 2007 Gabriel Ilardi <gabrielilardi@hotmail.it>
+ *              Copyright 2007 Marc Piulachs <marc.piulachs@live.com>
+ *              Copyright 2015 Ismael Ferreras Morezuelas <swyterzone+ros@gmail.com>
+ *              Copyright 2020-2024 Julen Urizar Compains <julenuri@hotmail.com>
+ */
 
 #pragma once
 
@@ -212,7 +220,7 @@ static MUI_ENTRY esESLanguagePageEntries[] =
     {
         8,
         11,
-        "   Luego, pulse INTRO.",
+        "   Despu\202s, pulse INTRO.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -352,21 +360,21 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         6,
         12,
-        "completo y est\240 bajo intenso desarrollo. Se recomienda usarlo solo",
+        "perfecto y est\240 bajo intenso desarrollo. Se recomienda usarlo",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         13,
-        "para hacer pruebas y testeos y no como un SO de uso diario.",
+        "solo para hacer pruebas y testeos y no como un sistema de uso diario.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         15,
-        "Haz copia de tus datos o prueba en un ordenador secundario",
+        "Realice una copia de tus datos importantes o pruebe en un ordenador",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -516,7 +524,7 @@ static MUI_ENTRY esESLicensePageEntries[] =
     {
         8,
         24,
-        "Este es un software libre; lea el c\242digo para las condiciones de copia.",
+        "\220ste es un software libre; lea el c\242digo para las condiciones de copia.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -984,7 +992,7 @@ static MUI_ENTRY esESDisplayPageEntries[] =
     {
         8,
         10,
-         "\x07  Pulse ARRIBA y ABAJO para modificar la resoluci\303\263n.",
+         "\x07  Pulse ARRIBA y ABAJO para modificar la resoluci\242n.",
          TEXT_STYLE_NORMAL,
          TEXT_ID_STATIC
     },
@@ -1095,7 +1103,7 @@ static MUI_ENTRY esESSelectPartitionEntries[] =
     {
         6,
         9,
-        "disponible en el disco para nuevas particiones.",
+        "disponible en los discos duros para nuevas particiones.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1475,14 +1483,14 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         6,
         14,
-        "Para cambiar el directorio sugerido, Pulse RETROCESO para eliminar",
+        "Para cambiar el directorio sugerido, pulse las flechas o presione",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         6,
         15,
-        "car\240cteres y escriba el directorio donde quiere instalar",
+        "RETROCESO para eliminar caracteres y escriba el directorio",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1565,35 +1573,35 @@ static MUI_ENTRY esESBootLoaderSelectPageEntries[] =
     {
         6,
         8,
-        "Please select where Setup should install the bootloader:",
+        "Seleccione por favor d\242nde se instalar\240 el sector de arranque:",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         12,
-        "Instalar el cargador de arranque en el disco duro (MBR y VBR).",
+        "Instalar el sector de arranque en el disco duro (MBR y VBR).",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         13,
-        "Instalar el cargador de arranque en el disco duro (s\242lo VBR).",
+        "Instalar el sector de arranque en el disco duro (s\242lo VBR).",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         14,
-        "Instalar el cargador de inicio en un disquete.",
+        "Instalar el sector de arranque en un disquete.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         8,
         15,
-        "Omitir la instalaci\242n del cargador de arranque.",
+        "Omitir la instalaci\242n del sector de arranque.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1624,14 +1632,14 @@ static MUI_ENTRY etESBootLoaderInstallPageEntries[] =
     {
         6,
         8,
-        "En este paso, el instalador crear\240 el cargador de arranque.",
+        "En este paso, el instalador crear\240 el sector de arranque.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
     {
         0,
         0,
-        "Instalando sector de arranque en el disco, espere por favor...",
+        "Instalando el sector de arranque en el disco, espere por favor...",
         TEXT_TYPE_STATUS | TEXT_PADDING_BIG,
         TEXT_ID_STATIC
     },
@@ -1655,7 +1663,7 @@ static MUI_ENTRY esESBootLoaderRemovableDiskPageEntries[] =
     {
         6,
         8,
-        "El instalador no pudo instalar el cargador de arranque en el disco",
+        "El instalador no pudo instalar el sector de arranque en el disco",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
