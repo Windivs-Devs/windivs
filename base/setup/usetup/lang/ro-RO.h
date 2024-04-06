@@ -17,7 +17,7 @@ static MUI_ENTRY roROChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7927 Setup",
+            "Windivs7 build 7950 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -31,7 +31,7 @@ static MUI_ENTRY roROChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7.5 RTM, build 7927.1",
+            "Windivs7.5 RTM, build 7950.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -1651,7 +1651,7 @@ static MUI_ENTRY roROBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7927 Setup",
+        "Windivs7 build 7950 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
