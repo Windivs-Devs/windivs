@@ -2,7 +2,7 @@
 // code7bit: https://github.com/katahiromz/code7bit
 // To revert conversion, please execute "code7bit -r <file>".
 /*
- * PROJECT:     ReactOS Setup
+ * PROJECT:     Windivs Setup
  * LICENSE:     GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
  * PURPOSE:     Spanish resource file
  * TRANSLATORS: Copyright 2007 Gabriel Ilardi <gabrielilardi@hotmail.it>
@@ -265,7 +265,7 @@ static MUI_ENTRY esESWelcomePageEntries[] =
     {
         6,
         11,
-        "Este es el primer paso de instalaci\242n, que copiar\240 Windivs en",
+        "\220ste es el primer paso de la instalaci\242n, que copiar\240 Windivs en",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -346,14 +346,14 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         6,
         8,
-        "Situaci\242n de la Versi\242n de Windivs",
+        "Aviso sobre la Versi\242n de Windivs",
         TEXT_STYLE_HIGHLIGHT,
         TEXT_ID_STATIC
     },
     {
         6,
         11,
-        "Windivs est\240 en fase Alpha, lo que significa que a\243n no est\240",
+        "Windivs est\240 en fase alfa, lo que significa que a\243n no es",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -381,7 +381,7 @@ static MUI_ENTRY esESIntroPageEntries[] =
     {
         6,
         16,
-        "en caso de que uses Windivs en hardware real.",
+        "secundario en caso de que vayas a usar Windivs en hardware real.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
@@ -1497,7 +1497,7 @@ static MUI_ENTRY esESInstallDirectoryEntries[] =
     {
         6,
         16,
-        "Windivs.",
+        "donde quiere instalar Windivs.",
         TEXT_STYLE_NORMAL,
         TEXT_ID_STATIC
     },
