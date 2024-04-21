@@ -108,6 +108,7 @@ class CDefaultContextMenu :
         UINT m_iIdCBLast;  /* last callback used id */
         UINT m_iIdDfltFirst; /* first default part id */
         UINT m_iIdDfltLast; /* last default part id */
+        HWND m_hwnd; /* window passed to callback */
 
         HRESULT _DoCallback(UINT uMsg, WPARAM wParam, LPVOID lParam);
         void AddStaticEntry(const HKEY hkeyClass, const WCHAR *szVerb, UINT uFlags);
@@ -189,7 +190,8 @@ CDefaultContextMenu::CDefaultContextMenu() :
     m_iIdCBFirst(0),
     m_iIdCBLast(0),
     m_iIdDfltFirst(0),
-    m_iIdDfltLast(0)
+    m_iIdDfltLast(0),
+    m_hwnd(NULL)
 {
 }
 
@@ -224,6 +226,7 @@ HRESULT WINAPI CDefaultContextMenu::Initialize(const DEFCONTEXTMENU *pdcm, LPFND
     m_psf = pdcm->psf;
     m_pmcb = pdcm->pcmcb;
     m_pfnmcb = lpfn;
+    m_hwnd = pdcm->hwnd;
 
     m_cKeys = pdcm->cKeys;
     if (pdcm->cKeys)
@@ -258,11 +261,11 @@ HRESULT CDefaultContextMenu::_DoCallback(UINT uMsg, WPARAM wParam, LPVOID lParam
 {
     if (m_pmcb)
     {
-        return m_pmcb->CallBack(m_psf, NULL, m_pDataObj, uMsg, wParam, (LPARAM)lParam);
+        return m_pmcb->CallBack(m_psf, m_hwnd, m_pDataObj, uMsg, wParam, (LPARAM)lParam);
     }
     else if(m_pfnmcb)
     {
-        return m_pfnmcb(m_psf, NULL, m_pDataObj, uMsg, wParam, (LPARAM)lParam);
+        return m_pfnmcb(m_psf, m_hwnd, m_pDataObj, uMsg, wParam, (LPARAM)lParam);
     }
 
     return E_FAIL;
@@ -501,7 +504,6 @@ CDefaultContextMenu::AddStaticContextMenusToMenu(
 
     mii.fMask = MIIM_ID | MIIM_TYPE | MIIM_STATE | MIIM_DATA;
     mii.fType = MFT_STRING;
-    mii.dwTypeData = NULL;
 
     POSITION it = m_StaticEntries.GetHeadPosition();
     bool first = true;
@@ -511,7 +513,6 @@ CDefaultContextMenu::AddStaticContextMenusToMenu(
         BOOL forceFirstPos = FALSE;
 
         fState = MFS_ENABLED;
-        mii.dwTypeData = NULL;
 
         /* set first entry as default */
         if (first)
