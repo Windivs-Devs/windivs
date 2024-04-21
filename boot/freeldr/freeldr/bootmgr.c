@@ -58,20 +58,47 @@ OSLoadingMethods[] =
 
 #if defined(_M_IX86) || defined(_M_AMD64)
 #ifndef UEFIBOOT
-    {"Drive"       , EditCustomBootDisk      , LoadAndBootDevice},
-    {"Partition"   , EditCustomBootPartition , LoadAndBootDevice},
-    {"BootSector"  , EditCustomBootSectorFile, LoadAndBootDevice},
-    {"Linux"       , EditCustomBootLinux, LoadAndBootLinux  },
+    {"BootSector", EditCustomBootSector, LoadAndBootSector},
+    {"Linux"     , EditCustomBootLinux , LoadAndBootLinux },
 #endif
 #endif
 #ifdef _M_IX86
-    {"WindowsNT40" , EditCustomBootNTOS , LoadAndBootWindows},
+    {"WindowsNT40" , EditCustomBootNTOS, LoadAndBootWindows},
 #endif
-    {"Windows"     , EditCustomBootNTOS , LoadAndBootWindows},
-    {"Windows2003" , EditCustomBootNTOS , LoadAndBootWindows},
+    {"Windows"     , EditCustomBootNTOS, LoadAndBootWindows},
+    {"Windows2003" , EditCustomBootNTOS, LoadAndBootWindows},
+    {"WindowsVista", EditCustomBootNTOS, LoadAndBootWindows},
 };
 
 /* FUNCTIONS ******************************************************************/
+
+#ifdef HAS_DEPRECATED_OPTIONS
+/**
+ * @brief   Helper for dealing with DEPRECATED features.
+ **/
+VOID
+WarnDeprecated(
+    _In_ PCSTR MsgFmt,
+    ...)
+{
+    va_list ap;
+    CHAR msgString[300];
+
+    va_start(ap, MsgFmt);
+    RtlStringCbVPrintfA(msgString, sizeof(msgString),
+                        MsgFmt, ap);
+    va_end(ap);
+
+    UiMessageBox(
+        "                           WARNING!\n"
+        "\n"
+        "%s\n"
+        "\n"
+        "Should you need assistance, please contact ReactOS developers\n"
+        "on the official ReactOS Mattermost server <chat.reactos.org>.",
+        msgString);
+}
+#endif // HAS_DEPRECATED_OPTIONS
 
 static const OS_LOADING_METHOD*
 GetOSLoadingMethod(
@@ -89,28 +116,61 @@ GetOSLoadingMethod(
     IniReadSettingByName(SectionId, "BootType", BootType, sizeof(BootType));
     ASSERT(*BootType);
 
+////
+#ifdef HAS_DEPRECATED_OPTIONS
+    if ((_stricmp(BootType, "Drive") == 0) ||
+        (_stricmp(BootType, "Partition") == 0))
+    {
+        /* Display the deprecation warning message */
+        WarnDeprecated(
+            "The '%s' configuration you are booting into is no longer\n"
+            "supported and will be removed in future FreeLoader versions.\n"
+            "\n"
+            "Please edit FREELDR.INI to replace all occurrences of\n"
+            "\n"
+            "             %*s        to:\n"
+            "    BootType=%s      ------>     BootType=BootSector",
+            BootType,
+            strlen(BootType), "", // Indentation
+            BootType);
+
+        /* Type fixup */
+        strcpy(BootType, "BootSector");
+        if (!IniModifySettingValue(SectionId, "BootType", BootType))
+        {
+            ERR("Could not fixup the BootType entry for OS '%s', ignoring.\n",
+                ((PINI_SECTION)SectionId)->SectionName);
+        }
+    }
+#endif // HAS_DEPRECATED_OPTIONS
+////
+
     /* Find the suitable OS loading method */
     for (i = 0; ; ++i)
     {
         if (i >= RTL_NUMBER_OF(OSLoadingMethods))
+        {
+            UiMessageBox("Unknown boot entry type '%s'", BootType);
             return NULL;
+        }
         if (_stricmp(BootType, OSLoadingMethods[i].BootType) == 0)
             return &OSLoadingMethods[i];
     }
     UNREACHABLE;
 }
 
-/*
- * This function converts the list of key=value options in the given operating
+/**
+ * @brief
+ * This function converts the list of Key=Value options in the given operating
  * system section into an ARC-compatible argument vector, providing in addition
  * the extra mandatory Software Loading Environment Variables, following the
  * ARC specification.
- */
+ **/
 static PCHAR*
 BuildArgvForOsLoader(
-    IN PCSTR LoadIdentifier,
-    IN ULONG_PTR SectionId,
-    OUT PULONG pArgc)
+    _In_ PCSTR LoadIdentifier,
+    _In_ ULONG_PTR SectionId,
+    _Out_ PULONG pArgc)
 {
     SIZE_T Size;
     ULONG Count;
@@ -124,7 +184,7 @@ BuildArgvForOsLoader(
 
     ASSERT(SectionId != 0);
 
-    /* Validate the LoadIdentifier (to make tests simpler later) */
+    /* Normalize LoadIdentifier to make subsequent tests simpler */
     if (LoadIdentifier && !*LoadIdentifier)
         LoadIdentifier = NULL;
 
@@ -134,19 +194,24 @@ BuildArgvForOsLoader(
     /*
      * The argument vector contains the program name, the SystemPartition,
      * the LoadIdentifier (optional), and the items in the OS section.
+     * For POSIX compliance, a terminating NULL pointer (not counted in Argc)
+     * is appended, such that Argv[Argc] == NULL.
      */
     Argc = 2 + (LoadIdentifier ? 1 : 0) + Count;
 
     /* Calculate the total size needed for the string buffer of the argument vector */
     Size = 0;
     /* i == 0: Program name */
+    // TODO: Provide one in the future...
     /* i == 1: SystemPartition : from where FreeLdr has been started */
     Size += (strlen("SystemPartition=") + strlen(FrLdrBootPath) + 1) * sizeof(CHAR);
-    /* i == 2: LoadIdentifier  : ASCII string that may be used to associate an identifier with a set of load parameters */
+    /* i == 2: LoadIdentifier  : ASCII string that may be used
+     * to associate an identifier with a set of load parameters */
     if (LoadIdentifier)
     {
         Size += (strlen("LoadIdentifier=") + strlen(LoadIdentifier) + 1) * sizeof(CHAR);
     }
+    /* The section items */
     for (i = 0; i < Count; ++i)
     {
         Size += IniGetSectionSettingNameSize(SectionId, i);  // Counts also the NULL-terminator, that we transform into the '=' sign separator.
@@ -155,15 +220,15 @@ BuildArgvForOsLoader(
     Size += sizeof(ANSI_NULL); // Final NULL-terminator.
 
     /* Allocate memory to hold the argument vector: pointers and string buffer */
-    Argv = FrLdrHeapAlloc(Argc * sizeof(PCHAR) + Size, TAG_STRING);
+    Argv = FrLdrHeapAlloc((Argc + 1) * sizeof(PCHAR) + Size, TAG_STRING);
     if (!Argv)
         return NULL;
 
-    /* Initialize the argument vector: loop through the section and copy the key=value options */
-    SettingName = (PCHAR)((ULONG_PTR)Argv + (Argc * sizeof(PCHAR)));
+    /* Initialize the argument vector: loop through the section and copy the Key=Value options */
+    SettingName = (PCHAR)((ULONG_PTR)Argv + ((Argc + 1) * sizeof(PCHAR)));
     Args = Argv;
     /* i == 0: Program name */
-    *Args++ = NULL;
+    *Args++ = NULL; // TODO: Provide one in the future...
     /* i == 1: SystemPartition */
     {
         strcpy(SettingName, "SystemPartition=");
@@ -181,6 +246,7 @@ BuildArgvForOsLoader(
         *Args++ = SettingName;
         SettingName += (strlen(SettingName) + 1);
     }
+    /* The section items */
     for (i = 0; i < Count; ++i)
     {
         Size = IniGetSectionSettingNameSize(SectionId, i);
@@ -193,6 +259,8 @@ BuildArgvForOsLoader(
         *Args++ = SettingName;
         SettingName += (strlen(SettingName) + 1);
     }
+    /* Terminating NULL pointer */
+    *Args = NULL;
 
 #if DBG
     /* Dump the argument vector for debugging */
