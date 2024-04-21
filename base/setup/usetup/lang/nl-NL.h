@@ -13,7 +13,7 @@ static MUI_ENTRY nlNLChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7950 Setup",
+            "Windivs7 build 7955 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -27,7 +27,7 @@ static MUI_ENTRY nlNLChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7.5 RTM, build 7950.1",
+            "Windivs7.5 RTM, build 7955.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -156,7 +156,7 @@ static MUI_ENTRY nlNLSetupInitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -194,7 +194,7 @@ static MUI_ENTRY nlNLLanguagePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -246,7 +246,7 @@ static MUI_ENTRY nlNLWelcomePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -340,7 +340,7 @@ static MUI_ENTRY nlNLIntroPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -420,7 +420,7 @@ static MUI_ENTRY nlNLLicensePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -563,7 +563,7 @@ static MUI_ENTRY nlNLDevicePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -663,7 +663,7 @@ static MUI_ENTRY nlNLRepairPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -743,7 +743,7 @@ static MUI_ENTRY nlNLUpgradePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -823,7 +823,7 @@ static MUI_ENTRY nlNLComputerPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -882,7 +882,7 @@ static MUI_ENTRY nlNLFlushPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -927,7 +927,7 @@ static MUI_ENTRY nlNLQuitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -979,7 +979,7 @@ static MUI_ENTRY nlNLDisplayPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1038,7 +1038,7 @@ static MUI_ENTRY nlNLSuccessPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1090,7 +1090,7 @@ static MUI_ENTRY nlNLSelectPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1164,7 +1164,7 @@ static MUI_ENTRY nlNLChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1286,7 +1286,7 @@ static MUI_ENTRY nlNLConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1394,7 +1394,7 @@ static MUI_ENTRY nlNLFormatPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1432,7 +1432,7 @@ static MUI_ENTRY nlNLCheckFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1463,7 +1463,7 @@ static MUI_ENTRY nlNLInstallDirectoryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1522,7 +1522,7 @@ static MUI_ENTRY nlNLFileCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1567,7 +1567,7 @@ static MUI_ENTRY nlNLBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1626,7 +1626,7 @@ static MUI_ENTRY nlNLBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1657,7 +1657,7 @@ static MUI_ENTRY nlNLBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1710,7 +1710,7 @@ static MUI_ENTRY nlNLkeyboardSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1769,7 +1769,7 @@ static MUI_ENTRY nlNLLayoutSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1829,7 +1829,7 @@ static MUI_ENTRY nlNLPrepareCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1861,7 +1861,7 @@ static MUI_ENTRY nlNLSelectFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1909,7 +1909,7 @@ static MUI_ENTRY nlNLDeletePartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1961,7 +1961,7 @@ static MUI_ENTRY nlNLRegistryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

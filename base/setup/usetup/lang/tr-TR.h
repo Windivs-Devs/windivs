@@ -10,7 +10,7 @@ static MUI_ENTRY trTRChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7950 Setup",
+            "Windivs7 build 7955 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -24,7 +24,7 @@ static MUI_ENTRY trTRChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7.5 RTM, build 7950.1",
+            "Windivs7.5 RTM, build 7955.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -1595,7 +1595,7 @@ static MUI_ENTRY trTRBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7950 Setup",
+        "Windivs7 build 7955 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
