@@ -1113,15 +1113,6 @@ LPITEMIDLIST WINAPI SHSimpleIDListFromPathA(LPCSTR lpszPath)
         wPath = HeapAlloc(GetProcessHeap(), 0, len * sizeof(WCHAR));
         MultiByteToWideChar(CP_ACP, 0, lpszPath, -1, wPath, len);
     }
-#ifdef __REACTOS__
-    // FIXME: Needs folder attribute
-    if (PathFileExistsW(wPath))
-    {
-        pidl = ILCreateFromPathW(wPath);
-        HeapFree(GetProcessHeap(), 0, wPath);
-        return pidl;
-    }
-#endif
 
     _ILParsePathW(wPath, NULL, TRUE, &pidl, NULL);
 
@@ -1135,13 +1126,9 @@ LPITEMIDLIST WINAPI SHSimpleIDListFromPathW(LPCWSTR lpszPath)
     LPITEMIDLIST pidl = NULL;
 
     TRACE("%s\n", debugstr_w(lpszPath));
-#ifdef __REACTOS__
-    // FIXME: Needs folder attribute
-    if (PathFileExistsW(lpszPath))
-        return ILCreateFromPathW(lpszPath);
-#endif
 
     _ILParsePathW(lpszPath, NULL, TRUE, &pidl, NULL);
+
     TRACE("%s %p\n", debugstr_w(lpszPath), pidl);
     return pidl;
 }
@@ -1693,6 +1680,13 @@ LPITEMIDLIST _ILCreateControlPanel(void)
 
 LPITEMIDLIST _ILCreatePrinters(void)
 {
+#ifdef __REACTOS__
+    // Note: Wine returns the PIDL as it was in Windows 95, NT5 moved it into CSIDL_CONTROLS
+    extern HRESULT SHGetFolderLocationHelper(HWND hwnd, int nFolder, REFCLSID clsid, LPITEMIDLIST *ppidl);
+    LPITEMIDLIST pidl;
+    SHGetFolderLocationHelper(NULL, CSIDL_CONTROLS, &CLSID_Printers, &pidl);
+    return pidl;
+#else
     LPITEMIDLIST parent = _ILCreateGuid(PT_GUID, &CLSID_MyComputer), ret = NULL;
 
     TRACE("()\n");
@@ -1708,6 +1702,7 @@ LPITEMIDLIST _ILCreatePrinters(void)
         SHFree(parent);
     }
     return ret;
+#endif
 }
 
 LPITEMIDLIST _ILCreateNetwork(void)
