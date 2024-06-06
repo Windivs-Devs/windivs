@@ -1801,7 +1801,8 @@
 @ cdecl _strlwr(str)
 @ cdecl _strnicmp(str str long)
 @ cdecl _strupr(str)
-@ stub -version=0x600+ _swprintf
+@ cdecl -version=0x400-0x502 -impsym _swprintf() swprintf # Compatibility for pre NT6
+@ cdecl -version=0x600+ _swprintf(ptr str)
 @ cdecl -version=0x502 _tolower(long)
 @ cdecl -version=0x502 _toupper(long)
 @ cdecl _ui64toa(double ptr long)

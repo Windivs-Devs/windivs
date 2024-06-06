@@ -603,9 +603,7 @@ CDefaultContextMenu::AddStaticContextMenusToMenu(
 
         if (hkVerb)
         {
-            // FIXME: GetAsyncKeyState should not be called here, clients
-            // need to be updated to set the CMF_EXTENDEDVERBS flag.
-            if (!(uFlags & CMF_EXTENDEDVERBS) && GetAsyncKeyState(VK_SHIFT) >= 0)
+            if (!(uFlags & CMF_EXTENDEDVERBS))
                 hide = RegValueExists(hkVerb, L"Extended");
 
             if (!hide)
@@ -702,9 +700,8 @@ void
 CDefaultContextMenu::TryPickDefault(HMENU hMenu, UINT idCmdFirst, UINT DfltOffset, UINT uFlags)
 {
     // Are we allowed to pick a default?
-    UINT ntver = RosGetProcessEffectiveVersion();
-    if (((uFlags & CMF_NODEFAULT) && ntver >= _WIN32_WINNT_VISTA) ||
-        ((uFlags & CMF_DONOTPICKDEFAULT) && ntver >= _WIN32_WINNT_WIN7))
+    if ((uFlags & CMF_NODEFAULT) ||
+        ((uFlags & CMF_DONOTPICKDEFAULT) && RosGetProcessEffectiveVersion() >= _WIN32_WINNT_WIN7))
     {
         return;
     }
@@ -715,7 +712,7 @@ CDefaultContextMenu::TryPickDefault(HMENU hMenu, UINT idCmdFirst, UINT DfltOffse
 
     // Does the view want to pick one?
     INT_PTR forceDfm = 0;
-    if (_DoCallback(DFM_GETDEFSTATICID, 0, &forceDfm) == S_OK && forceDfm)
+    if (SUCCEEDED(_DoCallback(DFM_GETDEFSTATICID, 0, &forceDfm)) && forceDfm)
     {
         for (UINT i = 0; i < _countof(g_StaticInvokeCmdMap); ++i)
         {
@@ -807,7 +804,7 @@ CDefaultContextMenu::QueryContextMenu(
             DeleteMenu(hmenuDefault, IDM_CREATELINK, MF_BYCOMMAND);
         if (!(rfg & SFGAO_CANDELETE))
             DeleteMenu(hmenuDefault, IDM_DELETE, MF_BYCOMMAND);
-        if (!(rfg & SFGAO_CANRENAME))
+        if (!(rfg & SFGAO_CANRENAME) || !(uFlags & CMF_CANRENAME))
             DeleteMenu(hmenuDefault, IDM_RENAME, MF_BYCOMMAND);
         if (!(rfg & SFGAO_HASPROPSHEET))
             DeleteMenu(hmenuDefault, IDM_PROPERTIES, MF_BYCOMMAND);
@@ -976,7 +973,7 @@ CDefaultContextMenu::DoProperties(
     // We are asked to run the default property sheet
     if (hr == S_FALSE)
     {
-        return Shell_DefaultContextMenuCallBack(m_psf, m_pDataObj);
+        return SHELL32_ShowPropertiesDialog(m_pDataObj);
     }
 
     return hr;

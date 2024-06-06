@@ -36,7 +36,7 @@ class CFSFolder :
 
         HRESULT _ParseSimple(
             _In_ LPOLESTR lpszDisplayName,
-            _Out_ WIN32_FIND_DATAW *pFind,
+            _Inout_ WIN32_FIND_DATAW *pFind,
             _Out_ LPITEMIDLIST *ppidl);
         BOOL _GetFindDataFromName(_In_ LPCWSTR pszName, _Out_ WIN32_FIND_DATAW *pFind);
         HRESULT _CreateIDListFromName(LPCWSTR pszName, DWORD attrs, IBindCtx *pbc, LPITEMIDLIST *ppidl);
@@ -125,6 +125,11 @@ class CFSFolder :
 
     protected:
         HRESULT WINAPI GetCustomViewInfo(ULONG unknown, SFVM_CUSTOMVIEWINFO_DATA *data);
+
+    public:
+        // Helper functions shared with CDesktopFolder
+        static HRESULT GetFSColumnDetails(UINT iColumn, SHELLDETAILS &sd);
+        static HRESULT GetDefaultFSColumnState(UINT iColumn, SHCOLSTATEF &csFlags);
 };
 
 #endif /* _CFSFOLDER_H_ */

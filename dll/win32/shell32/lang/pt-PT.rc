@@ -46,7 +46,7 @@ MENU_003 MENU
 BEGIN
     MENUITEM "&Retroceder\tCtrl+Z", FCIDM_SHVIEW_UNDO
     MENUITEM SEPARATOR
-    MENUITEM "Cor&tar\tCtrl+X", FCIDM_SHVIEW_CUT
+    MENUITEM "Cor&tar\tCtrl+X", FCIDM_SHVIEW_CUT //FIXME: accelerator collision &T
     MENUITEM "&Copiar\tCtrl+C", FCIDM_SHVIEW_COPY
     MENUITEM "Co&lar\tCtrl+V", FCIDM_SHVIEW_INSERT
     MENUITEM "Colar &atalho", FCIDM_SHVIEW_INSERTLINK
@@ -54,7 +54,7 @@ BEGIN
     MENUITEM "Copiar &pasta...", FCIDM_SHVIEW_COPYTO
     MENUITEM "Mo&ver para pasta...", FCIDM_SHVIEW_MOVETO
     MENUITEM SEPARATOR
-    MENUITEM "Seleccionar &tudo\tCtrl+A", FCIDM_SHVIEW_SELECTALL
+    MENUITEM "Seleccionar &tudo\tCtrl+A", FCIDM_SHVIEW_SELECTALL //FIXME: accelerator collision &T
     MENUITEM "&Inverter Selecção.", FCIDM_SHVIEW_INVERTSELECTION
 END
 
@@ -94,7 +94,7 @@ CAPTION "Procurar pasta"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "OK", 1, 60, 175, 60, 15, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Cancelar", 2, 125, 175, 60, 15, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Cancelar", 2, 125, 175, 60, 15, WS_TABSTOP
     LTEXT "", IDC_BROWSE_FOR_FOLDER_TITLE, 4, 4, 180, 24
     LTEXT "", IDC_BROWSE_FOR_FOLDER_STATUS, 4, 25, 180, 12
     CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP, 4, 40, 180, 120
@@ -110,8 +110,8 @@ BEGIN
     EDITTEXT IDC_BROWSE_FOR_FOLDER_FOLDER_TEXT, 12, 38, 194, 14, ES_AUTOHSCROLL | WS_GROUP
     CONTROL "", IDC_BROWSE_FOR_FOLDER_TREEVIEW, "SysTreeView32", TVS_SHOWSELALWAYS | TVS_EDITLABELS | TVS_LINESATROOT | TVS_HASLINES | TVS_HASBUTTONS | WS_BORDER | WS_TABSTOP, 12, 58, 194, 105
     PUSHBUTTON "&Criar nova pasta", IDC_BROWSE_FOR_FOLDER_NEW_FOLDER, 12, 174, 77, 14, WS_GROUP | WS_TABSTOP
-    DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Cancelar", IDCANCEL, 156, 174, 50, 14, WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON "OK", IDOK, 102, 174, 50, 14
+    PUSHBUTTON "Cancelar", IDCANCEL, 156, 174, 50, 14
 END
 
 IDD_YESTOALL_MSGBOX DIALOGEX 200, 100, 280, 90
@@ -120,9 +120,9 @@ CAPTION "Mensagem"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON "&Sim", IDYES, 34, 69, 53, 14, WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Sim para &todos", IDC_YESTOALL, 92, 69, 65, 14, WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "&Não", IDNO, 162, 69, 53, 14, WS_GROUP | WS_TABSTOP
-    PUSHBUTTON "Cancelar", IDCANCEL, 220, 69, 53, 14, WS_GROUP | WS_TABSTOP
+    PUSHBUTTON "Sim para &todos", IDC_YESTOALL, 92, 69, 65, 14, WS_TABSTOP
+    PUSHBUTTON "&Não", IDNO, 162, 69, 53, 14, WS_TABSTOP
+    PUSHBUTTON "Cancelar", IDCANCEL, 220, 69, 53, 14
     ICON "", IDC_YESTOALL_ICON, 10, 10, 16, 16
     LTEXT "", IDC_YESTOALL_MESSAGE, 40, 10, 238, 52, 0
 END
@@ -137,9 +137,9 @@ BEGIN
     LTEXT "", IDC_ABOUT_VERSION, 35, 65, 250, 10, SS_NOPREFIX
     LTEXT "Copyright 1996-", IDC_STATIC, 35, 75, 53, 10
     LTEXT COPYRIGHT_YEAR, IDC_STATIC, 88, 75, 17, 10
-    LTEXT " Windivs Team\0", IDC_STATIC, 105, 75, 53, 10
+    LTEXT " ReactOS Team\0", IDC_STATIC, 105, 75, 53, 10
     LTEXT "", IDC_ABOUT_OTHERSTUFF, 35, 90, 180, 20, SS_NOPREFIX
-    LTEXT "Esta versão do Windivs é registada a:", IDC_ABOUT_REG_TO, 35, 115, 180, 10
+    LTEXT "Esta versão do ReactOS é registada a:", IDC_ABOUT_REG_TO, 35, 115, 180, 10
     LTEXT "", IDC_ABOUT_REG_USERNAME, 45, 125, 180, 10, SS_NOPREFIX
     LTEXT "", IDC_ABOUT_REG_ORGNAME, 45, 135, 180, 10, SS_NOPREFIX
     LTEXT "", IDC_STATIC, 35, 147, 235, 1, SS_ETCHEDHORZ
@@ -153,7 +153,7 @@ IDD_ABOUT_AUTHORS DIALOGEX 35, 90, 235, 85
 STYLE DS_SHELLFONT | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "Windivs disponibilizado por:", IDC_STATIC, 0, 0, 180, 10
+    LTEXT "ReactOS disponibilizado por:", IDC_STATIC, 0, 0, 180, 10
     LISTBOX IDC_ABOUT_AUTHORS_LISTBOX, 0, 10, 165, 75
 END
 
@@ -163,7 +163,7 @@ CAPTION "Executar"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", IDC_RUNDLG_ICON, 7, 11, 18, 20, WS_VISIBLE
-    LTEXT "Digite o nome do programa, pasta, documento, ou endereço Internet, e o Windivs abrí-lo-á.", 12289, 36, 11, 185, 18
+    LTEXT "Digite o nome do programa, pasta, documento, ou endereço Internet, e o ReactOS abrí-lo-á.", 12289, 36, 11, 185, 18
     LTEXT "&Abrir:", 12305, 7, 39, 24, 10
     CONTROL "", IDC_RUNDLG_EDITPATH, "COMBOBOX", WS_TABSTOP | WS_GROUP | WS_VSCROLL | WS_VISIBLE | CBS_AUTOHSCROLL | CBS_DROPDOWN, 36, 37, 184, 100
     DEFPUSHBUTTON "OK", IDOK, 62, 70, 50, 14, WS_TABSTOP
@@ -244,7 +244,7 @@ END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 240, 205
 STYLE DS_SHELLFONT | WS_CHILD | WS_CAPTION
-CAPTION "geral"
+CAPTION "Geral"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     ICON "", 14000, 16, 7, 32, 32, WS_VISIBLE
@@ -405,59 +405,59 @@ BEGIN
     PUSHBUTTON "Cancelar", IDCANCEL, 206, 236, 50, 14
 END
 
-IDD_FOLDER_OPTIONS_GENERAL DIALOGEX 0, 0, 274, 220
+IDD_FOLDER_OPTIONS_GENERAL DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Geral"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    GROUPBOX "Tarefas", -1, 7, 10, 259, 40
+    GROUPBOX "Tarefas", -1, 7, 10, 249, 40
     CONTROL "", IDC_FOLDER_OPTIONS_TASKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 20, 21, 20
     AUTORADIOBUTTON "Mostrar tarefas comuns nas &pastas", IDC_FOLDER_OPTIONS_COMMONTASKS, 40, 20, 210, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "Utilizar pastas class&icas Windivs", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 32, 210, 10
-    GROUPBOX "Procurar pasta", -1, 7, 60, 259, 40, WS_TABSTOP
+    AUTORADIOBUTTON "Utilizar pastas class&icas ReactOS", IDC_FOLDER_OPTIONS_CLASSICFOLDERS, 40, 32, 210, 10
+    GROUPBOX "Procurar pasta", -1, 7, 60, 249, 40, WS_TABSTOP
     CONTROL "", IDC_FOLDER_OPTIONS_FOLDERICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 70, 21, 20
     AUTORADIOBUTTON "Abrir cada pasta na &mesma janela", IDC_FOLDER_OPTIONS_SAMEWINDOW, 40, 70, 210, 10, WS_TABSTOP | WS_GROUP
     AUTORADIOBUTTON "Abrir cada pasta na sua &janela", IDC_FOLDER_OPTIONS_OWNWINDOW, 40, 82, 210, 10
-    GROUPBOX "Seleccione a seguinte opção", -1, 7, 110, 259, 64
+    GROUPBOX "Seleccione a seguinte opção", -1, 7, 110, 249, 64
     CONTROL "", IDC_FOLDER_OPTIONS_CLICKICON, "Static", SS_ICON | WS_CHILD | WS_VISIBLE, 14, 120, 21, 20
-    AUTORADIOBUTTON "&Clique simples para abrir um item", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 210, 10, WS_TABSTOP | WS_GROUP
-    AUTORADIOBUTTON "&Duplo-clique para abrir um item (um clique para seleccionar)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 210, 10
-    AUTORADIOBUTTON "Sublinhar os títulos dos ícones mantendo o aspecto do &navegador", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 215, 10, WS_TABSTOP | WS_GROUP //FIXME: Shorten the string to avoid text truncation (recommended), or make it use 2 lines (less recommended). You can have a look at pt-BR.rc which has a string that fits here.
-    AUTORADIOBUTTON "Sublinhar os títulos dos ícones apenas quando &aponto para eles", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 215, 10 //FIXME: Shorten the string to avoid text truncation (recommended), or make it use 2 lines (less recommended). You can have a look at pt-BR.rc which has a string that fits here.
-    PUSHBUTTON "&Restaurar predefinições", IDC_FOLDER_OPTIONS_RESTORE, 177, 178, 90, 14, WS_TABSTOP
+    AUTORADIOBUTTON "&Click simples para abrir um item", IDC_FOLDER_OPTIONS_SINGLECLICK, 40, 120, 210, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "&Duplo-click para abrir um item (um click para seleccionar)", IDC_FOLDER_OPTIONS_DOUBLECLICK, 40, 156, 210, 10
+    AUTORADIOBUTTON "Sublinhar títulos de ícones consistentes com meu &navegador", IDC_FOLDER_OPTIONS_ULBROWSER, 50, 132, 205, 10, WS_TABSTOP | WS_GROUP
+    AUTORADIOBUTTON "Sublinhar títulos de ícones sómente quando &apontados", IDC_FOLDER_OPTIONS_ULPOINT, 50, 144, 200, 10
+    PUSHBUTTON "&Restaurar predefinições", IDC_FOLDER_OPTIONS_RESTORE, 167, 178, 90, 14, WS_TABSTOP
 END
 
-IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 274, 220
+IDD_FOLDER_OPTIONS_VIEW DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Ver"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    GROUPBOX "Vistas das Pastas", -1, 7, 10, 259, 60
+    GROUPBOX "Vistas das Pastas", -1, 7, 10, 249, 60
     ICON IDI_SHELL_PROGRAMS_FOLDER2, IDC_STATIC, 14, 20, 21, 20
     LTEXT "Pode aplicar a todas as pastas, a vista (tal como ""Detalhes"" ou ""Mosaico"") que está a utilizar nesta pasta.", -1, 40, 20, 213, 20
     PUSHBUTTON "Aplicar a t&odas as Pastas", IDC_VIEW_APPLY_TO_ALL, 15, 50, 115, 14, WS_TABSTOP
-    PUSHBUTTON "&Reiniciar todas as Pastas", IDC_VIEW_RESET_ALL, 135, 50, 125, 14, WS_TABSTOP
+    PUSHBUTTON "&Reiniciar todas as Pastas", IDC_VIEW_RESET_ALL, 135, 50, 115, 14, WS_TABSTOP
     LTEXT "Definições avançadas:", -1, 7, 80, 100, 10
-    CONTROL "", IDC_VIEW_TREEVIEW, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 259, 111
-    PUSHBUTTON "Restaurar &predefinições", IDC_VIEW_RESTORE_DEFAULTS, 177, 204, 90, 14, WS_TABSTOP
+    CONTROL "", IDC_VIEW_TREEVIEW, "SysTreeView32", WS_BORDER | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP | TVS_DISABLEDRAGDROP | TVS_LINESATROOT, 7, 90, 249, 111
+    PUSHBUTTON "Restaurar &predefinições", IDC_VIEW_RESTORE_DEFAULTS, 167, 204, 90, 14, WS_TABSTOP
 END
 
-IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 274, 220
+IDD_FOLDER_OPTIONS_FILETYPES DIALOGEX 0, 0, 264, 220
 STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION
 CAPTION "Tipos de Ficheiro"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     LTEXT "&Tipos de ficheiro registados:", -1, 7, 10, 180, 10
-    CONTROL "", IDC_FILETYPES_LISTVIEW, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 20, 259, 99
+    CONTROL "", IDC_FILETYPES_LISTVIEW, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 20, 249, 99
     PUSHBUTTON "&Novo...", IDC_FILETYPES_NEW, 140, 123, 55, 14, WS_TABSTOP
-    PUSHBUTTON "&Eliminar...", IDC_FILETYPES_DELETE, 200, 123, 65, 14, WS_TABSTOP
-    GROUPBOX "Detalhes para a extensão '%s'", IDC_FILETYPES_DETAILS_GROUPBOX, 7, 143, 259, 70
+    PUSHBUTTON "&Eliminar...", IDC_FILETYPES_DELETE, 200, 123, 55, 14, WS_TABSTOP
+    GROUPBOX "Detalhes para a extensão '%s'", IDC_FILETYPES_DETAILS_GROUPBOX, 7, 143, 249, 70
     LTEXT "Abre com:", -1, 12, 153, 40, 10
     CONTROL "", IDC_FILETYPES_ICON, "STATIC", SS_BITMAP | SS_REALSIZEIMAGE, 85, 153, 10, 10
     LTEXT "", IDC_FILETYPES_APPNAME, 100, 153, 80, 10
-    PUSHBUTTON "&Alterar...", IDC_FILETYPES_CHANGE, 200, 153, 60, 14, WS_TABSTOP
+    PUSHBUTTON "&Alterar...", IDC_FILETYPES_CHANGE, 200, 153, 50, 14, WS_TABSTOP
     LTEXT "", IDC_FILETYPES_DESCRIPTION, 12, 168, 160, 40
-    PUSHBUTTON "A&vançadas...", IDC_FILETYPES_ADVANCED, 200, 188, 60, 14, WS_TABSTOP
+    PUSHBUTTON "A&vançadas...", IDC_FILETYPES_ADVANCED, 200, 188, 50, 14, WS_TABSTOP
 END
 
 IDD_CONFIRM_FILE_REPLACE DIALOGEX 0, 0, 282, 143
@@ -483,7 +483,7 @@ END
 
 IDD_LOG_OFF DIALOGEX 0, 0, 212, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Terminar sessão Windivs"
+CAPTION "Terminar sessão ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_LOGOFF, IDC_STATIC, 8, 6, 21, 20
@@ -501,14 +501,14 @@ BEGIN
     PUSHBUTTON "&Mudar de utilizador", IDC_SWITCH_USER_BUTTON, 55, 46, 22, 20, BS_OWNERDRAW | WS_DISABLED | WS_GROUP
     PUSHBUTTON "&Terminar sessão", IDC_LOG_OFF_BUTTON, 132, 46, 22, 20, BS_OWNERDRAW
     PUSHBUTTON "Cancelar", IDCANCEL, 162, 103, 40, 12, WS_GROUP | BS_FLAT
-    LTEXT "Terminar sessão Windivs", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 150, 19
+    LTEXT "Terminar sessão ReactOS", IDC_LOG_OFF_TEXT_STATIC, 4, 7, 150, 19
     CTEXT "Mudar de utilizador", IDC_SWITCH_USER_STATIC, 41, 70, 51, 11
     CTEXT "Terminar sessão", IDC_LOG_OFF_STATIC, 116, 70, 55, 11
 END
 
 IDD_DISCONNECT DIALOGEX 0, 0, 188, 60
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Encerrar Windivs"
+CAPTION "Encerrar ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON IDI_SHELL_DISCONN, IDC_STATIC, 8, 6, 21, 20
@@ -538,7 +538,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
     LTEXT "Este disco ou dispositivo contém mais de um tipo de conteúdo.", 1001, 32, 7, 191, 20
-    LTEXT "O que pretende que o Windivs faça?", 1002, 32, 31, 188, 8
+    LTEXT "O que pretende que o ReactOS faça?", 1002, 32, 31, 188, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 188, 139
     DEFPUSHBUTTON "OK", IDOK, 96, 186, 60, 14
     PUSHBUTTON "Cancelar", IDCANCEL, 160, 186, 60, 14
@@ -550,10 +550,10 @@ CAPTION "Conteúdo misto"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "O Windivs pode executar a mesma acção de cada vez que inserir um disco ou um dispositivo com este tipo de ficheiro:", 1001, 30, 7, 193, 20
+    LTEXT "O ReactOS pode executar a mesma acção de cada vez que inserir um disco ou um dispositivo com este tipo de ficheiro:", 1001, 30, 7, 193, 20
     ICON "", 1005, 32, 27, 11, 10, SS_REALSIZECONTROL
     EDITTEXT 1006, 49, 28, 177, 14, ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
-    LTEXT "O que pretende que o Windivs faça?", 1002, 32, 41, 190, 8
+    LTEXT "O que pretende que o ReactOS faça?", 1002, 32, 41, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 55, 188, 112
     AUTOCHECKBOX "Executar sempre a acção seleccionada.", 1004, 32, 171, 190, 10
     DEFPUSHBUTTON "OK", IDOK, 96, 185, 60, 14
@@ -566,8 +566,8 @@ CAPTION "Autoplay"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON "", 1000, 5, 7, 21, 20
-    LTEXT "O Windivs pode executar sempre a mesma acção de cada vez que inserir um disco ou um dispositivo.", 1001, 32, 7, 190, 22
-    LTEXT "O que pretende que o Windivs faça?", 1002, 32, 31, 190, 8
+    LTEXT "O ReactOS pode executar sempre a mesma acção de cada vez que inserir um disco ou um dispositivo.", 1001, 32, 7, 190, 22
+    LTEXT "O que pretende que o ReactOS faça?", 1002, 32, 31, 190, 8
     CONTROL "", 1003, "SYSLISTVIEW32", WS_BORDER | WS_TABSTOP | 0x0000C04D, 32, 43, 187, 96
     AUTOCHECKBOX "&Executar sempre a acção seleccionada", 1004, 32, 143, 190, 8
     DEFPUSHBUTTON "OK", IDOK, 94, 160, 60, 14
@@ -576,11 +576,11 @@ END
 
 IDD_SHUTDOWN DIALOGEX 0, 0, 211, 103
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUPWINDOW | WS_CAPTION
-CAPTION "Encerrar Windivs"
+CAPTION "Encerrar ReactOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
     ICON 8240, -1, 6, 6, 21, 20, SS_REALSIZECONTROL | WS_GROUP
-    LTEXT "O que pretende que o Windivs faça?", -1, 39, 7, 167, 10
+    LTEXT "O que pretende que o ReactOS faça?", -1, 39, 7, 167, 10
     COMBOBOX 8224, 39, 20, 165, 200, CBS_DROPDOWNLIST | WS_VSCROLL
     LTEXT "Manter a sessão, deixando o computador a correr em baixa energia. O computador arranca quando tocar numa tecla ou mover o rato.", 8225, 39, 40, 167, 37
     DEFPUSHBUTTON "OK", 1, 7, 82, 60, 14, WS_GROUP
@@ -719,7 +719,7 @@ BEGIN
     GROUPBOX "Icones", IDC_STATIC, 5, 165, 230, 50, WS_TABSTOP
     LTEXT "Para todas as vistas, excepto miniaturas, pode alterar o ícone padrão 'pasta' para outro ícone.", IDC_STATIC, 15, 175, 210, 25
     ICON 0, IDC_FOLDERCUST_ICON, 175, 194, 32, 30
-    PUSHBUTTON "Alterar &icone.", IDC_FOLDERCUST_CHANGE_ICON, 15, 195, 75, 15
+    PUSHBUTTON "Alterar &icone...", IDC_FOLDERCUST_CHANGE_ICON, 15, 195, 75, 15
 END
 
 IDD_LINK_PROBLEM DIALOGEX 0, 0, 250, 140
@@ -835,9 +835,9 @@ BEGIN
 
     /* message box strings */
     IDS_RESTART_TITLE "Reiniciar"
-    IDS_RESTART_PROMPT "Deseja simular a reinicialização do Windivs?"
+    IDS_RESTART_PROMPT "Deseja simular a reinicialização do ReactOS?"
     IDS_SHUTDOWN_TITLE "Desligar"
-    IDS_SHUTDOWN_PROMPT "Deseja finalizar esta sessão do Windivs?"
+    IDS_SHUTDOWN_PROMPT "Deseja finalizar esta sessão do ReactOS?"
 
     /* Format Dialog Strings */
     IDS_FORMAT_TITLE "Formatar disco"
@@ -846,7 +846,7 @@ BEGIN
 
     /* Warning format system drive dialog strings */
     IDS_NO_FORMAT_TITLE "Impossivel formatar este volume"
-    IDS_NO_FORMAT "Este volume não pode ser formatado! Ele comtém ficheiros de sistem importantes para o funcionamento do Windivs."
+    IDS_NO_FORMAT "Este volume não pode ser formatado! Ele comtém ficheiros de sistem importantes para o funcionamento do ReactOS."
     /* Run File dialog */
     IDS_RUNDLG_ERROR "Não é possível abrir a caixa de diálogo ""Executar"" (erro interno)"
     IDS_RUNDLG_BROWSE_ERROR "Não é possível abrir a caixa de diálogo ""Procurar ficheiro"" (erro interno)"
@@ -926,8 +926,8 @@ BEGIN
 
     /* Friendly File Type Names */
     IDS_DIRECTORY "Pasta"
-    IDS_BAT_FILE "Ficheiro em lote do Windivs"
-    IDS_CMD_FILE "Script de Comando do Windivs"
+    IDS_BAT_FILE "Ficheiro em lote do ReactOS"
+    IDS_CMD_FILE "Script de Comando do ReactOS"
     IDS_COM_FILE "Aplicação DOS"
     IDS_CPL_FILE "Item do Painel de Controle"
     IDS_CUR_FILE "Cursor"
@@ -969,7 +969,7 @@ BEGIN
     IDS_DEFAULT_CLUSTER_SIZE "Tamanho da unidade de atribuição"
     IDS_COPY_OF "Cópia de"
 
-    IDS_SHLEXEC_NOASSOC "Não existe um programa Windivs configurado para abrir este tipo de ficheiro."
+    IDS_SHLEXEC_NOASSOC "Não existe um programa ReactOS configurado para abrir este tipo de ficheiro."
 
     IDS_FILE_DETAILS "Detalhes para a extensão '%s'"
     IDS_FILE_DETAILSADV "Ficheiros com extensão '%s' são do tipo '%s'. Para alterar as definições que afectam todos os ficheiros '%s', clique em Avançado."
@@ -1052,7 +1052,7 @@ BEGIN
     IDS_SYSTEMFOLDER "Pasta de sistema"
 
     /* For IDD_LOG_OFF_FANCY */
-    IDS_LOG_OFF_DESC "Feche todos os programas e termine a sua sessão Windivs"
+    IDS_LOG_OFF_DESC "Feche todos os programas e termine a sua sessão ReactOS"
     IDS_SWITCH_USER_DESC "Permite que outro utilizador inicie sessão enquanto seus programas e ficheiros permanecem abertos.\r\n\r\n(Também pode mudar de utilizador, pressionando a tecla do logotipo do Windows + L.)"
     IDS_LOG_OFF_TITLE "Terminar a sessão"
     IDS_SWITCH_USER_TITLE "Mudar de utilizador"
