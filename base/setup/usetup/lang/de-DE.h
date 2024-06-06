@@ -8,7 +8,7 @@ static MUI_ENTRY deDEChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7955 Setup",
+            "Windivs7 build 8056 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -22,7 +22,7 @@ static MUI_ENTRY deDEChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7.5 RTM, build 7955.1",
+            "Windivs7.5 RTM, build 8056.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -151,7 +151,7 @@ static MUI_ENTRY deDESetupInitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -189,7 +189,7 @@ static MUI_ENTRY deDELanguagePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -241,7 +241,7 @@ static MUI_ENTRY deDEWelcomePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -328,7 +328,7 @@ static MUI_ENTRY deDEIntroPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -408,7 +408,7 @@ static MUI_ENTRY deDELicensePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -551,7 +551,7 @@ static MUI_ENTRY deDEDevicePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -658,7 +658,7 @@ static MUI_ENTRY deDERepairPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -738,7 +738,7 @@ static MUI_ENTRY deDEUpgradePageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -818,7 +818,7 @@ static MUI_ENTRY deDEComputerPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -877,7 +877,7 @@ static MUI_ENTRY deDEFlushPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -922,7 +922,7 @@ static MUI_ENTRY deDEQuitPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -967,7 +967,7 @@ static MUI_ENTRY deDEDisplayPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1026,7 +1026,7 @@ static MUI_ENTRY deDESuccessPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1071,7 +1071,7 @@ static MUI_ENTRY deDESelectPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1144,7 +1144,7 @@ static MUI_ENTRY deDEChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1266,7 +1266,7 @@ static MUI_ENTRY deDEConfirmDeleteSystemPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1374,7 +1374,7 @@ static MUI_ENTRY deDEFormatPartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1419,7 +1419,7 @@ static MUI_ENTRY deDECheckFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1450,7 +1450,7 @@ static MUI_ENTRY deDEInstallDirectoryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1509,7 +1509,7 @@ static MUI_ENTRY deDEFileCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1554,7 +1554,7 @@ static MUI_ENTRY deDEBootLoaderSelectPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1613,7 +1613,7 @@ static MUI_ENTRY deDEBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1644,7 +1644,7 @@ static MUI_ENTRY deDEBootLoaderRemovableDiskPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1697,7 +1697,7 @@ static MUI_ENTRY deDEKeyboardSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1756,7 +1756,7 @@ static MUI_ENTRY deDELayoutSettingsEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1816,7 +1816,7 @@ static MUI_ENTRY deDEPrepareCopyEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1848,7 +1848,7 @@ static MUI_ENTRY deDESelectFSEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1896,7 +1896,7 @@ static MUI_ENTRY deDEDeletePartitionEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1948,7 +1948,7 @@ static MUI_ENTRY deDERegistryEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },

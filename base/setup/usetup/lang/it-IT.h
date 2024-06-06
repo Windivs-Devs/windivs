@@ -5,7 +5,7 @@ static MUI_ENTRY itITChangelogPageEntries[] =
         {
             4,
             3,
-            "Windivs7 build 7955 Setup",
+            "Windivs7 build 8056 Setup",
             TEXT_STYLE_UNDERLINE,
             TEXT_ID_STATIC
         },
@@ -19,7 +19,7 @@ static MUI_ENTRY itITChangelogPageEntries[] =
         {
             8,
             8,
-            "Windivs7.5 RTM, build 7955.1",
+            "Windivs7.5 RTM, build 8056.1",
             TEXT_STYLE_NORMAL,
             TEXT_ID_STATIC
         },
@@ -1149,7 +1149,7 @@ static MUI_ENTRY itITChangeSystemPartition[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
@@ -1618,7 +1618,7 @@ static MUI_ENTRY itITBootLoaderInstallPageEntries[] =
     {
         4,
         3,
-        "Windivs7 build 7955 Setup",
+        "Windivs7 build 8056 Setup",
         TEXT_STYLE_UNDERLINE,
         TEXT_ID_STATIC
     },
