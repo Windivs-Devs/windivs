@@ -7,7 +7,7 @@ The Windivs project, although currently focused on Windows Server 2003 compatibi
 The code of Windivs is licensed under GNU GPL 2.0.
 
 > [!WARNING]
-> Windivs is currently an Alpha quality operating system. Windivs is currently under heavy development, and you may encounter some issues. Different things may not work well, and it can corrupt the data on your drive. It is **strongly** recommended to try Windivs on a virtual machine or a computer without important data!
+> Windivs is currently under heavy development, and you may encounter some issues. Different things may not work well, and it can corrupt the data on your drive. It is **strongly** recommended to try Windivs on a virtual machine or a computer without important data!
 
 ## Building
 Build rosbewin.badge rosbeunix.badge coverity.badge
@@ -25,7 +25,7 @@ To build Windivs, you must run the configure script in the directory you want to
 To build a bootable CD image, run `ninja bootcd` from the build directory. This will create a CD image with the name `bootcd.iso`.
 
 > [!TIP]
-> You can always download fresh binary builds of bootable images from the "Daily builds" page.
+> You can always download fresh binary builds of bootable images from GitHub actions.
 
 ## Installing
 By default, Windivs currently can only be installed on a machine that has a FAT16 or FAT32 partition as the active (bootable) partition. The partition on which Windivs is to be installed (which may or may not be the bootable partition) must also be formatted as FAT16 or FAT32. Windivs Setup can format the partitions if needed.
@@ -37,9 +37,7 @@ To install Windivs from the bootable CD distribution, extract the archive conten
 See the "Installing Windivs" Wiki page or INSTALL for more details.
 
 ## Testing
-If you discover a bug in Windivs, search on JIRA first - it might be reported already. If not, report the bug providing logs and as much information as possible.
-
-See "File Bugs" for a guide.
+Install the latest Windivs compile from GitHub actions (on the dev branch) to test the OS, If you find a bug, then please file a GitHub issue here, and optionally a pull request!
 
 > [!IMPORTANT]
 > The bug tracker is not for discussions. Please use our official chat or the forum.
@@ -50,18 +48,9 @@ We are always looking for developers! Check how to contribute if you are willing
 > [!CAUTION]
 > Legal notice: If you have seen proprietary Microsoft Windows source code (including but not limited to the leaked Windows NT 3.5, NT 4, 2000 source code and the Windows Research Kernel), your contribution won't be accepted because of potential copyright violation.
 
-Try out cloud-based Windivs development using Gitpod and Docker:
-
-Open in Gitpod
-
-You can also support Windivs by donating! We rely on our backers to maintain our servers and accelerate development by hiring full-time devs.
 
 ## More information
 Windivs is a Free and Open Source operating system based on the Windows architecture, providing support for existing applications and drivers, and an alternative to the current dominant consumer operating system.
-
-It is not another wrapper built on Linux, like WINE. It does not attempt or plan to compete with WINE; in fact, the user-mode part of Windivs is almost entirely WINE-based, and our two teams have cooperated closely in the past.
-
-Windivs is also not "yet another OS." It does not attempt to be a third player like any other alternative OS out there. People are not meant to uninstall Linux and use Windivs instead; Windivs is a replacement for Windows users who want a Windows replacement that behaves just like Windows.
 
 More information is available at: windivs.org.
 
